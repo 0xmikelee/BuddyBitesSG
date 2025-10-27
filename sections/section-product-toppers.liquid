@@ -157,30 +157,28 @@
         data-product-type="{{ product.type }}"
       ></div>
 
-      {% if product.metafields.custom.main_collection.value.id == 492926239035 %}
-        <div class="flex flex-col justify-center gap-2">
-          <p class="text-[16px] font-bold text-black en:font-museo">{{ 'products.product.choose_flavour' | t }}:</p>
-          <div class="flex gap-2">
-            {% for prd in collections.toppers.products %}
-              {% assign metaobj_list = prd.metafields.custom.flavor.value %}
+      <div class="flex flex-col justify-center gap-2">
+        <p class="text-[16px] font-bold text-black en:font-museo">{{ 'products.product.choose_flavour' | t }}:</p>
+        <div class="flex gap-2">
+          {% for prd in collections.toppers.products %}
+            {% assign metaobj_list = prd.metafields.custom.flavor.value %}
 
-              {% for m_obj in metaobj_list %}
-                <a href="{{ prd.url }}">
-                  <img
-                    src="{{ m_obj.featured_image.value | image_url: width: 100, height: 100  }}"
-                    width="100"
-                    height="100"
-                    class="rounded-xl border-2 border-solid {% if product.title == prd.title %} border-black opacity-100 {% else %} border-[#C3C3C3] opacity-50{% endif %}"
-                  >
-                  <p class="text-center font-semibold en:font-museo en:text-[16px] zh-TW:text-[14px]">
-                    <b>{{ m_obj.name }}</b>
-                  </p>
-                </a>
-              {% endfor %}
+            {% for m_obj in metaobj_list %}
+              <a href="{{ prd.url }}">
+                <img
+                  src="{{ m_obj.featured_image.value | image_url: width: 100, height: 100  }}"
+                  width="100"
+                  height="100"
+                  class="rounded-xl border-2 border-solid {% if product.title == prd.title %} border-black opacity-100 {% else %} border-[#C3C3C3] opacity-50{% endif %}"
+                >
+                <p class="text-center font-semibold en:font-museo en:text-[16px] zh-TW:text-[14px]">
+                  <b>{{ m_obj.name }}</b>
+                </p>
+              </a>
             {% endfor %}
-          </div>
+          {% endfor %}
         </div>
-      {% endif %}
+      </div>
 
       <div class="prose prose-base marker:text-black prose-ul:list-disc">
         {{ product.description }}
