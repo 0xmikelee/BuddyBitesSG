@@ -114,19 +114,17 @@
             {% assign metaobj_list = prd.metafields.custom.flavor.value %}
 
             {% for m_obj in metaobj_list %}
-              {% if m_obj.product.value.metafields.custom.main_collection.value.id == 491993071931 %}
-                <a href="{{ prd.url }}">
-                  <img
-                    src="{{ m_obj.featured_image.value | image_url: width: 100, height: 100  }}"
-                    width="100"
-                    height="100"
-                    class="rounded-xl border-2 border-solid {% if product.title == prd.title %} border-black opacity-100 {% else %} border-[#C3C3C3] opacity-50{% endif %}"
-                  >
-                  <p class="text-center font-semibold en:font-museo en:text-[16px] zh-TW:text-[14px]">
-                    <b>{{ m_obj.name }}</b>
-                  </p>
-                </a>
-              {% endif %}
+              <a href="{{ prd.url }}">
+                <img
+                  src="{{ m_obj.featured_image.value | image_url: width: 100, height: 100  }}"
+                  width="100"
+                  height="100"
+                  class="rounded-xl border-2 border-solid {% if product.title == prd.title %} border-black opacity-100 {% else %} border-[#C3C3C3] opacity-50{% endif %}"
+                >
+                <p class="text-center font-semibold en:font-museo en:text-[16px] zh-TW:text-[14px]">
+                  <b>{{ m_obj.name }}</b>
+                </p>
+              </a>
             {% endfor %}
           {% endfor %}
         </div>
