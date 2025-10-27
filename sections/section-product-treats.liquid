@@ -96,7 +96,7 @@
       <div class="flex flex-col justify-center gap-2">
         <p class="text-[16px] font-bold text-black en:font-museo">{{ 'products.product.choose_treat' | t }}:</p>
         <div class="flex gap-2">
-          {% for prd in collections['treats-and-chews'].products %}
+          {% for prd in collections['treats-chews'].products %}
             {% if prd.id != 9683185238331 %}
               {% assign metaobj_list = prd.metafields.custom.flavor.value %}
 
