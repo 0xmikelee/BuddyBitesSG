@@ -1,14 +1,6 @@
 [
   {
     "name": "Theme settings",
-    "theme_name": "Buddy Bites SG",
-    "theme_version": "1.0.0",
-    "theme_author": "Buddy Bites SG",
-    "theme_author_email": "info@buddybites.dog",
-    "theme_author_url": "https://buddybites.dog",
-    "theme_support_url": "https://buddybites.dog/support",
-    "theme_documentation_url": "https://buddybites.dog/documentation",
-    "theme_changelog_url": "https://buddybites.dog/changelog",
     "theme_tags": [
       "buddybites",
       "sg",
