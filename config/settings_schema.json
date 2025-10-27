@@ -1,11 +1,6 @@
 [
   {
     "name": "Theme settings",
-    "theme_tags": [
-      "buddybites",
-      "sg",
-      "singapore"
-    ],
     "settings": [
       {
         "type": "text",
