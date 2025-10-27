@@ -1,0 +1,49 @@
+<section class="mx-auto grid max-w-[1100px] grid-cols-1 gap-5 p-5 font-light en:font-museo md:grid-cols-2 md:gap-[50px] md:p-[100px] md:px-[50px]">
+  <div class="order-1 md:order-none md:text-[clamp(16px,1.5vw,24px)]">
+    <div class="block md:hidden">
+      <p class="text-balance text-center">
+        <strong>Dr. Tiffany Harries</strong>{{ 'vet_backed.text_1_part_1' | t -}}
+        <strong>{{ 'vet_backed.nutritionist' | t }}</strong>{{ 'vet_backed.text_1_part_2' | t }}
+      </p>
+    </div>
+    <img src="{{ '0N3A8142_1_1.jpg' | file_img_url: 'master'}}" class="my-5 w-full rounded-[20px] md:my-0">
+    <div class="block md:hidden">
+      <p><strong>Dr. Tiffany Harris</strong></p>
+      <ul class="list-disc pl-5">
+        <li>
+          <p>{{ 'vet_backed.bio_1' | t }}</p>
+        </li>
+        <li>
+          <p>{{ 'vet_backed.bio_2' | t }}</p>
+        </li>
+      </ul>
+      <p>
+        {{ 'vet_backed.text_2' | t }}
+      </p>
+    </div>
+  </div>
+  <div class="order-none md:order-1">
+    <h2 class="m-0 text-center tracking-[3px] text-black en:font-heyCharlie en:text-[13vw] zh-TW:text-[10vw] md:text-left md:text-[70px] lg:en:text-[5vw] lg:zh-TW:text-[3vw]">
+      {{ 'vet_backed.title' | t }}
+    </h2>
+    <div class="hidden md:block md:text-[clamp(16px,1.5vw,24px)]">
+      <p>
+        {{ 'vet_backed.text_1_full' | t }}
+      </p>
+      <div class="mt-5">
+        <p><strong>Dr. Tiffany Harris</strong></p>
+        <ul class="list-disc pl-5">
+          <li>
+            <p>{{ 'vet_backed.bio_1' | t }}</p>
+          </li>
+          <li>
+            <p>{{ 'vet_backed.bio_2' | t }}</p>
+          </li>
+        </ul>
+        <p>
+          {{ 'vet_backed.text_2' | t }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

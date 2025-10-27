@@ -1,0 +1,587 @@
+<section class="relative">
+  <img
+    src="{{ 'Top_banner.png' | file_img_url: 'master' }}"
+    alt="Subscribe"
+    class="hidden w-full object-cover md:block"
+    width="1440"
+    height="534"
+  >
+  <img
+    src="{{ 'Top_banner_mobile.png' | file_img_url: 'master' }}"
+    alt="Subscribe"
+    width="430"
+    height="865"
+    class="block w-full object-cover md:hidden"
+  >
+  <div class="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center gap-4">
+    <h1 class="text-center text-[#193C6B] en:font-heyCharlie en:text-[12vw] zh-TW:text-[10vw] lg:en:text-[3.5vw] lg:zh-TW:text-[3vw]">
+      Choose your location
+    </h1>
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+      <a href="https://www.buddybites.dog/" class="flex flex-col items-center justify-center gap-4">
+        <img
+          src="{{ '7_8dffb6ac-a1bb-4e6e-af6b-92edf493949a.png' | file_img_url: 'master' }}"
+          alt="Hong Kong"
+          width="99"
+          height="98"
+        >
+        <p class="rounded-full border-2 border-[#193C6B] bg-[#193C6B] px-4 py-2 text-center uppercase text-white hover:bg-white hover:text-[#193C6B] en:font-museo en:text-[16px] lg:en:text-[16px]">
+          Hong Kong
+        </p>
+      </a>
+      <a href="https://www.buddybites.sg/" class="flex flex-col items-center justify-center gap-4">
+        <img
+          src="{{ '8_0391ed61-e857-4450-a8e7-3309f9fea161.png' | file_img_url: 'master' }}"
+          alt="Singapore"
+          width="99"
+          height="98"
+        >
+        <p class="rounded-full border-2 border-[#193C6B] bg-[#193C6B] px-4 py-2 text-center uppercase text-white hover:bg-white hover:text-[#193C6B] en:font-museo en:text-[16px] lg:en:text-[16px]">
+          Singapore
+        </p>
+      </a>
+    </div>
+  </div>
+</section>
+<section class="font-museo">
+  <div class="steps">
+    <h3 class="text-center font-bold text-[#193C6B] en:text-[7vw] zh-TW:text-[7vw] md:en:text-[3vw]">
+      GOING TO THE STORE IS SO LAST SEASON
+    </h3>
+    <h4 class="text-center font-bold text-[#193C6B] en:text-[5vw] zh-TW:text-[5vw] md:en:text-[2vw]">
+      GET YOUR KIBBLE DELIVERED TO YOUR DOOR MONTHLY
+    </h4>
+    <div class="row desktop">
+      <div class="column step1">
+        <img src="https://cdn.shopify.com/s/files/1/0430/5833/1805/files/IMG_9215.png?v=1684298642" class="grid-image">
+        <p>Select your dog's food</p>
+      </div>
+      <div class="column step2">
+        <img src="https://cdn.shopify.com/s/files/1/0430/5833/1805/files/IMG_9216.png?v=1684298642" class="grid-image">
+        <p>Tell us where and when to deliver</p>
+      </div>
+      <div class="column step3">
+        <img src="https://cdn.shopify.com/s/files/1/0430/5833/1805/files/IMG_9217.png?v=1684298642" class="grid-image">
+        <p>Receive on repeat</p>
+      </div>
+      <div class="column step4">
+        <img src="https://cdn.shopify.com/s/files/1/0430/5833/1805/files/IMG_9218.png?v=1684298642" class="grid-image">
+        <p>Pause, edit, and cancel anytime</p>
+      </div>
+    </div>
+    <div style="text-align:center; padding-top: 1vw;" class="desktop">
+      <a href="{{ pages['subscription-page'].url }}" class="site-link" style="padding: 1vw 3vw;">Subscribe</a>
+    </div>
+    <div class="row mobile">
+      <div class="column step1">
+        <img src="https://cdn.shopify.com/s/files/1/0430/5833/1805/files/IMG_9215.png?v=1684298642" class="grid-image">
+        <p>Select your dog's food</p>
+      </div>
+      <div class="column step2">
+        <img src="https://cdn.shopify.com/s/files/1/0430/5833/1805/files/IMG_9216.png?v=1684298642" class="grid-image">
+        <p>Tell us where and when to deliver</p>
+      </div>
+    </div>
+    <div class="row mobile">
+      <div class="column step3">
+        <img src="https://cdn.shopify.com/s/files/1/0430/5833/1805/files/IMG_9217.png?v=1684298642" class="grid-image">
+        <p>Receive on repeat</p>
+      </div>
+      <div class="column step4">
+        <img src="https://cdn.shopify.com/s/files/1/0430/5833/1805/files/IMG_9218.png?v=1684298642" class="grid-image">
+        <p>Pause, edit, and cancel anytime</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section
+  class="
+    mb-0 bg-[#9ac9eb] bg-gradient-to-b from-[#c0dcf4] to-[#edf6fc]
+    py-10
+  "
+>
+  <h2 class="font-monseo text-center font-bold text-[#193C6B] en:text-[7vw] zh-TW:text-[7vw] md:py-5 md:en:text-[3vw] md:zh-TW:text-[3vw]">
+    TRY OUR OTHER PREMIUM RECIPES
+  </h2>
+  {% render 'bouncy-kibbles' %}
+</section>
+<section class="bg-[#9ac9eb] bg-gradient-to-b from-[#edf6fc] to-[#fff] py-10">
+  <div class="container grid grid-cols-1 md:grid-cols-2 md:gap-4">
+    <div class="flex flex-col items-center justify-end gap-4 md:justify-center">
+      <div>
+        <h3 class="text-center tracking-widest text-[#193C6B] en:font-heyCharlie en:text-[10vw] zh-TW:text-[10vw] md:en:text-[5vw] md:zh-TW:text-[5vw]">
+          9,716,160
+        </h3>
+        <h4 class="text-center uppercase tracking-widest text-[#193C6B] en:font-museo en:text-[4vw] zh-TW:text-[4vw] md:en:text-[2vw] md:zh-TW:text-[2vw]">
+          meals donated
+        </h4>
+      </div>
+      <div class="flex max-w-[500px] flex-col items-center justify-center gap-4">
+        <p class="text-balance px-10 text-center text-[#68AFDD] en:font-museo en:text-[2vw] zh-TW:text-[2vw] md:en:text-[1vw] md:zh-TW:text-[1vw]">
+          When our co-founder adopted his dog, we saw first hand the challenges shelters go through in finding
+          consistent good quality food. So we did something about it!
+        </p>
+        <h2 class="w-full rounded-none bg-[#68AFDD] px-4 py-2 text-center font-bold uppercase text-white en:font-museo en:text-[5vw] zh-TW:text-[5vw] md:rounded-full md:bg-[#193C6B] md:en:text-[1.5vw] md:zh-TW:text-[1.5vw]">
+          For every 2kg SOLD, <br>
+          1kg is donated
+        </h2>
+      </div>
+    </div>
+    {% comment %} photo carousel here {% endcomment %}
+    <div class="photo-carousel">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img
+            src="{{ 'Group_808_676e592f-47ee-4bc6-bc1a-c4cb86d31b71.png' | file_img_url: 'master' }}"
+            width="501"
+            height="352"
+            alt="Charity Photo 1"
+          >
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="{{ 'Group_812_dd0eb317-70ad-429c-b70d-d9fef23e102a.png' | file_img_url: 'master' }}"
+            width="501"
+            height="352"
+            alt="Charity Photo 1"
+          >
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="{{ 'Group_807_32a992e7-5568-4061-a3f2-9e19828b2ccf.png' | file_img_url: 'master' }}"
+            width="501"
+            height="352"
+            alt="Charity Photo 1"
+          >
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="{{ 'Group_810_d7c60e82-4135-49a3-b05e-0a6887b8d29e.png' | file_img_url: 'master' }}"
+            width="501"
+            height="352"
+            alt="Charity Photo 1"
+          >
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="{{ 'Group_802_f84da4e4-7661-4d53-9b49-aff311f9f94d.png' | file_img_url: 'master' }}"
+            width="501"
+            height="352"
+            alt="Charity Photo 1"
+          >
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="{{ 'Group_811_182e52a4-682d-43a3-8c72-5a3133607edc.png' | file_img_url: 'master' }}"
+            width="501"
+            height="352"
+            alt="Charity Photo 1"
+          >
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="{{ 'Group_800_0f3d4784-a938-4c41-8416-9f0cb5ae8b89.png' | file_img_url: 'master' }}"
+            width="501"
+            height="352"
+            alt="Charity Photo 1"
+          >
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="{{ 'Group_809_da2d5cb7-c667-4217-a4fe-d10cedb8ef0e.png' | file_img_url: 'master' }}"
+            width="501"
+            height="352"
+            alt="Charity Photo 1"
+          >
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="{{ 'Group_804_32089e49-b5bb-474e-80bb-cbbbbda00eb7.png' | file_img_url: 'master' }}"
+            width="501"
+            height="352"
+            alt="Charity Photo 1"
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% render 'about-us-our-mission' %}
+<style>
+  .photo-carousel {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .photo-carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media (min-width: 768px) {
+    .photo-carousel img {
+      border-radius: 10px;
+    }
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .site-link:hover {
+    box-shadow: 0px 0px 0px 3px #0d3e66;
+    background-color: #fff;
+    color: #0d3e66;
+    text-decoration: none;
+  }
+  .site-link {
+    background-color: #0d3e66;
+    border-radius: 10vw;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    box-shadow: 0px 0px 0px 0px #fff;
+    transition: all 0.3s;
+    padding: 1vw 2vw;
+    font-size: 1.2vw;
+  }
+  @keyframes bounceScale {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    70% {
+      transform: scale(0.9);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  .columnr {
+    flex: 30%;
+    /* margin: 0 3vw; */
+    padding: 0;
+    text-align: center;
+  }
+
+  .steps {
+    background-color: #9ac9eb;
+    margin-bottom: 0;
+    background-image: linear-gradient(#9ac9eb, #c0dcf4);
+  }
+  .row {
+    display: flex;
+  }
+  .column {
+    flex: 25%;
+    padding: 0px;
+    text-align: center;
+  }
+  .column p {
+    font-size: 1.3vw;
+    padding: 0 10%;
+  }
+
+  @media only screen and (min-width: 767px) {
+    .mobile {
+      display: none !important;
+    }
+    .title {
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 5vw;
+    }
+    .rowr {
+      display: flex;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .steps {
+      padding: 20px 15%;
+    }
+    .bold-title {
+      font-size: 2.5vw;
+      margin-bottom: 0.5vw;
+      margin-top: 2vw;
+    }
+    .bold-title-small {
+      font-size: 1.5vw;
+    }
+    .recipes {
+      padding: 3vw 0;
+    }
+    .block-row {
+      display: flex;
+      gap: 2vw;
+      justify-content: center;
+      padding-top: 2vw;
+    }
+    .block {
+      text-align: center;
+      text-decoration: none;
+      color: white;
+      width: 15%;
+      padding: 1.25%;
+      border-radius: 2vw;
+      transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+    }
+    .block:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      text-decoration: none;
+    }
+    .block img {
+      display: block;
+      margin: 10px auto 0;
+      width: 100%;
+      height: auto;
+    }
+    .block1 {
+      background-color: #fdbe87;
+    }
+    .block2 {
+      background-color: #bccda8;
+    }
+    .block3 {
+      background-color: #d6c4e2;
+    }
+    .block4 {
+      background-color: #f3b7ac;
+    }
+    .block5 {
+      background-color: #a4c8e8;
+    }
+    .text {
+      font-size: 1.3vw;
+    }
+    .donate {
+      display: flex;
+    }
+    .donate-text {
+      flex: 60%;
+      padding: 5vw 2vw;
+    }
+    .image-carousel {
+      width: 30%;
+      margin-right: 10%;
+      padding-top: 4.7vw;
+      position: relative;
+      overflow: hidden;
+    }
+    .donate-text h3 {
+      font-family: museo_sans900;
+      font-weight: 900;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.2;
+      letter-spacing: 0.2vw;
+      text-align: center;
+      color: #0d3e66;
+      text-transform: uppercase;
+      font-size: 1.3vw;
+      margin-top: -5px;
+    }
+    .donate-text h4 {
+      color: #68afdd;
+      font-family: museo_sans300;
+      font-size: 1vw;
+      font-weight: 300;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.71;
+      padding: 0 10vw;
+    }
+    .donate-box {
+      background-color: #193c6b;
+      color: #fff;
+      text-transform: uppercase;
+      font-family: museo_sans300;
+      font-weight: 900;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.2;
+      letter-spacing: 0.2vw;
+      font-size: 2vw;
+      padding: 1vw;
+      margin: 1vw 7vw;
+      border-radius: 5vw;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    .desktop {
+      display: none !important;
+    }
+    .title {
+      top: 5%;
+      font-size: 13vw;
+    }
+    .rowr {
+      display: flex;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .columnr {
+      flex: 100%;
+      /* margin: 0 3vw; */
+      padding: 0;
+      text-align: center;
+    }
+    .country-icon {
+      width: 35%;
+      margin: 7vw 26%;
+    }
+    .site-link {
+      padding: 3vw 5vw;
+      font-size: 4vw;
+    }
+    .steps {
+      padding: 20px 8%;
+    }
+    .bold-title {
+      font-size: 7vw;
+      margin-top: 5vw;
+      margin-bottom: 7vw;
+    }
+    .bold-title-small {
+      font-size: 4vw;
+    }
+    .column p {
+      font-size: 3vw !important;
+    }
+    .recipes {
+      padding: 3vw 8%;
+    }
+    .els-cup-w-val {
+      font-size: 22vw !important;
+      letter-spacing: 2vw;
+    }
+    .donate-text {
+      padding-top: 30px;
+    }
+    .donate-text h3 {
+      font-family: museo_sans900;
+      font-weight: 900;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.2;
+      letter-spacing: 0.8vw;
+      text-align: center;
+      color: #0d3e66;
+      text-transform: uppercase;
+      font-size: 5vw;
+      margin-top: -10px;
+    }
+    .donate-text h4 {
+      color: #68afdd;
+      font-family: museo_sans300;
+      font-size: 3vw;
+      font-weight: 300;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.71;
+      padding: 0 10vw;
+    }
+    .donate-box {
+      background-color: #68afdd;
+      color: #fff;
+      text-transform: uppercase;
+      font-family: museo_sans300;
+      font-weight: 900;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.2;
+      letter-spacing: 0.5vw;
+      font-size: 6vw;
+      padding: 4vw;
+      margin-top: 5vw;
+    }
+    .image-carousel {
+      width: 100%;
+      margin-top: -15px;
+    }
+
+    .carousel-wrapper {
+      display: flex;
+      overflow: hidden;
+      position: relative;
+      /* margin: 2rem auto; */
+    }
+    .carousel {
+      display: flex;
+      transition: transform 0.3s ease;
+      text-decoration: none;
+    }
+    .carousel-item {
+      flex: 0 0 70%;
+      text-align: center;
+      /* padding: 1rem; */
+      background-color: #f8f8f8;
+      border-radius: 5vw;
+      margin: 0 15%;
+      padding: 3vw;
+      text-decoration: none;
+    }
+    .carousel-item img {
+      max-width: 100%;
+      height: auto;
+    }
+    .carousel-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #193c6b;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+    }
+    .carousel-arrow.left {
+      left: 0px;
+    }
+    .carousel-arrow.right {
+      right: 0px;
+    }
+    .carousel-item h3 {
+      font-family: museo_sans900;
+      font-weight: 900;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.2;
+      letter-spacing: normal;
+      text-align: center;
+      color: #0d3e66;
+      text-transform: uppercase;
+      margin: 1rem 0 0;
+      text-decoration: none;
+    }
+  }
+</style>
+
+<script>
+  const photoCarousel = new Swiper('.photo-carousel', {
+    direction: 'horizontal',
+    effect: 'fade',
+    crossFade: true,
+    loop: true,
+    autoplay: {
+      delay: 2500,
+    },
+    slidesPerView: 1,
+  });
+</script>

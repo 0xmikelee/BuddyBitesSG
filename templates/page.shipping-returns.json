@@ -1,0 +1,10 @@
+{
+  "sections": {
+    "section-shipping-returns": {
+      "type": "section-shipping-returns"
+    }
+  },
+  "order": [
+    "section-shipping-returns"
+  ]
+}

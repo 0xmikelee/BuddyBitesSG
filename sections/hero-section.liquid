@@ -1,0 +1,611 @@
+{% style %}
+ {% assign num_collections = shop.metafields.custom.key_product_collections.value.count %}
+
+  .selecting-grid {
+    display: grid;
+    grid-template-columns: repeat(calc(2%{{ num_collections }}), minmax(0, 1fr));
+    align-items: start;
+    gap: 0.5rem;            /* gap-2 = 0.5rem */
+    padding-left: 0.5rem;   /* px-2 = 0.5rem left/right */
+    padding-right: 0.5rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: 768px) { /* md: */
+    .selecting-grid {
+      padding: 0;
+    }
+  }
+
+  @media (min-width: 1024px) { /* lg: */
+    .selecting-grid {
+      grid-template-columns: repeat({{ num_collections }}, 1fr);
+      gap: 10px;
+    }
+  }
+
+{% endstyle %}
+
+<section class="relative h-[660px] lg:h-[clamp(660px, 70dvh, 760px)]">
+  {% capture hero_image_desktop_url %}
+    {% if section.settings.hero_image_desktop %}
+      {{ section.settings.hero_image_desktop | img_url: 'master' }}
+    {% else %}
+      {{ 'Vector_48_18f479c9-3e28-464c-812d-a6ef7c229e79.png' | file_img_url: 'master' }}
+    {% endif %}
+  {% endcapture %}
+  {% capture hero_image_desktop_srcset %}
+    {% if section.settings.hero_image_desktop %}
+      {{ section.settings.hero_image_desktop | img_url: 'master' | append: ' 300w' }}, 
+      {{ section.settings.hero_image_desktop | img_url: 'master' | append: ' 600w' }}, 
+      {{ section.settings.hero_image_desktop | img_url: 'master' | append: ' 900w' }}, 
+      {{ section.settings.hero_image_desktop | img_url: 'master' | append: ' 1200w' }}, 
+      {{ section.settings.hero_image_desktop | img_url: 'master' | append: ' 1500w' }}, 
+      {{ section.settings.hero_image_desktop | img_url: 'master' | append: ' 1800w' }}, 
+      {{ section.settings.hero_image_desktop | img_url: 'master' | append: ' 2100w' }}, 
+      {{ section.settings.hero_image_desktop | img_url: 'master' | append: ' 2400w' }}
+    {% else %}
+      {{ 'Vector_48_18f479c9-3e28-464c-812d-a6ef7c229e79.png' | file_img_url: 'master' | append: ' 300w' }}, 
+      {{ 'Vector_48_18f479c9-3e28-464c-812d-a6ef7c229e79.png' | file_img_url: 'master' | append: ' 600w' }}, 
+      {{ 'Vector_48_18f479c9-3e28-464c-812d-a6ef7c229e79.png' | file_img_url: 'master' | append: ' 900w' }}, 
+      {{ 'Vector_48_18f479c9-3e28-464c-812d-a6ef7c229e79.png' | file_img_url: 'master' | append: ' 1200w' }}, 
+      {{ 'Vector_48_18f479c9-3e28-464c-812d-a6ef7c229e79.png' | file_img_url: 'master' | append: ' 1500w' }}, 
+      {{ 'Vector_48_18f479c9-3e28-464c-812d-a6ef7c229e79.png' | file_img_url: 'master' | append: ' 1800w' }}, 
+      {{ 'Vector_48_18f479c9-3e28-464c-812d-a6ef7c229e79.png' | file_img_url: 'master' | append: ' 2100w' }}, 
+      {{ 'Vector_48_18f479c9-3e28-464c-812d-a6ef7c229e79.png' | file_img_url: 'master' | append: ' 2400w' }}, 
+    {% endif %}
+  {% endcapture %}
+  {% capture hero_image_mobile_url %}
+    {% if section.settings.hero_image_mobile %}
+      {{ section.settings.hero_image_mobile | img_url: 'master' }}
+    {% else %}
+      {{ 'Vector_49_36a11d0f-9c19-47a1-acfe-c7b210710cd8.png' | file_img_url: 'master' }}
+    {% endif %}
+  {% endcapture %}
+  {% capture hero_image_mobile_srcset %}
+    {% if section.settings.hero_image_mobile %}
+      {{ section.settings.hero_image_mobile | img_url: 'master' | append: ' 400w' }},     
+      {{ section.settings.hero_image_mobile | img_url: 'master' | append: ' 800w' }},
+      {{ section.settings.hero_image_mobile | img_url: 'master' | append: ' 1200w' }}
+    {% else %}
+      {{ 'Vector_49_36a11d0f-9c19-47a1-acfe-c7b210710cd8.png' | file_img_url: 'master' | append: ' 400w' }}, 
+      {{ 'Vector_49_36a11d0f-9c19-47a1-acfe-c7b210710cd8.png' | file_img_url: 'master' | append: ' 800w' }}, 
+      {{ 'Vector_49_36a11d0f-9c19-47a1-acfe-c7b210710cd8.png' | file_img_url: 'master' | append: ' 1200w' }} 
+    {% endif %}
+  {% endcapture %}
+  <img
+    src="{{ hero_image_desktop_url }}"
+    alt="Hero Section"
+    class="absolute inset-0 hidden w-full h-full object-cover lg:block"
+    srcset="{{ hero_image_desktop_srcset }}"
+    sizes="100vw"
+    width="2400"
+    height="950"
+    loading="eager"
+    fetchpriority="high"
+  >
+  <img
+    src="{{ hero_image_mobile_url }}"
+    srcset="{{ hero_image_mobile_srcset }}"
+    sizes="(min-width: 1024px) 0px, 100vw"
+    alt="Hero Section"
+    class="absolute inset-0 w-full h-full object-cover lg:hidden"
+    width="800"
+    height="1200"
+    loading="eager"
+    fetchpriority="high"
+  >
+  {% capture heading_color %}
+    {% if section.settings.hero_heading_color != blank %}
+      {{- section.settings.hero_heading_color -}}
+    {% else %}
+      {{- '#193C6B' -}}
+    {% endif %}
+  {% endcapture %}
+  <div 
+  style="--heading-color: {{- heading_color -}};"
+  class="absolute left-1/2 top-0 z-10 flex h-full w-full max-w-[1220px] -translate-x-1/2 flex-col items-center justify-center gap-5 px-10 py-10 text-center text-[var(--heading-color)] lg:h-full lg:items-start lg:py-0">
+    <div class="flex h-full flex-col items-center justify-start lg:justify-center">
+      <div class="flex flex-col items-center justify-center gap-1 md:gap-3 lg:items-start lg:py-10">
+        <h1 class="en:block zh-TW:hidden en:font-heyCharlie text-[50px] text-balance leading-[50px] sm:text-[70px] sm:leading-[70px] md:max-w-[70%] md:text-[90px] md:leading-[90px] lg:text-left">
+          {% if section.settings.hero_heading != blank %}
+            {{ section.settings.hero_heading }}
+          {% else %}
+            Freshness <br class="hidden lg:block">
+            they'll <br class="block lg:hidden">
+            Lick Up.
+          {% endif %}
+        </h1>
+        <h1 class="zh-TW:block en:hidden text-[30px] leading-[35px] sm:text-[70px] text-balance sm:leading-[70px] md:text-[70px] md:max-w-[70%] md:leading-[75px] lg:text-left">
+          {% if section.settings.hero_heading != blank %}
+            {{ section.settings.hero_heading }}
+          {% else %}  
+            首選鮮肉成分
+            <br>
+            主子讚不絕口
+          {% endif %}
+        </h1>
+        <h2 class="en:font-museo text-[16px] font-light lg:text-[24px] text-balance md:text-start md:max-w-[60%]">
+          {% if section.settings.hero_subheading != blank %}
+            {{ section.settings.hero_subheading }}
+          {% else %}
+            {{ 'homepage.hero_section.subtext' | t }}
+          {% endif %}
+        </h2>
+        <div class="grid grid-cols-1 items-start gap-6 lg:grid-cols-2 lg:gap-4">
+          <a
+            href="{{ all_products['buddy-bites-adult-turkey'].url }}"
+            class="hidden rounded-full border-2 border-[#193C6B] bg-[#193C6B] px-12 py-2 en:font-museo text-[16px] font-bold uppercase text-white hover:border-[#193C6B] hover:bg-white hover:text-[#193C6B] lg:block lg:text-[24px]"
+          >
+            {{- 'homepage.hero_section.shop_now' | t -}}
+          </a>
+        <a class="kl_reviews__summary__average_and_stars" style="margin: 0;" href="#featured-reviews">
+          <div role="img" aria-label="Average rating is 4.8 stars" class="kl_reviews__summary__average">
+            <div class="kl_reviews__summary__average_value" style="">4.8 </div>
+            <div class="kl_reviews__summary__average_denominator">/ 5</div>
+          </div>
+          <div class="kl_reviews__summary__stars" >
+            <div aria-hidden="true" class="kl_reviews__stars_badge">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20" height="20" class="kl_reviews__full_star" style="width: 20px; height: 20px; display: inline-block;">
+                <path id="icon-star-ptmug" width="20" height="20" fill="#F8BE00" stroke-width="2" stroke="undefined" stroke-linejoin="round" d="M11.1488 2.23197C10.7159 1.22183 9.28382 1.22183 8.85091 2.23197L6.95034 6.66662H2.67243C1.5588 6.66662 1.00109 8.01305 1.78854 8.8005L4.91029 11.9222L3.59487 17.1839C3.32787 18.2519 4.47191 19.1186 5.42772 18.5724L9.99984 15.9597L14.572 18.5724C15.5278 19.1186 16.6718 18.2519 16.4048 17.1839L15.0894 11.9222L18.2111 8.8005C18.9986 8.01304 18.4409 6.66662 17.3272 6.66662H13.0493L11.1488 2.23197Z" class="kl_reviews__star"></path>
+              </svg>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20" height="20" class="kl_reviews__full_star" style="width: 20px; height: 20px; display: inline-block;">
+                <path id="icon-star-mrw1f" width="20" height="20" fill="#F8BE00" stroke-width="2" stroke="undefined" stroke-linejoin="round" d="M11.1488 2.23197C10.7159 1.22183 9.28382 1.22183 8.85091 2.23197L6.95034 6.66662H2.67243C1.5588 6.66662 1.00109 8.01305 1.78854 8.8005L4.91029 11.9222L3.59487 17.1839C3.32787 18.2519 4.47191 19.1186 5.42772 18.5724L9.99984 15.9597L14.572 18.5724C15.5278 19.1186 16.6718 18.2519 16.4048 17.1839L15.0894 11.9222L18.2111 8.8005C18.9986 8.01304 18.4409 6.66662 17.3272 6.66662H13.0493L11.1488 2.23197Z" class="kl_reviews__star"></path>
+              </svg>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20" height="20" class="kl_reviews__full_star" style="width: 20px; height: 20px; display: inline-block;">
+                <path id="icon-star-h1p8w" width="20" height="20" fill="#F8BE00" stroke-width="2" stroke="undefined" stroke-linejoin="round" d="M11.1488 2.23197C10.7159 1.22183 9.28382 1.22183 8.85091 2.23197L6.95034 6.66662H2.67243C1.5588 6.66662 1.00109 8.01305 1.78854 8.8005L4.91029 11.9222L3.59487 17.1839C3.32787 18.2519 4.47191 19.1186 5.42772 18.5724L9.99984 15.9597L14.572 18.5724C15.5278 19.1186 16.6718 18.2519 16.4048 17.1839L15.0894 11.9222L18.2111 8.8005C18.9986 8.01304 18.4409 6.66662 17.3272 6.66662H13.0493L11.1488 2.23197Z" class="kl_reviews__star"></path>
+              </svg>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20" height="20" class="kl_reviews__full_star" style="width: 20px; height: 20px; display: inline-block;">
+                <path id="icon-star-9pi8kg" width="20" height="20" fill="#F8BE00" stroke-width="2" stroke="undefined" stroke-linejoin="round" d="M11.1488 2.23197C10.7159 1.22183 9.28382 1.22183 8.85091 2.23197L6.95034 6.66662H2.67243C1.5588 6.66662 1.00109 8.01305 1.78854 8.8005L4.91029 11.9222L3.59487 17.1839C3.32787 18.2519 4.47191 19.1186 5.42772 18.5724L9.99984 15.9597L14.572 18.5724C15.5278 19.1186 16.6718 18.2519 16.4048 17.1839L15.0894 11.9222L18.2111 8.8005C18.9986 8.01304 18.4409 6.66662 17.3272 6.66662H13.0493L11.1488 2.23197Z" class="kl_reviews__star"></path>
+              </svg>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20" height="20" class="kl_reviews__partial_star" style="width: 20px; height: 20px; display: inline-block;">
+                <defs>
+                  <linearGradient id="star-partial-yellow" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#F8BE00" />
+                    <stop offset="63.2%" stop-color="#F8BE00" />
+                    <stop offset="63.2%" stop-color="#e0e0e0" />
+                    <stop offset="100%" stop-color="#e0e0e0" />
+                  </linearGradient>
+                </defs>
+                <path id="icon-star-3g9l7" width="20" height="20" fill="url(#star-partial-yellow)" stroke-width="2" stroke="undefined" stroke-linejoin="round" d="M11.1488 2.23197C10.7159 1.22183 9.28382 1.22183 8.85091 2.23197L6.95034 6.66662H2.67243C1.5588 6.66662 1.00109 8.01305 1.78854 8.8005L4.91029 11.9222L3.59487 17.1839C3.32787 18.2519 4.47191 19.1186 5.42772 18.5724L9.99984 15.9597L14.572 18.5724C15.5278 19.1186 16.6718 18.2519 16.4048 17.1839L15.0894 11.9222L18.2111 8.8005C18.9986 8.01304 18.4409 6.66662 17.3272 6.66662H13.0493L11.1488 2.23197Z" class="kl_reviews__star"></path>
+              </svg>
+            </div>
+            <div class="kl_reviews__summary__stars__count">761 {{ 'products.product.reviews' | t }}</div>
+          </div>
+          </a>
+      </div>
+      <a
+        href="{{ all_products['buddy-bites-adult-turkey'].url }}"
+        class="mb-[20px] mt-[10px] block rounded-full border-2 bg-[#193C6B] px-12 py-2 en:font-museo text-[16px] font-bold uppercase text-white hover:border-[#193C6B] hover:text-white lg:hidden lg:text-[24px]"
+      >
+        {{- 'homepage.hero_section.shop_now' | t -}}
+      </a>
+    </div>
+  </div>
+</section>
+<section class="container relative mx-auto">
+  <div class="mx-auto flex w-[70%] flex-col items-center justify-center gap-2 py-6 text-center">
+    <h3 class="en:font-heyCharlie en:text-[60px] en:leading-[60px] en:tracking-wider zh-TW:text-center zh-TW:text-balance zh-TW: zh-TW:text-[30px] zh-TW:leading-[35px] text-[#193C6B]">
+      {{ 'homepage.featured_products.title' | t }}
+    </h3>
+    <h4 class="w-[85%] font-montserrat text-[13px] font-light text-[#193C6B]">
+      {{ 'homepage.featured_products.subtext' | t }}
+    </h4>
+  </div>
+  <div class="selecting-grid">
+    {% assign list = shop.metafields.custom.key_product_collections.value %}
+    {% for item in list %}
+      {% capture category_link %}
+        {% if item.name == 'Sample Pack' or item.name == '試食裝' %}
+          {{ item.page.value.url }}
+        {% else %}
+          {{ item.product.value.url }}
+        {% endif %}
+      {% endcapture %}
+      <a href="{{ category_link }}" class="flex flex-col items-center justify-center gap-[10px] hover:scale-105 transition-all duration-300 focus:bg-white" data-handle="{{ item.name }}">
+        <div class="relative h-auto">
+          <img src="{{ item.image | image_url: width: 200 }}" class="w-full h-full object-contain" width="200" height="239.82" alt="{{ item.name }}">
+          {% if item.name == 'Sample Pack' or item.name == '試食裝' %}
+            <p class="absolute bottom-[5px] mx-auto py-[2px] px-[5px] bg-[#F70C10] text-white en:font-museo zh-TW:font-museo text-[12px] text-center rounded-full -translate-x-1/2 left-1/2 w-[80%] md:text-[14px]">{{ 'products.product.save_65percent' | t }}</p>
+          {% endif %}
+          </div>
+        <h2 class="text-center en:font-museo text-[16px] md:text-[30px] font-bold text-[#193C6B]">{{ item.name }}</h2>
+      </a>
+    {% endfor %}
+  </div>
+</section>
+<section class="relative pt-10 lg:h-[600px] lg:py-0">
+  <div class="flex flex-col lg:block">
+    <div class="container relative z-10 grid h-full grid-cols-1 lg:grid-cols-[35%_1fr]">
+      <img
+        src="{{ 'Presenting_Kibbles_with_Hand.jpg' | file_img_url: 'master' }}"
+        alt="Presenting Adult Kibbles with a hand"
+        class="hidden w-full object-cover lg:block lg:p-10"
+        srcset="{{ 'Presenting_Kibbles_with_Hand.jpg' | file_img_url: '300x' }} 300w, {{ 'Presenting_Kibbles_with_Hand.jpg' | file_img_url: '600x' }} 600w, {{ 'Presenting_Kibbles_with_Hand.jpg' | file_img_url: '900x' }} 900w"
+        sizes="340px"
+        width="1474"
+        height="2004"
+      >
+      <div class="mx-auto flex h-full flex-col items-center justify-center gap-4">
+        <h2 class="text-center en:font-heyCharlie text-[40px] leading-[40px] tracking-wider text-[#193C6B] lg:text-[60px] lg:leading-[60px] lg:tracking-widest">
+          {{ 'homepage.section_good_stuff.title' | t }}
+        </h2>
+        <p class="w-[70%] text-center font-montserrat text-[13px] font-light leading-6 text-black">
+          {{ 'homepage.section_good_stuff.subtext' | t }}
+        </p>
+        <div class="flex flex-col items-center justify-center gap-3">
+          <div class="flex w-[70%] items-center justify-start gap-5">
+            <img
+              src="{{ 'Dark_Light_blue_Icons-382.png' | file_img_url: 'master' }}"
+              alt="Vet-backed formula"
+              class="aspect-square w-[90px] lg:w-[120px]"
+              width="200"
+              height="194"
+            >
+            <div class="flex flex-col">
+              <h4 class="font-montserrat text-[16px] font-bold uppercase text-[#193C6B]">
+                {{ 'homepage.section_good_stuff.point1.title' | t }}
+              </h4>
+              <p class="hidden en:font-museo text-[13px] font-light text-[#193C6B] lg:block">
+                {{ 'homepage.section_good_stuff.point1.subtext' | t }}
+              </p>
+            </div>
+          </div>
+          <div class="flex w-[70%] items-center justify-start gap-5">
+            <img
+              src="{{ 'Dark_Light_blue_Icons-381.png' | file_img_url: 'master' }}"
+              alt="Gut-friendly Prebiotics"
+              class="aspect-square w-[90px] lg:w-[120px] "
+              width="200"
+              height="194"
+            >
+            <div class="flex flex-col">
+              <h4 class="font-montserrat text-[16px] font-bold uppercase text-[#193C6B]">
+                {{ 'homepage.section_good_stuff.point2.title' | t }}
+              </h4>
+              <p class="hidden en:font-museo text-[13px] font-light text-[#193C6B] lg:block">
+                {{ 'homepage.section_good_stuff.point2.subtext' | t }}
+              </p>
+            </div>
+          </div>
+          <div class="flex w-[70%] items-center justify-start gap-5 lg:hidden">
+            <img
+              src="{{'Dark_Light_blue_Icons-37.png' | file_img_url: 'master' }}"
+              alt="European Union Icon"
+              class="aspect-square w-[90px] lg:w-[120px]"
+              width="200"
+              height="200"
+            >
+            <div class="flex flex-col">
+              <h4 class="font-montserrat text-[16px] font-bold uppercase text-[#193C6B]">
+                {{ 'homepage.section_good_stuff.point3.title' | t }}
+              </h4>
+            </div>
+          </div>
+          <div class="flex w-[70%] items-center justify-start gap-5 lg:hidden">
+            <img
+              src="{{'Dark_Light_blue_Icons-38.png' | file_img_url: 'master' }}"
+              alt="Traceable Ingredients"
+              class="aspect-square w-[90px] lg:w-[120px]"
+              width="200"
+              height="194"
+            >
+            <div class="flex flex-col">
+              <h4 class="font-montserrat text-[16px] font-bold uppercase text-[#193C6B]">
+                {{ 'homepage.section_good_stuff.point4.title' | t }}
+              </h4>
+            </div>
+          </div>
+          <a
+            href="{{ collection.all.url }}"
+            class="block rounded-full border-2 bg-[#193C6B] px-12 py-2 en:font-museo text-[16px] font-bold uppercase text-white hover:border-[#193C6B] hover:bg-white hover:text-[#193C6B] lg:hidden"
+          >
+            {{ 'homepage.section_good_stuff.shop_now' | t }}
+          </a>
+        </div>
+      </div>
+    </div>
+    <img
+      src="{{ 'IMG_9820_593f5eb4-cd9d-423b-8845-7f10950e5d93.png' | file_img_url: 'master' }}"
+      alt="Dog waiting to eat (Narrow version)"
+      class="block w-full object-cover lg:hidden"
+      width="3273"
+      height="1446"
+    >
+  </div>
+</section>
+<section class="relative hidden lg:block">
+  <div class="container absolute top-0 left-0 right-0 z-10 grid h-full grid-cols-1 lg:grid-cols-[1fr_35%]">
+    <div class="col-start-1 flex h-[80%] flex-col items-center justify-center gap-4">
+      <div class="flex flex-col items-center justify-center gap-2">
+        <div class="flex w-[70%] items-center justify-start gap-5">
+          <img
+              src="{{'Dark_Light_blue_Icons-37.png' | file_img_url: 'master' }}"
+              alt="European Union Icon"
+              class="aspect-square w-[90px] lg:w-[120px]"
+              width="200"
+              height="200"
+            >
+          <div class="flex flex-col">
+            <h4 class="font-montserrat text-[16px] font-bold uppercase text-[#193C6B]">
+              {{ 'homepage.section_good_stuff.point3.title' | t }}
+            </h4>
+            <p class="hidden en:font-museo text-[13px] font-light text-[#193C6B] lg:block">
+              {{ 'homepage.section_good_stuff.point3.subtext' | t }}
+            </p>
+          </div>
+        </div>
+        <div class="flex w-[70%] items-center justify-start gap-5">
+          <img
+            src="{{'Dark_Light_blue_Icons-38.png' | file_img_url: 'master' }}"
+            alt="Traceable Ingredients"
+            class="aspect-square w-[90px] lg:w-[120px]"
+            width="200"
+            height="194"
+          >
+          <div class="flex flex-col">
+            <h4 class="font-montserrat text-[16px] font-bold uppercase text-[#193C6B]">
+              {{ 'homepage.section_good_stuff.point4.title' | t }}
+            </h4>
+            <p class="hidden en:font-museo text-[13px] font-light text-[#193C6B] lg:block">
+              {{ 'homepage.section_good_stuff.point4.subtext' | t }}
+            </p>
+          </div>
+        </div>
+        <a
+          href="{{ collection.all.url }}"
+          class="rounded-full border-2 bg-[#193C6B] px-12 py-2 en:font-museo text-[16px] font-bold uppercase text-white hover:border-[#193C6B] hover:bg-white hover:text-[#193C6B]"
+        >
+          {{ 'homepage.section_good_stuff.shop_now' | t }}
+        </a>
+      </div>
+    </div>
+  </div>
+  <img
+    src="{{ 'IMG_9820.png' | file_img_url: 'master' }}"
+    srcset="{{ 'IMG_9820.png' | file_img_url: '300x' }} 300w, {{ 'IMG_9820.png' | file_img_url: '600x' }} 600w, {{ 'IMG_9820.png' | file_img_url: '900x' }} 900w"
+    sizes="1500px"
+    alt="Dog waiting to eat (Wider version)"
+    class="relative w-full h-full object-cover object-top"
+    width="4500"
+    height="2050"
+  >
+</section>
+<section class="relative bg-[#9ac9eb] py-10" id="featured-reviews">
+  <div class="container mx-auto flex flex-col items-center justify-center gap-4 py-5">
+    <h2 class="text-balance text-center en:font-heyCharlie text-[40px] leading-[40px] tracking-wider text-[#193C6B] lg:text-[60px] lg:leading-[60px] lg:tracking-widest">
+      {{ 'homepage.section_our_buddies_love_a_bite.title' | t }}
+    </h2>
+    <p class="w-[70%] text-center font-montserrat text-[14px] font-light leading-6 text-[#203c6c]">
+      {{ 'homepage.section_our_buddies_love_a_bite.subtext' | t }}
+    </p>
+  </div>
+  <div id="klaviyo-featured-reviews-carousel"></div>
+</section>
+<img
+  src="{{ 'Untitled_Artwork_15_5790ea31-ca75-4f35-a6fb-6c542b4e06c4.png' | file_img_url: 'master' }}"
+  srcset="{{ 'Untitled_Artwork_15_5790ea31-ca75-4f35-a6fb-6c542b4e06c4.png' | file_img_url: '300x' }} 300w, {{ 'Untitled_Artwork_15_5790ea31-ca75-4f35-a6fb-6c542b4e06c4.png' | file_img_url: '1400x' }} 1400w"
+  sizes="100vw"
+  alt="section divider"
+  width="4500"
+  height="570"
+  class="w-full object-cover"
+>
+<section class="relative bg-[#1c3e6c] py-10">
+  <div class="container mx-auto grid grid-cols-1 px-4 lg:grid-cols-2 lg:px-0">
+    <div class="flex flex-col items-center justify-center gap-7 lg:w-[600px]">
+      <h3 class="text-balance text-center en:font-heyCharlie en:text-[40px] en:leading-[40px] en:tracking-wider zh-TW:text-[30px] zh-TW:leading-[35px] text-white lg:zh-TW:text-[40px] lg:zh-TW:leading-[45px] lg:en:text-[60px] lg:en:leading-[60px] lg:en:tracking-widest">
+        {{ 'homepage.section_subscribe_and_save.title' | t }}
+      </h3>
+      <div class="grid w-full grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-1">
+        <div class="shrink-1 grow-1 flex flex-col items-center justify-between gap-4 px-2">
+          <img
+            src="{{ 'Subscription-31.png' | file_img_url: 'master' }}"
+            alt="Subscription Discount"
+            class="aspect-square w-[50px] lg:w-[65px]"
+            width="200"
+            height="2004"
+          >
+          <p class="h-full w-full text-wrap text-center en:font-museo text-[14px] font-light text-white">
+            {{ 'homepage.section_subscribe_and_save.point1' | t }}
+          </p>
+        </div>
+        <div class="shrink-1 grow-1 flex flex-col items-center justify-between gap-4 px-2">
+          <img
+            src="{{ 'Subscription-32.png' | file_img_url: 'master' }}"
+            alt="Automated Deliveries"
+            class="aspect-square w-[50px] lg:w-[65px]"
+            width="200"
+            height="200"
+          >
+          <p class="h-full w-full text-wrap text-center en:font-museo text-[14px] font-light text-white">
+            {{ 'homepage.section_subscribe_and_save.point2' | t }}
+          </p>
+        </div>
+        <div class="shrink-1 grow-1 flex flex-col items-center justify-between gap-4 px-2">
+          <img
+            src="{{ 'Subscription-33.png' | file_img_url: 'master' }}"
+            alt="Swap, skip or cancel anytime"
+            class="aspect-square w-[50px] lg:w-[65px]"
+            width="200"
+            height="200"
+          >
+          <p class="h-full w-full text-wrap text-center en:font-museo text-[14px] font-light text-white">
+            {{ 'homepage.section_subscribe_and_save.point3' | t }}
+          </p>
+        </div>
+        <div class="shrink-1 grow-1 flex flex-col items-center justify-between gap-4 px-2">
+          <img
+            src="{{ 'Subscription-34.png' | file_img_url: 'master' }}"
+            alt="Exclusive Surprises"
+            class="aspect-square w-[50px] lg:w-[65px]"
+            width="200"
+            height="200"
+          >
+          <p class="h-full w-full text-wrap text-center en:font-museo text-[14px] font-light text-white">
+            {{ 'homepage.section_subscribe_and_save.point4' | t }}
+          </p>
+        </div>
+      </div>
+    </div>
+    <img
+      src="{{ 'DSCF8372_1.png' | file_img_url: 'master' }}"
+      srcset="{{ 'DSCF8372_1.png' | file_img_url: '300x' }} 300w, {{ 'DSCF8372_1.png' | file_img_url: '600x' }} 600w"
+      sizes="600px"
+      alt="Dog lying on Buddy Bites Subsciption Delivery Box"
+      class="mx-auto w-full -translate-x-[5%] object-cover lg:translate-x-0"
+      width="2644"
+      height="2136"
+    >
+  </div>
+  <div class="flex justify-center">
+    <a
+      href="{{ pages['subscription-page'].url }}"
+      class="relative rounded-full border-2 border-[#9acaeb] bg-[#9acaeb] px-5 py-2 font-montserrat text-[14px] font-semibold uppercase text-[#1c3e6c] hover:bg-white hover:text-[#9acaeb]"
+    >
+      {{- 'homepage.section_subscribe_and_save.subscribe_now' | t -}}
+    </a>
+  </div>
+</section>
+<img src="{{ 'IMG_9822.png' | file_img_url: 'master' }}" alt="section divider" width="2960" height="340">
+<section class="relative">
+  <div class="flex flex-col items-center justify-center gap-9 py-5 text-[#193C6B] lg:py-10">
+    <div class="flex flex-col items-center justify-center gap-2">
+      <h3 class="text-balance text-center en:font-heyCharlie en:text-[40px] zh-TW:text-[30px] zh-TW:leading-[35px] en:leading-[40px] en:tracking-wider lg:en:text-[60px] lg:zh-TW:text-[40px] lg:zh-TW:leading-[45px] lg:en:leading-[60px] lg:en:tracking-widest">
+        {{- 'homepage.section_giving_back.title' | t -}}
+      </h3>
+      <p class="w-[70%] text-center font-montserrat text-[12px] font-light leading-6 lg:text-[14px] ">
+        {{- 'homepage.section_giving_back.subtext' | t -}}
+      </p>
+    </div>
+    <div class="flex flex-col items-center justify-center">
+      <div class="els-cup-box" data-id="3996" ></div>  
+      <span class="font-montserrat text-[16px] font-bold uppercase leading-[16px] lg:text-[20px] lg:leading-[20px]"></span>
+        {{- 'homepage.section_giving_back.donation_amount_unit' | t -}}
+      </span>
+    </div>
+    <a
+      href="{{ collection.all.url }}"
+      class="rounded-full border-2 border-[#193C6B] bg-[#193C6B] px-5 py-2 font-montserrat text-[14px] font-semibold uppercase text-white hover:border-[#193C6B] hover:bg-white hover:text-[#193C6B]"
+    >
+      {{- 'homepage.section_giving_back.shop_now' | t -}}
+    </a>
+    <div class="flex w-full flex-col gap-2">
+      <img
+        src="{{ 'Group_681_16ee8508-6a2d-4080-9a8e-3702d53864d8.png' | file_img_url: 'master' }}"
+        srcset="{{ 'Group_681_16ee8508-6a2d-4080-9a8e-3702d53864d8.png' | file_img_url: '300x' }} 300w, {{ 'Group_681_16ee8508-6a2d-4080-9a8e-3702d53864d8.png' | file_img_url: '1400x' }} 1400w"
+        sizes="1400px"
+        alt="Shelter Partners"
+        class="hidden w-full object-cover px-10 lg:block"
+        width="6323"
+        height="497"
+      >
+    </div>
+    {% render 'shelters-mobile' %}
+    <p class="text-center font-montserrat text-[14px] font-light uppercase leading-6 lg:text-[20px]">
+      {{- 'homepage.section_giving_back.shelter_partners' | t -}}
+    </p>
+  </div>
+</section>
+<img
+  src="{{'Untitled_Artwork_15_268fd704-28ad-4fa1-a85f-0a7e5caf7cc9.png' | file_img_url: 'master' }}"
+  srcset="{{ 'Untitled_Artwork_15_268fd704-28ad-4fa1-a85f-0a7e5caf7cc9.png' | file_img_url: '300x' }} 300w,{{ 'Untitled_Artwork_15_268fd704-28ad-4fa1-a85f-0a7e5caf7cc9.png' | file_img_url: '1500x' }} 1500w"
+  sizes="100vw"
+  alt="section divider"
+  width="4500"
+  height="340"
+>
+<section class="relative bg-[#9ac9eb]">
+  <div class="grid grid-cols-1 gap-5 lg:grid-cols-2 lg:gap-0">
+    <div class="flex flex-col gap-4">
+      <h3 class="block text-balance px-5 py-10 text-center en:font-heyCharlie en:text-[50px] en:leading-[50px] en:tracking-wider zh-TW:text-[30px] zh-TW:leading-[35px] text-[#193C6B] lg:hidden lg:zh-TW:text-[40px] lg:zh-TW:leading-[45px] lg:en:text-[60px] lg:en:leading-[60px] lg:en:tracking-widest">
+        {{- 'homepage.section_want_to_try_a_sample.title' | t -}}
+      </h3>
+      <img src="{{ 'Sample_Kibble_1_1.png' | file_img_url: 'master' }}" alt="Sample Kibble" class="w-full object-cover" width="761" height="594">
+    </div>
+    <div class="flex flex-col items-center justify-center gap-10 py-5">
+      <h3 class="hidden text-balance text-center en:font-heyCharlie en:text-[40px] en:leading-[40px] en:tracking-wider zh-TW:text-[30px] zh-TW:leading-[35px] text-[#193C6B] lg:block lg:zh-TW:text-[40px] lg:zh-TW:leading-[45px] lg:en:text-[60px] lg:en:leading-[60px] lg:en:tracking-widest">
+        {{- 'homepage.section_want_to_try_a_sample.title' | t -}}
+      </h3>
+      <a
+        href="{{ all_products['adult-turkey-sample-starter-pack'].url }}"
+        class="rounded-full border-2 border-[#193C6B] bg-[#193C6B] px-5 py-2 font-montserrat text-[14px] font-semibold uppercase text-white hover:border-[#193C6B] hover:bg-white hover:text-[#193C6B]"
+        >{{- 'homepage.section_want_to_try_a_sample.shop_sample_packs' | t -}}</a
+      >
+    </div>
+  </div>
+</section>
+<img
+  src="{{ 'Untitled_Artwork_15_copy_2_edd35e39-6074-4ede-82e7-ff5a8ce78775.png' | file_img_url: 'master' }}"
+  srcset="{{ 'Untitled_Artwork_15_copy_2_edd35e39-6074-4ede-82e7-ff5a8ce78775.png' | file_img_url: '300x' }} 300w, {{ 'Untitled_Artwork_15_copy_2_edd35e39-6074-4ede-82e7-ff5a8ce78775.png' | file_img_url: '1500x' }} 1500w"
+  sizes="100vw"
+  alt="section divider"
+  width="4500"
+  height="340"
+>
+<style>
+  .els-cup-box {
+    height: auto !important;
+  }
+
+  .els-cup-w-val {
+    font-family: 'heyCharlie';
+    font-size: 90px;
+    line-height: 90px;
+  }
+
+  .els-cup-w-icon,
+  .els-cup-w-descr {
+    display: none;
+  }
+
+  @media (min-width: 1024px) {
+    .els-cup-box {
+      height: auto !important;
+      margin-top: 30px !important;
+    }
+
+    .els-cup-w-val {
+      font-size: 150px !important;
+      line-height: 150px !important;
+    }
+  }
+</style>
+{% render 'faqs', bgColor: '#fff' %}
+{% render 'newsletter-signup' %}
+
+{% schema %}
+  {
+    "name": "Hero Section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "hero_image_desktop",
+        "label": "Hero Image Desktop"
+      },
+      {
+        "type": "image_picker",
+        "id": "hero_image_mobile",
+        "label": "Hero Image Mobile"
+      },
+      {
+        "type": "text",
+        "id": "hero_heading",
+        "label": "Hero Heading"
+      },
+      {
+        "type": "text",
+        "id": "hero_subheading",
+        "label": "Hero Subheading"
+      },
+      {
+        "type": "color",
+        "id": "hero_heading_color",
+        "label": "Hero Heading Color"
+      }
+    ],
+    "blocks": []
+  }
+{% endschema %}

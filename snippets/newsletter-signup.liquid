@@ -1,0 +1,27 @@
+<section class="relative bg-[#f3f3f3]">
+  <div class="container grid grid-cols-1 gap-5 px-4 py-16 lg:grid-cols-2">
+    <div class="flex flex-col gap-2">
+      <h3 class="text-balance text-[26px] font-bold text-[#193C6B] en:font-museo lg:text-[20px] ">
+        {{ 'section_newsletter.title' | t }}
+      </h3>
+      <p class="text-[14px] font-light en:font-museo lg:text-[16px]">
+        {{ 'section_newsletter.description' | t }}
+      </p>
+    </div>
+    <form action="" class="flex gap-2">
+      <input
+        type="email"
+        id="newsletter-email"
+        placeholder="{{ 'section_newsletter.email_placeholder' | t }}"
+        class="w-full rounded-full border border-[#193C6B] px-5 py-2"
+      >
+      <button
+        type="submit"
+        id="newsletter-submit"
+        class="rounded-full border-2 border-[#193C6B] bg-[#193C6B] px-2 py-2 font-montserrat text-[14px] font-semibold uppercase text-white hover:border-[#193C6B] hover:bg-white hover:text-[#193C6B]"
+      >
+        {{- 'section_newsletter.subscribe' | t -}}
+      </button>
+    </form>
+  </div>
+</section>

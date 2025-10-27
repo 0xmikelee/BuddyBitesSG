@@ -1,0 +1,384 @@
+{%- style -%}
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100%));
+    }
+  }
+
+  .marquee {
+    animation: marquee 10s linear infinite;
+  }
+{%- endstyle -%}
+
+<img
+  src="https://cdn.shopify.com/s/files/1/0430/5833/1805/files/Vector_9_1.png?v=1716146718"
+  class="w-full"
+>
+<section class="bg-[#DDDAE7] py-7">
+  <div class="container mx-auto px-5">
+    {% comment %} tabs selector {% endcomment %}
+    <div class="relative z-20 mx-auto flex min-h-[70px] w-full translate-y-[2.5vw] flex-nowrap items-center justify-center rounded-full border-[3px] border-solid border-[#0D3E66] bg-white md:w-fit lg:h-[5vw] lg:px-7 lg:py-5">
+      <button class="tab w-[31%] px-2 font-montserrat font-semibold text-[#0D3E66] hover:text-[#0D3E66] en:text-[12px] zh-TW:text-[14px] md:px-7 md:leading-[25.7px] md:en:text-[16px] md:zh-TW:text-[16px]">
+        {{ 'products.product.nutrition.title' | t }}
+      </button>
+      <div class="h-[20px] w-[3px] bg-[#0D3E66]"></div>
+      <button class="tab w-[31%] px-2 font-montserrat font-semibold text-[#90A4B0] hover:text-[#0D3E66] en:text-[12px] zh-TW:text-[14px] md:px-7 md:leading-[25.7px] md:en:text-[16px] md:zh-TW:text-[16px]">
+        {{ 'products.product.feeding_guidelines.title' | t }}
+      </button>
+      <div class="h-[20px] w-[3px] bg-[#0D3E66]"></div>
+      <button class="tab w-[31%] px-2 font-montserrat font-semibold text-[#90A4B0] hover:text-[#0D3E66] en:text-[12px] zh-TW:text-[14px] md:px-7 md:leading-[25.7px] md:en:text-[16px] md:zh-TW:text-[16px]">
+        {{ 'products.product.faq.title' | t }}
+      </button>
+    </div>
+
+    {% comment %} Contents {% endcomment %}
+    <div class="relative z-10 rounded-[50px] border-[3px] border-solid border-[#0D3E66] bg-white px-3 py-10 md:py-20">
+      {% comment %} Nutrition Content {% endcomment %}
+      <div class="tabContent flex flex-col items-center justify-center gap-8 opacity-100 transition-opacity duration-300">
+        <h2 class="text-center tracking-widest text-black en:font-heyCharlie en:text-[44px] zh-TW:text-[24px] lg:en:text-[53px] lg:zh-TW:text-[40px]">
+          {{ 'products.product.treats.title' | t }}
+          {{- 'products.product.nutrition.header' | t -}}
+        </h2>
+        <p class="text-balance text-center text-[12px] font-light en:font-museo md:w-[60%] md:text-[14px]">
+          {{ product.metafields.custom.nutrition.value.summary }}
+        </p>
+        <div class="grid grid-cols-2 gap-2 text-[#615E99] lg:grid-cols-[repeat(4,fit-content(230px))] lg:px-10">
+          <div class="flex gap-2">
+            <img
+              src="{{ product.metafields.custom.nutrition.value.image_1 | img_url: 'master' }}"
+              class="aspect-square w-[40px] object-contain lg:w-[80px]"
+            >
+            <div class="flex flex-col justify-center gap-1">
+              <p class="text-balance font-montserrat text-[10px] font-bold uppercase md:text-[14px]">
+                {{ product.metafields.custom.nutrition.value.point_1 }}
+              </p>
+              <p class="text-balance text-[8px] en:font-museo md:text-[10px]">
+                {{ product.metafields.custom.nutrition.value.subtext_1 }}
+              </p>
+            </div>
+          </div>
+          <div class="flex gap-2">
+            <img
+              src="{{ product.metafields.custom.nutrition.value.image_2 | img_url: 'master' }}"
+              class="aspect-square w-[40px] object-contain lg:w-[80px]"
+            >
+            <div class="flex flex-col justify-center gap-1">
+              <p class="text-balance font-montserrat text-[10px] font-bold uppercase md:text-[14px]">
+                {{ product.metafields.custom.nutrition.value.point_2 }}
+              </p>
+              <p class="text-balance text-[8px] en:font-museo md:text-[10px]">
+                {{ product.metafields.custom.nutrition.value.subtext_2 }}
+              </p>
+            </div>
+          </div>
+          <div class="flex gap-2">
+            <img
+              src="{{ product.metafields.custom.nutrition.value.image_3 | img_url: 'master' }}"
+              class="aspect-square w-[40px] object-contain lg:w-[80px]"
+            >
+            <div class="flex flex-col justify-center gap-1">
+              <p class="text-balance font-montserrat text-[10px] font-bold uppercase md:text-[14px]">
+                {{ product.metafields.custom.nutrition.value.point_3 }}
+              </p>
+              <p class="text-balance text-[8px] en:font-museo md:text-[10px]">
+                {{ product.metafields.custom.nutrition.value.subtext_3 }}
+              </p>
+            </div>
+          </div>
+          <div class="flex gap-2">
+            <img
+              src="{{ product.metafields.custom.nutrition.value.image_4 | img_url: 'master' }}"
+              class="aspect-square w-[40px] object-contain lg:w-[80px]"
+            >
+            <div class="flex flex-col justify-center gap-1">
+              <p class="text-balance font-montserrat text-[10px] font-bold uppercase md:text-[14px]">
+                {{ product.metafields.custom.nutrition.value.point_4 }}
+              </p>
+              <p class="text-balance text-[8px] en:font-museo md:text-[10px]">
+                {{ product.metafields.custom.nutrition.value.subtext_4 }}
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col items-center justify-center gap-2 lg:w-[60%]">
+          <h3 class="font-montserrat text-[18px] font-bold text-black">
+            {{ 'products.product.nutrition.ingredients' | t }}
+          </h3>
+          <p class="text-balance text-center text-[12px] font-light text-black en:font-museo md:text-[14px]">
+            {{ product.metafields.custom.nutrition.value.ingredients }}
+          </p>
+        </div>
+        <div class="flex flex-col items-center justify-center gap-1 text-balance text-center text-[12px] text-black en:font-museo md:text-[14px]">
+          <p>
+            <strong>{{ 'products.product.nutrition.energy' | t }} -</strong>
+            {{ product.metafields.custom.nutrition.value.energy }}
+          </p>
+          <p>
+            <strong>{{ 'products.product.nutrition.nutritional_content' | t }} -</strong>
+            {{ product.metafields.custom.nutrition.value.nutritional_content }}
+          </p>
+        </div>
+      </div>
+
+      {% comment %} Feeding Guidelines Content {% endcomment %}
+      <div class="tabContent hidden flex-col items-center justify-center gap-8 opacity-0 transition-opacity duration-300">
+        <h2 class="text-center tracking-widest text-black en:font-heyCharlie en:text-[40px] zh-TW:text-[24px] lg:en:text-[53px] lg:zh-TW:text-[40px]">
+          {{ 'products.product.feeding_guidelines.treats.header' | t }}
+        </h2>
+        <div class="flex flex-col items-center justify-center gap-2">
+          <p class="text-balance text-center font-montserrat text-[14px] text-black">
+            {{ 'products.product.feeding_guidelines.treats.subtext' | t }}
+          </p>
+          <h3 class="text-balance text-center font-montserrat text-[16px] font-bold text-black">
+            {{ 'products.product.feeding_guidelines.treats.treat_size' | t }}
+          </h3>
+          <p class="text-balance text-center font-montserrat text-[14px] text-black">
+            {{ 'products.product.feeding_guidelines.treats.treat_size_subtext' | t }}
+          </p>
+        </div>
+      </div>
+
+      {% comment %} FAQ's Content {% endcomment %}
+      <div class="tabContent hidden flex-col items-center justify-center gap-8 opacity-0 transition-opacity duration-300">
+        <h2 class="text-center tracking-widest text-black en:font-heyCharlie en:text-[40px] zh-TW:text-[24px] lg:en:text-[53px] lg:zh-TW:text-[40px]">
+          {{ 'products.product.faq.title' | t }}
+        </h2>
+        <div class="flex flex-col items-center justify-center gap-4">
+          <div class="text-balance text-center text-black">
+            <p class="font-montserrat text-[18px] font-bold ">{{ 'products.product.faq.shipping.title' | t }}</p>
+            <p class="mt-2 text-[14px] font-light en:font-museo">
+              {{ 'products.product.faq.shipping.answer' | t }}
+            </p>
+          </div>
+          <div class="text-balance text-center text-black">
+            <p class="font-montserrat text-[18px] font-bold ">
+              {{ 'products.product.faq.flexible_subscription.title' | t }}
+            </p>
+            <p class="mt-2 text-[14px] font-light en:font-museo">
+              {{ 'products.product.faq.flexible_subscription.answer' | t }}
+            </p>
+          </div>
+          <div class="text-balance text-center text-black">
+            <p class="font-montserrat text-[18px] font-bold ">{{ 'products.product.faq.giving_back.title' | t }}</p>
+            <p class="mt-2 text-[14px] font-light en:font-museo">
+              {{ 'products.product.faq.giving_back.answer' | t }}
+            </p>
+          </div>
+        </div>
+        <p class="text-center font-light text-[14] text-black en:font-museo">
+          {{ 'products.product.faq.footer.text' | t }}
+          <a href="{{ pages['faqs'].url }}" class="font-bold text-[#0D3E66]">
+            {{- 'products.product.faq.footer.link' | t -}}
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="bg-[#DDDAE7]">
+  <div class="flex justify-between overflow-hidden bg-[#0D3E66] py-3 md:hidden">
+    <div
+      class="marquee flex min-w-full shrink-0 gap-2 text-balance text-center font-montserrat text-[2vw] font-bold uppercase text-white"
+    >
+      <div class="flex items-center justify-center gap-2">
+        <img
+          src="https://cdn.shopify.com/s/files/1/0643/9010/3256/files/White_Light_Blue_Icons-05.png?v=1687204240"
+          class="aspect-square w-[10vw] object-contain"
+        >
+        <p class="w-[60%]">{{ 'products.product.overall_benefits_treats.vet_backed' | t }}</p>
+      </div>
+      <div class="flex items-center justify-center gap-2">
+        <img
+          src="https://cdn.shopify.com/s/files/1/0643/9010/3256/files/White_Light_Blue_Icons-06.png?v=1687204240"
+          class="aspect-square w-[10vw] object-contain"
+        >
+        <p class="w-[60%]">{{ 'products.product.overall_benefits_treats.gut_friendly' | t }}</p>
+      </div>
+      <div class="flex items-center justify-center gap-2">
+        <img
+          src="https://cdn.shopify.com/s/files/1/0643/9010/3256/files/White_Light_Blue_Icons-07.png?v=1687204240"
+          class="aspect-square w-[10vw] object-contain"
+        >
+        <p class="w-[60%]">{{ 'products.product.overall_benefits_treats.made_in_europe' | t }}</p>
+      </div>
+      <div class="flex items-center justify-center gap-2">
+        <img
+          src="https://cdn.shopify.com/s/files/1/0643/9010/3256/files/White_Light_Blue_Icons-08.png?v=1687204240"
+          class="aspect-square w-[10vw] object-contain"
+        >
+        <p class="w-[60%]">{{ 'products.product.overall_benefits_treats.premium_traceable' | t }}</p>
+      </div>
+      <div class="flex items-center justify-center gap-2">
+        <img
+          src="https://cdn.shopify.com/s/files/1/0643/9010/3256/files/White_Light_Blue_Icons-09.png?v=1687204240"
+          class="aspect-square w-[10vw] object-contain"
+        >
+        <p class="w-[60%]">{{ 'products.product.overall_benefits_treats.loved_by_fussy_eaters' | t }}</p>
+      </div>
+    </div>
+    <div
+      aria-hidden="true"
+      class="marquee flex min-w-full shrink-0 gap-2 text-balance text-center font-montserrat text-[2vw] font-bold uppercase text-white"
+    >
+      <div class="flex items-center justify-center gap-2">
+        <img
+          src="https://cdn.shopify.com/s/files/1/0643/9010/3256/files/White_Light_Blue_Icons-05.png?v=1687204240"
+          class="aspect-square w-[10vw] object-contain"
+        >
+        <p class="w-[60%]">{{ 'products.product.overall_benefits_treats.vet_backed' | t }}</p>
+      </div>
+      <div class="flex items-center justify-center gap-2">
+        <img
+          src="https://cdn.shopify.com/s/files/1/0643/9010/3256/files/White_Light_Blue_Icons-06.png?v=1687204240"
+          class="aspect-square w-[10vw] object-contain"
+        >
+        <p class="w-[60%]">{{ 'products.product.overall_benefits_treats.gut_friendly' | t }}</p>
+      </div>
+      <div class="flex items-center justify-center gap-2">
+        <img
+          src="https://cdn.shopify.com/s/files/1/0643/9010/3256/files/White_Light_Blue_Icons-07.png?v=1687204240"
+          class="aspect-square w-[10vw] object-contain"
+        >
+        <p class="w-[60%]">{{ 'products.product.overall_benefits_treats.made_in_europe' | t }}</p>
+      </div>
+      <div class="flex items-center justify-center gap-2">
+        <img
+          src="https://cdn.shopify.com/s/files/1/0643/9010/3256/files/White_Light_Blue_Icons-08.png?v=1687204240"
+          class="aspect-square w-[10vw] object-contain"
+        >
+        <p class="w-[60%]">{{ 'products.product.overall_benefits_treats.premium_traceable' | t }}</p>
+      </div>
+      <div class="flex items-center justify-center gap-2">
+        <img
+          src="https://cdn.shopify.com/s/files/1/0643/9010/3256/files/White_Light_Blue_Icons-09.png?v=1687204240"
+          class="aspect-square w-[10vw] object-contain"
+        >
+        <p class="w-[60%]">{{ 'products.product.overall_benefits_treats.loved_by_fussy_eaters' | t }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="container mx-auto flex flex-col items-center justify-center gap-5 px-5">
+    <div class="flex flex-col items-center justify-center gap-2 text-[#615E99]">
+      <h2 class="text-center tracking-widest en:font-heyCharlie en:text-[40px] zh-TW:text-[25px] lg:en:text-[90px] lg:zh-TW:text-[80px]">
+        {{ 'products.product.ingredients_treats.title' | t }}
+      </h2>
+      <p class="text-center text-[12px] font-light leading-[16px] en:font-museo md:max-w-[60%] md:text-[18px] md:leading-[28px]">
+        {{ 'products.product.ingredients_treats.subtext' | t }}
+      </p>
+    </div>
+    <div class="relative w-full">
+      <img
+        src="{{ product.metafields.custom.nutrition.value.key_ingredients_image | img_url: 'master' }}"
+        class="relative z-0 mx-auto mb-[15vw] mt-[12vw] block w-[80%] object-contain md:mb-[6vw] md:mt-[2vw]"
+      >
+      <div class="absolute left-0 top-0 flex w-[clamp(125px,20%,300px)] flex-col items-center justify-center gap-1 text-[clamp(6px,2.5vw,11px)] md:top-[10vw]">
+        <p class="text-balance rounded-full bg-[#615E99] px-[0.7vw] py-[0.2vw] text-center font-montserrat font-semibold uppercase tracking-widest text-white">
+          {{ product.metafields.custom.nutrition.value.key_ingredient_1 }}
+        </p>
+        <p class="font text-balance text-center font-montserrat font-semibold uppercase text-[#615E99]">
+          {{ product.metafields.custom.nutrition.value.key_ingredient_benefit_1 }}
+        </p>
+      </div>
+      <div class="absolute right-0 top-0 flex w-[clamp(125px,20%,300px)] flex-col items-center justify-center gap-1 text-[clamp(6px,2.5vw,11px)] md:top-[10vw]">
+        <p class="text-balance rounded-full bg-[#615E99] px-[0.7vw] py-[0.2vw] text-center font-montserrat font-semibold uppercase tracking-widest text-white">
+          {{ product.metafields.custom.nutrition.value.key_ingredient_2 }}
+        </p>
+        <p class="font text-balance text-center font-montserrat font-semibold uppercase text-[#615E99]">
+          {{ product.metafields.custom.nutrition.value.key_ingredient_benefit_2 }}
+        </p>
+      </div>
+      <div class="absolute bottom-0 left-1/2 flex w-[clamp(125px,20%,300px)] -translate-x-1/2 flex-col items-center justify-center gap-1 text-[clamp(6px,2.5vw,11px)] md:bottom-[4vw] md:left-0 md:translate-x-0">
+        <p class="text-balance rounded-full bg-[#615E99] px-[0.7vw] py-[0.2vw] text-center font-montserrat font-semibold uppercase tracking-widest text-white">
+          {{ product.metafields.custom.nutrition.value.key_ingredient_3 }}
+        </p>
+        <p class="font text-balance text-center font-montserrat font-semibold uppercase text-[#615E99]">
+          {{ product.metafields.custom.nutrition.value.key_ingredient_benefit_3 }}
+        </p>
+      </div>
+    </div>
+    <div
+      class="hidden translate-y-[2.5vw] items-center justify-center gap-2 text-balance rounded-full bg-[#0D3E66] px-7 py-5 text-center font-montserrat text-[clamp(10px,0.9vw,15px)] font-bold uppercase text-white md:flex"
+    >
+      <div class="flex flex-grow items-center justify-center gap-2 md:w-[18%]">
+        <img
+          src="https://cdn.shopify.com/s/files/1/0643/9010/3256/files/White_Light_Blue_Icons-05.png?v=1687204240"
+          class="aspect-square w-[min(5vw,70px)] object-contain"
+        >
+        <p>{{ 'products.product.overall_benefits_treats.vet_backed' | t }}</p>
+      </div>
+      <div class="flex flex-grow items-center justify-center gap-2 md:w-[18%]">
+        <img
+          src="https://cdn.shopify.com/s/files/1/0643/9010/3256/files/White_Light_Blue_Icons-06.png?v=1687204240"
+          class="aspect-square w-[min(5vw,70px)] object-contain"
+        >
+        <p>{{ 'products.product.overall_benefits_treats.gut_friendly' | t }}</p>
+      </div>
+      <div class="flex flex-grow items-center justify-center gap-2 md:w-[18%]">
+        <img
+          src="https://cdn.shopify.com/s/files/1/0643/9010/3256/files/White_Light_Blue_Icons-07.png?v=1687204240"
+          class="aspect-square w-[min(5vw,70px)] object-contain"
+        >
+        <p>{{ 'products.product.overall_benefits_treats.made_in_europe' | t }}</p>
+      </div>
+      <div class="flex flex-grow items-center justify-center gap-2 md:w-[18%]">
+        <img
+          src="https://cdn.shopify.com/s/files/1/0643/9010/3256/files/White_Light_Blue_Icons-08.png?v=1687204240"
+          class="aspect-square w-[min(5vw,70px)] object-contain"
+        >
+        <p>{{ 'products.product.overall_benefits_treats.premium_traceable' | t }}</p>
+      </div>
+      <div class="flex flex-grow items-center justify-center gap-2 md:w-[18%]">
+        <img
+          src="https://cdn.shopify.com/s/files/1/0643/9010/3256/files/White_Light_Blue_Icons-05.png?v=1687204240"
+          class="aspect-square w-[min(5vw,70px)] object-contain"
+        >
+        <p>{{ 'products.product.overall_benefits_treats.loved_by_fussy_eaters' | t }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+<img
+  src="https://cdn.shopify.com/s/files/1/0430/5833/1805/files/Vector_9_1_copy.png?v=1716146718"
+  alt="section divider"
+  class="w-full object-cover"
+>
+
+<script>
+  // Wait until the page is ready
+  document.addEventListener('DOMContentLoaded', function () {
+    var tabs = document.querySelectorAll('.tab');
+    var contents = document.querySelectorAll('.tabContent');
+
+    tabs.forEach(function (tab, idx) {
+      tab.addEventListener('click', function () {
+        // Remove 'active' class from all tabs and content
+        tabs.forEach(function (t) {
+          t.classList.remove('text-[#0D3E66]');
+          t.classList.add('text-[#90A4B0]');
+        });
+        contents.forEach(function (c) {
+          c.classList.remove('flex');
+          c.classList.add('hidden');
+          c.classList.remove('opacity-100');
+          c.classList.add('opacity-0');
+
+          // c.addEventListener('transitionend', function handler() {
+          //   c.classList.remove('flex');
+          //   c.classList.add('hidden');
+          //   contents[idx].classList.add('flex', 'opacity-100');
+          //   contents[idx].classList.remove('hidden', 'opacity-0');
+          //   c.removeEventListener('transitionend', handler);
+          // });
+        });
+
+        // Add 'active' class to the clicked tab and its content
+        tab.classList.add('text-[#0D3E66]');
+        contents[idx].classList.add('flex', 'opacity-100');
+        contents[idx].classList.remove('hidden', 'opacity-0');
+      });
+    });
+  });
+</script>

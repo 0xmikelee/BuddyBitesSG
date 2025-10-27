@@ -1,0 +1,16 @@
+{
+  "sections": {
+    "section-nutrients-start": {
+      "type": "section-nutrients-start",
+      "settings": {}
+    },
+    "section-read-our-blog": {
+      "type": "section-read-our-blog",
+      "settings": {}
+    }
+  },
+  "order": [
+    "section-nutrients-start",
+    "section-read-our-blog"
+  ]
+}

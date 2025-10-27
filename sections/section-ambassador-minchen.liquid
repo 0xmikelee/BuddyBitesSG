@@ -1,0 +1,627 @@
+<section>
+  <img
+    src="{{ 'ambassador-minchen-hero-image.png' | file_img_url: 'master' }}"
+    alt="Minchen Banner"
+    class="hidden w-full lg:block"
+  >
+  <img
+    src="{{ 'ambassador-minchen-hero-image-mobile.png' | file_img_url: 'master' }}"
+    alt="Minchen Banner"
+    class="block w-full lg:hidden"
+  >
+</section>
+<section class="relative h-[65dvh] lg:h-[27vw] ">
+  <div class="container absolute left-1/2 top-1/2 flex w-[95%] -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center gap-[4px] px-[2vw] py-[4vw] en:font-museo lg:w-[50%] lg:px-[1.5vw] lg:py-[3vw]">
+    <h2 class="w-full text-balance text-center font-montserrat text-[6vw] font-semibold text-[#193C6B] md:w-[70%] md:text-[4.5vw] lg:w-full lg:text-[2vw]">
+      {{ 'ambassador.quote.ambassador_quote' | t }}
+    </h2>
+    <p class="text-balance text-center font-normal leading-[4.5vw] text-[#193C6B] lg:block lg:text-[1.3vw]">
+      {{ 'ambassador.quote.ambassador_subtitle' | t }}
+    </p>
+  </div>
+  <img
+    src="{{ 'Group_826_cf21cd0a-c34e-4729-98d1-e4371bab4db9.png' | file_img_url: "master" }}"
+    class="absolute inset-[auto_auto_70%_4.5vw] z-10 hidden w-[clamp(100px,50vw,150vw)] md:inset-[auto_auto_0_0] md:w-[clamp(100px,30%,300px)] md:translate-y-1/2 lg:block lg:w-[clamp(100px,30%,400px)]"
+  >
+  <img
+    src="{{ 'Group_828_7fdf467d-d435-4427-bba4-8c64c5be25ab.png' | file_img_url: "master" }}"
+    class="absolute inset-[100%_50%_auto_auto] z-10 w-[clamp(170px,100vw,190px)] translate-x-1/2 translate-y-[-30%] md:w-[clamp(100px,30%,300px)] md:translate-y-[-20%] lg:inset-[auto_15vw_0_auto] lg:w-[clamp(100px,30%,400px)]"
+  >
+</section>
+<section class="relative bg-[#fef1cd]">
+  <div class="ambassador-swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img
+          src="{{ 'ambassador_donated_desktop.png' | file_img_url: "master" }}"
+          class="hidden h-auto w-full lg:block"
+        >
+        <img
+          src="{{ 'ambassador_donated_mobile.png' | file_img_url: "master" }}"
+          class="block h-auto w-full lg:hidden"
+        >
+        <div class="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center gap-[5px] lg:left-auto lg:right-[20vw] lg:top-0 lg:h-full lg:transform-none">
+          <div class="els-cup-box" data-id="3996"></div>
+          <p class="text-center text-[3vw] font-semibold uppercase tracking-widest text-[#193C6B] en:font-museo md:text-[2vw]">
+            {{ 'ambassador.donations.meals_donated' | t }}
+          </p>
+          <a href="{{ pages.about.url }}" class="btn-cta">
+            {{- 'ambassador.donations.learn_more' | t -}}
+          </a>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img
+          src="{{ 'ambassador_hkscda_desktop.png' | file_img_url: "master" }}"
+          class="hidden lg:block lg:h-auto lg:w-full"
+        >
+        <img
+          src="{{ 'ambassador_hkscda_mobile.png' | file_img_url: "master" }}"
+          class="block h-auto w-full lg:hidden"
+        >
+        <div class="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center gap-[5px] lg:inset-0 lg:h-full lg:transform-none">
+          <h2 class="m-0 text-center text-[20vw] leading-[20vw] tracking-[3px] text-[#193C6B] en:font-heyCharlie lg:text-[5vw] lg:leading-[5vw]">
+            {{ 'ambassador.donations.welcome_hkscda' | t }}
+          </h2>
+          <p class="text-center text-[5vw] font-semibold uppercase tracking-widest text-[#193C6B] en:font-museo lg:text-[2vw]">
+            {{ 'ambassador.donations.support_hk' | t }}
+          </p>
+          <a href="{{ pages.about.url }}" class="btn-cta">
+            {{- 'ambassador.donations.learn_more' | t -}}
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+<section class="relative bg-gradient-to-b from-white to-[#CDE2f7]">
+  <div class="relative flex flex-col justify-center gap-[2px] px-0 py-[20vw] lg:py-[5vw]">
+    <h2 class="m-0 text-balance text-center tracking-widest text-[#193C6B] en:font-heyCharlie en:text-[12vw] zh-TW:text-[10vw] lg:en:text-[5vw] lg:zh-TW:text-[3vw]">
+      {{ 'ambassador.faqs.heading' | t }}
+    </h2>
+    <p class="text-center text-[5vw] font-medium text-[#193C6B] en:font-museo lg:text-[2vw]">
+      - {{ 'ambassador.faqs.subheading' | t }}
+    </p>
+    <div class="container mx-auto max-w-[900px] px-[5vw]">
+      <div class="accordion-item mb-[10px] overflow-hidden rounded-[32px] border-2 border-[#193C6B] bg-white shadow-[0_2px_8px_rgba(45,102,179,0.04)] transition-[box-shadow] duration-200">
+        <button class="accordion-title flex w-full cursor-pointer items-center justify-between rounded-[32px] bg-none px-[20px] py-[10px] text-left text-[1.18rem] font-normal text-[#193C6B] transition-[background] duration-200 md:px-[20px] md:py-[10px] md:text-[1rem]">
+          <p class="m-0 font-bold text-[#193C6B] en:font-museo">{{ 'ambassador.faqs.q1' | t }}</p>
+          <img
+            src="{{ 'accordion-arrow-down.png' | file_img_url:'master' }}"
+            class="w-[20px] text-[1.5rem] text-[#193C6B] transition-transform duration-300 [.active_&]:rotate-180"
+          >
+        </button>
+        <div class="duration-400 max-h-0 overflow-hidden rounded-[0_0_32px_32px] bg-[#F4FAFD] px-[28px] py-0 text-[1rem] text-[#193C6B] transition-[max-height,padding] ease-[cubic-bezier(0.74,0,0.38,1)] md:px-[16px] [.active_&]:max-h-[600px] [.active_&]:pb-[22px] [.active_&]:pt-[10px]">
+          {{ 'ambassador.faqs.a1' | t }}
+        </div>
+      </div>
+      <div class="accordion-item mb-[10px] overflow-hidden rounded-[32px] border-2 border-[#193C6B] bg-white shadow-[0_2px_8px_rgba(45,102,179,0.04)] transition-[box-shadow] duration-200">
+        <button class="accordion-title flex w-full cursor-pointer items-center justify-between rounded-[32px] bg-none px-[20px] py-[10px] text-left text-[1.18rem] font-normal text-[#193C6B] transition-[background] duration-200 md:px-[20px] md:py-[10px] md:text-[1rem]">
+          <p class="m-0 font-bold text-[#193C6B] en:font-museo">{{ 'ambassador.faqs.q2' | t }}</p>
+          <img
+            src="{{ 'accordion-arrow-down.png' | file_img_url:'master' }}"
+            class="w-[20px] text-[1.5rem] text-[#193C6B] transition-transform duration-300 [.active_&]:rotate-180"
+          >
+        </button>
+        <div class="duration-400 max-h-0 overflow-hidden rounded-[0_0_32px_32px] bg-[#F4FAFD] px-[28px] py-0 text-[1rem] text-[#193C6B] transition-[max-height,padding] ease-[cubic-bezier(0.74,0,0.38,1)] md:px-[16px] [.active_&]:max-h-[600px] [.active_&]:pb-[22px] [.active_&]:pt-[10px]">
+          {{ 'ambassador.faqs.a2' | t }}
+        </div>
+      </div>
+      <div class="accordion-item mb-[10px] overflow-hidden rounded-[32px] border-2 border-[#193C6B] bg-white shadow-[0_2px_8px_rgba(45,102,179,0.04)] transition-[box-shadow] duration-200">
+        <button class="accordion-title flex w-full cursor-pointer items-center justify-between rounded-[32px] bg-none px-[20px] py-[10px] text-left text-[1.18rem] font-normal text-[#193C6B] transition-[background] duration-200 md:px-[20px] md:py-[10px] md:text-[1rem]">
+          <p class="m-0 font-bold text-[#193C6B] en:font-museo">{{ 'ambassador.faqs.q3' | t }}</p>
+          <img
+            src="{{ 'accordion-arrow-down.png' | file_img_url:'master' }}"
+            class="w-[20px] text-[1.5rem] text-[#193C6B] transition-transform duration-300 [.active_&]:rotate-180"
+          >
+        </button>
+        <div class="duration-400 max-h-0 overflow-hidden rounded-[0_0_32px_32px] bg-[#F4FAFD] px-[28px] py-0 text-[1rem] text-[#193C6B] transition-[max-height,padding] ease-[cubic-bezier(0.74,0,0.38,1)] md:px-[16px] [.active_&]:max-h-[600px] [.active_&]:pb-[22px] [.active_&]:pt-[10px]">
+          {{ 'ambassador.faqs.a3' | t }}
+        </div>
+      </div>
+      <div class="accordion-item mb-[10px] overflow-hidden rounded-[32px] border-2 border-[#193C6B] bg-white shadow-[0_2px_8px_rgba(45,102,179,0.04)] transition-[box-shadow] duration-200">
+        <button class="accordion-title flex w-full cursor-pointer items-center justify-between rounded-[32px] bg-none px-[20px] py-[10px] text-left text-[1.18rem] font-normal text-[#193C6B] transition-[background] duration-200 md:px-[20px] md:py-[10px] md:text-[1rem]">
+          <p class="m-0 font-bold text-[#193C6B] en:font-museo">{{ 'ambassador.faqs.q4' | t }}</p>
+          <img
+            src="{{ 'accordion-arrow-down.png' | file_img_url:'master' }}"
+            class="w-[20px] text-[1.5rem] text-[#193C6B] transition-transform duration-300 [.active_&]:rotate-180"
+          >
+        </button>
+        <div class="duration-400 max-h-0 overflow-hidden rounded-[0_0_32px_32px] bg-[#F4FAFD] px-[28px] py-0 text-[1rem] text-[#193C6B] transition-[max-height,padding] ease-[cubic-bezier(0.74,0,0.38,1)] md:px-[16px] [.active_&]:max-h-[600px] [.active_&]:pb-[22px] [.active_&]:pt-[10px]">
+          {{ 'ambassador.faqs.a4' | t }}
+        </div>
+      </div>
+      <div class="accordion-item mb-[10px] overflow-hidden rounded-[32px] border-2 border-[#193C6B] bg-white shadow-[0_2px_8px_rgba(45,102,179,0.04)] transition-[box-shadow] duration-200">
+        <button class="accordion-title flex w-full cursor-pointer items-center justify-between rounded-[32px] bg-none px-[20px] py-[10px] text-left text-[1.18rem] font-normal text-[#193C6B] transition-[background] duration-200 md:px-[20px] md:py-[10px] md:text-[1rem]">
+          <p class="m-0 font-bold text-[#193C6B] en:font-museo">{{ 'ambassador.faqs.q5' | t }}</p>
+          <img
+            src="{{ 'accordion-arrow-down.png' | file_img_url:'master' }}"
+            class="w-[20px] text-[1.5rem] text-[#193C6B] transition-transform duration-300 [.active_&]:rotate-180"
+          >
+        </button>
+        <div class="duration-400 max-h-0 overflow-hidden rounded-[0_0_32px_32px] bg-[#F4FAFD] px-[28px] py-0 text-[1rem] text-[#193C6B] transition-[max-height,padding] ease-[cubic-bezier(0.74,0,0.38,1)] md:px-[16px] [.active_&]:max-h-[600px] [.active_&]:pb-[22px] [.active_&]:pt-[10px]">
+          {{ 'ambassador.faqs.a5' | t }}
+        </div>
+      </div>
+      <div class="accordion-item mb-[10px] overflow-hidden rounded-[32px] border-2 border-[#193C6B] bg-white shadow-[0_2px_8px_rgba(45,102,179,0.04)] transition-[box-shadow] duration-200">
+        <button class="accordion-title flex w-full cursor-pointer items-center justify-between rounded-[32px] bg-none px-[20px] py-[10px] text-left text-[1.18rem] font-normal text-[#193C6B] transition-[background] duration-200 md:px-[20px] md:py-[10px] md:text-[1rem]">
+          <p class="m-0 font-bold text-[#193C6B] en:font-museo">{{ 'ambassador.faqs.q6' | t }}</p>
+          <img
+            src="{{ 'accordion-arrow-down.png' | file_img_url:'master' }}"
+            class="w-[20px] text-[1.5rem] text-[#193C6B] transition-transform duration-300 [.active_&]:rotate-180"
+          >
+        </button>
+        <div class="duration-400 max-h-0 overflow-hidden rounded-[0_0_32px_32px] bg-[#F4FAFD] px-[28px] py-0 text-[1rem] text-[#193C6B] transition-[max-height,padding] ease-[cubic-bezier(0.74,0,0.38,1)] md:px-[16px] [.active_&]:max-h-[600px] [.active_&]:pb-[22px] [.active_&]:pt-[10px]">
+          {{ 'ambassador.faqs.a6' | t }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="relative w-full bg-[#193C6B]">
+  <p class="container mx-auto px-[7vw] py-[2vw] text-center text-[5vw] font-bold text-white en:font-museo lg:text-[2vw]">
+    {{ 'ambassador.donations.slogan' | t }}
+  </p>
+  <div class="ambassador-swiper-photos">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="{{ 'slide_1.png' | file_img_url:'master' }}" class="ambassador-slider-img">
+      </div>
+      <div class="swiper-slide">
+        <img src="{{ 'slide_2.png' | file_img_url:'master' }}" class="ambassador-slider-img">
+      </div>
+      <div class="swiper-slide">
+        <img src="{{ 'slide_3.png' | file_img_url:'master' }}" class="ambassador-slider-img">
+      </div>
+      <div class="swiper-slide">
+        <img src="{{ 'slide_4.png' | file_img_url:'master' }}" class="ambassador-slider-img">
+      </div>
+      <div class="swiper-slide">
+        <img src="{{ 'slide_5.png' | file_img_url:'master' }}" class="ambassador-slider-img">
+      </div>
+      <div class="swiper-slide">
+        <img src="{{ 'slide_6.png' | file_img_url:'master' }}" class="ambassador-slider-img">
+      </div>
+      <div class="swiper-slide">
+        <img src="{{ 'slide_7.png' | file_img_url:'master' }}" class="ambassador-slider-img">
+      </div>
+      <div class="swiper-slide">
+        <img src="{{ 'slide_8.png' | file_img_url:'master' }}" class="ambassador-slider-img">
+      </div>
+      <div class="swiper-slide">
+        <img src="{{ 'slide_9.png' | file_img_url:'master' }}" class="ambassador-slider-img">
+      </div>
+      <div class="swiper-slide">
+        <img src="{{ 'slide_10.png' |file_img_url:'master' }}" class="ambassador-slider-img">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container">
+  <div class="m-[7vw_auto_0_auto] w-[90%] md:w-[70%] lg:w-[50%]">
+    <div class="mx-auto flex flex-col items-center justify-center gap-[30px] p-[clamp(100px,40vw,120px)_0_2vw_0] lg:p-[clamp(50px,15vw,150px)_0_2vw_0]">
+      <div class="relative">
+        <img
+          src="{{ 'message_from_lmc.png' | file_img_url: "master" }}"
+          class="absolute right-[clamp(-30px,20vw,10px)] top-[clamp(-120px,-40vw,-50px)] w-[clamp(100px,10vw,350px)] lg:bottom-full lg:right-[clamp(-100px,-5vw,-50px)]"
+        >
+        <div class="relative flex w-[clamp(250px,40vw,700vw)] flex-col items-center justify-center overflow-hidden rounded-[50px] border-[10px] border-[#98C9EB] lg:w-[clamp(400px,40vw,450px)]">
+          <video
+            controls
+            class="w-full"
+            poster="{{ 'minchen-video-poster.png' | file_img_url: 'master' }}"
+            alt="Min Chen announces becoming Buddy Bites' ambassador"
+          >
+            <source src="{{ 'minchen_ambassador_video.mov' | file_url }}">
+            <img
+              src="{{ 'minchen-video-poster.png' | file_img_url: 'master' }}"
+              alt="Min Chen announces becoming Buddy Bites' ambassador"
+            >
+          </video>
+        </div>
+      </div>
+      <a href="{{ pages.about.url }}" class="btn-cta">{{ 'ambassador.message_from_lmc.cta' | t }}</a>
+    </div>
+  </div>
+</section>
+
+<section class="relative flex flex-col items-center justify-center gap-[20px] pb-[20vw] lg:pb-[10vw]">
+  <div class="flex flex-col items-center justify-center gap-[10px] pt-[10vw] md:pt-[5vw]">
+    <div class="flex flex-col items-center justify-center gap-2 lg:items-stretch">
+      <h2 class="m-0 text-center text-[10vw] tracking-widest text-[#193C6B] en:font-heyCharlie md:text-[9.8vw] lg:text-[5vw]">
+        {{ 'ambassador.cta_section.header' | t }}
+      </h2>
+      <p class="w-[90%] text-balance text-center text-[4vw] font-medium text-[#193C6B] en:font-museo md:text-[1.5vw] lg:w-full lg:text-[1.1vw]">
+        {{ 'ambassador.cta_section.subheader' | t }}
+      </p>
+    </div>
+  </div>
+  <div class="rowr desktop" style="padding: 0 20px;">
+    <div class="columnr recipe1">
+      <h3>
+        {{ 'products.product.lamb' | t }}
+        {{ 'products.product.recipe' | t }}
+      </h3>
+      <span style="text-decoration: line-through; display:inline;">$206</span>&nbsp;<span>$165</span>
+      <img src="https://cdn.shopify.com/s/files/1/0430/5833/1805/files/BB_Lamb_FOP.png?v=1684351893" class="rec-image">
+      <a href="{{ all_products['buddy-bites-lamb'].url }}">{{ 'products.product.quick_shop' | t }}</a>
+    </div>
+    <div class="columnr recipe2">
+      <h3>
+        {{ 'products.product.puppy' | t }}
+        {{ 'products.product.recipe' | t }}
+      </h3>
+      <span style="text-decoration: line-through; display:inline;">$206</span>&nbsp;<span>$165</span>
+      <img
+        src="https://cdn.shopify.com/s/files/1/0430/5833/1805/files/BB_Puppy_FOP_1.png?v=1684351893"
+        class="rec-image"
+      >
+      <a href="{{ all_products['buddy-bites-puppy'].url  }}">{{ 'products.product.quick_shop' | t }}</a>
+    </div>
+    <div class="columnr recipe3">
+      <h3>
+        {{ 'products.product.turkey' | t }}
+        {{ 'products.product.recipe' | t }}
+      </h3>
+      <span style="text-decoration: line-through; display:inline;">$230</span>&nbsp;<span>$184</span>
+      <img
+        src="https://cdn.shopify.com/s/files/1/0430/5833/1805/files/b8794553c307108105a2b37c27f4f881_2.png?v=1715510496"
+        class="rec-image"
+      >
+      <a href="{{ all_products['buddy-bites-adult-turkey'].url }}">{{ 'products.product.quick_shop' | t }}</a>
+    </div>
+    <div class="columnr recipe4">
+      <h3>
+        {{ 'products.product.duck' | t }}
+        {{ 'products.product.recipe' | t }}
+      </h3>
+      <span style="text-decoration: line-through; display:inline;">$206</span>&nbsp;<span>$165</span>
+      <img src="https://cdn.shopify.com/s/files/1/0430/5833/1805/files/BB_Duck_FOP.png?v=1684351894" class="rec-image">
+      <a href="{{ all_products['buddy-bites-duck'].url }}">{{ 'products.product.quick_shop' | t }}</a>
+    </div>
+    <div class="columnr recipe5">
+      <h3>
+        {{ 'products.product.salmon' | t }}
+        {{ 'products.product.recipe' | t }}
+      </h3>
+      <span style="text-decoration: line-through; display:inline;">$230</span>&nbsp;<span>$184</span>
+      <img
+        src="https://cdn.shopify.com/s/files/1/0430/5833/1805/files/BB_Salmon_FOP.png?v=1684351894"
+        class="rec-image"
+      >
+      <a href="{{ all_products['buddy-bites-adult-salmon'].url }}">{{ 'products.product.quick_shop' | t }}</a>
+    </div>
+  </div>
+  <div class="rowr mobile">
+    <div class="columnr recipe2">
+      <h3>
+        {{ 'products.product.puppy' | t }}
+        {{ 'products.product.recipe' | t }}
+      </h3>
+      <span style="text-decoration: line-through; display:inline;">$206</span>&nbsp;<span>$165</span>
+      <img
+        src="https://cdn.shopify.com/s/files/1/0430/5833/1805/files/BB_Puppy_FOP_1.png?v=1684351893"
+        class="rec-image"
+      >
+      <a href="{{ all_products['buddy-bites-puppy'].url   }}">{{ 'products.product.quick_shop' | t }}</a>
+    </div>
+    <div class="columnr recipe1">
+      <h3>
+        {{ 'products.product.lamb' | t }}
+        {{ 'products.product.recipe' | t }}
+      </h3>
+      <span style="text-decoration: line-through; display:inline;">$206</span>&nbsp;<span>$165</span>
+      <img src="https://cdn.shopify.com/s/files/1/0430/5833/1805/files/BB_Lamb_FOP.png?v=1684351893" class="rec-image">
+      <a href="{{ all_products['buddy-bites-lamb'].url }}">{{ 'products.product.quick_shop' | t }}</a>
+    </div>
+  </div>
+  <div class="rowr mobile">
+    <div class="columnr recipe3">
+      <h3>
+        {{ 'products.product.turkey' | t }}
+        {{ 'products.product.recipe' | t }}
+      </h3>
+      <span style="text-decoration: line-through; display:inline;">$230</span>&nbsp;<span>$184</span>
+      <img
+        src="https://cdn.shopify.com/s/files/1/0430/5833/1805/files/b8794553c307108105a2b37c27f4f881_2.png?v=1715510496"
+        class="rec-image"
+      >
+      <a href="{{ all_products['buddy-bites-adult-turkey'].url }}">{{ 'products.product.quick_shop' | t }}</a>
+    </div>
+    <div class="columnr recipe4">
+      <h3>
+        {{ 'products.product.duck' | t }}
+        {{ 'products.product.recipe' | t }}
+      </h3>
+      <span style="text-decoration: line-through; display:inline;">$206</span>&nbsp;<span>$165</span>
+      <img src="https://cdn.shopify.com/s/files/1/0430/5833/1805/files/BB_Duck_FOP.png?v=1684351894" class="rec-image">
+      <a href="{{ all_products['buddy-bites-duck'].url }}">{{ 'products.product.quick_shop' | t }}</a>
+    </div>
+  </div>
+  <a href="{{ collections.kibble.url }}" class="btn-cta">
+    {{- 'ambassador.cta_section.cta_button' | t -}}
+  </a>
+</section>
+
+<script>
+  const swiper = new Swiper('.ambassador-swiper', {
+    direction: 'horizontal',
+    loop: true,
+    // autoplay: {
+    //   delay: 2000,
+    // },
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  });
+</script>
+
+<script>
+  const swiperPhotos = new Swiper('.ambassador-swiper-photos', {
+    direction: 'horizontal',
+    loop: true,
+    autoplay: {
+      delay: 2000,
+    },
+    breakpoints: {
+      200: {
+        slidesPerView: 1,
+      },
+      420: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+      1024: {
+        slidesPerView: 4,
+      },
+    },
+  });
+</script>
+
+<script>
+  // Accordion logic
+  const items = document.querySelectorAll('.accordion-item');
+  items.forEach((item) => {
+    const btn = item.querySelector('.accordion-title');
+    btn.addEventListener('click', () => {
+      // Close others
+      items.forEach((i) => {
+        if (i !== item) i.classList.remove('active');
+      });
+      // Toggle current
+      item.classList.toggle('active');
+    });
+  });
+</script>
+
+<style>
+  .els-cup-box {
+    height: auto !important;
+    margin: 0 !important;
+  }
+
+  .els-cup-w-val {
+    font-family: 'heyCharlie';
+    font-size: 90px !important;
+    line-height: 90px !important ;
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  .els-cup-w-icon,
+  .els-cup-w-descr {
+    display: none !important;
+  }
+
+  @media (min-width: 1024px) {
+    .els-cup-box {
+      height: auto !important;
+      width: 20vw !important;
+    }
+
+    .els-cup-wrap {
+      width: 10vw !important;
+    }
+
+    .els-cup-w {
+      width: 20vw !important;
+    }
+
+    .els-cup-w-val {
+      font-size: 150px !important;
+      line-height: 150px !important;
+      width: 20vw !important;
+    }
+  }
+</style>
+
+{% style %}
+  .ambassador-swiper, .ambassador-swiper-photos{
+    overflow: hidden;
+  }
+  .recipes h4 {
+      font-family: Montserrat, sans-serif !important;
+      color: #0d3e66 !important;
+      font-weight: 500 !important;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .recipe1 {
+      background-color: #d8c4e4;
+      animation-name: float1;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+    }
+    @keyframes float1 {
+      0% { transform: translate(0,  0px); }
+      50%  { transform: translate(0, 3px); }
+      100%   { transform: translate(0, -0px); }
+    }
+    .recipe2 {
+      background-color: #a8ccec;
+      animation-name: float2;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+    }
+    @keyframes float2 {
+      0% { transform: translate(0,  0px); }
+      50%  { transform: translate(0, -5px); }
+      100%   { transform: translate(0, 0px); }
+    }
+    .recipe3 {
+      background-color: #F2C49B;
+      animation-name: float3;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+    }
+    @keyframes float3 {
+      0% { transform: translate(0,  0px); }
+      50%  { transform: translate(0, 3px); }
+      100%   { transform: translate(0, 0px); }
+    }
+    .recipe4 {
+      background-color: #c0ccac;
+      animation-name: float4;
+      animation-duration: 3.5s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+    }
+    @keyframes float4 {
+      0% { transform: translate(0,  0px); }
+      50%  { transform: translate(0, -4px); }
+      100%   { transform: translate(0, 0px); }
+    }
+    .recipe5 {
+      background-color: #f8b4ac;
+      animation-name: float5;
+      animation-duration: 3.5s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+    }
+    @keyframes float5 {
+      0% { transform: translate(0,  0px); }
+      50%  { transform: translate(0, 2px); }
+      100%   { transform: translate(0, 0px); }
+    }
+    .columnr a {
+        text-transform: uppercase;
+        font-weight: 600;
+        color: #0d3e66;
+        background-color: #fff;
+        padding: 6px 10px;
+        border-radius: 18px;
+        width: 80%;
+        box-shadow: 0px 0px 0px 0px #fff;
+        transition: all 0.3s;
+        &:hover{
+          box-shadow: 0px 0px 0px 3px #0d3e66;
+          text-decoration: none;
+       }
+      }
+      .columnr h3 {
+        text-transform: uppercase;
+        font-weight: 600;
+        color: #0d3e66;
+        margin: 0 !important;
+      }
+      .recipes {
+        padding: 30px 5%;
+      }
+      .rec-image {
+        width: 100%;
+        padding: 0 12.5%;
+      }
+      .rowr {
+        display: flex;
+      }
+      .columnr {
+        flex: 20%;
+        margin: 0 1%;
+        padding: 10px 0 18px 0;
+        text-align: center;
+        border-radius:20px;
+      }
+      .recipe-title {
+        font-family: hey_charlieregular,sans-serif;
+        font-weight: 400;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1;
+        letter-spacing: 5px;
+        text-align: center;
+        color: #0d3e66;
+        margin-bottom: 1%;
+      }
+
+      @media (max-width: 768px) {
+        .desktop {
+          display: none;
+        }
+        .recipe-title {
+          {% if canonical_url contains '/zh' %}
+          font-size: 8vw;
+          width: 90%;
+          padding-left: 10%;
+          padding-bottom: 3vw;
+          {% else %}
+          font-size: 10vw;
+          {% endif %}
+        }
+        .recipes h4 {
+          font-size: 3vw !important;
+          width: 90%;
+          margin-left: 5%;
+          margin-top: 15px;
+        }
+        .rowr {
+          margin-bottom: 13px;
+        }
+        .columnr h3 {
+          font-size: 4vw !important;
+        }
+        .rowr p {
+          font-size: 3.7vw !important;
+        }
+        .rec-image {
+          margin-bottom: 5px;
+        }
+        .columnr a {
+          font-size: 3vw !important;
+        }
+      }
+
+      @media (min-width: 769px) {
+        .mobile {
+          display: none;
+        }
+        .recipe-title {
+          font-size: 5vw;
+        }
+        .recipes h4 {
+          {% if canonical_url contains '/zh' %}
+          font-size: 1.5vw !important;
+          {% else %}
+          font-size: 1.1vw !important;
+          {% endif %}
+          padding: 0 15vw;
+        }
+        .columnr h3 {
+          font-size: 1.5vw !important;
+        }
+        .rec-image {
+          margin-bottom: 10px;
+        }
+        .columnr a {
+          font-size: 1.4vw !important;
+        }
+      }
+{% endstyle %}

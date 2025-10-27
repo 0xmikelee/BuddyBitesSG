@@ -1,0 +1,104 @@
+{% comment %}
+  Performance Optimization Snippet
+  This snippet contains various performance optimizations for the theme
+{% endcomment %}
+
+{% comment %} Critical CSS for above-the-fold content {% endcomment %}
+<style>
+  /* Critical CSS for hero section and header */
+  .hero-section {
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .header-sticky {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #193c6b;
+  }
+
+  /* Font loading optimization */
+  .font-heyCharlie {
+    font-family: 'Hey Charlie', Arial, sans-serif;
+  }
+
+  .en:font-museo {
+    font-family: 'Museo Sans', Arial, sans-serif;
+  }
+
+  .font-mukta {
+    font-family: 'Mukta', Arial, sans-serif;
+  }
+
+  /* Image optimization */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Lazy loading placeholder */
+  .lazy-loading {
+    background-color: #f3f4f6;
+    background-image: linear-gradient(90deg, #f3f4f6 25%, #e5e7eb 50%, #f3f4f6 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+  }
+
+  @keyframes loading {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+</style>
+
+{% comment %} Resource hints for better performance {% endcomment %}
+<link rel="dns-prefetch" href="//connect.facebook.net">
+<link rel="dns-prefetch" href="//www.clarity.ms">
+<link rel="dns-prefetch" href="//www.googletagmanager.com">
+
+{% comment %} Preconnect to external domains {% endcomment %}
+<link rel="preconnect" href="https://connect.facebook.net" crossorigin>
+
+{% comment %} Service Worker registration for caching {% endcomment %}
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
+      navigator.serviceWorker
+        .register('/sw.js')
+        .then(function (registration) {
+          console.log('ServiceWorker registration successful');
+        })
+        .catch(function (err) {
+          console.log('ServiceWorker registration failed');
+        });
+    });
+  }
+</script>
+
+{% comment %} Intersection Observer for lazy loading {% endcomment %}
+<script>
+  // Lazy loading implementation
+  if ('IntersectionObserver' in window) {
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          img.src = img.dataset.src;
+          img.classList.remove('lazy-loading');
+          img.classList.add('loaded');
+          observer.unobserve(img);
+        }
+      });
+    });
+
+    // Observe all images with data-src attribute
+    document.querySelectorAll('img[data-src]').forEach((img) => {
+      imageObserver.observe(img);
+    });
+  }
+</script>

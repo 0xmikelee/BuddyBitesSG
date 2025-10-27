@@ -1,0 +1,172 @@
+{% style %}
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-pagination {
+    --swiper-pagination-bottom: 0;
+  }
+{% endstyle %}
+
+<section class="relative bg-gradient-to-b from-[white] to-[#87c3e6] pt-10">
+  <div class="container flex flex-col items-center justify-center gap-7 py-5">
+    <h3 class="w-full bg-[#193C6B] px-4 py-3 text-center text-[24px] uppercase text-white en:font-museo lg:inline lg:w-auto lg:rounded-full lg:px-10 lg:text-[28px]">
+      {{ 'about_us.donation.title' | t }}
+    </h3>
+    <div class="flex flex-col items-center justify-center">
+      <div class="els-cup-box" data-id="3996"></div>
+      <p class="text-[14px] font-semibold uppercase text-[#193C6B] en:font-museo lg:text-[16px]">
+        {{ 'about_us.donation.donation_amount_unit' | t }}
+      </p>
+    </div>
+    <div class="container flex flex-col items-center justify-between gap-5 rounded-2xl bg-white px-4 py-7">
+      <h2 class="text-center text-[24px] font-bold uppercase text-[#193C6B] en:font-museo lg:text-[32px]">
+        {{ 'about_us.donation.shelter_partners' | t }}
+      </h2>
+      {% comment %} Carousel Items {% endcomment %}
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper py-10">
+          <!-- Slides -->
+          {% for block in shop.metaobjects.shelter_pawtners.values %}
+            <div class="swiper-slide">
+              <div class="flex flex-col items-center justify-start gap-5 px-4">
+                <img
+                  src="{{ block.partner_logo | image_url }}"
+                  alt="{{ block.name }}"
+                  class="w-[150px]"
+                >
+                <h3 class="text-center text-[20px] font-bold uppercase text-[#193C6B] en:font-museo lg:text-[24px]">
+                  {{ block.name }}
+                </h3>
+                <p class="text-center text-[14px] font-light text-[#193C6B] en:font-museo lg:text-[16px]">
+                  {{ block.description }}
+                </p>
+                <a
+                  href="{{ block.url }}"
+                  class="rounded-xl bg-[#87c3e6] px-4 py-2 text-center text-[14px] font-bold uppercase text-[#193C6B] en:font-museo lg:text-[16px]"
+                >
+                  {{- 'about_us.donation.learn_more' | t -}}
+                </a>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <a
+      href="{{ collection.all.url }}"
+      class="rounded-full border-2 border-[#193C6B] bg-[#193C6B] px-6 py-2 text-[14px] font-bold uppercase text-white hover:bg-white hover:text-[#193C6B] en:font-museo lg:text-[20px]"
+    >
+      {{ 'about_us.donation.shop_give_bark' | t }}
+    </a>
+  </div>
+  <img
+    src="https://buddybites.dog/cdn/shop/t/76/assets/icon-wavy.png?v=120720784904972166891751530411"
+    alt="Section Divider"
+    class="hidden w-full lg:block"
+  >
+  <img
+    src="https://buddybites.dog/cdn/shop/t/76/assets/icon-wavy-mb.png?v=823830459825826451751530411"
+    alt="Section Divider"
+    class="block w-full lg:hidden"
+  >
+</section>
+
+<script type="module">
+  const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+      },
+    },
+  });
+</script>
+<style>
+  .els-cup-box {
+    height: auto !important;
+  }
+
+  .els-cup-w-val {
+    font-family: 'heyCharlie';
+    font-size: 90px !important;
+    line-height: 90px !important ;
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  .els-cup-w-icon,
+  .els-cup-w-descr {
+    display: none !important;
+  }
+
+  @media (min-width: 1024px) {
+    .els-cup-box {
+      height: auto !important;
+      margin-top: 30px !important;
+      width: 20vw !important;
+    }
+
+    .els-cup-wrap {
+      width: 10vw !important;
+    }
+
+    .els-cup-w {
+      width: 20vw !important;
+    }
+
+    .els-cup-w-val {
+      font-size: 150px !important;
+      line-height: 150px !important;
+      width: 20vw !important;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Shelter Pawtners",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "carousel_item",
+      "name": "Carousel Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "partner_logo",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "partner_name",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Content"
+        },
+        {
+          "type": "url",
+          "id": "partner_s_url",
+          "label": "Button Link"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

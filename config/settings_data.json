@@ -1,0 +1,44 @@
+{
+  "current": {
+    "store_name": "Buddy Bites SG",
+    "14952540001915115444": {
+      "type": "shopify://apps/upcart-cart-drawer/blocks/app-embed/af3da5fb-f5f7-40ec-8273-41bf50059d4b",
+      "disabled": false,
+      "settings": {}
+    },
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {}
+      }
+    },
+    "content_for_index": [],
+    "blocks": {
+      "14952540001915115444": {
+        "type": "shopify://apps/upcart-cart-drawer/blocks/app-embed/af3da5fb-f5f7-40ec-8273-41bf50059d4b",
+        "disabled": false,
+        "settings": {}
+      },
+      "6628239160433917566": {
+        "type": "shopify://apps/littledata-revenue-tracking/blocks/LittledataLayer/45a35ed8-a2b2-46c3-84fa-6f58497c5345",
+        "disabled": false,
+        "settings": {}
+      },
+      "855628211100114053": {
+        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {}
+      },
+      "2567389343055140935": {
+        "type": "shopify://apps/microsoft-clarity/blocks/clarity_js/31c3d126-8116-4b4a-8ba1-baeda7c4aeea",
+        "disabled": false,
+        "settings": {}
+      },
+      "11844983583966711438": {
+        "type": "shopify://apps/sales-countup/blocks/embed/89c80bfc-f6af-424a-a310-bff500702731",
+        "disabled": false,
+        "settings": {}
+      }
+    }
+  }
+}

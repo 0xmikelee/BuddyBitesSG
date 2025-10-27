@@ -1,0 +1,31 @@
+{
+  "sections": {
+    "section-about-us-start": {
+      "type": "section-about-us-start",
+      "settings": {}
+    },
+    "section-about-us-shelter-carousel": {
+      "type": "section-about-us-shelter-carousel",
+      "settings": {}
+    },
+    "section-about-us-good-stuff-nutrients": {
+      "type": "section-about-us-good-stuff-nutrients",
+      "settings": {}
+    },
+    "section-about-us-team": {
+      "type": "section-about-us-team",
+      "settings": {}
+    },
+    "section-about-us-blog": {
+      "type": "section-read-our-blog",
+      "settings": {}
+    }
+  },
+  "order": [
+    "section-about-us-start",
+    "section-about-us-shelter-carousel",
+    "section-about-us-good-stuff-nutrients",
+    "section-about-us-team",
+    "section-about-us-blog"
+  ]
+}

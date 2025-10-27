@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "section-ambassador-minchen": {
+      "type": "section-ambassador-minchen",
+      "settings": {}
+    }
+  },
+  "order": [
+    "section-ambassador-minchen"
+  ]
+}

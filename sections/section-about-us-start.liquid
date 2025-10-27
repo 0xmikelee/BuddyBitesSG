@@ -1,0 +1,104 @@
+<header class="relative">
+  <div class="relative w-full">
+    <img src="{{ 'Updated_1.png' | file_url }}" alt="About Us Hero" class="hidden w-full object-cover lg:block">
+    <img src="{{ 'Vector_45_1.jpg' | file_url }}" alt="About Us Hero" class="block w-full object-cover lg:hidden">
+  </div>
+  <div class="absolute left-1/2 top-[5%] -translate-x-1/2 lg:left-[15%] lg:top-1/2 lg:-translate-y-1/2  lg:translate-x-0">
+    <h1 class="text-white en:font-heyCharlie en:text-[50px] zh-TW:text-[30px] lg:en:text-[100px] lg:zh-TW:text-[70px]">
+      {{ 'about_us.title' | t }}
+    </h1>
+  </div>
+</header>
+
+<section class="container relative">
+  {% comment %} Our Story Block {% endcomment %}
+  <div class="grid grid-cols-1 gap-10 px-5 lg:grid-cols-[60%_1fr] lg:py-10">
+    <div class="flex flex-col items-center justify-center gap-7 lg:items-start">
+      <h2 class="text-[#193C6B] en:font-heyCharlie en:text-[40px] zh-TW:text-[20px] lg:en:text-[80px] lg:zh-TW:text-[40px]">
+        {{ 'about_us.our_story.title' | t }}
+      </h2>
+      <p class="text-[#193C6B] en:en:font-museo en:text-[14px] zh-TW:text-[12px] lg:en:text-[16px] lg:zh-TW:text-[14px]">
+        {{ 'about_us.our_story.description' | t }}
+      </p>
+      <a
+        href="{{ collections.all.url }}"
+        class="rounded-full border-2 border-[#193C6B] bg-[#193C6B] px-6 py-3 text-[14px] font-semibold uppercase text-white hover:bg-white hover:text-[#193C6B] en:font-museo lg:text-[16px]"
+      >
+        {{ 'about_us.our_story.join_the_pack' | t }}
+      </a>
+    </div>
+    {% comment %} Photo Slideshow {% endcomment %}
+    <div class="flex flex-col items-center justify-center">
+      {% for block in shop.metaobjects.our_story.values %}
+        <div
+          class="relative hidden h-[400px] w-full overflow-hidden rounded-2xl lg:h-[300px]"
+          id="image-slide"
+        >
+          <img
+            src="{{ block.image | image_url: width: 900 }}"
+            loading="lazy"
+            alt="{{ block.image.alt }}"
+            class="relative h-full w-full object-cover"
+          >
+          <p class="absolute bottom-[5%] left-[5%] rounded-full bg-[#193C6B] px-6 py-3 text-[20px] font-semibold uppercase tracking-wide text-white en:font-heyCharlie zh-TW:font-heyCharlie lg:text-[24px]">
+            {{ block.year }}
+          </p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% render 'about-us-our-mission' %}
+
+<script>
+  (function () {
+    const imageSlides = document.querySelectorAll('#image-slide');
+    if (!imageSlides.length) return; // Guard: No slides found
+
+    let currentIndex = 0;
+
+    // Helper to show the current slide and hide others
+    function showSlide(index) {
+      imageSlides.forEach((slide, i) => {
+        if (i === index) {
+          slide.classList.remove('hidden');
+        } else {
+          slide.classList.add('hidden');
+        }
+      });
+    }
+
+    showSlide(currentIndex); // Show the first slide initially
+
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % imageSlides.length;
+      showSlide(currentIndex);
+    }, 3000);
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "About Us",
+  "settings": [],
+  "blocks": [
+    {
+      "name": "Photo Item",
+      "type": "item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "year",
+          "label": "Year"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

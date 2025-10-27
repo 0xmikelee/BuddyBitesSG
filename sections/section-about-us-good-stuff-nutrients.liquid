@@ -1,0 +1,112 @@
+<section class="relative flex w-full justify-between gap-2">
+  <div>
+    <img
+      src="{{ 'image_left_779f754c-7dc5-4b55-be5b-07b68c4bbd2f.png' | file_img_url: 'master' }}"
+      alt="Good Stuff Nutrients"
+      class="hidden w-[300px] object-cover lg:block"
+    >
+    <img src="{{ '1_left_mb.png' | file_img_url: 'master' }}" alt="Good Stuff Nutrients" class="block lg:hidden">
+  </div>
+  <div class="flex flex-col items-center justify-center gap-5">
+    <div class="flex flex-col items-center justify-center gap-2">
+      <h2 class="text-center text-[#193C6B] en:font-heyCharlie en:text-[40px] zh-TW:text-[30px] lg:en:text-[80px] lg:zh-TW:text-[60px]">
+        {{ 'about_us.section_only_the_good_stuff.title' | t }}
+      </h2>
+      <h3 class="text-center text-[24px] font-bold uppercase text-[#193C6B] en:font-museo lg:text-[30px]">
+        {{ 'about_us.section_only_the_good_stuff.subtext' | t }}
+      </h3>
+    </div>
+    <div class="flex max-w-[700px] flex-col items-center justify-center gap-4 text-center">
+      <p class="text-balance text-[14px] font-light text-[#193C6B] en:font-museo lg:text-[20px]">
+        {{ 'about_us.section_only_the_good_stuff.description_1' | t }}
+      </p>
+      <p class="text-balance text-[14px] font-light text-[#193C6B] en:font-museo lg:text-[20px]">
+        {{ 'about_us.section_only_the_good_stuff.description_2' | t }}
+      </p>
+      <p class="text-balance text-[14px] font-light text-[#193C6B] en:font-museo lg:text-[20px]">
+        {{ 'about_us.section_only_the_good_stuff.description_3' | t }}
+      </p>
+    </div>
+    <a
+      href="{{ collections.kibble.url }}"
+      class="rounded-full border-2 border-[#193C6B] bg-[#193C6B] px-6 py-2 text-[14px] font-bold uppercase text-white hover:bg-white hover:text-[#193C6B] en:font-museo lg:text-[20px]"
+    >
+      {{- 'about_us.section_only_the_good_stuff.learn_more' | t -}}
+    </a>
+  </div>
+  <div>
+    <img
+      src="{{ 'image-right.png' | file_img_url: 'master' }}"
+      alt="Good Stuff Nutrients"
+      class="hidden w-[300px] object-cover lg:block"
+    >
+    <img src="{{ '1_right_mb.png' | file_img_url: 'master' }}" alt="Good Stuff Nutrients" class="block lg:hidden">
+  </div>
+</section>
+<img
+  src="{{ 'mobile-bottom.png' | file_img_url: 'master' }}"
+  alt="Section Divider"
+  class="block max-h-[200px] w-full object-cover lg:hidden"
+>
+<section class="relative py-10">
+  <div class="container flex flex-col items-center justify-center gap-1">
+    <h2 class="text-center text-[#193C6B] en:font-heyCharlie en:text-[40px] zh-TW:text-[30px] lg:en:text-[80px] lg:zh-TW:text-[60px]">
+      {{ 'about_us.section_sustainability.title' | t }}
+    </h2>
+    <h3 class="w-[300px] text-center text-[14px] font-normal text-[#193C6B] en:font-museo lg:w-[500px] lg:text-[20px]">
+      {{ 'about_us.section_sustainability.subtext' | t }}
+    </h3>
+  </div>
+  <div class="grid grid-cols-1 gap-4 lg:grid-cols-[1fr_35%]">
+    <div class="relative h-[450px] w-full lg:h-[650px]">
+      <div class="absolute left-1/2 top-0 flex h-full -translate-x-1/2 flex-col items-start justify-center gap-4 lg:left-auto lg:right-0 lg:translate-x-0">
+        <div class="flex items-center justify-start gap-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="77" height="83" viewBox="0 0 77 83" fill="none">
+            <path d="M37.1749 80.3872C36.6263 75.9337 35.9479 66.8425 35.9452 59.9077M35.9452 59.9077C35.9434 55.1129 36.2645 50.6738 37.1749 47.9025C39.8537 39.7481 43.8214 31.5937 69.5412 17.1473C70.3172 16.7114 70.7052 16.4935 71.0984 16.4458C71.8193 16.3583 72.6375 16.7453 73.0272 17.3582C73.2396 17.6924 73.3104 18.0919 73.4519 18.8908C76.0192 33.386 70.5422 52.0757 35.9452 59.9077ZM35.9452 59.9077C36.0309 57.8664 35.8732 54.0698 35.657 51.4332M35.657 51.4332C34.3025 34.9162 33.9645 17.0286 9.26955 3.48006C8.56222 3.09199 8.20855 2.89795 7.84935 2.8463C7.17617 2.74951 6.43796 3.03905 6.01009 3.5677C5.78179 3.84978 5.65327 4.23572 5.39625 5.00761C1.22454 17.5358 -1.87096 35.7883 35.657 51.4332Z" stroke="#0E3E67" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M11.1529 18L11.4195 20.1158C11.9289 24.1586 13.8113 27.9038 16.7518 30.7247V30.7247" stroke="#98CAEB" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+          <p class="text-[14px] font-bold uppercase text-[#193C6B] en:font-museo lg:text-[20px]">
+            {{ 'about_us.section_sustainability.point1' | t }}
+          </p>
+        </div>
+        <div class="flex items-center justify-start gap-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="77" height="83" viewBox="0 0 77 83" fill="none">
+            <path d="M37.1749 80.3872C36.6263 75.9337 35.9479 66.8425 35.9452 59.9077M35.9452 59.9077C35.9434 55.1129 36.2645 50.6738 37.1749 47.9025C39.8537 39.7481 43.8214 31.5937 69.5412 17.1473C70.3172 16.7114 70.7052 16.4935 71.0984 16.4458C71.8193 16.3583 72.6375 16.7453 73.0272 17.3582C73.2396 17.6924 73.3104 18.0919 73.4519 18.8908C76.0192 33.386 70.5422 52.0757 35.9452 59.9077ZM35.9452 59.9077C36.0309 57.8664 35.8732 54.0698 35.657 51.4332M35.657 51.4332C34.3025 34.9162 33.9645 17.0286 9.26955 3.48006C8.56222 3.09199 8.20855 2.89795 7.84935 2.8463C7.17617 2.74951 6.43796 3.03905 6.01009 3.5677C5.78179 3.84978 5.65327 4.23572 5.39625 5.00761C1.22454 17.5358 -1.87096 35.7883 35.657 51.4332Z" stroke="#0E3E67" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M11.1529 18L11.4195 20.1158C11.9289 24.1586 13.8113 27.9038 16.7518 30.7247V30.7247" stroke="#98CAEB" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+          <p class="text-[14px] font-bold uppercase text-[#193C6B] en:font-museo lg:text-[20px]">
+            {{ 'about_us.section_sustainability.point2' | t }}
+          </p>
+        </div>
+        <div class="flex items-center justify-start gap-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="77" height="83" viewBox="0 0 77 83" fill="none">
+            <path d="M37.1749 80.3872C36.6263 75.9337 35.9479 66.8425 35.9452 59.9077M35.9452 59.9077C35.9434 55.1129 36.2645 50.6738 37.1749 47.9025C39.8537 39.7481 43.8214 31.5937 69.5412 17.1473C70.3172 16.7114 70.7052 16.4935 71.0984 16.4458C71.8193 16.3583 72.6375 16.7453 73.0272 17.3582C73.2396 17.6924 73.3104 18.0919 73.4519 18.8908C76.0192 33.386 70.5422 52.0757 35.9452 59.9077ZM35.9452 59.9077C36.0309 57.8664 35.8732 54.0698 35.657 51.4332M35.657 51.4332C34.3025 34.9162 33.9645 17.0286 9.26955 3.48006C8.56222 3.09199 8.20855 2.89795 7.84935 2.8463C7.17617 2.74951 6.43796 3.03905 6.01009 3.5677C5.78179 3.84978 5.65327 4.23572 5.39625 5.00761C1.22454 17.5358 -1.87096 35.7883 35.657 51.4332Z" stroke="#0E3E67" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M11.1529 18L11.4195 20.1158C11.9289 24.1586 13.8113 27.9038 16.7518 30.7247V30.7247" stroke="#98CAEB" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+          <p class="text-[14px] font-bold uppercase text-[#193C6B] en:font-museo lg:text-[20px]">
+            {{ 'about_us.section_sustainability.point3' | t }}
+          </p>
+        </div>
+        <div class="flex items-center justify-start gap-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="77" height="83" viewBox="0 0 77 83" fill="none">
+            <path d="M37.1749 80.3872C36.6263 75.9337 35.9479 66.8425 35.9452 59.9077M35.9452 59.9077C35.9434 55.1129 36.2645 50.6738 37.1749 47.9025C39.8537 39.7481 43.8214 31.5937 69.5412 17.1473C70.3172 16.7114 70.7052 16.4935 71.0984 16.4458C71.8193 16.3583 72.6375 16.7453 73.0272 17.3582C73.2396 17.6924 73.3104 18.0919 73.4519 18.8908C76.0192 33.386 70.5422 52.0757 35.9452 59.9077ZM35.9452 59.9077C36.0309 57.8664 35.8732 54.0698 35.657 51.4332M35.657 51.4332C34.3025 34.9162 33.9645 17.0286 9.26955 3.48006C8.56222 3.09199 8.20855 2.89795 7.84935 2.8463C7.17617 2.74951 6.43796 3.03905 6.01009 3.5677C5.78179 3.84978 5.65327 4.23572 5.39625 5.00761C1.22454 17.5358 -1.87096 35.7883 35.657 51.4332Z" stroke="#0E3E67" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M11.1529 18L11.4195 20.1158C11.9289 24.1586 13.8113 27.9038 16.7518 30.7247V30.7247" stroke="#98CAEB" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+          <p class="text-[14px] font-bold uppercase text-[#193C6B] en:font-museo lg:text-[20px]">
+            {{ 'about_us.section_sustainability.point4' | t }}
+          </p>
+        </div>
+      </div>
+    </div>
+    <img
+      src="{{ 'Layer_11.png' | file_img_url: 'master' }}"
+      alt="Sustainability"
+      class="hidden max-h-[650px] w-full object-contain lg:block"
+    >
+  </div>
+</section>
+<img
+  src="{{'Group_823_2.png' | file_img_url: 'master' }}"
+  alt="Section Divider"
+  class="block max-h-[300px] w-full object-cover lg:hidden"
+>

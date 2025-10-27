@@ -1,0 +1,48 @@
+<select
+  name="language-switcher"
+  id="language-switcher"
+  class="fixed bottom-[20px] right-[10px] z-50 rounded-md border-2 border-gray-500 p-2 md:bottom-[50px] md:right-[50px]"
+>
+  {% if request.locale.iso_code == 'en' %}
+    <option
+      data-locale="en"
+      {% if request.locale.iso_code == 'en' %}
+        selected
+      {% endif %}
+      value="/en{{ request.path }}"
+    >
+      Eng
+    </option>
+    <option
+      data-locale="zh"
+      value="/zh{{ request.path }}"
+    >
+      中文
+    </option>
+  {% endif %}
+  {% if request.locale.iso_code == 'zh-TW' %}
+    {% assign clean_path = request.path | remove: '/zh' %}
+    <option
+      data-locale="en"
+      value="{%if request.path == "/zh" %} / {% else %}{{ clean_path }} {% endif %}"
+    >
+      Eng
+    </option>
+    <option
+      data-locale="zh"
+      selected
+      value="/zh"
+    >
+      中文
+    </option>
+  {% endif %}
+</select>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const languageSwitcher = document.getElementById('language-switcher');
+    languageSwitcher.addEventListener('change', function (e) {
+      window.location.href = languageSwitcher.value;
+    });
+  });
+</script>

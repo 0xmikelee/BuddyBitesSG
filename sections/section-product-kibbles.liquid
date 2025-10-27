@@ -1,0 +1,186 @@
+{% style %}
+  .swiper-product,
+  .swiper-vets {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev,
+  .swiper-button-next-vets,
+  .swiper-button-prev-vets {
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    z-index: 10;
+  }
+
+  .swiper-button-next,
+  .swiper-button-next-vets {
+    right: 10px;
+    display: block;
+    width: 15px;
+    height: 25px;
+    transform: rotate(180deg);
+    background-image: url('{{ 'swiper-arrow-blue.svg' | asset_url }}');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-prev-vets {
+    left: 10px;
+    display: block;
+    width: 15px;
+    height: 25px;
+    background-image: url('{{ 'swiper-arrow-blue.svg' | asset_url }}');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .swiper-button-next:after,
+  .swiper-button-next-vets:after {
+    content: '';
+    display: none;
+  }
+
+  .swiper-button-prev:after,
+  .swiper-button-prev-vets:after {
+    content: '';
+    display: none;
+  }
+
+  .swiper-navigation-icon {
+    display: none;
+  }
+{% endstyle %}
+
+{% comment %} Breadcrumbs {% endcomment %}
+<div class="container flex items-center px-5 pt-7">
+  <div class="flex flex-wrap items-center gap-2">
+    <a href="{{ shop.url }}" class="font-montserrat text-[16px] font-light text-black underline">Home</a>
+    <span class="font-montserrat text-[16px] font-light text-black">›</span>
+    <p class="font-montserrat text-[16px] font-light text-black">{{ product.title }}</p>
+  </div>
+</div>
+
+{% comment %} Product Details Page {% endcomment %}
+<section class="container relative p-5">
+  <div class="grid grid-cols-1 gap-10 lg:grid-cols-2">
+    {% comment %} Product Image {% endcomment %}
+    <div class="relative h-full">
+      <div class="sticky top-0 h-fit w-full overflow-hidden rounded-3xl">
+        <div class="swiper-product">
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-wrapper">
+            {% for image in product.media %}
+              <div class="swiper-slide">
+                <img src="{{ image | img_url: 'master' }}" alt="{{ image.alt }}" class="h-full w-full object-cover">
+              </div>
+            {% endfor %}
+          </div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </div>
+    {% comment %} Product Details {% endcomment %}
+    <div class="flex flex-col gap-2">
+      <div class="flex flex-col gap-1">
+        <h2 class="m-0 text-[24px] font-bold en:font-museo">Buddy Bites {{ 'products.product.adult_kibbles' | t }}</h2>
+        <h3 class="font-montserrat text-[16px] font-light text-gray-500">
+          {{ product.title }}
+          {{ 'products.product.flavour' | t }}
+        </h3>
+      </div>
+      <div
+        class="klaviyo-star-rating-widget"
+        data-id="{{ product.id }}"
+        data-product-title="{{ product.title }}"
+        data-product-type="{{ product.type }}"
+      ></div>
+
+      {% if product.metafields.custom.main_collection.value.id == 491993071931 %}
+        <div class="flex flex-col justify-center gap-2">
+          <p class="text-[16px] font-bold text-black en:font-museo">{{ 'products.product.choose_flavour' | t }}:</p>
+          <div class="flex gap-2">
+            {% for prd in collections['adult-kibbles'].products %}
+              {% assign metaobj_list = prd.metafields.custom.flavor.value %}
+
+              {% for m_obj in metaobj_list %}
+                {% if m_obj.product.value.metafields.custom.main_collection.value.id == 491993071931 %}
+                  <a href="{{ prd.url }}">
+                    <img
+                      src="{{ m_obj.featured_image.value | image_url: width: 100, height: 100  }}"
+                      width="100"
+                      height="100"
+                      class="rounded-xl border-2 border-solid {% if product.title == prd.title %} border-black opacity-100 {% else %} border-[#C3C3C3] opacity-50{% endif %}"
+                    >
+                    <p class="text-center font-semibold en:font-museo en:text-[16px] zh-TW:text-[14px]">
+                      <b>{{ m_obj.name }}</b>
+                    </p>
+                  </a>
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
+          </div>
+          <div class="flex items-center justify-center gap-1 rounded-lg border-2 border-gray-200 px-2 py-[5px] font-montserrat text-[14px] font-light">
+            <p>{{ 'products.product.have_puppy' | t }}</p>
+            <a href="{{ all_products['buddy-bites-puppy'].url }}" class="font-bold underline">
+              {{- 'products.product.have_puppy_link_text' | t -}}
+            </a>
+          </div>
+        </div>
+      {% endif %}
+
+      <div class="prose prose-base marker:text-black prose-ul:list-disc">
+        {{ product.description }}
+      </div>
+      {% render 'snippet-add-to-cart' %}
+    </div>
+  </div>
+</section>
+
+{% comment %} Kibbles Nutrition {% endcomment %}
+{% if product.id == 7404513689757 %}
+  {% render 'product-kibbles-nutrition-duck' %}
+{% elsif product.id == 7404514312349 %}
+  {% render 'product-kibbles-nutrition-lamb' %}
+{% elsif product.id == 8668447670587 %}
+  {% render 'product-kibbles-nutrition-turkey' %}
+{% elsif product.id == 7408323952797 %}
+  {% render 'product-kibbles-nutrition-salmon' %}
+{% elsif product.id == 7404513755293 %}
+  {% render 'product-kibbles-nutrition-puppy' %}
+{% endif %}
+
+{% render 'snippet-vet-recommendations' %}
+
+<script>
+  const swiper = new Swiper('.swiper-product', {
+    // Optional parameters
+    direction: 'horizontal',
+    spaceBetween: 10,
+    autoplay: false,
+    loop: true,
+    slidesPerView: 1,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Kibbles Product Section",
+  "settings": []
+}
+{% endschema %}

@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "hero-section": {
+      "type": "hero-section",
+      "settings": {}
+    }
+  },
+  "order": [
+    "hero-section"
+  ]
+}

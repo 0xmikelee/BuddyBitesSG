@@ -1,0 +1,99 @@
+<nav class="container mx-auto mt-4 flex items-center text-sm text-gray-500" aria-label="Breadcrumb">
+  <ol class="inline-flex items-center space-x-1 md:space-x-3">
+    <li class="inline-flex items-center">
+      <a href="{{ blog.url }}" class="font-medium hover:text-[#193C6B]">
+        {{ blog.title }}
+      </a>
+    </li>
+    <li>
+      <span class="mx-2 text-gray-400">›</span>
+    </li>
+    <li class="inline-flex items-center" aria-current="page">
+      <span class="font-semibold text-[#193C6B]">
+        {{ article.title }}
+      </span>
+    </li>
+  </ol>
+</nav>
+
+<article class="container mx-auto my-8 max-w-3xl px-4">
+  <header class="mb-6">
+    <h1 class="mb-2 text-balance text-center en:font-museo text-3xl text-[#193C6B] md:text-5xl">{{ article.title }}</h1>
+    {% if article.published_at %}
+      <p class="my-2 block text-center text-sm text-gray-400">
+        {{ article.published_at | date: '%B %d, %Y' }}
+      </p>
+    {% endif %}
+    {% if article.image %}
+      <img
+        src="{{ article.image | image_url: width: 800, format: 'webp' }}"
+        alt="{{ article.title }}"
+        width="800"
+        height="400"
+        class="mb-4 h-auto max-h-[450px] w-full rounded object-cover shadow"
+        loading="lazy"
+      >
+    {% endif %}
+  </header>
+  <div class="prose prose-headings:text-[#193C6B] prose-p:en:font-museo prose-a:no-underline lg:prose-base md:prose-base prose-sm prose-a:text-[#193C6B] prose-img:m-0 prose-img:rounded max-w-none">
+    {{ article.content }}
+  </div>
+</article>
+
+{% capture permalinkURL %}{{ shop.url }}{{ article.url }}{% endcapture %}
+{% capture shareTitle %}{{ article.title }}{% endcapture %}
+{% capture shareImage %}{{ article | img_url: '1200x' }}{% endcapture %}
+
+<div id="sharing" class="container my-8 flex max-w-3xl gap-4 px-4" data-permalink="{{ permalinkURL }}">
+  <!-- https://developers.facebook.com/docs/plugins/share-button/ -->
+  <a target="_blank" href="//www.facebook.com/sharer.php?u={{ permalinkURL }}" class="flex gap-1">
+    <img class="w-[20px] h-[20px]" src="{{'facebook-blue.svg' |  asset_url}}" aria-hidden="true"></img>
+    <span class="share-title">Share</span>
+  </a>
+
+  <!-- https://dev.twitter.com/docs/intents -->
+  <a
+    target="_blank"
+    href="//twitter.com/share?url={{ permalinkURL }}&amp;text={{ shareTitle }}"
+    class="flex gap-1"
+  >
+    <img class="w-[20px] h-[20px]" src="{{'twitter-blue.svg' |  asset_url}}" aria-hidden="true"></img>
+    <span class="share-title">Tweet</span>
+  </a>
+
+  <!--
+    https://developers.pinterest.com/pin_it/
+    Pinterest get data from the same Open Graph meta tags Facebook uses
+  -->
+  <a
+    target="_blank"
+    href="//pinterest.com/pin/create/button/?url={{ permalinkURL }}&amp;media={{ shareImage }}&amp;"
+    class="flex gap-1"
+  >
+    <img class="w-[20px] h-[20px]" src="{{'pinterest-p.svg' |  asset_url}}" aria-hidden="true"></img>
+    <span class="share-title">Pin it</span>
+  </a>
+</div>
+
+<section class="relative container py-10 flex flex-col gap-4">
+  <h2 class="text-2xl lg:text-4xl en:font-heyCharlie text-[#193C6B] text-center font-bold">Latest Articles</h2>
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      {% for article in blog.articles limit: 3 %}
+        <a href="{{ article.url }}" class="bg-white rounded-lg shadow-md p-4 flex flex-col gap-2 items-start">
+          {% if article.image %}
+            <img src="{{ article.image | image_url: width: 800, format: 'webp' }}" alt="{{ article.title }}" width="800" height="400" class="w-full h-auto rounded-lg" loading="lazy" />
+          {% endif %}
+          <h3 class="text-lg  text-[#193C6B] text-center font-bold">{{ article.title }}</h3>
+          <p class="text-sm text-gray-500 text-center">{{ article.excerpt_or_content | strip_html | truncate: 100 }}</p>
+        </a>
+      {% endfor %}
+    </div>
+
+</section>
+
+{% schema %}
+{
+  "name": "Article",
+  "settings": []
+}
+{% endschema %}

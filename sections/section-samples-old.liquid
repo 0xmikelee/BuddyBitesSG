@@ -1,0 +1,1345 @@
+<div class="moving-banner relative w-full overflow-hidden whitespace-nowrap bg-[#193c6b] py-2">
+  <div class="banner-track flex w-max animate-[marquee_30s_linear_infinite]" id="banner-track">
+    <div class="banner-text inline-block p-0 text-[15px] tracking-[1.5px] text-white en:font-museo">
+      Build Your Own Sample Bundle &#160;&bull;&#160; Build Your Own Sample Bundle &#160;&bull;&#160; Build Your Own
+      Sample Bundle &#160;&bull;&#160; Build Your Own Sample Bundle &#160;&bull;&#160; Build Your Own Sample Bundle
+      &#160;&bull;&#160; Build Your Own Sample Bundle &#160;&bull;&#160;&#160;
+    </div>
+    <div class="banner-text inline-block p-0 text-[15px] tracking-[1.5px] text-white en:font-museo">
+      Build Your Own Sample Bundle &#160;&bull;&#160; Build Your Own Sample Bundle &#160;&bull;&#160; Build Your Own
+      Sample Bundle &#160;&bull;&#160; Build Your Own Sample Bundle &#160;&bull;&#160; Build Your Own Sample Bundle
+      &#160;&bull;&#160; Build Your Own Sample Bundle &#160;&bull;&#160;&#160;
+    </div>
+  </div>
+</div>
+
+<div class="sample-select-block bg-gradient-to-b from-[#98cbec] to-white">
+  <div class="sample-choices md:flex">
+    <div class="p-[3vw] md:flex-[60%]">
+      <div class="button-row flex w-full justify-between gap-[10px] pb-[2vw]">
+        <button
+          id="all-button"
+          onclick="changeButtonStyle(this)"
+          class="flex-1 cursor-pointer rounded-[3vw] border-2 border-[#193c6b] bg-white py-[0.8vw] text-center font-montserrat text-[2vw] font-semibold tracking-[1px] text-[#193c6b] transition-all duration-300 hover:bg-[#193c6b] hover:text-white active:bg-[#193c6b] active:text-white md:text-[1.1vw]"
+        >
+          ALL
+        </button>
+        <button
+          id="kibble-button"
+          onclick="changeButtonStyle(this)"
+          class="flex-1 cursor-pointer rounded-[3vw] border-2 border-[#193c6b] bg-white py-[0.8vw] text-center font-montserrat text-[2vw] font-semibold tracking-[1px] text-[#193c6b] transition-all duration-300 hover:bg-[#193c6b] hover:text-white active:bg-[#193c6b] active:text-white md:text-[1.1vw]"
+        >
+          KIBBLE
+        </button>
+        <button
+          id="treats-button"
+          onclick="changeButtonStyle(this)"
+          class="flex-1 cursor-pointer rounded-[3vw] border-2 border-[#193c6b] bg-white py-[0.8vw] text-center font-montserrat text-[2vw] font-semibold tracking-[1px] text-[#193c6b] transition-all duration-300 hover:bg-[#193c6b] hover:text-white active:bg-[#193c6b] active:text-white md:text-[1.1vw]"
+        >
+          TREATS
+        </button>
+        <button
+          id="for-small-button"
+          onclick="changeButtonStyle(this)"
+          class="flex-1 cursor-pointer rounded-[3vw] border-2 border-[#193c6b] bg-white py-[0.8vw] text-center font-montserrat text-[2vw] font-semibold tracking-[1px] text-[#193c6b] transition-all duration-300 hover:bg-[#193c6b] hover:text-white active:bg-[#193c6b] active:text-white md:text-[1.1vw]"
+        >
+          For Small Dogs
+        </button>
+      </div>
+
+      <div class="gift-block mb-[2vw] rounded-[2vw] border-2 border-white p-[10px]">
+        <div class="gift-header flex cursor-pointer select-none items-center" onclick="toggleGiftBlock()">
+          <div class="dropdown-icon inline-block text-[1.2vw] font-bold text-white transition-transform duration-1000 ease-in-out">
+            &#x3e;
+          </div>
+          <span class="ml-[10px] font-montserrat text-[2.5vw] font-semibold uppercase tracking-[1px] text-[#193c6b] md:text-[1vw]"
+            >Choose your free gifts</span
+          >
+        </div>
+        <div class="gift-content max-h-0 overflow-hidden transition-[max-height] duration-1000 ease-in-out">
+          <div class="merchandise-row my-[1vw] grid grid-cols-2 gap-[2vw] md:grid-cols-4">
+            <div class="merchandise-item select-item relative flex min-h-[15.5vw] flex-1 flex-col items-center justify-center overflow-visible rounded-[1.9vw] bg-[#dcedf8] p-[1vw] text-center font-montserrat text-[2.5vw] font-medium text-[#0d3e66] sm:text-[0.8vw]">
+              Select FREE<br>
+              <b>x1 bag</b><b>x1 bowl</b><br>
+              $115 VALUE!
+            </div>
+            <div class="merchandise-item merch-item relative flex min-h-[15.5vw] flex-1 flex-col items-center justify-between gap-1 overflow-visible rounded-[1.9vw] bg-[#90ccf4] p-[1vw] text-center text-[1vw] text-white md:gap-0">
+              <img
+                class="bag h-auto w-[65%] md:w-full"
+                src="https://cdn.shopify.com/s/files/1/0430/5833/1805/files/BB_Turkey_FOP_1_300x.png?v=1740001520"
+                loading="lazy"
+                alt="Gift 2"
+              >
+              <p class="font-montserrat text-[2.5vw] font-semibold uppercase tracking-[1px] text-[#193c6b] md:text-[0.8vw]">
+                Canvas Bag
+              </p>
+              <button
+                class="add-to-cart selected:w-[6vw] z-[1] w-[5vw] transform cursor-pointer rounded-[5vw] border-none bg-[#193c6b] font-montserrat text-[2.5vw] font-medium text-white transition-all duration-300 ease-in-out hover:bg-[#f4f4f4] hover:text-[#193c6b] md:text-[1vw]"
+                data-variant-id="49678717911355"
+                onclick="toggleAddToCart(this)"
+              >
+                +
+              </button>
+            </div>
+            <div class="merchandise-item merch-item relative flex min-h-[15.5vw] flex-1 flex-col items-center justify-between gap-1 overflow-visible rounded-[1.9vw] bg-[#90ccf4] p-[1vw] text-center text-[1vw] text-white md:gap-0">
+              <img
+                class="bowls h-auto w-[65%] md:w-full"
+                src="https://cdn.shopify.com/s/files/1/0430/5833/1805/files/BB_Turkey_FOP_1_7ccd6c9f-6679-43b8-9f03-3c3410d199da_300x.png?v=1740001642"
+                loading="lazy"
+                alt="Gift 3"
+              >
+              <p class="font-montserrat text-[2.5vw] font-semibold uppercase tracking-[1px] text-[#193c6b] md:text-[0.8vw]">
+                Purple Bowl
+              </p>
+              <button
+                class="add-to-cart selected:w-[6vw] selected:bg-white z-[1] w-[5vw] transform cursor-pointer rounded-[5vw] border-none bg-[#193c6b] font-montserrat text-[2.5vw] font-medium text-white transition-all duration-300 ease-in-out hover:bg-[#f4f4f4] hover:text-[#193c6b] md:text-[1vw]"
+                data-variant-id="45058917105979"
+                onclick="toggleAddToCart(this)"
+              >
+                +
+              </button>
+            </div>
+            <div class="merchandise-item merch-item relative flex min-h-[15.5vw] flex-1 flex-col items-center justify-between gap-1 overflow-visible rounded-[1.9vw] bg-[#90ccf4] p-[1vw] text-center text-[1vw] text-white md:gap-0">
+              <img
+                class="bowls h-auto w-[65%] md:w-full"
+                src="https://cdn.shopify.com/s/files/1/0430/5833/1805/files/BB_Turkey_FOP_1_copy_300x.png?v=1740001639"
+                loading="lazy"
+                alt="Gift 4"
+              >
+              <p class="font-montserrat text-[2.5vw] font-semibold uppercase tracking-[1px] text-[#193c6b] md:text-[0.8vw]">
+                Blue Bowl
+              </p>
+              <button
+                class="add-to-cart selected:w-[6vw] selected:bg-white z-[1] w-[5vw] transform cursor-pointer rounded-[5vw] border-none bg-[#193c6b] font-montserrat text-[2.5vw] font-medium text-white transition-all duration-300 ease-in-out hover:bg-[#f4f4f4] hover:text-[#193c6b] md:text-[1vw]"
+                data-variant-id="45058917073211"
+                onclick="toggleAddToCart(this)"
+              >
+                +
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="samples-block mb-[2vw] rounded-[2vw] border-2 border-white p-[10px]">
+        <div class="sample-header flex cursor-pointer select-none items-center" onclick="toggleSampleBlock()">
+          <div class="dropdown-icon-2 inline-block text-[1.2vw] font-bold text-white transition-transform duration-1000 ease-in-out">
+            &#x3e;
+          </div>
+          <span class="ml-[10px] font-montserrat text-[2.5vw] font-semibold uppercase tracking-[1px] text-[#193c6b] md:text-[1vw]"
+            >Choose up to 5</span
+          >
+        </div>
+
+        <div class="sample-content mt-[1vw] grid max-h-0 grid-cols-2 gap-[1vw] overflow-hidden transition-[max-height] duration-1000 ease-in-out md:grid-cols-4">
+          <div
+            class="samples-item kibble small-dog-friendly relative flex flex-1 flex-col items-center justify-center gap-1 overflow-hidden rounded-[1.9vw] bg-[#C6D7A4] px-[0.8vw] py-[1.5vw] text-center text-[1vw] hover:bg-white md:h-[16.5vw]"
+            style="--hover-img: url('https://cdn.shopify.com/s/files/1/0430/5833/1805/files/1_60_300x.png?v=1740416315')"
+          >
+            <div
+              class="overlay-item absolute left-0 top-0 z-[3] hidden h-full w-full rounded-[1.9vw] bg-[rgba(25,60,107,0.7)] backdrop-blur-[1px]"
+            ></div>
+            <h4 class="weight-tag absolute left-0 top-0 z-[2] rounded-br-[1.9vw] bg-[rgba(255,255,255,0.5)] p-[0.5vw] pb-[1vw] text-[0.8vw] text-[#193c6b]">
+              500g
+            </h4>
+            <div
+              class="info-icon absolute right-[0.5vw] top-[0.5vw] z-[2] h-[1.5vw] w-[1.5vw] cursor-pointer"
+              onclick="showPopup('DUCK RECIPE', 'https://cdn.shopify.com/s/files/1/0430/5833/1805/files/1_60.png?v=1740416315', {topLeft: {icon: 'https://cdn.shopify.com/s/files/1/0430/5833/1805/files/Layer_1_5e1d35ee-c8c8-4d4b-83e8-b84ef22df952_100x.png?v=1742268273', alt: 'Prebiotics Icon', largeText: 'COMBINATION OF PREBIOTICS', smallText: 'Taking gut health seriously', textColor: '#498B33'}, topRight: {icon: 'https://cdn.shopify.com/s/files/1/0430/5833/1805/files/Layer_1_copy_326b47cb-dd97-446d-b5c2-6ea64d3e8337_100x.png?v=1742268272', alt: 'Kibble Icon', largeText: 'SMALLER KIBBLE SIZE', smallText: 'Great for smaller dogs', textColor: '#498B33'}, bottomLeft: {icon: 'https://cdn.shopify.com/s/files/1/0430/5833/1805/files/Layer_1_copy_2_35f49359-30d6-4356-9a95-4ea425a0d070_100x.png?v=1742268272', alt: 'Protein Icon', largeText: 'SINGLE NOVEL PROTEIN', smallText: 'Easy to digest', textColor: '#498B33'}, bottomRight: {icon: 'https://cdn.shopify.com/s/files/1/0430/5833/1805/files/Layer_1_copy_3_98d2f172-6df0-49f3-a235-0c547c4f5e3c_100x.png?v=1742268272', alt: 'Picky Eater Icon', largeText: 'LOVED BY FUSSY EATERS', smallText: 'Picky-eater proof', textColor: '#498B33'}})"
+            >
+              <img
+                src="https://cdn.shopify.com/s/files/1/0430/5833/1805/files/Group_877_50x.png?v=1742266318"
+                loading="lazy"
+                alt="Info Icon"
+                class="object-contain p-[0.2vw] pr-[0.2vw] pt-0"
+              >
+            </div>
+            <img
+              src="https://cdn.shopify.com/s/files/1/0430/5833/1805/files/1a9cd1653dcaa356b3acd67eea26ccbd_2_300x.png?v=1715509825"
+              loading="lazy"
+              alt="Sample 1"
+              class="h-auto w-full pt-[0.8vw]"
+            >
+            <p class="m-0 w-full transform font-montserrat text-[2.5vw] font-semibold uppercase tracking-[1px] text-[#193c6b] md:text-[0.8vw]">
+              DUCK RECIPE
+            </p>
+            <div
+              class="quantity-selector z-[1] flex w-[14vw] transform cursor-pointer items-center justify-between rounded-[5vw] border-none bg-[#193c6b] px-[2vw] font-montserrat text-[2.5vw] font-medium text-white transition-all duration-300 ease-in-out md:w-[5vw] md:p-[0_0.5vw] md:text-[1vw]"
+              data-variant-id="47517822484795"
+            >
+              <button class="decrement flex  aspect-square w-[1vw] cursor-pointer items-center justify-center border-none font-montserrat text-[5vw] font-medium leading-[5vw] text-white md:text-[1vw] md:leading-none">
+                -
+              </button>
+              <span class="quantity w-[1.5vw] text-center">0</span>
+              <button class="increment flex aspect-square w-[1vw] cursor-pointer items-center justify-center border-none font-montserrat text-[5vw] font-medium leading-[5vw] text-white md:text-[1vw] md:leading-none">
+                +
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="samples-item kibble small-dog-friendly relative flex flex-1 flex-col items-center justify-center gap-1 overflow-hidden rounded-[1.9vw] bg-[#AFCBE9] px-[0.8vw] py-[1.5vw] text-center text-[1vw] hover:bg-white md:h-[16.5vw]"
+            style="--hover-img: url('https://cdn.shopify.com/s/files/1/0430/5833/1805/files/1_61_3_300x.png?v=1740418186')"
+          >
+            <div
+              class="overlay-item absolute left-0 top-0 z-[3] hidden h-full w-full rounded-[1.9vw] bg-[rgba(25,60,107,0.7)] backdrop-blur-[1px]"
+            ></div>
+            <h4 class="weight-tag absolute left-0 top-0 z-[2] rounded-br-[1.9vw] bg-[rgba(255,255,255,0.5)] p-[0.5vw] pb-[1vw] text-[0.8vw] text-[#193c6b]">
+              500g
+            </h4>
+            <div
+              class="info-icon absolute right-[0.5vw] top-[0.5vw] z-[2] h-[1.5vw] w-[1.5vw] cursor-pointer"
+              onclick="showPopup('PUPPY RECIPE', 'https://cdn.shopify.com/s/files/1/0430/5833/1805/files/1_61_3.png?v=1740418186', {topLeft: {icon: 'https://cdn.shopify.com/s/files/1/0430/5833/1805/files/Layer_1_d9269b3d-1471-47be-aee7-7f93ed804402_100x.png?v=1742271083', alt: 'Prebiotics Icon', largeText: 'COMBINATION OF PREBIOTICS', smallText: 'Taking gut health seriously', textColor: '#193C6B'}, topRight: {icon: 'https://cdn.shopify.com/s/files/1/0430/5833/1805/files/Layer_1_copy_4_100x.png?v=1742271084', alt: 'Amino acids', largeText: 'Essential amino acids', smallText: 'For strong heart health', textColor: '#193C6B'}, bottomLeft: {icon: 'https://cdn.shopify.com/s/files/1/0430/5833/1805/files/Puppy_Icon_protein_1_100x.png?v=1742271084', alt: 'Proteins', largeText: '3 blended proteins', smallText: 'For growing pups', textColor: '#193C6B'}, bottomRight: {icon: 'https://cdn.shopify.com/s/files/1/0430/5833/1805/files/Layer_1_copy_5_100x.png?v=1742271084', alt: 'Small size', largeText: 'Small kibble size', smallText: 'For puppies all shapes and sizes', textColor: '#193C6B'}})"
+            >
+              <img
+                src="https://cdn.shopify.com/s/files/1/0430/5833/1805/files/Group_877_50x.png?v=1742266318"
+                loading="lazy"
+                alt="Info Icon"
+                class="object-contain p-[0.2vw] pr-[0.2vw] pt-0"
+              >
+            </div>
+            <img
+              src="https://cdn.shopify.com/s/files/1/0430/5833/1805/files/b41f6dce785fc75d6723045f4be28efd_2_300x.png?v=1715510609"
+              loading="lazy"
+              alt="Sample 2"
+              class="h-auto w-full pt-[0.8vw]"
+            >
+            <p class=" m-0 w-full transform font-montserrat text-[2.5vw] font-semibold uppercase tracking-[1px] text-[#193c6b] md:text-[0.8vw]">
+              PUPPY RECIPE
+            </p>
+            <div
+              class="quantity-selector z-[1] flex w-[14vw] transform cursor-pointer items-center justify-between rounded-[5vw] border-none bg-[#193c6b] px-[2vw] font-montserrat text-[2.5vw] font-medium text-white transition-all duration-300 ease-in-out md:w-[5vw] md:p-[0_0.5vw] md:text-[1vw]"
+              data-variant-id="47517965451579"
+            >
+              <button class="decrement flex  aspect-square w-[1vw] cursor-pointer items-center justify-center border-none font-montserrat text-[5vw] font-medium leading-[5vw] text-white md:text-[1vw] md:leading-none">
+                -
+              </button>
+              <span class="quantity w-[1.5vw] text-center">0</span>
+              <button class="increment flex aspect-square w-[1vw] cursor-pointer items-center justify-center border-none font-montserrat text-[5vw] font-medium leading-[5vw] text-white md:text-[1vw] md:leading-none">
+                +
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="samples-item kibble desktop relative flex flex-1 flex-col items-center justify-center gap-1 overflow-hidden rounded-[1.9vw] bg-[#F6B8AE] px-[0.8vw] py-[1.5vw] text-center text-[1vw] hover:bg-white md:h-[16.5vw]"
+            style="--hover-img: url('https://cdn.shopify.com/s/files/1/0430/5833/1805/files/1_61_3_copy_300x.png?v=1740418011')"
+          >
+            <div
+              class="overlay-item absolute left-0 top-0 z-[3] hidden h-full w-full rounded-[1.9vw] bg-[rgba(25,60,107,0.7)] backdrop-blur-[1px]"
+            ></div>
+            <h4 class="weight-tag absolute left-0 top-0 z-[2] rounded-br-[1.9vw] bg-[rgba(255,255,255,0.5)] p-[0.5vw] pb-[1vw] text-[0.8vw] text-[#193c6b]">
+              500g
+            </h4>
+            <div
+              class="info-icon absolute right-[0.5vw] top-[0.5vw] z-[2] h-[1.5vw] w-[1.5vw] cursor-pointer"
+              onclick="showPopup('SALMON RECIPE', 'https://cdn.shopify.com/s/files/1/0430/5833/1805/files/1_61_3_copy.png?v=1740418011', {topLeft: {icon: 'https://cdn.shopify.com/s/files/1/0430/5833/1805/files/Layer_1_df85344d-9af2-4abd-9370-d1511a4eeb6b_100x.png?v=1742276427', alt: 'Prebiotics Icon', largeText: 'COMBINATION OF PREBIOTICS', smallText: 'Taking gut health seriously', textColor: '#FC4F47'}, topRight: {icon: 'https://cdn.shopify.com/s/files/1/0430/5833/1805/files/Layer_1_copy_94aff225-6777-4587-bfdc-62055fff5f7a_100x.png?v=1742276427', alt: 'OMEGAS 3 AND 6', largeText: 'OMEGAS 3 AND 6', smallText: 'Supporting healthy skin & coat', textColor: '#FC4F47'}, bottomLeft: {icon: 'https://cdn.shopify.com/s/files/1/0430/5833/1805/files/Layer_1_copy_2_4d881cb6-2773-4061-95f9-7e1c9c83e204_100x.png?v=1742276427', alt: 'Proteins', largeText: 'Single fresh protein', smallText: 'Easy to digest', textColor: '#FC4F47'}, bottomRight: {icon: 'https://cdn.shopify.com/s/files/1/0430/5833/1805/files/Layer_1_copy_3_fff0872d-2b20-4333-b088-bbd77d44c417_100x.png?v=1742276427', alt: 'Large size', largeText: 'Larger kibble size', smallText: 'Great for medium to large dogs', textColor: '#FC4F47'}})"
+            >
+              <img
+                src="https://cdn.shopify.com/s/files/1/0430/5833/1805/files/Group_877_50x.png?v=1742266318"
+                loading="lazy"
+                alt="Info Icon"
+                class="object-contain p-[0.2vw] pr-[0.2vw] pt-0"
+              >
+            </div>
+            <img
+              src="https://cdn.shopify.com/s/files/1/0430/5833/1805/files/e4ae06895ab9973063b0fe7da35ce43c_1_300x.png?v=1715509851"
+              loading="lazy"
+              alt="Sample 3"
+              class="h-auto w-full pt-[0.8vw]"
+            >
+            <p class=" m-0 w-full transform font-montserrat text-[2.5vw] font-semibold uppercase tracking-[1px] text-[#193c6b] md:text-[0.8vw]">
+              SALMON RECIPE
+            </p>
+            <div
+              class="quantity-selector z-[1] flex w-[14vw] transform cursor-pointer items-center justify-between rounded-[5vw] border-none bg-[#193c6b] px-[2vw] font-montserrat text-[2.5vw] font-medium text-white transition-all duration-300 ease-in-out md:w-[5vw] md:p-[0_0.5vw] md:text-[1vw]"
+              data-variant-id="47517935337787"
+            >
+              <button class="decrement flex  aspect-square w-[1vw] cursor-pointer items-center justify-center border-none font-montserrat text-[5vw] font-medium leading-[5vw] text-white md:text-[1vw] md:leading-none">
+                -
+              </button>
+              <span class="quantity w-[1.5vw] text-center">0</span>
+              <button class="increment flex aspect-square w-[1vw] cursor-pointer items-center justify-center border-none font-montserrat text-[5vw] font-medium leading-[5vw] text-white md:text-[1vw] md:leading-none">
+                +
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="samples-item kibble small-dog-friendly desktop relative flex flex-1 flex-col items-center justify-center gap-1 overflow-hidden rounded-[1.9vw] bg-[#FCCBA1] px-[0.8vw] py-[1.5vw] text-center text-[1vw] hover:bg-white md:h-[16.5vw]"
+            style="--hover-img: url('https://cdn.shopify.com/s/files/1/0430/5833/1805/files/1_61_3_copy_2_300x.png?v=1740417994')"
+          >
+            <div
+              class="overlay-item absolute left-0 top-0 z-[3] hidden h-full w-full rounded-[1.9vw] bg-[rgba(25,60,107,0.7)] backdrop-blur-[1px]"
+            ></div>
+            <h4 class="weight-tag absolute left-0 top-0 z-[2] rounded-br-[1.9vw] bg-[rgba(255,255,255,0.5)] p-[0.5vw] pb-[1vw] text-[0.8vw] text-[#193c6b]">
+              500g
+            </h4>
+            <div
+              class="info-icon absolute right-[0.5vw] top-[0.5vw] z-[2] h-[1.5vw] w-[1.5vw] cursor-pointer"
+              onclick="showPopup('TURKEY RECIPE', 'https://cdn.shopify.com/s/files/1/0430/5833/1805/files/1_61_3_copy_2.png?v=1740417994', {topLeft: {icon: 'https://cdn.shopify.com/s/files/1/0430/5833/1805/files/Layer_1_ef70bbbd-e08a-4500-8c68-8825841dd7db_100x.png?v=1742276866', alt: 'Prebiotics Icon', largeText: 'COMBINATION OF PREBIOTICS', smallText: 'Taking gut health seriously', textColor: '#FF671F'}, topRight: {icon: 'https://cdn.shopify.com/s/files/1/0430/5833/1805/files/Layer_1_copy_6a0aa11c-99a3-4e45-8b6c-2f42fa06a837_100x.png?v=1742276867', alt: 'Small size', largeText: 'SMALLER KIBBLE SIZE', smallText: 'For small to medium dogs', textColor: '#FF671F'}, bottomLeft: {icon: 'https://cdn.shopify.com/s/files/1/0430/5833/1805/files/Layer_1_copy_2_552226e8-ea3e-4a67-9894-933feae34291_100x.png?v=1742276867', alt: 'Loved', largeText: 'Loved by fussy eaters', smallText: 'Picky-eater proof', textColor: '#FF671F'}, bottomRight: {icon: 'https://cdn.shopify.com/s/files/1/0430/5833/1805/files/Layer_1_copy_3_311bbd15-df23-41b2-addc-6e25b5250c0b_100x.png?v=1742276867', alt: 'Omega', largeText: 'OMEGA 3 fatty acids', smallText: 'Skin & Coat care', textColor: '#FF671F'}})"
+            >
+              <img
+                src="https://cdn.shopify.com/s/files/1/0430/5833/1805/files/Group_877_50x.png?v=1742266318"
+                loading="lazy"
+                alt="Info Icon"
+                class="object-contain p-[0.2vw] pr-[0.2vw] pt-0"
+              >
+            </div>
+            <img
+              src="https://cdn.shopify.com/s/files/1/0430/5833/1805/files/b8794553c307108105a2b37c27f4f881_2_300x.png?v=1715510496"
+              loading="lazy"
+              alt="Sample 4"
+              class="h-auto w-full pt-[0.8vw]"
+            >
+            <p class=" m-0 w-full transform font-montserrat text-[2.5vw] font-semibold uppercase tracking-[1px] text-[#193c6b] md:text-[0.8vw]">
+              TURKEY RECIPE
+            </p>
+            <div
+              class="quantity-selector z-[1] flex w-[14vw] transform cursor-pointer items-center justify-between rounded-[5vw] border-none bg-[#193c6b] px-[2vw] font-montserrat text-[2.5vw] font-medium text-white transition-all duration-300 ease-in-out md:w-[5vw] md:p-[0_0.5vw] md:text-[1vw]"
+              data-variant-id="47517956112699"
+            >
+              <button class="decrement flex  aspect-square w-[1vw] cursor-pointer items-center justify-center border-none font-montserrat text-[5vw] font-medium leading-[5vw] text-white md:text-[1vw] md:leading-none">
+                -
+              </button>
+              <span class="quantity w-[1.5vw] text-center">0</span>
+              <button class="increment flex aspect-square w-[1vw] cursor-pointer items-center justify-center border-none font-montserrat text-[5vw] font-medium leading-[5vw] text-white md:text-[1vw] md:leading-none">
+                +
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="samples-item kibble relative flex flex-1 flex-col items-center justify-center gap-1 overflow-hidden rounded-[1.9vw] bg-[#DCC9EC] px-[0.8vw] py-[1.5vw] text-center text-[1vw] hover:bg-white md:h-[16.5vw]"
+            style="--hover-img: url('https://cdn.shopify.com/s/files/1/0430/5833/1805/files/1_61_3_87d1bb5e-c3a5-4046-ae11-0bc9258b2c49_300x.png?v=1740416691')"
+          >
+            <div
+              class="overlay-item absolute left-0 top-0 z-[3] hidden h-full w-full rounded-[1.9vw] bg-[rgba(25,60,107,0.7)] backdrop-blur-[1px]"
+            ></div>
+            <h4 class="weight-tag absolute left-0 top-0 z-[2] rounded-br-[1.9vw] bg-[rgba(255,255,255,0.5)] p-[0.5vw] pb-[1vw] text-[0.8vw] text-[#193c6b]">
+              500g
+            </h4>
+            <div
+              class="info-icon absolute right-[0.5vw] top-[0.5vw] z-[2] h-[1.5vw] w-[1.5vw] cursor-pointer"
+              onclick="showPopup('LAMB RECIPE', 'https://cdn.shopify.com/s/files/1/0430/5833/1805/files/1_61_3_87d1bb5e-c3a5-4046-ae11-0bc9258b2c49.png?v=1740416691', {topLeft: {icon: 'https://cdn.shopify.com/s/files/1/0430/5833/1805/files/Layer_1_9614c02e-6080-4e40-b042-26a11cb2729f_100x.png?v=1742351977', alt: 'Prebiotics Icon', largeText: 'COMBINATION OF PREBIOTICS', smallText: 'Taking gut health seriously', textColor: '#4C2445'}, topRight: {icon: 'https://cdn.shopify.com/s/files/1/0430/5833/1805/files/Layer_1_copy_4bb7a5bf-db42-4568-a5a5-373809bb6f68_100x.png?v=1742351978', alt: 'Fussy eater proof', largeText: 'Loved by fussy eaters', smallText: 'Picky-eater proof', textColor: '#4C2445'}, bottomLeft: {icon: 'https://cdn.shopify.com/s/files/1/0430/5833/1805/files/Layer_1_copy_2_39696373-c8dd-4cf8-9574-56c6c5bd845c_100x.png?v=1742351978', alt: 'Lamb', largeText: 'new Zealand lamb', smallText: 'Packed with protein', textColor: '#4C2445'}, bottomRight: {icon: 'https://cdn.shopify.com/s/files/1/0430/5833/1805/files/Layer_1_copy_3_014e8d7d-f769-4ce6-b3cf-a9f8dac81fde_100x.png?v=1742351977', alt: 'Large', largeText: 'Larger kibble size', smallText: 'Great for medium to large dogs', textColor: '#4C2445'}})"
+            >
+              <img
+                src="https://cdn.shopify.com/s/files/1/0430/5833/1805/files/Group_877_50x.png?v=1742266318"
+                loading="lazy"
+                alt="Info Icon"
+                class="object-contain p-[0.2vw] pr-[0.2vw] pt-0"
+              >
+            </div>
+            <img
+              src="https://cdn.shopify.com/s/files/1/0430/5833/1805/files/fba25bd346707d1e08d1031cf1543e9f_3_300x.png?v=1715509937"
+              loading="lazy"
+              alt="Sample 1"
+              class="h-auto w-full pt-[0.8vw]"
+            >
+            <p class=" m-0 w-full transform font-montserrat text-[2.5vw] font-semibold uppercase tracking-[1px] text-[#193c6b] md:text-[0.8vw]">
+              LAMB RECIPE
+            </p>
+            <div
+              class="quantity-selector z-[1] flex w-[14vw] transform cursor-pointer items-center justify-between rounded-[5vw] border-none bg-[#193c6b] px-[2vw] font-montserrat text-[2.5vw] font-medium text-white transition-all duration-300 ease-in-out md:w-[5vw] md:p-[0_0.5vw] md:text-[1vw]"
+              data-variant-id="47517828677947"
+            >
+              <button class="decrement flex  aspect-square w-[1vw] cursor-pointer items-center justify-center border-none font-montserrat text-[5vw] font-medium leading-[5vw] text-white md:text-[1vw] md:leading-none">
+                -
+              </button>
+              <span class="quantity w-[1.5vw] text-center">0</span>
+              <button class="increment flex aspect-square w-[1vw] cursor-pointer items-center justify-center border-none font-montserrat text-[5vw] font-medium leading-[5vw] text-white md:text-[1vw] md:leading-none">
+                +
+              </button>
+            </div>
+          </div>
+          <div
+            class="samples-item treats small-dog-friendly relative flex flex-1 flex-col items-center justify-center gap-1 overflow-hidden rounded-[1.9vw] bg-[#F7DFC2] px-[0.8vw] py-[1.5vw] text-center text-[1vw] hover:bg-white md:h-[16.5vw]"
+            style="--hover-img: url('https://cdn.shopify.com/s/files/1/0430/5833/1805/files/BB_Turkey_FOP_1_2_300x.png?v=1740417914')"
+          >
+            <div
+              class="overlay-item absolute left-0 top-0 z-[3] hidden h-full w-full rounded-[1.9vw] bg-[rgba(25,60,107,0.7)] backdrop-blur-[1px]"
+            ></div>
+            <h4 class="weight-tag absolute left-0 top-0 z-[2] rounded-br-[1.9vw] bg-[rgba(255,255,255,0.5)] p-[0.5vw] pb-[1vw] text-[0.8vw] text-[#193c6b]">
+              100g
+            </h4>
+            <div
+              class="info-icon absolute right-[0.5vw] top-[0.5vw] z-[2] h-[1.5vw] w-[1.5vw] cursor-pointer"
+              onclick="showPopup('CHICKEN & HONEY TREATS', 'https://cdn.shopify.com/s/files/1/0430/5833/1805/files/BB_Turkey_FOP_1_2.png?v=1740417914', {topLeft: {icon: 'https://cdn.shopify.com/s/files/1/0430/5833/1805/files/Group_798_85c33ced-6bf1-45df-b8c3-6a9c4db703f2_100x.png?v=1742352438', alt: 'Protein', largeText: 'High protein snack', smallText: 'Low in Fat', textColor: '#DF6036'}, topRight: {icon: 'https://cdn.shopify.com/s/files/1/0430/5833/1805/files/Layer_1_c3038132-143a-4876-9c29-6d4fc990ded9_100x.png?v=1742352437', alt: 'JOINT HEALTH', largeText: 'JOINT HEALTH', smallText: 'Green Lipped Mussels', textColor: '#DF6036'}, bottomLeft: {icon: 'https://cdn.shopify.com/s/files/1/0430/5833/1805/files/Group_803_71558b6e-b8d4-4d8e-8764-166d53992721_100x.png?v=1742352437', alt: 'Honey', largeText: 'PREMIUM Manuka honey', smallText: 'Great for the immune system', textColor: '#DF6036'}, bottomRight: {icon: 'https://cdn.shopify.com/s/files/1/0430/5833/1805/files/Group_797_2526ae85-0f95-4d28-9ca5-7b236fb2aa08_100x.png?v=1742352438', alt: 'Natural', largeText: '100% natural', smallText: 'Only the Good Stuff', textColor: '#DF6036'}})"
+            >
+              <img
+                src="https://cdn.shopify.com/s/files/1/0430/5833/1805/files/Group_877_50x.png?v=1742266318"
+                loading="lazy"
+                alt="Info Icon"
+                class="object-contain p-[0.2vw] pr-[0.2vw] pt-0"
+              >
+            </div>
+            <img
+              src="https://cdn.shopify.com/s/files/1/0430/5833/1805/files/BB_PremiumTreats_Chicken_Honey_FRONT_300x.png?v=1716349596"
+              loading="lazy"
+              alt="Sample 2"
+              class="h-auto w-full pt-[0.4vw]"
+            >
+            <p class="m-0 w-full transform font-montserrat text-[2.5vw] font-semibold uppercase tracking-[1px] text-[#193c6b] md:text-[0.8vw]">
+              CHICKEN & HONEY TREATS
+            </p>
+            <div
+              class="quantity-selector z-[1] flex w-[14vw] transform cursor-pointer items-center justify-between rounded-[5vw] border-none bg-[#193c6b] px-[2vw] font-montserrat text-[2.5vw] font-medium text-white transition-all duration-300 ease-in-out md:w-[5vw] md:p-[0_0.5vw] md:text-[1vw]"
+              data-variant-id="48424319582523"
+            >
+              <button class="decrement flex  aspect-square w-[1vw] cursor-pointer items-center justify-center border-none font-montserrat text-[5vw] font-medium leading-[5vw] text-white md:text-[1vw] md:leading-none">
+                -
+              </button>
+              <span class="quantity w-[1.5vw] text-center">0</span>
+              <button class="increment flex aspect-square w-[1vw] cursor-pointer items-center justify-center border-none font-montserrat text-[5vw] font-medium leading-[5vw] text-white md:text-[1vw] md:leading-none">
+                +
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="samples-item treats small-dog-friendly desktop relative flex flex-1 flex-col items-center justify-center gap-1 overflow-hidden rounded-[1.9vw] bg-[#D3D3F6] px-[0.8vw] py-[1.5vw] text-center text-[1vw] hover:bg-white md:h-[16.5vw]"
+            style="--hover-img: url('https://cdn.shopify.com/s/files/1/0430/5833/1805/files/BB_Turkey_FOP_1_2_300x.png?v=1740417914')"
+          >
+            <div
+              class="overlay-item absolute left-0 top-0 z-[3] hidden h-full w-full rounded-[1.9vw] bg-[rgba(25,60,107,0.7)] backdrop-blur-[1px]"
+            ></div>
+            <h4 class="weight-tag absolute left-0 top-0 z-[2] rounded-br-[1.9vw] bg-[rgba(255,255,255,0.5)] p-[0.5vw] pb-[1vw] text-[0.8vw] text-[#193c6b]">
+              100g
+            </h4>
+            <div
+              class="info-icon absolute right-[0.5vw] top-[0.5vw] z-[2] h-[1.5vw] w-[1.5vw] cursor-pointer"
+              onclick="showPopup('BEEF & BLUEBERRY TREATS', 'https://cdn.shopify.com/s/files/1/0430/5833/1805/files/BB_Turkey_FOP_1_2.png?v=1740417914', {topLeft: {icon: 'https://cdn.shopify.com/s/files/1/0430/5833/1805/files/Group_798_6fea4187-335f-4136-bb13-4fa59905002e_100x.png?v=1742352893', alt: 'Protein', largeText: 'High protein snack', smallText: 'Low in Fat', textColor: '#615E99'}, topRight: {icon: 'https://cdn.shopify.com/s/files/1/0430/5833/1805/files/Layer_1_226813e3-1093-4e84-bd1c-40729a0b8322_100x.png?v=1742352893', alt: 'PREMIUM INGREDIENTS', largeText: 'PREMIUM INGREDIENTS', smallText: 'Green Lipped Mussels & Blueberries', textColor: '#615E99'}, bottomLeft: {icon: 'https://cdn.shopify.com/s/files/1/0430/5833/1805/files/Group_799_1b4c0a26-8505-4c72-bb8c-dce7ff9e0f6c_100x.png?v=1742352893', alt: 'vitamins & antioxidants', largeText: 'vitamins & antioxidants', smallText: 'From Blueberries', textColor: '#615E99'}, bottomRight: {icon: 'https://cdn.shopify.com/s/files/1/0430/5833/1805/files/Group_797_134a4781-352a-4a6e-9db0-9f5ba4505d76_100x.png?v=1742352893', alt: 'Natural', largeText: '100% natural', smallText: 'Only the Good Stuff', textColor: '#615E99'}})"
+            >
+              <img
+                src="https://cdn.shopify.com/s/files/1/0430/5833/1805/files/Group_877_50x.png?v=1742266318"
+                loading="lazy"
+                alt="Info Icon"
+                class="object-contain p-[0.2vw] pr-[0.2vw] pt-0"
+              >
+            </div>
+            <img
+              src="https://cdn.shopify.com/s/files/1/0430/5833/1805/files/BB_PremiumTreats_Beef_Berry_FRONT_300x.png?v=1716349596"
+              loading="lazy"
+              alt="Sample 3"
+              class="h-auto w-full pt-[0.4vw]"
+            >
+            <p class="m-0 w-full transform font-montserrat text-[2.5vw] font-semibold uppercase tracking-[1px] text-[#193c6b] md:text-[0.8vw]">
+              BEEF & BLUEBERRY TREATS
+            </p>
+            <div
+              class="quantity-selector z-[1] flex w-[14vw] transform cursor-pointer items-center justify-between rounded-[5vw] border-none bg-[#193c6b] px-[2vw] font-montserrat text-[2.5vw] font-medium text-white transition-all duration-300 ease-in-out md:w-[5vw] md:p-[0_0.5vw] md:text-[1vw]"
+              data-variant-id="48424321679675"
+            >
+              <button class="decrement flex  aspect-square w-[1vw] cursor-pointer items-center justify-center border-none font-montserrat text-[5vw] font-medium leading-[5vw] text-white md:text-[1vw] md:leading-none">
+                -
+              </button>
+              <span class="quantity w-[1.5vw] text-center">0</span>
+              <button class="increment flex aspect-square w-[1vw] cursor-pointer items-center justify-center border-none font-montserrat text-[5vw] font-medium leading-[5vw] text-white md:text-[1vw] md:leading-none">
+                +
+              </button>
+            </div>
+          </div>
+          <div
+            class="samples-item dental-treats small-dog-friendly desktop relative flex flex-1 flex-col items-center justify-center gap-1 overflow-hidden rounded-[1.9vw] bg-[#BDEAE1] px-[0.8vw] py-[1.5vw] text-center text-[1vw] hover:bg-white md:h-[16.5vw]"
+            style="--hover-img: url('https://cdn.shopify.com/s/files/1/0430/5833/1805/files/Group_949_300x.png?v=1740417179')"
+          >
+            <div
+              class="overlay-item absolute left-0 top-0 z-[3] hidden h-full w-full rounded-[1.9vw] bg-[rgba(25,60,107,0.7)] backdrop-blur-[1px]"
+            ></div>
+            <h4 class="weight-tag absolute left-0 top-0 z-[2] rounded-br-[1.9vw] bg-[rgba(255,255,255,0.5)] p-[0.5vw] pb-[1vw] text-[0.8vw] text-[#193c6b]">
+              180g
+            </h4>
+            <div
+              class="info-icon absolute right-[0.5vw] top-[0.5vw] z-[2] h-[1.5vw] w-[1.5vw] cursor-pointer"
+              onclick="showPopup('DENTAL STICKS', 'https://cdn.shopify.com/s/files/1/0430/5833/1805/files/Group_949.png?v=1740417179', {topLeft: {icon: 'https://cdn.shopify.com/s/files/1/0430/5833/1805/files/Buddy_Bites_Master-44_1_100x.png?v=1742353252', alt: 'OMEGA 3 & 6', largeText: 'ADDED OMEGA 3 & 6', smallText: 'Support a healthy coat', textColor: '#007681'}, topRight: {icon: 'https://cdn.shopify.com/s/files/1/0430/5833/1805/files/Buddy_Bites_Master-46_1_100x.png?v=1742353252', alt: 'EASY TO CHEW & BITE-SIZE', largeText: 'EASY TO CHEW & BITE-SIZE', smallText: 'Easy to digest', textColor: '#007681'}, bottomLeft: {icon: 'https://cdn.shopify.com/s/files/1/0430/5833/1805/files/Buddy_Bites_Icons-47_100x.png?v=1742353252', alt: 'ADDED VITAMINS & MINERALS', largeText: 'ADDED VITAMINS & MINERALS', smallText: 'Supporting gut health', textColor: '#007681'}, bottomRight: {icon: 'https://cdn.shopify.com/s/files/1/0430/5833/1805/files/Buddy_Bites_Icons-45_100x.png?v=1742353252', alt: 'Natural', largeText: 'NO ADDED SUGAR', smallText: 'Only the Good Stuff', textColor: '#007681'}})"
+            >
+              <img
+                src="https://cdn.shopify.com/s/files/1/0430/5833/1805/files/Group_877_50x.png?v=1742266318"
+                loading="lazy"
+                alt="Info Icon"
+                class="object-contain p-[0.2vw] pr-[0.2vw] pt-0"
+              >
+            </div>
+            <img
+              src="https://cdn.shopify.com/s/files/1/0430/5833/1805/files/BB_Turkey_FOP_1_36848e75-2ec9-4216-b59a-aabccb53bf50_300x.png?v=1740115665"
+              loading="lazy"
+              alt="Sample 4"
+              class="h-auto w-full pt-[0.8vw]"
+            >
+            <p class=" m-0 w-full transform font-montserrat text-[2.5vw] font-semibold uppercase tracking-[1px] text-[#193c6b] md:text-[0.8vw]">
+              DENTAL STICKS
+            </p>
+            <div
+              class="quantity-selector z-[1] flex w-[14vw] transform cursor-pointer items-center justify-between rounded-[5vw] border-none bg-[#193c6b] px-[2vw] font-montserrat text-[2.5vw] font-medium text-white transition-all duration-300 ease-in-out md:w-[5vw] md:p-[0_0.5vw] md:text-[1vw]"
+              data-variant-id="42386410209437"
+            >
+              <button class="decrement flex  aspect-square w-[1vw] cursor-pointer items-center justify-center border-none font-montserrat text-[5vw] font-medium leading-[5vw] text-white md:text-[1vw] md:leading-none">
+                -
+              </button>
+              <span class="quantity w-[1.5vw] text-center">0</span>
+              <button class="increment flex aspect-square w-[1vw] cursor-pointer items-center justify-center border-none font-montserrat text-[5vw] font-medium leading-[5vw] text-white md:text-[1vw] md:leading-none">
+                +
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="choice-progress desktop text-center md:flex-[40%]">
+      <div class="bundle-progress relative mt-[5vw] hidden h-auto w-full md:block">
+        <img
+          src="https://cdn.shopify.com/s/files/1/0430/5833/1805/files/Kibble_Outline_Angled_copy.png?v=1742008258"
+          loading="lazy"
+          alt="Product Outlines"
+          class="ml-[10%] block h-auto w-[80%]"
+        >
+        <div
+          class="product-placeholder pointer-events-none absolute top-0 h-full w-[44%] bg-contain bg-center bg-no-repeat"
+          style="left: 0.9vw; top: -2.5vw"
+        ></div>
+        <div
+          class="product-placeholder pointer-events-none absolute top-0 h-full w-[44%] bg-contain bg-center bg-no-repeat"
+          style="left: 6.1vw; top:-1.5vw"
+        ></div>
+        <div
+          class="product-placeholder pointer-events-none absolute top-0 h-full w-[44%] bg-contain bg-center bg-no-repeat"
+          style="left: 11.2vw; top: -0.1vw;"
+        ></div>
+        <div
+          class="product-placeholder pointer-events-none absolute top-0 h-full w-[44%] bg-contain bg-center bg-no-repeat"
+          style="left: 16.3vw; top: 1vw;"
+        ></div>
+        <div
+          class="product-placeholder pointer-events-none absolute top-0 h-full w-[44%] bg-contain bg-center bg-no-repeat"
+          style="left: 21.4vw; top: 2vw;"
+        ></div>
+      </div>
+      <div id="total-price-display" class="m-[1vw] text-center text-[1.5vw] font-bold text-[#193c6b]">$0.00</div>
+      <button
+        id="final-add-to-cart"
+        onclick="addAllToCart()"
+        class="font-stretch-normal font-style-normal rounded-[4vw] bg-[#90ccf4] px-[7vw] py-[0.5vw] text-[1.8vw] uppercase tracking-[0.2vw] text-[#193c6b] shadow-[0_2px_5px_#3a3a3a42] transition-all duration-[0.4s] hover:bg-[#193c6b] hover:text-white en:font-museo"
+      >
+        Add to Cart
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="choice-progress mobile fixed bottom-0 left-0 z-[1000] flex w-full flex-col items-center justify-center rounded-[15vw_15vw_0_0] bg-[#193c6b] px-0 py-[3vw] text-center md:hidden">
+  <button
+    id="final-add-to-cart"
+    onclick="addAllToCart()"
+    class="my-[-4vw] w-full rounded-[9vw] bg-none px-0 py-[4vw] text-[5vw] tracking-[0.4vw] text-white shadow-none transition-transform duration-1000 ease-in-out"
+  >
+    Add to Cart
+  </button>
+  <div id="num-samples-selected" class="tracking-[0.3vw] text-[#FFFF9E] en:font-museo">
+    0/5 {% if canonical_url contains '/zh/' %}已選{% else %}SELECTED{% endif %} - $0.00
+  </div>
+</div>
+
+<div
+  id="popup-overlay"
+  class="popup-overlay fixed left-0 top-0 z-[1000] hidden h-full w-full items-center justify-center bg-[rgba(0,0,0,0.5)]"
+>
+  <div class="popup-content relative max-h-[80%] max-w-[70%] overflow-y-auto rounded-[3vw] bg-white p-[2vw] text-center">
+    <span
+      class="close-popup absolute right-[1.5vw] top-[0.5vw] cursor-pointer border-none bg-none p-0 text-[2.5vw] text-[#193c6b] hover:text-[#90ccf4]"
+      onclick="closePopup()"
+      >&times;</span
+    >
+    <div id="popup-info">
+      <h2 class="product-name">DUCK RECIPE</h2>
+      <img
+        src="https://your-product-image-url-here.com/duck-recipe.png"
+        alt="Duck Recipe"
+        loading="lazy"
+        class="product-image"
+      >
+      <div class="detail-grid relative w-full">
+        <!-- Detail blocks would be dynamically generated here -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="relative">
+  <img
+    src="{{'Group_950.png' | file_img_url: 'master' }}"
+    alt="Only The Good Stuff Banner"
+    class="hidden w-full object-cover lg:block"
+  >
+  <img
+    src="{{'Group_953_copy.png' | file_img_url: 'master' }}"
+    alt="Only The Good Stuff Banner"
+    class="block w-full object-cover lg:hidden"
+  >
+  <div class="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center gap-4">
+    <h2 class="text-center text-[10vw] font-normal leading-[1] tracking-[5px] text-[#193c6b] en:font-heyCharlie md:text-[4vw]">
+      ONLY THE GOOD STUFF
+    </h2>
+    <p class="text-center font-montserrat text-[4vw] font-normal leading-[1] text-[#193c6b] md:text-[1.5vw]">
+      Making sure our food is No.1
+    </p>
+    <a
+      href=""
+      class="w-[90%] rounded-full bg-[#193c6b] px-3 py-2 text-center font-montserrat text-[4vw] font-normal uppercase text-white md:w-[200px] md:text-[1.5vw]"
+    >
+      LEARN MORE
+    </a>
+  </div>
+</section>
+<section class="relative">
+  <img
+    src="{{'Group_836.png' | file_img_url: 'master' }}"
+    alt="Only The Good Stuff Banner"
+    class="hidden w-full object-cover md:block"
+  >
+  <img
+    src="{{'Group_953.png' | file_img_url: 'master' }}"
+    alt="Only The Good Stuff Banner"
+    class="block w-full object-cover md:hidden"
+  >
+  <div class="absolute left-1/2 top-[7vw] flex -translate-x-1/2 flex-col items-center justify-center gap-4 md:top-1/2 md:-translate-y-1/2">
+    <h2 class="text-center text-[10vw] font-normal leading-[1] tracking-[5px] text-[#193c6b] en:font-heyCharlie md:text-[4vw]">
+      We Give Back
+    </h2>
+    <p class="text-center font-montserrat text-[4vw] font-normal leading-[1] text-[#193c6b] md:text-[1.5vw]">
+      with every order
+    </p>
+    <a
+      href=""
+      class="w-[90%] rounded-full bg-[#193c6b] px-3 py-2 text-center font-montserrat text-[4vw] font-normal uppercase text-white md:w-[200px] md:text-[1.5vw]"
+    >
+      LEARN MORE
+    </a>
+  </div>
+</section>
+
+<style>
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  .product-name {
+    font-stretch: normal;
+    font-style: normal;
+    margin: 1vw 0 0 0;
+    text-align: center;
+    font-family: heyCharlie;
+    font-size: 4vw;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 5px;
+    color: #0d3e66;
+  }
+
+  .product-image {
+    width: 50%;
+    height: 100%;
+    object-fit: contain;
+    position: relative;
+    margin: 0 auto;
+    z-index: 1;
+  }
+
+  /* Mobile responsive styles */
+  @media only screen and (max-width: 767px) {
+    .weight-tag {
+      font-size: 2.8vw;
+      padding: 1.5vw 2.5vw;
+      border-bottom-right-radius: 5vw;
+    }
+
+    .info-icon {
+      top: 1.5vw;
+      right: 1vw;
+      width: 6.5vw;
+      height: 6.5vw;
+    }
+
+    .popup-content {
+      padding: 5vw;
+      border-radius: 9vw;
+      max-width: 80%;
+      max-height: 160vw;
+      height: 160vw;
+      width: 80%;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .close-popup {
+      top: 0vw;
+      right: 5.5vw;
+      font-size: 10.5vw;
+    }
+
+    .product-name {
+      font-size: 8vw;
+      letter-spacing: 3px;
+      margin: 10vw 0 0 0;
+    }
+
+    .product-image {
+      width: 70%;
+      height: 100%;
+      object-fit: contain;
+      position: relative;
+      margin: 0 auto;
+      z-index: 1;
+    }
+
+    .detail-icon {
+      margin-right: 3vw;
+      width: 10vw;
+    }
+
+    .large-text {
+      font-size: 3.2vw !important;
+    }
+
+    .small-text {
+      font-size: 3vw !important;
+    }
+
+    .top-right {
+      top: 65vw;
+      left: 2vw;
+    }
+
+    .bottom-right {
+      top: 80vw;
+      left: 2vw;
+    }
+
+    .top-left {
+      top: 95vw;
+      left: 2vw;
+    }
+
+    .bottom-left {
+      top: 110vw;
+      left: 2vw;
+    }
+
+    .detail-grid {
+      position: absolute;
+      top: 20vw;
+      width: 100%;
+      z-index: 2;
+    }
+  }
+
+  /* Hover effects for sample items */
+  .samples-item:hover::before {
+    content: '';
+    position: absolute;
+    width: auto;
+    height: 65%;
+    max-width: 90%;
+    aspect-ratio: 1 / 1;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1;
+    background-image: var(--hover-img);
+  }
+
+  @media (min-width: 768px) {
+    .samples-item:hover::before {
+      top: 6vw;
+      left: 50%;
+      width: auto;
+      height: 65%;
+      max-width: 90%;
+      aspect-ratio: 1 / 1;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .samples-item:hover img:not(.info-icon img) {
+    opacity: 0;
+  }
+
+  /* Quantity selector hover effects */
+  .quantity-selector:hover {
+    background-color: #fff;
+    color: #193c6b;
+  }
+
+  .quantity-selector:hover button {
+    color: #193c6b;
+  }
+
+  /* Additional styles for JavaScript functionality */
+  .button-row button.active {
+    background-color: #193c6b;
+    color: white;
+  }
+
+  .gift-content.open,
+  .sample-content.open {
+    max-height: 2000px;
+  }
+
+  .dropdown-icon.rotate,
+  .dropdown-icon-2.rotate {
+    transform: rotate(90deg);
+  }
+
+  .add-to-cart.selected {
+    width: 6vw;
+  }
+
+  /* Mobile specific styles */
+  @media only screen and (max-width: 767px) {
+    .mobile {
+      display: block !important;
+    }
+
+    .add-to-cart.selected {
+      width: 20vw;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    .mobile {
+      display: none !important;
+    }
+  }
+
+  /* Detail block positioning */
+  .detail-block {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    text-align: left;
+  }
+
+  .detail-icon {
+    width: 4vw;
+    height: auto;
+    margin-right: 1vw;
+  }
+
+  .detail-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .large-text {
+    font-size: 1.2vw !important;
+    font-weight: bold;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  .small-text {
+    font-size: 1vw !important;
+    margin: 0;
+  }
+
+  .top-left {
+    bottom: 24vw;
+    left: 1vw;
+  }
+
+  .bottom-left {
+    bottom: 6vw;
+    left: 1vw;
+  }
+
+  .top-right {
+    bottom: 24vw;
+    right: 1vw;
+  }
+
+  .bottom-right {
+    bottom: 6vw;
+    right: 1vw;
+  }
+</style>
+
+<script>
+  // Preload inventory data
+  const inventoryData = {
+    {% for product in collections['Samplepage'].products %}
+      {% for variant in product.variants %}
+        "{{ variant.id }}": {
+          available: {{ variant.available | json }}
+        },
+      {% endfor %}
+    {% endfor %}
+  };
+  
+  var variantPrices = {
+    {% for product in collections['Samplepage'].products %}
+      {% for variant in product.variants %}
+        "{{ variant.id }}": {{ variant.price | divided_by: 100 }},
+      {% endfor %}
+    {% endfor %}
+  };
+
+  function showPopup(productName, productImage, details) {
+    const popupOverlay = document.getElementById('popup-overlay');
+    const popupInfo = document.getElementById('popup-info');
+
+    // Clear previous content
+    popupInfo.innerHTML = '';
+
+    // Add product name
+    const nameElement = document.createElement('h2');
+    nameElement.className = 'product-name';
+    nameElement.textContent = productName;
+    popupInfo.appendChild(nameElement);
+
+    // Add product image
+    const imageElement = document.createElement('img');
+    imageElement.src = productImage;
+    imageElement.alt = productName;
+    imageElement.className = 'product-image';
+    popupInfo.appendChild(imageElement);
+
+    // Create the detail grid
+    const detailGrid = document.createElement('div');
+    detailGrid.className = 'detail-grid';
+
+    // Add blocks for top-left, bottom-left, top-right, bottom-right
+    const blocks = [
+      {
+        position: 'top-left',
+        icon: details.topLeft.icon,
+        alt: details.topLeft.alt,
+        largeText: details.topLeft.largeText,
+        smallText: details.topLeft.smallText,
+        textColor: details.topLeft.textColor,
+      },
+      {
+        position: 'bottom-left',
+        icon: details.bottomLeft.icon,
+        alt: details.bottomLeft.alt,
+        largeText: details.bottomLeft.largeText,
+        smallText: details.bottomLeft.smallText,
+        textColor: details.bottomLeft.textColor,
+      },
+      {
+        position: 'top-right',
+        icon: details.topRight.icon,
+        alt: details.topRight.alt,
+        largeText: details.topRight.largeText,
+        smallText: details.topRight.smallText,
+        textColor: details.topRight.textColor,
+      },
+      {
+        position: 'bottom-right',
+        icon: details.bottomRight.icon,
+        alt: details.bottomRight.alt,
+        largeText: details.bottomRight.largeText,
+        smallText: details.bottomRight.smallText,
+        textColor: details.bottomRight.textColor,
+      },
+    ];
+
+    blocks.forEach((block) => {
+      const blockElement = document.createElement('div');
+              blockElement.className = `detail-block ${block.position}`;
+
+              // Add icon
+        const iconElement = document.createElement('img');
+        iconElement.src = block.icon;
+        iconElement.alt = block.alt;
+        iconElement.className = 'detail-icon';
+        blockElement.appendChild(iconElement);
+
+        // Add text container
+        const textContainer = document.createElement('div');
+        textContainer.className = 'detail-text';
+
+        // Add large text
+        const largeTextElement = document.createElement('p');
+        largeTextElement.className = 'large-text';
+        largeTextElement.textContent = block.largeText;
+        largeTextElement.style.color = block.textColor;
+        textContainer.appendChild(largeTextElement);
+
+        // Add small text
+        const smallTextElement = document.createElement('p');
+        smallTextElement.className = 'small-text';
+        smallTextElement.textContent = block.smallText;
+        smallTextElement.style.color = block.textColor;
+        textContainer.appendChild(smallTextElement);
+
+      blockElement.appendChild(textContainer);
+      detailGrid.appendChild(blockElement);
+    });
+
+    popupInfo.appendChild(detailGrid);
+
+          // Show the popup
+      popupOverlay.style.display = 'flex';
+    }
+
+    function closePopup() {
+      const popupOverlay = document.getElementById('popup-overlay');
+      popupOverlay.style.display = 'none';
+    }
+
+    function updateTotalPrice() {
+      let total = 0;   
+      selectedSamples.forEach(sample => {
+        let price = variantPrices[sample.id] || 0;
+        total += price * sample.quantity;
+      });  
+      document.getElementById("total-price-display").textContent = `$${total.toFixed(2)}`;
+    }
+      
+    function updateAddToCartButton() {
+      let total = 0;   
+      selectedSamples.forEach(sample => {
+        let price = variantPrices[sample.id] || 0;
+        total += price * sample.quantity;
+      }); 
+      const mobileButton = document.querySelector(".choice-progress.mobile #num-samples-selected");
+      if (mobileButton) {
+        mobileButton.textContent = `${selectedSamples.length}/5 {% if canonical_url contains '/zh/' %}已選{% else %}SELECTED{% endif %} - $${total.toFixed(2)}`;
+        // Trigger animation after everything is done 
+        triggerBounceAnimation();
+      }
+    }
+
+    // Function to animate the padding change with a bounce effect
+    function triggerBounceAnimation() {
+      const element = document.querySelector('.choice-progress.mobile');
+      if (!element) return; 
+    
+      element.style.padding = "3vw 0 2vw 0";
+      element.style.transition = "padding 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)"; // Bounce effect
+      element.style.padding = "3vw 0 7vw 0"; // Expand
+  
+      setTimeout(() => {
+        element.style.padding = "3vw 0 2vw 0"; // Return to original size
+      }, 300);
+    }
+
+    function changeButtonStyle(selectedButton) {
+      let buttons = document.querySelectorAll('.button-row button');
+      buttons.forEach(button => button.classList.remove('active'));
+      selectedButton.classList.add('active');
+
+      // Get the filter category based on the clicked button's id
+      let filterCategory = selectedButton.id;
+      
+      // Call the function to filter samples based on the selected category
+      filterSamples(filterCategory);
+    }
+
+    function filterSamples(category) {
+      const samples = document.querySelectorAll('.samples-item');
+  
+      // Create a Set of allowed categories
+      let allowedClasses = new Set();
+      if (category === 'all-button') {
+        allowedClasses = new Set(['kibble', 'treats', 'dental-treats', 'small-dog-friendly']);
+      } else if (category === 'kibble-button') {
+        allowedClasses = new Set(['kibble']);
+      } else if (category === 'treats-button') {
+        allowedClasses = new Set(['treats', 'dental-treats']);
+      } else if (category === 'for-small-button') {
+        allowedClasses = new Set(['small-dog-friendly']);
+      }
+  
+      // Use classList.contains() only once per sample, reducing reflow/repaint
+      samples.forEach(sample => {
+        const overlay = sample.querySelector('.overlay-item');
+        const isMatch = [...allowedClasses].some(cls => sample.classList.contains(cls));
+        const variantId = sample.querySelector('.quantity-selector').getAttribute('data-variant-id');
+        const inventory = inventoryData[variantId];
+        const isAvailable = inventory.available;
+        
+
+        if (!isMatch || !isAvailable) {
+          overlay.style.display = 'block';
+    
+        } else {
+          overlay.style.display = 'none';
+        }
+      });
+    }
+
+    function toggleGiftBlock() {
+      const content = document.querySelector('.gift-content');
+      const icon = document.querySelector('.dropdown-icon');
+      content.classList.toggle('open');
+      icon.classList.toggle('rotate');
+    }
+
+    function toggleSampleBlock() {
+      const contentTwo = document.querySelector('.sample-content');
+      const iconTwo = document.querySelector('.dropdown-icon-2');
+      contentTwo.classList.toggle('open');
+      iconTwo.classList.toggle('rotate');
+    }
+
+    let selectedItems = [];
+    let selectedSamples = [];
+
+    // Toggle selection and manage selected variant IDs for bowls
+    function toggleAddToCart(button) {
+      const variantId = button.getAttribute('data-variant-id');
+      const allButtons = document.querySelectorAll(`button[data-variant-id="${variantId}"]`);
+  
+      // Toggle selected state for all buttons with the same variantId
+      allButtons.forEach(btn => {
+        if (btn === button) {
+          btn.classList.toggle('selected');
+          btn.textContent = btn.classList.contains('selected') ? 'Selected' : '+';
+        } else {
+          btn.classList.add('selected');
+          btn.textContent = 'Selected';
+        }
+      });
+  
+      if (button.classList.contains('selected')) {
+        // Deselect the other bowl if one is chosen
+        if (variantId === '45058917105979' || variantId === '45058917073211') {
+          const otherVariantId = variantId === '45058917105979' ? '45058917073211' : '45058917105979';
+          const otherButtons = document.querySelectorAll(`button[data-variant-id="${otherVariantId}"]`);
+  
+          otherButtons.forEach(otherBtn => {
+            otherBtn.classList.remove('selected');
+            otherBtn.textContent = '+';
+          });
+  
+          // Remove the other bowl from selectedItems
+          selectedItems = selectedItems.filter(item => item.id !== parseInt(otherVariantId));
+        }
+  
+        // Add the selected item
+        if (!selectedItems.some(item => item.id === parseInt(variantId))) {
+          selectedItems.push({ id: parseInt(variantId), quantity: 1 });
+        }
+      } else {
+        // Remove deselected item
+        selectedItems = selectedItems.filter(item => item.id !== parseInt(variantId));
+      }
+  
+      // Check if Canvas Bag and one Bowl are selected
+      const canvasBagSelected = selectedItems.some(item => item.id === 49678717911355);
+      const bowlSelected = selectedItems.some(item => item.id === 45058917105979 || item.id === 45058917073211);
+  
+      if (canvasBagSelected && bowlSelected) {
+        setTimeout(() => {
+          toggleGiftBlock();
+          toggleSampleBlock();
+        }, 500);
+      }
+    }
+
+    function addAllToCart() {
+      // Check if selectedSamples is empty
+      if (selectedSamples.length === 0) {
+        {% if canonical_url contains '/zh/' %}
+        alert("請選取至少一款狗糧試食包");
+        {% else %}
+        alert("Please select at least one sample");  
+        {% endif %}
+        return;
+      }
+      
+      // Combine selectedItems and selectedSamples arrays
+      const combinedItems = selectedItems.concat(selectedSamples);
+      
+      // First add items to cart
+      fetch('/cart/add.js', {
+        method: 'POST',
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        credentials: 'same-origin',
+        body: JSON.stringify({ items: combinedItems })
+      })
+      .then(response => {
+        if (!response.ok) {
+          return response.json().then(err => { throw new Error(err.description); });
+        }
+        return response.json();
+      })
+      .then(() => {
+        updateAddToCartButton();
+        
+        // Create and submit a hidden form to apply discount
+        const discountForm = document.createElement('form');
+        discountForm.style.display = 'none';
+        discountForm.method = 'GET';
+        discountForm.action = '/discount/SAMPLE-GIFTS';
+        
+        // Add a hidden iframe to prevent page navigation
+        const iframe = document.createElement('iframe');
+        iframe.name = 'discount-frame';
+        iframe.style.display = 'none';
+        document.body.appendChild(iframe);
+        
+        // Target the form submission to the iframe
+        discountForm.target = 'discount-frame';
+        document.body.appendChild(discountForm);
+        
+        // Submit the form
+        discountForm.submit();
+        
+        // Reset button state and show success message after a brief delay
+        setTimeout(() => {              
+          // Clean up DOM
+          document.body.removeChild(discountForm);
+          document.body.removeChild(iframe);
+        }, 1000);
+      })
+      .catch(error => {
+        console.error('Error in cart operations:', error);
+        {% if canonical_url contains '/zh/' %}
+        alert("處理您的請求時出現問題, 請再試一次");
+        {% else %}
+        alert('There was an issue processing your request. Please try again.');
+        {% endif %}
+      });
+    }
+
+    document.querySelectorAll('.quantity-selector').forEach(selector => {
+      const decrement = selector.querySelector('.decrement');
+      const increment = selector.querySelector('.increment');
+      const quantityDisplay = selector.querySelector('.quantity');
+      const variantId = selector.getAttribute('data-variant-id');
+
+      // Helper function to update selectedSamples
+      const updateSelectedSamples = (action) => {
+        if (action === 'add') {
+          selectedSamples.push({ id: parseInt(variantId), quantity: 1 });
+        } else if (action === 'remove') {
+          // Remove one occurrence of the variantId from selectedSamples
+          const index = selectedSamples.findIndex(item => item.id === parseInt(variantId));
+          if (index > -1) {
+            selectedSamples.splice(index, 1);
+          }
+        }
+        updateAddToCartButton(); // Update mobile button dynamically
+        updateTotalPrice();
+      };
+
+      const updateBackground = (count) => {
+        if (count > 0) {
+          selector.style.backgroundColor = '#fff'; 
+          selector.style.color = '#193c6b'; 
+          decrement.style.color = '#193c6b'; 
+          increment.style.color = '#193c6b';
+        } else {
+          selector.style.backgroundColor = '#193c6b';
+          selector.style.color = '#fff'; 
+          decrement.style.color = '#fff'; 
+          increment.style.color = '#fff';
+        }
+      };
+
+      increment.addEventListener('click', () => {
+        let count = parseInt(quantityDisplay.textContent, 10);
+        if (selectedSamples.length < 5) {
+          count++;
+          quantityDisplay.textContent = count;
+          updateBackground(count);
+          updateSelectedSamples('add');
+          addProductImage(variantId);
+        } else {
+          {% if canonical_url contains '/zh/' %}
+          alert("你最多可選取5款產品");
+          {% else %}
+          alert("You can select a maximum of 5 items.");
+          {% endif %} 
+        }
+      });
+
+      decrement.addEventListener('click', () => {
+        let count = parseInt(quantityDisplay.textContent, 10);
+        if (count > 0) {
+          count--;
+          quantityDisplay.textContent = count;
+          updateBackground(count);
+          updateSelectedSamples('remove');
+          removeProductImage(variantId);
+        }
+      });
+    });
+
+    // Track available indices for product placement
+    let availableIndices = [1, 2, 3, 4, 5];
+    
+    // Map variant IDs to their respective image URLs
+    const variantImages = {
+      "47517822484795": "https://cdn.shopify.com/s/files/1/0430/5833/1805/files/BB_Duck_FOP_Angled_a71c00c1-9a7f-4a4d-98f6-6672ede83454_600x.png?v=1742008000",
+      "47517965451579": "https://cdn.shopify.com/s/files/1/0430/5833/1805/files/BB_Puppy_FOP_Angled_600x.png?v=1742008000",
+      "47517935337787": "https://cdn.shopify.com/s/files/1/0430/5833/1805/files/BB_Salmon_FOP_Angled_600x.png?v=1742008001",
+      "47517956112699": "https://cdn.shopify.com/s/files/1/0430/5833/1805/files/BB_Turkey_FOP_Angled_600x.png?v=1742008001",
+      "47517828677947": "https://cdn.shopify.com/s/files/1/0430/5833/1805/files/BB_Lamb_FOP_Angled_f8b71bd8-4b12-447b-8693-d31f0c12ccfd_600x.png?v=1742008000",
+      "48424319582523": "https://cdn.shopify.com/s/files/1/0430/5833/1805/files/Chicken_Honey_SOP_Shadow_600x.png?v=1742007998",
+      "48424321679675": "https://cdn.shopify.com/s/files/1/0430/5833/1805/files/Beef_Blueberry_SOP_Shadow_600x.png?v=1742007998",
+      "42386410209437": "https://cdn.shopify.com/s/files/1/0430/5833/1805/files/Dental_Sticks_SOP_Shadow_03_600x.png?v=1742007998"
+    };
+    
+    // Function to add a product image to the first available placeholder
+    function addProductImage(variantId) {
+      const index = availableIndices.shift(); 
+      const placeholder = document.querySelector(`.product-placeholder:nth-child(${index + 1})`);
+      placeholder.style.backgroundImage = `url('${variantImages[variantId]}')`;
+    }
+    
+    // Function to remove a product image and free up its index
+    function removeProductImage(variantId) {
+      const placeholders = document.querySelectorAll('.product-placeholder');
+      
+      // Find the last placeholder that contains the product image
+      for (let i = placeholders.length - 1; i >= 0; i--) {
+        if (placeholders[i].style.backgroundImage.includes(variantImages[variantId])) {
+          placeholders[i].style.backgroundImage = ''; 
+          availableIndices.push(i + 1); 
+          availableIndices.sort(); 
+          break; 
+        }
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('.button-row button')[0].classList.add('active');
+      toggleGiftBlock();
+      filterSamples('all-button');
+      updateAddToCartButton();
+    });
+</script>
+
+{% schema %}
+{
+  "name": "Sample Bundle Builder",
+  "settings": [
+    {
+      "type": "product",
+      "id": "canvas-bag",
+      "label": "Canvas Bag"
+    },
+    {
+      "type": "product",
+      "id": "purple-bowl",
+      "label": "Purple Bowl"
+    },
+    {
+      "type": "product",
+      "id": "blue-bowl",
+      "label": "Blue Bowl"
+    }
+  ]
+}
+{% endschema %}

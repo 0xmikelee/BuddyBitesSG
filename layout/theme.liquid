@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="{{ request.locale.iso_code }}">
+  <head>
+    <meta http-equiv="Cache-Control" content="no-store">
+
+    <!-- Enables smooth scrolling behavior for anchor links -->
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+
+    <!-- SEO ================================================== -->
+    <link rel="canonical" href="{{ canonical_url }}">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    >
+    <meta name="theme-color" content="{{ settings.color_primary }}">
+    <link rel="shortcut icon" href="{{ 'New-fav.png'  | file_img_url: '180x180', crop: 'center' }}" type="image/png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ 'New-fav.png'  | file_img_url: '180x180', crop: 'center'  }}">
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="180x180"
+      href="{{ 'New-fav.png'  | file_img_url: '180x180', crop: 'center'  }}"
+    >
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="{{ 'New-fav.png'  | file_img_url: '32x32', crop: 'center'  }}"
+    >
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="194x194"
+      href="{{ 'New-fav.png'  | file_img_url: '194x194', crop: 'center'  }}"
+    >
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="{{ 'New-fav.png'  | file_img_url: '192x192', crop: 'center'  }}"
+    >
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="{{ 'New-fav.png'  | file_img_url: '16x16', crop: 'center'  }}"
+    >
+    {% render 'snippet-social-meta-tags' %}
+
+    <title>
+      {{ page_title }}
+      {% if current_tags -%}
+        {%- assign meta_tags = current_tags | join: ', ' %} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags -}}
+      {%- endif %}
+      {% if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{% endif %}
+      {% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}
+    </title>
+
+    <!-- Helpers ================================================== -->
+
+    <!-- Styles ================================================== -->
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&display=swap"
+    >
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="{{ 'tailwind.css' | asset_url }}"
+    >
+    <noscript><link rel="stylesheet" href="{{ 'tailwind.css' | asset_url }}"></noscript>
+    <link
+      rel="preload"
+      as="image"
+      href="{{ 'Vector_48_18f479c9-3e28-464c-812d-a6ef7c229e79.png' | file_img_url: 'master' }}"
+      imagesrcset="{{ 'Vector_48_18f479c9-3e28-464c-812d-a6ef7c229e79.png' | file_img_url: '300x' }} 300w, {{ 'Vector_48_18f479c9-3e28-464c-812d-a6ef7c229e79.png' | file_img_url: '600x' }} 600w, {{ 'Vector_48_18f479c9-3e28-464c-812d-a6ef7c229e79.png' | file_img_url: '900x' }} 900w, {{ 'Vector_48_18f479c9-3e28-464c-812d-a6ef7c229e79.png' | file_img_url: '1200x' }} 1200w, {{ 'Vector_48_18f479c9-3e28-464c-812d-a6ef7c229e79.png' | file_img_url: '1500x' }} 1500w, {{ 'Vector_48_18f479c9-3e28-464c-812d-a6ef7c229e79.png' | file_img_url: '1800x' }} 1800w, {{ 'Vector_48_18f479c9-3e28-464c-812d-a6ef7c229e79.png' | file_img_url: '2100x' }} 2100w, {{ 'Vector_48_18f479c9-3e28-464c-812d-a6ef7c229e79.png' | file_img_url: '2400x' }} 2400w"
+      imagesizes="100vw"
+    >
+    <!-- SwiperJS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    >
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <!-- Trackers ================================================== -->
+    <!-- Facebook Pixel Code - Deferred Loading -->
+    <script>
+      // Defer Facebook Pixel loading
+      window.addEventListener('load', function () {
+        setTimeout(function () {
+          !(function (f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function () {
+              n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s);
+          })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+          fbq('init', '1671322433044363');
+        }, 2000);
+      });
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display:none"
+        src="https://www.facebook.com/tr?id=1671322433044363&ev=PageView&noscript=1"
+    ></noscript>
+    <!-- End Facebook Pixel Code -->
+
+    {% comment %}
+      <script type="text/javascript">
+        // Defer Clarity loading
+        window.addEventListener('load', function () {
+          setTimeout(function () {
+            (function (c, l, a, r, i, t, y) {
+              c[a] =
+                c[a] ||
+                function () {
+                  (c[a].q = c[a].q || []).push(arguments);
+                };
+              t = l.createElement(r);
+              t.async = 1;
+              t.src = 'https://www.clarity.ms/tag/' + i;
+              y = l.getElementsByTagName(r)[0];
+              y.parentNode.insertBefore(t, y);
+            })(window, document, 'clarity', 'script', 'fuflri36k9');
+          }, 3000);
+        });
+      </script>
+    {% endcomment %}
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.dataset.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-MGZG524');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Preload ================================================== -->
+    <link
+      rel="preload"
+      as="image"
+      href="{{ 'Vector_48_18f479c9-3e28-464c-812d-a6ef7c229e79.png' | file_img_url: 'master' }}"
+      media="(min-width: 1024px)"
+    >
+    <link
+      rel="preload"
+      as="image"
+      href="{{ 'Vector_49_36a11d0f-9c19-47a1-acfe-c7b210710cd8.png' | file_img_url: 'master' }}"
+      media="(max-width: 1023px)"
+    >
+
+    <!-- Font Preloads ================================================== -->
+    <link
+      rel="preload"
+      href="{{ 'hey_charlie-webfont.woff2' | asset_url }}"
+      as="font"
+      type="font/woff2"
+      crossorigin
+      async
+    >
+    <link
+      rel="preload"
+      href="{{ 'museosans_700-webfont.woff2' | asset_url }}"
+      as="font"
+      type="font/woff2"
+      crossorigin
+      async
+    >
+
+    {% render 'performance-optimization' %}
+    {{ content_for_header }}
+  </head>
+
+  <body class="min-h-full">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        data-src="https://www.googletagmanager.com/ns.html?id=GTM-MGZG524"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div>
+      {% section 'header' %}
+      {% if request.path contains '/a/account/' %}
+        <a class="block w-full text-center text-blue-500 underline" href="/tools/recurring/login/">
+          {{- 'account.old_recharge_users' | t -}}
+        </a>
+      {% endif %}
+      {{ content_for_layout }}
+      {% render 'snippet-language-switcher' %}
+      {% render 'footer' %}
+    </div>
+    <div id="CartContainer"></div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        if (window.upcartSubscribeCheckoutClicked) {
+          window.upcartSubscribeCheckoutClicked(({ event }) => {
+            const cart = window.upcartGetCart();
+            const PRODUCT_ID = 10146222506299;
+            const MAX_QUANTITY = 1;
+
+            const limitedItem = cart.items.find(function (item) {
+              return item.productId === PRODUCT_ID;
+            });
+
+            if (limitedItem && limitedItem.quantity > MAX_QUANTITY) {
+              event.preventDefault();
+              alert(`{{ 'products.product.one_sampler_limit' | t }}`);
+
+              //update cart to only allow 1 item
+              const variantId = limitedItem.variantId;
+              const updates = {
+                [variantId]: 1,
+              };
+              fetch(window.Shopify.routes.root + 'cart/update.js', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ updates }),
+              })
+                .then((response) => {
+                  return response.json();
+                })
+                .catch((error) => {
+                  console.error('Error: ', error);
+                });
+            }
+          });
+        } else {
+          console.warn('Upcart Subscribe Checkout Clicked not available yet');
+        }
+      });
+    </script>
+    <style>
+      #shopify-section-header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+      #klaviyo-product-reviews-wrapper {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+      body,
+      html {
+        width: 100vw;
+      }
+    </style>
+    <script>
+      // Upcart script for preventing users from adding more than 1 sample to the cart
+      document.addEventListener('DOMContentLoaded', function () {
+        if (window.upcartSubscribeCartUpdated) {
+          window.upcartSubscribeCartUpdated(async function ({ cart }) {
+            const PRODUCT_IDs = [
+              10146222506299, 10157743702331, 8988037349691, 8988019032379, 8988008677691, 8987025113403, 8987006402875,
+            ];
+            const MAX_QUANTITY = 1;
+
+            const limitedItems = cart.items.filter((item) => PRODUCT_IDs.includes(item.productId));
+
+            let updates = {};
+            limitedItems.forEach((item) => {
+              if (item.quantity > MAX_QUANTITY) {
+                updates = { ...updates, [item.variantId]: 1 };
+              }
+            });
+            if (Object.keys(updates).length > 0) {
+              alert(`{{ 'products.product.one_sampler_limit' | t }}`);
+
+              // Update cart to only allow 1 item
+              await fetch(window.Shopify.routes.root + 'cart/update.js', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ updates }),
+              });
+              window.upcartRefreshCart();
+            }
+          });
+        }
+      });
+    </script>
+    <script>
+      // Upcart Cart script for Skio
+      window.addEventListener('aftersell-upcart:public-events:cart-opened', () => {
+        console.log('upcartOnCartOpened');
+        const cartPopup = document.querySelector('#CartPopup');
+        console.log('cartPopup', cartPopup);
+        if (!cartPopup) return;
+        console.log('cartPopup found');
+
+        const rechargeOptionsToRemove = [
+          '9380495675',
+          '9380430139',
+          '9380004155',
+          '9379807547',
+          '9380954427',
+          '9381314875',
+          '9382003003',
+          '9379938619',
+          '9380692283',
+          '9379709243',
+          '9379774779',
+          '9380626747',
+          '9380921659',
+          '9379643707',
+          '9379676475',
+          '9379578171',
+          '9381937467',
+          '9380364603',
+          '9380757819',
+          '9381347643',
+          '9380331835',
+          '9381708091',
+          '9381544251',
+          '9380725051',
+          '9381118267',
+          '9380790587',
+          '9380167995',
+          '9379742011',
+          '9380102459',
+          '9380036923',
+          '9381249339',
+          '9379971387',
+          '9381511483',
+          '9381642555',
+          '9382068539',
+          '9381282107',
+          '9380462907',
+          '9381478715',
+          '9381773627',
+          '9381413179',
+          '9380856123',
+          '9382396219',
+          '9381839163',
+          '9381675323',
+          '9380888891',
+          '9380561211',
+          '9381609787',
+          '9382363451',
+          '9382265147',
+          '9381019963',
+          '9381216571',
+          '9381380411',
+          '9379905851',
+          '9379840315',
+          '9380528443',
+          '9380135227',
+          '9379873083',
+          '9379610939',
+          '9380069691',
+          '9382560059',
+          '9381577019',
+          '9382822203',
+          '9380200763',
+          '9380397371',
+          '9380299067',
+          '9381151035',
+          '9382756667',
+          '9381871931',
+          '9381740859',
+          '9380233531',
+          '9382166843',
+          '9380593979',
+          '9380823355',
+          '9380659515',
+          '9381970235',
+          '9380266299',
+          '9381183803',
+          '9645850939',
+          '9645916475',
+          '9645818171',
+          '9645883707',
+          '9645949243',
+          '9645982011',
+          '9646014779',
+          '9646047547',
+          '9646113083',
+          '9646080315',
+          '9646145851',
+          '9646178619',
+          '9646211387',
+          '9646244155',
+          '9396814139',
+          '9396846907',
+          '9396879675',
+          '9396912443',
+          '9396945211',
+          '9396977979',
+          '9397010747',
+          '9397043515',
+          '9397076283',
+          '9382658363',
+          '9382297915',
+          '9382461755',
+          '9381445947',
+          '9380987195',
+          '9381052731',
+          '9381085499',
+          '9382330683',
+          '9382592827',
+        ];
+        function cleanDropdowns() {
+          const dropdowns = cartPopup.querySelectorAll('.upcart-subscription-upgrade-dropdown');
+          const removed = [];
+
+          dropdowns.forEach((dropdown) => {
+            dropdown.querySelectorAll('option').forEach((option) => {
+              if (rechargeOptionsToRemove.includes(option.value)) {
+                removed.push({ text: option.textContent.trim(), value: option.value });
+                option.remove();
+              }
+            });
+          });
+
+          if (removed.length) {
+            console.log(`Removed ${removed.length} option(s):`, removed);
+          } else {
+            console.log('No matching options found to remove.');
+          }
+        }
+
+        cleanDropdowns();
+
+        const observer = new MutationObserver(() => {
+          cleanDropdowns();
+        });
+
+        observer.observe(cartPopup, {
+          childList: true,
+          subtree: true,
+        });
+      });
+    </script>
+  </body>
+</html>

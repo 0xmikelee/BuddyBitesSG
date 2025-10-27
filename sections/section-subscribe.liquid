@@ -1,0 +1,240 @@
+<section class="relative">
+  <img
+    src="{{ 'Untitled_Artwork_69.png' | file_img_url: 'master' }}"
+    alt="Subscribe"
+    class="hidden w-full object-cover lg:block"
+  >
+  <img
+    src="{{ 'Untitled_Artwork_74_48a87ee1-519c-4c7e-aba7-b269ad4f0187.png' | file_img_url: 'master' }}"
+    alt="Subscribe"
+    class="block w-full object-cover lg:hidden"
+  >
+  <div class="absolute left-1/2 top-0 flex -translate-x-1/2 translate-y-[10%] flex-col items-start justify-center lg:top-1/2 lg:-translate-x-[65%] lg:-translate-y-[65%]">
+    <h1 class="min-w-[300px] text-[#193C6B] en:font-heyCharlie en:text-[15vw] zh-TW:text-[10vw] lg:en:text-[9vw] lg:zh-TW:text-[3vw]">
+      {{ 'subscription.title' | t }}
+    </h1>
+    <p class="text-balance font-montserrat font-light text-[#193C6B] en:text-[5vw] zh-TW:text-[4vw] md:en:text-[1.5vw] md:zh-TW:text-[1vw]">
+      {{ 'subscription.subtext' | t }}
+    </p>
+    <div class="mt-2 flex flex-col items-start justify-center">
+      <p class="font-montserrat font-normal text-[#193C63] en:text-[4vw] zh-TW:text-[3.5vw] md:en:text-[1.5vw] md:zh-TW:text-[1vw]">
+        {{ 'subscription.plus_you_get' | t }}
+      </p>
+      <ul class="list-image-[url('//buddybites.dog/cdn/shop/t/74/assets/check-circle_1.svg?v=68715389720196898761754289909')] px-10">
+        <li class="mt-2 px-3 py-1">
+          <p class="font-montserrat font-normal text-[#193C63] en:text-[4vw] zh-TW:text-[3.5vw] md:en:text-[1.5vw] md:zh-TW:text-[1vw]">
+            {{ 'subscription.point1' | t }}
+          </p>
+        </li>
+        <li class="px-3 py-1">
+          <p class="font-montserrat font-normal text-[#193C63] en:text-[4vw] zh-TW:text-[3.5vw] md:en:text-[1.5vw] md:zh-TW:text-[1vw]">
+            {{ 'subscription.point2' | t }}
+          </p>
+        </li>
+        <li class="px-3 py-1">
+          <p class="font-montserrat font-normal text-[#193C63] en:text-[4vw] zh-TW:text-[3.5vw] md:en:text-[1.5vw] md:zh-TW:text-[1vw]">
+            {{ 'subscription.point3' | t }}
+          </p>
+        </li>
+        <li class="px-3 py-1">
+          <p class="font-montserrat font-normal text-[#193C63] en:text-[4vw] zh-TW:text-[3.5vw] md:en:text-[1.5vw] md:zh-TW:text-[1vw]">
+            {{ 'subscription.point4' | t }}
+          </p>
+        </li>
+      </ul>
+    </div>
+    <a
+      href="{{ collections.kibble.url }}"
+      class="mt-2 rounded-full bg-[#a0cce4] px-5 py-2 font-montserrat font-normal uppercase text-white hover:bg-[#193C6B] md:text-[1.5vw]"
+    >
+      {{- 'subscription.subscribe_now' | t -}}
+    </a>
+    <a
+      href="{% if localization.language.iso_code == 'zh' %}/zh/a/account/login{% endif %}/a/account/login"
+      class="mt-2 font-montserrat text-[3.5vw] font-light text-[#193C6B] md:text-[1.2vw]"
+    >
+      {{- 'subscription.subscribed' | t -}}
+    </a>
+  </div>
+</section>
+<section class="relative bg-gradient-to-b from-[#9ac9eb] to-[#b5d8f3]">
+  <div class="flex flex-col items-center justify-center py-10">
+    <h2 class="block text-balance text-center text-[5vw] font-extrabold text-[#193C6B] en:font-museo md:text-[3.5vw]">
+      {{ 'subscription.steps.title' | t }}
+    </h2>
+    <div class="container grid grid-cols-2 gap-4 lg:grid-cols-4">
+      <div class="step1 flex flex-col items-center justify-start">
+        <img
+          src="https://cdn.shopify.com/s/files/1/0430/5833/1805/files/IMG_9215.png?v=1684298642"
+        >
+        <p class="text-balance px-3 text-center font-montserrat text-[3.5vw] font-light text-[#193C63] md:text-[1.2vw]">
+          {{ 'subscription.steps.step1' | t }}
+        </p>
+      </div>
+      <div class="step2 flex flex-col items-center justify-start">
+        <img
+          src="https://cdn.shopify.com/s/files/1/0430/5833/1805/files/IMG_9216.png?v=1684298642"
+        >
+        <p class="text-balance px-3 text-center font-montserrat text-[3.5vw] font-light text-[#193C63] md:text-[1.2vw]">
+          {{ 'subscription.steps.step2' | t }}
+        </p>
+      </div>
+      <div class="step3 flex flex-col items-center justify-start">
+        <img
+          src="https://cdn.shopify.com/s/files/1/0430/5833/1805/files/IMG_9217.png?v=1684298642"
+        >
+        <p class="text-balance px-3 text-center font-montserrat text-[3.5vw] font-light text-[#193C63] md:text-[1.2vw]">
+          {{ 'subscription.steps.step3' | t }}
+        </p>
+      </div>
+      <div class="step4 flex flex-col items-center justify-start">
+        <img
+          src="https://cdn.shopify.com/s/files/1/0430/5833/1805/files/IMG_9218.png?v=1684298642"
+        >
+        <p class="text-balance px-3 text-center font-montserrat text-[3.5vw] font-light text-[#193C63] md:text-[1.2vw]">
+          {{ 'subscription.steps.step4' | t }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<img src="{{ 'Untitled_Artwork_74.png' | file_img_url: 'master'}}" class="w-full">
+
+<section class="relative">
+  <h2 class="block text-balance text-center text-[5vw] text-[#193C6B] en:font-heyCharlie">
+    {{ 'subscription.look_after_your_gut.title' | t }}
+  </h2>
+  <p class="mb-4 text-balance text-center font-montserrat text-[1.5vw] font-normal text-[#193C63]">
+    {{ 'subscription.look_after_your_gut.subtext' | t }}
+  </p>
+  {% render 'bouncy-kibbles' %}
+</section>
+
+<section class="relative">
+  <img src="{{ 'Untitled_Artwork_75.png' | file_img_url: 'master'}}" class="w-full">
+  <div class="bg-[#b4d6f3]">
+    <h2 class="text-balance text-center font-montserrat text-[5vw] font-normal text-[#193C63] md:text-[2.5vw]">
+      {{ 'subscription.reviews.title' | t }}
+    </h2>
+    <div id="klaviyo-featured-reviews-carousel"></div>
+  </div>
+</section>
+{% render 'faqs', bgColor: '#b8d494' %}
+
+{% style %}
+  .swiper {
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+  }
+  .step1 {
+    animation: step-1 8s infinite;
+  }
+  .step2 {
+    animation: step-2 8s infinite;
+  }
+  .step3 {
+    animation: step-3 8s infinite;
+  }
+  .step4 {
+    animation: step-4 8s infinite;
+  }
+  @keyframes step-1 {
+    0% {
+      opacity: 0.2;
+    }
+    12.5% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 0.2;
+    }
+    100% {
+      opacity: 0.2;
+    }
+  }
+  @keyframes step-2 {
+    0% {
+      opacity: 0.2;
+    }
+    25% {
+      opacity: 0.2;
+    }
+    37.5% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.2;
+    }
+    100% {
+      opacity: 0.2;
+    }
+  }
+  @keyframes step-3 {
+    0% {
+      opacity: 0.2;
+    }
+    50% {
+      opacity: 0.2;
+    }
+    62.5% {
+      opacity: 1;
+    }
+    75% {
+      opacity: 0.2;
+    }
+    100% {
+      opacity: 0.2;
+    }
+  }
+  @keyframes step-4 {
+    0% {
+      opacity: 0.2;
+    }
+    75% {
+      opacity: 0.2;
+    }
+    87.5% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.2;
+    }
+  }
+{% endstyle %}
+
+{% javascript %}
+  const swiper = new Swiper('.swiper', {
+    spaceBetween: 20,
+    loop: true,
+    autoplay: {
+      delay: 2500,
+    },
+    breakpoints: {
+      300: {
+        slidesPerView: 1,
+      },
+      600: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+{% endjavascript %}
+
+{% schema %}
+{
+  "name": "Subscribe",
+  "settings": []
+}
+{% endschema %}

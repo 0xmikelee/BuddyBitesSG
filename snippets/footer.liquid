@@ -1,0 +1,100 @@
+<img
+  src="{{ 'footer-wave.png' | file_img_url: 'master' }}"
+  alt="secton divider"
+  class="w-full"
+  width="2250"
+  height="57"
+>
+<Footer class="relative bg-[#0d3e66] px-10 py-5 lg:py-10">
+  <div class="container grid grid-cols-1 gap-5 py-10 lg:grid-cols-[500px_repeat(3,1fr)] lg:py-16">
+    <div class="hidden w-full items-end lg:flex">
+      <img
+        src="{{ 'footer_logo_449be8d3-1f46-46d2-b7b9-71a59654eff6.png' | file_img_url: 'master' }}"
+        srcset="{{ 'footer_logo_449be8d3-1f46-46d2-b7b9-71a59654eff6.png' | file_img_url: '300x' }} 300w"
+        sizes="250px"
+        alt="footer logo"
+        class="w-[250px] object-contain"
+        width="973"
+        height="763"
+      >
+      <img
+        src="https://cdn.shopify.com/s/files/1/0430/5833/1805/files/Layer_1_18.svg?v=1711267009"
+        alt="footer logo"
+        class="w-[150px]"
+        width="150"
+        height="150"
+      >
+    </div>
+    <div class="flex flex-col gap-2">
+      <h3 class="en:font-museo text-[16px] font-bold uppercase text-white">
+        {{- 'footer.links.title' | t -}}
+      </h3>
+      <a href="" class="en:font-museo text-[14px] font-light text-white">
+        {{- 'footer.links.faqs' | t -}}
+      </a>
+      <a href="" class="en:font-museo text-[14px] font-light text-white">
+        {{- 'footer.links.reviews' | t -}}
+      </a>
+      <a href="" class="en:font-museo text-[14px] font-light text-white">
+        {{- 'footer.links.store_locator' | t -}}
+      </a>
+      <a href="" class="en:font-museo text-[14px] font-light text-white">
+        {{- 'footer.links.blog' | t -}}
+      </a>
+    </div>
+    <div class="flex flex-col gap-2">
+      <h3 class="en:font-museo text-[16px] font-bold uppercase text-white">
+        {{- 'footer.information.title' | t -}}
+      </h3>
+      <a href="{{ pages.shipping-returns.url }}" class="en:font-museo text-[14px] font-light text-white">
+        {{- 'footer.information.shipping_returns' | t -}}
+      </a>
+      <a href="{{ pages.privacy-policy.url }}" class="en:font-museo text-[14px] font-light text-white">
+        {{- 'footer.information.privacy_policy' | t -}}
+      </a>
+      <a href="{{ pages.terms-and-conditions.url }}" class="en:font-museo text-[14px] font-light text-white">
+        {{- 'footer.information.terms_conditions' | t -}}
+      </a>
+    </div>
+    <div class="flex flex-col gap-5">
+      <div class="flex flex-col gap-2">
+        <h3 class="en:font-museo text-[16px] font-bold uppercase text-white">
+          {{- 'footer.contact_us' | t -}}
+        </h3>
+        <a href="mailto:cs@buddybites.dog" class="en:font-museo text-[14px] font-light text-white">
+          cs@buddybites.dog
+        </a>
+      </div>
+      <p class="en:font-museo text-[14px] font-light text-white">
+        <span class="">
+          {{- 'footer.office_address.title' | t -}}
+        </span>
+        <br>
+        <em>
+          {{- 'footer.office_address.address' | t -}}
+        </em>
+      </p>
+      <div class="flex flex-col gap-2">
+        <h3 class="en:font-museo text-[16px] font-bold uppercase text-white">
+          {{- 'footer.get_connected.socials' | t -}}
+        </h3>
+        <div class="flex gap-2">
+          <a href="" class="aspect-square en:font-museo text-[20px] font-light text-white">
+            <img src="{{'facebook-white.svg' |  asset_url}}" class="w-[20px] h-[20px]"></img>
+          </a>
+          <a href="" class="aspect-square en:font-museo text-[20px] font-light text-white">
+            <img src="{{'instagram-white.svg' |  asset_url}}" class="w-[20px] h-[20px]"></img>
+          </a>
+          <a href="" class="aspect-square en:font-museo text-[20px] font-light text-white">
+            <img src="{{'twitter-white.svg' |  asset_url}}" class="w-[20px] h-[20px]"></img>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <img
+    src="https://cdn.shopify.com/s/files/1/0430/5833/1805/files/Layer_1_18.svg?v=1711267009"
+    alt="footer logo"
+    class="mx-auto block w-[150px] lg:hidden"
+  >
+</Footer>

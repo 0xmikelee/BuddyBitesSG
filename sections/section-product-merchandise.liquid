@@ -1,0 +1,127 @@
+{% style %}
+  .swiper-product {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    z-index: 10;
+  }
+
+  .swiper-button-next {
+    right: 10px;
+  }
+
+  .swiper-button-prev {
+    left: 10px;
+  }
+
+  .swiper-button-next:after {
+    content: '';
+    display: block;
+    width: 15px;
+    height: 25px;
+    transform: rotate(180deg);
+    background-image: url('{{ 'swiper-arrow-blue.svg' | asset_url }}');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .swiper-button-prev:after {
+    content: '';
+    display: block;
+    width: 15px;
+    height: 25px;
+    background-image: url('{{ 'swiper-arrow-blue.svg' | asset_url }}');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .swiper-navigation-icon {
+    display: none;
+  }
+{% endstyle %}
+
+{% comment %} Breadcrumbs {% endcomment %}
+<div class="container px-5 pt-7">
+  <div class="flex flex-wrap gap-2">
+    <div>
+      <a href="{{ shop.url }}" class="font-montserrat text-[16px] font-light text-black underline">Home</a>
+      <span class="font-montserrat text-[16px] font-light text-black">›</span>
+    </div>
+    <p class="font-montserrat text-[16px] font-light text-black">{{ product.title }}</p>
+  </div>
+</div>
+
+<section class="container relative px-5 py-7">
+  <div class="grid grid-cols-1 gap-10 lg:grid-cols-2">
+    {% comment %} Product Image {% endcomment %}
+    <div class="relative h-full">
+      <div class="sticky top-0 h-fit w-full overflow-hidden rounded-3xl">
+        <div class="swiper-product">
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-wrapper">
+            {% for image in product.media %}
+              <div class="swiper-slide">
+                <img src="{{ image | img_url: 'master' }}" alt="{{ image.alt }}" class="h-full w-full object-cover">
+              </div>
+            {% endfor %}
+          </div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </div>
+
+    {% comment %} Product Details {% endcomment %}
+    <div class="flex flex-col gap-2">
+      <h2 class="m-0 text-[24px] font-bold en:font-museo">{{ product.title }}</h2>
+      <div
+        class="klaviyo-star-rating-widget"
+        data-id="{{ product.id }}"
+        data-product-title="{{ product.title }}"
+        data-product-type="{{ product.type }}"
+      ></div>
+
+      <div class="prose prose-base marker:text-black prose-ul:list-disc">
+        {{ product.description }}
+      </div>
+
+      {% comment %} Start Add To Cart {% endcomment %}
+      {% render 'snippet-add-to-cart' %}
+    </div>
+  </div>
+</section>
+
+<script>
+  const swiper = new Swiper('.swiper-product', {
+    // Optional parameters
+    direction: 'horizontal',
+    spaceBetween: 10,
+    autoplay: false,
+    loop: true,
+    slidesPerView: 1,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Product Treats",
+  "settings": []
+}
+{% endschema %}

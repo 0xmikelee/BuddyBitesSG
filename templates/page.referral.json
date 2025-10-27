@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "section-referral": {
+      "type": "section-referral",
+      "settings": {}
+    }
+  },
+  "order": [
+    "section-referral"
+  ]
+}

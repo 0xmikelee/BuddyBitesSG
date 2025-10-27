@@ -1,0 +1,185 @@
+<div class="shelters lg:hidden" style="overflow: hidden">
+  <img
+    src="https://cdn.shopify.com/s/files/1/0643/9010/3256/files/Group_681_16ee8508-6a2d-4080-9a8e-3702d53864d8.png?v=1691484170"
+    class="shelter4 front"
+  >
+  <img
+    src="https://cdn.shopify.com/s/files/1/0643/9010/3256/files/Group_681_16ee8508-6a2d-4080-9a8e-3702d53864d8.png?v=1691484170"
+    class="shelter4"
+  >
+</div>
+
+<style>
+  .giving-block img {
+    padding: 5vw 5vw 2vw 5vw;
+  }
+  .donate-but {
+    background-color: #0d3e66;
+    border-radius: 10vw;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    box-shadow: 0px 0px 0px 0px #fff;
+    transition: all 0.3s;
+    margin-top: 3px;
+    margin-bottom: 1vw;
+    padding: 0.5vw 2vw;
+    &:hover{
+      box-shadow: 0px 0px 0px 3px #0d3e66;
+      background-color: #fff;
+      color: #0d3e66;
+   }
+  }
+  .giving-block h3 {
+    font-family: Montserrat, sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #0d3e66;
+    margin: 0 !important;
+    padding: 3vw 0 1.5vw 0;
+  }
+  .giving-block h4 {
+    font-family: Montserrat, sans-serif !important;
+    color: #0d3e66 !important;
+    font-weight: 500 !important;
+    text-transform: uppercase;
+    color: #0d3e66;
+    font-size: 1.5vw;
+  }
+  .els-cup-w-icon, .els-cup-w-descr {
+    display: none!important;
+  }
+  .els-cup-w {
+    background-color: rgba(0,0,0,0) !important;
+  }
+  .els-cup-box {
+    height: 10vw;
+  }
+  .els-cup-w-val {
+    color: #0d3e66;
+    font-family: hey_charlieregular,"sans-serif";
+    font-size: 13vw!important;
+    font-weight: 400;
+    font-stretch: normal;
+    margin-top: -3vw;
+    width: 900%;
+    margin-left: -400%;
+  }
+  .els-cup-w-wrap {
+    width: 50%;
+    margin: 0 25%;
+  }
+  .giving-block h3{
+    font-family: Montserrat, sans-serif;
+    font-weight: 600 !important;
+    font-style: normal;
+    text-transform: uppercase;
+  }
+  .giving-block {
+    text-align: center;
+  }
+  .giving-title {
+    font-family: hey_charlieregular,sans-serif;
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: 5px;
+    text-align: center;
+    color: #203c6c;
+    margin-bottom: 1%;
+    font-size: 5vw;
+    margin-top: 5vw;
+  }
+
+  @media (max-width: 1024px) {
+    .desktop {
+      display: none;
+    }
+    .giving-title {
+      {% if canonical_url contains '/zh' %}
+      font-size: 11vw;
+      {% else %}
+      font-size: 14vw;
+      {% endif %}
+      margin-top: 17vw;
+    }
+    .els-cup-w-val {
+      font-size: 27vw !important;
+      margin-top: -7vw;
+      width: 500%;
+      margin-left: -200%;
+    }
+    .giving-block h3 {
+      padding: 18vw 0 6vw 0;
+      font-size: 3.5vw;
+    }
+    .donate-but {
+      padding: 2vw 5vw;
+    }
+    .giving-block h4 {
+      font-size: 3.5vw;
+    }
+    .shelters {
+      display: flex;
+
+    }
+    .shelter4 {
+      padding: 5vw 1.5vw 5vw 1.5vw !important;
+      width: 230vw;
+      max-width: 300%;
+    }
+    .front {
+     -webkit-animation: bannermove2 20s linear infinite;
+        -moz-animation: bannermove2 20s linear infinite;
+         -ms-animation: bannermove2 20s linear infinite;
+          -o-animation: bannermove2 20s linear infinite;
+             animation: bannermove2 20s linear infinite;
+    }
+
+    @keyframes "bannermove2" {
+     0% {
+        margin-left: 0px;
+     }
+     100% {
+        margin-left: -230vw;
+     }
+    }
+
+    @-moz-keyframes bannermove2 {
+     0% {
+       margin-left: 0px;
+     }
+     100% {
+       margin-left: -230vw;
+     }
+    }
+
+    @-webkit-keyframes "bannermove2" {
+     0% {
+       margin-left: 0px;
+     }
+     100% {
+       margin-left: -230vw;
+     }
+    }
+
+    @-ms-keyframes "bannermove2" {
+     0% {
+       margin-left: 0px;
+     }
+     100% {
+       margin-left: -230vw;
+     }
+    }
+
+    @-o-keyframes "bannermove2" {
+     0% {
+       margin-left: 0px;
+     }
+     100% {
+       margin-left: -230vw;
+     }
+    }
+  }
+</style>

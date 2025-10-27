@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "section-packaging-qr-info": {
+      "type": "section-packaging-qr-info",
+      "settings": {}
+    }
+  },
+  "order": [
+    "section-packaging-qr-info"
+  ]
+}

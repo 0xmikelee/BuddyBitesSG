@@ -1,0 +1,1258 @@
+{
+  "account": {
+    "old_recharge_users": "Subscribed before 23/10/2025? Click here to manage your subscription"
+  },
+  "ambassador": {
+    "quote": {
+      "ambassador_quote": "I’m proud to be part of Buddy Bites — a dog food brand that gives 1kg to shelters for every 2kg sold, helping dogs feel truly seen and loved.",
+      "ambassador_subtitle": "Lin Min Chen - Singer, actress, obsessed with dogs.",
+    },
+    "faqs": {
+      "heading": "Why I joined the buddy bites family?",
+      "subheading": "A conversation with Min Chen",
+      "q1": "Why did you decide to partner with Buddy Bites?",
+      "a1": "\"I’ve always had a deep love for dogs, and being able to give back to them in a meaningful way has been something close to my heart. That’s why I’m so grateful for the chance to partner with Buddy Bites — a brand that not only offers high-quality, nutritious food, but also puts compassion at the center of everything they do. For every 2kg of food sold, 1kg is donated to shelters in need. That kind of generosity truly moved me. It’s not just about feeding dogs — it’s about giving them a better life. I’m so proud to be part of a mission that’s helping dogs feel seen, cared for, and loved.\"",
+      "q2": "What do you love most about Buddy Bites products?",
+      "a2": "\"「Honestly? It’s like giving a belly rub to dogs you’ve never even met! I love that Buddy Bites makes doing good feel so simple — you buy a bag of yummy, high-quality food, and just like that, a shelter dog gets a full bowl too. The kibble itself is top-notch (vet-approved and made with ingredients I can actually pronounce!), but it’s the mission that makes it extra special. It feels like being part of a little secret dog-loving club that’s doing big things\"",
+      "q3": "Tell us about your own dog(s)!",
+      "a3": "\"I currently have a dog named Blue. I named her Blue because of her beautiful blue eyes; I called her that the first time I met her. Our family has shared ten wonderful years with Blue. She is a particularly gentle and adorable little companion. Every time she sits down, her paws are always crossed, and she loves to smile at us. She is our very best friend! Watching her thrive reminds me how much joy and comfort dogs bring into our lives — they deserve the very best care in return.\"",
+      "q4": "Why do you think Buddy Bites stands out?",
+      "a4": "\"Buddy Bites stands out because it's a brand with both heart and science behind it. It’s rare to find a company that prioritizes nutritional excellence while also committing so strongly to social good. Their support of over 15 shelters in Hong Kong and Singapore, providing consistent and nutritious food for rescue dogs, really sets them apart. It’s not just about selling dog food — it’s about building a better future for all dogs.\"",
+      "q5": "What values do you share with Buddy Bites?",
+      "a5": "\"We both believe that every dog, no matter where they are — in a loving home or in a shelter — deserves consistent, healthy food and proper care. I also resonate deeply with the idea of using everyday choices to create meaningful impact. Choosing a dog food brand like Buddy Bites means you’re not only nourishing your own dog, but also helping to ease the burden on shelters and give more dogs a better chance at life.\"",
+      "q6": "What message would you like to share with other pet parents?",
+      "a6": "\"To all the pet parents out there: feeding your dog with love can now also mean feeding another dog in need. By choosing Buddy Bites, you’re making a positive difference every day — and your dog gets to enjoy top-quality meals made with care. It’s a simple switch with a powerful ripple effect. I’m proud to be part of this journey with Buddy Bites, and I hope you’ll join us in spreading kindness, one bowl at a time.\""
+    },
+    "message_from_lmc": {
+      "cta": "FOLLOW OUR JOURNEY"
+    },
+    "donations": {
+      "meals_donated": "MEALS DONATED",
+      "learn_more": "LEARN MORE",
+      "welcome_hkscda": "WELCOME HKSCDA",
+      "support_hk": "SUPPORT HK",
+      "slogan": "For every 2kg you buy, Buddy Bites donates 1kg to shelters"
+    },
+    "cta_section": {
+      "header": "JOIN THE MOVEMENT",
+      "subheader": "Get your pup premium dog food and donate to shelters in the process!",
+      "cta_button": "SHOP"
+    }
+  },
+  "navbar": {
+    "shop": {
+      "title": "Shop",
+      "kibbles": {
+        "title": "Kibbles",
+        "options": {
+          "lamb": "Lamb Recipe",
+          "salmon": "Salmon Recipe",
+          "duck": "Duck Recipe",
+          "turkey": "Turkey Recipe",
+          "puppy": "Puppy Recipe"
+        }
+      },
+      "treats": {
+        "title": "Treats",
+        "options": {
+          "chicken": "Chicken",
+          "beef": "Beef",
+          "dental": "Dental",
+          "bundles": "Bundles"
+        }
+      },
+      "merchandise": {
+        "title": "Merchandise",
+        "options": {
+          "all": "All",
+          "poop_bag": "Poop Bag",
+          "scoop": "Scoop",
+          "tennis_ball": "Tennis Ball",
+          "poop_bag_holder": "Poop Bag Holder",
+          "umbrella": "Umbrella",
+          "portable_bowl": "Portable Bowl",
+          "tote_bag": "Tote Bag",
+          "steel_bowl": "Steel Bowl"
+        }
+      },
+      "samples": {
+        "title": "Samples",
+        "discount": "Save $115"
+      },
+      "toppers": {
+        "title": "Toppers",
+        "options": {
+          "beef": "Beef & Vegetables",
+          "chicken": "Chicken & Vegetables",
+        }
+      }
+    },
+    "learn_more": {
+      "title": "Learn",
+      "options": {
+        "about_us": "About Us",
+        "nutrition": "Nutrition",
+        "faqs": "FAQs",
+        "blog": "Blog",
+        "stores": "Stores",
+        "ambassador": "Ambassador"
+      }
+    },
+    "subscribe": "Subscribe",
+    "stores": "Stores",
+    "samples": "Samples",
+    "refer": "Refer"
+  },
+  "general": {
+    "meta": {
+      "tags": "Tagged \"{{ tags }}\"",
+      "page": "Page {{ page }}"
+    },
+    "404": {
+      "title": "404 Page Not Found",
+      "subtext_html": "The page you requested does not exist. Click <a href=\"/collections/all\">here</a> to continue shopping."
+    },
+    "breadcrumbs": {
+      "home": "Home",
+      "home_link_title": "Back to the frontpage"
+    },
+    "newsletter_form": {
+      "newsletter_email": "email@example.com",
+      "submit": "Subscribe",
+      "confirmation": "Thanks for subscribing"
+    },
+    "newsletter_form_section": {
+      "header": "Join our Mailing List",
+      "header_text": "Email address:",
+      "newsletter_text": "Enter email",
+      "submit": "Join",
+      "thanks": "Thanks for Joining!"
+    },
+    "search": {
+      "no_results_html": "Your search for \"{{ terms }}\" did not yield any results.",
+      "results_for_html": "Your search for \"{{ terms }}\" revealed the following:",
+      "title": "Search for products on our site",
+      "placeholder": "Search our store",
+      "submit": "Search",
+      "products": "Products",
+      "articles": "Articles",
+      "pages": "Pages"
+    },
+    "social": {
+      "share_the_love": "Share the love"
+    },
+    "onboarding": {
+      "modal_title": "Almost there...",
+      "no_products_html": "You have no products in your home page collection. This placeholder will appear until you <a href=\"/admin/collections?tutorial=Frontpage\">add a product to this collection</a>.",
+      "add_product": "Add a Product",
+      "product_title": "Example Product Title",
+      "product_description": "This area is used to describe your product’s details. Tell customers about the look, feel, and style of your product. Add details on color, materials used, sizing, and where it was made.",
+      "no_collections_html": "You don't have any collections to show here. <a href=\"/admin/custom_collections\">Add some collections</a> to go along with the default home page.",
+      "add_collection": "Add a Collection",
+      "collection_title": "Example Collection Title",
+      "blog_title": "Your post's title",
+      "blog_excerpt": "Your store hasn’t published any blog posts yet. A blog can be used to talk about new product launches, tips, or other news you want to share with your customers. You can check out Shopify’s ecommerce blog for inspiration and advice for your own store and blog.",
+      "no_content": "This section doesn’t currently include any content. Add content to this section using the sidebar."
+    }
+  },
+  "blogs": {
+    "article": {
+      "author_on_date_html": "Posted by {{ author }} on {{ date }}",
+      "older_post": "Older Post",
+      "newer_post": "Newer Post",
+      "tags": "Tags",
+      "comment_meta_html": "{{ author }} on {{ date }}",
+      "read_more": "Read more"
+    },
+    "comments": {
+      "title": "Leave a comment",
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "post": "Post comment",
+      "moderated": "Please note, comments must be approved before they are published",
+      "success_moderated": "Your comment was posted successfully. We will publish it in a little while, as our blog is moderated.",
+      "success": "Your comment was posted successfully! Thank you!",
+      "with_count": {
+        "one": "{{ count }} comment",
+        "other": "{{ count }} comments"
+      }
+    },
+    "sidebar": {
+      "recent_articles": "Recent Articles",
+      "categories": "Categories"
+    }
+  },
+  "cart": {
+    "general": {
+      "title": "購物車 Shopping Cart",
+      "remove": "移除 Remove",
+      "note": "送貨備註 Delivery Notes",
+      "see_more": "See more",
+      "subtotal": "小計 Subtotal",
+      "shipping_at_checkout": "運費會在結帳時顯示 Shipping & taxes calculated at checkout",
+      "update": "更新購物車 Update Cart",
+      "checkout": "結帳 Check Out",
+      "empty": "購物車是空的 Your cart is currently empty.",
+      "continue_browsing_html": "Continue browsing <a href=\"/pages/featured-products\">here</a>.",
+      "close_cart": "Close Cart",
+      "savings_html": "You're saving {{ price }}",
+      "total_items": "Total items",
+      "total": "總和 Total"
+    },
+    "label": {
+      "product": "產品 Product",
+      "price": "價格 Price",
+      "quantity": "數量 Quantity",
+      "total": "總和 Total"
+    }
+  },
+  "collections": {
+    "general": {
+      "all_of_collection": "All {{ collection }}",
+      "product_collections": "Product Collections",
+      "no_matches": "Sorry, there are no products in this collection",
+      "link_title": "Browse our {{ title }} collection",
+      "see_more": "See more",
+      "grid_view": "Grid view",
+      "list_view": "List view",
+      "items_with_count": {
+        "one": "{{ count }} item",
+        "other": "{{ count }} items"
+      }
+    },
+    "sidebar": {
+      "tags": "Tags"
+    },
+    "sorting": {
+      "title": "Sort by",
+      "featured": "Featured",
+      "best_selling": "Best Selling",
+      "az": "Alphabetically, A-Z",
+      "za": "Alphabetically, Z-A",
+      "price_ascending": "Price, low to high",
+      "price_descending": "Price, high to low",
+      "date_descending": "Date, new to old",
+      "date_ascending": "Date, old to new"
+    },
+    "filters": {
+      "title_tags": "Filter",
+      "all_tags": "All products"
+    },
+    "onboarding": {
+      "modal_title": "This page will show all of your store's products",
+      "no_products_html": "There are no products yet, but once you begin adding them they will show up here regardless if they are in a collection.",
+      "add_product": "Add Product"
+    }
+  },
+  "contact": {
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone Number",
+      "message": "Message",
+      "send": "Send",
+      "post_success": "Thanks for contacting us. We'll get back to you as soon as possible."
+    }
+  },
+  "customer": {
+    "account": {
+      "title": "My Account",
+      "details": "Account Details",
+      "view_addresses": "View Addresses",
+      "return": "Return to Account Details",
+      "manage_subscription": "Manage Subscription"
+    },
+    "activate_account": {
+      "title": "Activate Account",
+      "subtext": "Create your password to activate your account",
+      "password": "Password",
+      "password_confirm": "Confirm Password",
+      "submit": "Activate Account",
+      "cancel": "Decline Invitation"
+    },
+    "addresses": {
+      "title": "Your Addresses",
+      "default": "Default",
+      "add_new": "Add a new address",
+      "edit_address": "Edit address",
+      "first_name": "First Name",
+      "last_name": "Last Name",
+      "company": "Company",
+      "address1": "Address1",
+      "address2": "Address2",
+      "city": "City",
+      "country": "Country",
+      "province": "Province",
+      "zip": "Postal/Zip Code",
+      "phone": "Phone",
+      "set_default": "Set as default address",
+      "add": "Add Address",
+      "update": "Update Address",
+      "cancel": "Cancel",
+      "edit": "Edit",
+      "delete": "Delete"
+    },
+    "login": {
+      "title": "Login",
+      "email": "Email",
+      "password": "Password",
+      "forgot_password": "Forgot your password?",
+      "sign_in": "Sign In",
+      "cancel": "Return to Store",
+      "guest_title": "Continue as a guest",
+      "guest_continue": "Continue"
+    },
+    "orders": {
+      "title": "Order History",
+      "order_number": "Order",
+      "date": "Date",
+      "payment_status": "Payment Status",
+      "fulfillment_status": "Fulfillment Status",
+      "total": "Total",
+      "none": "You haven't placed any orders yet"
+    },
+    "order": {
+      "title": "Order {{ name }}",
+      "date": "Placed on {{ date }}",
+      "cancelled": "Order cancelled on {{ date }}",
+      "cancelled_reason": "Reason: {{ reason }}",
+      "billing_address": "Billing Address",
+      "payment_status": "Payment Status",
+      "shipping_address": "Shipping Address",
+      "fulfillment_status": "Fulfillment Status",
+      "discount": "Discount",
+      "shipping": "Shipping",
+      "tax": "Tax",
+      "product": "Product",
+      "sku": "SKU",
+      "price": "Price",
+      "quantity": "Quantity",
+      "total": "Total",
+      "fulfilled_at": "Fulfilment date: {{ date }}",
+      "subtotal": "Subtotal"
+    },
+    "recover_password": {
+      "title": "Reset your password",
+      "email": "Email",
+      "submit": "Submit",
+      "cancel": "Cancel",
+      "subtext": "We will send you an email to reset your password",
+      "success": "We've sent you an email with a link to update your password"
+    },
+    "reset_password": {
+      "title": "Reset account password",
+      "subtext": "Enter a new password for {{ email }}",
+      "password": "Password",
+      "password_confirm": "Confirm Password",
+      "submit": "Reset Password"
+    },
+    "register": {
+      "title": "Create account",
+      "first_name": "First Name",
+      "last_name": "Last Name",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Create",
+      "cancel": "Return to Store"
+    }
+  },
+  "bouncy_kibbles": {
+    "lamb": "Lamb Recipe",
+    "puppy": "Puppy Recipe",
+    "salmon": "Salmon Recipe",
+    "turkey": "Turkey Recipe",
+    "duck": "Duck Recipe",
+    "shop": "Shop",
+    "now": "Now"
+  },
+  "about_us": {
+    "title": "About Us",
+    "our_story": {
+      "title": "Our Story",
+      "description": "We know what you are thinking, 'why did these people start a dog food brand', and as importantly, 'why am I reading about it.' The first part is simple. We knew first hand the challenge of getting truly good quality dog food, consistently. We also knew the challenges that dog shelters go through. So, we created Buddy Bites to fix both these issues...To ensure Nacho and Nala (Chris' dogs) could eat food their guts deserve, whilst feeding their friends in shelters with every order. As to why you are reading it, we are not sure, but we certainly hope it's because you have a dog, and even more so that you're going to join the many pups moving to Buddy Bites!",
+      "join_the_pack": "Join the pack"
+    },
+    "our_mission": {
+      "title": "Our Mission",
+      "point1": {
+        "title": "Giving Back",
+        "description": "Giving back to our dog community is at the center of our business. Our goal is to provide premium kibble for all dogs in shelters across Asia!"
+      },
+      "point2": {
+        "title": "Best Pup Health",
+        "description": "Your Pet’s health is our priority. We ensure quality of our product with constant testing and partner closely with our vets to bring the best food for our dogs."
+      },
+      "point3": {
+        "title": "Happy Customers",
+        "description": "We aim to make feeding your pup as enjoyable as it should be! Given you are not eating the food yourself, it's only fair the customer service is superb."
+      }
+    },
+    "donation": {
+      "title": "For every 2KG delivered, 1KG is donated",
+      "donation_amount": "8,181,280",
+      "donation_amount_unit": "Meals donated!",
+      "shelter_partners": "Our Shelter Pawtners",
+      "shop_give_bark": "Shop & Give Bark",
+      "learn_more": "More"
+    },
+    "section_only_the_good_stuff": {
+      "title": "Only The Good Stuff",
+      "subtext": "MAKING SURE OUR FOOD IS NO.1",
+      "description_1": "We partner closely with certified pet nutritionists, as well as Hong Kong based vets to formulate nutritious recipes packed with only the ingredients your pup needs.",
+      "description_2": "All our recipes are made in Europe with premium ingredients, and tested beyond AAFCO standards.",
+      "description_3": "It's amazing how much of our job involves talking about poo. We include gut-friendly prebiotics in all our recipes to make sure your dogs gut gets looked after. Consistent poos starts with consistent dog food.",
+      "learn_more": "Learn More"
+    },
+    "section_sustainability": {
+      "title": "Sustainability",
+      "subtext": "Buddy Bites is committed to sustainability to ensure a bright future for our people, pets, and planet.",
+      "point1": "OUR PACKAGING IS 100% RECYCLABLE",
+      "point2": "THOUGHTFUL SOURCING OF INGREDIENTS",
+      "point3": "ENERGY & WASTE EFFICIENT",
+      "point4": "WE PRACTICE SUSTAINABLE WORK PRACTICES"
+    },
+    "section_our_team": {
+      "title": "The Buddy Bites Team",
+      "join_the_team": "Join The Team"
+    }
+  },
+  "read_our_blog": {
+    "title1": "Keep reading?",
+    "title2": "Check out our Blog",
+    "read_more": "Read More"
+  },
+  "nutrition": {
+    "title": "Nutrients",
+    "premium_ingredients": "Premium Ingredients",
+    "benefits_of_buddy_bites": "Benefits of Buddy Bites",
+    "kibble_comparison": "Kibble Comparison",
+    "comparison_chart": "Comparison Chart",
+    "recipe": "Recipe"
+  },
+  "faqs": {
+    "title": "FAQs",
+    "subtext": "We gathered the most asked questions but we can't cover them all here, so if you can't find what you're looking for",
+    "email_us": "Email Us",
+    "general": {
+      "title": "General",
+      "question1": {
+        "title": "What is Buddy Bites?",
+        "answer": "Buddy Bites is a premium pet food brand that supports sheltered dogs by donating 1kg of food for every 2kg we sell. We provide vet-backed, AAFCO regulated dry food and treats for all breeds, ages and sizes that delivers straight to your door."
+      },
+      "question2": {
+        "title": "Why should my dog eat Buddy Bites?",
+        "answer": "Our recipes are backed by vets, regulated by AAFCO and designed to provide everything your dog needs, no matter their breed or age….plus suited to the fussiest of eaters!"
+      },
+      "question3": {
+        "title": "Where is Buddy Bites based?",
+        "answer": "Buddy Bites operates in Hong Kong and Singapore. Let us know where you would like to see Buddy Bites next!"
+      },
+      "question4": {
+        "title": "Is everything vet tested?",
+        "answer": "Yes, we have certified and established vets in Buddy Bites that oversee the testing of all our recipes via a third party testing facility."
+      },
+      "question5": {
+        "title": "Can I find Buddy Bites in store?",
+        "answer1": "Yes! You can find Buddy Bites products at stores across Hong Kong. Find the nearest stockist to you.",
+        "link": "Find the nearest stockist to you",
+        "answer2": "If you are interested in stocking Buddy Bites, drop us a message:",
+        "email": "info@buddybites.dog"
+      },
+      "question6": {
+        "title": "Does Buddy Bites have a referral program?",
+        "answer": "Refer your friend and both enjoy a $150 discount on your next order.",
+        "link": "Start referring today!"
+      },
+      "question7": {
+        "title": "How can I contact Buddy Bites for help?",
+        "answer": "You can contact Buddy Bites via email at",
+        "email": "info@buddybites.dog",
+        "or": "or",
+        "whatsapp": "Whatsapp"
+      },
+      "question8": {
+        "title": "How much does Buddy Bites donate?",
+        "answer": "Buddy Bites donate 1kg of kibble for every 2kg we sell. These donations go to our shelter partners in both HK and Singapore!",
+        "link": "Learn more."
+      },
+      "question9": {
+        "title": "What shelters does Buddy Bites donate to?",
+        "answer": "We currently pawtner with 8 shelters in Hong Kong and Singapore: Catherine's Puppies, HKDR, SKSF, SOSD, PGRS, Love Fluffy Home, Tails Lantau, and HKSCDA. We continue to help with more shelters and foster families!",
+        "link": "Learn more."
+      },
+    },
+    "nutrition": {
+      "title": "Nutrition",
+      "question1": {
+        "title": "Where is Buddy Bites made?",
+        "answer": "All Buddy Bites Kibble is made in Europe and regulated to AAFCO standards. You might have even seen the video of Ryan eating our food. We didn't ask him to do it, but it's safe to do so and he's a bit weird."
+      },
+      "question2": {
+        "title": "What is the shelf life of the kibble?",
+        "answer": "The shelf life of Buddy Bites is around 18 months, with the use by date printed on the back of the packaging."
+      },
+      "question3": {
+        "title": "What is AAFCO?",
+        "answer": "The Association of American Feed Control Officials set the global standards for quality pet food. They are a regulatory body based in the U.S. and we make sure to stay in their good books!"
+      },
+      "question4": {
+        "title": "How is your product tested?",
+        "answer": "Buddy Bites is tested straight after production and then again following arrival in Asia by a third party lab. We work alongside our vets to test for all recent recall issues to make sure we are providing the safest pet food we can offer. We test for Salmonella & E. Coli bacteria, Mycotoxins (Ochratoxin & Aflatoxins), Melamine and its metabolites, and excess vitamin D2 & D3 for peace of mind."
+      },
+      "question5": {
+        "title": "What food is good for a small dog?",
+        "answer": "For smaller breeds, we recommed the",
+        "link": "duck recipe",
+        "answer2": "as it is the smallest kibble size we offer for adults (10mm diameter)."
+      },
+      "question6": {
+        "title": "How do I know how much to order for my dog?",
+        "answer": "Take a look at our feeding guidelines per recipe and check our daily recommended feeding guideline (grams per day) corresponding to your dog's weight. Adjust as needed if your dog is on the skinnier or chunkier side."
+      },
+      "question7": {
+        "title": "Is Buddy Bites grain free?",
+        "answer": "No, we include grains in all of our recipes. 'Good' grains are carbohydrates which are an important part of a dog's diet, as they are omnivores. There are ongoing investigations into the links between grain-free recipes and DCM (dilated cardiomyopathy). Whilst the investigations are not concluded, we prefer to avoid grain-free for now."
+      },
+      "question8": {
+        "title": "How much does the Buddy Bites scoop hold?",
+        "answer": "Each Buddy Bites scoop holds around 110 grams."
+      },
+      "question9": {
+        "title": "What is the kibble size?",
+        "answer": "Our kibble sizes range from 10-14mm to suit dogs of all breeds, ages and sizes. Our smaller kibble is suitable for smaller breeds and older dogs with less teeth who still enjoy eating kibble. Our larger kibble is suitable for large dog breeds and dogs who need more encouragement to chew to aid digestion. The kibble size of each recipe can be found on each product page on our website."
+      },
+      "question10": {
+        "title": "What is a novel protein?",
+        "answer": "Novel proteins are proteins that have appeared in dog's diets less over the years and are therefore less likely to trigger allergies. We use novel proteins in our Adult recipes."
+      }
+    },
+    "subscription": {
+      "title": "Subscription",
+      "question1": {
+        "title": "What are the benefits of subscribing?",
+        "answer": "Convenience and cash!! By subscribing you receive a 15% discount to standard pricing, and the convenience of not having to go back into the website to order every month. It just arrives at your door as if by magic. On top of that we throw some extra goodies in your orders, first one guaranteed!"
+      },
+      "question2": {
+        "title": "Is the subscription flexible?",
+        "answer": "Absolutely! Our subscriptions are purely for convenience, they are completely flexible. You can pause, edit or cancel any time. You can change flavour, delivery date, frequency all in just a few clicks via your customer portal. Plus you will have dedicated support via ",
+        "email": "email",
+        "or": "or",
+        "whatsapp": "Whatsapp",
+        "answer2": "if you have any questions or need anything changed. There is no charge for subscribing, just order your food, and let us deliver to your door on repeat at no extra cost."
+      },
+      "question3": {
+        "title": "How can I use the dedicated support?",
+        "answer": "Buddy Bites subscription support team is here for you via ",
+        "whatsapp": "Whatsapp",
+        "or": "or",
+        "email": "email",
+        "answer2": " to help with any and all things Buddy Bites. E.g. Swap products, change order frequency, change address... We can help with all of the above and more and we welcome any photos of your dog!"
+      },
+      "question4": {
+        "title": "What kind of payment is accepted?",
+        "answer": "We accept all major credit cards, Alipay, WeChat Pay and Paypal that can accept recurring payments."
+      },
+      "question5": {
+        "title": "When do deliveries come?",
+        "answer": "Your order should arrive 2-3 working days from payment (unless you've paid for same day delivery). We delivery Monday to Saturday. Your order will include a tracking number and you will get a message from your delivery driver prior to the arrival of your food in case you are not in."
+      },
+      "question6": {
+        "title": "Can I change flavour?",
+        "answer": "You sure can! When you subscribe you will get an email helping you to set up an account. From there you can change your flavour, or anything else including recurring dates, amount, and more. If you have any trouble",
+        "email": "email",
+        "or": "or",
+        "whatsapp": "Whatsapp",
+        "answer2": "us with any questions. We will respond quick as a greyhound."
+      },
+      "question7": {
+        "title": "Can I change delivery date?",
+        "answer": "Absolutely! When you subscribe you will get an email helping you to set up an account. From there you can change the delivery date, or anything else. If you have any trouble ",
+        "email": "email",
+        "or": "or",
+        "whatsapp": "Whatsapp",
+        "answer2": " us for help!"
+      },
+      "question8": {
+        "title": "Can I change frequency?",
+        "answer": "Absolutely! Have a look at the feeding guidelines before you order, however not everyone get's it right first time. So you can log into your account and customize your order from there. If you have any trouble ",
+        "email": "email",
+        "or": "or",
+        "whatsapp": "Whatsapp",
+        "answer2": " us for help!"
+      }
+    },
+    "delivery": {
+      "title": "Delivery",
+      "question1": {
+        "title": "When will I receive my order?",
+        "answer": "Free standard shipping takes 2-3 days, including outlying islands. We also offer same-day delivery for an added fee to addresses in Hong Kong island, Kowloon, and some parts of New Territories. ",
+        "link": "Contact us",
+        "answer2": " to find out more."
+      },
+      "question2": {
+        "title": "What days do you deliver?",
+        "answer": "Everyday except Sunday!"
+      },
+      "question3": {
+        "title": "How much does delivery cost?",
+        "answer": "We offer free standard delivery for orders over $250. Orders under $250 will be charged $60 shipping fee for standard delivery, including outlying islands. Same-day delivery orders of over $250 have an added shipping fee of $60, and for orders under $250 a $90 fee."
+      },
+      "question4": {
+        "title": "Do you offer same day delivery?",
+        "answer": "Yes! We offer same-day delivery to addresses in Hong Kong island, Kowloon and some parts of the New Territories. The fee depends on your total order amount."
+      },
+      "question5": {
+        "title": "Who does your deliveries?",
+        "answer": "We partner with external logistics partners Kerry and SF Express to deliver your order straight to your door."
+      },
+      "question6": {
+        "title": "Where do you ship to?",
+        "answer": "We are available in Hong Kong and Singapore. If you would like Buddy Bites to open up in your city next, let us know!"
+      },
+      "question7": {
+        "title": "Any extra charge for outlying islands?",
+        "answer": "No! We aim to make delivering dog food as easy and convenient as possible to all dogs, which is why we offer free standard delivery to the whole of Hong Kong for orders over $250."
+      },
+      "question8": {
+        "title": "Will I be notified of my deliveries?",
+        "answer": "Yes! You will receive an Order Confirmation email with a tracking number from our logistics partner to check your order in real time. Our logistics partner will also send you a message on the day of your delivery."
+      },
+      "question9": {
+        "title": "What happens if my parcel is damaged?",
+        "answer": "Get in touch with us at ",
+        "link": "email",
+        "or": "or",
+        "whatsapp": "Whatsapp",
+        "answer2": " us for help!"
+      }
+    },
+    "payment": {
+      "title": "Payment",
+      "question1": {
+        "title": "What payment options do you have?",
+        "answer": "We accept PayPal, Google Pay, Alipay, and all major credit cards for one-time and subscription orders. You can choose to pay by WeChat Pay, FPS, and UnionPay for one-time orders."
+      },
+      "question2": {
+        "title": "How do I change my card details?",
+        "answer": "Watch our ",
+        "link": "tutorial video",
+        "answer2": " to help you navigate the customer portal with your Buddy Bites login. Don't have an account setup? You'll find the link in your 'Order Confirmation email' from your 1st order. Still having trouble? Contact us via ",
+        "email": "email",
+        "or": "or",
+        "whatsapp": "Whatsapp",
+        "answer3": " — we'll send you a new activation link."
+      },
+      "question3": {
+        "title": "Is there a charge for subscription?",
+        "answer": "Subscribing to Buddy Bites is free! Better than that, you save 15% on EVERY ORDER by subscribing!"
+      },
+      "question4": {
+        "title": "How does subscription payment work?",
+        "answer": "Your recurring orders will be charged to the same payment method you used to complete your previous Buddy Bites order. You can change your payment details anytime on your Buddy Bites account via our customer portal. Watch this ",
+        "link": "tutorial video",
+        "answer2": " to see how. You will be notified via email 3 days before your orders are due to renew to give you time to make any changes — pause, skip, swap, change the amount of kibble, add products to your upcoming order."
+      },
+      "question5": {
+        "title": "How do I apply discount codes?",
+        "answer": "Discount codes can be applied at checkout on the right-hand side bar."
+      },
+      "question6": {
+        "title": "Can I apply codes to my subscriptions?",
+        "answer": "Yes, if you have a useable code. Just login and on the 'manage subscriptions' page there is an option to enter in a discount code on the bottom left. This is where you should apply your discount code from our referral program!"
+      },
+      "question7": {
+        "title": "How long do refunds take to process?",
+        "answer": "You should get a notification immediately and it can take up to 12 working days, but usually between 3-5 depending on the associated bank."
+      },
+      "question8": {
+        "title": "What happens if my card has an error?",
+        "answer": "You can update your payment details securely via your Buddy Bites account on our customer portal. Watch our ",
+        "link": "tutorial video",
+        "answer2": " to see how. Don't have an account setup? You'll find the link in your Order Confirmation email from your 1st order. Still having trouble? Contact us via ",
+        "email": "email",
+        "or": "or",
+        "whatsapp": "Whatsapp",
+        "answer3": " — we'll send you a new activation link."
+      },
+      "question9": {
+        "title": "Why isn't my discount code working?",
+        "answer": "Some discount codes are specific to first time orders, or specific emails. If you have any issues, just drop us an ",
+        "email": "email",
+        "or": "or",
+        "whatsapp": "Whatsapp",
+        "answer2": " us for help!"
+      }
+    }
+  },
+  "blog": {
+    "title": "Blog"
+  },
+  "store_locator": {
+    "title": "Store Locator",
+    "subtext": "Locate a store near you that carries Buddy Bites or subscribe online to never run out!",
+    "subscribe": "Subscribe",
+    "stockist": "Want to be a Buddy Bites stockist?",
+    "email": "Email us"
+  },
+  "subscription": {
+    "title": "Food for life",
+    "subtext": "Never worry, never run out, never think about kibble when you subscribe to BUDDY BITES",
+    "plus_you_get": "Plus you'll get:",
+    "point1": "20% off every order",
+    "point2": "Free shipping",
+    "point3": "Swap, skip, or cancel anytime",
+    "point4": "Subcriber only surprises",
+    "subscribe_now": "Subscribe now",
+    "subscribed": "Subscribed? Sign in!",
+    "steps": {
+      "title": "Customise. Subscribe. Receive.",
+      "step1": "Select your dog's food",
+      "step2": "Tell us where and when to deliver",
+      "step3": "Receive on repeat",
+      "step4": "Pause, edit, and cancel anytime"
+    },
+    "look_after_your_gut": {
+      "title": "Look after your dog's gut",
+      "subtext": "Our recipes contain prebiotics to treat your dog's digestion right"
+    },
+    "reviews": {
+      "title": "See what others are barking about Buddy Bites",
+      "review1": {
+        "title": "Best product on the market and number one for service!",
+        "subtext": "Buddy bites was great with my senior dog and so it is no surprise that the puppy food is a hit with our new addition. The convenience of the subscription and the immaculate service and communication make Buddy Bites a must for pet owners with busy lives.",
+        "dog": "Luna",
+        "product": "Luna enjoys 5kg of our puppy recipe delivered every 4 weeks",
+        "more_info": "More info"
+      },
+      "review2": {
+        "title": "Poppy loves the duck flavor of her new Buddy Bites",
+        "subtext": "Love the subscription. Now I don't have to panic last minute when I realize we're almost out of food. Poppy loves the food and it's nice to know we are helping local dog charities.",
+        "dog": "Poppy",
+        "product": "Poppy enjoys 5kg of our puppy recipe delivered every 6 weeks",
+        "more_info": "More info"
+      },
+      "review3": {
+        "title": "Very easy to change subscription!",
+        "subtext": "Having 2 pups on Buddy Bites now we were unsure of how much food and how often we our wanted our delivery but managing your subscription on the Buddy Bites website is super easy! We realised we were running out of food and found it very easy to change both the delivery date and the amount of food we needed!",
+        "dog": "Prince and Noble",
+        "product": "Prince and Noble enjoys 7kg of our puppy recipe delivered every 4 weeks",
+        "more_info": "More info"
+      }
+    }
+  },
+  "homepage": {
+    "hero_section": {
+      "subtext": "European ingredients, real flavour, real impact",
+      "shop_now": "Shop Now"
+    },
+    "featured_products": {
+      "title": "Fussy pup? we’ve got you covered",
+      "subtext": "We’ve worked with nutritionists and vets to come up with a variety of recipes to suit dogs all shapes and sizes. Plus, we include prebiotics to make sure your dog’s gut gets treated right."
+    },
+    "section_good_stuff": {
+      "title": "Only The Good Stuff",
+      "subtext": "Buddy Bites started with the goal of feeding all sheltered dogs in Asia. We are the first subscription based food brand that gives back - we donate 1kg for every 2kg bought. Our dog food formula is backed by vets, plus with a subscription you never need to worry about buying dog food again.",
+      "point1": {
+        "title": "Vet-backed formula",
+        "subtext": "Our expertly crafted formulas are backed by veterinarians, ensuring that your beloved furry friend is receiving only the best."
+      },
+      "point2": {
+        "title": "Gut-friendly Prebiotics",
+        "subtext": "We take gut health seriously, which is why our dog food is packed with prebiotics that will keep your pup's digestion running smoothly."
+      },
+      "point3": {
+        "title": "Made in Europe",
+        "subtext": "All our dog food is made in Europe, using the highest quality ingredients. We're proud to support local businesses and ensure that our products are made with care."
+      },
+      "point4": {
+        "title": "Premium, Traceable Ingredients",
+        "subtext": "We source our ingredients from trusted suppliers, ensuring that every ingredient is of the highest quality. We're proud to support local businesses and ensure that our products are made with care."
+      },
+      "shop_now": "Shop Now"
+    },
+    "section_our_buddies_love_a_bite": {
+      "title": "Our Buddies Love A Bite",
+      "subtext": "From dedicated subscribers to first time buyers - hear what people have to say about Buddy Bites.",
+      "review1": {
+        "title": "Marie C.M.",
+        "subtext": "First class service! Communication is wonderful with the use of whatsapp and emails are replied to swiftly. My dog absolutely loves the food and with the easy subscription it makes running out of dog food a thing of the past!"
+      },
+      "review2": {
+        "title": "Lynn L.",
+        "subtext": "As a pet owner, I've tried numerous brands and flavors but nothing seemed to do the trick for my fussy dog until I discovered Buddy Bites. Love the fast delivery, packaging and the gift. Thanks for the WOW services!!"
+      },
+      "review3": {
+        "title": "Namratha S.",
+        "subtext": "I just wanted to express my utmost satisfaction with the purchase of Buddy Bites for my beloved goldy boy. He eagerly awaits his meals. Thank you for going above and beyond in delivering a high-quality product."
+      },
+      "review4": {
+        "title": "Steffi c.",
+        "subtext": "Great product, my soon 2 years old boy Chico has only eaten kibble from Buddy Bites he loves it so much, also I like their concept - for every 2kg delivered, Buddy Bites donates 1kg to dog shelters in need &#10084;"
+      },
+      "review5": {
+        "title": "Victor A.",
+        "subtext": "We have an ongoing treat subscription with buddy bites because our dogs are really fussy! Lucky for us, buddy bites is super reactive and has one of the best customer service ever. We’re very lucky to have them in Hong Kong"
+      },
+      "review6": {
+        "title": "Stephanie p.",
+        "subtext": "Love Buddy Bites! I love how I can alter how much I need when it gets delivered so if I need it pushed back by a week or if I need it earlier I can easily make the adjustment. Gives me full flexibility to make sure my pup never goes hungry."
+      },
+      "review7": {
+        "title": "Nelss L.",
+        "subtext": "My Love is a picky eater. She never finished her kibbles and always tooks hours to try to finish. Today is the 3rd meals we gave Buddy Bites to her and she finish them within minutes! We will be placing another order for sure!"
+      },
+      "review8": {
+        "title": "Jamie T.",
+        "subtext": "My dog has been refusing to eat her usual kibbles so I decided to try Buddy Bites and she loves it! I also liked that the bag had a velcro seal as you can seal it easily with 2 fingers. Thanks for the additional foldable bowl and the tote bag, really useful!"
+      }
+    },
+    "section_subscribe_and_save": {
+      "title": "Subscribe & Save 20%",
+      "point1": "20% off every order",
+      "point2": "Automated deliveries",
+      "point3": "Swap, skip or cancel anytime",
+      "point4": "Exclusive Surprises",
+      "subscribe_now": "Subscribe & Save"
+    },
+    "section_giving_back": {
+      "title": "Giving back to the community",
+      "subtext": "For every 2kg of dog food purchased, we donate 1kg to local shelters!",
+      "donation_amount": "8,158,880",
+      "donation_amount_unit": "meals already donated",
+      "shop_now": "Shop to donate",
+      "shelter_partners": "Our Parntering shelters"
+    },
+    "section_want_to_try_a_sample": {
+      "title": "Want to try a sample?",
+      "shop_sample_packs": "Shop sample packs"
+    },
+    "sections": {
+      "frontpage_title": "Frontpage Collection",
+      "featured_title": "Featured Collections",
+      "news_title": "Latest News",
+      "instagram_follow_us": "Follow Us"
+    },
+    "onboarding": {
+      "modal_title": "Almost there...",
+      "no_products_html": "This placeholder will appear until you add a product to this collection.",
+      "add_product": "Add a Product",
+      "product_title": "Example Product Title",
+      "product_vendor": "Vendor",
+      "no_collections_html": "You don't have any collections to show here. <a href=\"/admin/custom_collections\">Add some collections</a> to go along with the default Frontpage.",
+      "add_collection": "Add a Collection",
+      "collection_title": "Example Collection Title",
+      "no_content": "This section doesn’t currently include any content. Add content to this section using the sidebar."
+    }
+  },
+  "section_faq": {
+    "title": "FAQs",
+    "question1": {
+      "title": "Where is your food made?",
+      "answer": "All Buddy Bites Kibble is made in Europe and regulated to AAFCO standards. You might have even seen the video of Ryan eating our food. We didn't ask him to do it, but it's safe to do so and he's a bit weird."
+    },
+    "question2": {
+      "title": "How do I know how much to order for my dog?",
+      "answer": "Take a look at our feeding guidelines per recipe and check our daily recommended feeding guideline (grams per day) corresponding to your dog's weight. Adjust as needed if your dog is on the skinnier or chunkier side."
+    },
+    "question3": {
+      "title": "Is Buddy Bites good for sensitive tummys?",
+      "answer": "Our Adult recipes are formulated with novel and premium proteins to suit allergy-prone dogs with probiotics, helping digestion and ensuring good poop."
+    },
+    "question4": {
+      "title": "What is the kibble size?",
+      "answer": "Our kibble sizes range from 10-14mm to suit dogs of all breeds, ages and sizes. Our smaller kibble is suitable for smaller breeds and older dogs with less teeth who still enjoy eating kibble. Our larger kibble is suitable for large dog breeds and dogs who need more encouragement to chew to aid digestion. The kibble size of each recipe can be found on each product page on our website."
+    },
+    "question5": {
+      "title": "What are the benefits of subscribing?",
+      "answer": "Convenience and cash!! By subscribing you receive a 15% discount to standard pricing, and the convenience of not having to go back into the website to order every month. It just arrives at your door as if by magic. On top of that we throw some extra goodies in your orders, first one guaranteed!"
+    },
+    "question6": {
+      "title": "Is the subscription flexible?",
+      "answer": "Absolutely! Our subscriptions are purely for convenience, they are completely flexible. You can pause, edit or cancel any time. You can change flavour, delivery date, frequency all in just a few clicks via your customer portal. Plus you will have dedicated support via Whatsapp if you have any questions or need anything changed. There is no charge for subscribing, just order your food, and let us deliver to your door on repeat at no extra cost."
+    },
+    "question7": {
+      "title": "How can I edit my subscription?",
+      "answer1": "You can pause, edit or cancel any time. You can change flavour, delivery date, frequency all in just a few clicks via your customer portal. Easy peasy, from when you log in, but ",
+      "video_link": "this video",
+      "answer2": " should give you some useful insights."
+    },
+    "question8": {
+      "title": "Can I try a sample first?",
+      "answer1": "Absolutely! We have ",
+      "sample_link": "sample bags",
+      "answer2": " available for each recipe. These sample bags are 500g, plenty for your pup to try a few meals and to be sure they like it!"
+    }
+  },
+  "section_newsletter": {
+    "title": "Buddy Bites Newsletter",
+    "description": "Sign up to newsletter to hear about upcoming recipes and offers.",
+    "subscribe": "Subscribe",
+    "email_placeholder": "Your email address"
+  },
+  "footer": {
+    "links": {
+      "title": "Links",
+      "faqs": "FAQs",
+      "reviews": "Reviews",
+      "store_locator": "Store Locator",
+      "blog": "Blog"
+    },
+    "information": {
+      "title": "Information",
+      "shipping_returns": "Shipping & Returns",
+      "privacy_policy": "Privacy Policy",
+      "terms_conditions": "Terms & Conditions"
+    },
+    "contact_us": "Contact Us",
+    "office_address": {
+      "title": "Office Address:",
+      "address": "Hua Fu Commercial Building, Queen’s Road West"
+    },
+    "get_connected": {
+      "title": "Get Connected",
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "whatsapp": "Whatsapp",
+      "socials": "Social Media"
+    }
+  },
+  "layout": {
+    "navigation": {
+      "menu": "Menu"
+    },
+    "drawers": {
+      "browse": "Browse",
+      "close_menu": "Close menu"
+    },
+    "cart": {
+      "title": "購物車 Cart",
+      "items_count": {
+        "one": "item",
+        "other": "items"
+      }
+    },
+    "customer": {
+      "account": "帳戶 Account",
+      "logged_in_as_html": "Logged in as {{ first_name }}",
+      "log_out": "登出 Log out",
+      "log_in": "登入 Log in",
+      "create_account": "建立帳戶 Create account"
+    },
+    "footer": {
+      "linklist_title": "Links",
+      "social_title": "Get Connected",
+      "newsletter_title": "Newsletter",
+      "accepted_payments": "Accepted Payments",
+      "designed_by": "Designed by WeTheme",
+      "read_more": "Read more"
+    }
+  },
+  "products": {
+    "general": {
+      "previous_product_html": "&larr; Previous Product",
+      "next_product_html": "Next Product &rarr;",
+      "from_text": "From",
+      "sale_price": "Sale price",
+      "regular_price": "Regular price",
+      "product_reviews": "Product reviews"
+    },
+    "product": {
+      "purchase_options": "Purchase Options",
+      "subscription_and_save": {
+        "title": "Subscription & Save",
+        "enjoy_discount": "",
+        "off": " OFF",
+        "free": "FREE",
+        "free_subscriber_gifts": "Free Subscriber Gifts",
+        "free_subscriber_gifts_subtext_1": "Limited Edition Gift",
+        "free_subscriber_gifts_subtext_2": "Holiday Surprises",
+        "free_subscriber_gifts_subtext_3": "Loyalty Program",
+        "subscriber_perks": "Subscriber Perks",
+        "subscriber_perks_subtext_1_part_1": "Save",
+        "subscriber_perks_subtext_1_part_2": " on every order",
+        "subscriber_perks_subtext_2": "Free Shipping",
+        "subscriber_perks_subtext_3": "Skip or Cancel anytime",
+        "subscriber_perks_subtext_4": "Change flavors, amounts, add-ons"
+      },
+      "one_time": "One Time",
+      "save": "Save",
+      "sold_out": "Sold Out",
+      "on_sale": "On Sale",
+      "on_sale_from_html": "{{ price }}",
+      "unavailable": "Unavailable",
+      "compare_at": "Compare at",
+      "quantity": "Quantity",
+      "add_to_cart": "Add to Cart",
+      "quick_shop": "Shop now",
+      "tags": "Tags",
+      "category": "Category",
+      "type": "Type",
+      "adult_kibbles": "Adult Kibbles",
+      "starter_packs": "Starter Packs",
+      "toppers": "Toppers",
+      "treats": "Treats",
+      "treats_full_title": "Buddy Bites Treats",
+      "flavour": "Flavour",
+      "recipe": "Recipe",
+      "choose_flavour": "Choose Flavour",
+      "choose_treat": "Choose Treat",
+      "duck": "Duck",
+      "salmon": "Salmon",
+      "lamb": "Lamb",
+      "turkey": "Turkey",
+      "puppy": "Puppy",
+      "have_puppy": "Have a puppy?",
+      "have_puppy_link_text": "🐶 Try our puppy kibbles",
+      "one_sampler_limit": "You can only order 1 Starter Pack",
+      "save_65percent": "Save 65%",
+      "nutrition": {
+        "title": "Nutrition",
+        "header": "Nutrition",
+        "subtext": "Our nutritionists and vets worked hard to come up with picky-eater-proof recipes, packed with highly digestible nutrients.",
+        "ingredients": "Ingredients",
+        "energy": "Energy",
+        "nutritional_content": "Nutritional Content",
+        "key": "Key"
+      },
+      "feeding_guidelines": {
+        "title": "Feeding Guidelines",
+        "header": "What does my buddy need?",
+        "header_toppers": "Feeding Guidelines",
+        "scoop_size": "*Buddy Bites Scoop Approx = 110g",
+        "scoop_size_2": "*In grams per day terms",
+        "toppers": {
+          "line_1": "Our toppers are intended for intermittent or supplemental feeding.",
+          "line_2": "The Caloric intake should not exceed 10% of your pups total daily requirement.",
+          "line_3": "Just add them to a delicious bowl of kibble and watch them lick it clean."
+        },
+        "treats": {
+          "header": "How much can my buddy have?",
+          "subtext": "Treats are for occasional feeding and are not meant to replace a balanced diet. Treats should not make up more than 10% of your dog's daily diet.",
+          "dental_subtext": "Dental Sticks are not suitable for puppies. Adult dogs should not consume more than one per day",
+          "treat_size": "Treat Size",
+          "treat_size_subtext": "Medium sized: These meaty treats are chunky, but easy to break into smaller pieces. Suitable for Great Danes all the way to Pom's."
+        }
+      },
+      "faq": {
+        "title": "FAQs",
+        "header": "all you need to know",
+        "shipping": {
+          "title": "Shipping",
+          "answer": "Standard shipping takes 2-3 working days and is FREE on orders over $250. Same day shipping must be ordered before 12pm and cost $60. No deliveries on Sundays and Public Holidays."
+        },
+        "flexible_subscription": {
+          "title": "Flexible Subscription",
+          "answer": "Your subscription is completely flexible - you can edit, pause or cancel your recurring order at any time, at no extra cost. Simply log in to your account or contact our team, who will be happy to help."
+        },
+        "giving_back": {
+          "title": "Giving Back",
+          "answer": "On all kibble orders, for every 2kg we sell, we donate 1kg to shelters.We've now donated over 1 million meals all thanks to you!"
+        },
+        "toppers_no_kibbles": {
+          "title": "Can I give this to my dog with no kibble?",
+          "answer": "Absolutely! They’re wholesome enough to serve on their own, but they don’t have the full vitamin and nutrient stack of kibble — so think of them as a tasty treat, not a total diet."
+        },
+        "toppers_heat_up": {
+          "title": "Do I need to heat them up?",
+          "answer": "Nope. Just pop, pour, and watch your dog’s eyes light up."
+        },
+        "toppers_nasties": {
+          "title": "Are there any nasties inside?",
+          "answer": "Zero. No artificial colours, flavours, or fillers — just honest ingredients."
+        },
+        "toppers_open": {
+          "title": "What happens after I open it?",
+          "answer": "Fridge it, finish it within 2 days, and enjoy the happy tail wags in between."
+        },
+        "toppers_shipping": {
+          "title": "How do we Ship?",
+          "answer": "Standard shipping takes 2/3 working days and is free on orders over $300. Or, if you've got a hungry pup, we can do same day delivery"
+        },
+        "footer": {
+          "text": "Want to know more? Head over to our full",
+          "link": "FAQs page"
+        }
+      },
+      "ingredients_toppers": {
+        "title": "A Fresh addition to your dogs mealtime",
+        "subtext": "Our toppers are steam cooked to keep them both delicious and packed full of nutrients."
+      },
+      "ingredients_kibbles": {
+        "title": "A healthy dog is a happy dog",
+        "subtext": "That's why we have used a perfect blend of proteins and nutrients to ensure dogs of all shapes, sizes and breeds are happy and full of energy."
+      },
+      "ingredients_treats": {
+        "title": "Ingredients you can actually understand!",
+        "subtext": "Our treats are filled with a handful of nutritious ingredients and absolutely no nonsense."
+      },
+      "overall_benefits_toppers": {
+        "vet_backed": "Vet backed formula",
+        "gut_friendly": "Gut-Friendly Prebiotics",
+        "freshly_made": "Freshly Made",
+        "premium_traceable": "Premium, traceable ingredients",
+        "loved_by_fussy_eaters": "Loved by fussy eaters"
+      },
+      "overall_benefits_kibbles": {
+        "vet_backed": "Vet backed formula",
+        "gut_friendly": "Gut-Friendly Prebiotics",
+        "made_in_europe": "Made and packaged in Europe",
+        "premium_traceable": "Premium, traceable ingredients",
+        "loved_by_fussy_eaters": "Loved by fussy eaters"
+      },
+      "overall_benefits_treats": {
+        "vet_backed": "Vet backed formula",
+        "gut_friendly": "Gut-Friendly Prebiotics",
+        "made_in_europe": "Made and packaged in Europe",
+        "premium_traceable": "Premium, traceable ingredients",
+        "loved_by_fussy_eaters": "Loved by fussy eaters"
+      },
+      "complete_your_meal": "Complete your meal",
+      "we_give_back": {
+        "title": "We give back",
+        "subtext": "with every order",
+        "learn_more": "Learn more"
+      },
+      "reviews": "reviews"
+    }
+  },
+  "vet_backed": {
+    "title": "Vet Recommended",
+    "text_1_full": "Dr. Tiffany Harries work alongside our U.S. based nutritionist to make sure Buddy Bites has all the nutrients and essential protein to let your dog thrive!",
+    "text_1_part_1": " work alongside our ",
+    "text_1_part_2": " to make sure Buddy Bites has all the nutrients and essential protein to let your dog thrive!",
+    "nutritionist": "U.S. based nutritionist",
+    "text_2": "With has over 10 years of experience, Dr. Harris worked in SA for 4 years before moving to Hong Kong, where she has worked for 7 years. She is registered on the Hong Kong Veterinary Surgeons Board.",
+    "bio_1": "Bachelor Veterinary Biology",
+    "bio_2": "Bachelor of Veterinary Science"
+  },
+  "gift_cards": {
+    "issued": {
+      "title": "Here's your {{ value }} gift card for {{ shop }}!",
+      "subtext": "Here's your gift card!",
+      "disabled": "Disabled",
+      "expired": "Expired on {{ expiry }}",
+      "active": "Expires on {{ expiry }}",
+      "redeem": "Use this code at checkout to redeem your gift card",
+      "shop_link": "Start shopping",
+      "print": "Print",
+      "add_to_apple_wallet": "Add to Apple Wallet"
+    }
+  },
+  "date_formats": {
+    "month_day_year": "%B %d, %Y"
+  },
+  "coming_soon": {
+    "general": {
+      "title": "Please Log In",
+      "opening_soon": "Will be opening soon...",
+      "thanks_mailing": "Thanks for signing up!",
+      "find_out": "Find out when we open",
+      "password": "Enter store using password",
+      "store_owner": "Are you the store owner?",
+      "store_owner_html": "<a href=\"/admin\">Log in here</a> or <a href=\"/admin/online_store/preferences?tutorial=unlock\">change your password settings</a>",
+      "continue": "Continue",
+      "powered_by_html": "This store will be powered by <a href=\"http://www.shopify.com\">Shopify</a>"
+    }
+  },
+  "shopify": {
+    "checkout": {
+      "marketing": {
+        "accept_marketing_checkbox_label": "我願意接受有關最新獨家優惠資訊 Keep me up to date with news and exclusive offers via email or Whatsapp."
+      },
+      "contact": {
+        "phone_label": "聯絡電話 Phone number for order and delivery updates",
+        "optional_phone_label": "聯絡電話 Phone number for order and delivery updates",
+        "phone_tooltip": "We may also send news and offers (per checkbox above) ",
+        "address_title": "詳細地址 Address",
+        "shipping_address_title": "收貨地址 Shipping Address",
+        "email_label": "電郵 Email",
+        "email_placeholder": "電郵 Email",
+        "first_name_label": "名字 First Name",
+        "last_name_label": "姓氏 Last Name",
+        "company_label": "狗狗名字 Dog's Name",
+        "address1_label": "街道/屋村Address",
+        "address2_label": "大廈名稱及樓層單位Apartment Name & Unit",
+        "city_label": "城市 City",
+        "country_label": "國家 Country",
+        "region_label": "地區 Region",
+        "region_placeholder": "地區 Region",
+        "title": "帳戶資料 Information",
+        "stored_addresses_label": "儲存地址 Save addresses",
+        "new_address_label": "使用新地址 Use a new address"
+      },
+      "general": {
+        "pay_now_button_label": "付款 Pay Now",
+        "page_title": "結帳 Checkout",
+        "cart": "購物車 Cart",
+        "continue_to_payment_method": "下一步 Continue to payment",
+        "choose_payment_method": "選擇付款方式 Choose payment method",
+        "choose_billing_address": "選擇帳單地址 Choose billing address",
+        "back_to_payment_method": "返回 Back",
+        "continue_to_shipping_method": "下一步 Continue to shipping",
+        "back_to_shipping_method": "返回 Back",
+        "back_to_cart": "返回 Back",
+        "back_to_contact_information": "返回 Back",
+        "authenticate_purchase_button_label": "驗證付款 Authenticate Payment"
+      },
+      "shipping": {
+        "title": "送貨詳情 Shipping",
+        "shipping_method_title": "送貨方式 Shipping Method"
+      },
+      "payment": {
+        "title": "更多付款方式 Payment Options",
+        "card_number_placeholder": "信用卡號碼 Card number",
+        "name_on_card_placeholder": "持卡人姓名 Name on card",
+        "card_expiry_placeholder": "有效日期 expiry date (MM/YY)",
+        "card_verification_value_placeholder": "安全碼 Security Code",
+        "same_billing_address_label": "跟送貨地址相同 Same as shipping address",
+        "different_billing_address_label": "輸入新的帳單地址 Different billing address",
+        "billing_address_title": "帳單地址 Billing address"
+      },
+      "customer_account": {
+        "have_an_account_label": "已有帳戶 Already had an account?",
+        "sign_in_link_label": "登入 Log in",
+        "sign_out_link_label": "登出 Log out",
+        "save_my_information_label": "儲存資料方便下次登入 Save this information for next time"
+      },
+      "delivery_options": {
+        "shipping_address": "送貨地址 Shipping address",
+        "ship": "寄往 Ship"
+      },
+      "order_summary": {
+        "discount_placeholder": "請輸入優惠碼 (如有) Discount ",
+        "remove_discount_label": "移除優惠碼 Remove discount",
+        "free_shipping_discount_label": "免運費 Free shipping",
+        "applied_free_shipping_discount_label": "已使用 Applied",
+        "apply_discount_button_label": "應用 Apply",
+        "subtotal_label": "小計 Subtotal",
+        "shipping_label": "運費 Shipping",
+        "total_label": "總和 Total",
+        "discount_label": "使用優惠碼(如有) Discount Code",
+        "title": "訂單概覽 Order Summary",
+        "expand_order_summary": "顯示訂單資料 Show order summary",
+        "collapse_order_summary": "隱藏訂單資料 Hide order summary",
+        "recurring_subtotal_label": "Recurring subtotal 定期訂購小計",
+        "recurring_total_label": "Recurring total 定期訂購總和"
+      },
+      "review": {
+        "blocks": {
+          "contact_method_title": "帳戶資料 Contact",
+          "shipping_address_title": "寄往 Ship to",
+          "shipping_method_title": "送貨方式 Method"
+        }
+      },
+      "payment_gateway": {
+        "credit_card_label": "信用卡 Credit card"
+      },
+      "field_errors": {
+        "address_company_blank": "Please enter your dogs name(s)!"
+      }
+    }
+  },
+  "customer_accounts": {
+    "order_details": {
+      "contact": "帳戶資料 Contact"
+    }
+  }
+}

@@ -1,0 +1,750 @@
+{% javascript %}
+  const shopLink = document.getElementById('shopLink');
+  const shopMegaMenu = document.getElementById('shopMegaMenu');
+  const learnLink = document.getElementById('learnLink');
+  const learnMegaMenu = document.getElementById('learnMegaMenu');
+
+  const kibblesCategory = document.getElementById('kibblesCategory');
+  const kibblesContent = document.getElementById('kibblesContent');
+  const treatsCategory = document.getElementById('treatsCategory');
+  const treatsContent = document.getElementById('treatsContent');
+  const toppersCategory = document.getElementById('toppersCategory');
+  const toppersContent = document.getElementById('toppersContent');
+  // const merchandiseCategory = document.getElementById('merchandiseCategory');
+  // const merchandiseContent = document.getElementById('merchandiseContent');
+
+  kibblesCategory.addEventListener('mouseenter', () => {
+    kibblesContent.classList.remove('hidden');
+    kibblesContent.classList.add('grid');
+    treatsContent.classList.add('hidden');
+    treatsContent.classList.remove('grid');
+    toppersContent.classList.add('hidden');
+    toppersContent.classList.remove('grid');
+    // merchandiseContent.classList.add('hidden');
+    // merchandiseContent.classList.remove('grid');
+  });
+
+  treatsCategory.addEventListener('mouseenter', () => {
+    treatsContent.classList.remove('hidden');
+    treatsContent.classList.add('grid');
+    kibblesContent.classList.add('hidden');
+    kibblesContent.classList.remove('grid');
+    toppersContent.classList.add('hidden');
+    toppersContent.classList.remove('grid');
+    // merchandiseContent.classList.add('hidden');
+    // merchandiseContent.classList.remove('grid');
+  });
+
+  toppersCategory.addEventListener('mouseenter', () => {
+    toppersContent.classList.remove('hidden');
+    toppersContent.classList.add('grid');
+    kibblesContent.classList.add('hidden');
+    kibblesContent.classList.remove('grid');
+    treatsContent.classList.add('hidden');
+    treatsContent.classList.remove('grid');
+  });
+
+  // merchandiseCategory.addEventListener('mouseenter', () => {
+  //   merchandiseContent.classList.remove('hidden');
+  //   merchandiseContent.classList.add('grid');
+  //   kibblesContent.classList.add('hidden');
+  //   kibblesContent.classList.remove('grid');
+  //   treatsContent.classList.add('hidden');
+  //   treatsContent.classList.remove('grid');
+  // });
+
+  const shopMobileDropdownBtn = document.getElementById('shopMobileDropdownBtn');
+  const learnMobileDropdownBtn = document.getElementById('learnMobileDropdownBtn');
+  const shopMobileDropdown = document.getElementById('shopMobileDropdown');
+  const learnMobileDropdown = document.getElementById('learnMobileDropdown');
+  const shopArrow = document.getElementById('shopArrow');
+  const learnArrow = document.getElementById('learnArrow');
+
+  shopMobileDropdownBtn.addEventListener('click', () => {
+    shopArrow.classList.toggle('rotate-180');
+    shopMobileDropdown.classList.toggle('hidden');
+    shopMobileDropdown.classList.toggle('grid');
+  });
+  learnMobileDropdownBtn.addEventListener('click', () => {
+    learnArrow.classList.toggle('rotate-180');
+    learnMobileDropdown.classList.toggle('hidden');
+    learnMobileDropdown.classList.toggle('flex');
+  });
+
+  const mobileMenuButton = document.getElementById('mobileMenuButton');
+  const mobileDropdown = document.getElementById('mobileDropdown');
+  const mobileDropdownOverlay = document.getElementById('mobileDropdownOverlay');
+
+  mobileMenuButton.addEventListener('click', () => {
+    mobileDropdown.classList.toggle('hidden');
+  });
+
+  mobileDropdownOverlay.addEventListener('click', () => {
+    mobileDropdown.classList.toggle('hidden');
+  });
+{% endjavascript %}
+
+{% comment %} Desktop Nav {% endcomment %}
+<div class="sticky hidden h-full w-full bg-[#193C6B] text-white lg:top-0 lg:z-20 lg:block">
+  <div class="container relative mx-auto px-10 py-5">
+    <div class="flex items-center justify-between">
+      <div class="flex h-full items-center justify-start gap-5">
+        <div class="group relative">
+          {% comment %} Shop Link {% endcomment %}
+          <a href="{{ all_products['buddy-bites-adult-turkey'].url }}" id="shopLink">
+            <div class="rounded-full bg-[#98c9eb] px-5 py-2">
+              <p class="text-[20px] font-light uppercase text-white en:font-museo">{{ 'navbar.shop.title' | t }}</p>
+            </div>
+          </a>
+          {% comment %} Shop MegaMenu {% endcomment %}
+          <div class="absolute left-0 top-[calc(100%+20px)] hidden before:absolute before:left-0 before:top-[-25px] before:block before:h-[25px] before:w-full before:bg-transparent before:content-[''] md:group-hover:block">
+            <div
+              id="shopMegaMenu"
+              class="grid h-[260px] w-[clamp(900px,80vw,1200px)] grid-cols-[20%_1fr] overflow-hidden rounded-bl-[40px] rounded-br-[40px]"
+            >
+              <div class="divide-y-3 flex flex-col justify-between divide-y-[3px] divide-[#98c9eb]">
+                <a id="kibblesCategory" href="{{ all_products['buddy-bites-adult-lamb'].url }}">
+                  <p class="bg-[#193C6B] py-7 text-center text-[20px] font-light uppercase text-white hover:bg-[#98c9eb] en:font-museo">
+                    {{ 'navbar.shop.kibbles.title' | t }}
+                  </p>
+                </a>
+                <a id="treatsCategory" href="{{ all_products['buddy-bites-beef-blueberry-air-dried-treats'].url }}">
+                  <p class="bg-[#193C6B] py-7 text-center text-[20px] font-light uppercase text-white hover:bg-[#98c9eb] en:font-museo">
+                    {{ 'navbar.shop.treats.title' | t }}
+                  </p>
+                </a>
+                <a id="toppersCategory" href="{{ all_products['fresh-toppers-chicken-vegetables'].url }}">
+                  <p class="bg-[#193C6B] py-7 text-center text-[20px] font-light uppercase text-white hover:bg-[#98c9eb] en:font-museo">
+                    {{ 'navbar.shop.toppers.title' | t }}
+                  </p>
+                </a>
+                {% comment %}
+                  <a id="merchandiseCategory" href="{{ collections.merchandise.url }}">
+                    <p class="bg-[#193C6B] py-7 text-center text-[20px] font-light uppercase text-white hover:bg-[#98c9eb] en:font-museo">
+                      {{ 'navbar.shop.merchandise.title' | t }}
+                    </p>
+                  </a>
+                {% endcomment %}
+              </div>
+              <div class="h-full overflow-hidden">
+                {% comment %} Kibbles {% endcomment %}
+                <div id="kibblesContent" class="grid h-full grid-cols-5 gap-2 bg-[#98c9eb] px-6 py-4">
+                  <a
+                    href="{{ all_products['buddy-bites-adult-turkey'].url }}"
+                    class="flex h-full flex-col items-center gap-2 rounded-xl bg-[var(--bg-Color)] py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
+                    style="--bg-Color: {{ all_products['buddy-bites-adult-turkey'].metafields.custom.nutrition.value.middle_section_background_color }}"
+                  >
+                    <p class="text-center font-mukta text-[20px] uppercase text-[#193C6B]">
+                      {{ 'navbar.shop.kibbles.options.turkey' | t }}
+                    </p>
+                    <img
+                      src="{{ 'b8794553c307108105a2b37c27f4f881_2.png' | file_img_url: '200x200' }}"
+                      srcset="{{ 'b8794553c307108105a2b37c27f4f881_2.png' | file_img_url: '100x100' }} 100w, {{ 'b8794553c307108105a2b37c27f4f881_2.png' | file_img_url: '200x200' }} 200w"
+                      sizes="(max-width: 768px) 100px, 200px"
+                      alt="{{ 'navbar.shop.kibbles.options.turkey' | t }}"
+                      width="200"
+                      height="200"
+                      loading="lazy"
+                    >
+                  </a>
+                  <a
+                    href="{{ all_products['buddy-bites-duck'].url }}"
+                    class="flex h-full flex-col items-center gap-2 rounded-xl bg-[var(--bg-Color)] py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
+                    style="--bg-Color: {{ all_products['buddy-bites-duck'].metafields.custom.nutrition.value.middle_section_background_color }}"
+                  >
+                    <p class="text-center font-mukta text-[20px] uppercase text-[#193C6B]">
+                      {{ 'navbar.shop.kibbles.options.duck' | t }}
+                    </p>
+                    <img
+                      src="{{ 'BB_Duck_FOP.png' | file_img_url: '200x200' }}"
+                      srcset="{{ 'BB_Duck_FOP.png' | file_img_url: '100x100' }} 100w, {{ 'BB_Duck_FOP.png' | file_img_url: '200x200' }} 200w"
+                      sizes="(max-width: 768px) 100px, 200px"
+                      alt="{{ 'navbar.shop.kibbles.options.duck' | t }}"
+                      width="200"
+                      height="200"
+                      loading="lazy"
+                    >
+                  </a>
+                  <a
+                    href="{{ all_products['buddy-bites-lamb'].url }}"
+                    class="flex h-full flex-col items-center gap-2 rounded-xl bg-[var(--bg-Color)] py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
+                    style="--bg-Color: {{ all_products['buddy-bites-lamb'].metafields.custom.nutrition.value.middle_section_background_color }}"
+                  >
+                    <p class="text-center font-mukta text-[20px] uppercase text-[#193C6B]">
+                      {{ 'navbar.shop.kibbles.options.lamb' | t }}
+                    </p>
+                    <img
+                      src="{{ 'BB_Lamb_FOP.png' | file_img_url: '200x200' }}"
+                      srcset="{{ 'BB_Lamb_FOP.png' | file_img_url: '100x100' }} 100w, {{ 'BB_Lamb_FOP.png' | file_img_url: '200x200' }} 200w"
+                      sizes="(max-width: 768px) 100px, 200px"
+                      alt="{{ 'navbar.shop.kibbles.options.lamb' | t }}"
+                      width="200"
+                      height="200"
+                      loading="lazy"
+                    >
+                  </a>
+                  <a
+                    href="{{ all_products['buddy-bites-adult-salmon'].url }}"
+                    class="flex h-full flex-col items-center gap-2 rounded-xl bg-[var(--bg-Color)] py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
+                    style="--bg-Color: {{ all_products['buddy-bites-adult-salmon'].metafields.custom.nutrition.value.middle_section_background_color }}"
+                  >
+                    <p class="text-center font-mukta text-[20px] uppercase text-[#193C6B]">
+                      {{ 'navbar.shop.kibbles.options.salmon' | t }}
+                    </p>
+                    <img
+                      src="{{ 'BB_Salmon_FOP.png' | file_img_url: '200x200' }}"
+                      srcset="{{ 'BB_Salmon_FOP.png' | file_img_url: '100x100' }} 100w, {{ 'BB_Salmon_FOP.png' | file_img_url: '200x200' }} 200w"
+                      sizes="(max-width: 768px) 100px, 200px"
+                      alt="{{ 'navbar.shop.kibbles.options.salmon' | t }}"
+                      width="200"
+                      height="200"
+                      loading="lazy"
+                    >
+                  </a>
+                  <a
+                    href="{{ all_products['buddy-bites-puppy'].url }}"
+                    class="flex h-full flex-col items-center gap-2 rounded-xl bg-[var(--bg-Color)] py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
+                    style="--bg-Color: #c5dcf0"
+                  >
+                    <p class="text-center font-mukta text-[20px] uppercase text-[#193C6B]">
+                      {{ 'navbar.shop.kibbles.options.puppy' | t }}
+                    </p>
+                    <img
+                      src="{{ 'BB_Puppy_FOP_1.png' | file_img_url: '200x200' }}"
+                      srcset="{{ 'BB_Puppy_FOP_1.png' | file_img_url: '100x100' }} 100w, {{ 'BB_Puppy_FOP_1.png' | file_img_url: '200x200' }} 200w"
+                      sizes="(max-width: 768px) 100px, 200px"
+                      alt="{{ 'navbar.shop.kibbles.options.puppy' | t }}"
+                      width="200"
+                      height="200"
+                      loading="lazy"
+                    >
+                  </a>
+                </div>
+                {% comment %} Treats {% endcomment %}
+                <div id="treatsContent" class="hidden grid-cols-4 gap-2 bg-[#98c9eb] px-6 py-4">
+                  <a
+                    href="{{ all_products['buddy-bites-beef-blueberry-air-dried-treats'].url }}"
+                    class="flex h-full flex-col items-center gap-2 rounded-xl bg-[#e4e0f1] py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
+                  >
+                    <p class="text-center font-mukta text-[20px] uppercase text-[#193C6B]">
+                      {{ 'navbar.shop.treats.options.beef' | t }}
+                    </p>
+                    <img
+                      src="{{ 'BB_PremiumTreats_Beef_Berry_FRONT.png' | file_img_url: "180x" }}"
+                      alt="{{ 'navbar.shop.treats.options.beef' | t }}"
+                      class="max-w-[180px]"
+                    >
+                  </a>
+                  <a
+                    href="{{ all_products['buddy-bites-chicken-manuka-honey-air-dried-treats'].url }}"
+                    class="flex h-full flex-col items-center gap-2 rounded-xl bg-[#f2c49b] py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
+                  >
+                    <p class="text-center font-mukta text-[20px] uppercase text-[#193C6B]">
+                      {{ 'navbar.shop.treats.options.chicken' | t }}
+                    </p>
+                    <img
+                      src="{{ 'BB_PremiumTreats_Chicken_Honey_FRONT.png' | file_img_url: "180x" }}"
+                      alt="{{ 'navbar.shop.treats.options.chicken' | t }}"
+                      class="max-w-[180px]"
+                    >
+                  </a>
+                  <a
+                    href="{{ all_products['buddy-bites-dental-chews-sticks'].url }}"
+                    class="flex h-full flex-col items-center gap-2 rounded-xl bg-[#abdae4] py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
+                  >
+                    <p class="text-center font-mukta text-[20px] uppercase text-[#193C6B]">
+                      {{ 'navbar.shop.treats.options.dental' | t }}
+                    </p>
+                    <img
+                      src="{{ 'Dental_Sticks.png' | file_img_url: "180x" }}"
+                      alt="{{ 'navbar.shop.treats.options.dental' | t }}"
+                      class="max-w-[180px]"
+                    >
+                  </a>
+                  <a
+                    href="{{ collections.bundles.url }}"
+                    class="flex h-full flex-col items-center gap-2 rounded-xl bg-[#b1d7f1] py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
+                  >
+                    <p class="text-center font-mukta text-[20px] uppercase text-[#193C6B]">
+                      {{ 'navbar.shop.treats.options.bundles' | t }}
+                    </p>
+                    <img
+                      src="{{ '119.png' | file_img_url: "180x" }}"
+                      alt="{{ 'navbar.shop.treats.options.bundles' | t }}"
+                      class="max-w-[180px]"
+                    >
+                  </a>
+                </div>
+                {% comment %} Toppers {% endcomment %}
+                <div
+                  id="toppersContent"
+                  class="hidden h-full grid-cols-[repeat(2,fit-content(250px))] gap-2 bg-[#98c9eb] px-[150px] py-4"
+                >
+                  <a
+                    href="{{ all_products['fresh-toppers-beef-vegetables'].url }}"
+                    class="relative h-full overflow-hidden rounded-xl bg-[#e4e0f1] hover:outline hover:outline-2 hover:outline-[#193C6B]"
+                  >
+                    <p class="absolute left-1/2 top-[10px] w-full -translate-x-1/2 text-center font-mukta text-[20px] uppercase text-[#193C6B]">
+                      {{ 'navbar.shop.toppers.options.beef' | t }}
+                    </p>
+                    <img
+                      src="{{ '1_3e1edd09-307d-4b37-af46-8e2ee0cca0c0.png' | file_img_url: "master" }}"
+                      alt="{{ 'navbar.shop.toppers.options.beef' | t }}"
+                      class="object-top"
+                    >
+                  </a>
+                  <a
+                    href="{{ all_products['fresh-toppers-chicken-vegetables'].url }}"
+                    class="relative h-full overflow-hidden rounded-xl bg-[#e4e0f1] hover:outline hover:outline-2 hover:outline-[#193C6B]"
+                  >
+                    <p class="absolute left-1/2 top-[10px] w-full -translate-x-1/2 text-center font-mukta text-[20px] uppercase text-[#193C6B]">
+                      {{ 'navbar.shop.toppers.options.chicken' | t }}
+                    </p>
+                    <img
+                      src="{{ '8_5ab52882-5f65-4b5e-a2e9-97a58ba09ee0.png' | file_img_url: "master" }}"
+                      alt="{{ 'navbar.shop.toppers.options.chicken' | t }}"
+                      class="object-top"
+                    >
+                  </a>
+                </div>
+                {% comment %} Merchandise {% endcomment %}
+                {% comment %}
+                  <div id="merchandiseContent" class="hidden h-full grid-cols-[30%_1fr] gap-2 bg-[#98c9eb] px-[150px] py-4">
+                    <a
+                      href="{{ collections.all.url }}"
+                      class="relative flex h-full flex-col items-center gap-2 overflow-hidden rounded-xl bg-[#e4e0f1] py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
+                    >
+                      <p class="z-10 text-center font-mukta text-[20px] uppercase text-[#193C6B]">
+                        {{ 'navbar.shop.merchandise.options.all' | t }}
+                      </p>
+                      <img
+                        src="{{ 'ab66e239e3379348e1ea06e8571b16e8_1.png' | file_img_url: "master" }}"
+                        alt="{{ 'navbar.shop.merchandise.options.all' | t }}"
+                        class="absolute inset-0 h-full w-full object-cover"
+                      >
+                    </a>
+                    <div class="grid grid-cols-4 gap-2">
+                      <a
+                        href="{{ all_products.poop-bags.url }}"
+                        class="relative flex h-full flex-col items-center gap-2 overflow-hidden rounded-xl py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
+                      >
+                        <p class="z-10 text-center font-mukta text-[14px] uppercase text-[#193C6B]">
+                          {{ 'navbar.shop.merchandise.options.poop_bag' | t }}
+                        </p>
+                        <img
+                          src="{{ 'DSC06699_copy.jpg' | file_img_url: "master" }}"
+                          alt="{{ 'navbar.shop.merchandise.options.poop_bag' | t }}"
+                          class="absolute inset-0 h-full w-full object-cover"
+                        >
+                      </a>
+                      <a
+                        href="{{ all_products['buddy-bites-scoops'].url }}"
+                        class="relative flex h-full flex-col items-center gap-2 overflow-hidden rounded-xl py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
+                      >
+                        <p class="z-10 text-center font-mukta text-[14px] uppercase text-[#193C6B]">
+                          {{ 'navbar.shop.merchandise.options.scoop' | t }}
+                        </p>
+                        <img
+                          src="{{ 'Scoop5.jpg' | file_img_url: "master" }}"
+                          alt="{{ 'navbar.shop.merchandise.options.scoop' | t }}"
+                          class="absolute inset-0 h-full w-full object-cover"
+                        >
+                      </a>
+                      <a
+                        href="{{ all_products['tennis'].url }}"
+                        class="relative flex h-full flex-col items-center gap-2 overflow-hidden rounded-xl py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
+                      >
+                        <p class="z-10 text-center font-mukta text-[14px] uppercase text-[#193C6B]">
+                          {{ 'navbar.shop.merchandise.options.tennis_ball' | t }}
+                        </p>
+                        <img
+                          src="{{ 'tennis_ball.png' | file_img_url: "master" }}"
+                          alt="{{ 'navbar.shop.merchandise.options.tennis_ball' | t }}"
+                          class="absolute inset-0 h-full w-full object-cover"
+                        >
+                      </a>
+                      <a
+                        href="{{ all_products['poo-bag-holder'].url }}"
+                        class="relative flex h-full flex-col items-center gap-2 overflow-hidden rounded-xl py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
+                      >
+                        <p class="z-10 text-center font-mukta text-[14px] uppercase text-[#193C6B]">
+                          {{ 'navbar.shop.merchandise.options.poop_bag_holder' | t }}
+                        </p>
+                        <img
+                          src="{{ 'poop_bag.png' | file_img_url: "master" }}"
+                          alt="{{ 'navbar.shop.merchandise.options.poop_bag_holder' | t }}"
+                          class="absolute inset-0 h-full w-full object-cover"
+                        >
+                      </a>
+                      <a
+                        href="{{ all_products['umbrella'].url }}"
+                        class="relative flex h-full flex-col items-center gap-2 overflow-hidden rounded-xl py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
+                      >
+                        <p class="z-10 text-center font-mukta text-[14px] uppercase text-[#193C6B]">
+                          {{ 'navbar.shop.merchandise.options.umbrella' | t }}
+                        </p>
+                        <img
+                          src="{{ 'umbr_95e60054-8b61-4a5b-a95e-9876887b47cc.png' | file_img_url: "master" }}"
+                          alt="{{ 'navbar.shop.merchandise.options.umbrella' | t }}"
+                          class="absolute inset-0 h-full w-full object-cover"
+                        >
+                      </a>
+                      <a
+                        href="{{ all_products['portable-bowl'].url }}"
+                        class="relative flex h-full flex-col items-center gap-2 overflow-hidden rounded-xl py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
+                      >
+                        <p class="z-10 text-center font-mukta text-[14px] uppercase text-[#193C6B]">
+                          {{ 'navbar.shop.merchandise.options.portable_bowl' | t }}
+                        </p>
+                        <img
+                          src="{{ 'portable_bowl.png' | file_img_url: "master" }}"
+                          alt="{{ 'navbar.shop.merchandise.options.portable_bowl' | t }}"
+                          class="absolute inset-0 h-full w-full object-cover"
+                        >
+                      </a>
+                      <a
+                        href="{{ all_products['tote-bag'].url }}"
+                        class="relative flex h-full flex-col items-center gap-2 overflow-hidden rounded-xl py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
+                      >
+                        <p class="z-10 text-center font-mukta text-[14px] uppercase text-[#193C6B]">
+                          {{ 'navbar.shop.merchandise.options.tote_bag' | t }}
+                        </p>
+                        <img
+                          src="{{ '3bc2d61e9042b753f6922f64579a5011.png' | file_img_url: "master" }}"
+                          alt="{{ 'navbar.shop.merchandise.options.tote_bag' | t }}"
+                          class="absolute inset-0 h-full w-full object-cover"
+                        >
+                      </a>
+                      <a
+                        href="{{ all_products['buddy-bites-steel-bowl'].url }}"
+                        class="relative flex h-full flex-col items-center gap-2 overflow-hidden rounded-xl py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
+                      >
+                        <p class="z-10 text-center font-mukta text-[14px] uppercase text-[#193C6B]">
+                          {{ 'navbar.shop.merchandise.options.steel_bowl' | t }}
+                        </p>
+                        <img
+                          src="{{ 'steel_bowl.png' | file_img_url: "master" }}"
+                          alt="{{ 'navbar.shop.merchandise.options.steel_bowl' | t }}"
+                          class="absolute inset-0 h-full w-full object-cover"
+                        >
+                      </a>
+                    </div>
+                  </div>
+                {% endcomment %}
+              </div>
+            </div>
+          </div>
+        </div>
+        {% comment %} Learn Link {% endcomment %}
+        <div class="group relative">
+          <button href="" id="learnLink">
+            <p class="rounded-full px-5 py-2 text-[20px] font-light uppercase text-white hover:bg-[#98c9eb] en:font-museo">
+              {{ 'navbar.learn_more.title' | t }}
+            </p>
+          </button>
+          {% comment %} Learn MegaMenu {% endcomment %}
+          <div class="absolute left-0 top-[calc(100%+20px)] hidden h-full w-[clamp(900px,80vw,1200px)] before:absolute before:left-0 before:top-[-25px] before:block before:h-[25px] before:w-full before:bg-transparent before:content-[''] md:-translate-x-[10%] md:group-hover:block">
+            <div
+              id="learnMegaMenu"
+              class="grid grid-cols-6 gap-3 overflow-hidden rounded-bl-[40px] rounded-br-[40px] bg-[#98c9eb] px-6 py-4"
+            >
+              <a
+                href="{{ pages.about.url }}"
+                class="relative overflow-hidden rounded-xl hover:outline hover:outline-2 hover:outline-[#193C6B]"
+              >
+                <p class="absolute left-0 top-0 z-10 w-full py-2 text-center font-mukta text-[20px] uppercase text-[#193C6B]">
+                  {{ 'navbar.learn_more.options.about_us' | t }}
+                </p>
+                <img
+                  src="{{ 'about.png' | file_img_url: "master" }}"
+                  alt="{{ 'navbar.learn_more.options.about_us' | t }}"
+                  class="relative h-full w-full object-cover"
+                >
+              </a>
+              <a
+                href="{{ pages.nutrition.url }}"
+                class="relative overflow-hidden rounded-xl hover:outline hover:outline-2 hover:outline-[#193C6B]"
+              >
+                <p class="absolute left-0 top-0 z-10 w-full py-2 text-center font-mukta text-[20px] uppercase text-[#193C6B]">
+                  {{ 'navbar.learn_more.options.nutrition' | t }}
+                </p>
+                <img
+                  src="{{ 'nutr-1.png' | file_img_url: "master" }}"
+                  alt="{{ 'navbar.learn_more.options.nutrition' | t }}"
+                  class="relative h-full w-full object-cover"
+                >
+              </a>
+              <a
+                href="{{ pages.faqs.url }}"
+                class="relative overflow-hidden rounded-xl hover:outline hover:outline-2 hover:outline-[#193C6B]"
+              >
+                <p class="absolute left-0 top-0 z-10 w-full py-2 text-center font-mukta text-[20px] uppercase text-[#193C6B]">
+                  {{ 'navbar.learn_more.options.faqs' | t }}
+                </p>
+                <img
+                  src="{{ 'faq.png' | file_img_url: "master" }}"
+                  alt="{{ 'navbar.learn_more.options.faqs' | t }}"
+                  class="relative h-full w-full object-cover"
+                >
+              </a>
+              <a
+                href="{{ pages.store-locator.url }}"
+                class="relative overflow-hidden rounded-xl hover:outline hover:outline-2 hover:outline-[#193C6B]"
+              >
+                <p class="absolute left-0 top-0 z-10 w-full py-2 text-center font-mukta text-[20px] uppercase text-[#193C6B]">
+                  {{ 'navbar.learn_more.options.stores' | t }}
+                </p>
+                <img
+                  src="{{ 'store-locator.png' | file_img_url: "master" }}"
+                  alt="{{ 'navbar.learn_more.options.stores' | t }}"
+                  class="relative h-full w-full object-cover"
+                >
+              </a>
+              <a
+                href="{{ pages['buddy-bites-ambassador-min-chen'].url }}"
+                class="relative overflow-hidden rounded-xl hover:outline hover:outline-2 hover:outline-[#193C6B]"
+              >
+                <p class="absolute left-0 top-0 z-10 w-full py-2 text-center font-mukta text-[20px] uppercase text-[#193C6B]">
+                  {{ 'navbar.learn_more.options.ambassador' | t }}
+                </p>
+                <img
+                  src="{{ '2000x3158px_website_COVER_mobile.png' | file_img_url: "master" }}"
+                  alt="{{ 'navbar.learn_more.options.ambassador' | t }}"
+                  class="relative h-full w-full object-cover"
+                >
+              </a>
+              <a
+                href="{{ blogs.lifestyle.url }}"
+                class="relative overflow-hidden rounded-xl hover:outline hover:outline-2 hover:outline-[#193C6B]"
+              >
+                <p class="absolute left-0 top-0 z-10 w-full py-2 text-center font-mukta text-[20px] uppercase text-[#193C6B]">
+                  {{ 'navbar.learn_more.options.blog' | t }}
+                </p>
+                <img
+                  src="{{ 'blog.png' | file_img_url: "master" }}"
+                  alt="{{ 'navbar.learn_more.options.blog' | t }}"
+                  class="relative h-full w-full object-cover"
+                >
+              </a>
+            </div>
+          </div>
+        </div>
+        {% comment %} Subscribe Link {% endcomment %}
+        <a href="{{ pages['subscription-page'].url }}">
+          <p class="rounded-full px-5 py-2 text-[20px] font-light uppercase text-white hover:bg-[#98c9eb] en:font-museo">
+            {{ 'navbar.subscribe' | t }}
+          </p>
+        </a>
+      </div>
+      <div class="flex items-center justify-end gap-10">
+        <div class="flex items-center justify-center gap-5">
+          <a href="{{ pages.store-locator.url }}">
+            <p class="rounded-full px-5 py-2 text-[20px] font-light uppercase text-white hover:bg-[#98c9eb] en:font-museo">
+              {{ 'navbar.stores' | t }}
+            </p>
+          </a>
+          <a href="{{ all_products['adult-turkey-sample-starter-pack'].url }}">
+            <p class="rounded-full px-5 py-2 text-[20px] font-light uppercase text-white hover:bg-[#98c9eb] en:font-museo">
+              {{ 'navbar.samples' | t }}
+            </p>
+          </a>
+        </div>
+        <div class="flex items-center justify-center gap-5">
+          <a href="{% if localization.language.iso_code == 'zh' %}/zh/a/account/shopify-login{% endif %}/a/account/shopify-login">
+            <img src="{{ 'icon-profile.svg' | asset_url }}" alt="Profile" class="aspect-square w-[20px]">
+          </a>
+          <a
+            href="{{ routes.cart_url }}"
+            js-drawer-open-right-link
+            aria-controls="CartDrawer"
+            aria-expanded="false"
+            class="site-header__cart-toggle"
+          >
+            <img src="{{ 'icon-cart.svg' | asset_url }}" alt="Cart" class="aspect-square w-[20px]">
+          </a>
+        </div>
+      </div>
+    </div>
+    <a href="{{ shop.url }}">
+      <img
+        class="absolute left-1/2 top-1/2 w-[30px] -translate-x-1/2 -translate-y-1/2 lg:w-[50px]"
+        src="//buddybites.dog/cdn/shop/files/icon-dog_150x.png?v=1712659302"
+        alt="Buddy Bites HK"
+        style="width: 50px"
+        data-srcset="//buddybites.dog/cdn/shop/files/icon-dog_150x.png?v=1712659302 150w, //buddybites.dog/cdn/shop/files/icon-dog_300x.png?v=1712659302 300w, //buddybites.dog/cdn/shop/files/icon-dog_600x.png?v=1712659302 600w, //buddybites.dog/cdn/shop/files/icon-dog_900x.png?v=1712659302 900w, //buddybites.dog/cdn/shop/files/icon-dog_1200x.png?v=1712659302 1200w, //buddybites.dog/cdn/shop/files/icon-dog_1500x.png?v=1712659302 1500w, //buddybites.dog/cdn/shop/files/icon-dog_1800x.png?v=1712659302 1800w, //buddybites.dog/cdn/shop/files/icon-dog_2100x.png?v=1712659302 2100w"
+        sizes="50px"
+        srcset="//buddybites.dog/cdn/shop/files/icon-dog_150x.png?v=1712659302 150w, //buddybites.dog/cdn/shop/files/icon-dog_300x.png?v=1712659302 300w, //buddybites.dog/cdn/shop/files/icon-dog_600x.png?v=1712659302 600w, //buddybites.dog/cdn/shop/files/icon-dog_900x.png?v=1712659302 900w, //buddybites.dog/cdn/shop/files/icon-dog_1200x.png?v=1712659302 1200w, //buddybites.dog/cdn/shop/files/icon-dog_1500x.png?v=1712659302 1500w, //buddybites.dog/cdn/shop/files/icon-dog_1800x.png?v=1712659302 1800w, //buddybites.dog/cdn/shop/files/icon-dog_2100x.png?v=1712659302 2100w"
+      >
+    </a>
+  </div>
+</div>
+
+{% comment %} Mobile Nav {% endcomment %}
+<div class="relative block w-full bg-[#193C6B] text-white lg:hidden">
+  <div class="container mx-auto px-10 py-7">
+    <div class="flex items-center justify-between">
+      <button id="mobileMenuButton" class="flex flex-col gap-1">
+        <div class="h-[2px] w-5 rounded-full bg-white"></div>
+        <div class="h-[2px] w-5 rounded-full bg-white"></div>
+        <div class="h-[2px] w-5 rounded-full bg-white"></div>
+      </button>
+      <div class="flex items-center justify-center gap-5">
+        <a href="{% if customer %}{{ routes.account_url }}{% else %}{{ routes.account_login_url }}{% endif %}"
+          ><img src="{{ 'icon-profile.svg' | asset_url }}" alt="Profile" class="aspect-square w-[20px]"
+        ></a>
+        <a
+          href="{{ routes.cart_url }}"
+          js-drawer-open-right-link
+          aria-controls="CartDrawer"
+          aria-expanded="false"
+          class="site-header__cart-toggle"
+        >
+          <img src="{{ 'icon-cart.svg' | asset_url }}" alt="Cart" class="aspect-square w-[20px]">
+        </a>
+      </div>
+    </div>
+    <a href="{{ shop.url }}">
+      <img
+        class="absolute left-1/2 top-1/2 w-[30px] -translate-x-1/2 -translate-y-1/2 lg:w-[50px]"
+        src="//buddybites.dog/cdn/shop/files/icon-dog_150x.png?v=1712659302"
+        alt="Buddy Bites HK"
+        style="width: 50px"
+        data-srcset="//buddybites.dog/cdn/shop/files/icon-dog_150x.png?v=1712659302 150w, //buddybites.dog/cdn/shop/files/icon-dog_300x.png?v=1712659302 300w, //buddybites.dog/cdn/shop/files/icon-dog_600x.png?v=1712659302 600w, //buddybites.dog/cdn/shop/files/icon-dog_900x.png?v=1712659302 900w, //buddybites.dog/cdn/shop/files/icon-dog_1200x.png?v=1712659302 1200w, //buddybites.dog/cdn/shop/files/icon-dog_1500x.png?v=1712659302 1500w, //buddybites.dog/cdn/shop/files/icon-dog_1800x.png?v=1712659302 1800w, //buddybites.dog/cdn/shop/files/icon-dog_2100x.png?v=1712659302 2100w"
+        sizes="50px"
+        srcset="//buddybites.dog/cdn/shop/files/icon-dog_150x.png?v=1712659302 150w, //buddybites.dog/cdn/shop/files/icon-dog_300x.png?v=1712659302 300w, //buddybites.dog/cdn/shop/files/icon-dog_600x.png?v=1712659302 600w, //buddybites.dog/cdn/shop/files/icon-dog_900x.png?v=1712659302 900w, //buddybites.dog/cdn/shop/files/icon-dog_1200x.png?v=1712659302 1200w, //buddybites.dog/cdn/shop/files/icon-dog_1500x.png?v=1712659302 1500w, //buddybites.dog/cdn/shop/files/icon-dog_1800x.png?v=1712659302 1800w, //buddybites.dog/cdn/shop/files/icon-dog_2100x.png?v=1712659302 2100w"
+      >
+    </a>
+  </div>
+  <div class="absolute top-full z-20 hidden h-[100dvh] w-full" id="mobileDropdown">
+    <div class="relative z-10 flex flex-col divide-y-[1px] divide-[#98c9eb] rounded-bl-[40px] rounded-br-[40px] bg-[#193C6B]">
+      <div class="flex flex-col">
+        <div class="flex justify-between px-10 py-6" id="shopMobileDropdownBtn">
+          <p class="text-[18px] uppercase text-white en:font-museo">{{ 'navbar.shop.title' | t }}</p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="35"
+            height="22"
+            viewBox="0 0 35 22"
+            fill="none"
+            class="w-[25px]"
+            id="shopArrow"
+          >
+            <path d="M32.9941 2L17.3279 19.3081L2.00001 2.60309" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </div>
+        <div
+          class="hidden w-full grid-cols-2 gap-2 bg-[#193C6B] px-6 pb-4"
+          id="shopMobileDropdown"
+        >
+          <a
+            href="{{ all_products['buddy-bites-adult-turkey'].url }}"
+            class="flex flex-col items-center justify-between gap-2 rounded-lg bg-[#1E56A0] py-4"
+          >
+            <img
+              src="{{ 'b8794553c307108105a2b37c27f4f881_2.png' | file_img_url: "large" }}"
+              alt="Kibbles"
+              class="w-[100px]"
+            >
+            <p class="text-[18px] text-white en:font-museo">{{ 'navbar.shop.kibbles.title' | t }}</p>
+          </a>
+          <a
+            href="{{ all_products['buddy-bites-beef-blueberry-air-dried-treats'].url }}"
+            class="flex flex-col items-center justify-between gap-2 rounded-lg bg-[#1E56A0] py-4"
+          >
+            <img
+              src="{{ 'BB_PremiumTreats_Beef_Berry_FRONT.png' | file_img_url: "large" }}"
+              alt="Treats"
+              class="w-[100px]"
+            >
+            <p class="text-[18px] text-white en:font-museo">{{ 'navbar.shop.treats.title' | t }}</p>
+          </a>
+          <a
+            href="{{ all_products['fresh-toppers-chicken-vegetables'].url }}"
+            class="flex flex-col items-center justify-center gap-2 rounded-lg bg-[#1E56A0] py-4"
+          >
+            <img
+              src="{{ 'BB_Beef_Toppers_Sleeve_Front_shrinked.png' | file_img_url: "large" }}"
+              alt="Toppers"
+              class="w-[100px]"
+            >
+            <p class="text-[18px] text-white en:font-museo">{{ 'navbar.shop.toppers.title' | t }}</p>
+          </a>
+          <a
+            href="{{ all_products['adult-turkey-sample-starter-pack'].url }}"
+            class="relative flex flex-col items-center justify-between gap-2 rounded-lg bg-[#1E56A0] py-4"
+          >
+            <img
+              src="{{ 'samples_mobile_nav.png' | file_img_url: "master" }}"
+              alt="Merchadise"
+              class="w-[150px]"
+            >
+            <p class="text-[18px] text-white en:font-museo">{{ 'navbar.shop.samples.title' | t }}</p>
+
+            <p class="absolute left-1/2 top-0 w-full -translate-x-1/2 rounded-3xl bg-red-500 px-3 text-center text-[12px] text-white">
+              {{ 'navbar.shop.samples.discount' | t }}
+            </p>
+          </a>
+          {% comment %}
+            <a
+              href="{{ collections.merchandise.url }}"
+              class="col-span-2 flex flex-col items-center justify-between gap-2 rounded-lg bg-[#1E56A0] py-4"
+            >
+              <img
+                src="{{ 'ab66e239e3379348e1ea06e8571b16e8_1.png' | file_img_url: "large" }}"
+                alt="Merchadise"
+                class="w-[100px]"
+              >
+              <p class="text-[18px] text-white en:font-museo">{{ 'navbar.shop.merchandise.title' | t }}</p>
+            </a>
+          {% endcomment %}
+        </div>
+      </div>
+      <div class="flex flex-col">
+        <div class="flex justify-between px-10 py-6" id="learnMobileDropdownBtn">
+          <p class="text-[18px] uppercase text-white en:font-museo">{{ 'navbar.learn_more.title' | t }}</p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="35"
+            height="22"
+            viewBox="0 0 35 22"
+            fill="none"
+            class="w-[25px]"
+            id="learnArrow"
+          >
+            <path d="M32.9941 2L17.3279 19.3081L2.00001 2.60309" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </div>
+        <div class="hidden w-full flex-col divide-y-[1px] divide-[#98c9eb] bg-[#193C6B] pb-4" id="learnMobileDropdown">
+          <a href="{{ pages.about.url }}" class="px-16 py-6">
+            <p class="text-[18px] text-white en:font-museo">{{ 'navbar.learn_more.options.about_us' | t }}</p>
+          </a>
+          <a href="{{ pages.nutrition.url }}" class="px-16 py-6">
+            <p class="text-[18px] text-white en:font-museo">{{ 'navbar.learn_more.options.nutrition' | t }}</p>
+          </a>
+          <a href="{{ pages.faqs.url }}" class="px-16 py-6">
+            <p class="text-[18px] text-white en:font-museo">{{ 'navbar.learn_more.options.faqs' | t }}</p>
+          </a>
+          <a href="{{ pages.store-locator.url }}" class="px-16 py-6">
+            <p class="text-[18px] text-white en:font-museo">{{ 'navbar.learn_more.options.stores' | t }}</p>
+          </a>
+          <a href="{{ blogs.lifestyle.url }}" class="px-16 py-6">
+            <p class="text-[18px] text-white en:font-museo">{{ 'navbar.learn_more.options.blog' | t }}</p>
+          </a>
+        </div>
+      </div>
+      <a href="{{ pages['subscription-page'].url }}" class="px-10 py-6">
+        <p class="text-[18px] uppercase text-white en:font-museo">{{ 'navbar.subscribe' | t }}</p>
+      </a>
+      <a href="{{ pages['buddy-bites-ambassador-min-chen'].url }}" class="px-10 py-6">
+        <p class="text-[18px] uppercase text-white en:font-museo">{{ 'navbar.learn_more.options.ambassador' | t }}</p>
+      </a>
+      <a href="{{ pages['referral-candy'].url }}" class="px-10 py-6">
+        <p class="text-[18px] uppercase text-white en:font-museo">{{ 'navbar.refer' | t }}</p>
+      </a>
+      <a href="{{ pages['store-locator'].url }}" class="px-10 py-6">
+        <p class="text-[18px] uppercase text-white en:font-museo">{{ 'navbar.stores' | t }}</p>
+      </a>
+    </div>
+    <div class="absolute top-0 z-0 h-[100dvh] w-full bg-white/50" id="mobileDropdownOverlay"></div>
+  </div>
+</div>

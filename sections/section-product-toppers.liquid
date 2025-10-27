@@ -1,0 +1,370 @@
+{% style %}
+  .swiper-product,
+  .swiper-vets {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev,
+  .swiper-button-next-vets,
+  .swiper-button-prev-vets {
+    position: absolute !important;
+    top: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 100% !important;
+    z-index: 10 !important;
+  }
+
+  .swiper-button-next,
+  .swiper-button-next-vets {
+    right: 10px;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-prev-vets {
+    left: 10px;
+  }
+
+  .swiper-button-next:after,
+  .swiper-button-next-vets:after {
+    content: '';
+    display: block;
+    width: 15px;
+    height: 25px;
+    transform: rotate(180deg);
+    background-image: url('{{ 'swiper-arrow-blue.svg' | asset_url }}');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .swiper-button-prev:after,
+  .swiper-button-prev-vets:after {
+    content: '';
+    display: block;
+    width: 15px;
+    height: 25px;
+    background-image: url('{{ 'swiper-arrow-blue.svg' | asset_url }}');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .swiper-navigation-icon {
+    display: none;
+  }
+{% endstyle %}
+
+{% comment %} Breadcrumbs {% endcomment %}
+<div class="container flex items-center px-5 pt-7">
+  <div class="flex flex-wrap items-center gap-2">
+    <a href="{{ shop.url }}" class="font-montserrat text-[16px] font-light text-black underline">Home</a>
+    <span class="font-montserrat text-[16px] font-light text-black">›</span>
+    <p class="font-montserrat text-[16px] font-light text-black">{{ product.title }}</p>
+  </div>
+</div>
+
+{% comment %} Product Details Page {% endcomment %}
+<section class="container relative p-5">
+  <div class="grid grid-cols-1 gap-10 lg:grid-cols-2">
+    {% comment %} Product Image & Key Benefits{% endcomment %}
+    <div class="relative h-full">
+      <div class="sticky top-0 mx-auto flex w-full flex-col items-center gap-2 lg:w-[450px]">
+        <div class="relative h-fit w-full overflow-hidden rounded-3xl">
+          <div class="swiper-product">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-wrapper">
+              {% for image in product.media %}
+                <div class="swiper-slide">
+                  <img src="{{ image | img_url: 'master' }}" alt="{{ image.alt }}" class="h-full w-full object-cover">
+                </div>
+              {% endfor %}
+            </div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+        <div class="flex w-full justify-between gap-2">
+          <div
+            class="flex aspect-square basis-1/3 flex-col items-center justify-center gap-3 rounded-2xl bg-[var(--bgColor)] px-0 py-2 lg:p-2"
+            style="--bgColor: {{ product.metafields.custom.nutrition.value.background_color }}"
+          >
+            <img
+              class="aspect-square w-[40px] object-contain lg:w-[80px]"
+              src="{{product.metafields.custom.nutrition.value.key_benefit_icon_1 | img_url: 'master'}}"
+              alt="{{product.metafields.custom.nutrition.value.key_benefit_text_1}}"
+            >
+            <p
+              class="text-center text-[14px] font-normal text-[var(--textColor)] en:font-museo lg:text-[16px]"
+              style="--textColor: {{ product.metafields.custom.nutrition.value.color }}"
+            >
+              {{ product.metafields.custom.nutrition.value.key_benefit_text_1 }}
+            </p>
+          </div>
+          <div
+            class="flex aspect-square basis-1/3 flex-col items-center justify-center gap-3 rounded-2xl bg-[var(--bgColor)] px-0 py-2 lg:p-2"
+            style="--bgColor: {{ product.metafields.custom.nutrition.value.background_color }}"
+          >
+            <img
+              class="aspect-square w-[40px] object-contain lg:w-[80px]"
+              src="{{product.metafields.custom.nutrition.value.key_benefit_icon_2 | img_url: 'master'}}"
+              alt="{{product.metafields.custom.nutrition.value.key_benefit_text_2}}"
+            >
+            <p
+              class="text-center text-[14px] font-normal text-[var(--textColor)] en:font-museo lg:text-[16px]"
+              style="--textColor: {{ product.metafields.custom.nutrition.value.color }}"
+            >
+              {{ product.metafields.custom.nutrition.value.key_benefit_text_2 }}
+            </p>
+          </div>
+          <div
+            class="flex aspect-square basis-1/3 flex-col items-center justify-center gap-3 rounded-2xl bg-[var(--bgColor)] px-0 py-2 lg:p-2"
+            style="--bgColor: {{ product.metafields.custom.nutrition.value.background_color }}"
+          >
+            <img
+              class="aspect-square w-[40px] object-contain lg:w-[80px]"
+              src="{{product.metafields.custom.nutrition.value.key_benefit_icon_3 | img_url: 'master'}}"
+              alt="{{product.metafields.custom.nutrition.value.key_benefit_text_3}}"
+            >
+            <p
+              class="text-center text-[14px] font-normal text-[var(--textColor)] en:font-museo lg:text-[16px]"
+              style="--textColor: {{ product.metafields.custom.nutrition.value.color }}"
+            >
+              {{ product.metafields.custom.nutrition.value.key_benefit_text_3 }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% comment %} Product Details {% endcomment %}
+    <div class="flex flex-col gap-2">
+      <div class="flex flex-col gap-1">
+        <h2 class="m-0 text-[24px] font-bold en:font-museo">Buddy Bites {{ 'products.product.toppers' | t }}</h2>
+        <h3 class="font-montserrat text-[16px] font-light text-gray-500">
+          {{ product.title }}
+          {{ 'products.product.flavour' | t }}
+        </h3>
+      </div>
+      <div
+        class="klaviyo-star-rating-widget"
+        data-id="{{ product.id }}"
+        data-product-title="{{ product.title }}"
+        data-product-type="{{ product.type }}"
+      ></div>
+
+      {% if product.metafields.custom.main_collection.value.id == 492926239035 %}
+        <div class="flex flex-col justify-center gap-2">
+          <p class="text-[16px] font-bold text-black en:font-museo">{{ 'products.product.choose_flavour' | t }}:</p>
+          <div class="flex gap-2">
+            {% for prd in collections.toppers.products %}
+              {% assign metaobj_list = prd.metafields.custom.flavor.value %}
+
+              {% for m_obj in metaobj_list %}
+                <a href="{{ prd.url }}">
+                  <img
+                    src="{{ m_obj.featured_image.value | image_url: width: 100, height: 100  }}"
+                    width="100"
+                    height="100"
+                    class="rounded-xl border-2 border-solid {% if product.title == prd.title %} border-black opacity-100 {% else %} border-[#C3C3C3] opacity-50{% endif %}"
+                  >
+                  <p class="text-center font-semibold en:font-museo en:text-[16px] zh-TW:text-[14px]">
+                    <b>{{ m_obj.name }}</b>
+                  </p>
+                </a>
+              {% endfor %}
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+
+      <div class="prose prose-base marker:text-black prose-ul:list-disc">
+        {{ product.description }}
+      </div>
+      {% comment %} Start Add To Cart {% endcomment %}
+      {% render 'snippet-add-to-cart' %}
+    </div>
+  </div>
+</section>
+
+{% comment %} Toppers Nutrition {% endcomment %}
+{% if product.id == 10147048587579 %}
+  {% render 'product-toppers-nutrition-beef' %}
+{% elsif product.id == 10147022078267 %}
+  {% render 'product-toppers-nutrition-chicken' %}
+{% endif %}
+
+{% render 'snippet-vet-recommendations' %}
+
+{% comment %} Complete your meal section {% endcomment %}
+<section class="relative">
+  <img src="{{ 'complete-your-meal-bg.png' | file_img_url: 'master'}}" class="hidden w-full lg:block">
+  <img src="{{ 'complete-your-meal-bg-mobile.png' | file_img_url: 'master'}}" class="block w-full lg:hidden">
+  <div class="absolute inset-0 flex flex-col items-center justify-center gap-4">
+    <h2 class="mx-auto block text-center text-[10vw] font-bold tracking-widest text-[#193C6B] en:font-heyCharlie lg:text-[4.5vw]">
+      {{ 'products.product.complete_your_meal' | t }}
+    </h2>
+    <div class="swiper-complete-your-meal w-full max-w-[1440px] md:px-5">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <a
+            href="{{ all_products['buddy-bites-duck'].url }}"
+            class="relative flex flex-col items-center justify-center gap-2 overflow-hidden rounded-2xl bg-[#c0ccac] py-4 md:animate-float4"
+          >
+            <div class="absolute left-0 top-0 rounded-br-2xl bg-white/50 px-3 text-[12px] text-gray-500 en:font-museo">
+              Best Seller
+            </div>
+            <img
+              src="{{ 'BB_Duck_FOP.png' | file_img_url: 'large' }}"
+              alt="Duck Recipe"
+              class="w-full object-contain lg:w-[150px]"
+            >
+            <p class="text-center text-[14px] font-bold uppercase text-[#193C6B] en:font-museo">
+              {{ 'products.product.duck' | t }}
+              {{ 'products.product.flavour' | t }}
+            </p>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a
+            href="{{ all_products['buddy-bites-puppy'].url }}"
+            class="relative flex flex-col items-center justify-center gap-2 overflow-hidden rounded-2xl bg-[#a8ccec] py-4 md:animate-float2"
+          >
+            <img
+              src="{{ 'BB_Puppy_FOP_1.png' | file_img_url: 'large' }}"
+              alt="Puppy Recipe"
+              class="w-full object-contain lg:w-[150px]"
+            >
+            <p class="text-center text-[14px] font-bold uppercase text-[#193C6B] en:font-museo">
+              {{ 'products.product.puppy' | t }}
+              {{ 'products.product.flavour' | t }}
+            </p>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a
+            href="{{ all_products['buddy-bites-lamb'].url }}"
+            class="relative flex flex-col items-center justify-center gap-2 overflow-hidden rounded-2xl bg-[#d8c4e4] py-4 md:animate-float1"
+          >
+            <img
+              src="{{ 'BB_Lamb_FOP.png' | file_img_url: 'large' }}"
+              alt="Lamb Recipe"
+              class="w-full object-contain lg:w-[150px]"
+            >
+            <p class="text-center text-[14px] font-bold uppercase text-[#193C6B] en:font-museo">
+              {{ 'products.product.lamb' | t }}
+              {{ 'products.product.flavour' | t }}
+            </p>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a
+            href="{{ all_products['buddy-bites-adult-salmon'].url }}"
+            class="relative flex flex-col items-center justify-center gap-2 overflow-hidden rounded-2xl bg-[#f8b4ac] py-4 md:animate-float5"
+          >
+            <img
+              src="{{ 'BB_Salmon_FOP.png' | file_img_url: 'large' }}"
+              alt="Salmon Recipe"
+              class="w-full object-contain lg:w-[150px]"
+            >
+            <p class="text-center text-[14px] font-bold uppercase text-[#193C6B] en:font-museo">
+              {{ 'products.product.salmon' | t }}
+              {{ 'products.product.flavour' | t }}
+            </p>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a
+            href="{{ all_products['buddy-bites-adult-turkey'].url }}"
+            class="relative flex flex-col items-center justify-center gap-2 overflow-hidden rounded-2xl bg-[#F2C49B] py-4 md:animate-float3"
+          >
+            <div class="absolute left-0 top-0 rounded-br-2xl bg-white/50 px-3 text-[12px] text-gray-500 en:font-museo">
+              New
+            </div>
+            <img
+              src="{{ 'b8794553c307108105a2b37c27f4f881_2.png' | file_img_url: 'large' }}"
+              alt="Turkey Recipe"
+              class="w-full object-contain lg:w-[150px]"
+            >
+            <p class="text-center text-[14px] font-bold uppercase text-[#193C6B] en:font-museo">
+              {{ 'products.product.turkey' | t }}
+              {{ 'products.product.flavour' | t }}
+            </p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="relative translate-y-[-25vw] md:translate-y-[-7vw]">
+  <img
+    src="{{ 'we-give-back-bg-desktop.png' |  file_img_url: 'master' }}"
+    alt="We give back to the puppy community banner"
+    class="hidden w-full lg:block"
+  >
+  <img
+    src="{{ 'we-give-back-bg-mobile.png' |  file_img_url: 'master' }}"
+    alt="We give back to the puppy community banner"
+    class="block w-full lg:hidden"
+  >
+  <div class="absolute inset-0 flex flex-col items-center justify-start gap-4 py-[25vw] md:justify-center md:py-0">
+    <h2 class="mx-auto block text-center text-[10vw] font-bold tracking-widest text-[#193C6B] en:font-heyCharlie lg:text-[4.5vw]">
+      {{ 'products.product.we_give_back.title' | t }}
+    </h2>
+    <p class="mx-auto block text-center text-[14px] font-normal text-[#193C6B] en:font-museo lg:text-[clamp(24px,2.5vw,32px)]">
+      {{ 'products.product.we_give_back.subtext' | t }}
+    </p>
+    <a
+      href="{{ pages.about.url }}"
+      class="btn-cta"
+    >
+      {{- 'products.product.we_give_back.learn_more' | t -}}
+    </a>
+  </div>
+</section>
+<h2 class="text-center text-[10vw] tracking-widest text-[#193C6B] en:font-heyCharlie lg:text-[clamp(50px,5vw,95px)]">
+  {{ 'products.product.reviews' | t }}
+</h2>
+
+<script>
+  const swiperProductPreview = new Swiper('.swiper-product', {
+    // Optional parameters
+    direction: 'horizontal',
+    spaceBetween: 10,
+    autoplay: false,
+    loop: true,
+    slidesPerView: 1,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+  const swiperCompleteYourMeal = new Swiper('.swiper-complete-your-meal', {
+    direction: 'horizontal',
+    spaceBetween: 10,
+    autoplay: true,
+    loop: true,
+    breakpoints: {
+      300: {
+        slidesPerView: 1.5,
+        centeredSlides: true,
+      },
+      768: {
+        slidesPerView: 5,
+        centeredSlides: false,
+      },
+    },
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Kibbles Product Section",
+  "settings": []
+}
+{% endschema %}

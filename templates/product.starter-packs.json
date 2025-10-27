@@ -1,0 +1,24 @@
+{
+  "sections": {
+    "section-product-starter-packs": {
+      "type": "section-product-starter-packs"
+    },
+    "176120028894ea9753": {
+      "type": "apps",
+      "blocks": {
+        "klaviyo_reviews_product_reviews_r8b4cp": {
+          "type": "shopify://apps/klaviyo-reviews/blocks/product-reviews/db20e365-d984-4ac4-9655-e1588d951ca9",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "klaviyo_reviews_product_reviews_r8b4cp"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "section-product-starter-packs",
+    "176120028894ea9753"
+  ]
+}

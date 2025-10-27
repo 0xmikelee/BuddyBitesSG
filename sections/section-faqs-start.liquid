@@ -1,0 +1,813 @@
+<section class="relative">
+  <img
+    src="https://cdn.shopify.com/s/files/1/0643/9010/3256/files/Untitled_Artwork_15_2c40020b-28d8-4625-9b00-5fcd905ae673.png?v=1690270396"
+    alt="FAQ Banner"
+    class="hidden w-full lg:block"
+  >
+  <img
+    src="https://cdn.shopify.com/s/files/1/0643/9010/3256/files/Untitled_Artwork_15_b4a52369-1323-4e86-9819-897f91971f1b.png?v=1690270558"
+    alt="FAQ Banner"
+    class="block w-full lg:hidden"
+  >
+  <div class="container absolute left-1/2 top-[5%] flex max-w-[350px] -translate-x-1/2 flex-col items-center justify-start gap-4 lg:left-[15%] lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-0 lg:items-start">
+    <h1 class="text-[50px] text-[#193C6B] en:font-heyCharlie sm:text-[80px] lg:text-[100px]">{{ 'faqs.title' | t }}</h1>
+    <p class="text-start text-[14px] text-[#193C6B] en:font-museo lg:text-[16px]">
+      {{ 'faqs.subtext' | t }}
+    </p>
+    <a
+      href=""
+      class="rounded-full border border-[#193C6B] bg-[#193C6B] px-4 py-2 text-[14px] uppercase text-white hover:bg-white hover:text-[#193C6B] en:font-museo lg:text-[16px]"
+    >
+      {{- 'faqs.email_us' | t -}}
+    </a>
+  </div>
+</section>
+
+<section class="faq-section container relative">
+  <div class="desktop section-buts">
+    <div class="buts">
+      <a href="#general">{{ 'faqs.general.title' | t }}</a>
+      <a href="#nutrition">{{ 'faqs.nutrition.title' | t }}</a>
+      <a href="#subscription">{{ 'faqs.subscription.title' | t }}</a>
+      <a href="#delivery">{{ 'faqs.delivery.title' | t }}</a>
+      <a href="#payment">{{ 'faqs.payment.title' | t }}</a>
+    </div>
+  </div>
+  <div class="faqs">
+    <div class="container-fluid">
+      <h2 id="general" style="margin: 0 0 2vw 0;" class="desktop en:font-heyCharlie">{{ 'faqs.general.title' | t }}</h2>
+      <h2 id="general" style="margin: 0 0 4vw 0;" class="mobile en:font-heyCharlie">{{ 'faqs.general.title' | t }}</h2>
+      <div class="rowa">
+        <div class="columna">
+          <div class="accordian">
+            <div class="icon"></div>
+            <h5>{{ 'faqs.general.question1.title' | t }}</h5>
+          </div>
+          <div class="panel">
+            <p>
+              {{ 'faqs.general.question1.answer' | t }}
+            </p>
+          </div>
+
+          <div class="accordian">
+            <div class="icon"></div>
+            <h5>{{ 'faqs.general.question2.title' | t }}</h5>
+          </div>
+          <div class="panel">
+            <p>
+              {{ 'faqs.general.question2.answer' | t }}
+            </p>
+          </div>
+
+          <div class="accordian">
+            <div class="icon"></div>
+            <h5>{{ 'faqs.general.question3.title' | t }}</h5>
+          </div>
+          <div class="panel">
+            <p>
+              {{ 'faqs.general.question3.answer' | t }}
+            </p>
+          </div>
+
+          <div class="accordian">
+            <div class="icon"></div>
+            <h5>{{ 'faqs.general.question4.title' | t }}</h5>
+          </div>
+          <div class="panel">
+            <p>
+              {{ 'faqs.general.question4.answer' | t }}
+            </p>
+          </div>
+
+          <div class="accordian">
+            <div class="icon"></div>
+            <h5>{{ 'faqs.general.question5.title' | t }}</h5>
+          </div>
+          <div class="panel">
+            <p>
+              {{ 'faqs.general.question5.answer1' | t }}
+              <a href="{{ pages.store-locator.url }}">{{ 'faqs.general.question5.link' | t }}</a>.
+              {{ 'faqs.general.question5.answer2' | t }}
+              <a href="mailto:info@buddybites.dog">{{ 'faqs.general.question5.email' | t }}</a>
+            </p>
+          </div>
+
+          <div class="accordian">
+            <div class="icon"></div>
+            <h5>{{ 'faqs.general.question6.title' | t }}</h5>
+          </div>
+          <div class="panel">
+            <p>
+              {{ 'faqs.general.question6.answer' | t }}
+              <a href="{{ pages.referral-candy.url }}">{{ 'faqs.general.question6.link' | t }}</a>
+            </p>
+          </div>
+
+          <div class="accordian">
+            <div class="icon"></div>
+            <h5>{{ 'faqs.general.question7.title' | t }}</h5>
+          </div>
+          <div class="panel">
+            <p>
+              {{ 'faqs.general.question7.answer' | t }}
+              <a href="mailto:info@buddybites.dog">{{ 'faqs.general.question7.email' | t }}</a>
+              {{ 'faqs.general.question7.or' | t }}
+              <a href="https://wa.me/+85298588250">{{ 'faqs.general.question7.whatsapp' | t }}</a>
+            </p>
+          </div>
+
+          <div class="accordian">
+            <div class="icon"></div>
+            <h5>{{ 'faqs.general.question8.title' | t }}</h5>
+          </div>
+          <div class="panel">
+            <p>
+              {{ 'faqs.general.question8.answer' | t }}
+              <a href="{{ pages.giving-back.url }}">{{ 'faqs.general.question8.link' | t }}</a>
+            </p>
+          </div>
+
+          <div class="accordian">
+            <div class="icon"></div>
+            <h5>{{ 'faqs.general.question9.title' | t }}</h5>
+          </div>
+          <div class="panel">
+            <p>
+              {{ 'faqs.general.question9.answer' | t }}
+              <a href="{{ pages.giving-back.url }}">{{ 'faqs.general.question9.link' | t }}</a>
+            </p>
+          </div>
+
+          <h2 id="nutrition" class="en:font-heyCharlie">{{ 'faqs.nutrition.title' | t }}</h2>
+
+          <div class="accordian">
+            <div class="icon"></div>
+            <h5>{{ 'faqs.nutrition.question1.title' | t }}</h5>
+          </div>
+          <div class="panel">
+            <p>
+              {{ 'faqs.nutrition.question1.answer' | t }}
+            </p>
+          </div>
+
+          <div class="accordian">
+            <div class="icon"></div>
+            <h5>{{ 'faqs.nutrition.question2.title' | t }}</h5>
+          </div>
+          <div class="panel">
+            <p>
+              {{ 'faqs.nutrition.question2.answer' | t }}
+            </p>
+          </div>
+
+          <div class="accordian">
+            <div class="icon"></div>
+            <h5>{{ 'faqs.nutrition.question3.title' | t }}</h5>
+          </div>
+          <div class="panel">
+            <p>
+              {{ 'faqs.nutrition.question3.answer' | t }}
+            </p>
+          </div>
+
+          <div class="accordian">
+            <div class="icon"></div>
+            <h5>{{ 'faqs.nutrition.question4.title' | t }}</h5>
+          </div>
+          <div class="panel">
+            <p>
+              {{ 'faqs.nutrition.question4.answer' | t }}
+            </p>
+          </div>
+
+          <div class="accordian">
+            <div class="icon"></div>
+            <h5>{{ 'faqs.nutrition.question5.title' | t }}</h5>
+          </div>
+          <div class="panel">
+            <p>
+              {{ 'faqs.nutrition.question5.answer' | t }}
+              <a href="{{ 'faqs.nutrition.question5.link' | t }}">{{ 'faqs.nutrition.question5.link' | t }}</a>
+              {{ 'faqs.nutrition.question5.answer2' | t }}
+            </p>
+          </div>
+
+          <div class="accordian">
+            <div class="icon"></div>
+            <h5>{{ 'faqs.nutrition.question6.title' | t }}</h5>
+          </div>
+          <div class="panel">
+            <p>
+              {{ 'faqs.nutrition.question6.answer' | t }}
+            </p>
+          </div>
+
+          <div class="accordian">
+            <div class="icon"></div>
+            <h5>{{ 'faqs.nutrition.question7.title' | t }}</h5>
+          </div>
+          <div class="panel">
+            <p>
+              {{ 'faqs.nutrition.question7.answer' | t }}
+            </p>
+          </div>
+
+          <div class="accordian">
+            <div class="icon"></div>
+            <h5>{{ 'faqs.nutrition.question8.title' | t }}</h5>
+          </div>
+          <div class="panel">
+            <p>
+              {{ 'faqs.nutrition.question8.answer' | t }}
+            </p>
+          </div>
+
+          <div class="accordian">
+            <div class="icon"></div>
+            <h5>{{ 'faqs.nutrition.question9.title' | t }}</h5>
+          </div>
+          <div class="panel">
+            <p>
+              {{ 'faqs.nutrition.question9.answer' | t }}
+            </p>
+          </div>
+
+          <div class="accordian">
+            <div class="icon"></div>
+            <h5>{{ 'faqs.nutrition.question10.title' | t }}</h5>
+          </div>
+          <div class="panel">
+            <p>
+              {{ 'faqs.nutrition.question10.answer' | t }}
+            </p>
+          </div>
+
+          <h2 id="subscription" class="en:font-heyCharlie">{{ 'faqs.subscription.title' | t }}</h2>
+
+          <div class="accordian">
+            <div class="icon"></div>
+            <h5>{{ 'faqs.subscription.question1.title' | t }}</h5>
+          </div>
+          <div class="panel">
+            <p>
+              {{ 'faqs.subscription.question1.answer' | t }}
+            </p>
+          </div>
+
+          <div class="accordian">
+            <div class="icon"></div>
+            <h5>{{ 'faqs.subscription.question2.title' | t }}</h5>
+          </div>
+          <div class="panel">
+            <p>
+              {{ 'faqs.subscription.question2.answer' | t }}
+              <a href="mailto:info@buddybites.dog">
+                {{- 'faqs.subscription.question2.email' | t -}}
+              </a>
+              {{ 'faqs.subscription.question2.or' | t }}
+              <a href="https://wa.me/+85298588250">{{ 'faqs.subscription.question2.whatsapp' | t }}</a>
+              {{ 'faqs.subscription.question2.answer2' | t }}
+            </p>
+          </div>
+
+          <div class="accordian">
+            <div class="icon"></div>
+            <h5>{{ 'faqs.subscription.question3.title' | t }}</h5>
+          </div>
+          <div class="panel">
+            <p>
+              {{ 'faqs.subscription.question3.answer' | t }}
+              <a href="https://wa.me/+85298588250">{{ 'faqs.subscription.question3.whatsapp' | t }}</a>
+              {{ 'faqs.subscription.question3.or' | t }}
+              <a href="mailto:info@buddybites.dog">
+                {{- 'faqs.subscription.question3.email' | t -}}
+              </a>
+              {{ 'faqs.subscription.question3.answer2' | t }}
+            </p>
+          </div>
+
+          <div class="accordian">
+            <div class="icon"></div>
+            <h5>{{ 'faqs.subscription.question4.title' | t }}</h5>
+          </div>
+          <div class="panel">
+            <p>
+              {{ 'faqs.subscription.question4.answer' | t }}
+            </p>
+          </div>
+
+          <div class="accordian">
+            <div class="icon"></div>
+            <h5>{{ 'faqs.subscription.question5.title' | t }}</h5>
+          </div>
+          <div class="panel">
+            <p>
+              {{ 'faqs.subscription.question5.answer' | t }}
+            </p>
+          </div>
+
+          <div class="accordian">
+            <div class="icon"></div>
+            <h5>{{ 'faqs.subscription.question6.title' | t }}</h5>
+          </div>
+          <div class="panel">
+            <p>
+              {{ 'faqs.subscription.question6.answer' | t }}
+              <a href="mailto:info@buddybites.dog">
+                {{- 'faqs.subscription.question6.email' | t -}}
+              </a>
+              {{ 'faqs.subscription.question6.or' | t }}
+              <a href="https://wa.me/+85298588250">{{ 'faqs.subscription.question6.whatsapp' | t }}</a>
+              {{ 'faqs.subscription.question6.answer2' | t }}
+            </p>
+          </div>
+
+          <div class="accordian">
+            <div class="icon"></div>
+            <h5>{{ 'faqs.subscription.question7.title' | t }}</h5>
+          </div>
+          <div class="panel">
+            <p>
+              {{ 'faqs.subscription.question7.answer' | t }}
+              <a href="mailto:info@buddybites.dog">
+                {{- 'faqs.subscription.question7.email' | t -}}
+              </a>
+              {{ 'faqs.subscription.question7.or' | t }}
+              <a href="https://wa.me/+85298588250">{{ 'faqs.subscription.question7.whatsapp' | t }}</a>
+              {{ 'faqs.subscription.question7.answer2' | t }}
+            </p>
+          </div>
+
+          <div class="accordian">
+            <div class="icon"></div>
+            <h5>{{ 'faqs.subscription.question8.title' | t }}</h5>
+          </div>
+          <div class="panel">
+            <p>
+              {{ 'faqs.subscription.question8.answer' | t }}
+              <a href="mailto:info@buddybites.dog">
+                {{- 'faqs.subscription.question8.email' | t -}}
+              </a>
+              {{ 'faqs.subscription.question8.or' | t }}
+              <a href="https://wa.me/+85298588250">{{ 'faqs.subscription.question8.whatsapp' | t }}</a>
+              {{ 'faqs.subscription.question8.answer2' | t }}
+            </p>
+          </div>
+
+          <h2 id="delivery" class="en:font-heyCharlie">{{ 'faqs.delivery.title' | t }}</h2>
+
+          <div class="accordian">
+            <div class="icon"></div>
+            <h5>{{ 'faqs.delivery.question1.title' | t }}</h5>
+          </div>
+          <div class="panel">
+            <p>
+              {{ 'faqs.delivery.question1.answer' | t }}
+              <a href="mailto:info@buddybites.dog">{{ 'faqs.delivery.question1.email' | t }}</a>
+              {{ 'faqs.delivery.question1.answer2' | t }}
+            </p>
+          </div>
+
+          <div class="accordian">
+            <div class="icon"></div>
+            <h5>{{ 'faqs.delivery.question2.title' | t }}</h5>
+          </div>
+          <div class="panel">
+            <p>
+              {{ 'faqs.delivery.question2.answer' | t }}
+            </p>
+          </div>
+
+          <div class="accordian">
+            <div class="icon"></div>
+            <h5>{{ 'faqs.delivery.question3.title' | t }}</h5>
+          </div>
+          <div class="panel">
+            <p>
+              {{ 'faqs.delivery.question3.answer' | t }}
+            </p>
+          </div>
+
+          <div class="accordian">
+            <div class="icon"></div>
+            <h5>{{ 'faqs.delivery.question4.title' | t }}</h5>
+          </div>
+          <div class="panel">
+            <p>
+              {{ 'faqs.delivery.question4.answer' | t }}
+            </p>
+          </div>
+
+          <div class="accordian">
+            <div class="icon"></div>
+            <h5>{{ 'faqs.delivery.question5.title' | t }}</h5>
+          </div>
+          <div class="panel">
+            <p>
+              {{ 'faqs.delivery.question5.answer' | t }}
+            </p>
+          </div>
+
+          <div class="accordian">
+            <div class="icon"></div>
+            <h5>{{ 'faqs.delivery.question6.title' | t }}</h5>
+          </div>
+          <div class="panel">
+            <p>
+              {{ 'faqs.delivery.question6.answer' | t }}
+            </p>
+          </div>
+
+          <div class="accordian">
+            <div class="icon"></div>
+            <h5>{{ 'faqs.delivery.question7.title' | t }}</h5>
+          </div>
+          <div class="panel">
+            <p>
+              {{ 'faqs.delivery.question7.answer' | t }}
+            </p>
+          </div>
+
+          <div class="accordian">
+            <div class="icon"></div>
+            <h5>{{ 'faqs.delivery.question8.title' | t }}</h5>
+          </div>
+          <div class="panel">
+            <p>
+              {{ 'faqs.delivery.question8.answer' | t }}
+            </p>
+          </div>
+
+          <div class="accordian">
+            <div class="icon"></div>
+            <h5>{{ 'faqs.delivery.question9.title' | t }}</h5>
+          </div>
+          <div class="panel">
+            <p>
+              {{ 'faqs.delivery.question9.answer' | t }}
+              <a href="mailto:info@buddybites.dog">{{ 'faqs.delivery.question9.email' | t }}</a>
+              {{ 'faqs.delivery.question9.or' | t }}
+              <a href="https://wa.me/+85298588250">{{ 'faqs.delivery.question9.whatsapp' | t }}</a>
+              {{ 'faqs.delivery.question9.answer2' | t }}
+            </p>
+          </div>
+
+          <h2 id="payment" class="en:font-heyCharlie">{{ 'faqs.payment.title' | t }}</h2>
+
+          <div class="accordian">
+            <div class="icon"></div>
+            <h5>{{ 'faqs.payment.question1.title' | t }}</h5>
+          </div>
+          <div class="panel">
+            <p>
+              {{ 'faqs.payment.question1.answer' | t }}
+            </p>
+          </div>
+
+          <div class="accordian">
+            <div class="icon"></div>
+            <h5>{{ 'faqs.payment.question2.title' | t }}</h5>
+          </div>
+          <div class="panel">
+            <p>
+              {{ 'faqs.payment.question2.answer' | t }}
+              <a href="https://www.youtube.com/watch?v=6LV0Zez9dqw">{{ 'faqs.payment.question2.link' | t }}</a>
+              {{ 'faqs.payment.question2.answer2' | t }}
+              <a href="mailto:info@buddybites.dog">{{ 'faqs.payment.question2.email' | t }}</a>
+              {{ 'faqs.payment.question2.or' | t }}
+              <a href="https://wa.me/+85298588250">{{ 'faqs.payment.question2.whatsapp' | t }}</a>
+              {{ 'faqs.payment.question2.answer3' | t }}
+            </p>
+          </div>
+
+          <div class="accordian">
+            <div class="icon"></div>
+            <h5>{{ 'faqs.payment.question3.title' | t }}</h5>
+          </div>
+          <div class="panel">
+            <p>
+              {{ 'faqs.payment.question3.answer' | t }}
+            </p>
+          </div>
+
+          <div class="accordian">
+            <div class="icon"></div>
+            <h5>{{ 'faqs.payment.question4.title' | t }}</h5>
+          </div>
+          <div class="panel">
+            <p>
+              {{ 'faqs.payment.question4.answer' | t }}
+              <a href="https://www.youtube.com/watch?v=6LV0Zez9dqw">{{ 'faqs.payment.question4.link' | t }}</a>
+              {{ 'faqs.payment.question4.answer2' | t }}
+            </p>
+          </div>
+
+          <div class="accordian">
+            <div class="icon"></div>
+            <h5>{{ 'faqs.payment.question5.title' | t }}</h5>
+          </div>
+          <div class="panel">
+            <p>
+              {{ 'faqs.payment.question5.answer' | t }}
+            </p>
+          </div>
+
+          <div class="accordian">
+            <div class="icon"></div>
+            <h5>{{ 'faqs.payment.question6.title' | t }}</h5>
+          </div>
+          <div class="panel">
+            <p>
+              {{ 'faqs.payment.question6.answer' | t }}
+            </p>
+          </div>
+
+          <div class="accordian">
+            <div class="icon"></div>
+            <h5>{{ 'faqs.payment.question7.title' | t }}</h5>
+          </div>
+          <div class="panel">
+            <p>
+              {{ 'faqs.payment.question7.answer' | t }}
+            </p>
+          </div>
+
+          <div class="accordian">
+            <div class="icon"></div>
+            <h5>{{ 'faqs.payment.question8.title' | t }}</h5>
+          </div>
+          <div class="panel">
+            <p>
+              {{ 'faqs.payment.question8.answer' | t }}
+              <a href="https://www.youtube.com/watch?v=6LV0Zez9dqw">{{ 'faqs.payment.question8.link' | t }}</a>
+              {{ 'faqs.payment.question8.answer2' | t }}
+              <a href="mailto:info@buddybites.dog">{{ 'faqs.payment.question8.email' | t }}</a>
+              {{ 'faqs.payment.question8.or' | t }}
+              <a href="https://wa.me/+85298588250">{{ 'faqs.payment.question8.whatsapp' | t }}</a>
+              {{ 'faqs.payment.question8.answer3' | t }}
+            </p>
+          </div>
+
+          <div class="accordian">
+            <div class="icon"></div>
+            <h5>{{ 'faqs.payment.question9.title' | t }}</h5>
+          </div>
+          <div class="panel">
+            <p>
+              {{ 'faqs.payment.question9.answer' | t }}
+              <a href="mailto:info@buddybites.dog">{{ 'faqs.payment.question9.email' | t }}</a>
+              {{ 'faqs.payment.question9.or' | t }}
+              <a href="https://wa.me/+85298588250">{{ 'faqs.payment.question9.whatsapp' | t }}</a>
+              {{ 'faqs.payment.question9.answer2' | t }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+  .section-buts {
+    width: 90%;
+    margin: 5vw 5% 3vw 5%;
+  }
+  .section-buts a {
+    width: 16%;
+    color: #0d3e66;
+    text-align: center;
+    display: inline-block;
+    background-color: #fff;
+    margin: 0 1.8%;
+    border-radius: 10vw;
+    padding: 0.5vw 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    box-shadow: 0px 0px 0px 3px #0d3e66;
+    transition: all 0.3s;
+    &:hover {
+      box-shadow: 0px 0px 0px 3px #0d3e66;
+      color: #fff;
+      background-color: #0d3e66;
+      text-decoration: none;
+    }
+  }
+  .banner-title {
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: 5px;
+    color: #0d3e66;
+    margin-bottom: 1%;
+  }
+  .faq-section p {
+    font-family: Montserrat, sans-serif !important;
+    color: #0d3e66 !important;
+    font-weight: 500 !important;
+  }
+  .sub-but {
+    background-color: #0d3e66;
+    border-radius: 10vw;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    box-shadow: 0px 0px 0px 0px #fff;
+    transition: all 0.3s;
+    &:hover {
+      box-shadow: 0px 0px 0px 3px #0d3e66;
+      color: #0d3e66;
+      background-color: #fff;
+      text-decoration: none;
+    }
+  }
+
+  .accordian {
+    width: 100%;
+    padding: 0 0.5vw;
+    border: 0.1vw solid #0d3e66;
+    cursor: pointer;
+    border-radius: 5vw;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+  }
+  .accordian .icon {
+    margin: 0 0.2vw 0 0;
+    width: 3vw;
+    height: 2.1vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url(https://cdn.shopify.com/s/files/1/0430/5833/1805/files/plus_1.svg?v=1684522114);
+    float: left;
+    transition: all 0.5s ease-in;
+  }
+  .active .icon {
+    background-image: url(https://cdn.shopify.com/s/files/1/0430/5833/1805/files/minus.svg?v=1684524159);
+  }
+  .active {
+    background-color: #fff;
+  }
+  .accordian h5 {
+    font-size: 1.2vw;
+    margin: 0;
+    padding: 0.5vw 0;
+    font-family: Montserrat, sans-serif !important;
+    color: #0d3e66 !important;
+    font-weight: 500 !important;
+  }
+  .faqs {
+    background-color: #fff;
+  }
+  .panel {
+    background-color: #fff;
+    padding: 0 2vw;
+    border-left: 0.1vw solid #0d3e66;
+    margin-left: 3vw;
+    text-align: justify;
+    overflow: hidden;
+    max-height: 0;
+    transition: all 0.5s ease-in;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .panel p {
+    margin: 1vw 0 !important;
+    text-align: left;
+  }
+  .container-fluid {
+    width: 90%;
+    margin: 0 auto 4vw auto;
+  }
+  .container-fluid h2 {
+    position: relative;
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: 5px;
+    color: #203c6c;
+    margin: 4vw 0 2vw 0;
+    font-size: 5vw;
+  }
+  .rowa {
+    display: flex;
+  }
+  .columna {
+    flex: 50%;
+    margin: 0 1vw;
+  }
+
+  @media (max-width: 768px) {
+    .desktop {
+      display: none;
+    }
+    .center-left {
+      position: absolute;
+      top: 12vw;
+      left: 7.5%;
+      width: 85%;
+      text-align: center;
+    }
+    .wave {
+      position: relative;
+    }
+    .banner-title {
+      font-size: 14.5vw;
+      margin-bottom: 3vw;
+    }
+    .bot-text {
+      background-color: #9ac9eb;
+      margin-top: -7px;
+    }
+    .sub-but {
+      width: 50%;
+      font-size: 5vw !important;
+      padding: 1.5vw 6vw;
+      border-radius: 10vw;
+    }
+    .container-fluid h2 {
+      font-size: 7vw !important;
+      margin: 8vw 0 4vw 0;
+    }
+    .container-fluid {
+      width: 92%;
+    }
+    .accordian h5 {
+      font-size: 3vw;
+    }
+    .accordian .icon {
+      margin: 0 0.5vw 0 0;
+      width: 5vw;
+      height: 7vw;
+    }
+    .accordian {
+      border: 0.2vw solid #0d3e66;
+    }
+    .panel p {
+      font-size: 3vw !important;
+    }
+    .panel {
+      border-left: 0.2vw solid #0d3e66;
+    }
+  }
+
+  @media (min-width: 769px) {
+    .mobile {
+      display: none;
+    }
+    .desktop {
+      position: relative;
+    }
+    .center-left {
+      position: absolute;
+      top: 5vw;
+      left: 10%;
+      width: 36%;
+    }
+    .center-left p {
+      margin: 1vw 0 2vw 0;
+    }
+    .banner-title {
+      font-size: 7vw;
+      text-align: left;
+      margin-top: 2vw;
+    }
+    p {
+      font-size: 1.1vw !important;
+    }
+    .sub-but {
+      width: 30%;
+      font-size: 1.4vw !important;
+      padding: 0.8vw 3vw;
+    }
+  }
+</style>
+
+<script>
+  var acc = document.getElementsByClassName('accordian');
+  var i;
+  var len = acc.length;
+  for (i = 0; i < len; i++) {
+    acc[i].addEventListener('click', function () {
+      this.classList.toggle('active');
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+      }
+    });
+  }
+</script>
+
+{% schema %}
+{
+  "name": "FAQs Start",
+  "settings": []
+}
+{% endschema %}

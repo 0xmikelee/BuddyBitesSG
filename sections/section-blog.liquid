@@ -1,0 +1,104 @@
+<header class="relative h-[15dvh] lg:h-[25dvh]">
+  <img
+    src="{{ 'Header-Blog-8000x580_ad481b25-7826-4acc-863d-a69ba187fb12.png' | file_img_url: 'master' }}"
+    alt="Blog Banner"
+    class="absolute left-0 top-0 h-full w-full object-cover object-[15%_0] lg:object-left"
+  >
+  <div class="absolute right-[10%] top-[5%] md:right-[15%] lg:top-1/2 lg:-translate-y-1/2">
+    <h1 class="text-[50px] text-[#193C6B] en:font-heyCharlie sm:text-[80px] lg:text-[100px]">
+      {{ 'blog.title' | t }}
+    </h1>
+  </div>
+</header>
+
+<section class="container py-5 lg:py-10">
+  <!-- Blog Filter Links -->
+  <div class="mx-auto grid max-w-[900px] grid-cols-1 gap-4 py-5 shadow-lg md:grid-cols-3 lg:grid-cols-5">
+    {% for link in linklists['blog-pages'].links %}
+      <div class="flex flex-col items-center justify-center">
+        <a
+          href="{{ link.url }}"
+          class="font-monserrat text-balance text-center text-[14px] font-semibold uppercase hover:text-[#193C6B] lg:text-[18px] {% if link.active %}text-[#193C6B] {% else %}text-[#DCDEDF] {% endif %}"
+        >
+          {{- link.title -}}
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+
+  <!-- Article Grid -->
+  {% paginate blog.articles by 3 %}
+    <div id="article-list" class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      {% for article in blog.articles %}
+        <a
+          href="{{ article.url }}"
+          class="article-item flex flex-col items-center justify-start gap-2 rounded-sm p-5 shadow-lg"
+        >
+          <img src="{{ article.image | image_url: width: 300 }}" alt="{{ article.title }}" class="w-full">
+          <h3 class="font-monserrat text-balance text-center text-[14px] font-semibold uppercase text-[#193C6B] lg:text-[18px]">
+            {{ article.title }}
+          </h3>
+          <p class="font-monserrat text-balance text-center text-[14px]">
+            {{ article.excerpt_or_content | strip_html | truncate: 100 }}
+          </p>
+        </a>
+      {% endfor %}
+    </div>
+
+    <!-- Show More Button -->
+    {% if paginate.next %}
+      <div class="mt-8 text-center">
+        <button
+          id="show-more"
+          class="rounded bg-[#193C6B] px-6 py-2 text-white hover:bg-[#152e50]"
+          data-next-url="{{ paginate.next.url }}"
+        >
+          Show More
+        </button>
+      </div>
+    {% endif %}
+  {% endpaginate %}
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const showMoreBtn = document.getElementById('show-more');
+    if (!showMoreBtn) return;
+
+    showMoreBtn.addEventListener('click', function () {
+      const nextUrl = showMoreBtn.getAttribute('data-next-url');
+      if (!nextUrl) return;
+
+      fetch(nextUrl)
+        .then((response) => response.text())
+        .then((html) => {
+          // Parse returned HTML to get new articles
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(html, 'text/html');
+          const newArticles = doc.querySelectorAll('.article-item');
+          const articleList = document.getElementById('article-list');
+
+          // Append new articles to current list
+          newArticles.forEach((item) => articleList.appendChild(item));
+
+          // Update or remove the Show More button
+          const newShowMore = doc.getElementById('show-more');
+          if (newShowMore && newShowMore.dataset.nextUrl) {
+            showMoreBtn.setAttribute('data-next-url', newShowMore.dataset.nextUrl);
+          } else {
+            showMoreBtn.remove(); // No more pages
+          }
+        })
+        .catch((error) => {
+          console.error('Error loading more articles:', error);
+        });
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Blog",
+  "settings": []
+}
+{% endschema %}
