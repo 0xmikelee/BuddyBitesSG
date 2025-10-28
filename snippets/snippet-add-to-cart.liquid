@@ -9,7 +9,7 @@
   - [Starter packs] Prevent the user from ordering more than 1 item
 {% endcomment %}
 
-{% assign discount_percentage = product.metafields.subscriptions.discount_percentage | round: 2 %}
+{% assign discount_percentage = product.metafields.subscription.discount_percentage | round: 2 %}
 {% assign discount_factor = 100 | minus: discount_percentage | divided_by: 100.0 %}
 
 <script>
