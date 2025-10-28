@@ -131,7 +131,7 @@
                     src="{{ m_obj.featured_image.value | image_url: width: 100, height: 100  }}"
                     width="100"
                     height="100"
-                    class="aspect-square w-[50px] rounded-xl border-2 border-solid object-cover md:w-full {% if product.title == prd.title %} border-black opacity-100 {% else %} border-[#C3C3C3] opacity-50{% endif %}"
+                    class="rounded-xl border-2 border-solid {% if product.title == prd.title %} border-black opacity-100 {% else %} border-[#C3C3C3] opacity-50{% endif %}"
                   >
                   <p class="text-center font-normal en:font-museo en:text-[16px] zh-TW:text-[14px]">
                     {% assign my_string = m_obj.name %}
