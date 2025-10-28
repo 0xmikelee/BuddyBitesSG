@@ -451,7 +451,7 @@
           <div class="absolute left-0 top-[calc(100%+20px)] hidden h-full w-[clamp(900px,80vw,1200px)] before:absolute before:left-0 before:top-[-25px] before:block before:h-[25px] before:w-full before:bg-transparent before:content-[''] md:-translate-x-[10%] md:group-hover:block">
             <div
               id="learnMegaMenu"
-              class="grid grid-cols-6 gap-3 overflow-hidden rounded-bl-[40px] rounded-br-[40px] bg-[#98c9eb] px-6 py-4"
+              class="grid grid-cols-5 gap-3 overflow-hidden rounded-bl-[40px] rounded-br-[40px] bg-[#98c9eb] px-6 py-4"
             >
               <a
                 href="{{ pages.about.url }}"
@@ -505,19 +505,21 @@
                   class="relative h-full w-full object-cover"
                 >
               </a>
-              <a
-                href="{{ pages['buddy-bites-ambassador-min-chen'].url }}"
-                class="relative overflow-hidden rounded-xl hover:outline hover:outline-2 hover:outline-[#193C6B]"
-              >
-                <p class="absolute left-0 top-0 z-10 w-full py-2 text-center font-mukta text-[20px] uppercase text-[#193C6B]">
-                  {{ 'navbar.learn_more.options.ambassador' | t }}
-                </p>
-                <img
-                  src="{{ '2000x3158px_website_COVER_mobile.png' | file_img_url: "master" }}"
-                  alt="{{ 'navbar.learn_more.options.ambassador' | t }}"
-                  class="relative h-full w-full object-cover"
+              {% comment %}
+                <a
+                  href="{{ pages['buddy-bites-ambassador-min-chen'].url }}"
+                  class="relative overflow-hidden rounded-xl hover:outline hover:outline-2 hover:outline-[#193C6B]"
                 >
-              </a>
+                  <p class="absolute left-0 top-0 z-10 w-full py-2 text-center font-mukta text-[20px] uppercase text-[#193C6B]">
+                    {{ 'navbar.learn_more.options.ambassador' | t }}
+                  </p>
+                  <img
+                    src="{{ '2000x3158px_website_COVER_mobile.png' | file_img_url: "master" }}"
+                    alt="{{ 'navbar.learn_more.options.ambassador' | t }}"
+                    class="relative h-full w-full object-cover"
+                  >
+                </a>
+              {% endcomment %}
               <a
                 href="{{ blogs.lifestyle.url }}"
                 class="relative overflow-hidden rounded-xl hover:outline hover:outline-2 hover:outline-[#193C6B]"
@@ -740,9 +742,11 @@
       <a href="{{ pages['subscription-page'].url }}" class="px-10 py-6">
         <p class="text-[18px] uppercase text-white en:font-museo">{{ 'navbar.subscribe' | t }}</p>
       </a>
-      <a href="{{ pages['buddy-bites-ambassador-min-chen'].url }}" class="px-10 py-6">
-        <p class="text-[18px] uppercase text-white en:font-museo">{{ 'navbar.learn_more.options.ambassador' | t }}</p>
-      </a>
+      {% comment %}
+        <a href="{{ pages['buddy-bites-ambassador-min-chen'].url }}" class="px-10 py-6">
+          <p class="text-[18px] uppercase text-white en:font-museo">{{ 'navbar.learn_more.options.ambassador' | t }}</p>
+        </a>
+      {% endcomment %}
       <a href="{{ pages['referral-candy'].url }}" class="px-10 py-6">
         <p class="text-[18px] uppercase text-white en:font-museo">{{ 'navbar.refer' | t }}</p>
       </a>
