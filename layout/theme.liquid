@@ -90,6 +90,10 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 
     <!-- Trackers ================================================== -->
+
+    <script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer></script>
+    <script src="{{ 'shopify_optimize.js' | shopify_asset_url }}" defer></script>
+
     <!-- Facebook Pixel Code - Deferred Loading -->
     <script>
       // Defer Facebook Pixel loading
@@ -124,27 +128,25 @@
     ></noscript>
     <!-- End Facebook Pixel Code -->
 
-    {% comment %}
-      <script type="text/javascript">
-        // Defer Clarity loading
-        window.addEventListener('load', function () {
-          setTimeout(function () {
-            (function (c, l, a, r, i, t, y) {
-              c[a] =
-                c[a] ||
-                function () {
-                  (c[a].q = c[a].q || []).push(arguments);
-                };
-              t = l.createElement(r);
-              t.async = 1;
-              t.src = 'https://www.clarity.ms/tag/' + i;
-              y = l.getElementsByTagName(r)[0];
-              y.parentNode.insertBefore(t, y);
-            })(window, document, 'clarity', 'script', 'fuflri36k9');
-          }, 3000);
-        });
-      </script>
-    {% endcomment %}
+    <script type="text/javascript">
+      // Defer Clarity loading
+      window.addEventListener('load', function () {
+        setTimeout(function () {
+          (function (c, l, a, r, i, t, y) {
+            c[a] =
+              c[a] ||
+              function () {
+                (c[a].q = c[a].q || []).push(arguments);
+              };
+            t = l.createElement(r);
+            t.async = 1;
+            t.src = 'https://www.clarity.ms/tag/' + i;
+            y = l.getElementsByTagName(r)[0];
+            y.parentNode.insertBefore(t, y);
+          })(window, document, 'clarity', 'script', 'fuflri36k9');
+        }, 3000);
+      });
+    </script>
 
     <!-- Google Tag Manager -->
     <script>
