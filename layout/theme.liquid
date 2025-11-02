@@ -275,6 +275,36 @@
       html {
         width: 100vw;
       }
+
+      /* Prevent horizontal overflow without breaking sticky positioning */
+      /* Constrain the main content container - use clip instead of hidden */
+      body > div:first-of-type {
+        max-width: 100%;
+        width: 100%;
+        position: relative;
+        box-sizing: border-box;
+        overflow-x: clip;
+      }
+
+      /* Ensure all sections respect container width */
+      section {
+        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      /* Sticky header can be full width but contained by parent */
+      #shopify-section-header {
+        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      /* Ensure images don't cause overflow */
+      img {
+        max-width: 100%;
+        height: auto;
+      }
     </style>
     <script>
       // Upcart script for preventing users from adding more than 1 sample to the cart
