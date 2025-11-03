@@ -114,17 +114,19 @@
             {% assign metaobj_list = prd.metafields.custom.flavor.value %}
 
             {% for m_obj in metaobj_list %}
-              <a href="{{ prd.url }}">
-                <img
-                  src="{{ m_obj.featured_image.value | image_url: width: 100, height: 100  }}"
-                  width="100"
-                  height="100"
-                  class="rounded-xl border-2 border-solid {% if product.title == prd.title %} border-black opacity-100 {% else %} border-[#C3C3C3] opacity-50{% endif %}"
-                >
-                <p class="text-center font-semibold en:font-museo en:text-[16px] zh-TW:text-[14px]">
-                  <b>{{ m_obj.name }}</b>
-                </p>
-              </a>
+              {% if prd.id != 9038841282776 %}
+                <a href="{{ prd.url }}">
+                  <img
+                    src="{{ m_obj.featured_image.value | image_url: width: 100, height: 100  }}"
+                    width="100"
+                    height="100"
+                    class="rounded-xl border-2 border-solid {% if product.title == prd.title %} border-black opacity-100 {% else %} border-[#C3C3C3] opacity-50{% endif %}"
+                  >
+                  <p class="text-center font-semibold en:font-museo en:text-[16px] zh-TW:text-[14px]">
+                    <b>{{ m_obj.name }}</b>
+                  </p>
+                </a>
+              {% endif %}
             {% endfor %}
           {% endfor %}
         </div>
@@ -134,6 +136,77 @@
             {{- 'products.product.have_puppy_link_text' | t -}}
           </a>
         </div>
+        {% if product.id == 7699913244888 or product.id == 9038841282776 %}
+          <div class="flex w-fit flex-col items-start justify-start gap-2 text-center">
+            <p class="inline w-full text-center text-[16px] font-bold text-black en:font-museo">
+              {{ 'products.product.choose_kibble_size' | t }}
+            </p>
+            <div class="grid grid-cols-2 items-center gap-2 md:min-w-[330px]">
+              <a
+                href="{{ all_products['adult-mini-salmon-dry-dog-food'].url }}"
+                class="flex h-full cursor-pointer flex-col items-center justify-between gap-2 rounded-xl {% if product.id == 9038841282776 %} border-2  border-[#193C9B]{% endif %} bg-[#F4F4F4] px-2 py-3"
+              >
+                <p class="text-[16px] font-bold text-black en:font-museo">
+                  4-6{{ 'products.product.millimetres' | t }}
+                </p>
+                <div class="flex aspect-square w-[80px] flex-col items-center justify-center object-contain">
+                  <img
+                    src="{{ 'Kibble.png' | file_img_url: 'master' }}"
+                    alt="4-6mm"
+                    class="aspect-square w-[40px] object-contain"
+                  >
+                </div>
+                <div class="flex flex-col items-center justify-center gap-1">
+                  <p class="font-bold text-black en:font-museo md:text-[18px]">
+                    {{ 'products.product.small_kibbles' | t }}
+                  </p>
+                  {% if product.id == 9038841282776 %}
+                    <p class="text-center font-semibold text-[#4E4E4E] en:font-museo en:text-[16px] zh-TW:text-[14px]">
+                      {{ 'products.product.selected' | t }}
+                    </p>
+                  {% else %}
+                    <p class="font-bold text-[#193C6B] underline en:font-museo md:text-[18px]">
+                      {{ 'products.product.shop_small' | t }}
+                    </p>
+                  {% endif %}
+                  <p class="text-center font-normal text-black en:font-museo en:text-[16px] zh-TW:text-[14px]">
+                    {{ 'products.product.great_for_puppies' | t }}
+                  </p>
+                </div>
+              </a>
+              <a
+                href="{{ all_products['buddy-bites-adult-salmon'].url }}"
+                class="flex h-full cursor-pointer flex-col items-center justify-between gap-2 rounded-xl {% if product.id == 7699913244888 %} border-2  border-[#193C9B]{% endif %} bg-[#F4F4F4] px-2 py-3"
+              >
+                <p class="text-[16px] font-bold text-black en:font-museo">
+                  12-14{{ 'products.product.millimetres' | t }}
+                </p>
+                <img
+                  src="{{ 'Kibble.png' | file_img_url: 'master' }}"
+                  alt="12-14mm"
+                  class="aspect-square w-[50px] object-contain"
+                >
+                <div class="flex flex-col items-center justify-center gap-1">
+                  <p class="font-bold text-black en:font-museo md:text-[18px]">
+                    {{ 'products.product.large_kibbles' | t }}
+                  </p>
+                  {% if product.id == 7699913244888 %}
+                    <p class="text-center font-semibold text-[#4E4E4E] en:font-museo en:text-[16px] zh-TW:text-[14px]">
+                      {{ 'products.product.selected' | t }}
+                    </p>
+                  {% else %}
+                    <p class="font-bold text-[#193C6B] underline en:font-museo md:text-[18px]">
+                      {{ 'products.product.shop_large' | t }}
+                    </p>
+                  {% endif %}
+                  <p class="text-center font-normal text-black en:font-museo en:text-[16px] zh-TW:text-[14px]">
+                    {{ 'products.product.adults_and_10lb' | t }}
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        {% endif %}
       </div>
 
       <div class="prose prose-base marker:text-black prose-ul:list-disc">
