@@ -91,7 +91,7 @@
               .replaceAll(', asyncLoad', ', function(){}')),
           e.innerHTML.includes('PreviewBarInjector') &&
             (e.innerHTML = e.innerHTML.replace('DOMContentLoaded', 'asyncLazyLoad')),
-          e.className == 'analytics' && (e.type = 'text/lazyload'),
+          // e.className == 'analytics' && (e.type = 'text/lazyload'),
           (e.src.includes('assets/storefront/features') ||
             e.src.includes('assets/shopify_pay') ||
             e.src.includes('connect.facebook.net')) &&
