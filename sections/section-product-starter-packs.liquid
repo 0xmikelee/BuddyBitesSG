@@ -107,52 +107,186 @@
       ></div>
 
       <div class="flex items-center justify-start gap-2">
+        {% if product.title contains 'Premium' or product.title contains '豪華' %}
         <p class=" text-[16px] font-normal text-gray-500 line-through en:font-museo">
-          {{- product.price | plus: 2200 | money -}}
+          $65
         </p>
         <p class=" text-[16px] font-semibold text-red-500 en:font-museo">
-          {{- product.price | money -}}
+          $38
         </p>
         <p class=" rounded-full bg-red-500 px-2 py-1 text-[16px] font-semibold text-white en:font-museo">
-          {{ 'products.product.save' | t }} $22
+          {{ 'products.product.save' | t }} $27
         </p>
-      </div>
-
-      <div class="flex flex-col justify-center gap-2">
-        <p class="text-[16px] font-bold text-black en:font-museo">{{ 'products.product.choose_flavour' | t }}:</p>
-        <div class="flex justify-start gap-2">
-          {% for prd in collections['tester-packs'].products %}
-            {% assign metaobj_list = prd.metafields.custom.flavor.value %}
-
-            {% for m_obj in metaobj_list %}
-              {% if m_obj.product.value.id != 8988037349691 %}
-                <a href="{{ prd.url }}" class="flex basis-[19%] flex-col items-center justify-center md:basis-auto">
-                  <img
-                    src="{{ m_obj.featured_image.value | image_url: width: 100, height: 100  }}"
-                    width="100"
-                    height="100"
-                    class="rounded-xl border-2 border-solid {% if product.title == prd.title %} border-black opacity-100 {% else %} border-[#C3C3C3] opacity-50{% endif %}"
-                  >
-                  <p class="text-center font-normal en:font-museo en:text-[16px] zh-TW:text-[14px]">
-                    {% assign my_string = m_obj.name %}
-                    {% assign remaining_string_size = my_string.size | minus: 7 %}
-                    <b>{{ my_string | slice: 0, remaining_string_size }}</b>
-                  </p>
-                </a>
-              {% endif %}
-            {% endfor %}
-          {% endfor %}
-        </div>
-
-        {% if product.id != 8988037349691 %}
-          <div class="rounded-lg flex items-center justify-center gap-1 border-2 border-gray-200 px-2 py-[5px] font-montserrat text-[14px] font-light">
-            <p></p>{{ 'products.product.have_puppy' | t }}</p>
-            <a href="{{ all_products['puppy-sample-starter-pack'].url }}" class="font-bold underline">
-              {{- 'products.product.have_puppy_link_text' | t -}}
-            </a>
-          </div>
+        {% else %}
+        <p class=" text-[16px] font-normal text-gray-500 line-through en:font-museo">
+          $34
+        </p>
+        <p class=" text-[16px] font-semibold text-red-500 en:font-museo">
+          $22
+        </p>
+        <p class=" rounded-full bg-red-500 px-2 py-1 text-[16px] font-semibold text-white en:font-museo">
+          {{ 'products.product.save' | t }} $12
+        </p>
         {% endif %}
       </div>
+
+      {% comment %} Premium Starter Packs {% endcomment %}
+      {% if product.metafields.custom.main_collection.value.id == 456695218392 %}
+        <div class="flex flex-col justify-center gap-2">
+          <p class="text-[16px] font-bold text-black en:font-museo">{{ 'products.product.choose_flavour' | t }}:</p>
+          <div class="flex justify-start gap-2">
+            {% for prd in collections['premium-starter-packs'].products %}
+              {% assign metaobj_list = prd.metafields.custom.flavor.value %}
+
+              {% for m_obj in metaobj_list %}
+                {% if m_obj.product.value.id != 8988037349691 %}
+                  {% if m_obj.product.value.metafields.custom.main_collection.value.id == 440255250747 %}
+                    <a href="{{ prd.url }}" class="flex basis-[19%] flex-col items-center justify-center md:basis-auto">
+                      <img
+                        src="{{ m_obj.featured_image.value | image_url: width: 100, height: 100  }}"
+                        width="100"
+                        height="100"
+                        class="rounded-xl border-2 border-solid {% if product.title == prd.title %} border-black opacity-100 {% else %} border-[#C3C3C3] opacity-50{% endif %}"
+                      >
+                      <p class="text-center font-normal en:font-museo en:text-[16px] zh-TW:text-[14px]">
+                        {% if request.locale.iso_code == 'en' %}
+                          {% assign my_string = m_obj.name %}
+                          {% assign remaining_string_size = my_string.size | minus: 7 %}
+                          <b>{{ my_string | slice: 0, remaining_string_size }}</b>
+                        {% else %}
+                          <b>{{ m_obj.name }}</b>
+                        {% endif %}
+                      </p>
+                    </a>
+                  {% endif %}
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
+          </div>
+
+          {% if product.id != 8988037349691 %}
+            <div class="rounded-lg flex items-center justify-center gap-1 border-2 border-gray-200 px-2 py-[5px] font-montserrat text-[14px] font-light">
+              <p></p>{{ 'products.product.have_puppy' | t }}</p>
+              <a href="{{ all_products['puppy-sample-starter-pack'].url }}" class="font-bold underline">
+                {{- 'products.product.have_puppy_link_text' | t -}}
+              </a>
+            </div>
+          {% endif %}
+          <a class="flex flex-col rounded-xl border-2 border-[#193C6B] overflow-hidden cursor-pointer">
+            <p class="text-[14px] md:text-[18px] font-museo font-bold text-white bg-[#193C6B] text-center text-balance py-2 uppercase">{{ 'products.product.best_deal' | t }}</p>
+            <div class="grid grid-cols-[0.5fr_1fr] font-museo">
+              <div class="bg-[#B7DDF8] md:w-full md:h-full flex justify-center items-center">
+                <img src="{{ product.metafields.custom.best_deal.value.image_premium | img_url: 'large' }}" alt="{{ product.metafields.custom.best_deal.value.flavour }}" class="md:w-full md:h-full object-contain">
+              </div>
+              <div class="h-full flex flex-col justify-center items-start px-3 py-5">
+                <p class="md:text-[20px] text-[16px] font-extrabold text-center text-balance">{{ product.metafields.custom.best_deal.value.flavour }} {{ 'products.product.premium_starter_pack' | t }}</p>
+                <div class="flex items-center justify-center gap-2">
+                  <p class="md:text-[18px] text-[14px] text-[#B3B3B3] font-normal text-center text-balance line-through">$65</p>
+                  <p class="md:text-[18px] text-[14px] font-bold text-center text-balance text-[#193C6B]">$38</p>
+                  <p class="md:text-[14px] text-[12px] font-normal text-center text-balance bg-[#193C6B] text-white px-2 py-1 rounded-lg">{{ 'products.product.save' | t }} $27</p>
+                </div>
+                <p class="text-[14px] font-bold text-start text-balance text-[#193C6B] md:text-[16px]">{{ 'products.product.includes' | t }}:</p>
+                <p class="text-[14px] font-normal text-start text-balance text-[#193C6B] md:text-[16px]">500g {{ 'products.product.kibbles' | t }}, <br class="md:hidden" />2x {{ 'products.product.free_gifts' | t }}, <br class="md:hidden" />2x {{ 'products.product.toppers' | t }}, <br class="md:hidden" />1x {{ 'products.product.treats' | t }}</p>
+              </div>
+            </div>
+          </a>
+          <a href="{{ product.metafields.custom.best_deal.value.starter_pack.value.url }}" class="flex flex-col rounded-xl border-2 border-gray-200 overflow-hidden cursor-pointer">
+            <div class="grid grid-cols-[0.5fr_1fr] font-museo">
+              <div class="bg-[#B7DDF8] md:w-full md:h-full flex justify-center items-center">
+                <img src="{{ product.metafields.custom.best_deal.value.image_starter | img_url: 'large' }}" alt="{{ product.metafields.custom.best_deal.value.flavour }}" class="md:w-full md:h-full object-contain">
+              </div>
+              <div class="h-full flex flex-col justify-center items-start px-3 py-5">
+                <p class="md:text-[20px] text-[16px] font-extrabold text-center text-balance">{{ product.metafields.custom.best_deal.value.flavour }} {{ 'products.product.starter_pack' | t }}</p>
+                <div class="flex items-center justify-center gap-2">
+                  <p class="md:text-[18px] text-[14px] text-[#B3B3B3] font-normal text-center text-balance line-through">$34</p>
+                  <p class="md:text-[18px] text-[14px] font-bold text-center text-balance text-[#193C6B]">$22</p>
+                  <p class="md:text-[14px] text-[12px] font-normal text-center text-balance bg-[#193C6B] text-white px-2 py-1 rounded-lg">{{ 'products.product.save' | t }} $12</p>
+                </div>
+                <p class="text-[14px] font-bold text-start text-balance text-[#193C6B] md:text-[16px]">{{ 'products.product.includes' | t }}:</p>
+                <p class="text-[14px] font-normal text-start text-balance text-[#193C6B] md:text-[16px]">500g {{ 'products.product.kibbles' | t }}, <br class="md:hidden" />2x {{ 'products.product.free_gifts' | t }}</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      {% comment %} Starter Packs {% endcomment %}
+      {% elsif product.metafields.custom.main_collection.value.id == 399307669720 %}
+        <div class="flex flex-col justify-center gap-2">
+          <p class="text-[16px] font-bold text-black en:font-museo">{{ 'products.product.choose_flavour' | t }}:</p>
+          <div class="flex justify-start gap-2">
+            {% for prd in collections['tester-packs'].products %}
+              {% assign metaobj_list = prd.metafields.custom.flavor.value %}
+
+              {% for m_obj in metaobj_list %}
+                {% if m_obj.product.value.id != 8120082071768 %}
+                  {% if m_obj.product.value.metafields.custom.main_collection.value.id == 399307669720 %}
+                    <a href="{{ prd.url }}" class="flex basis-[19%] flex-col items-center justify-center md:basis-auto">
+                      <img
+                        src="{{ m_obj.featured_image.value | image_url: width: 100, height: 100  }}"
+                        width="100"
+                        height="100"
+                        class="rounded-xl border-2 border-solid {% if product.title == prd.title %} border-black opacity-100 {% else %} border-[#C3C3C3] opacity-50{% endif %}"
+                      >
+                      <p class="text-center font-normal en:font-museo en:text-[16px] zh-TW:text-[14px]">
+                        {% if request.locale.iso_code == 'en' %}
+                          {% assign my_string = m_obj.name %}
+                          {% assign remaining_string_size = my_string.size | minus: 7 %}
+                          <b>{{ my_string | slice: 0, remaining_string_size }}</b>
+                        {% else %}
+                          <b>{{ m_obj.name }}</b>
+                        {% endif %}
+                      </p>
+                    </a>
+                  {% endif %}
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
+          </div>
+
+          {% if product.id != 8120082071768 %}
+            <div class="rounded-lg flex items-center justify-center gap-1 border-2 border-gray-200 px-2 py-[5px] font-montserrat text-[14px] font-light">
+              <p></p>{{ 'products.product.have_puppy' | t }}</p>
+              <a href="{{ all_products['puppy-sample-starter-pack'].url }}" class="font-bold underline">
+                {{- 'products.product.have_puppy_link_text' | t -}}
+              </a>
+            </div>
+          {% endif %}
+          <a href="{{ product.metafields.custom.best_deal.value.premium_starter_pack.value.url }}" class="flex flex-col rounded-xl border-2 border-gray-200 overflow-hidden cursor-pointer">  
+          <p class="text-[14px] md:text-[18px] font-museo font-bold text-white bg-[#193C6B] text-center text-balance py-2 uppercase">{{ 'products.product.best_deal' | t }}</p>
+            <div class="grid grid-cols-[0.5fr_1fr] font-museo">
+              <div class="bg-[#B7DDF8] md:w-full md:h-full flex justify-center items-center">
+                <img src="{{ product.metafields.custom.best_deal.value.image_premium | img_url: 'large' }}" alt="{{ product.metafields.custom.best_deal.value.flavour }}" class="md:w-full md:h-full object-contain">
+              </div>
+              <div class="h-full flex flex-col justify-center items-start px-3 py-5">
+                <p class="md:text-[20px] text-[16px] font-extrabold text-center text-balance">{{ product.metafields.custom.best_deal.value.flavour }} {{ 'products.product.premium_starter_pack' | t }}</p>
+                <div class="flex items-center justify-center gap-2">
+                  <p class="md:text-[18px] text-[14px] text-[#B3B3B3] font-normal text-center text-balance line-through">$65</p>
+                  <p class="md:text-[18px] text-[14px] font-bold text-center text-balance text-[#193C6B]">$38</p>
+                  <p class="md:text-[14px] text-[12px] font-normal text-center text-balance bg-[#193C6B] text-white px-2 py-1 rounded-lg">{{ 'products.product.save' | t }} $27</p>
+                </div>
+                <p class="text-[14px] font-bold text-start text-balance text-[#193C6B] md:text-[16px]">{{ 'products.product.includes' | t }}:</p>
+                <p class="text-[14px] font-normal text-start text-balance text-[#193C6B] md:text-[16px]">500g {{ 'products.product.kibbles' | t }}, <br class="md:hidden" />2x {{ 'products.product.free_gifts' | t }}, <br class="md:hidden" />2x {{ 'products.product.toppers' | t }}, <br class="md:hidden" />1x {{ 'products.product.treats' | t }}</p>
+              </div>
+            </div>
+          </a>
+          <a class="flex flex-col rounded-xl border-2 border-[#193C6B] overflow-hidden cursor-pointer">
+            <div class="grid grid-cols-[0.5fr_1fr] font-museo">
+              <div class="bg-[#B7DDF8] md:w-full md:h-full flex justify-center items-center">
+                <img src="{{ product.metafields.custom.best_deal.value.image_starter | img_url: 'large' }}" alt="{{ product.metafields.custom.best_deal.value.flavour }}" class="md:w-full md:h-full object-contain">
+              </div>
+              <div class="h-full flex flex-col justify-center items-start px-3 py-5">
+                <p class="md:text-[20px] text-[16px] font-extrabold text-center text-balance">{{ product.metafields.custom.best_deal.value.flavour }} {{ 'products.product.starter_pack' | t }}</p>
+                <div class="flex items-center justify-center gap-2">
+                  <p class="md:text-[18px] text-[14px] text-[#B3B3B3] font-normal text-center text-balance line-through">$34</p>
+                  <p class="md:text-[18px] text-[14px] font-bold text-center text-balance text-[#193C6B]">$22</p>
+                  <p class="md:text-[14px] text-[12px] font-normal text-center text-balance bg-[#193C6B] text-white px-2 py-1 rounded-lg">{{ 'products.product.save' | t }} $12</p>
+                </div>
+                <p class="text-[14px] font-bold text-start text-balance text-[#193C6B] md:text-[16px]">{{ 'products.product.includes' | t }}:</p>
+                <p class="text-[14px] font-normal text-start text-balance text-[#193C6B] md:text-[16px]">500g {{ 'products.product.kibbles' | t }}, <br class="md:hidden" />2x {{ 'products.product.free_gifts' | t }}</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      {% endif %}
 
       <div class="prose prose-base marker:text-black prose-ul:list-disc">
         {{ product.description }}
@@ -163,15 +297,15 @@
 </section>
 
 {% comment %} Kibbles Nutrition {% endcomment %}
-{% if product.id == 8119984521432 %}
+{% if product.id == 8119984521432 or product.id == 9055584092376 %}
   {% render 'product-kibbles-nutrition-duck' %}
-{% elsif product.id == 8120024367320 %}
+{% elsif product.id == 8120024367320 or product.id == 9055583437016 %}
   {% render 'product-kibbles-nutrition-lamb' %}
-{% elsif product.id == 8120078401752 %}
+{% elsif product.id == 8120078401752 or product.id == 9055585108184 %}
   {% render 'product-kibbles-nutrition-turkey' %}
-{% elsif product.id == 8120047272152 %}
+{% elsif product.id == 8120047272152 or product.id == 9055585927384 %}
   {% render 'product-kibbles-nutrition-salmon' %}
-{% elsif product.id == 8120082071768 %}
+{% elsif product.id == 8120082071768 or product.id == 9055584878808 %}
   {% render 'product-kibbles-nutrition-puppy' %}
 {% endif %}
 

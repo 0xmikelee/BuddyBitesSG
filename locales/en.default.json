@@ -1015,6 +1015,12 @@
       "shop_small": "Shop Small",
       "shop_large": "Shop Large",
       "selected": "Selected",
+      "starter_pack": "Starter Pack",
+      "premium_starter_pack": "Premium Starter Pack",
+      "includes": "Includes",
+      "kibbles": "Kibbles",
+      "free_gifts": "FREE Gifts",
+      "best_deal": "Best Deal",
       "nutrition": {
         "title": "Nutrition",
         "header": "Nutrition",
