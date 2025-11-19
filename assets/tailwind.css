@@ -6027,6 +6027,10 @@ video {
     height: 100%;
   }
 
+  .lg\:h-\[clamp\(660px\2c 85dvh\2c 900px\)\]{
+    height: clamp(660px,85dvh,900px);
+  }
+
   .lg\:w-\[120px\]{
     width: 120px;
   }

@@ -28,40 +28,28 @@
 
 {% endstyle %}
 
-<section class="relative h-[660px] lg:h-[clamp(660px, 70dvh, 760px)]">
+<section class="relative h-[660px] lg:h-[clamp(660px,85dvh,900px)]">
   {% capture hero_image_desktop_url %}
     {% if section.settings.hero_image_desktop %}
       {{ section.settings.hero_image_desktop | img_url: 'master' }}
     {% else %}
-      {{ 'Vector_48_18f479c9-3e28-464c-812d-a6ef7c229e79.png' | file_img_url: 'master' }}
+      {{ 'h.png' | file_img_url: 'master' }}
     {% endif %}
   {% endcapture %}
   {% capture hero_image_desktop_srcset %}
     {% if section.settings.hero_image_desktop %}
-      {{ section.settings.hero_image_desktop | img_url: 'master' | append: ' 300w' }}, 
-      {{ section.settings.hero_image_desktop | img_url: 'master' | append: ' 600w' }}, 
       {{ section.settings.hero_image_desktop | img_url: 'master' | append: ' 900w' }}, 
       {{ section.settings.hero_image_desktop | img_url: 'master' | append: ' 1200w' }}, 
-      {{ section.settings.hero_image_desktop | img_url: 'master' | append: ' 1500w' }}, 
-      {{ section.settings.hero_image_desktop | img_url: 'master' | append: ' 1800w' }}, 
-      {{ section.settings.hero_image_desktop | img_url: 'master' | append: ' 2100w' }}, 
-      {{ section.settings.hero_image_desktop | img_url: 'master' | append: ' 2400w' }}
     {% else %}
-      {{ 'Vector_48_18f479c9-3e28-464c-812d-a6ef7c229e79.png' | file_img_url: 'master' | append: ' 300w' }}, 
-      {{ 'Vector_48_18f479c9-3e28-464c-812d-a6ef7c229e79.png' | file_img_url: 'master' | append: ' 600w' }}, 
-      {{ 'Vector_48_18f479c9-3e28-464c-812d-a6ef7c229e79.png' | file_img_url: 'master' | append: ' 900w' }}, 
-      {{ 'Vector_48_18f479c9-3e28-464c-812d-a6ef7c229e79.png' | file_img_url: 'master' | append: ' 1200w' }}, 
-      {{ 'Vector_48_18f479c9-3e28-464c-812d-a6ef7c229e79.png' | file_img_url: 'master' | append: ' 1500w' }}, 
-      {{ 'Vector_48_18f479c9-3e28-464c-812d-a6ef7c229e79.png' | file_img_url: 'master' | append: ' 1800w' }}, 
-      {{ 'Vector_48_18f479c9-3e28-464c-812d-a6ef7c229e79.png' | file_img_url: 'master' | append: ' 2100w' }}, 
-      {{ 'Vector_48_18f479c9-3e28-464c-812d-a6ef7c229e79.png' | file_img_url: 'master' | append: ' 2400w' }}, 
+      {{ 'h.png' | file_img_url: 'master' | append: ' 900w' }}, 
+      {{ 'h.png' | file_img_url: 'master' | append: ' 1200w' }}, 
     {% endif %}
   {% endcapture %}
   {% capture hero_image_mobile_url %}
     {% if section.settings.hero_image_mobile %}
       {{ section.settings.hero_image_mobile | img_url: 'master' }}
     {% else %}
-      {{ 'Vector_49_36a11d0f-9c19-47a1-acfe-c7b210710cd8.png' | file_img_url: 'master' }}
+      {{ 'hero-image-mobile-long.png' | file_img_url: 'master' }}
     {% endif %}
   {% endcapture %}
   {% capture hero_image_mobile_srcset %}
@@ -70,9 +58,9 @@
       {{ section.settings.hero_image_mobile | img_url: 'master' | append: ' 800w' }},
       {{ section.settings.hero_image_mobile | img_url: 'master' | append: ' 1200w' }}
     {% else %}
-      {{ 'Vector_49_36a11d0f-9c19-47a1-acfe-c7b210710cd8.png' | file_img_url: 'master' | append: ' 400w' }}, 
-      {{ 'Vector_49_36a11d0f-9c19-47a1-acfe-c7b210710cd8.png' | file_img_url: 'master' | append: ' 800w' }}, 
-      {{ 'Vector_49_36a11d0f-9c19-47a1-acfe-c7b210710cd8.png' | file_img_url: 'master' | append: ' 1200w' }} 
+      {{ 'hero-image-mobile-long.png' | file_img_url: 'master' | append: ' 400w' }}, 
+      {{ 'hero-image-mobile-long.png' | file_img_url: 'master' | append: ' 800w' }}, 
+      {{ 'hero-image-mobile-long.png' | file_img_url: 'master' | append: ' 1200w' }} 
     {% endif %}
   {% endcapture %}
   <img
@@ -113,9 +101,7 @@
           {% if section.settings.hero_heading != blank %}
             {{ section.settings.hero_heading }}
           {% else %}
-            Freshness <br class="hidden lg:block">
-            they'll <br class="block lg:hidden">
-            Lick Up.
+          Premium European Kibble
           {% endif %}
         </h1>
         <h1 class="zh-TW:block en:hidden text-[30px] leading-[35px] sm:text-[70px] text-balance sm:leading-[70px] md:text-[70px] md:max-w-[70%] md:leading-[75px] lg:text-left">
@@ -462,7 +448,7 @@
   </div>
   <div class="flex justify-center">
     <a
-      href="{{ pages['subscription-page'].url }}"
+      href="{{ pages['subscription-landing'].url }}"
       class="relative rounded-full border-2 border-[#9acaeb] bg-[#9acaeb] px-5 py-2 font-montserrat text-[14px] font-semibold uppercase text-[#1c3e6c] hover:bg-white hover:text-[#9acaeb]"
     >
       {{- 'homepage.section_subscribe_and_save.subscribe_now' | t -}}
