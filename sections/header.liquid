@@ -8,20 +8,20 @@
   const kibblesContent = document.getElementById('kibblesContent');
   const treatsCategory = document.getElementById('treatsCategory');
   const treatsContent = document.getElementById('treatsContent');
-  // const toppersCategory = document.getElementById('toppersCategory');
-  // const toppersContent = document.getElementById('toppersContent');
-  const merchandiseCategory = document.getElementById('merchandiseCategory');
-  const merchandiseContent = document.getElementById('merchandiseContent');
+  const toppersCategory = document.getElementById('toppersCategory');
+  const toppersContent = document.getElementById('toppersContent');
+  // const merchandiseCategory = document.getElementById('merchandiseCategory');
+  // const merchandiseContent = document.getElementById('merchandiseContent');
 
   kibblesCategory.addEventListener('mouseenter', () => {
     kibblesContent.classList.remove('hidden');
     kibblesContent.classList.add('grid');
     treatsContent.classList.add('hidden');
     treatsContent.classList.remove('grid');
-    // toppersContent.classList.add('hidden');
-    // toppersContent.classList.remove('grid');
-    merchandiseContent.classList.add('hidden');
-    merchandiseContent.classList.remove('grid');
+    toppersContent.classList.add('hidden');
+    toppersContent.classList.remove('grid');
+    // merchandiseContent.classList.add('hidden');
+    // merchandiseContent.classList.remove('grid');
   });
 
   treatsCategory.addEventListener('mouseenter', () => {
@@ -29,29 +29,29 @@
     treatsContent.classList.add('grid');
     kibblesContent.classList.add('hidden');
     kibblesContent.classList.remove('grid');
-    // toppersContent.classList.add('hidden');
-    // toppersContent.classList.remove('grid');
-    merchandiseContent.classList.add('hidden');
-    merchandiseContent.classList.remove('grid');
+    toppersContent.classList.add('hidden');
+    toppersContent.classList.remove('grid');
+    // merchandiseContent.classList.add('hidden');
+    // merchandiseContent.classList.remove('grid');
   });
 
-  // toppersCategory.addEventListener('mouseenter', () => {
-  //   toppersContent.classList.remove('hidden');
-  //   toppersContent.classList.add('grid');
-  //   kibblesContent.classList.add('hidden');
-  //   kibblesContent.classList.remove('grid');
-  //   treatsContent.classList.add('hidden');
-  //   treatsContent.classList.remove('grid');
-  // });
-
-  merchandiseCategory.addEventListener('mouseenter', () => {
-    merchandiseContent.classList.remove('hidden');
-    merchandiseContent.classList.add('grid');
+  toppersCategory.addEventListener('mouseenter', () => {
+    toppersContent.classList.remove('hidden');
+    toppersContent.classList.add('grid');
     kibblesContent.classList.add('hidden');
     kibblesContent.classList.remove('grid');
     treatsContent.classList.add('hidden');
     treatsContent.classList.remove('grid');
   });
+
+  // merchandiseCategory.addEventListener('mouseenter', () => {
+  //   merchandiseContent.classList.remove('hidden');
+  //   merchandiseContent.classList.add('grid');
+  //   kibblesContent.classList.add('hidden');
+  //   kibblesContent.classList.remove('grid');
+  //   treatsContent.classList.add('hidden');
+  //   treatsContent.classList.remove('grid');
+  // });
 
   const shopMobileDropdownBtn = document.getElementById('shopMobileDropdownBtn');
   const learnMobileDropdownBtn = document.getElementById('learnMobileDropdownBtn');
@@ -113,19 +113,18 @@
                     {{ 'navbar.shop.treats.title' | t }}
                   </p>
                 </a>
+                <a id="toppersCategory" href="{{ all_products['fresh-toppers-chicken-vegetables'].url }}">
+                  <p class="bg-[#193C6B] py-7 text-center text-[20px] font-light uppercase text-white hover:bg-[#98c9eb] en:font-museo">
+                    {{ 'navbar.shop.toppers.title' | t }}
+                  </p>
+                </a>
                 {% comment %}
-                  <a id="toppersCategory" href="{{ all_products['fresh-toppers-chicken-vegetables'].url }}">
+                  <a id="merchandiseCategory" href="{{ collections.merchandise.url }}">
                     <p class="bg-[#193C6B] py-7 text-center text-[20px] font-light uppercase text-white hover:bg-[#98c9eb] en:font-museo">
-                      {{ 'navbar.shop.toppers.title' | t }}
+                      {{ 'navbar.shop.merchandise.title' | t }}
                     </p>
                   </a>
                 {% endcomment %}
-
-                <a id="merchandiseCategory" href="{{ collections.merchandise.url }}">
-                  <p class="bg-[#193C6B] py-7 text-center text-[20px] font-light uppercase text-white hover:bg-[#98c9eb] en:font-museo">
-                    {{ 'navbar.shop.merchandise.title' | t }}
-                  </p>
-                </a>
               </div>
               <div class="h-full overflow-hidden">
                 {% comment %} Kibbles {% endcomment %}
@@ -277,165 +276,164 @@
                   </a>
                 </div>
                 {% comment %} Toppers {% endcomment %}
-                {% comment %}
-                  <div
-                    id="toppersContent"
-                    class="hidden h-full grid-cols-[repeat(2,fit-content(250px))] gap-2 bg-[#98c9eb] px-[150px] py-4"
-                  >
-                    <a
-                      href="{{ all_products['fresh-toppers-beef-vegetables'].url }}"
-                      class="relative h-full overflow-hidden rounded-xl bg-[#e4e0f1] hover:outline hover:outline-2 hover:outline-[#193C6B]"
-                    >
-                      <p class="absolute left-1/2 top-[10px] w-full -translate-x-1/2 text-center font-mukta text-[20px] uppercase text-[#193C6B]">
-                        {{ 'navbar.shop.toppers.options.beef' | t }}
-                      </p>
-                      <img
-                        src="{{ '8_5ab52882-5f65-4b5e-a2e9-97a58ba09ee0' | file_img_url: "master" }}"
-                        alt="{{ 'navbar.shop.toppers.options.beef' | t }}"
-                        class="object-top"
-                      >
-                    </a>
-                    <a
-                      href="{{ all_products['fresh-toppers-chicken-vegetables'].url }}"
-                      class="relative h-full overflow-hidden rounded-xl bg-[#e4e0f1] hover:outline hover:outline-2 hover:outline-[#193C6B]"
-                    >
-                      <p class="absolute left-1/2 top-[10px] w-full -translate-x-1/2 text-center font-mukta text-[20px] uppercase text-[#193C6B]">
-                        {{ 'navbar.shop.toppers.options.chicken' | t }}
-                      </p>
-                      <img
-                        src="{{ '1_3e1edd09-307d-4b37-af46-8e2ee0cca0c0.png' | file_img_url: "master" }}"
-                        alt="{{ 'navbar.shop.toppers.options.chicken' | t }}"
-                        class="object-top"
-                      >
-                    </a>
-                  </div>
-                {% endcomment %}
-                {% comment %} Merchandise {% endcomment %}
-
                 <div
-                  id="merchandiseContent"
-                  class="hidden h-full grid-cols-[30%_1fr] gap-2 bg-[#98c9eb] px-[150px] py-4"
+                  id="toppersContent"
+                  class="hidden h-full grid-cols-[repeat(2,fit-content(250px))] gap-2 bg-[#98c9eb] px-[150px] py-4"
                 >
                   <a
-                    href="{{ collections.all.url }}"
-                    class="relative flex h-full flex-col items-center gap-2 overflow-hidden rounded-xl bg-[#e4e0f1] py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
+                    href="{{ all_products['fresh-toppers-beef-vegetables'].url }}"
+                    class="relative h-full overflow-hidden rounded-xl bg-[#e4e0f1] hover:outline hover:outline-2 hover:outline-[#193C6B]"
                   >
-                    <p class="z-10 text-center font-mukta text-[20px] uppercase text-[#193C6B]">
-                      {{ 'navbar.shop.merchandise.options.all' | t }}
+                    <p class="absolute left-1/2 top-[10px] w-full -translate-x-1/2 text-center font-mukta text-[20px] uppercase text-[#193C6B]">
+                      {{ 'navbar.shop.toppers.options.beef' | t }}
                     </p>
                     <img
-                      src="{{ 'ab66e239e3379348e1ea06e8571b16e8_1.png' | file_img_url: "master" }}"
-                      alt="{{ 'navbar.shop.merchandise.options.all' | t }}"
-                      class="absolute inset-0 h-full w-full object-cover"
+                      src="{{ '8_c840090b-0396-4a8d-a0c5-9d32bbe6b1af.png' | file_img_url: "master" }}"
+                      alt="{{ 'navbar.shop.toppers.options.beef' | t }}"
+                      class="object-top"
                     >
                   </a>
-                  <div class="grid grid-cols-4 gap-2">
-                    <a
-                      href="{{ all_products.poop-bags.url }}"
-                      class="relative flex h-full flex-col items-center gap-2 overflow-hidden rounded-xl py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
+                  <a
+                    href="{{ all_products['fresh-toppers-chicken-vegetables'].url }}"
+                    class="relative h-full overflow-hidden rounded-xl bg-[#e4e0f1] hover:outline hover:outline-2 hover:outline-[#193C6B]"
+                  >
+                    <p class="absolute left-1/2 top-[10px] w-full -translate-x-1/2 text-center font-mukta text-[20px] uppercase text-[#193C6B]">
+                      {{ 'navbar.shop.toppers.options.chicken' | t }}
+                    </p>
+                    <img
+                      src="{{ '1_3e1edd09-307d-4b37-af46-8e2ee0cca0c0.png' | file_img_url: "master" }}"
+                      alt="{{ 'navbar.shop.toppers.options.chicken' | t }}"
+                      class="object-top"
                     >
-                      <p class="z-10 text-center font-mukta text-[14px] uppercase text-[#193C6B]">
-                        {{ 'navbar.shop.merchandise.options.poop_bag' | t }}
-                      </p>
-                      <img
-                        src="{{ 'DSC06699_copy.jpg' | file_img_url: "master" }}"
-                        alt="{{ 'navbar.shop.merchandise.options.poop_bag' | t }}"
-                        class="absolute inset-0 h-full w-full object-cover"
-                      >
-                    </a>
-                    <a
-                      href="{{ all_products['buddy-bites-scoops'].url }}"
-                      class="relative flex h-full flex-col items-center gap-2 overflow-hidden rounded-xl py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
-                    >
-                      <p class="z-10 text-center font-mukta text-[14px] uppercase text-[#193C6B]">
-                        {{ 'navbar.shop.merchandise.options.scoop' | t }}
-                      </p>
-                      <img
-                        src="{{ 'Scoop5.jpg' | file_img_url: "master" }}"
-                        alt="{{ 'navbar.shop.merchandise.options.scoop' | t }}"
-                        class="absolute inset-0 h-full w-full object-cover"
-                      >
-                    </a>
-                    <a
-                      href="{{ all_products['tennis'].url }}"
-                      class="relative flex h-full flex-col items-center gap-2 overflow-hidden rounded-xl py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
-                    >
-                      <p class="z-10 text-center font-mukta text-[14px] uppercase text-[#193C6B]">
-                        {{ 'navbar.shop.merchandise.options.tennis_ball' | t }}
-                      </p>
-                      <img
-                        src="{{ 'tennis_ball.png' | file_img_url: "master" }}"
-                        alt="{{ 'navbar.shop.merchandise.options.tennis_ball' | t }}"
-                        class="absolute inset-0 h-full w-full object-cover"
-                      >
-                    </a>
-                    <a
-                      href="{{ all_products['poo-bag-holder'].url }}"
-                      class="relative flex h-full flex-col items-center gap-2 overflow-hidden rounded-xl py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
-                    >
-                      <p class="z-10 text-center font-mukta text-[14px] uppercase text-[#193C6B]">
-                        {{ 'navbar.shop.merchandise.options.poop_bag_holder' | t }}
-                      </p>
-                      <img
-                        src="{{ 'poop_bag.png' | file_img_url: "master" }}"
-                        alt="{{ 'navbar.shop.merchandise.options.poop_bag_holder' | t }}"
-                        class="absolute inset-0 h-full w-full object-cover"
-                      >
-                    </a>
-                    <a
-                      href="{{ all_products['umbrella'].url }}"
-                      class="relative flex h-full flex-col items-center gap-2 overflow-hidden rounded-xl py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
-                    >
-                      <p class="z-10 text-center font-mukta text-[14px] uppercase text-[#193C6B]">
-                        {{ 'navbar.shop.merchandise.options.umbrella' | t }}
-                      </p>
-                      <img
-                        src="{{ 'umbr_95e60054-8b61-4a5b-a95e-9876887b47cc.png' | file_img_url: "master" }}"
-                        alt="{{ 'navbar.shop.merchandise.options.umbrella' | t }}"
-                        class="absolute inset-0 h-full w-full object-cover"
-                      >
-                    </a>
-                    <a
-                      href="{{ all_products['portable-bowl'].url }}"
-                      class="relative flex h-full flex-col items-center gap-2 overflow-hidden rounded-xl py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
-                    >
-                      <p class="z-10 text-center font-mukta text-[14px] uppercase text-[#193C6B]">
-                        {{ 'navbar.shop.merchandise.options.portable_bowl' | t }}
-                      </p>
-                      <img
-                        src="{{ 'portable_bowl.png' | file_img_url: "master" }}"
-                        alt="{{ 'navbar.shop.merchandise.options.portable_bowl' | t }}"
-                        class="absolute inset-0 h-full w-full object-cover"
-                      >
-                    </a>
-                    <a
-                      href="{{ all_products['tote-bag'].url }}"
-                      class="relative flex h-full flex-col items-center gap-2 overflow-hidden rounded-xl py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
-                    >
-                      <p class="z-10 text-center font-mukta text-[14px] uppercase text-[#193C6B]">
-                        {{ 'navbar.shop.merchandise.options.tote_bag' | t }}
-                      </p>
-                      <img
-                        src="{{ '3bc2d61e9042b753f6922f64579a5011.png' | file_img_url: "master" }}"
-                        alt="{{ 'navbar.shop.merchandise.options.tote_bag' | t }}"
-                        class="absolute inset-0 h-full w-full object-cover"
-                      >
-                    </a>
-                    <a
-                      href="{{ all_products['buddy-bites-steel-bowl'].url }}"
-                      class="relative flex h-full flex-col items-center gap-2 overflow-hidden rounded-xl py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
-                    >
-                      <p class="z-10 text-center font-mukta text-[14px] uppercase text-[#193C6B]">
-                        {{ 'navbar.shop.merchandise.options.steel_bowl' | t }}
-                      </p>
-                      <img
-                        src="{{ 'steel_bowl.png' | file_img_url: "master" }}"
-                        alt="{{ 'navbar.shop.merchandise.options.steel_bowl' | t }}"
-                        class="absolute inset-0 h-full w-full object-cover"
-                      >
-                    </a>
-                  </div>
+                  </a>
                 </div>
+                {% comment %} Merchandise {% endcomment %}
+                {% comment %}
+                  <div
+                    id="merchandiseContent"
+                    class="hidden h-full grid-cols-[30%_1fr] gap-2 bg-[#98c9eb] px-[150px] py-4"
+                  >
+                    <a
+                      href="{{ collections.all.url }}"
+                      class="relative flex h-full flex-col items-center gap-2 overflow-hidden rounded-xl bg-[#e4e0f1] py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
+                    >
+                      <p class="z-10 text-center font-mukta text-[20px] uppercase text-[#193C6B]">
+                        {{ 'navbar.shop.merchandise.options.all' | t }}
+                      </p>
+                      <img
+                        src="{{ 'ab66e239e3379348e1ea06e8571b16e8_1.png' | file_img_url: "master" }}"
+                        alt="{{ 'navbar.shop.merchandise.options.all' | t }}"
+                        class="absolute inset-0 h-full w-full object-cover"
+                      >
+                    </a>
+                    <div class="grid grid-cols-4 gap-2">
+                      <a
+                        href="{{ all_products.poop-bags.url }}"
+                        class="relative flex h-full flex-col items-center gap-2 overflow-hidden rounded-xl py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
+                      >
+                        <p class="z-10 text-center font-mukta text-[14px] uppercase text-[#193C6B]">
+                          {{ 'navbar.shop.merchandise.options.poop_bag' | t }}
+                        </p>
+                        <img
+                          src="{{ 'DSC06699_copy.jpg' | file_img_url: "master" }}"
+                          alt="{{ 'navbar.shop.merchandise.options.poop_bag' | t }}"
+                          class="absolute inset-0 h-full w-full object-cover"
+                        >
+                      </a>
+                      <a
+                        href="{{ all_products['buddy-bites-scoops'].url }}"
+                        class="relative flex h-full flex-col items-center gap-2 overflow-hidden rounded-xl py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
+                      >
+                        <p class="z-10 text-center font-mukta text-[14px] uppercase text-[#193C6B]">
+                          {{ 'navbar.shop.merchandise.options.scoop' | t }}
+                        </p>
+                        <img
+                          src="{{ 'Scoop5.jpg' | file_img_url: "master" }}"
+                          alt="{{ 'navbar.shop.merchandise.options.scoop' | t }}"
+                          class="absolute inset-0 h-full w-full object-cover"
+                        >
+                      </a>
+                      <a
+                        href="{{ all_products['tennis'].url }}"
+                        class="relative flex h-full flex-col items-center gap-2 overflow-hidden rounded-xl py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
+                      >
+                        <p class="z-10 text-center font-mukta text-[14px] uppercase text-[#193C6B]">
+                          {{ 'navbar.shop.merchandise.options.tennis_ball' | t }}
+                        </p>
+                        <img
+                          src="{{ 'tennis_ball.png' | file_img_url: "master" }}"
+                          alt="{{ 'navbar.shop.merchandise.options.tennis_ball' | t }}"
+                          class="absolute inset-0 h-full w-full object-cover"
+                        >
+                      </a>
+                      <a
+                        href="{{ all_products['poo-bag-holder'].url }}"
+                        class="relative flex h-full flex-col items-center gap-2 overflow-hidden rounded-xl py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
+                      >
+                        <p class="z-10 text-center font-mukta text-[14px] uppercase text-[#193C6B]">
+                          {{ 'navbar.shop.merchandise.options.poop_bag_holder' | t }}
+                        </p>
+                        <img
+                          src="{{ 'poop_bag.png' | file_img_url: "master" }}"
+                          alt="{{ 'navbar.shop.merchandise.options.poop_bag_holder' | t }}"
+                          class="absolute inset-0 h-full w-full object-cover"
+                        >
+                      </a>
+                      <a
+                        href="{{ all_products['umbrella'].url }}"
+                        class="relative flex h-full flex-col items-center gap-2 overflow-hidden rounded-xl py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
+                      >
+                        <p class="z-10 text-center font-mukta text-[14px] uppercase text-[#193C6B]">
+                          {{ 'navbar.shop.merchandise.options.umbrella' | t }}
+                        </p>
+                        <img
+                          src="{{ 'umbr_95e60054-8b61-4a5b-a95e-9876887b47cc.png' | file_img_url: "master" }}"
+                          alt="{{ 'navbar.shop.merchandise.options.umbrella' | t }}"
+                          class="absolute inset-0 h-full w-full object-cover"
+                        >
+                      </a>
+                      <a
+                        href="{{ all_products['portable-bowl'].url }}"
+                        class="relative flex h-full flex-col items-center gap-2 overflow-hidden rounded-xl py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
+                      >
+                        <p class="z-10 text-center font-mukta text-[14px] uppercase text-[#193C6B]">
+                          {{ 'navbar.shop.merchandise.options.portable_bowl' | t }}
+                        </p>
+                        <img
+                          src="{{ 'portable_bowl.png' | file_img_url: "master" }}"
+                          alt="{{ 'navbar.shop.merchandise.options.portable_bowl' | t }}"
+                          class="absolute inset-0 h-full w-full object-cover"
+                        >
+                      </a>
+                      <a
+                        href="{{ all_products['tote-bag'].url }}"
+                        class="relative flex h-full flex-col items-center gap-2 overflow-hidden rounded-xl py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
+                      >
+                        <p class="z-10 text-center font-mukta text-[14px] uppercase text-[#193C6B]">
+                          {{ 'navbar.shop.merchandise.options.tote_bag' | t }}
+                        </p>
+                        <img
+                          src="{{ '3bc2d61e9042b753f6922f64579a5011.png' | file_img_url: "master" }}"
+                          alt="{{ 'navbar.shop.merchandise.options.tote_bag' | t }}"
+                          class="absolute inset-0 h-full w-full object-cover"
+                        >
+                      </a>
+                      <a
+                        href="{{ all_products['buddy-bites-steel-bowl'].url }}"
+                        class="relative flex h-full flex-col items-center gap-2 overflow-hidden rounded-xl py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
+                      >
+                        <p class="z-10 text-center font-mukta text-[14px] uppercase text-[#193C6B]">
+                          {{ 'navbar.shop.merchandise.options.steel_bowl' | t }}
+                        </p>
+                        <img
+                          src="{{ 'steel_bowl.png' | file_img_url: "master" }}"
+                          alt="{{ 'navbar.shop.merchandise.options.steel_bowl' | t }}"
+                          class="absolute inset-0 h-full w-full object-cover"
+                        >
+                      </a>
+                    </div>
+                  </div>
+                {% endcomment %}
               </div>
             </div>
           </div>
