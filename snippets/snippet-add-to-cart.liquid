@@ -79,6 +79,25 @@
   });
 </script>
 
+<script>
+  // Disable add to cart button if product variant is out of stock
+  document.addEventListener('DOMContentLoaded', function () {
+    const productData = {{ product | json }};
+    const addToCartButton = document.getElementById('add-to-cart-button');
+    const productVariant = document.getElementById('product-variant');
+
+    const selectedVariantId = parseInt(productVariant.target.value);
+    const selectedVariant = productData.variants.find(variant => parseInt(variant.id) === selectedVariantId);
+    if (!selectedVariant.available) {
+      addToCartButton.disabled = true;
+      addToCartButton.textContent = '{{ 'products.product.out_of_stock' | t }}';
+    } else {
+      addToCartButton.disabled = false;
+      addToCartButton.textContent = '{{ 'products.product.add_to_cart' | t }}';
+    }
+  });
+</script>
+
 {% if product.variants.size > 1 %}
   <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -376,12 +395,24 @@
   {% comment %} Dynamic price display (with discount) {% endcomment %}
 
   {% comment %} Add to Cart button {% endcomment %}
-  <button
-    type="submit"
-    class="mt-2 w-full rounded-[30px] bg-[#98c9eb] px-4 py-2 font-montserrat text-xl font-semibold text-white"
-  >
-    {{ 'products.product.add_to_cart' | t }}
-  </button>
+  {% if product.selected_or_first_available_variant.available %}
+    <button
+      type="submit"
+      class="mt-2 w-full rounded-[30px] bg-[#98c9eb] px-4 py-2 font-montserrat text-xl font-semibold text-white"
+      id="add-to-cart-button"
+    >
+      {{ 'products.product.add_to_cart' | t }}
+    </button>
+  {% else %}
+    <button
+      type="submit"
+      class="mt-2 w-full rounded-[30px] bg-[#98c9eb] px-4 py-2 font-montserrat text-xl font-semibold text-white"
+      id="add-to-cart-button"
+      disabled
+    >
+      {{ 'products.product.out_of_stock' | t }}
+    </button>
+  {% endif %}
 {% endform %}
 
 <script>
