@@ -140,25 +140,17 @@
 
               {% for m_obj in metaobj_list %}
                 {% if m_obj.product.value.id != 8988037349691 %}
-                  {% if m_obj.product.value.metafields.custom.main_collection.value.id == 440255250747 %}
-                    <a href="{{ prd.url }}" class="flex basis-[19%] flex-col items-center justify-center md:basis-auto">
-                      <img
-                        src="{{ m_obj.featured_image.value | image_url: width: 100, height: 100  }}"
-                        width="100"
-                        height="100"
-                        class="rounded-xl border-2 border-solid {% if product.title == prd.title %} border-black opacity-100 {% else %} border-[#C3C3C3] opacity-50{% endif %}"
-                      >
-                      <p class="text-center font-normal en:font-museo en:text-[16px] zh-TW:text-[14px]">
-                        {% if request.locale.iso_code == 'en' %}
-                          {% assign my_string = m_obj.name %}
-                          {% assign remaining_string_size = my_string.size | minus: 7 %}
-                          <b>{{ my_string | slice: 0, remaining_string_size }}</b>
-                        {% else %}
-                          <b>{{ m_obj.name }}</b>
-                        {% endif %}
-                      </p>
-                    </a>
-                  {% endif %}
+                  <a href="{{ prd.url }}" class="flex basis-[19%] flex-col items-center justify-center md:basis-auto">
+                    <img
+                      src="{{ m_obj.featured_image.value | image_url: width: 100, height: 100  }}"
+                      width="100"
+                      height="100"
+                      class="rounded-xl border-2 border-solid {% if product.title == prd.title %} border-black opacity-100 {% else %} border-[#C3C3C3] opacity-50{% endif %}"
+                    >
+                    <p class="text-center font-normal en:font-museo en:text-[16px] zh-TW:text-[14px]">
+                      <b>{{ m_obj.name }}</b>
+                    </p>
+                  </a>
                 {% endif %}
               {% endfor %}
             {% endfor %}
