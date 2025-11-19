@@ -5354,6 +5354,14 @@ video {
     top: 9vw;
   }
 
+  .md\:top-\[7vw\]{
+    top: 7vw;
+  }
+
+  .md\:bottom-\[14vw\]{
+    bottom: 14vw;
+  }
+
   .md\:order-1{
     order: 1;
   }
