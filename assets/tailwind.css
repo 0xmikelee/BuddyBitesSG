@@ -3755,6 +3755,11 @@ video {
   line-height: 2.25rem;
 }
 
+.text-4xl{
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
 .text-\[0\.8vw\]{
   font-size: 0.8vw;
 }
@@ -5302,6 +5307,10 @@ video {
     bottom: 11vw;
   }
 
+  .md\:bottom-\[14vw\]{
+    bottom: 14vw;
+  }
+
   .md\:bottom-\[15vw\]{
     bottom: 15vw;
   }
@@ -5350,16 +5359,8 @@ video {
     top: 5vw;
   }
 
-  .md\:top-\[9vw\]{
-    top: 9vw;
-  }
-
   .md\:top-\[7vw\]{
     top: 7vw;
-  }
-
-  .md\:bottom-\[14vw\]{
-    bottom: 14vw;
   }
 
   .md\:order-1{
@@ -6027,16 +6028,16 @@ video {
     height: 650px;
   }
 
+  .lg\:h-\[clamp\(660px\2c 85dvh\2c 900px\)\]{
+    height: clamp(660px,85dvh,900px);
+  }
+
   .lg\:h-auto{
     height: auto;
   }
 
   .lg\:h-full{
     height: 100%;
-  }
-
-  .lg\:h-\[clamp\(660px\2c 85dvh\2c 900px\)\]{
-    height: clamp(660px,85dvh,900px);
   }
 
   .lg\:w-\[120px\]{

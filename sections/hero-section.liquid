@@ -182,11 +182,7 @@
     {% assign list = shop.metafields.custom.key_product_collections.value %}
     {% for item in list %}
       {% capture category_link %}
-        {% if item.name == 'Sample Pack' or item.name == '試食裝' %}
-          {{ item.page.value.url }}
-        {% else %}
           {{ item.product.value.url }}
-        {% endif %}
       {% endcapture %}
       <a href="{{ category_link }}" class="flex flex-col items-center justify-center gap-[10px] hover:scale-105 transition-all duration-300 focus:bg-white" data-handle="{{ item.name }}">
         <div class="relative h-auto">
