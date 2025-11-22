@@ -454,10 +454,10 @@
       },
       "question5": {
         "title": "Can I find Buddy Bites in store?",
-        "answer1": "Yes! You can find Buddy Bites products at stores across Hong Kong. Find the nearest stockist to you.",
+        "answer1": "Yes! You can find Buddy Bites products at stores across Singapore. Find the nearest stockist to you.",
         "link": "Find the nearest stockist to you",
         "answer2": "If you are interested in stocking Buddy Bites, drop us a message:",
-        "email": "info@buddybites.dog"
+        "email": "info@buddybites.sg"
       },
       "question6": {
         "title": "Does Buddy Bites have a referral program?",
@@ -467,7 +467,7 @@
       "question7": {
         "title": "How can I contact Buddy Bites for help?",
         "answer": "You can contact Buddy Bites via email at",
-        "email": "info@buddybites.dog",
+        "email": "info@buddybites.sg",
         "or": "or",
         "whatsapp": "Whatsapp"
       },
@@ -520,7 +520,7 @@
       },
       "question9": {
         "title": "What is the kibble size?",
-        "answer": "Our kibble sizes range from 10-14mm to suit dogs of all breeds, ages and sizes. Our smaller kibble is suitable for smaller breeds and older dogs with less teeth who still enjoy eating kibble. Our larger kibble is suitable for large dog breeds and dogs who need more encouragement to chew to aid digestion. The kibble size of each recipe can be found on each product page on our website."
+        "answer": "Our kibble sizes range from 6-14mm to suit dogs of all breeds, ages and sizes. Our smaller kibble is suitable for smaller breeds and older dogs with less teeth who still enjoy eating kibble. Our larger kibble is suitable for large dog breeds and dogs who need more encouragement to chew to aid digestion. The kibble size of each recipe can be found on each product page on our website."
       },
       "question10": {
         "title": "What is a novel protein?",
@@ -586,7 +586,7 @@
       "title": "Delivery",
       "question1": {
         "title": "When will I receive my order?",
-        "answer": "Free standard shipping takes 2-3 days, including outlying islands. We also offer same-day delivery for an added fee to addresses in Hong Kong island, Kowloon, and some parts of New Territories. ",
+        "answer": "Standard shipping takes 2-4 working days and is FREE on orders of $40 or more. Order before 12pm daily to receive faster shipment.",
         "link": "Contact us",
         "answer2": " to find out more."
       },
@@ -865,7 +865,7 @@
     },
     "question5": {
       "title": "What are the benefits of subscribing?",
-      "answer": "Convenience and cash!! By subscribing you receive a 15% discount to standard pricing, and the convenience of not having to go back into the website to order every month. It just arrives at your door as if by magic. On top of that we throw some extra goodies in your orders, first one guaranteed!"
+      "answer": "Convenience and cash!! By subscribing you receive a 20% discount to standard pricing, and the convenience of not having to go back into the website to order every month. It just arrives at your door as if by magic. On top of that we throw some extra goodies in your orders, first one guaranteed!"
     },
     "question6": {
       "title": "Is the subscription flexible?",
@@ -907,7 +907,7 @@
     "contact_us": "Contact Us",
     "office_address": {
       "title": "Office Address:",
-      "address": "68 Circular Road, #02-01, Singapore 049422"
+      "address": "217 Henderson, #02-05, Singapore 159555"
     },
     "get_connected": {
       "title": "Get Connected",
@@ -1055,7 +1055,7 @@
         "header": "all you need to know",
         "shipping": {
           "title": "Shipping",
-          "answer": "Standard shipping takes 2-3 working days and is FREE on orders of $40 or more. Order before 2pm daily to receive faster shipment."
+          "answer": "Standard shipping takes 2-4 working days and is FREE on orders of $40 or more. Order before 12pm daily to receive faster shipment."
         },
         "flexible_subscription": {
           "title": "Flexible Subscription",
