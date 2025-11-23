@@ -88,7 +88,7 @@
               {{ 'faqs.general.question5.answer1' | t }}
               <a href="{{ pages.store-locator.url }}">{{ 'faqs.general.question5.link' | t }}</a>.
               {{ 'faqs.general.question5.answer2' | t }}
-              <a href="mailto:info@buddybites.dog">{{ 'faqs.general.question5.email' | t }}</a>
+              <a href="mailto:info@buddybites.sg">{{ 'faqs.general.question5.email' | t }}</a>
             </p>
           </div>
 
@@ -112,9 +112,9 @@
           <div class="panel">
             <p>
               {{ 'faqs.general.question7.answer' | t }}
-              <a href="mailto:info@buddybites.dog">{{ 'faqs.general.question7.email' | t }}</a>
+              <a href="mailto:info@buddybites.sg">{{ 'faqs.general.question7.email' | t }}</a>
               {{ 'faqs.general.question7.or' | t }}
-              <a href="https://wa.me/+85298588250">{{ 'faqs.general.question7.whatsapp' | t }}</a>
+              <a href="https://wa.me/+6587099058">{{ 'faqs.general.question7.whatsapp' | t }}</a>
             </p>
           </div>
 
@@ -189,7 +189,7 @@
           <div class="panel">
             <p>
               {{ 'faqs.nutrition.question5.answer' | t }}
-              <a href="{{ 'faqs.nutrition.question5.link' | t }}">{{ 'faqs.nutrition.question5.link' | t }}</a>
+              <a href="{{ all_products['buddy-bites-duck'].url }}">{{ 'faqs.nutrition.question5.link_duck' | t }}</a>
               {{ 'faqs.nutrition.question5.answer2' | t }}
             </p>
           </div>
@@ -263,11 +263,11 @@
           <div class="panel">
             <p>
               {{ 'faqs.subscription.question2.answer' | t }}
-              <a href="mailto:info@buddybites.dog">
+              <a href="mailto:info@buddybites.sg">
                 {{- 'faqs.subscription.question2.email' | t -}}
               </a>
               {{ 'faqs.subscription.question2.or' | t }}
-              <a href="https://wa.me/+85298588250">{{ 'faqs.subscription.question2.whatsapp' | t }}</a>
+              <a href="https://wa.me/+6587099058">{{ 'faqs.subscription.question2.whatsapp' | t }}</a>
               {{ 'faqs.subscription.question2.answer2' | t }}
             </p>
           </div>
@@ -279,9 +279,9 @@
           <div class="panel">
             <p>
               {{ 'faqs.subscription.question3.answer' | t }}
-              <a href="https://wa.me/+85298588250">{{ 'faqs.subscription.question3.whatsapp' | t }}</a>
+              <a href="https://wa.me/+6587099058">{{ 'faqs.subscription.question3.whatsapp' | t }}</a>
               {{ 'faqs.subscription.question3.or' | t }}
-              <a href="mailto:info@buddybites.dog">
+              <a href="mailto:info@buddybites.sg">
                 {{- 'faqs.subscription.question3.email' | t -}}
               </a>
               {{ 'faqs.subscription.question3.answer2' | t }}
@@ -315,11 +315,11 @@
           <div class="panel">
             <p>
               {{ 'faqs.subscription.question6.answer' | t }}
-              <a href="mailto:info@buddybites.dog">
+              <a href="mailto:info@buddybites.sg">
                 {{- 'faqs.subscription.question6.email' | t -}}
               </a>
               {{ 'faqs.subscription.question6.or' | t }}
-              <a href="https://wa.me/+85298588250">{{ 'faqs.subscription.question6.whatsapp' | t }}</a>
+              <a href="https://wa.me/+6587099058">{{ 'faqs.subscription.question6.whatsapp' | t }}</a>
               {{ 'faqs.subscription.question6.answer2' | t }}
             </p>
           </div>
@@ -331,11 +331,11 @@
           <div class="panel">
             <p>
               {{ 'faqs.subscription.question7.answer' | t }}
-              <a href="mailto:info@buddybites.dog">
+              <a href="mailto:info@buddybites.sg">
                 {{- 'faqs.subscription.question7.email' | t -}}
               </a>
               {{ 'faqs.subscription.question7.or' | t }}
-              <a href="https://wa.me/+85298588250">{{ 'faqs.subscription.question7.whatsapp' | t }}</a>
+              <a href="https://wa.me/+6587099058">{{ 'faqs.subscription.question7.whatsapp' | t }}</a>
               {{ 'faqs.subscription.question7.answer2' | t }}
             </p>
           </div>
@@ -347,11 +347,11 @@
           <div class="panel">
             <p>
               {{ 'faqs.subscription.question8.answer' | t }}
-              <a href="mailto:info@buddybites.dog">
+              <a href="mailto:info@buddybites.sg">
                 {{- 'faqs.subscription.question8.email' | t -}}
               </a>
               {{ 'faqs.subscription.question8.or' | t }}
-              <a href="https://wa.me/+85298588250">{{ 'faqs.subscription.question8.whatsapp' | t }}</a>
+              <a href="https://wa.me/+6587099058">{{ 'faqs.subscription.question8.whatsapp' | t }}</a>
               {{ 'faqs.subscription.question8.answer2' | t }}
             </p>
           </div>
@@ -365,7 +365,7 @@
           <div class="panel">
             <p>
               {{ 'faqs.delivery.question1.answer' | t }}
-              <a href="mailto:info@buddybites.dog">{{ 'faqs.delivery.question1.email' | t }}</a>
+              <a href="mailto:info@buddybites.sg">{{ 'faqs.delivery.question1.email' | t }}</a>
               {{ 'faqs.delivery.question1.answer2' | t }}
             </p>
           </div>
@@ -390,15 +390,17 @@
             </p>
           </div>
 
-          <div class="accordian">
-            <div class="icon"></div>
-            <h5>{{ 'faqs.delivery.question4.title' | t }}</h5>
-          </div>
-          <div class="panel">
-            <p>
-              {{ 'faqs.delivery.question4.answer' | t }}
-            </p>
-          </div>
+          {% comment %}
+            <div class="accordian">
+              <div class="icon"></div>
+              <h5>{{ 'faqs.delivery.question4.title' | t }}</h5>
+            </div>
+            <div class="panel">
+              <p>
+                {{ 'faqs.delivery.question4.answer' | t }}
+              </p>
+            </div>
+          {% endcomment %}
 
           <div class="accordian">
             <div class="icon"></div>
@@ -420,15 +422,17 @@
             </p>
           </div>
 
-          <div class="accordian">
-            <div class="icon"></div>
-            <h5>{{ 'faqs.delivery.question7.title' | t }}</h5>
-          </div>
-          <div class="panel">
-            <p>
-              {{ 'faqs.delivery.question7.answer' | t }}
-            </p>
-          </div>
+          {% comment %}
+            <div class="accordian">
+              <div class="icon"></div>
+              <h5>{{ 'faqs.delivery.question7.title' | t }}</h5>
+            </div>
+            <div class="panel">
+              <p>
+                {{ 'faqs.delivery.question7.answer' | t }}
+              </p>
+            </div>
+          {% endcomment %}
 
           <div class="accordian">
             <div class="icon"></div>
@@ -447,9 +451,9 @@
           <div class="panel">
             <p>
               {{ 'faqs.delivery.question9.answer' | t }}
-              <a href="mailto:info@buddybites.dog">{{ 'faqs.delivery.question9.email' | t }}</a>
+              <a href="mailto:info@buddybites.sg">{{ 'faqs.delivery.question9.email' | t }}</a>
               {{ 'faqs.delivery.question9.or' | t }}
-              <a href="https://wa.me/+85298588250">{{ 'faqs.delivery.question9.whatsapp' | t }}</a>
+              <a href="https://wa.me/+6587099058">{{ 'faqs.delivery.question9.whatsapp' | t }}</a>
               {{ 'faqs.delivery.question9.answer2' | t }}
             </p>
           </div>
@@ -475,9 +479,9 @@
               {{ 'faqs.payment.question2.answer' | t }}
               <a href="https://www.youtube.com/watch?v=6LV0Zez9dqw">{{ 'faqs.payment.question2.link' | t }}</a>
               {{ 'faqs.payment.question2.answer2' | t }}
-              <a href="mailto:info@buddybites.dog">{{ 'faqs.payment.question2.email' | t }}</a>
+              <a href="mailto:info@buddybites.sg">{{ 'faqs.payment.question2.email' | t }}</a>
               {{ 'faqs.payment.question2.or' | t }}
-              <a href="https://wa.me/+85298588250">{{ 'faqs.payment.question2.whatsapp' | t }}</a>
+              <a href="https://wa.me/+6587099058">{{ 'faqs.payment.question2.whatsapp' | t }}</a>
               {{ 'faqs.payment.question2.answer3' | t }}
             </p>
           </div>
@@ -543,9 +547,9 @@
               {{ 'faqs.payment.question8.answer' | t }}
               <a href="https://www.youtube.com/watch?v=6LV0Zez9dqw">{{ 'faqs.payment.question8.link' | t }}</a>
               {{ 'faqs.payment.question8.answer2' | t }}
-              <a href="mailto:info@buddybites.dog">{{ 'faqs.payment.question8.email' | t }}</a>
+              <a href="mailto:info@buddybites.sg">{{ 'faqs.payment.question8.email' | t }}</a>
               {{ 'faqs.payment.question8.or' | t }}
-              <a href="https://wa.me/+85298588250">{{ 'faqs.payment.question8.whatsapp' | t }}</a>
+              <a href="https://wa.me/+6587099058">{{ 'faqs.payment.question8.whatsapp' | t }}</a>
               {{ 'faqs.payment.question8.answer3' | t }}
             </p>
           </div>
@@ -557,9 +561,9 @@
           <div class="panel">
             <p>
               {{ 'faqs.payment.question9.answer' | t }}
-              <a href="mailto:info@buddybites.dog">{{ 'faqs.payment.question9.email' | t }}</a>
+              <a href="mailto:info@buddybites.sg">{{ 'faqs.payment.question9.email' | t }}</a>
               {{ 'faqs.payment.question9.or' | t }}
-              <a href="https://wa.me/+85298588250">{{ 'faqs.payment.question9.whatsapp' | t }}</a>
+              <a href="https://wa.me/+6587099058">{{ 'faqs.payment.question9.whatsapp' | t }}</a>
               {{ 'faqs.payment.question9.answer2' | t }}
             </p>
           </div>

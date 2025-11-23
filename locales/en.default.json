@@ -478,7 +478,7 @@
       },
       "question9": {
         "title": "What shelters does Buddy Bites donate to?",
-        "answer": "We currently pawtner with more than 20 shelters across Hong Kong and Singapore such as: SOSD, ASD, Causes For Animals, Mdm Wong’s Shelter, Exclusively Mongrels, Just4Paws and more. We continue to help with more shelters and foster families! Learn more.",
+        "answer": "We currently pawtner with more than 20 shelters across Hong Kong and Singapore such as: SOSD, ASD, Causes For Animals, Mdm Wong’s Shelter, Exclusively Mongrels, Just4Paws and more. We continue to help with more shelters and foster families!",
         "link": "Learn more."
       }
     },
@@ -503,8 +503,8 @@
       "question5": {
         "title": "What food is good for a small dog?",
         "answer": "For smaller breeds, we recommed the",
-        "link": "duck recipe",
-        "answer2": "as it is the smallest kibble size we offer for adults (10mm diameter)."
+        "link_duck": "Duck recipe",
+        "answer2": "as it is the smallest kibble size we offer for adults at 6mm to 9mm. Please check the respective product pages to confirm which recipe your dog would prefer."
       },
       "question6": {
         "title": "How do I know how much to order for my dog?",
@@ -531,7 +531,7 @@
       "title": "Subscription",
       "question1": {
         "title": "What are the benefits of subscribing?",
-        "answer": "Convenience and cash!! By subscribing you receive a 15% discount to standard pricing, and the convenience of not having to go back into the website to order every month. It just arrives at your door as if by magic. On top of that we throw some extra goodies in your orders, first one guaranteed!"
+        "answer": "Convenience and cash!! By subscribing you receive a 20% discount to standard pricing, and the convenience of not having to go back into the website to order every month. It just arrives at your door as if by magic. On top of that we throw some extra goodies in your orders, first one guaranteed!"
       },
       "question2": {
         "title": "Is the subscription flexible?",
@@ -555,7 +555,7 @@
       },
       "question5": {
         "title": "When do deliveries come?",
-        "answer": "Your order should arrive 2-3 working days from payment (unless you've paid for same day delivery). We delivery Monday to Saturday. Your order will include a tracking number and you will get a message from your delivery driver prior to the arrival of your food in case you are not in."
+        "answer": "Your order should arrive 2-4 working days from payment. We delivery Monday to Saturday. Your order will include a tracking number and you will get a message from your delivery driver prior to the arrival of your food in case you are not in."
       },
       "question6": {
         "title": "Can I change flavour?",
@@ -586,8 +586,8 @@
       "title": "Delivery",
       "question1": {
         "title": "When will I receive my order?",
-        "answer": "Standard shipping takes 2-4 working days and is FREE on orders of $40 or more. Order before 12pm daily to receive faster shipment.",
-        "link": "Contact us",
+        "answer": "Free standard shipping takes 2-4 working days with minimum $40 spend.",
+        "email": "Contact us",
         "answer2": " to find out more."
       },
       "question2": {
@@ -596,7 +596,7 @@
       },
       "question3": {
         "title": "How much does delivery cost?",
-        "answer": "We offer free standard delivery for orders over $250. Orders under $250 will be charged $60 shipping fee for standard delivery, including outlying islands. Same-day delivery orders of over $250 have an added shipping fee of $60, and for orders under $250 a $90 fee."
+        "answer": "We offer free standard delivery for orders over $40."
       },
       "question4": {
         "title": "Do you offer same day delivery?",
@@ -604,7 +604,7 @@
       },
       "question5": {
         "title": "Who does your deliveries?",
-        "answer": "We partner with external logistics partners Kerry and SF Express to deliver your order straight to your door."
+        "answer": "We partner with external logistics partners Stashworks and Ninjavan to deliver your order straight to your door."
       },
       "question6": {
         "title": "Where do you ship to?",
@@ -621,7 +621,7 @@
       "question9": {
         "title": "What happens if my parcel is damaged?",
         "answer": "Get in touch with us at ",
-        "link": "email",
+        "email": "email",
         "or": "or",
         "whatsapp": "Whatsapp",
         "answer2": " us for help!"
@@ -631,7 +631,7 @@
       "title": "Payment",
       "question1": {
         "title": "What payment options do you have?",
-        "answer": "We accept PayPal, Google Pay, Alipay, and all major credit cards for one-time and subscription orders. You can choose to pay by WeChat Pay, FPS, and UnionPay for one-time orders."
+        "answer": "We accept all major credit cards for one-time and subscription orders."
       },
       "question2": {
         "title": "How do I change my card details?",
@@ -645,7 +645,7 @@
       },
       "question3": {
         "title": "Is there a charge for subscription?",
-        "answer": "Subscribing to Buddy Bites is free! Better than that, you save 15% on EVERY ORDER by subscribing!"
+        "answer": "Subscribing to Buddy Bites is free! Better than that, you save 20% on EVERY ORDER by subscribing!"
       },
       "question4": {
         "title": "How does subscription payment work?",
@@ -659,7 +659,7 @@
       },
       "question6": {
         "title": "Can I apply codes to my subscriptions?",
-        "answer": "Yes, if you have a useable code. Just login and on the 'manage subscriptions' page there is an option to enter in a discount code on the bottom left. This is where you should apply your discount code from our referral program!"
+        "answer": "Yes, if you have a useable code. Just login and on the 'manage subscriptions' page there is an option to enter in a discount code on the bottom left."
       },
       "question7": {
         "title": "How long do refunds take to process?",
@@ -861,7 +861,7 @@
     },
     "question4": {
       "title": "What is the kibble size?",
-      "answer": "Our kibble sizes range from 10-14mm to suit dogs of all breeds, ages and sizes. Our smaller kibble is suitable for smaller breeds and older dogs with less teeth who still enjoy eating kibble. Our larger kibble is suitable for large dog breeds and dogs who need more encouragement to chew to aid digestion. The kibble size of each recipe can be found on each product page on our website."
+      "answer": "Our kibble sizes range from 6-14mm to suit dogs of all breeds, ages and sizes. Our smaller kibble is suitable for smaller breeds and older dogs with less teeth who still enjoy eating kibble. Our larger kibble is suitable for large dog breeds and dogs who need more encouragement to chew to aid digestion. The kibble size of each recipe can be found on each product page on our website."
     },
     "question5": {
       "title": "What are the benefits of subscribing?",
