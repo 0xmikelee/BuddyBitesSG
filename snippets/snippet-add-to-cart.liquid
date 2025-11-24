@@ -326,7 +326,6 @@
         name="id"
       >
         {% for variant in product.variants %}
-          <p>{{ variant | json }}</p>
           {% if variant.available %}
             <option
               value="{{ variant.id }}"
