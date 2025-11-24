@@ -200,11 +200,7 @@
               </p>
               <div class="flex w-full gap-2 pl-2">
                 <p class="text-md discounted-price text-left font-semibold">
-                  {% if product.title contains 'Toppers' or product.title contains '伴糧' %}
-                    {{ product.variants[1].price | times: discount_factor | money }}
-                  {% else %}
-                    {{ product.price_min | times: discount_factor | money }}
-                  {% endif %}
+                  {{ product.price_min | times: discount_factor | money }}
                 </p>
                 <p class="undiscounted-price text-md text-left font-semibold text-gray-500 line-through">
                   {{ product.price_min | money }}
@@ -330,6 +326,7 @@
         name="id"
       >
         {% for variant in product.variants %}
+          <p>{{ variant | json }}</p>
           {% if variant.available %}
             <option
               value="{{ variant.id }}"
@@ -406,12 +403,13 @@
     </button>
   {% endif %}
 {% endform %}
-
-<script>
-  {% if product.title contains 'Toppers' or product.title contains '伴糧' %}
-    document.addEventListener('DOMContentLoaded', function () {
-      const productVariant = document.getElementById('product-variant');
-      productVariant.remove(0);
-    });
-  {% endif %}
-</script>
+{% comment %}
+  <script>
+    {% if product.title contains 'Toppers' or product.title contains '伴糧' %}
+      document.addEventListener('DOMContentLoaded', function () {
+        const productVariant = document.getElementById('product-variant');
+        productVariant.remove(0);
+      });
+    {% endif %}
+  </script>
+{% endcomment %}
