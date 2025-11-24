@@ -754,9 +754,11 @@
           <p class="text-[18px] uppercase text-white en:font-museo">{{ 'navbar.learn_more.options.ambassador' | t }}</p>
         </a>
       {% endcomment %}
-      <a href="{{ pages['referral-candy'].url }}" class="px-10 py-6">
-        <p class="text-[18px] uppercase text-white en:font-museo">{{ 'navbar.refer' | t }}</p>
-      </a>
+      {% comment %}
+        <a href="{{ pages['referral-candy'].url }}" class="px-10 py-6">
+          <p class="text-[18px] uppercase text-white en:font-museo">{{ 'navbar.refer' | t }}</p>
+        </a>
+      {% endcomment %}
       <a href="{{ pages['store-locator'].url }}" class="px-10 py-6">
         <p class="text-[18px] uppercase text-white en:font-museo">{{ 'navbar.stores' | t }}</p>
       </a>
