@@ -185,26 +185,26 @@
   },
   "cart": {
     "general": {
-      "title": "購物車 Shopping Cart",
-      "remove": "移除 Remove",
-      "note": "送貨備註 Delivery Notes",
+      "title": "Shopping Cart",
+      "remove": "Remove",
+      "note": "Delivery Notes",
       "see_more": "See more",
-      "subtotal": "小計 Subtotal",
-      "shipping_at_checkout": "運費會在結帳時顯示 Shipping & taxes calculated at checkout",
-      "update": "更新購物車 Update Cart",
-      "checkout": "結帳 Check Out",
-      "empty": "購物車是空的 Your cart is currently empty.",
+      "subtotal": "Subtotal",
+      "shipping_at_checkout": "Shipping & taxes calculated at checkout",
+      "update": "Update Cart",
+      "checkout": "Check Out",
+      "empty": "Your cart is currently empty.",
       "continue_browsing_html": "Continue browsing <a href=\"/pages/featured-products\">here</a>.",
       "close_cart": "Close Cart",
       "savings_html": "You're saving {{ price }}",
       "total_items": "Total items",
-      "total": "總和 Total"
+      "total": "Total"
     },
     "label": {
-      "product": "產品 Product",
-      "price": "價格 Price",
-      "quantity": "數量 Quantity",
-      "total": "總和 Total"
+      "product": "Product",
+      "price": "Price",
+      "quantity": "Quantity",
+      "total": "Total"
     }
   },
   "collections": {
@@ -926,18 +926,18 @@
       "close_menu": "Close menu"
     },
     "cart": {
-      "title": "購物車 Cart",
+      "title": "Cart",
       "items_count": {
         "one": "item",
         "other": "items"
       }
     },
     "customer": {
-      "account": "帳戶 Account",
+      "account": "Account",
       "logged_in_as_html": "Logged in as {{ first_name }}",
-      "log_out": "登出 Log out",
-      "log_in": "登入 Log in",
-      "create_account": "建立帳戶 Create account"
+      "log_out": "Log out",
+      "log_in": "Log in",
+      "create_account": "Create account"
     },
     "footer": {
       "linklist_title": "Links",
@@ -1174,92 +1174,92 @@
   "shopify": {
     "checkout": {
       "marketing": {
-        "accept_marketing_checkbox_label": "我願意接受有關最新獨家優惠資訊 Keep me up to date with news and exclusive offers via email or Whatsapp."
+        "accept_marketing_checkbox_label": "Keep me up to date with news and exclusive offers via email or Whatsapp."
       },
       "contact": {
-        "phone_label": "聯絡電話 Phone number for order and delivery updates",
-        "optional_phone_label": "聯絡電話 Phone number for order and delivery updates",
+        "phone_label": "Phone number for order and delivery updates",
+        "optional_phone_label": "Phone number for order and delivery updates",
         "phone_tooltip": "We may also send news and offers (per checkbox above) ",
-        "address_title": "詳細地址 Address",
-        "shipping_address_title": "收貨地址 Shipping Address",
-        "email_label": "電郵 Email",
-        "email_placeholder": "電郵 Email",
-        "first_name_label": "名字 First Name",
-        "last_name_label": "姓氏 Last Name",
-        "company_label": "狗狗名字 Dog's Name",
-        "address1_label": "街道/屋村Address",
-        "address2_label": "大廈名稱及樓層單位Apartment Name & Unit",
-        "city_label": "城市 City",
-        "country_label": "國家 Country",
-        "region_label": "地區 Region",
-        "region_placeholder": "地區 Region",
-        "title": "帳戶資料 Information",
-        "stored_addresses_label": "儲存地址 Save addresses",
-        "new_address_label": "使用新地址 Use a new address"
+        "address_title": "Address",
+        "shipping_address_title": "Shipping Address",
+        "email_label": "Email",
+        "email_placeholder": "Email",
+        "first_name_label": "First Name",
+        "last_name_label": "Last Name",
+        "company_label": "Dog's Name",
+        "address1_label": "Street/Village Address",
+        "address2_label": "Apartment Name & Unit",
+        "city_label": "City",
+        "country_label": "Country",
+        "region_label": "Region",
+        "region_placeholder": "Region",
+        "title": "Account Information",
+        "stored_addresses_label": "Save addresses",
+        "new_address_label": "Use a new address"
       },
       "general": {
-        "pay_now_button_label": "付款 Pay Now",
-        "page_title": "結帳 Checkout",
-        "cart": "購物車 Cart",
-        "continue_to_payment_method": "下一步 Continue to payment",
-        "choose_payment_method": "選擇付款方式 Choose payment method",
-        "choose_billing_address": "選擇帳單地址 Choose billing address",
-        "back_to_payment_method": "返回 Back",
-        "continue_to_shipping_method": "下一步 Continue to shipping",
-        "back_to_shipping_method": "返回 Back",
-        "back_to_cart": "返回 Back",
-        "back_to_contact_information": "返回 Back",
-        "authenticate_purchase_button_label": "驗證付款 Authenticate Payment"
+        "pay_now_button_label": "Pay Now",
+        "page_title": "Checkout",
+        "cart": "Cart",
+        "continue_to_payment_method": "Continue to payment",
+        "choose_payment_method": "Choose payment method",
+        "choose_billing_address": "Choose billing address",
+        "back_to_payment_method": "Back",
+        "continue_to_shipping_method": "Continue to shipping",
+        "back_to_shipping_method": "Back",
+        "back_to_cart": "Back",
+        "back_to_contact_information": "Back",
+        "authenticate_purchase_button_label": "Authenticate Payment"
       },
       "shipping": {
-        "title": "送貨詳情 Shipping",
-        "shipping_method_title": "送貨方式 Shipping Method"
+        "title": "Shipping",
+        "shipping_method_title": "Shipping Method"
       },
       "payment": {
-        "title": "更多付款方式 Payment Options",
-        "card_number_placeholder": "信用卡號碼 Card number",
-        "name_on_card_placeholder": "持卡人姓名 Name on card",
-        "card_expiry_placeholder": "有效日期 expiry date (MM/YY)",
-        "card_verification_value_placeholder": "安全碼 Security Code",
-        "same_billing_address_label": "跟送貨地址相同 Same as shipping address",
-        "different_billing_address_label": "輸入新的帳單地址 Different billing address",
-        "billing_address_title": "帳單地址 Billing address"
+        "title": "Payment Options",
+        "card_number_placeholder": "Card number",
+        "name_on_card_placeholder": "Name on card",
+        "card_expiry_placeholder": "Expiry date (MM/YY)",
+        "card_verification_value_placeholder": "Security Code",
+        "same_billing_address_label": "Same as shipping address",
+        "different_billing_address_label": "Different billing address",
+        "billing_address_title": "Billing address"
       },
       "customer_account": {
-        "have_an_account_label": "已有帳戶 Already had an account?",
-        "sign_in_link_label": "登入 Log in",
-        "sign_out_link_label": "登出 Log out",
-        "save_my_information_label": "儲存資料方便下次登入 Save this information for next time"
+        "have_an_account_label": "Already had an account?",
+        "sign_in_link_label": "Log in",
+        "sign_out_link_label": "Log out",
+        "save_my_information_label": "Save this information for next time"
       },
       "delivery_options": {
-        "shipping_address": "送貨地址 Shipping address",
-        "ship": "寄往 Ship"
+        "shipping_address": "Shipping address",
+        "ship": "Ship"
       },
       "order_summary": {
-        "discount_placeholder": "請輸入優惠碼 (如有) Discount ",
-        "remove_discount_label": "移除優惠碼 Remove discount",
-        "free_shipping_discount_label": "免運費 Free shipping",
-        "applied_free_shipping_discount_label": "已使用 Applied",
-        "apply_discount_button_label": "應用 Apply",
-        "subtotal_label": "小計 Subtotal",
-        "shipping_label": "運費 Shipping",
-        "total_label": "總和 Total",
-        "discount_label": "使用優惠碼(如有) Discount Code",
-        "title": "訂單概覽 Order Summary",
-        "expand_order_summary": "顯示訂單資料 Show order summary",
-        "collapse_order_summary": "隱藏訂單資料 Hide order summary",
-        "recurring_subtotal_label": "Recurring subtotal 定期訂購小計",
-        "recurring_total_label": "Recurring total 定期訂購總和"
+        "discount_placeholder": "Discount ",
+        "remove_discount_label": "Remove discount",
+        "free_shipping_discount_label": "Free shipping",
+        "applied_free_shipping_discount_label": "Applied",
+        "apply_discount_button_label": "Apply",
+        "subtotal_label": "Subtotal",
+        "shipping_label": "Shipping",
+        "total_label": "Total",
+        "discount_label": "Discount Code",
+        "title": "Order Summary",
+        "expand_order_summary": "Show order summary",
+        "collapse_order_summary": "Hide order summary",
+        "recurring_subtotal_label": "Recurring subtotal",
+        "recurring_total_label": "Recurring total"
       },
       "review": {
         "blocks": {
-          "contact_method_title": "帳戶資料 Contact",
-          "shipping_address_title": "寄往 Ship to",
-          "shipping_method_title": "送貨方式 Method"
+          "contact_method_title": "Contact",
+          "shipping_address_title": "Ship to",
+          "shipping_method_title": "Method"
         }
       },
       "payment_gateway": {
-        "credit_card_label": "信用卡 Credit card"
+        "credit_card_label": "Credit card"
       },
       "field_errors": {
         "address_company_blank": "Please enter your dogs name(s)!"
@@ -1268,7 +1268,7 @@
   },
   "customer_accounts": {
     "order_details": {
-      "contact": "帳戶資料 Contact"
+      "contact": "Contact"
     }
   }
 }
