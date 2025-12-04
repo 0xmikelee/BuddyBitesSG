@@ -15,7 +15,7 @@
       {{ 'faqs.subtext' | t }}
     </p>
     <a
-      href=""
+      href="cs@buddybites.sg"
       class="rounded-full border border-[#193C6B] bg-[#193C6B] px-4 py-2 text-[14px] uppercase text-white hover:bg-white hover:text-[#193C6B] en:font-museo lg:text-[16px]"
     >
       {{- 'faqs.email_us' | t -}}
@@ -189,7 +189,9 @@
           <div class="panel">
             <p>
               {{ 'faqs.nutrition.question5.answer' | t }}
-              <a href="{{ all_products['buddy-bites-duck'].url }}">{{ 'faqs.nutrition.question5.link_duck' | t }}</a>
+              <a href="{{ all_products['adult-mini-salmon-dry-food'].url }}">
+                {{- 'faqs.nutrition.question5.link_mini_salmon' | t -}}
+              </a>
               {{ 'faqs.nutrition.question5.answer2' | t }}
             </p>
           </div>
