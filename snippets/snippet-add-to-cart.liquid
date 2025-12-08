@@ -267,12 +267,13 @@
         </label>
         <label
           id="delivery_option_label"
-          class="flex w-full items-center justify-start gap-2 bg-[#B9E3FF] px-4 py-2"
+          class="hidden w-full items-center justify-start gap-2 bg-[#B9E3FF] px-4 py-2"
         >
           <select
             name="selling_plan"
             id="delivery_option_select"
             class="w-full rounded-full border-2 border-solid border-[#98c9eb] px-4 py-1 text-center"
+            disabled
           >
             {% for plan_group in product.selling_plan_groups %}
               {% if plan_group.app_id == 'SKIO' %}
