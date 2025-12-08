@@ -328,13 +328,17 @@
       >
         {% for variant in product.variants %}
           {% if variant.available %}
-            <option
-              value="{{ variant.id }}"
-              class="text-center"
-              data-price="{{ variant.price | divided_by: 100.0 | round: 0 }}"
-            >
-              {{ variant.title }}
-            </option>
+            {% comment %} hide 2kg duck {% endcomment %}
+            {% if product.id == 7761196941528 and variant.title == '2kg' %}
+            {% else %}
+              <option
+                value="{{ variant.id }}"
+                class="text-center"
+                data-price="{{ variant.price | divided_by: 100.0 | round: 0 }}"
+              >
+                {{ variant.title }}
+              </option>
+            {% endif %}
           {% endif %}
         {% endfor %}
       </select>
