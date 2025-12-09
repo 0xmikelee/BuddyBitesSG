@@ -247,11 +247,6 @@
     <!-- End Google Tag Manager (noscript) -->
     <div>
       {% section 'header' %}
-      {% if request.path contains '/a/account/' %}
-        <a class="block w-full text-center text-blue-500 underline" href="/tools/recurring/login/">
-          {{- 'account.old_recharge_users' | t -}}
-        </a>
-      {% endif %}
       <main>{{ content_for_layout }}</main>
       {% render 'footer' %}
     </div>
