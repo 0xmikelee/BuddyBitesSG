@@ -197,12 +197,21 @@
                 {{ 'products.product.subscription_and_save.title' | t }}
               </p>
               <div class="flex w-full gap-2 pl-2">
-                <p class="text-md discounted-price text-left font-semibold">
-                  {{ product.price_min | times: discount_factor | money }}
-                </p>
-                <p class="undiscounted-price text-md text-left font-semibold text-gray-500 line-through">
-                  {{ product.price_min | money }}
-                </p>
+                {% if product.id != 7761196941528 %}
+                  <p class="text-md discounted-price text-left font-semibold">
+                    {{ product.price_min | times: discount_factor | money }}
+                  </p>
+                  <p class="undiscounted-price text-md text-left font-semibold text-gray-500 line-through">
+                    {{ product.price_min | money }}
+                  </p>
+                {% else %}
+                  <p class="text-md discounted-price text-left font-semibold">
+                    {{ product.variants[1].price | times: discount_factor | money }}
+                  </p>
+                  <p class="undiscounted-price text-md text-left font-semibold text-gray-500 line-through">
+                    {{ product.variants[1].price | money }}
+                  </p>
+                {% endif %}
               </div>
             </div>
             {% comment %} Two columns {% endcomment %}
@@ -312,9 +321,15 @@
       >
       <div class="flex h-full w-full cursor-pointer flex-col items-start justify-center gap-1 rounded px-4 py-2 pl-6 transition peer-checked:bg-[#B9E3FF]">
         <p class="w-full pl-2 text-left text-sm font-semibold">{{ 'products.product.one_time' | t }}</p>
-        <p class="text-md undiscounted-price pl-2 text-left font-semibold text-black">
-          {{ product.price_min | money }}
-        </p>
+        {% if product.id != 7761196941528 %}
+          <p class="text-md undiscounted-price pl-2 text-left font-semibold text-black">
+            {{ product.price_min | money }}
+          </p>
+        {% else %}
+          <p class="text-md undiscounted-price pl-2 text-left font-semibold text-black">
+            {{ product.variants[1].price | money }}
+          </p>
+        {% endif %}
       </div>
     </label>
   </fieldset>
