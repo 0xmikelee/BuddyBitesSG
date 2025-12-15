@@ -94,7 +94,15 @@
     {% comment %} Product Details {% endcomment %}
     <div class="flex flex-col gap-2">
       <div class="flex flex-col gap-1">
-        <h2 class="m-0 text-[24px] font-bold en:font-museo">Buddy Bites {{ 'products.product.adult_kibbles' | t }}</h2>
+        {% if product.id != 7699911475416 %}
+          <h2 class="m-0 text-[24px] font-bold en:font-museo">
+            Buddy Bites {{ 'products.product.adult_kibbles' | t }}
+          </h2>
+        {% else %}
+          <h2 class="m-0 text-[24px] font-bold en:font-museo">
+            Buddy Bites {{ 'products.product.puppy_kibbles' | t }}
+          </h2>
+        {% endif %}
         <h3 class="font-montserrat text-[16px] font-light text-gray-500">
           {{ product.title }}
           {{ 'products.product.flavour' | t }}
