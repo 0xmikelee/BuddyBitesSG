@@ -40,8 +40,19 @@
     }
   },
   "navbar": {
-    "shop": {
-      "title": "Shop",
+    "shop_cat": {
+      "title": "Cat",
+      "kibbles": {
+        "title": "Kibbles",
+        "options": {
+          "salmon": "Adult Salmon",
+          "chicken": "Adult Chicken",
+          "kitten": "Kitten Chicken"
+        }
+      }
+    },
+    "shop_dog": {
+      "title": "Dog",
       "kibbles": {
         "title": "Kibbles",
         "options": {
@@ -991,6 +1002,8 @@
       "type": "Type",
       "adult_kibbles": "Adult Kibbles",
       "puppy_kibbles": "Puppy Kibbles",
+      "kitten_kibbles": "Cat Kibbles",
+      "adult_cat_kibbles": "Cat Kibbles",
       "starter_packs": "Starter Packs",
       "toppers": "Toppers",
       "treats": "Treats",
@@ -1000,11 +1013,14 @@
       "choose_flavour": "Choose Flavour",
       "choose_treat": "Choose Treat",
       "duck": "Duck",
+      "chicken": "Chicken",
       "salmon": "Salmon",
       "lamb": "Lamb",
       "turkey": "Turkey",
       "puppy": "Puppy",
+      "cat_salmon": "Salmon",
       "have_puppy": "Have a puppy?",
+      "have_kitten": "Have a kitten?",
       "have_puppy_link_text": "🐶 Try our puppy kibbles",
       "one_sampler_limit": "You can only order 1 Starter Pack",
       "save_65percent": "Save 65%",
@@ -1030,7 +1046,8 @@
         "ingredients": "Ingredients",
         "energy": "Energy",
         "nutritional_content": "Nutritional Content",
-        "key": "Key"
+        "key": "Key",
+        "cat_additives": "Additives"
       },
       "feeding_guidelines": {
         "title": "Feeding Guidelines",
@@ -1098,6 +1115,10 @@
       "ingredients_kibbles": {
         "title": "A healthy dog is a happy dog",
         "subtext": "That's why we have used a perfect blend of proteins and nutrients to ensure dogs of all shapes, sizes and breeds are happy and full of energy."
+      },
+      "ingredients_cat_kibbles": {
+        "title": "A healthy cat is a happy cat",
+        "subtext": "That's why we have used a perfect blend of proteins and nutrients to ensure cats of all shapes, sizes and breeds are happy and full of energy."
       },
       "ingredients_treats": {
         "title": "Ingredients you can actually understand!",

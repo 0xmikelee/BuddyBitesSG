@@ -53,17 +53,25 @@
   //   treatsContent.classList.remove('grid');
   // });
 
-  const shopMobileDropdownBtn = document.getElementById('shopMobileDropdownBtn');
+  const shopDogMobileDropdownBtn = document.getElementById('shopDogMobileDropdownBtn');
+  const shopCatMobileDropdownBtn = document.getElementById('shopCatMobileDropdownBtn');
+  const shopCatArrow = document.getElementById('shopCatArrow');
   const learnMobileDropdownBtn = document.getElementById('learnMobileDropdownBtn');
-  const shopMobileDropdown = document.getElementById('shopMobileDropdown');
+  const shopDogMobileDropdown = document.getElementById('shopDogMobileDropdown');
+  const shopCatMobileDropdown = document.getElementById('shopCatMobileDropdown');
   const learnMobileDropdown = document.getElementById('learnMobileDropdown');
   const shopArrow = document.getElementById('shopArrow');
   const learnArrow = document.getElementById('learnArrow');
 
-  shopMobileDropdownBtn.addEventListener('click', () => {
+  shopDogMobileDropdownBtn.addEventListener('click', () => {
     shopArrow.classList.toggle('rotate-180');
-    shopMobileDropdown.classList.toggle('hidden');
-    shopMobileDropdown.classList.toggle('grid');
+    shopDogMobileDropdown.classList.toggle('hidden');
+    shopDogMobileDropdown.classList.toggle('grid');
+  });
+  shopCatMobileDropdownBtn.addEventListener('click', () => {
+    shopCatArrow.classList.toggle('rotate-180');
+    shopCatMobileDropdown.classList.toggle('hidden');
+    shopCatMobileDropdown.classList.toggle('grid');
   });
   learnMobileDropdownBtn.addEventListener('click', () => {
     learnArrow.classList.toggle('rotate-180');
@@ -93,7 +101,7 @@
           {% comment %} Shop Link {% endcomment %}
           <a href="{{ all_products['buddy-bites-adult-turkey'].url }}" id="shopLink">
             <div class="rounded-full bg-[#98c9eb] px-5 py-2">
-              <p class="text-[20px] font-light uppercase text-white en:font-museo">{{ 'navbar.shop.title' | t }}</p>
+              <p class="text-[20px] font-light uppercase text-white en:font-museo">{{ 'navbar.shop_dog.title' | t }}</p>
             </div>
           </a>
           {% comment %} Shop MegaMenu {% endcomment %}
@@ -105,23 +113,23 @@
               <div class="divide-y-3 flex flex-col justify-between divide-y-[3px] divide-[#98c9eb]">
                 <a id="kibblesCategory" href="{{ all_products['buddy-bites-adult-lamb'].url }}">
                   <p class="bg-[#193C6B] py-7 text-center text-[20px] font-light uppercase text-white hover:bg-[#98c9eb] en:font-museo">
-                    {{ 'navbar.shop.kibbles.title' | t }}
+                    {{ 'navbar.shop_dog.kibbles.title' | t }}
                   </p>
                 </a>
                 <a id="treatsCategory" href="{{ all_products['buddy-bites-beef-blueberry-air-dried-treats'].url }}">
                   <p class="bg-[#193C6B] py-7 text-center text-[20px] font-light uppercase text-white hover:bg-[#98c9eb] en:font-museo">
-                    {{ 'navbar.shop.treats.title' | t }}
+                    {{ 'navbar.shop_dog.treats.title' | t }}
                   </p>
                 </a>
                 <a id="toppersCategory" href="{{ all_products['fresh-toppers-chicken-vegetables'].url }}">
                   <p class="bg-[#193C6B] py-7 text-center text-[20px] font-light uppercase text-white hover:bg-[#98c9eb] en:font-museo">
-                    {{ 'navbar.shop.toppers.title' | t }}
+                    {{ 'navbar.shop_dog.toppers.title' | t }}
                   </p>
                 </a>
                 {% comment %}
                   <a id="merchandiseCategory" href="{{ collections.merchandise.url }}">
                     <p class="bg-[#193C6B] py-7 text-center text-[20px] font-light uppercase text-white hover:bg-[#98c9eb] en:font-museo">
-                      {{ 'navbar.shop.merchandise.title' | t }}
+                      {{ 'navbar.shop_dog.merchandise.title' | t }}
                     </p>
                   </a>
                 {% endcomment %}
@@ -135,13 +143,13 @@
                     style="--bg-Color: {{ all_products['buddy-bites-adult-turkey'].metafields.custom.nutrition.value.middle_section_background_color }}"
                   >
                     <p class="text-center font-mukta text-[20px] uppercase text-[#193C6B]">
-                      {{ 'navbar.shop.kibbles.options.turkey' | t }}
+                      {{ 'navbar.shop_dog.kibbles.options.turkey' | t }}
                     </p>
                     <img
                       src="{{ 'b8794553c307108105a2b37c27f4f881_2.png' | file_img_url: '200x200' }}"
                       srcset="{{ 'b8794553c307108105a2b37c27f4f881_2.png' | file_img_url: '100x100' }} 100w, {{ 'b8794553c307108105a2b37c27f4f881_2.png' | file_img_url: '200x200' }} 200w"
                       sizes="(max-width: 768px) 100px, 200px"
-                      alt="{{ 'navbar.shop.kibbles.options.turkey' | t }}"
+                      alt="{{ 'navbar.shop_dog.kibbles.options.turkey' | t }}"
                       width="200"
                       height="200"
                       loading="lazy"
@@ -153,13 +161,13 @@
                     style="--bg-Color: {{ all_products['buddy-bites-duck'].metafields.custom.nutrition.value.middle_section_background_color }}"
                   >
                     <p class="text-center font-mukta text-[20px] uppercase text-[#193C6B]">
-                      {{ 'navbar.shop.kibbles.options.duck' | t }}
+                      {{ 'navbar.shop_dog.kibbles.options.duck' | t }}
                     </p>
                     <img
                       src="{{ 'BB_Duck_FOP.png' | file_img_url: '200x200' }}"
                       srcset="{{ 'BB_Duck_FOP.png' | file_img_url: '100x100' }} 100w, {{ 'BB_Duck_FOP.png' | file_img_url: '200x200' }} 200w"
                       sizes="(max-width: 768px) 100px, 200px"
-                      alt="{{ 'navbar.shop.kibbles.options.duck' | t }}"
+                      alt="{{ 'navbar.shop_dog.kibbles.options.duck' | t }}"
                       width="200"
                       height="200"
                       loading="lazy"
@@ -171,13 +179,13 @@
                     style="--bg-Color: {{ all_products['buddy-bites-lamb'].metafields.custom.nutrition.value.middle_section_background_color }}"
                   >
                     <p class="text-center font-mukta text-[20px] uppercase text-[#193C6B]">
-                      {{ 'navbar.shop.kibbles.options.lamb' | t }}
+                      {{ 'navbar.shop_dog.kibbles.options.lamb' | t }}
                     </p>
                     <img
                       src="{{ 'BB_Lamb_FOP.png' | file_img_url: '200x200' }}"
                       srcset="{{ 'BB_Lamb_FOP.png' | file_img_url: '100x100' }} 100w, {{ 'BB_Lamb_FOP.png' | file_img_url: '200x200' }} 200w"
                       sizes="(max-width: 768px) 100px, 200px"
-                      alt="{{ 'navbar.shop.kibbles.options.lamb' | t }}"
+                      alt="{{ 'navbar.shop_dog.kibbles.options.lamb' | t }}"
                       width="200"
                       height="200"
                       loading="lazy"
@@ -189,13 +197,13 @@
                     style="--bg-Color: {{ all_products['buddy-bites-adult-salmon'].metafields.custom.nutrition.value.middle_section_background_color }}"
                   >
                     <p class="text-center font-mukta text-[20px] uppercase text-[#193C6B]">
-                      {{ 'navbar.shop.kibbles.options.salmon' | t }}
+                      {{ 'navbar.shop_dog.kibbles.options.salmon' | t }}
                     </p>
                     <img
                       src="{{ 'BB_Salmon_FOP.png' | file_img_url: '200x200' }}"
                       srcset="{{ 'BB_Salmon_FOP.png' | file_img_url: '100x100' }} 100w, {{ 'BB_Salmon_FOP.png' | file_img_url: '200x200' }} 200w"
                       sizes="(max-width: 768px) 100px, 200px"
-                      alt="{{ 'navbar.shop.kibbles.options.salmon' | t }}"
+                      alt="{{ 'navbar.shop_dog.kibbles.options.salmon' | t }}"
                       width="200"
                       height="200"
                       loading="lazy"
@@ -207,13 +215,13 @@
                     style="--bg-Color: #c5dcf0"
                   >
                     <p class="text-center font-mukta text-[20px] uppercase text-[#193C6B]">
-                      {{ 'navbar.shop.kibbles.options.puppy' | t }}
+                      {{ 'navbar.shop_dog.kibbles.options.puppy' | t }}
                     </p>
                     <img
                       src="{{ 'BB_Puppy_FOP_1.png' | file_img_url: '200x200' }}"
                       srcset="{{ 'BB_Puppy_FOP_1.png' | file_img_url: '100x100' }} 100w, {{ 'BB_Puppy_FOP_1.png' | file_img_url: '200x200' }} 200w"
                       sizes="(max-width: 768px) 100px, 200px"
-                      alt="{{ 'navbar.shop.kibbles.options.puppy' | t }}"
+                      alt="{{ 'navbar.shop_dog.kibbles.options.puppy' | t }}"
                       width="200"
                       height="200"
                       loading="lazy"
@@ -227,11 +235,11 @@
                     class="flex h-full flex-col items-center gap-2 rounded-xl bg-[#e4e0f1] py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
                   >
                     <p class="text-center font-mukta text-[20px] uppercase text-[#193C6B]">
-                      {{ 'navbar.shop.treats.options.beef' | t }}
+                      {{ 'navbar.shop_dog.treats.options.beef' | t }}
                     </p>
                     <img
                       src="{{ 'BB_PremiumTreats_Beef_Berry_FRONT.png' | file_img_url: "180x" }}"
-                      alt="{{ 'navbar.shop.treats.options.beef' | t }}"
+                      alt="{{ 'navbar.shop_dog.treats.options.beef' | t }}"
                       class="max-w-[180px]"
                     >
                   </a>
@@ -240,11 +248,11 @@
                     class="flex h-full flex-col items-center gap-2 rounded-xl bg-[#f2c49b] py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
                   >
                     <p class="text-center font-mukta text-[20px] uppercase text-[#193C6B]">
-                      {{ 'navbar.shop.treats.options.chicken' | t }}
+                      {{ 'navbar.shop_dog.treats.options.chicken' | t }}
                     </p>
                     <img
                       src="{{ 'BB_PremiumTreats_Chicken_Honey_FRONT.png' | file_img_url: "180x" }}"
-                      alt="{{ 'navbar.shop.treats.options.chicken' | t }}"
+                      alt="{{ 'navbar.shop_dog.treats.options.chicken' | t }}"
                       class="max-w-[180px]"
                     >
                   </a>
@@ -253,11 +261,11 @@
                     class="flex h-full flex-col items-center gap-2 rounded-xl bg-[#abdae4] py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
                   >
                     <p class="text-center font-mukta text-[20px] uppercase text-[#193C6B]">
-                      {{ 'navbar.shop.treats.options.dental' | t }}
+                      {{ 'navbar.shop_dog.treats.options.dental' | t }}
                     </p>
                     <img
                       src="{{ 'Dental_Sticks.png' | file_img_url: "180x" }}"
-                      alt="{{ 'navbar.shop.treats.options.dental' | t }}"
+                      alt="{{ 'navbar.shop_dog.treats.options.dental' | t }}"
                       class="max-w-[180px]"
                     >
                   </a>
@@ -266,11 +274,11 @@
                     class="flex h-full flex-col items-center gap-2 rounded-xl bg-[#b1d7f1] py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
                   >
                     <p class="text-center font-mukta text-[20px] uppercase text-[#193C6B]">
-                      {{ 'navbar.shop.treats.options.bundles' | t }}
+                      {{ 'navbar.shop_dog.treats.options.bundles' | t }}
                     </p>
                     <img
                       src="{{ '119.png' | file_img_url: "180x" }}"
-                      alt="{{ 'navbar.shop.treats.options.bundles' | t }}"
+                      alt="{{ 'navbar.shop_dog.treats.options.bundles' | t }}"
                       class="max-w-[180px]"
                     >
                   </a>
@@ -286,11 +294,11 @@
                     class="relative h-full overflow-hidden rounded-xl bg-[#e4e0f1] hover:outline hover:outline-2 hover:outline-[#193C6B]"
                   >
                     <p class="absolute left-1/2 top-[10px] w-full -translate-x-1/2 text-center font-mukta text-[20px] uppercase text-[#193C6B]">
-                      {{ 'navbar.shop.toppers.options.beef' | t }}
+                      {{ 'navbar.shop_dog.toppers.options.beef' | t }}
                     </p>
                     <img
                       src="{{ '8_c840090b-0396-4a8d-a0c5-9d32bbe6b1af.png' | file_img_url: "master" }}"
-                      alt="{{ 'navbar.shop.toppers.options.beef' | t }}"
+                      alt="{{ 'navbar.shop_dog.toppers.options.beef' | t }}"
                       class="object-top"
                     >
                   </a>
@@ -299,11 +307,11 @@
                     class="relative h-full overflow-hidden rounded-xl bg-[#e4e0f1] hover:outline hover:outline-2 hover:outline-[#193C6B]"
                   >
                     <p class="absolute left-1/2 top-[10px] w-full -translate-x-1/2 text-center font-mukta text-[20px] uppercase text-[#193C6B]">
-                      {{ 'navbar.shop.toppers.options.chicken' | t }}
+                      {{ 'navbar.shop_dog.toppers.options.chicken' | t }}
                     </p>
                     <img
                       src="{{ '1_3e1edd09-307d-4b37-af46-8e2ee0cca0c0.png' | file_img_url: "master" }}"
-                      alt="{{ 'navbar.shop.toppers.options.chicken' | t }}"
+                      alt="{{ 'navbar.shop_dog.toppers.options.chicken' | t }}"
                       class="object-top"
                     >
                   </a>
@@ -320,11 +328,11 @@
                       class="relative flex h-full flex-col items-center gap-2 overflow-hidden rounded-xl bg-[#e4e0f1] py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
                     >
                       <p class="z-10 text-center font-mukta text-[20px] uppercase text-[#193C6B]">
-                        {{ 'navbar.shop.merchandise.options.all' | t }}
+                        {{ 'navbar.shop_dog.merchandise.options.all' | t }}
                       </p>
                       <img
                         src="{{ 'ab66e239e3379348e1ea06e8571b16e8_1.png' | file_img_url: "master" }}"
-                        alt="{{ 'navbar.shop.merchandise.options.all' | t }}"
+                        alt="{{ 'navbar.shop_dog.merchandise.options.all' | t }}"
                         class="absolute inset-0 h-full w-full object-cover"
                       >
                     </a>
@@ -334,11 +342,11 @@
                         class="relative flex h-full flex-col items-center gap-2 overflow-hidden rounded-xl py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
                       >
                         <p class="z-10 text-center font-mukta text-[14px] uppercase text-[#193C6B]">
-                          {{ 'navbar.shop.merchandise.options.poop_bag' | t }}
+                          {{ 'navbar.shop_dog.merchandise.options.poop_bag' | t }}
                         </p>
                         <img
                           src="{{ 'DSC06699_copy.jpg' | file_img_url: "master" }}"
-                          alt="{{ 'navbar.shop.merchandise.options.poop_bag' | t }}"
+                          alt="{{ 'navbar.shop_dog.merchandise.options.poop_bag' | t }}"
                           class="absolute inset-0 h-full w-full object-cover"
                         >
                       </a>
@@ -347,11 +355,11 @@
                         class="relative flex h-full flex-col items-center gap-2 overflow-hidden rounded-xl py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
                       >
                         <p class="z-10 text-center font-mukta text-[14px] uppercase text-[#193C6B]">
-                          {{ 'navbar.shop.merchandise.options.scoop' | t }}
+                          {{ 'navbar.shop_dog.merchandise.options.scoop' | t }}
                         </p>
                         <img
                           src="{{ 'Scoop5.jpg' | file_img_url: "master" }}"
-                          alt="{{ 'navbar.shop.merchandise.options.scoop' | t }}"
+                          alt="{{ 'navbar.shop_dog.merchandise.options.scoop' | t }}"
                           class="absolute inset-0 h-full w-full object-cover"
                         >
                       </a>
@@ -360,11 +368,11 @@
                         class="relative flex h-full flex-col items-center gap-2 overflow-hidden rounded-xl py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
                       >
                         <p class="z-10 text-center font-mukta text-[14px] uppercase text-[#193C6B]">
-                          {{ 'navbar.shop.merchandise.options.tennis_ball' | t }}
+                          {{ 'navbar.shop_dog.merchandise.options.tennis_ball' | t }}
                         </p>
                         <img
                           src="{{ 'tennis_ball.png' | file_img_url: "master" }}"
-                          alt="{{ 'navbar.shop.merchandise.options.tennis_ball' | t }}"
+                          alt="{{ 'navbar.shop_dog.merchandise.options.tennis_ball' | t }}"
                           class="absolute inset-0 h-full w-full object-cover"
                         >
                       </a>
@@ -373,11 +381,11 @@
                         class="relative flex h-full flex-col items-center gap-2 overflow-hidden rounded-xl py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
                       >
                         <p class="z-10 text-center font-mukta text-[14px] uppercase text-[#193C6B]">
-                          {{ 'navbar.shop.merchandise.options.poop_bag_holder' | t }}
+                          {{ 'navbar.shop_dog.merchandise.options.poop_bag_holder' | t }}
                         </p>
                         <img
                           src="{{ 'poop_bag.png' | file_img_url: "master" }}"
-                          alt="{{ 'navbar.shop.merchandise.options.poop_bag_holder' | t }}"
+                          alt="{{ 'navbar.shop_dog.merchandise.options.poop_bag_holder' | t }}"
                           class="absolute inset-0 h-full w-full object-cover"
                         >
                       </a>
@@ -386,11 +394,11 @@
                         class="relative flex h-full flex-col items-center gap-2 overflow-hidden rounded-xl py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
                       >
                         <p class="z-10 text-center font-mukta text-[14px] uppercase text-[#193C6B]">
-                          {{ 'navbar.shop.merchandise.options.umbrella' | t }}
+                          {{ 'navbar.shop_dog.merchandise.options.umbrella' | t }}
                         </p>
                         <img
                           src="{{ 'umbr_95e60054-8b61-4a5b-a95e-9876887b47cc.png' | file_img_url: "master" }}"
-                          alt="{{ 'navbar.shop.merchandise.options.umbrella' | t }}"
+                          alt="{{ 'navbar.shop_dog.merchandise.options.umbrella' | t }}"
                           class="absolute inset-0 h-full w-full object-cover"
                         >
                       </a>
@@ -399,11 +407,11 @@
                         class="relative flex h-full flex-col items-center gap-2 overflow-hidden rounded-xl py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
                       >
                         <p class="z-10 text-center font-mukta text-[14px] uppercase text-[#193C6B]">
-                          {{ 'navbar.shop.merchandise.options.portable_bowl' | t }}
+                          {{ 'navbar.shop_dog.merchandise.options.portable_bowl' | t }}
                         </p>
                         <img
                           src="{{ 'portable_bowl.png' | file_img_url: "master" }}"
-                          alt="{{ 'navbar.shop.merchandise.options.portable_bowl' | t }}"
+                          alt="{{ 'navbar.shop_dog.merchandise.options.portable_bowl' | t }}"
                           class="absolute inset-0 h-full w-full object-cover"
                         >
                       </a>
@@ -412,11 +420,11 @@
                         class="relative flex h-full flex-col items-center gap-2 overflow-hidden rounded-xl py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
                       >
                         <p class="z-10 text-center font-mukta text-[14px] uppercase text-[#193C6B]">
-                          {{ 'navbar.shop.merchandise.options.tote_bag' | t }}
+                          {{ 'navbar.shop_dog.merchandise.options.tote_bag' | t }}
                         </p>
                         <img
                           src="{{ '3bc2d61e9042b753f6922f64579a5011.png' | file_img_url: "master" }}"
-                          alt="{{ 'navbar.shop.merchandise.options.tote_bag' | t }}"
+                          alt="{{ 'navbar.shop_dog.merchandise.options.tote_bag' | t }}"
                           class="absolute inset-0 h-full w-full object-cover"
                         >
                       </a>
@@ -425,11 +433,11 @@
                         class="relative flex h-full flex-col items-center gap-2 overflow-hidden rounded-xl py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
                       >
                         <p class="z-10 text-center font-mukta text-[14px] uppercase text-[#193C6B]">
-                          {{ 'navbar.shop.merchandise.options.steel_bowl' | t }}
+                          {{ 'navbar.shop_dog.merchandise.options.steel_bowl' | t }}
                         </p>
                         <img
                           src="{{ 'steel_bowl.png' | file_img_url: "master" }}"
-                          alt="{{ 'navbar.shop.merchandise.options.steel_bowl' | t }}"
+                          alt="{{ 'navbar.shop_dog.merchandise.options.steel_bowl' | t }}"
                           class="absolute inset-0 h-full w-full object-cover"
                         >
                       </a>
@@ -437,6 +445,60 @@
                   </div>
                 {% endcomment %}
               </div>
+            </div>
+          </div>
+        </div>
+        <div class="group relative">
+          <a href="{{ all_products['adult-salmon-dry-cat-food'].url }}" id="shopCatLink">
+            <div class="rounded-full bg-[#98c9eb] px-5 py-2">
+              <p class="text-[20px] font-light uppercase text-white en:font-museo">{{ 'navbar.shop_cat.title' | t }}</p>
+            </div>
+          </a>
+          {% comment %} Shop Cat MegaMenu {% endcomment %}
+          <div class="absolute left-0 top-[calc(100%+20px)] hidden h-full w-[clamp(900px,80vw,1200px)] before:absolute before:left-0 before:top-[-25px] before:block before:h-[25px] before:w-full before:bg-transparent before:content-[''] md:-translate-x-[10%] md:group-hover:block">
+            <div
+              id="shopCatMegaMenu"
+              class="grid grid-cols-3 gap-3 overflow-hidden rounded-bl-[40px] rounded-br-[40px] bg-[#98c9eb] px-6 py-4"
+            >
+              <a
+                href="{{ all_products['adult-salmon-dry-cat-food'].url }}"
+                class="relative flex flex-col items-center justify-center overflow-hidden rounded-xl bg-[#ffd4cc] hover:outline hover:outline-2 hover:outline-[#193C6B]"
+              >
+                <p class="w-full py-2 text-center font-mukta text-[20px] uppercase text-[#193C6B]">
+                  {{ 'navbar.shop_cat.kibbles.options.salmon' | t }}
+                </p>
+                <img
+                  src="{{ 'BB_Cat_Salmon_FOP.png' | file_img_url: '200x200' }}"
+                  alt="{{ 'navbar.shop_cat.kibbles.options.salmon' | t }}"
+                  class="relative w-[150px] object-cover"
+                >
+              </a>
+              <a
+                href="{{ all_products['adult-chicken-dry-cat-food'].url }}"
+                class="relative flex flex-col items-center justify-center overflow-hidden rounded-xl bg-[#acd18f] hover:outline hover:outline-2 hover:outline-[#193C6B]"
+              >
+                <p class="w-full py-2 text-center font-mukta text-[20px] uppercase text-[#193C6B]">
+                  {{ 'navbar.shop_cat.kibbles.options.chicken' | t }}
+                </p>
+                <img
+                  src="{{ 'BB_Cat_Chicken_FOP.png' | file_img_url: '200x200' }}"
+                  alt="{{ 'navbar.shop_cat.kibbles.options.chicken' | t }}"
+                  class="relative w-[150px] object-cover"
+                >
+              </a>
+              <a
+                href="{{ all_products['kitten-chicken-dry-cat-food'].url }}"
+                class="relative flex flex-col items-center justify-center overflow-hidden rounded-xl bg-[#c5dcf0] hover:outline hover:outline-2 hover:outline-[#193C6B]"
+              >
+                <p class="w-full py-2 text-center font-mukta text-[20px] uppercase text-[#193C6B]">
+                  {{ 'navbar.shop_cat.kibbles.options.kitten' | t }}
+                </p>
+                <img
+                  src="{{ 'BB_Cat_Kitten_FOP.png' | file_img_url: '200x200' }}"
+                  alt="{{ 'navbar.shop_cat.kibbles.options.kitten' | t }}"
+                  class="relative w-[150px] object-cover"
+                >
+              </a>
             </div>
           </div>
         </div>
@@ -630,8 +692,8 @@
   <div class="absolute top-full z-20 hidden h-[100dvh] w-full" id="mobileDropdown">
     <div class="relative z-10 flex flex-col divide-y-[1px] divide-[#98c9eb] rounded-bl-[40px] rounded-br-[40px] bg-[#193C6B]">
       <div class="flex flex-col">
-        <div class="flex justify-between px-10 py-6" id="shopMobileDropdownBtn">
-          <p class="text-[18px] uppercase text-white en:font-museo">{{ 'navbar.shop.title' | t }}</p>
+        <div class="flex justify-between px-10 py-6" id="shopDogMobileDropdownBtn">
+          <p class="text-[18px] uppercase text-white en:font-museo">{{ 'navbar.shop_dog.title' | t }}</p>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="35"
@@ -646,7 +708,7 @@
         </div>
         <div
           class="hidden w-full grid-cols-2 gap-2 bg-[#193C6B] px-6 pb-4"
-          id="shopMobileDropdown"
+          id="shopDogMobileDropdown"
         >
           <a
             href="{{ all_products['buddy-bites-adult-turkey'].url }}"
@@ -657,7 +719,7 @@
               alt="Kibbles"
               class="w-[100px]"
             >
-            <p class="text-[18px] text-white en:font-museo">{{ 'navbar.shop.kibbles.title' | t }}</p>
+            <p class="text-[18px] text-white en:font-museo">{{ 'navbar.shop_dog.kibbles.title' | t }}</p>
           </a>
           <a
             href="{{ all_products['buddy-bites-beef-blueberry-air-dried-treats'].url }}"
@@ -668,7 +730,7 @@
               alt="Treats"
               class="w-[100px]"
             >
-            <p class="text-[18px] text-white en:font-museo">{{ 'navbar.shop.treats.title' | t }}</p>
+            <p class="text-[18px] text-white en:font-museo">{{ 'navbar.shop_dog.treats.title' | t }}</p>
           </a>
           <a
             href="{{ all_products['fresh-toppers-chicken-vegetables'].url }}"
@@ -679,7 +741,7 @@
               alt="Toppers"
               class="w-[100px]"
             >
-            <p class="text-[18px] text-white en:font-museo">{{ 'navbar.shop.toppers.title' | t }}</p>
+            <p class="text-[18px] text-white en:font-museo">{{ 'navbar.shop_dog.toppers.title' | t }}</p>
           </a>
           <a
             href="{{ all_products['adult-turkey-tester-pack'].url }}"
@@ -690,10 +752,10 @@
               alt="Merchadise"
               class="w-[150px]"
             >
-            <p class="text-[18px] text-white en:font-museo">{{ 'navbar.shop.samples.title' | t }}</p>
+            <p class="text-[18px] text-white en:font-museo">{{ 'navbar.shop_dog.samples.title' | t }}</p>
 
             <p class="absolute left-1/2 top-0 w-full -translate-x-1/2 rounded-3xl bg-red-500 px-3 text-center text-[12px] text-white">
-              {{ 'navbar.shop.samples.discount' | t }}
+              {{ 'navbar.shop_dog.samples.discount' | t }}
             </p>
           </a>
           {% comment %}
@@ -706,9 +768,63 @@
                 alt="Merchadise"
                 class="w-[100px]"
               >
-              <p class="text-[18px] text-white en:font-museo">{{ 'navbar.shop.merchandise.title' | t }}</p>
+              <p class="text-[18px] text-white en:font-museo">{{ 'navbar.shop_dog.merchandise.title' | t }}</p>
             </a>
           {% endcomment %}
+        </div>
+      </div>
+      <div class="flex flex-col">
+        <div class="flex justify-between px-10 py-6" id="shopCatMobileDropdownBtn">
+          <p class="text-[18px] uppercase text-white en:font-museo">{{ 'navbar.shop_cat.title' | t }}</p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="35"
+            height="22"
+            viewBox="0 0 35 22"
+            fill="none"
+            class="w-[25px]"
+            id="shopCatArrow"
+          >
+            <path d="M32.9941 2L17.3279 19.3081L2.00001 2.60309" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </div>
+        <div
+          class="hidden w-full grid-cols-2 gap-2 bg-[#193C6B] px-6 pb-4"
+          id="shopCatMobileDropdown"
+        >
+          <a
+            href="{{ all_products['adult-salmon-dry-cat-food'].url }}"
+            class="flex flex-col items-center justify-between gap-2 rounded-lg bg-[#1E56A0] py-4"
+          >
+            <img
+              src="{{ 'BB_Cat_Salmon_FOP.png' | file_img_url: "large" }}"
+              alt="Kibbles"
+              class="w-[100px]"
+            >
+            <p class="text-[18px] text-white en:font-museo">{{ 'navbar.shop_cat.kibbles.options.salmon' | t }}</p>
+          </a>
+          <a
+            href="{{ all_products['adult-chicken-dry-cat-food'].url }}"
+            class="flex flex-col items-center justify-between gap-2 rounded-lg bg-[#1E56A0] py-4"
+          >
+            <img
+              src="{{ 'BB_Cat_Chicken_FOP.png' | file_img_url: "large" }}"
+              alt="Kibbles"
+              class="w-[100px]"
+            >
+            <p class="text-[18px] text-white en:font-museo">{{ 'navbar.shop_cat.kibbles.options.chicken' | t }}</p>
+          </a>
+          <a
+            href="{{ all_products['kitten-chicken-dry-cat-food'].url }}"
+            class="flex flex-col items-center justify-between gap-2 rounded-lg bg-[#1E56A0] py-4"
+          >
+            <img
+              src="{{ 'BB_Cat_Kitten_FOP.png' | file_img_url: "large" }}"
+              alt="Kibbles"
+              class="w-[100px]"
+            >
+            <p class="text-[18px] text-white en:font-museo">{{ 'navbar.shop_cat.kibbles.options.kitten' | t }}</p>
+          </a>
         </div>
       </div>
       <div class="flex flex-col">

@@ -1,0 +1,25 @@
+{
+  "sections": {
+    "section-product-cat-kibbles": {
+      "type": "section-product-cat-kibbles",
+      "settings": {}
+    },
+    "section-reviews": {
+      "type": "apps",
+      "blocks": {
+        "klaviyo_reviews_product_reviews_WPppNU": {
+          "type": "shopify://apps/klaviyo-reviews/blocks/product-reviews/db20e365-d984-4ac4-9655-e1588d951ca9",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "klaviyo_reviews_product_reviews_WPppNU"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "section-product-cat-kibbles",
+    "section-reviews"
+  ]
+}
