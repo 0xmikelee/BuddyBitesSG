@@ -205,7 +205,7 @@
         <div class="flex flex-col justify-center gap-2">
           <p class="text-[16px] font-bold text-black en:font-museo">{{ 'products.product.choose_flavour' | t }}:</p>
           <div class="flex justify-start gap-2">
-            {% for prd in collections['tester-packs'].products %}
+            {% for prd in collections['starter-packs'].products %}
               {% assign metaobj_list = prd.metafields.custom.flavor.value %}
 
               {% for m_obj in metaobj_list %}
