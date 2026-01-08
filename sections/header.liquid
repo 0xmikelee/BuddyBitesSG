@@ -99,7 +99,7 @@
       <div class="flex h-full items-center justify-start gap-5">
         <div class="group relative">
           {% comment %} Shop Link {% endcomment %}
-          <a href="{{ all_products['buddy-bites-adult-turkey'].url }}" id="shopLink">
+          <a href="{{ all_products['adult-turkey-dry-dog-food'].url }}" id="shopLink">
             <div class="rounded-full bg-[#98c9eb] px-5 py-2">
               <p class="text-[20px] font-light uppercase text-white en:font-museo">{{ 'navbar.shop_dog.title' | t }}</p>
             </div>
@@ -116,12 +116,12 @@
                     {{ 'navbar.shop_dog.kibbles.title' | t }}
                   </p>
                 </a>
-                <a id="treatsCategory" href="{{ all_products['buddy-bites-beef-blueberry-air-dried-treats'].url }}">
+                <a id="treatsCategory" href="{{ all_products['beef-blueberry-air-dried-dog-treats'].url }}">
                   <p class="bg-[#193C6B] py-7 text-center text-[20px] font-light uppercase text-white hover:bg-[#98c9eb] en:font-museo">
                     {{ 'navbar.shop_dog.treats.title' | t }}
                   </p>
                 </a>
-                <a id="toppersCategory" href="{{ all_products['fresh-toppers-chicken-vegetables'].url }}">
+                <a id="toppersCategory" href="{{ all_products['dog-fresh-toppers-chicken-vegetables'].url }}">
                   <p class="bg-[#193C6B] py-7 text-center text-[20px] font-light uppercase text-white hover:bg-[#98c9eb] en:font-museo">
                     {{ 'navbar.shop_dog.toppers.title' | t }}
                   </p>
@@ -138,9 +138,9 @@
                 {% comment %} Kibbles {% endcomment %}
                 <div id="kibblesContent" class="grid h-full grid-cols-5 gap-2 bg-[#98c9eb] px-6 py-4">
                   <a
-                    href="{{ all_products['buddy-bites-adult-turkey'].url }}"
+                    href="{{ all_products['adult-turkey-dry-dog-food'].url }}"
                     class="flex h-full flex-col items-center gap-2 rounded-xl bg-[var(--bg-Color)] py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
-                    style="--bg-Color: {{ all_products['buddy-bites-adult-turkey'].metafields.custom.nutrition.value.middle_section_background_color }}"
+                    style="--bg-Color: {{ all_products['adult-turkey-dry-dog-food'].metafields.custom.nutrition.value.middle_section_background_color }}"
                   >
                     <p class="text-center font-mukta text-[20px] uppercase text-[#193C6B]">
                       {{ 'navbar.shop_dog.kibbles.options.turkey' | t }}
@@ -156,9 +156,9 @@
                     >
                   </a>
                   <a
-                    href="{{ all_products['buddy-bites-duck'].url }}"
+                    href="{{ all_products['adult-duck-dry-dog-food'].url }}"
                     class="flex h-full flex-col items-center gap-2 rounded-xl bg-[var(--bg-Color)] py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
-                    style="--bg-Color: {{ all_products['buddy-bites-duck'].metafields.custom.nutrition.value.middle_section_background_color }}"
+                    style="--bg-Color: {{ all_products['adult-duck-dry-dog-food'].metafields.custom.nutrition.value.middle_section_background_color }}"
                   >
                     <p class="text-center font-mukta text-[20px] uppercase text-[#193C6B]">
                       {{ 'navbar.shop_dog.kibbles.options.duck' | t }}
@@ -174,9 +174,9 @@
                     >
                   </a>
                   <a
-                    href="{{ all_products['buddy-bites-lamb'].url }}"
+                    href="{{ all_products['adult-lamb-dry-dog-food'].url }}"
                     class="flex h-full flex-col items-center gap-2 rounded-xl bg-[var(--bg-Color)] py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
-                    style="--bg-Color: {{ all_products['buddy-bites-lamb'].metafields.custom.nutrition.value.middle_section_background_color }}"
+                    style="--bg-Color: {{ all_products['adult-lamb-dry-dog-food'].metafields.custom.nutrition.value.middle_section_background_color }}"
                   >
                     <p class="text-center font-mukta text-[20px] uppercase text-[#193C6B]">
                       {{ 'navbar.shop_dog.kibbles.options.lamb' | t }}
@@ -192,9 +192,9 @@
                     >
                   </a>
                   <a
-                    href="{{ all_products['buddy-bites-adult-salmon'].url }}"
+                    href="{{ all_products['adult-salmon-dry-dog-food'].url }}"
                     class="flex h-full flex-col items-center gap-2 rounded-xl bg-[var(--bg-Color)] py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
-                    style="--bg-Color: {{ all_products['buddy-bites-adult-salmon'].metafields.custom.nutrition.value.middle_section_background_color }}"
+                    style="--bg-Color: {{ all_products['adult-salmon-dry-dog-food'].metafields.custom.nutrition.value.middle_section_background_color }}"
                   >
                     <p class="text-center font-mukta text-[20px] uppercase text-[#193C6B]">
                       {{ 'navbar.shop_dog.kibbles.options.salmon' | t }}
@@ -210,7 +210,7 @@
                     >
                   </a>
                   <a
-                    href="{{ all_products['buddy-bites-puppy'].url }}"
+                    href="{{ all_products['puppy-dry-dog-food'].url }}"
                     class="flex h-full flex-col items-center gap-2 rounded-xl bg-[var(--bg-Color)] py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
                     style="--bg-Color: #c5dcf0"
                   >
@@ -231,7 +231,7 @@
                 {% comment %} Treats {% endcomment %}
                 <div id="treatsContent" class="hidden grid-cols-4 gap-2 bg-[#98c9eb] px-6 py-4">
                   <a
-                    href="{{ all_products['buddy-bites-beef-blueberry-air-dried-treats'].url }}"
+                    href="{{ all_products['beef-blueberry-air-dried-dog-treats'].url }}"
                     class="flex h-full flex-col items-center gap-2 rounded-xl bg-[#e4e0f1] py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
                   >
                     <p class="text-center font-mukta text-[20px] uppercase text-[#193C6B]">
@@ -244,7 +244,7 @@
                     >
                   </a>
                   <a
-                    href="{{ all_products['buddy-bites-chicken-manuka-honey-air-dried-treats'].url }}"
+                    href="{{ all_products['chicken-honey-air-dried-dog-treats'].url }}"
                     class="flex h-full flex-col items-center gap-2 rounded-xl bg-[#f2c49b] py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
                   >
                     <p class="text-center font-mukta text-[20px] uppercase text-[#193C6B]">
@@ -290,7 +290,7 @@
                   class="hidden h-full grid-cols-[repeat(2,fit-content(250px))] gap-2 bg-[#98c9eb] px-[150px] py-4"
                 >
                   <a
-                    href="{{ all_products['fresh-toppers-beef-vegetables'].url }}"
+                    href="{{ all_products['dog-fresh-toppers-beef-vegetables'].url }}"
                     class="relative h-full overflow-hidden rounded-xl bg-[#e4e0f1] hover:outline hover:outline-2 hover:outline-[#193C6B]"
                   >
                     <p class="absolute left-1/2 top-[10px] w-full -translate-x-1/2 text-center font-mukta text-[20px] uppercase text-[#193C6B]">
@@ -303,7 +303,7 @@
                     >
                   </a>
                   <a
-                    href="{{ all_products['fresh-toppers-chicken-vegetables'].url }}"
+                    href="{{ all_products['dog-fresh-toppers-chicken-vegetables'].url }}"
                     class="relative h-full overflow-hidden rounded-xl bg-[#e4e0f1] hover:outline hover:outline-2 hover:outline-[#193C6B]"
                   >
                     <p class="absolute left-1/2 top-[10px] w-full -translate-x-1/2 text-center font-mukta text-[20px] uppercase text-[#193C6B]">
@@ -338,7 +338,7 @@
                     </a>
                     <div class="grid grid-cols-4 gap-2">
                       <a
-                        href="{{ all_products.poop-bags.url }}"
+                        href="{{ all_products.dog-poop-bags.url }}"
                         class="relative flex h-full flex-col items-center gap-2 overflow-hidden rounded-xl py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
                       >
                         <p class="z-10 text-center font-mukta text-[14px] uppercase text-[#193C6B]">
@@ -351,7 +351,7 @@
                         >
                       </a>
                       <a
-                        href="{{ all_products['buddy-bites-scoops'].url }}"
+                        href="{{ all_products['dog-kibble-scoops'].url }}"
                         class="relative flex h-full flex-col items-center gap-2 overflow-hidden rounded-xl py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
                       >
                         <p class="z-10 text-center font-mukta text-[14px] uppercase text-[#193C6B]">
@@ -364,7 +364,7 @@
                         >
                       </a>
                       <a
-                        href="{{ all_products['tennis'].url }}"
+                        href="{{ all_products['dog-tennis-ball'].url }}"
                         class="relative flex h-full flex-col items-center gap-2 overflow-hidden rounded-xl py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
                       >
                         <p class="z-10 text-center font-mukta text-[14px] uppercase text-[#193C6B]">
@@ -377,7 +377,7 @@
                         >
                       </a>
                       <a
-                        href="{{ all_products['poo-bag-holder'].url }}"
+                        href="{{ all_products['dog-poo-bag-holder'].url }}"
                         class="relative flex h-full flex-col items-center gap-2 overflow-hidden rounded-xl py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
                       >
                         <p class="z-10 text-center font-mukta text-[14px] uppercase text-[#193C6B]">
@@ -403,7 +403,7 @@
                         >
                       </a>
                       <a
-                        href="{{ all_products['portable-bowl'].url }}"
+                        href="{{ all_products['small-portable-dog-bowl'].url }}"
                         class="relative flex h-full flex-col items-center gap-2 overflow-hidden rounded-xl py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
                       >
                         <p class="z-10 text-center font-mukta text-[14px] uppercase text-[#193C6B]">
@@ -416,7 +416,7 @@
                         >
                       </a>
                       <a
-                        href="{{ all_products['tote-bag'].url }}"
+                        href="{{ all_products['dog-tote-bag'].url }}"
                         class="relative flex h-full flex-col items-center gap-2 overflow-hidden rounded-xl py-2 hover:outline hover:outline-2 hover:outline-[#193C6B]"
                       >
                         <p class="z-10 text-center font-mukta text-[14px] uppercase text-[#193C6B]">
@@ -612,7 +612,7 @@
               {{ 'navbar.stores' | t }}
             </p>
           </a>
-          <a href="{{ all_products['adult-turkey-tester-pack'].url }}">
+          <a href="{{ all_products['adult-turkey-dog-sample-starter-pack'].url }}">
             <p class="rounded-full px-5 py-2 text-[20px] font-light uppercase text-white hover:bg-[#98c9eb] en:font-museo">
               {{ 'navbar.samples' | t }}
             </p>
@@ -711,7 +711,7 @@
           id="shopDogMobileDropdown"
         >
           <a
-            href="{{ all_products['buddy-bites-adult-turkey'].url }}"
+            href="{{ all_products['adult-turkey-dry-dog-food'].url }}"
             class="flex flex-col items-center justify-between gap-2 rounded-lg bg-[#1E56A0] py-4"
           >
             <img
@@ -722,7 +722,7 @@
             <p class="text-[18px] text-white en:font-museo">{{ 'navbar.shop_dog.kibbles.title' | t }}</p>
           </a>
           <a
-            href="{{ all_products['buddy-bites-beef-blueberry-air-dried-treats'].url }}"
+            href="{{ all_products['beef-blueberry-air-dried-dog-treats'].url }}"
             class="flex flex-col items-center justify-between gap-2 rounded-lg bg-[#1E56A0] py-4"
           >
             <img
@@ -733,7 +733,7 @@
             <p class="text-[18px] text-white en:font-museo">{{ 'navbar.shop_dog.treats.title' | t }}</p>
           </a>
           <a
-            href="{{ all_products['fresh-toppers-chicken-vegetables'].url }}"
+            href="{{ all_products['dog-fresh-toppers-chicken-vegetables'].url }}"
             class="flex flex-col items-center justify-center gap-2 rounded-lg bg-[#1E56A0] py-4"
           >
             <img
@@ -744,7 +744,7 @@
             <p class="text-[18px] text-white en:font-museo">{{ 'navbar.shop_dog.toppers.title' | t }}</p>
           </a>
           <a
-            href="{{ all_products['adult-turkey-tester-pack'].url }}"
+            href="{{ all_products['adult-turkey-dog-sample-starter-pack'].url }}"
             class="relative flex flex-col items-center justify-between gap-2 rounded-lg bg-[#1E56A0] py-4"
           >
             <img
