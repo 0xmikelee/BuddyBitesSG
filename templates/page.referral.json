@@ -3,9 +3,45 @@
     "section-referral": {
       "type": "section-referral",
       "settings": {}
+    },
+    "17683818975ccf47b2": {
+      "type": "apps",
+      "blocks": {
+        "skio_subscriptions_yc_s20_referrals_code_block_new_hDiD8w": {
+          "type": "shopify://apps/skio-subscriptions-yc-s20/blocks/referrals-code-block-new/de50f7a4-0bb0-4d4c-84e2-c03dce83436d",
+          "settings": {
+            "title": "Referral Program",
+            "give_amount": "Give 25%",
+            "get_amount": "Get 25%",
+            "logged_out_description": "<p>Give your friends <strong>25% off</strong> their first order and get <strong>25%</strong> for each successful referral.</p>",
+            "logged_in_description": "<p>Give your friends <strong>25%</strong> their first order and get <strong>25%</strong> for each successful referral.</p>",
+            "copy_button_text": "Copy",
+            "login_button_text": "Login to get your referral code",
+            "landing_page_path": "/",
+            "share_title": "Check out this amazing deal!",
+            "share_text": "Use my referral link: {link}",
+            "heading_color": "#181d27",
+            "benefit_text_color": "#7f56d9",
+            "check_icon_color": "#7f56d9",
+            "description_color": "#535862",
+            "highlight_background": "#f0e9ff",
+            "background_color": "#F7F7F7",
+            "button_color": "#200039",
+            "button_text_color": "#ffffff",
+            "input_background": "#ffffff",
+            "input_border_color": "#d5d7da",
+            "input_text_color": "#717680"
+          }
+        }
+      },
+      "block_order": [
+        "skio_subscriptions_yc_s20_referrals_code_block_new_hDiD8w"
+      ],
+      "settings": {}
     }
   },
   "order": [
-    "section-referral"
+    "section-referral",
+    "17683818975ccf47b2"
   ]
 }

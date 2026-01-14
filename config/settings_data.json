@@ -38,6 +38,18 @@
         "type": "shopify://apps/sales-countup/blocks/embed/89c80bfc-f6af-424a-a310-bff500702731",
         "disabled": false,
         "settings": {}
+      },
+      "16318819600593728772": {
+        "type": "shopify://apps/skio-subscriptions-yc-s20/blocks/referral-banner-block/de50f7a4-0bb0-4d4c-84e2-c03dce83436d",
+        "disabled": false,
+        "settings": {
+          "referralBannerBGColor": "#EAFFED",
+          "referralBannerBorderColor": "#EAFFED",
+          "referralBannerStrokeColor": "#23A136",
+          "message": "<p><b>Referral discount applied to cart!</b> Create your first order and enjoy the credits from your friend!</p>",
+          "togglePreview": false,
+          "bannerPadding": 5
+        }
       }
     }
   }
