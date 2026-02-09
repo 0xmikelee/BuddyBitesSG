@@ -1,0 +1,787 @@
+<section class="relative">
+  <img
+    src="{{ 'loyalty_hero_desktop.png' | file_img_url: 'master' }}"
+    alt="Loyalty Program Banner"
+    class="hidden w-full lg:block"
+  >
+  <img
+    src="{{ 'loyalty_hero_mobile.png' | file_img_url: 'master' }}"
+    alt="Loyalty Program Banner"
+    class="block w-full lg:hidden"
+  >
+  <div class="absolute inset-0 z-10 px-3 md:px-10 md:py-10">
+    <div class="flex h-1/2 w-full flex-col items-center justify-center md:h-1/2 md:w-[55%] md:max-w-[700px] md:items-start md:gap-6">
+      <h2 class="text-center text-[24px] font-light text-[#193C6B] en:font-museo md:text-left md:text-[clamp(32px,4.5vw,36px)]">
+        {{ 'loyalty.hero.small_title' | t }}
+      </h2>
+      <h1 class="text-center text-[40px] font-medium leading-[40px] tracking-wider text-[#193C6B] en:font-heyCharlie md:text-left md:text-[clamp(50px,4.5vw,65px)] md:leading-[clamp(40px,5vw,60px)]">
+        {{ 'loyalty.hero.title' | t }}
+      </h1>
+      <p class="w-full text-center text-[16px] font-normal leading-[24px] text-[#193C6B] en:font-museo md:w-[80%] md:text-left md:text-[clamp(24px,2vw,30px)] md:leading-[clamp(24px,3vw,30px)]">
+        {{ 'loyalty.hero.subtitle' | t }}
+      </p>
+    </div>
+  </div>
+</section>
+<section class="relative bg-[#98C9EB]">
+  <div class="container mx-auto flex flex-col gap-7 px-5 py-10">
+    <h2 class="text-center text-[32px] tracking-wider text-[#193C6B] en:font-heyCharlie md:text-[60px] md:leading-[60px]">
+      {{ 'loyalty.intro.title_1' | t }}
+      <br>
+      {{ 'loyalty.intro.title_2' | t }}
+    </h2>
+    <p class="text-center font-museo text-[16px] leading-[24px] text-[#193C6B]">
+      {{ 'loyalty.intro.subtitle_1' | t }}
+      <br>
+      {{ 'loyalty.intro.subtitle_2' | t }}
+    </p>
+    <div class="mx-auto grid max-w-[250px] grid-cols-1 gap-6 md:max-w-[800px] md:grid-cols-3">
+      <div class="flex flex-col items-center justify-center gap-4 rounded-md bg-[#173C6A] p-2 md:p-5">
+        <img
+          src="{{ 'loyalty-earn-points-icon.png' | file_img_url: 'master' }}"
+          alt="Earn Points"
+          class="aspect-square w-[60px] object-cover md:w-[100px]"
+        >
+        <h3 class="text-balance text-center text-[16px] text-white en:font-museo md:text-[18px]">
+          {{ 'loyalty.intro.point1' | t }}
+        </h3>
+      </div>
+      <div class="flex flex-col items-center justify-center gap-4 rounded-md bg-[#173C6A] p-2 md:p-5">
+        <img
+          src="{{ 'loyalty-redeem-points-icon.png' | file_img_url: 'master' }}"
+          alt="Earn Points"
+          class="aspect-square w-[60px] object-cover md:w-[100px]"
+        >
+        <h3 class="text-balance text-center text-[16px] text-white en:font-museo md:text-[18px]">
+          {{ 'loyalty.intro.point2' | t }}
+        </h3>
+      </div>
+      <div class="flex flex-col items-center justify-center gap-4 rounded-md bg-[#173C6A] p-2 md:p-5">
+        <img
+          src="{{ 'loyalty-stack-points-icon.png' | file_img_url: 'master' }}"
+          alt="Earn Points"
+          class="w-[40px] object-cover md:w-[60px]"
+        >
+        <h3 class="text-balance text-center text-[16px] text-white en:font-museo md:text-[18px]">
+          {{ 'loyalty.intro.point3' | t }}
+        </h3>
+      </div>
+    </div>
+    <div class="flex justify-center">
+      <div class="grid w-full max-w-[250px] grid-cols-1 gap-6 md:max-w-[800px] md:grid-cols-2">
+        <a
+          href="{% if localization.language.iso_code == 'zh' %}/zh/a/account/login{% endif %}/a/account/login"
+          class="text-balance rounded-full bg-white px-5 py-2 text-center text-[16px] font-normal text-[#193C6B] hover:bg-[#173C6A] en:font-museo"
+        >
+          {{- 'loyalty.intro.cta1' | t -}}
+        </a>
+        <a
+          href="{% if localization.language.iso_code == 'zh' %}/zh/a/account/login{% endif %}/a/account/login"
+          class="text-balance rounded-full bg-white px-5 py-2 text-center text-[16px] font-normal text-[#193C6B] hover:bg-[#173C6A] en:font-museo"
+        >
+          {{- 'loyalty.intro.cta2' | t -}}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="relative bg-[#173C6A]">
+  <div class="container mx-auto flex flex-col gap-7 px-5 py-10">
+    <h2 class="text-center text-[40px] tracking-wider text-white en:font-heyCharlie md:text-[60px] md:leading-[60px]">
+      {{ 'loyalty.how_the_treat_game_works.title' | t }}
+    </h2>
+    <div class="flex flex-col items-center justify-center gap-2">
+      <h3 class="text-center font-museo text-[20px] text-white md:text-[clamp(24px,2vw,34px)]">
+        {{ 'loyalty.how_the_treat_game_works.subtitle' | t }}
+      </h3>
+      <p class="text-center font-museo text-[16px] text-white md:text-[clamp(16px,1vw,24px)]">
+        {{ 'loyalty.how_the_treat_game_works.subtitle_2' | t }}
+      </p>
+    </div>
+    <div class="relative">
+      <div
+        class="absolute left-[100px] right-[100px] top-[86.5px] hidden rounded-full border-t-4 border-dotted border-white md:block"
+      ></div>
+      <div
+        class="absolute inset-x-1/2 bottom-24 top-24 block -translate-x-1/2 rounded-full border-l-4 border-dotted border-white md:hidden"
+      ></div>
+      <div class="relative z-10 grid grid-cols-1 gap-6 md:grid-cols-4">
+        <div class="flex flex-col items-center justify-center gap-4 bg-[#173C6A] pt-4 md:bg-transparent md:pt-0">
+          <p class="aspect-square rounded-full bg-white p-3 text-center font-museo text-[70px] font-bold text-[#193C6B] md:p-1 md:text-[110px]">
+            1
+          </p>
+          <div class="flex flex-col items-center justify-center gap-2">
+            <p class="text-center font-museo font-bold text-white en:text-[clamp(16px,1vw,24px)] zh-TW:text-[clamp(18px,1.5vw,20px)]">
+              {{ 'loyalty.how_the_treat_game_works.point1.title' | t }}
+            </p>
+            <p class="text-balance text-center font-museo text-white en:text-[clamp(16px,1vw,24px)] zh-TW:text-[clamp(18px,1.5vw,20px)]">
+              {{ 'loyalty.how_the_treat_game_works.point1.subtext' | t }}
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-col items-center justify-center gap-4 bg-[#173C6A] pt-4 md:bg-transparent md:pt-0">
+          <p class="aspect-square rounded-full bg-white p-3 text-center font-museo text-[70px] font-bold text-[#193C6B] md:p-1 md:text-[110px]">
+            2
+          </p>
+          <div class="flex flex-col items-center justify-center gap-2">
+            <p class="text-center font-museo font-bold text-white en:text-[clamp(16px,1vw,24px)] zh-TW:text-[clamp(18px,1.5vw,20px)]">
+              {{ 'loyalty.how_the_treat_game_works.point2.title' | t }}
+            </p>
+            <p class="text-balance text-center font-museo text-white en:text-[clamp(16px,1vw,24px)] zh-TW:text-[clamp(18px,1.5vw,20px)]">
+              {{ 'loyalty.how_the_treat_game_works.point2.subtext' | t }}
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-col items-center justify-center gap-4 bg-[#173C6A] pt-4 md:bg-transparent md:pt-0">
+          <p class="aspect-square rounded-full bg-white p-3 text-center font-museo text-[70px] font-bold text-[#193C6B] md:p-1 md:text-[110px]">
+            3
+          </p>
+          <div class="flex flex-col items-center justify-center gap-2">
+            <p class="text-center font-museo font-bold text-white en:text-[clamp(16px,1vw,24px)] zh-TW:text-[clamp(18px,1.5vw,20px)]">
+              {{ 'loyalty.how_the_treat_game_works.point3.title' | t }}
+            </p>
+            <p class="text-balance text-center font-museo text-white en:text-[clamp(16px,1vw,24px)] zh-TW:text-[clamp(18px,1.5vw,20px)]">
+              {{ 'loyalty.how_the_treat_game_works.point3.subtext' | t }}
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-col items-center justify-center gap-4 bg-[#173C6A] pt-4 md:bg-transparent md:pt-0">
+          <p class="aspect-square rounded-full bg-white p-3 text-center font-museo text-[70px] font-bold text-[#193C6B] md:p-1 md:text-[110px]">
+            4
+          </p>
+          <div class="flex flex-col items-center justify-center gap-2">
+            <p class="text-center font-museo font-bold text-white en:text-[clamp(16px,1vw,24px)] zh-TW:text-[clamp(18px,1.5vw,20px)]">
+              {{ 'loyalty.how_the_treat_game_works.point4.title' | t }}
+            </p>
+            <p class="text-balance text-center font-museo text-white en:text-[clamp(16px,1vw,24px)] zh-TW:text-[clamp(18px,1.5vw,20px)]">
+              {{ 'loyalty.how_the_treat_game_works.point4.subtext' | t }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% comment %}
+      <div class="flex flex-col items-center justify-center gap-10 pt-7 md:pt-10">
+        <h2 class="text-center text-[40px] tracking-wider text-white en:font-heyCharlie md:text-[60px] md:leading-[60px]">
+          {{ 'loyalty.redeem_points_for_savings.title' | t }}
+        </h2>
+        <div class="grid w-full grid-cols-2 gap-4 md:w-1/2">
+          <h3 class="rounded-2xl bg-[#B9E3FF] p-4 text-center font-museo text-[20px] font-semibold text-[#223C68] md:text-[clamp(24px,1.5vw,28px)]">
+            {{ 'loyalty.redeem_points_for_savings.points' | t }}
+          </h3>
+          <h3 class="rounded-2xl bg-[#B9E3FF] p-4 text-center font-museo text-[20px] font-semibold text-[#223C68] md:text-[clamp(24px,1.5vw,28px)]">
+            {{ 'loyalty.redeem_points_for_savings.reward' | t }}
+          </h3>
+          <h3 class="rounded-2xl bg-white p-4 text-center font-museo text-[20px] font-semibold text-[#223C68] md:text-[clamp(24px,1.5vw,28px)]">
+            {{ 'loyalty.redeem_points_for_savings.500_pts' | t }}
+          </h3>
+          <h3 class="rounded-2xl bg-white p-4 text-center font-museo text-[20px] font-semibold text-[#223C68] md:text-[clamp(24px,1.5vw,28px)]">
+            {{ 'loyalty.redeem_points_for_savings.30_off' | t }}
+          </h3>
+          <h3 class="rounded-2xl bg-white p-4 text-center font-museo text-[20px] font-semibold text-[#223C68] md:text-[clamp(24px,1.5vw,28px)]">
+            {{ 'loyalty.redeem_points_for_savings.1000_pts' | t }}
+          </h3>
+          <h3 class="rounded-2xl bg-white p-4 text-center font-museo text-[20px] font-semibold text-[#223C68] md:text-[clamp(24px,1.5vw,28px)]">
+            {{ 'loyalty.redeem_points_for_savings.10_off' | t }}
+          </h3>
+          <h3 class="rounded-2xl bg-white p-4 text-center font-museo text-[20px] font-semibold text-[#223C68] md:text-[clamp(24px,1.5vw,28px)]">
+            {{ 'loyalty.redeem_points_for_savings.1500_pts' | t }}
+          </h3>
+          <h3 class="rounded-2xl bg-white p-4 text-center font-museo text-[20px] font-semibold text-[#223C68] md:text-[clamp(24px,1.5vw,28px)]">
+            {{ 'loyalty.redeem_points_for_savings.15_off' | t }}
+          </h3>
+        </div>
+        <p class="text-balance text-center font-museo text-[16px] font-normal text-[#58BDFF] md:text-[clamp(16px,1vw,24px)]">
+          {{ 'loyalty.redeem_points_for_savings.footer_1' | t }}
+          <br>
+          {{ 'loyalty.redeem_points_for_savings.footer_2' | t }}
+        </p>
+      </div>
+    {% endcomment %}
+  </div>
+</section>
+<section class="relative bg-[#DDF1FF]">
+  <div class="container mx-auto flex flex-col gap-7 px-5 py-10">
+    <h2 class="text-center text-[40px] tracking-wider text-[#193C6B] en:font-heyCharlie md:text-[60px] md:leading-[60px]">
+      {{ 'loyalty.work_your_way_to_top_dog.title' | t }}
+    </h2>
+    <p class="text-balance text-center font-museo text-[16px] font-normal text-[#193C6B] md:text-[clamp(16px,1vw,24px)]">
+      {{ 'loyalty.work_your_way_to_top_dog.subtitle' | t }}
+    </p>
+    <table class="w-full">
+      <thead>
+        <tr class="grid grid-cols-5 px-2 py-2 md:px-4 md:py-3">
+          <th></th>
+          <th class="flex flex-col items-center justify-center gap-2">
+            <img
+              src="{{ 'tiers-rookie-up-icon.png' | file_img_url: 'master' }}"
+              alt="Rookie Up Tier"
+              class="aspect-square w-[20px] object-cover md:w-[50px]"
+            >
+            <p class="text-balance text-center font-museo text-[12px] font-bold text-[#193C6B] md:text-[clamp(16px,1vw,24px)]">
+              {{ 'loyalty.work_your_way_to_top_dog.tier1' | t }}
+            </p>
+          </th>
+          <th class="flex flex-col items-center justify-center gap-2">
+            <img
+              src="{{ 'tiers-park-regular-icon.png' | file_img_url: 'master' }}"
+              alt="Park Regular Tier"
+              class="aspect-square w-[20px] object-cover md:w-[50px]"
+            >
+            <p class="text-balance text-center font-museo text-[12px] font-bold text-[#193C6B] md:text-[clamp(16px,1vw,24px)]">
+              {{ 'loyalty.work_your_way_to_top_dog.tier2' | t }}
+            </p>
+          </th>
+          <th class="flex flex-col items-center justify-center gap-2">
+            <img
+              src="{{ 'tiers-pack-leader-icon.png' | file_img_url: 'master' }}"
+              alt="Pack Leader Tier"
+              class="aspect-square w-[20px] object-cover md:w-[50px]"
+            >
+            <p class="text-balance text-center font-museo text-[12px] font-bold text-[#193C6B] md:text-[clamp(16px,1vw,24px)]">
+              {{ 'loyalty.work_your_way_to_top_dog.tier3' | t }}
+            </p>
+          </th>
+          <th class="flex flex-col items-center justify-center gap-2">
+            <img
+              src="{{ 'tiers-top-dog-icon.png' | file_img_url: 'master' }}"
+              alt="Top Dog Tier"
+              class="aspect-square w-[20px] object-cover md:w-[50px]"
+            >
+            <p class="text-balance text-center font-museo text-[12px] font-bold text-[#193C6B] md:text-[clamp(16px,1vw,24px)]">
+              {{ 'loyalty.work_your_way_to_top_dog.tier4' | t }}
+            </p>
+          </th>
+        </tr>
+      </thead>
+      <tbody class="flex flex-col items-center justify-center text-balance font-museo text-[10px] text-[#173C6A] md:text-[16px]">
+        <tr class="grid w-full grid-cols-5 gap-2 px-2 py-2 odd:bg-[#B9E3FF] even:bg-transparent md:px-4 md:py-3">
+          <td class="text-left">{{ 'loyalty.work_your_way_to_top_dog.order.title' | t }}</td>
+          <td class="text-center">{{ 'loyalty.work_your_way_to_top_dog.order.tier1' | t }}</td>
+          <td class="text-center">{{ 'loyalty.work_your_way_to_top_dog.order.tier2' | t }}</td>
+          <td class="text-center">{{ 'loyalty.work_your_way_to_top_dog.order.tier3' | t }}</td>
+          <td class="text-center">{{ 'loyalty.work_your_way_to_top_dog.order.tier4' | t }}</td>
+        </tr>
+        <tr class="grid w-full grid-cols-5 gap-2 px-2 py-2 odd:bg-[#B9E3FF] even:bg-transparent md:px-4 md:py-3">
+          <td class="text-left">{{ 'loyalty.work_your_way_to_top_dog.cashback.title' | t }}</td>
+          <td class="text-center">{{ 'loyalty.work_your_way_to_top_dog.cashback.tier1' | t }}</td>
+          <td class="text-center">{{ 'loyalty.work_your_way_to_top_dog.cashback.tier2' | t }}</td>
+          <td class="text-center">{{ 'loyalty.work_your_way_to_top_dog.cashback.tier3' | t }}</td>
+          <td class="text-center">{{ 'loyalty.work_your_way_to_top_dog.cashback.tier4' | t }}</td>
+        </tr>
+        <tr class="grid w-full grid-cols-5 gap-2 px-2 py-2 odd:bg-[#B9E3FF] even:bg-transparent md:px-4 md:py-3">
+          <td class="text-left">{{ 'loyalty.work_your_way_to_top_dog.exclusive_offers.title' | t }}</td>
+          <td class="text-center">{{ 'loyalty.work_your_way_to_top_dog.exclusive_offers.tier1' | t }}</td>
+          <td class="text-center">{{ 'loyalty.work_your_way_to_top_dog.exclusive_offers.tier2' | t }}</td>
+          <td class="text-center">{{ 'loyalty.work_your_way_to_top_dog.exclusive_offers.tier3' | t }}</td>
+          <td class="text-center">{{ 'loyalty.work_your_way_to_top_dog.exclusive_offers.tier4' | t }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+<section class="relative bg-[#173C6A]">
+  <div class="container mx-auto flex flex-col gap-7 px-5 py-10">
+    <h2 class="text-center text-[40px] tracking-wider text-white en:font-heyCharlie md:text-[60px] md:leading-[60px]">
+      {{ 'loyalty.who_is_a_good_human.title' | t }}
+    </h2>
+    <p class="text-balance text-center font-museo text-[16px] font-normal text-white md:text-[clamp(16px,1vw,24px)]">
+      {{ 'loyalty.who_is_a_good_human.subtitle_1' | t }}
+      <br>
+      {{ 'loyalty.who_is_a_good_human.subtitle_2' | t }}
+    </p>
+    <div class="grid grid-cols-2 gap-4 md:grid-cols-4 md:px-10">
+      <div class="flex flex-col items-center justify-center gap-2 rounded-2xl bg-[#DDF1FF] px-4 py-6">
+        <img
+          src="{{ 'loyalty-subscription-icon.png' | file_img_url: 'master' }}"
+          alt="Start Subscription"
+          class="aspect-square w-[20px] object-cover md:w-[70px]"
+        >
+        <p class="text-balance text-center font-museo text-[12px] font-bold text-[#193C6B] md:text-[clamp(16px,1vw,24px)]">
+          {{ 'loyalty.who_is_a_good_human.point1.title' | t }}
+        </p>
+        <p class="text-balance text-center font-museo text-[12px] font-normal text-[#193C6B] md:text-[clamp(16px,1vw,24px)]">
+          {{ 'loyalty.who_is_a_good_human.point1.subtext' | t }}
+        </p>
+      </div>
+      <div class="flex flex-col items-center justify-center gap-2 rounded-2xl bg-[#DDF1FF] px-4 py-6">
+        <img
+          src="{{ 'loyalty-write-review-icon.png' | file_img_url: 'master' }}"
+          alt="Write Review"
+          class="aspect-square w-[20px] object-cover md:w-[70px]"
+        >
+        <p class="text-balance text-center font-museo text-[12px] font-bold text-[#193C6B] md:text-[clamp(16px,1vw,24px)]">
+          {{ 'loyalty.who_is_a_good_human.point2.title' | t }}
+        </p>
+        <p class="text-balance text-center font-museo text-[12px] font-normal text-[#193C6B] md:text-[clamp(16px,1vw,24px)]">
+          {{ 'loyalty.who_is_a_good_human.point2.subtext' | t }}
+        </p>
+      </div>
+      <div class="flex flex-col items-center justify-center gap-2 rounded-2xl bg-[#DDF1FF] px-4 py-6">
+        <img
+          src="{{ 'loyalty-add-birthday-icon.png' | file_img_url: 'master' }}"
+          alt="Add Birthday"
+          class="aspect-square w-[20px] object-cover md:w-[70px]"
+        >
+        <p class="text-balance text-center font-museo text-[12px] font-bold text-[#193C6B] md:text-[clamp(16px,1vw,24px)]">
+          {{ 'loyalty.who_is_a_good_human.point3.title' | t }}
+        </p>
+        <p class="text-balance text-center font-museo text-[12px] font-normal text-[#193C6B] md:text-[clamp(16px,1vw,24px)]">
+          {{ 'loyalty.who_is_a_good_human.point3.subtext' | t }}
+        </p>
+      </div>
+      <div class="flex flex-col items-center justify-center gap-2 rounded-2xl bg-[#DDF1FF] px-4 py-6">
+        <img
+          src="{{ 'loyalty-refer-friend-icon.png' | file_img_url: 'master' }}"
+          alt="Refer Friend"
+          class="aspect-square w-[20px] object-cover md:w-[70px]"
+        >
+        <p class="text-balance text-center font-museo text-[12px] font-bold text-[#193C6B] md:text-[clamp(16px,1vw,24px)]">
+          {{ 'loyalty.who_is_a_good_human.point4.title' | t }}
+        </p>
+        <p class="text-balance text-center font-museo text-[12px] font-normal text-[#193C6B] md:text-[clamp(16px,1vw,24px)]">
+          {{ 'loyalty.who_is_a_good_human.point4.subtext' | t }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="relative bg-[#98C9EB]">
+  <div class="container mx-auto flex flex-col gap-7 px-5 py-10">
+    <h2 class="text-center text-[40px] tracking-wider text-[#193C6B] en:font-heyCharlie md:text-[60px] md:leading-[60px]">
+      {{ 'loyalty.same_dog_different_treatment.title' | t }}
+    </h2>
+    <p class="text-balance text-center font-museo text-[16px] font-normal text-[#193C6B] md:text-[clamp(16px,1vw,24px)]">
+      {{ 'loyalty.same_dog_different_treatment.subtitle' | t }}
+    </p>
+    <table class="w-full text-balance font-museo text-[10px] text-[#173C6A] md:text-[16px]">
+      <thead class="bg-[#98C9EB]">
+        <tr class="grid grid-cols-3 px-2 py-2 md:px-4 md:py-3">
+          <th class="text-balance text-left">{{ 'loyalty.same_dog_different_treatment.header.features' | t }}</th>
+          <th>
+            <p class="text-balance text-center">
+              {{ 'loyalty.same_dog_different_treatment.header.non_subscriber' | t }}
+            </p>
+          </th>
+          <th>
+            <p class="text-balance text-center">{{ 'loyalty.same_dog_different_treatment.header.subscriber' | t }}</p>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="grid grid-cols-3 text-balance px-4 py-2 odd:bg-transparent even:bg-[#B9E3FF]">
+          <td class="text-left">{{ 'loyalty.same_dog_different_treatment.features.earn_points' | t }}</td>
+          <td class="text-center">
+            <img
+              src="{{ 'loyalty-cross.png' | file_img_url: 'master' }}"
+              alt="Non-Subscriber cannot earn points"
+              class="mx-auto aspect-square w-[15px] object-cover"
+            >
+          </td>
+          <td class="text-center">
+            <img
+              src="{{ 'loyalty-tick.png' | file_img_url: 'master' }}"
+              alt="Subscriber can earn points"
+              class="mx-auto aspect-square w-[15px] object-cover"
+            >
+          </td>
+        </tr>
+        <tr class="grid grid-cols-3 text-balance px-4 py-2 odd:bg-transparent even:bg-[#B9E3FF]">
+          <td class="text-left">{{ 'loyalty.same_dog_different_treatment.features.redeem_rewards' | t }}</td>
+          <td class="text-center">
+            <img
+              src="{{ 'loyalty-cross.png' | file_img_url: 'master' }}"
+              alt="Non-Subscriber cannot redeem $ rewards"
+              class="mx-auto aspect-square w-[15px] object-cover"
+            >
+          </td>
+          <td class="text-center">
+            <img
+              src="{{ 'loyalty-tick.png' | file_img_url: 'master' }}"
+              alt="Subscriber can redeem $ rewards"
+              class="mx-auto aspect-square w-[15px] object-cover"
+            >
+          </td>
+        </tr>
+        <tr class="grid grid-cols-3 text-balance px-4 py-2 odd:bg-transparent even:bg-[#B9E3FF]">
+          <td class="text-left">{{ 'loyalty.same_dog_different_treatment.features.cashback' | t }}</td>
+          <td class="text-center">
+            <img
+              src="{{ 'loyalty-cross.png' | file_img_url: 'master' }}"
+              alt="Non-Subscriber cannot get cashback"
+              class="mx-auto aspect-square w-[15px] object-cover"
+            >
+          </td>
+          <td class="text-center">
+            <img
+              src="{{ 'loyalty-tick.png' | file_img_url: 'master' }}"
+              alt="Subscriber can get cashback"
+              class="mx-auto aspect-square w-[15px] object-cover"
+            >
+          </td>
+        </tr>
+        <tr class="grid grid-cols-3 text-balance px-4 py-2 odd:bg-transparent even:bg-[#B9E3FF]">
+          <td class="text-left">{{ 'loyalty.same_dog_different_treatment.features.tier_perks' | t }}</td>
+          <td class="text-center">
+            <img
+              src="{{ 'loyalty-cross.png' | file_img_url: 'master' }}"
+              alt="Non-Subscriber cannot get tier perks"
+              class="mx-auto aspect-square w-[15px] object-cover"
+            >
+          </td>
+          <td class="text-center">
+            <img
+              src="{{ 'loyalty-tick.png' | file_img_url: 'master' }}"
+              alt="Subscriber can get tier perks"
+              class="mx-auto aspect-square w-[15px] object-cover"
+            >
+          </td>
+        </tr>
+        <tr class="grid grid-cols-3 text-balance px-4 py-2 odd:bg-transparent even:bg-[#B9E3FF]">
+          <td class="text-left">{{ 'loyalty.same_dog_different_treatment.features.early_access' | t }}</td>
+          <td class="text-center">
+            <img
+              src="{{ 'loyalty-cross.png' | file_img_url: 'master' }}"
+              alt="Non-Subscriber cannot get early access"
+              class="mx-auto aspect-square w-[15px] object-cover"
+            >
+          </td>
+          <td class="text-center">
+            <img
+              src="{{ 'loyalty-tick.png' | file_img_url: 'master' }}"
+              alt="Subscriber can get early access"
+              class="mx-auto aspect-square w-[15px] object-cover"
+            >
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+<section class="relative">
+  <div class="container mx-auto flex flex-col gap-7 px-5 py-10">
+    <h2 class="text-center text-[40px] tracking-wider text-[#193C6B] en:font-heyCharlie md:text-[60px] md:leading-[60px]">
+      {{ 'loyalty.faq.title' | t }}
+    </h2>
+    <p class="text-balance text-center font-museo text-[16px] font-normal text-[#193C6B] md:text-[clamp(16px,1vw,24px)]">
+      {{ 'loyalty.faq.subtitle' | t }}
+    </p>
+    <div class="faqs desktop">
+      <div class="container-fluid">
+        <div class="rowa">
+          <div class="columna">
+            <div class="accordian">
+              <div class="icon"></div>
+              <h5>{{ 'loyalty.faq.question1.title' | t }}</h5>
+            </div>
+            <div class="panel">
+              <p>
+                {{ 'loyalty.faq.question1.answer' | t }}
+              </p>
+            </div>
+            <div class="accordian">
+              <div class="icon"></div>
+              <h5>{{ 'loyalty.faq.question2.title' | t }}</h5>
+            </div>
+            <div class="panel">
+              <p>
+                {{ 'loyalty.faq.question2.answer' | t }}
+              </p>
+            </div>
+            <div class="accordian">
+              <div class="icon"></div>
+              <h5>{{ 'loyalty.faq.question3.title' | t }}</h5>
+            </div>
+            <div class="panel">
+              <p>
+                {{ 'loyalty.faq.question3.answer' | t }}
+              </p>
+            </div>
+            <div class="accordian">
+              <div class="icon"></div>
+              <h5>{{ 'loyalty.faq.question4.title' | t }}</h5>
+            </div>
+            <div class="panel">
+              <p>
+                {{ 'loyalty.faq.question4.answer' | t }}
+              </p>
+            </div>
+            <div class="accordian">
+              <div class="icon"></div>
+              <h5>{{ 'loyalty.faq.question5.title' | t }}</h5>
+            </div>
+            <div class="panel">
+              <p>
+                {{ 'loyalty.faq.question5.answer' | t }}
+              </p>
+            </div>
+            <div class="accordian">
+              <div class="icon"></div>
+              <h5>{{ 'loyalty.faq.question6.title' | t }}</h5>
+            </div>
+            <div class="panel">
+              <p>
+                {{ 'loyalty.faq.question6.answer' | t }}
+              </p>
+            </div>
+            <div class="accordian">
+              <div class="icon"></div>
+              <h5>{{ 'loyalty.faq.question7.title' | t }}</h5>
+            </div>
+            <div class="panel">
+              <p>
+                {{ 'loyalty.faq.question7.answer' | t }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="faqs lg:hidden">
+      <div class="container-fluid">
+        <div class="rowa">
+          <div class="columna">
+            <div class="accordian">
+              <div class="icon"></div>
+              <h5>{{ 'loyalty.faq.question1.title' | t }}</h5>
+            </div>
+            <div class="panel">
+              <p>
+                {{ 'loyalty.faq.question1.answer' | t }}
+              </p>
+            </div>
+            <div class="accordian">
+              <div class="icon"></div>
+              <h5>{{ 'loyalty.faq.question2.title' | t }}</h5>
+            </div>
+            <div class="panel">
+              <p>
+                {{ 'loyalty.faq.question2.answer' | t }}
+              </p>
+            </div>
+            <div class="accordian">
+              <div class="icon"></div>
+              <h5>{{ 'loyalty.faq.question3.title' | t }}</h5>
+            </div>
+            <div class="panel">
+              <p>
+                {{ 'loyalty.faq.question3.answer' | t }}
+              </p>
+            </div>
+            <div class="accordian">
+              <div class="icon"></div>
+              <h5>{{ 'loyalty.faq.question4.title' | t }}</h5>
+            </div>
+            <div class="panel">
+              <p>
+                {{ 'loyalty.faq.question4.answer' | t }}
+              </p>
+            </div>
+            <div class="accordian">
+              <div class="icon"></div>
+              <h5>{{ 'loyalty.faq.question5.title' | t }}</h5>
+            </div>
+            <div class="panel">
+              <p>
+                {{ 'loyalty.faq.question5.answer' | t }}
+              </p>
+            </div>
+            <div class="accordian">
+              <div class="icon"></div>
+              <h5>{{ 'loyalty.faq.question6.title' | t }}</h5>
+            </div>
+            <div class="panel">
+              <p>
+                {{ 'loyalty.faq.question6.answer' | t }}
+              </p>
+            </div>
+            <div class="accordian">
+              <div class="icon"></div>
+              <h5>{{ 'loyalty.faq.question7.title' | t }}</h5>
+            </div>
+            <div class="panel">
+              <p>
+                {{ 'loyalty.faq.question7.answer' | t }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% comment %}
+  <section class="relative bg-[#DDF1FF] px-5 py-10 ">
+    <div class="container grid grid-cols-1 overflow-hidden rounded-2xl bg-[#B9E3FF] md:grid-cols-2">
+      <div class="order-2 flex flex-col items-center justify-center gap-7 px-5 py-10 md:order-1 md:px-10 md:py-10">
+        <h2 class="text-center text-[40px] tracking-wider text-[#193C6B] en:font-heyCharlie md:text-[60px] md:leading-[60px]">
+          {{ 'loyalty.refer_a_friend.title' | t }}
+        </h2>
+        <h3 class="text-balance text-center font-museo text-[35px] font-bold text-[#193C6B] md:text-[42px]">
+          {{ 'loyalty.refer_a_friend.get_25_off' | t }}
+          <br>
+          {{ 'loyalty.refer_a_friend.gift_25_off' | t }}
+        </h3>
+        <p class="text-balance text-center font-museo text-[16px] font-normal text-[#193C6B] md:text-[clamp(16px,1vw,24px)]">
+          {{ 'loyalty.refer_a_friend.subtitle_1' | t }}
+          <br>
+          {{ 'loyalty.refer_a_friend.subtitle_2' | t }}
+        </p>
+        {% form 'customer', class: 'flex flex-col gap-4 w-full md:w-3/4' %}
+          <input
+            type="text"
+            name="name"
+            placeholder="{{ 'loyalty.refer_a_friend.name' | t }}"
+            class="w-full rounded-full px-5 py-2"
+          >
+          <input
+            type="email"
+            name="email"
+            placeholder="{{ 'loyalty.refer_a_friend.email' | t }}"
+            class="w-full rounded-full px-5 py-2"
+          >
+          <button type="submit" class="w-full rounded-full bg-[#193C6B] px-5 py-2 font-museo font-bold text-white">
+            {{ 'loyalty.refer_a_friend.submit' | t }}
+          </button>
+        {% endform %}
+        <p class="text-balance text-center font-museo text-[10px] font-normal text-[#193C6B] md:text-[14px]">
+          {{ 'loyalty.refer_a_friend.form_footer' | t }}
+        </p>
+      </div>
+      <img
+        src="{{ 'referral-image.png' | file_img_url: 'master' }}"
+        alt="Refer Friend"
+        class="order-1 w-full object-cover md:order-2"
+      >
+    </div>
+  </section>
+{% endcomment %}
+
+<style>
+  .accordian {
+    width: 100%;
+    padding: 0 0.5vw;
+    border: 0.1vw solid #0d3e66;
+    cursor: pointer;
+    border-radius: 5vw;
+    display: flex;
+    align-items: center;
+  }
+  .accordian .icon {
+    margin: 0 0.2vw 0 0;
+    width: 3vw;
+    height: 2.1vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url(https://cdn.shopify.com/s/files/1/0430/5833/1805/files/plus_1.svg?v=1684522114);
+    float: left;
+    transition: all 0.5s ease-in;
+  }
+  .active .icon {
+    background-image: url(https://cdn.shopify.com/s/files/1/0430/5833/1805/files/minus.svg?v=1684524159);
+  }
+  .active {
+    background-color: {{ bgColor }};
+  }
+  .accordian h5 {
+    font-size: 1.5vw;
+    margin: 0;
+    padding: 0.5vw 0;
+    font-family: Montserrat, sans-serif !important;
+    color: #0d3e66 !important;
+    font-weight: 500 !important;
+  }
+  .faqs {
+    background-color: {{ bgColor }};
+  }
+  .panel {
+    background-color: {{ bgColor }};
+    padding: 0 2vw;
+    border-left: 0.1vw solid #0d3e66;
+    margin-left: 3vw;
+    text-align: justify;
+    overflow: hidden;
+    max-height: 0;
+    transition: all 0.5s ease-in;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .panel p {
+    margin: 1vw 0 !important;
+    text-align: left;
+  }
+  .container-fluid {
+    width: 90%;
+    margin: 0 auto 4vw auto;
+  }
+  .container-fluid h2 {
+    position: relative;
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: 5px;
+    text-align: center;
+    color: #203c6c;
+    margin: 5vw 0;
+    font-size: 5vw;
+  }
+  .rowa {
+    display: flex;
+  }
+  .columna {
+    flex: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 1vw;
+  }
+
+  @media (max-width: 1024px) {
+    .desktop {
+      display: none;
+    }
+    .container-fluid h2 {
+      font-size: 7vw !important;
+    }
+    .container-fluid {
+      width: 92%;
+    }
+    .accordian h5 {
+      font-size: 3vw;
+    }
+    .accordian .icon {
+      margin: 0 0.5vw 0 0;
+      width: 5vw;
+      height: 7vw;
+    }
+    .accordian {
+      border: 0.2vw solid #0d3e66;
+    }
+    .panel p {
+      font-size: 3vw !important;
+    }
+    .panel {
+      border-left: 0.2vw solid #0d3e66;
+    }
+  }
+</style>
+
+<script>
+  var acc = document.getElementsByClassName('accordian');
+  var i;
+  var len = acc.length;
+  for (i = 0; i < len; i++) {
+    acc[i].addEventListener('click', function () {
+      this.classList.toggle('active');
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+      }
+    });
+  }
+</script>

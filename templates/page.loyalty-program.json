@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "section-loyalty-program": {
+      "type": "section-loyalty-program",
+      "settings": {}
+    }
+  },
+  "order": [
+    "section-loyalty-program"
+  ]
+}

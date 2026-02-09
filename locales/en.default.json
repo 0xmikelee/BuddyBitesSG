@@ -1292,5 +1292,167 @@
     "order_details": {
       "contact": "Contact"
     }
+  },
+  "loyalty": {
+    "hero": {
+      "small_title": "Buddy Bites Rewards",
+      "title": "Rewarding Better Nutrition",
+      "subtitle": "You're feeding your dog anyway, might as well get perks."
+    },
+    "intro": {
+      "title_1": "Good Dogs Get Treats.",
+      "title_2": "Great Dogs Get Rewards.",
+      "subtitle_1": "This loyalty program is for Buddy Bites subscribers only.",
+      "subtitle_2": "Earn cashback, unlock perks, and save on every order—because commitment deserves snacks.",
+      "point1": "Earn points on every subscription order",
+      "point2": "Redeem points for $ off future orders",
+      "point3": "Unlock cashback as you move up tiers",
+      "cta1": "Subscribe and Unlock Rewards",
+      "cta2": "View My Rewards"
+    },
+    "how_the_treat_game_works": {
+      "title": "How the treat game works",
+      "subtitle": "Very simple. No obedience school required.",
+      "subtitle_2": "Just snack, earn, and repeat.",
+      "point1": {
+        "title": "Spend as a Subscriber",
+        "subtext": "Shop Buddy Bites on subscription and earn cashback on every order."
+      },
+      "point2": {
+        "title": "Earn Cashback",
+        "subtext": "Cashback is credited to your account based on your tier."
+      },
+      "point3": {
+        "title": "Convert to $ Off",
+        "subtext": "Turn your cashback into $ discounts for your next order."
+      },
+      "point4": {
+        "title": "Save & Repeat",
+        "subtext": "Use your rewards, reorder, and keep earning more cashback."
+      }
+    },
+    "redeem_points_for_savings": {
+      "title": "Redeem Points for $ Savings",
+      "subtitle": "Rewards apply to subscriber orders <br>Points accumulate as long as your subscription is active",
+      "points": "Points",
+      "reward": "Reward",
+      "500_pts": "500 pts",
+      "1000_pts": "1000 pts",
+      "1500_pts": "1500 pts",
+      "30_off": "$30 off",
+      "10_off": "$10 off",
+      "15_off": "$15 off",
+      "footer_1": "Rewards apply to subscriber orders",
+      "footer_2": "Points accumulate as long as your subscription is active"
+    },
+    "work_your_way_to_top_dog": {
+      "title": "Work Your Way to Top Dog",
+      "subtitle": "The more you order, the more you earn, Unlock higher cashback and exclusive perks as you move up the pack.",
+      "tier1": "Rookie Up",
+      "tier2": "Park Regular",
+      "tier3": "Pack Leader",
+      "tier4": "Top Dog",
+      "order": {
+        "title": "Order",
+        "tier1": "First order",
+        "tier2": "Order 2-8",
+        "tier3": "Order 9-18",
+        "tier4": "Order 19 and above"
+      },
+      "cashback": {
+        "title": "Cash Back",
+        "tier1": "1%",
+        "tier2": "2%",
+        "tier3": "3%",
+        "tier4": "4%"
+      },
+      "exclusive_offers": {
+        "title": "Exclusive Offers",
+        "tier1": "Free Welcome Box $30 credit for next order",
+        "tier2": "Free Beef Treat",
+        "tier3": "Free Surprise Gift",
+        "tier4": "Free Surprise Gift"
+      }
+    },
+    "who_is_a_good_human": {
+      "title": "Who’s a good human? You are.",
+      "subtitle_1": "We’re not saying we’re training you… but also yes.",
+      "subtitle_2": "Reviews, shares, and referrals all earn you extra points.",
+      "point1": {
+        "title": "Start a Subscription",
+        "subtext": "$5 off voucher"
+      },
+      "point2": {
+        "title": "Write a Review",
+        "subtext": "Earn $5"
+      },
+      "point3": {
+        "title": "Add a Birthday",
+        "subtext": "Earn $4"
+      },
+      "point4": {
+        "title": "Refer a Friend",
+        "subtext": "25% off your next order"
+      }
+    },
+    "same_dog_different_treatment": {
+      "title": "Same Dog. Very Different Treatment.",
+      "subtitle": "Subscribers get rewarded. Non-subscribers get vibes.",
+      "header": {
+        "features": "Features",
+        "non_subscriber": "Non-Subscriber",
+        "subscriber": "Subscriber"
+      },
+      "features": {
+        "earn_points": "Earn Points",
+        "redeem_rewards": "Redeem $ Rewards",
+        "cashback": "Cashback",
+        "tier_perks": "Tier Perks",
+        "early_access": "Early Access"
+      }
+    },
+    "faq": {
+      "title": "FAQ",
+      "subtitle": "The more you order, the more you earn, Unlock higher cashback and exclusive perks as you move up the pack.",
+      "question1": {
+        "title": "Who can join Buddy Bites' loyalty program?",
+        "answer": "Only Buddy Bites subscribers get access. No subscription, no rewards. That's how the pack works."
+      },
+      "question2": {
+        "title": "How do I earn cashback?",
+        "answer": "Just place orders as a subscriber. Cashback is automatically credited to your account based on your tier."
+      },
+      "question3": {
+        "title": "What can I use my cashback for?",
+        "answer": "Cashback is credited after your order is completed. You can use it on future orders once it appears in your account."
+      },
+      "question4": {
+        "title": "How do tiers work?",
+        "answer": "Your tier is based on how many orders you've placed. More orders = higher tier = more cashback + better perks."
+      },
+      "question5": {
+        "title": "What happens if I cancel my subscription?",
+        "answer": "Your rewards and tier status pause while you're unsubscribed. Rejoin the pack and your progress continues."
+      },
+      "question6": {
+        "title": "Do my rewards or cashback expire?",
+        "answer": "Nope. As long as your subscription stays active, your rewards stick around."
+      },
+      "question7": {
+        "title": "Who do I contact if something looks off?",
+        "answer": "Just reach out to us via WhatsApp or email. A real human (not a robot dog) will help you."
+      }
+    },
+    "refer_a_friend": {
+      "title": "Refer a Friend",
+      "get_25_off": "GET 25% off",
+      "gift_25_off": "GIFT 25% off",
+      "subtitle_1": "Gift your friends 25% off their first order,",
+      "subtitle_2": "and enjoy 25% off your next box as a thank you!",
+      "name": "Your name",
+      "email": "Your email",
+      "submit": "Submit",
+      "form_footer": "Offer only valid for new customers."
+    }
   }
 }
