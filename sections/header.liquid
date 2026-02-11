@@ -614,11 +614,18 @@
               {{ 'navbar.stores' | t }}
             </p>
           </a>
-          <a href="{{ all_products['adult-turkey-dog-sample-starter-pack'].url }}">
+          <a href="{{ pages.quiz.url }}">
             <p class="rounded-full px-5 py-2 text-[20px] font-light uppercase text-white hover:bg-[#98c9eb] en:font-museo">
-              {{ 'navbar.samples' | t }}
+              {{ 'navbar.quiz' | t }}
             </p>
           </a>
+          {% comment %}
+            <a href="{{ all_products['adult-turkey-dog-sample-starter-pack'].url }}">
+              <p class="rounded-full px-5 py-2 text-[20px] font-light uppercase text-white hover:bg-[#98c9eb] en:font-museo">
+                {{ 'navbar.samples' | t }}
+              </p>
+            </a>
+          {% endcomment %}
         </div>
         <div class="flex items-center justify-center gap-5">
           <a href="{% if localization.language.iso_code == 'zh' %}/zh/a/account/shopify-login{% endif %}/a/account/shopify-login">
@@ -745,21 +752,23 @@
             >
             <p class="text-[18px] text-white en:font-museo">{{ 'navbar.shop_dog.toppers.title' | t }}</p>
           </a>
-          <a
-            href="{{ all_products['adult-turkey-dog-sample-starter-pack'].url }}"
-            class="relative flex flex-col items-center justify-between gap-2 rounded-lg bg-[#1E56A0] py-4"
-          >
-            <img
-              src="{{ 'samples_mobile_nav.png' | file_img_url: "master" }}"
-              alt="Merchadise"
-              class="w-[150px]"
+          {% comment %}
+            <a
+              href="{{ all_products['adult-turkey-dog-sample-starter-pack'].url }}"
+              class="relative flex flex-col items-center justify-between gap-2 rounded-lg bg-[#1E56A0] py-4"
             >
-            <p class="text-[18px] text-white en:font-museo">{{ 'navbar.shop_dog.samples.title' | t }}</p>
+              <img
+                src="{{ 'samples_mobile_nav.png' | file_img_url: "master" }}"
+                alt="Merchadise"
+                class="w-[150px]"
+              >
+              <p class="text-[18px] text-white en:font-museo">{{ 'navbar.shop_dog.samples.title' | t }}</p>
 
-            <p class="absolute left-1/2 top-0 w-full -translate-x-1/2 rounded-3xl bg-red-500 px-3 text-center text-[12px] text-white">
-              {{ 'navbar.shop_dog.samples.discount' | t }}
-            </p>
-          </a>
+              <p class="absolute left-1/2 top-0 w-full -translate-x-1/2 rounded-3xl bg-red-500 px-3 text-center text-[12px] text-white">
+                {{ 'navbar.shop_dog.samples.discount' | t }}
+              </p>
+            </a>
+          {% endcomment %}
           {% comment %}
             <a
               href="{{ collections.merchandise.url }}"
@@ -863,6 +872,9 @@
           </a>
           <a href="{{ blogs.lifestyle.url }}" class="px-16 py-6">
             <p class="text-[18px] text-white en:font-museo">{{ 'navbar.learn_more.options.blog' | t }}</p>
+          </a>
+          <a href="{{ pages.quiz.url }}" class="px-16 py-6">
+            <p class="text-[18px] text-white en:font-museo">{{ 'navbar.quiz' | t }}</p>
           </a>
         </div>
       </div>
