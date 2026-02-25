@@ -1369,7 +1369,7 @@
       },
       "exclusive_offers": {
         "title": "Exclusive Offers",
-        "tier1": "Free Welcome Box $30 credit for next order",
+        "tier1": "Free Welcome Box + $5 off voucher for your next order",
         "tier2": "Free Beef Treat",
         "tier3": "Free Surprise Gift",
         "tier4": "Free Surprise Gift"
@@ -1378,7 +1378,7 @@
     "who_is_a_good_human": {
       "title": "Who’s a good human? You are.",
       "subtitle_1": "We’re not saying we’re training you… but also yes.",
-      "subtitle_2": "Reviews, shares, and referrals all earn you extra points.",
+      "subtitle_2": "Birthdays, shares, referrals all earn you extra points.",
       "point1": {
         "title": "Start a Subscription",
         "subtext": "$5 off voucher"
@@ -1393,7 +1393,7 @@
       },
       "point4": {
         "title": "Refer a Friend",
-        "subtext": "25% off your next order"
+        "subtext": "$20 off voucher (min $50 spend) for both you and your friend"
       }
     },
     "same_dog_different_treatment": {
