@@ -609,11 +609,13 @@
       </div>
       <div class="flex items-center justify-end gap-10">
         <div class="flex items-center justify-center gap-5">
-          <a href="{{ pages.store-locator.url }}">
-            <p class="rounded-full px-5 py-2 text-[20px] font-light uppercase text-white hover:bg-[#98c9eb] en:font-museo">
-              {{ 'navbar.stores' | t }}
-            </p>
-          </a>
+          {% comment %}
+            <a href="{{ pages.store-locator.url }}">
+              <p class="rounded-full px-5 py-2 text-[20px] font-light uppercase text-white hover:bg-[#98c9eb] en:font-museo">
+                {{ 'navbar.stores' | t }}
+              </p>
+            </a>
+          {% endcomment %}
           <a href="{{ pages.quiz.url }}">
             <p class="rounded-full px-5 py-2 text-[20px] font-light uppercase text-white hover:bg-[#98c9eb] en:font-museo">
               {{ 'navbar.quiz' | t }}
@@ -626,6 +628,11 @@
               </p>
             </a>
           {% endcomment %}
+          <a href="{{ collections.merchandise.url }}">
+            <p class="rounded-full px-5 py-2 text-[20px] font-light uppercase text-white hover:bg-[#98c9eb] en:font-museo">
+              {{ 'navbar.shop_dog.merchandise.title' | t }}
+            </p>
+          </a>
         </div>
         <div class="flex items-center justify-center gap-5">
           <a href="{% if localization.language.iso_code == 'zh' %}/zh/a/account/shopify-login{% endif %}/a/account/shopify-login">
@@ -769,19 +776,17 @@
               </p>
             </a>
           {% endcomment %}
-          {% comment %}
-            <a
-              href="{{ collections.merchandise.url }}"
-              class="col-span-2 flex flex-col items-center justify-between gap-2 rounded-lg bg-[#1E56A0] py-4"
+          <a
+            href="{{ collections.merchandise.url }}"
+            class="col-span-1 flex flex-col items-center justify-between gap-2 rounded-lg bg-[#1E56A0] py-4"
+          >
+            <img
+              src="{{ 'ab66e239e3379348e1ea06e8571b16e8_1.png' | file_img_url: "large" }}"
+              alt="Merchadise"
+              class="w-[100px]"
             >
-              <img
-                src="{{ 'ab66e239e3379348e1ea06e8571b16e8_1.png' | file_img_url: "large" }}"
-                alt="Merchadise"
-                class="w-[100px]"
-              >
-              <p class="text-[18px] text-white en:font-museo">{{ 'navbar.shop_dog.merchandise.title' | t }}</p>
-            </a>
-          {% endcomment %}
+            <p class="text-[18px] text-white en:font-museo">{{ 'navbar.shop_dog.merchandise.title' | t }}</p>
+          </a>
         </div>
       </div>
       <div class="flex flex-col">
