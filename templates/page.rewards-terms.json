@@ -1,0 +1,10 @@
+{
+  "sections": {
+    "section-reward-terms": {
+      "type": "section-reward-terms"
+    }
+  },
+  "order": [
+    "section-reward-terms"
+  ]
+}
