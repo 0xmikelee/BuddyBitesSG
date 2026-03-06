@@ -40,6 +40,9 @@
     }
   },
   "navbar": {
+    "loyalty_program": {
+      "title": "Rewards"
+    },
     "shop_cat": {
       "title": "Cat",
       "kibbles": {
@@ -1442,7 +1445,8 @@
       "question7": {
         "title": "Who do I contact if something looks off?",
         "answer": "Just reach out to us via WhatsApp or email. A real human (not a robot dog) will help you."
-      }
+      },
+      "terms_and_conditions": "Rewards Terms & Conditions"
     },
     "refer_a_friend": {
       "title": "Refer a Friend",
