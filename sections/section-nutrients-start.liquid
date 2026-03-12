@@ -84,9 +84,12 @@
     <h2 class="text-center text-[30px] uppercase tracking-widest text-[#193C6B] en:font-heyCharlie lg:text-[63px]">
       {{ 'nutrition.kibble_comparison' | t }}
     </h2>
-    <div class="rounded-full bg-[#193C6B] px-6 py-2 text-[18px] uppercase tracking-widest text-white en:font-museo lg:text-[20px]">
+    <a
+      href="{{ all_products['adult-turkey-dry-dog-food'].url }}"
+      class="rounded-full bg-[#193C6B] px-6 py-2 text-[18px] uppercase tracking-widest text-white en:font-museo lg:text-[20px]"
+    >
       {{ 'nutrition.comparison_chart' | t }}
-    </div>
+    </a>
     <div class="flex flex-wrap items-start justify-center gap-5">
       {% for kibble in shop.metaobjects.all_kibbles_comparisons.values %}
         <div class="flex w-[47%] flex-col items-center justify-between gap-5 md:w-[31%] lg:w-[18%]">

@@ -42,12 +42,14 @@
                 <p class="text-center text-[14px] font-light text-[#193C6B] en:font-museo lg:text-[16px]">
                   {{ block.description }}
                 </p>
-                <a
-                  href="{{ block.url }}"
-                  class="rounded-xl bg-[#87c3e6] px-4 py-2 text-center text-[14px] font-bold uppercase text-[#193C6B] en:font-museo lg:text-[16px]"
-                >
-                  {{- 'about_us.donation.learn_more' | t -}}
-                </a>
+                {% comment %}
+                  <a
+                    href="{{ block.url }}"
+                    class="rounded-xl bg-[#87c3e6] px-4 py-2 text-center text-[14px] font-bold uppercase text-[#193C6B] en:font-museo lg:text-[16px]"
+                  >
+                    {{- 'about_us.donation.learn_more' | t -}}
+                  </a>
+                {% endcomment %}
               </div>
             </div>
           {% endfor %}
@@ -56,7 +58,7 @@
       </div>
     </div>
     <a
-      href="{{ collection.all.url }}"
+      href="{{ all_products['adult-turkey-dry-dog-food'].url }}"
       class="rounded-full border-2 border-[#193C6B] bg-[#193C6B] px-6 py-2 text-[14px] font-bold uppercase text-white hover:bg-white hover:text-[#193C6B] en:font-museo lg:text-[20px]"
     >
       {{ 'about_us.donation.shop_give_bark' | t }}
