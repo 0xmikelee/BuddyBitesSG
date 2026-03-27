@@ -1,0 +1,777 @@
+{% comment %}
+  Buddy Bites — Subscription Landing Page
+  Template: templates/page.subscription.liquid
+
+  Font roles (per brand guidelines):
+    Titan One      → Display headings only, always uppercase
+    DM Sans        → All body copy, subheadings, labels, UI text (= Founders Grotesk substitute)
+    Fuzzy Bubbles  → Accent labels only, sparingly, uppercase
+{% endcomment %}
+
+<style>
+  /* Paw pattern background */
+  .paw-bg {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Ctext x='20' y='50' font-size='28' opacity='.06' fill='white'%3E🐾%3C/text%3E%3C/svg%3E");
+  }
+  /* Step connector dashes */
+  .step-dash {
+    background: repeating-linear-gradient(90deg, #173c6a 0 8px, transparent 8px 18px);
+    height: 2px;
+  }
+  /* FAQ accordion — JS-driven open/close */
+  .faq-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+  }
+  .faq-item.open .faq-body {
+    max-height: 400px;
+  }
+  .faq-item.open .faq-icon {
+    transform: rotate(45deg);
+  }
+  .faq-icon {
+    transition: transform 0.3s ease;
+    display: inline-block;
+  }
+  /* Kibble hero slideshow */
+  @keyframes kibble-fade {
+    0%,
+    100% {
+      opacity: 0;
+    }
+    5% {
+      opacity: 1;
+    }
+    20% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 0;
+    }
+  }
+  .kibble-slide {
+    animation: kibble-fade 20s infinite;
+    opacity: 0;
+  }
+</style>
+
+<div class="font-dmSans bg-[#fcf9f1] text-[#173c6a]">
+  <!--
+    ══════════════════════════════════
+         HERO
+    ══════════════════════════════════
+  -->
+  <section class="paw-bg relative flex min-h-[92vh] items-center overflow-hidden bg-[#173c6a]">
+    <div
+      class="pointer-events-none absolute right-[-130px] top-[-130px] h-[520px] w-[520px] rounded-full bg-[#5bb8f5] opacity-10"
+    ></div>
+    <div
+      class="pointer-events-none absolute bottom-[-80px] left-[-80px] h-[360px] w-[360px] rounded-full bg-[#b9e3ff] opacity-[0.08]"
+    ></div>
+
+    <div class="relative flex w-full flex-col">
+      <div class="relative z-10 mx-auto grid w-full max-w-[1280px] grid-cols-1 items-center gap-12 px-8 py-24 lg:grid-cols-2">
+        <!-- Copy -->
+        <div>
+          <!-- Logo mark -->
+          <p class="font-foundersGrotesk mb-[0.6rem] text-[0.9rem] uppercase tracking-[0.12em] text-[#b9e3ff]">
+            Subscription
+          </p>
+          <h1 class="font-titanOne mb-5 text-[clamp(2.8rem,6vw,5rem)] font-normal uppercase leading-[1.05] text-white">
+            Food<br>
+            for Life
+          </h1>
+          <p class="mb-10 max-w-[480px] text-base leading-[1.75] text-[#b9e3ff] opacity-90">
+            Never worry. Never run out. Never think about kibble again — when you subscribe, premium nutrition just
+            lands at your door.
+          </p>
+
+          <!-- Benefit pills -->
+          <div class="mb-10 flex flex-wrap gap-[0.65rem]">
+            {%- assign pills = '🎉 20% Off Every Order,🚚 Free Delivery,🔄 Skip or Cancel Anytime,🎁 Subscriber Surprises'
+              | split: ','
+            -%}
+            {%- for pill in pills -%}
+              <span class="rounded-full bg-[#b9e3ff] px-4 py-[0.4rem] text-[0.82rem] font-semibold text-[#173c6a]">
+                {{- pill -}}
+              </span>
+            {%- endfor -%}
+          </div>
+
+          <!-- CTAs -->
+          <div class="flex flex-wrap gap-4">
+            <a
+              href="{{ all_products['adult-turkey-dry-dog-food'].url }}"
+              class="font-titanOne inline-block rounded-full bg-[#b9e3ff] px-9 py-[0.95rem] text-base font-normal uppercase text-[#173c6a] no-underline transition-colors duration-200 hover:bg-white"
+            >
+              Subscribe Now →
+            </a>
+            <a
+              href="/a/account/login"
+              class="inline-block rounded-full border-2 border-white px-8 py-[0.95rem] text-[0.92rem] font-semibold text-white no-underline transition-all duration-200 hover:bg-white hover:text-[#173c6a]"
+            >
+              Already subscribed? <br class="md:hidden">
+              Sign in
+            </a>
+          </div>
+        </div>
+
+        <!-- Product visual -->
+        <div class="relative hidden items-center justify-center lg:flex">
+          <div class="relative h-[420px] w-[420px]">
+            <div class="absolute inset-0 rounded-full border-2 border-[rgba(185,227,255,0.2)]"></div>
+            <div class="absolute inset-8 rounded-full border border-[rgba(185,227,255,0.1)]"></div>
+            <!-- Rating badge -->
+            <div class="absolute right-4 top-4 rounded-[1rem] bg-[#b9e3ff] px-4 py-3 text-center">
+              <div class="font-titanOne text-[1.5rem] font-normal uppercase text-[#173c6a]">4.9</div>
+              <div class="text-[0.75rem] font-bold text-[#173c6a]">★★★★★</div>
+              <div class="text-[0.8rem] leading-[1.6] text-[#173c6a] opacity-70">10,000+ reviews</div>
+            </div>
+            <!-- Save badge -->
+            <div class="absolute bottom-8 left-4 rounded-[1rem] bg-[#5bb8f5] px-4 py-3 text-center">
+              <div class="text-[0.8rem] font-bold uppercase leading-[1.6] tracking-[0.06em] text-white">Save</div>
+              <div class="font-titanOne text-[2rem] font-normal uppercase text-white">20%</div>
+              <div class="text-[0.8rem] font-semibold uppercase leading-[1.6] tracking-[0.06em] text-white">
+                Every order
+              </div>
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="relative h-[240px] w-[240px]">
+                {%- assign kibble_imgs = 'b8794553c307108105a2b37c27f4f881_2.png,BB_Duck_FOP.png,BB_Puppy_FOP_1.png,BB_Salmon_FOP.png,BB_Lamb_FOP.png'
+                  | split: ','
+                -%}
+                {%- assign kibble_alts = 'Turkey,Duck,Puppy,Salmon,Lamb' | split: ',' -%}
+                {%- for img in kibble_imgs -%}
+                  <img
+                    src="{{ img | file_img_url: '480x' }}"
+                    alt="Buddy Bites {{ kibble_alts[forloop.index0] }} Kibble"
+                    class="kibble-slide absolute inset-0 h-full w-full object-contain drop-shadow-[0_24px_40px_rgba(0,0,0,0.35)]"
+                    style="animation-delay: {{ forloop.index0 | times: 4 | minus: 1 }}s"
+                    loading="{%- if forloop.first -%}eager{%- else -%}lazy{%- endif -%}"
+                  >
+                {%- endfor -%}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Perks ticker — sits above the wave divider -->
+      {% comment %}
+        <div class="bottom-[56px] left-0 right-0 z-10 w-full overflow-hidden bg-[#b9e3ff] py-[0.85rem]">
+          <div class="flex w-max animate-bb-ticker whitespace-nowrap hover:[animation-play-state:paused]">
+            {%- assign ticks = '🐾 20% Off Every Order,🚚 Free Delivery,🔄 Skip or Cancel Anytime,🎁 Subscriber Surprises,🌿 Real Meat First,💊 Prebiotics Included,🇪🇺 Made in Europe,✅ AAFCO Certified'
+              | split: ','
+            -%}
+            {%- for n in (1..4) -%}
+              {%- for t in ticks -%}
+                <span class="px-6 text-[0.78rem] font-semibold uppercase tracking-[0.08em] text-[#173c6a]">{{ t }}</span>
+                <span class="px-1 text-[#173c6a] opacity-30">•</span>
+              {%- endfor -%}
+            {%- endfor -%}
+          </div>
+        </div>
+      {% endcomment %}
+    </div>
+
+    <div class="absolute bottom-0 left-0 right-0 leading-none">
+      <svg viewBox="0 0 1440 56" preserveAspectRatio="none" class="block h-[56px] w-full">
+        <path d="M0 28 Q360 0 720 28 Q1080 56 1440 28 L1440 56 L0 56Z" fill="#FCF9F1"/>
+      </svg>
+    </div>
+  </section>
+
+  <!--
+    ══════════════════════════════════
+         HOW IT WORKS
+    ══════════════════════════════════
+  -->
+  <section class="px-8 py-24">
+    <img
+      src="{{ '0N3A8555_1.jpg' | file_img_url: 'master' }}"
+      alt="min chen with buddy bites"
+      class="mx-auto mb-7 hidden aspect-square w-[150px] rounded-md object-cover md:block md:w-[300px]"
+    >
+    <img
+      src="{{ '0N3A8555_1_wide.jpg' | file_img_url: 'large' }}"
+      alt="min chen with buddy bites"
+      class="mx-auto mb-7 block w-full rounded-md object-cover md:hidden"
+    >
+    <div class="mx-auto max-w-[1200px]">
+      <div class="mb-16 text-center">
+        <p class="font-foundersGrotesk mb-2 text-[0.9rem] uppercase tracking-[0.12em] text-[#5bb8f5]">
+          Simple as a tail wag
+        </p>
+        <h2 class="text-[clamp(1.8rem,4vw,2.6rem)] text-[#173c6a]">Customise. Subscribe. Receive.</h2>
+      </div>
+
+      <div class="relative grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-10">
+        <div
+          class="step-dash absolute left-[12%] right-[12%] top-11 z-0 hidden"
+          id="step-connector"
+        ></div>
+
+        <!-- Step 1 -->
+        <div class="relative z-10 flex flex-col items-center text-center">
+          <div class="mb-[1.1rem] flex h-[88px] w-[88px] shrink-0 items-center justify-center rounded-full bg-[#173c6a] shadow-[0_8px_24px_rgba(23,60,106,0.22)]">
+            <!-- Hand picking: three fingers + palm + thumb -->
+            <svg viewBox="0 0 42 42" class="h-[38px] w-[38px]" fill="none">
+              <!-- Index finger (tallest) -->
+              <rect x="18.5" y="7" width="5" height="15" rx="2.5" stroke="white" stroke-width="2.2"/>
+              <!-- Middle finger -->
+              <rect x="23.5" y="11" width="4.5" height="11" rx="2.25" stroke="white" stroke-width="2.2"/>
+              <!-- Ring finger -->
+              <rect x="14" y="12" width="4.5" height="10" rx="2.25" stroke="white" stroke-width="2.2"/>
+              <!-- Palm -->
+              <path d="M14 22h15v4a7.5 7.5 0 01-15 0v-4z" stroke="white" stroke-width="2.2" stroke-linejoin="round"/>
+              <!-- Thumb -->
+              <path d="M14 25c-2.5 0-5-1.2-5-3.5s2.5-3.5 5-3.5" stroke="white" stroke-width="2.2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <p class="font-foundersGrotesk mb-[0.3rem] text-[0.75rem] uppercase tracking-[0.12em] text-[#5bb8f5]">
+            Step 1
+          </p>
+          <p class="mb-[0.4rem] text-[0.95rem] text-[#173c6a]">Choose Your Recipe</p>
+          <p class="max-w-[180px] text-[0.9rem] leading-[1.65] text-[#173c6a] opacity-65">
+            Pick the perfect protein — turkey, duck, lamb, salmon, or puppy.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="relative z-10 flex flex-col items-center text-center">
+          <div class="mb-[1.1rem] flex h-[88px] w-[88px] shrink-0 items-center justify-center rounded-full bg-[#173c6a] shadow-[0_8px_24px_rgba(23,60,106,0.22)]">
+            <!-- Speech bubble / telling -->
+            <svg viewBox="0 0 42 42" class="h-[38px] w-[38px]" fill="none">
+              <path d="M8 10h26a2 2 0 012 2v14a2 2 0 01-2 2H24l-6 5v-5H8a2 2 0 01-2-2V12a2 2 0 012-2z" stroke="white" stroke-width="2.2" stroke-linejoin="round"/>
+              <circle cx="15" cy="19" r="1.5" fill="white"/>
+              <circle cx="21" cy="19" r="1.5" fill="white"/>
+              <circle cx="27" cy="19" r="1.5" fill="white"/>
+            </svg>
+          </div>
+          <p class="font-foundersGrotesk mb-[0.3rem] text-[0.75rem] uppercase tracking-[0.12em] text-[#5bb8f5]">
+            Step 2
+          </p>
+          <p class="mb-[0.4rem] text-[0.95rem] text-[#173c6a]">Tell Us When</p>
+          <p class="max-w-[180px] text-[0.9rem] leading-[1.65] text-[#173c6a] opacity-65">
+            Select your delivery address and how often you need a top-up.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="relative z-10 flex flex-col items-center text-center">
+          <div class="mb-[1.1rem] flex h-[88px] w-[88px] shrink-0 items-center justify-center rounded-full bg-[#173c6a] shadow-[0_8px_24px_rgba(23,60,106,0.22)]">
+            <!-- Magic wand with 4-pointed star and sparkles -->
+            <svg viewBox="0 0 42 42" class="h-[38px] w-[38px]" fill="none">
+              <!-- Wand stick -->
+              <path d="M8 34L22 20" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+              <!-- 4-pointed star at wand tip (center 26,16) -->
+              <path d="M26 11L28 16L33 18L28 20L26 25L24 20L19 18L24 16Z" fill="white"/>
+              <!-- Cross sparkle top-right -->
+              <path d="M35 8v4M33 10h4" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
+              <!-- Smaller cross sparkle -->
+              <path d="M31 4v3M29.5 5.5h3" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+              <!-- Dot sparkle -->
+              <circle cx="38" cy="15" r="1.5" fill="white"/>
+            </svg>
+          </div>
+          <p class="font-foundersGrotesk mb-[0.3rem] text-[0.75rem] uppercase tracking-[0.12em] text-[#5bb8f5]">
+            Step 3
+          </p>
+          <p class="mb-[0.4rem] text-[0.95rem] text-[#173c6a]">Arrives Like Magic</p>
+          <p class="max-w-[180px] text-[0.9rem] leading-[1.65] text-[#173c6a] opacity-65">
+            Fresh kibble delivered to your door, on schedule, every time.
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="relative z-10 flex flex-col items-center text-center">
+          <div class="mb-[1.1rem] flex h-[88px] w-[88px] shrink-0 items-center justify-center rounded-full bg-[#173c6a] shadow-[0_8px_24px_rgba(23,60,106,0.22)]">
+            <!-- Swap / rotate arrows (easy to change) -->
+            <svg viewBox="0 0 42 42" class="h-[38px] w-[38px]" fill="none">
+              <path d="M10 16h18M10 26h18" stroke="white" stroke-width="2.2" stroke-linecap="round"/>
+              <path d="M24 11l5 5-5 5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M18 21l-5 5 5 5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <p class="font-foundersGrotesk mb-[0.3rem] text-[0.75rem] uppercase tracking-[0.12em] text-[#5bb8f5]">
+            Step 4
+          </p>
+          <p class="mb-[0.4rem] text-[0.95rem] text-[#173c6a]">Change Freely</p>
+          <p class="max-w-[180px] text-[0.9rem] leading-[1.65] text-[#173c6a] opacity-65">
+            Update flavour, frequency, or address any time from your portal.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--
+    ══════════════════════════════════
+         PRODUCT CARDS
+    ══════════════════════════════════
+  -->
+  <section class="relative overflow-hidden bg-[#173c6a] px-8 py-20">
+    <div class="absolute left-0 right-0 top-0 leading-none">
+      <svg viewBox="0 0 1440 56" preserveAspectRatio="none" class="block h-[56px] w-full">
+        <path d="M0 28 Q360 0 720 28 Q1080 56 1440 28 L1440 0 L0 0Z" fill="#FCF9F1"/>
+      </svg>
+    </div>
+
+    <div class="mx-auto max-w-[1280px] pt-12">
+      <div class="mb-12 text-center">
+        <p class="font-foundersGrotesk mb-2 text-[0.9rem] uppercase tracking-[0.12em] text-[#b9e3ff]">Premium Kibble</p>
+        <h2 class="font-titanOne text-[clamp(1.8rem,4vw,2.6rem)] font-normal uppercase text-white">Pick Your Recipe</h2>
+        <p class="mt-2 text-[0.9rem] leading-[1.65] text-[#b9e3ff] opacity-80">
+          Made in Europe · AAFCO Certified · Real Meat First
+        </p>
+      </div>
+
+      <div class="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-5">
+        {%- assign prods = 'Turkey Recipe|/products/adult-turkey-dry-dog-food|https://buddybites.hk/cdn/shop/files/b8794553c307108105a2b37c27f4f881_2.png?v=17396063583667324517|$184|Turkey · Salmon Oil · Prebiotics,Duck Recipe|/products/adult-duck-dry-dog-food|https://buddybites.hk/cdn/shop/files/BB_Duck_FOP.png?v=4581914747938376073|$165|Duck · Sweet Potato · Probiotics,Lamb Recipe|/products/adult-lamb-dry-dog-food|https://buddybites.hk/cdn/shop/files/BB_Lamb_FOP.png?v=15352137555163090282|$165|Lamb · Blueberry · Omega-3,Salmon Recipe|/products/adult-salmon-dry-dog-food|https://buddybites.hk/cdn/shop/files/BB_Salmon_FOP.png?v=8876132529229717015|$184|Salmon · Brown Rice · Prebiotics,Puppy Recipe|/products/puppy-dry-dog-food|https://buddybites.hk/cdn/shop/files/BB_Puppy_FOP_1.png?v=11387563071876946192|$165|Chicken · DHA · Calcium'
+          | split: ','
+        -%}
+        {%- for prod in prods -%}
+          {%- assign p = prod | split: '|' -%}
+          <a
+            href="{{ p[1] }}"
+            class="ease flex flex-col items-center rounded-[1.5rem] bg-[#fcf9f1] p-6 text-center no-underline transition-[transform,box-shadow] duration-[250ms] hover:-translate-y-[5px] hover:shadow-[0_20px_40px_rgba(23,60,106,0.18)]"
+          >
+            <div class="relative mb-4 w-full">
+              <span class="absolute right-0 top-0 rounded-full bg-[#5bb8f5] px-[0.65rem] py-[0.25rem] text-[0.78rem] font-semibold uppercase tracking-[0.08em] text-[#173c6a]"
+                >-20%</span
+              >
+              <img src="{{ p[2] }}" alt="{{ p[0] }}" class="h-[140px] w-full object-contain" loading="lazy">
+            </div>
+            <p class="mb-[0.25rem] text-[0.95rem] text-[#173c6a]">{{ p[0] }}</p>
+            <p class="mb-[0.2rem] text-[1.25rem] font-extrabold text-[#173c6a]">
+              {{ p[3] -}}
+              <span class="text-[0.75rem] font-normal opacity-50">/bag</span>
+            </p>
+            <p class="mb-4 text-[0.8rem] leading-[1.6] text-[#173c6a] opacity-60">{{ p[4] }}</p>
+            <span class="mt-auto rounded-full bg-[#173c6a] px-5 py-2 text-[0.92rem] font-semibold text-white"
+              >Subscribe &amp; Save</span
+            >
+          </a>
+        {%- endfor -%}
+      </div>
+    </div>
+
+    <div class="absolute bottom-0 left-0 right-0 leading-none">
+      <svg viewBox="0 0 1440 56" preserveAspectRatio="none" class="block h-[56px] w-full">
+        <path d="M0 28 Q360 56 720 28 Q1080 0 1440 28 L1440 56 L0 56Z" fill="#FCF9F1"/>
+      </svg>
+    </div>
+  </section>
+
+  <!--
+    ══════════════════════════════════
+         NUTRITION + PERKS
+    ══════════════════════════════════
+  -->
+  <section class="px-8 py-24">
+    <div class="mx-auto grid max-w-[1200px] grid-cols-1 items-start gap-16 lg:grid-cols-2">
+      <!-- Ingredients -->
+      <div>
+        <p class="font-foundersGrotesk mb-2 text-[0.9rem] uppercase tracking-[0.12em] text-[#5bb8f5]">What's inside</p>
+        <h2 class="mb-5 text-[clamp(1.8rem,3.5vw,2.4rem)] leading-[1.15] text-[#173c6a]">
+          Look After Your<br>
+          Dog's Gut
+        </h2>
+        <p class="mb-8 text-base leading-[1.75] text-[#173c6a] opacity-75">
+          Every recipe is crafted with premium proteins, wholefood ingredients, and targeted prebiotics to support
+          digestion, healthy skin, and long-term wellbeing. Formulated with certified pet nutritionists and reviewed by
+          Hong Kong vets.
+        </p>
+        <div class="mb-8 grid grid-cols-1 gap-4 md:grid-cols-2">
+          {%- assign nutes = '🥩|Real Meat First|Named meat protein as the #1 ingredient — no mystery meals.~🦠|Prebiotics|FOS and MOS to nourish gut flora and support healthy digestion.~🐟|Omega 3 and 6|Cold-pressed salmon oil for a shiny coat and supple skin.~✅|No Nasties|Zero artificial colours, flavours, or preservatives.'
+            | split: '~'
+          -%}
+          {%- for nut in nutes -%}
+            {%- assign n = nut | split: '|' -%}
+            <div class="rounded-[1.25rem] bg-[#b9e3ff] p-5">
+              <div class="mb-2 text-[1.8rem]">{{ n[0] }}</div>
+              <p class="mb-[0.3rem] text-[0.9rem] font-bold text-[#173c6a]">{{ n[1] }}</p>
+              <p class="text-[0.8rem] leading-[1.6] text-[#173c6a] opacity-75">{{ n[2] }}</p>
+            </div>
+          {%- endfor -%}
+        </div>
+        <a
+          href="/pages/nutrition"
+          class="border-b-2 border-[#173c6a] pb-[2px] text-[0.95rem] font-semibold text-[#173c6a] no-underline opacity-80"
+          >Explore our nutrition philosophy &rarr;</a
+        >
+      </div>
+
+      <!-- Perks card -->
+      <div class="relative overflow-hidden rounded-[2rem] bg-[#173c6a] p-10">
+        <div class="absolute right-[-3rem] top-[-3rem] h-[160px] w-[160px] rounded-full bg-[#b9e3ff] opacity-10"></div>
+        <p class="font-foundersGrotesk mb-2 text-[0.9rem] uppercase tracking-[0.12em] text-[#b9e3ff]">
+          Subscriber perks
+        </p>
+        <h3 class="mb-8 text-[1.6rem] text-white">What You Get</h3>
+        <ul class="mb-8 flex list-none flex-col gap-[0.85rem] p-0">
+          {%- assign perks = '20% off every order 🎉,Free delivery every time 🚚,Swap flavour any time 🔄,Skip or pause at no charge ⏸,Subscriber-only surprises 🎁,Dedicated WhatsApp support 💬'
+            | split: ','
+          -%}
+          {%- for perk in perks -%}
+            <li class="flex items-center gap-3">
+              <span class="flex h-[22px] w-[22px] shrink-0 items-center justify-center rounded-full bg-[#b9e3ff] text-[0.7rem] font-extrabold text-[#173c6a]"
+                >✓</span
+              >
+              <span class="text-[0.9rem] leading-[1.65] text-white">{{ perk }}</span>
+            </li>
+          {%- endfor -%}
+        </ul>
+        <a
+          href="{{ all_products['adult-turkey-dry-dog-food'].url }}"
+          class="font-titanOne inline-block rounded-full bg-[#b9e3ff] px-8 py-[0.9rem] text-[0.95rem] font-normal uppercase text-[#173c6a] no-underline transition-colors duration-200 hover:bg-white"
+        >
+          Start Subscribing →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!--
+    ══════════════════════════════════
+         ABOUT US
+    ══════════════════════════════════
+  -->
+  <section class="relative overflow-hidden bg-[#173c6a] px-8 py-24">
+    <div class="absolute left-0 right-0 top-0 leading-none">
+      <svg viewBox="0 0 1440 56" preserveAspectRatio="none" class="block h-[56px] w-full">
+        <path d="M0 28 Q360 0 720 28 Q1080 56 1440 28 L1440 0 L0 0Z" fill="#FCF9F1"/>
+      </svg>
+    </div>
+
+    <div class="mx-auto grid max-w-[1200px] grid-cols-1 items-center gap-20 pt-12 lg:grid-cols-2">
+      <div>
+        <p class="font-foundersGrotesk mb-2 text-[0.9rem] uppercase tracking-[0.12em] text-[#b9e3ff]">Our Story</p>
+        <h2 class="mb-6 text-[clamp(1.8rem,3.5vw,2.4rem)] leading-[1.1] text-white">
+          Born in HK,<br>
+          Built for Pups
+        </h2>
+        <p class="mb-4 text-base leading-[1.75] text-[#b9e3ff] opacity-90">
+          Buddy Bites was founded by dog lovers who knew first-hand the struggle of finding truly good quality food for
+          their pups, consistently. Chris started it all so his dogs Nacho and Nala could eat food their guts deserve.
+        </p>
+        <p class="mb-8 text-base leading-[1.75] text-[#b9e3ff] opacity-90">
+          Every recipe is vet-reviewed by Dr. Tiffany Harris (BVBiol, BVSc) and formulated alongside our U.S.-based
+          nutritionist — so every bite delivers the nutrients and protein your dog needs to truly thrive. All kibble is
+          made in Europe and tested beyond AAFCO standards.
+        </p>
+
+        <!-- Stats -->
+        <div class="mb-8 flex flex-wrap gap-8">
+          {%- assign stats = 'Since 2020|Est. in HK,10000+|Happy subscribers,AAFCO+|Certified recipes,11|Shelter partners'
+            | split: ','
+          -%}
+          {%- for stat in stats -%}
+            {%- assign sv = stat | split: '|' -%}
+            <div>
+              <div class="font-titanOne text-[1.5rem] font-normal uppercase leading-none text-[#b9e3ff]">
+                {{ sv[0] }}
+              </div>
+              <div class="mt-1 text-[0.78rem] font-semibold uppercase tracking-[0.08em] text-white opacity-65">
+                {{ sv[1] }}
+              </div>
+            </div>
+          {%- endfor -%}
+        </div>
+        <a
+          href="/pages/about"
+          class="border-b-2 border-[#b9e3ff] pb-[2px] text-[0.95rem] font-semibold text-white no-underline"
+          >Read our full story</a
+        >
+      </div>
+
+      <!-- Mission pillars -->
+      <div class="flex flex-col gap-5">
+        {%- assign missions = 'Best Pup Health|Your pet health is our priority. We work with vets and nutritionists to ensure every bite counts.~Happy Customers|We make feeding your pup as enjoyable as it should be, with superb support every step of the way.~100% Recyclable Packaging|Committed to sustainability — our packaging is fully recyclable and our sourcing is thoughtful.'
+          | split: '~'
+        -%}
+        {%- for m in missions -%}
+          {%- assign mv = m | split: '|' -%}
+          {%- assign mi = forloop.index0 -%}
+          <div class="flex items-start gap-5 rounded-[1.25rem] bg-[#fcf9f1] px-6 py-5">
+            <div class="flex h-[46px] w-[46px] shrink-0 items-center justify-center rounded-full bg-[#b9e3ff]">
+              {%- if mi == 0 -%}
+                <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none">
+                  <path d="M12 21C12 21 3 15 3 9a5 5 0 0110 0 5 5 0 0110 0c0 6-9 12-9 12z" stroke="#173C6A" stroke-width="2" stroke-linejoin="round"/>
+                </svg>
+              {%- elsif mi == 1 -%}
+                <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none">
+                  <path d="M12 2l2.9 6.1L22 9.2l-5 4.9 1.2 6.9L12 18l-6.2 3 1.2-6.9L2 9.2l7.1-1.1L12 2z" stroke="#173C6A" stroke-width="2" stroke-linejoin="round"/>
+                </svg>
+              {%- else -%}
+                <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none">
+                  <path d="M12 2C7 2 4 6 4 10c0 5 8 12 8 12s8-7 8-12c0-4-3-8-8-8z" stroke="#173C6A" stroke-width="2"/><circle cx="12" cy="10" r="2.5" stroke="#173C6A" stroke-width="2"/>
+                </svg>
+              {%- endif -%}
+            </div>
+            <div>
+              <p class="mb-[0.3rem] text-[0.95rem] font-bold text-[#173c6a]">{{ mv[0] }}</p>
+              <p class="text-[0.9rem] leading-[1.65] text-[#173c6a] opacity-[0.72]">{{ mv[1] }}</p>
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+
+    <div class="absolute bottom-0 left-0 right-0 leading-none">
+      <svg viewBox="0 0 1440 56" preserveAspectRatio="none" class="block h-[56px] w-full">
+        <path d="M0 28 Q360 56 720 28 Q1080 0 1440 28 L1440 56 L0 56Z" fill="#FCF9F1"/>
+      </svg>
+    </div>
+  </section>
+
+  <!--
+    ══════════════════════════════════
+         GIVING BACK
+    ══════════════════════════════════
+  -->
+  <section class="px-8 py-24">
+    <div class="mx-auto max-w-[1200px]">
+      <div class="mb-16 text-center">
+        <p class="font-foundersGrotesk mb-2 text-[0.9rem] uppercase tracking-[0.12em] text-[#5bb8f5]">Giving back</p>
+        <h2 class="mb-3 text-[clamp(1.8rem,3.5vw,2.4rem)] text-[#173c6a]">
+          For Every 2kg Delivered,<br>
+          1kg Is Donated
+        </h2>
+        <p class="mx-auto max-w-[600px] text-base leading-[1.75] text-[#173c6a] opacity-[0.72]">
+          Every subscription order you place feeds not just your pup, but also dogs in shelters across Hong Kong and
+          Singapore. Giving back to the dog community is at the centre of everything we do.
+        </p>
+      </div>
+
+      <!-- Donation callout -->
+      <div class="relative mb-12 overflow-hidden rounded-[2rem] bg-[#173c6a] px-8 py-12 text-center">
+        <div
+          class="absolute right-[-4rem] top-[-4rem] h-[260px] w-[260px] rounded-full bg-[#b9e3ff] opacity-[0.07]"
+        ></div>
+        <div class="relative z-10">
+          <div class="mb-6 inline-flex h-[72px] w-[72px] items-center justify-center rounded-full bg-[#b9e3ff]">
+            <svg viewBox="0 0 40 40" fill="none" class="h-9 w-9">
+              <path d="M20 35C20 35 6 26 6 16a8 8 0 0116 0 8 8 0 0116 0c0 10-18 19-18 19z" stroke="#173C6A" stroke-width="2.2" fill="none" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <p class="font-foundersGrotesk mb-2 text-[0.85rem] uppercase tracking-[0.12em] text-[#b9e3ff]">
+            Meals donated and counting
+          </p>
+          <h3 class="mb-4 text-[clamp(1.8rem,4vw,2.6rem)] leading-[1.1] text-white">
+            Every order<br>
+            feeds a shelter dog
+          </h3>
+          <p class="mx-auto mb-8 max-w-[480px] text-base leading-[1.75] text-[#b9e3ff] opacity-85">
+            Our goal is to provide premium kibble for every dog in shelters across Asia. When you subscribe, you are
+            part of that mission.
+          </p>
+          <a
+            href="/pages/about"
+            class="font-titanOne inline-block rounded-full bg-[#b9e3ff] px-8 py-[0.9rem] text-[0.95rem] font-normal uppercase text-[#173c6a] no-underline"
+          >
+            Learn More About Our Mission
+          </a>
+        </div>
+      </div>
+
+      <!-- Shelter carousel -->
+      <p class="mb-6 text-center text-[0.85rem] font-bold uppercase tracking-[0.1em] text-[#173c6a]">
+        Our Shelter Pawtners
+      </p>
+      <div id="shelter-sub-swiper" class="swiper overflow-hidden">
+        <div class="swiper-wrapper !items-stretch pb-10">
+          {%- for shelter in shop.metaobjects.shelter_pawtners.values -%}
+            <div class="swiper-slide !h-auto">
+              <div class="flex h-full flex-col rounded-[1rem] bg-[#b9e3ff] p-4 text-center">
+                {%- if shelter.partner_logo -%}
+                  <div class="mx-auto mb-[0.65rem] flex h-[60px] w-[60px] items-center justify-center overflow-hidden rounded-full bg-white">
+                    <img
+                      src="{{ shelter.partner_logo | image_url: width: 120 }}"
+                      alt="{{ shelter.name }}"
+                      class="h-full w-full object-contain"
+                      loading="lazy"
+                    >
+                  </div>
+                {%- else -%}
+                  <div class="mx-auto mb-[0.65rem] flex h-[40px] w-[40px] items-center justify-center rounded-full bg-[#173c6a]">
+                    <svg viewBox="0 0 24 24" fill="none" class="h-5 w-5">
+                      <path d="M12 21C12 21 3 15 3 9a5 5 0 0110 0 5 5 0 0110 0c0 6-9 12-9 12z" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                {%- endif -%}
+                <p class="mb-[0.15rem] text-[0.82rem] font-bold text-[#173c6a]">{{ shelter.name }}</p>
+                <p class="mb-3 text-[0.8rem] leading-[1.6] text-[#173c6a] opacity-65">{{ shelter.description }}</p>
+                {%- if shelter.partner_s_url -%}
+                  <a
+                    href="{{ shelter.partner_s_url }}"
+                    target="_blank"
+                    rel="noopener"
+                    class="mt-auto inline-block rounded-full bg-[#173c6a] px-4 py-[0.4rem] text-[0.75rem] font-semibold text-white no-underline transition-colors duration-200 hover:bg-[#5bb8f5]"
+                  >
+                    Visit Website →
+                  </a>
+                {%- endif -%}
+              </div>
+            </div>
+          {%- endfor -%}
+        </div>
+        <div class="shelter-sub-pagination swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+
+  <!--
+    ══════════════════════════════════
+         SOCIAL PROOF
+    ══════════════════════════════════
+  -->
+  <section class="bg-[#b9e3ff] px-8 py-20">
+    <div class="mx-auto max-w-[1200px] text-center">
+      <p class="font-foundersGrotesk mb-[0.4rem] text-[0.9rem] uppercase tracking-[0.12em] text-[#173c6a]">
+        10,000+ happy pups
+      </p>
+      <h2 class="mb-2 text-[clamp(1.8rem,3.5vw,2.4rem)] text-[#173c6a]">What Others Are Barking About</h2>
+      <div class="mb-12 text-[2rem] text-[#173c6a]">★★★★★</div>
+      <div id="klaviyo-featured-reviews-carousel"></div>
+    </div>
+  </section>
+
+  <!--
+    ══════════════════════════════════
+         FAQ
+    ══════════════════════════════════
+  -->
+  <section class="px-8 py-24">
+    <div class="mx-auto max-w-[800px]">
+      <div class="mb-14 text-center">
+        <p class="font-foundersGrotesk mb-2 text-[0.9rem] uppercase tracking-[0.12em] text-[#5bb8f5]">Got questions?</p>
+        <h2 class="text-[clamp(2rem,4vw,2.6rem)] text-[#173c6a]">FAQs</h2>
+      </div>
+
+      <div class="flex flex-col gap-3">
+        {%- assign faq_qs = 'What are the benefits of subscribing?~Is the subscription flexible?~How do I edit my subscription?~What kibble sizes do you offer?~Where is Buddy Bites made?~Is it good for sensitive tummies?'
+          | split: '~'
+        -%}
+        {%- assign faq_a1 = 'You get 20% off every order, free delivery, and subscriber-only surprises in your first box (guaranteed!). Food for your pup just arrives at your door, every time.' -%}
+        {%- assign faq_a2 = 'Absolutely. You can pause, skip, change flavour, delivery date, or cancel any time from your customer portal. No fees, no hassle. Plus dedicated WhatsApp support whenever you need it.' -%}
+        {%- assign faq_a3 = 'Log in to your customer portal to manage everything: flavour swaps, frequency, address updates. Check out our YouTube how-to video for a quick walkthrough.' -%}
+        {%- assign faq_a4 = 'Our kibble ranges from 10 to 14mm. Smaller sizes suit small breeds and older dogs; larger sizes help bigger breeds chew properly for better digestion.' -%}
+        {%- assign faq_a5 = 'All Buddy Bites kibble is made in Europe and formulated to AAFCO standards using premium traceable ingredients.' -%}
+        {%- assign faq_a6 = 'Yes. Our adult recipes use novel proteins (turkey, duck, lamb, salmon) with prebiotics to support digestion and produce healthy firm stools. Ideal for allergy-prone dogs.' -%}
+        {%- assign faq_as = faq_a1
+          | append: '~'
+          | append: faq_a2
+          | append: '~'
+          | append: faq_a3
+          | append: '~'
+          | append: faq_a4
+          | append: '~'
+          | append: faq_a5
+          | append: '~'
+          | append: faq_a6
+          | split: '~'
+        -%}
+
+        {%- for fq in faq_qs -%}
+          {%- assign fi = forloop.index0 -%}
+          <div class="faq-item overflow-hidden rounded-[1.25rem] border-[1.5px] border-[rgba(23,60,106,0.15)] bg-white">
+            <button
+              class="faq-trigger flex w-full cursor-pointer items-center justify-between gap-4 border-none bg-transparent px-6 py-5 text-left font-[inherit] text-base font-bold text-[#173c6a]"
+              aria-expanded="false"
+            >
+              <span>{{ fq }}</span>
+              <span class="faq-icon shrink-0 text-[1.5rem] font-light leading-none text-[#5bb8f5]">+</span>
+            </button>
+            <div class="faq-body px-6">
+              <p class="pb-5 text-base leading-[1.75] text-[#173c6a] opacity-[0.78]">{{ faq_as[fi] }}</p>
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+
+  <!--
+    ══════════════════════════════════
+         FINAL CTA
+    ══════════════════════════════════
+  -->
+  <section class="relative overflow-hidden bg-[#fcf9f1] px-8 py-24 text-center">
+    <div
+      class="pointer-events-none absolute inset-0 bg-[linear-gradient(135deg,rgba(91,184,245,0.05)_0%,transparent_60%)]"
+    ></div>
+    <div class="relative mx-auto max-w-[680px]">
+      <svg viewBox="0 0 64 64" class="mx-auto mb-6 h-[56px] w-[56px]" fill="none">
+        <ellipse cx="32" cy="26" rx="19" ry="21" stroke="#173c6a" stroke-width="2.5"/>
+        <ellipse cx="17" cy="10" rx="7" ry="10" stroke="#173c6a" stroke-width="2.5" transform="rotate(-22 17 10)"/>
+        <circle cx="27" cy="28" r="1.8" fill="#173c6a"/>
+        <path d="M25 36 Q32 42 39 36" stroke="#173c6a" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+      </svg>
+      <p class="font-foundersGrotesk mb-2 text-[0.9rem] uppercase tracking-[0.12em] text-[#5bb8f5]">Ready to start?</p>
+      <h2 class="mb-5 text-[clamp(2.2rem,5vw,3.5rem)] leading-[1.1] text-[#173c6a]">
+        Join 10,000+<br>
+        Happy Pups
+      </h2>
+      <p class="mx-auto mb-10 max-w-[500px] text-base leading-[1.75] text-[#173c6a] opacity-75">
+        Subscribe today and save 20% on every order — plus free delivery, full flexibility, and a little surprise in
+        your first box.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a
+          href="{{ all_products['adult-turkey-dry-dog-food'].url }}"
+          class="font-titanOne inline-block rounded-full bg-[#173c6a] px-10 py-[1.1rem] text-[1.05rem] font-normal uppercase text-white no-underline transition-colors duration-200 hover:bg-[#0d3e66]"
+        >
+          Subscribe Now →
+        </a>
+        <a
+          href="/pages/quiz"
+          class="inline-block rounded-full border-2 border-[#173c6a] px-9 py-[1.1rem] text-[0.92rem] font-semibold text-[#173c6a] no-underline transition-all duration-200 hover:bg-[#173c6a] hover:text-white"
+        >
+          Not sure? Take the Quiz
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script type="module">
+  new Swiper('#shelter-sub-swiper', {
+    loop: true,
+    autoplay: { delay: 2500, disableOnInteraction: false },
+    slidesPerView: 1,
+    spaceBetween: 16,
+    pagination: { el: '.shelter-sub-pagination', clickable: true },
+    breakpoints: {
+      1024: { slidesPerView: 4, spaceBetween: 16 },
+    },
+  });
+</script>
+
+<script>
+  if (window.innerWidth >= 1024) {
+    var c = document.getElementById('step-connector');
+    if (c) c.style.display = 'block';
+  }
+  document.querySelectorAll('.faq-trigger').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var item = btn.closest('.faq-item');
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function (el) {
+        el.classList.remove('open');
+        el.querySelector('.faq-trigger').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Subscription",
+  "settings": []
+}
+{% endschema %}

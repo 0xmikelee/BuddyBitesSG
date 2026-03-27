@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "section-subscribe-new": {
+      "type": "section-subscribe-new",
+      "settings": {}
+    }
+  },
+  "order": [
+    "section-subscribe-new"
+  ]
+}
