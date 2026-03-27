@@ -327,7 +327,7 @@
       </div>
 
       <div class="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-5">
-        {%- assign prods = 'Turkey Recipe|/products/adult-turkey-dry-dog-food|https://buddybites.hk/cdn/shop/files/b8794553c307108105a2b37c27f4f881_2.png?v=17396063583667324517|$32.80|Turkey · Salmon Oil · Prebiotics,Duck Recipe|/products/adult-duck-dry-dog-food|https://buddybites.hk/cdn/shop/files/BB_Duck_FOP.png?v=4581914747938376073|$29.60|Duck · Sweet Potato · Probiotics,Lamb Recipe|/products/adult-lamb-dry-dog-food|https://buddybites.hk/cdn/shop/files/BB_Lamb_FOP.png?v=15352137555163090282|$29.60|Lamb · Blueberry · Omega-3,Salmon Recipe|/products/adult-salmon-dry-dog-food|https://buddybites.hk/cdn/shop/files/BB_Salmon_FOP.png?v=8876132529229717015|$32.80|Salmon · Brown Rice · Prebiotics,Puppy Recipe|/products/puppy-dry-dog-food|https://buddybites.hk/cdn/shop/files/BB_Puppy_FOP_1.png?v=11387563071876946192|$29.60|Chicken · DHA · Calcium'
+        {%- assign prods = 'Turkey Recipe|/products/adult-turkey-dry-dog-food|https://buddybites.hk/cdn/shop/files/b8794553c307108105a2b37c27f4f881_2.png?v=17396063583667324517|$32.80|Turkey · Taurine · Prebiotics,Duck Recipe|/products/adult-duck-dry-dog-food|https://buddybites.hk/cdn/shop/files/BB_Duck_FOP.png?v=4581914747938376073|$29.60|Duck · Psyllium Husk · Probiotics,Lamb Recipe|/products/adult-lamb-dry-dog-food|https://buddybites.hk/cdn/shop/files/BB_Lamb_FOP.png?v=15352137555163090282|$29.60|Lamb · Low Fat · Dual Lean Protein,Salmon Recipe|/products/adult-salmon-dry-dog-food|https://buddybites.hk/cdn/shop/files/BB_Salmon_FOP.png?v=8876132529229717015|$32.80|Salmon · Omega-3 · Fresh Salmon Oil,Puppy Recipe|/products/puppy-dry-dog-food|https://buddybites.hk/cdn/shop/files/BB_Puppy_FOP_1.png?v=11387563071876946192|$29.60|Chicken · Support Muscle & Bones'
           | split: ','
         -%}
         {%- for prod in prods -%}
@@ -345,7 +345,6 @@
             <p class="mb-[0.25rem] text-[0.95rem] text-[#173c6a]">{{ p[0] }}</p>
             <p class="mb-[0.2rem] text-[1.25rem] font-extrabold text-[#173c6a]">
               {{ p[3] -}}
-              <span class="text-[0.75rem] font-normal opacity-50">/bag</span>
             </p>
             <p class="mb-4 text-[0.8rem] leading-[1.6] text-[#173c6a] opacity-60">{{ p[4] }}</p>
             <span class="mt-auto rounded-full bg-[#173c6a] px-5 py-2 text-[0.92rem] font-semibold text-white"
