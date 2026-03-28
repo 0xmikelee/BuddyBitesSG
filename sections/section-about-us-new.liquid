@@ -1,10 +1,10 @@
-<main class="font-foundersGrotesk bg-[#FCF9F1]">
+<main class="bg-[#FCF9F1] font-foundersGrotesk">
   <!-- Hero -->
   <section>
     <div class="relative w-full">
       <img src="{{ 'about-us-hero.png' | file_url }}" alt="About Us Hero" class="w-full object-cover">
-      <div class="absolute left-1/2 top-[5%] -translate-x-1/2 lg:left-[15%] lg:top-1/2 lg:-translate-y-1/2  lg:translate-x-0">
-        <h1 class="text-[20px] text-white lg:text-[40px]">
+      <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+        <h1 class="text-balance text-center text-[18px] text-white md:text-[40px]">
           Buddy Bites redefines pet nutrition in through uncompromising quality, balanced science, and nourishment dogs
           truly deserve.
         </h1>
@@ -14,13 +14,353 @@
   <!-- Our Story -->
   <section>
     <div class="container">
-      <h2>About Us</h2>
+      <div class="grid grid-cols-1 gap-10 px-5 lg:grid-cols-2 lg:py-10">
+        <img src="{{ 'about-us-our-story.png' | file_url }}" alt="About Us Our Story" class="w-full object-cover">
+        <div class="flex flex-col justify-between gap-4 rounded-xl bg-white p-5">
+          <h2 class="font-titanOne text-[20px] font-bold text-[#173c6a] md:text-[30px]">Our Story</h2>
+          <div class="flex flex-col items-start gap-10">
+            <p class="text-[14px] leading-[1.5] text-[#173c6a] md:text-[16px]">
+              We know what you are thinking, 'why did these people start a dog food brand', and as importantly, 'why am
+              I reading about it.' The first part is simple. We knew first hand the challenge of getting truly good
+              quality dog food, consistently.
+              <br>
+              <br>
+              We also knew the challenges that dog shelters go through. So, we created Buddy Bites to fix both these
+              issues...To ensure Nacho and Nala (Chris' dogs) could eat food their guts deserve, whilst feeding their
+              friends in shelters with every order. As to why you are reading it, we are not sure, but we certainly hope
+              it's because you have a dog, and even more so that you're going to join the many pups moving to Buddy
+              Bites!
+            </p>
+            <a
+              href="{{ all_products['adult-turkey-dry-dog-food'].url }}"
+              class="rounded-full bg-[#173c6a] px-4 py-2 text-[14px] font-bold text-white md:text-[16px]"
+              >Join the Pack</a
+            >
+          </div>
+        </div>
+      </div>
     </div>
   </section>
+  <section>
+    <div class="container">
+      <h2 class="text-center font-titanOne text-[20px] font-bold uppercase text-[#173c6a] md:text-[30px]">
+        Our mission
+      </h2>
+      <div class="grid grid-cols-1 gap-10 px-5 lg:grid-cols-3 lg:py-10">
+        <div class="flex flex-col items-start gap-5">
+          <img
+            src="{{ 'about-us-giving-back.png' | file_url }}"
+            alt="About Us Giving Back"
+            class="w-full rounded-xl object-cover"
+          >
+          <h3 class="text-[20px] font-bold text-[#173c6a] md:text-[30px]">Giving Back</h3>
+          <p class="text-[14px] leading-[1.5] text-[#173c6a] md:text-[16px]">
+            Giving back to our dog community is at the center of our business. Our goal is to provide premium kibble for
+            all dogs in shelters across Asia!
+          </p>
+        </div>
+        <div class="flex flex-col items-start gap-5">
+          <img
+            src="{{ 'about-us-best-pet-health.png' | file_url }}"
+            alt="About Us Best Pet Health"
+            class="w-full rounded-xl object-cover"
+          >
+          <h3 class="text-[20px] font-bold text-[#173c6a] md:text-[30px]">Best Pet Health</h3>
+          <p class="text-[14px] leading-[1.5] text-[#173c6a] md:text-[16px]">
+            Your Pet’s health is our priority. We ensure quality of our product with constant testing and partner
+            closely with our vets to bring the best food for our dogs and cats.
+          </p>
+        </div>
+        <div class="flex flex-col items-start gap-5">
+          <img
+            src="{{ 'about-us-happy-customers.png' | file_url }}"
+            alt="About Us Happy Customers"
+            class="w-full rounded-xl object-cover"
+          >
+          <h3 class="text-[20px] font-bold text-[#173c6a] md:text-[30px]">Happy Customers</h3>
+          <p class="text-[14px] leading-[1.5] text-[#173c6a] md:text-[16px]">
+            We aim to make feeding your pup as enjoyable as it should be! Given you are not eating the food yourself,
+            it's only fair the customer service is superb.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container flex flex-col items-center gap-5 rounded-xl bg-[#173c6a] py-7 md:py-10">
+      <h2 class="text-center font-titanOne text-[clamp(1.5rem,3vw,2rem)] text-white">
+        For every 2KG delivered, 1KG is donated
+      </h2>
+      <div class="els-cup-box" data-id="7086"></div>
+      <p class="text-white md:text-[clamp(1rem,2vw,1.5rem)]">Meals Donated</p>
+    </div>
+  </section>
+  <section class="py-7 md:py-10">
+    <div class="container flex flex-col items-center gap-5 rounded-xl bg-[#B9E3FF] px-4 py-7 md:px-5 md:py-10">
+      <h2 class="text-center font-titanOne text-[clamp(2rem,3.5vw,3rem)] uppercase text-[#173c6a]">
+        Our Shelter Pawtners
+      </h2>
+      <div id="shelter-sub-swiper" class="swiper overflow-hidden">
+        <div class="swiper-wrapper pb-10">
+          {%- for shelter in shop.metaobjects.shelter_pawtners.values -%}
+            <div class="swiper-slide">
+              <div class="flex h-full flex-col rounded-lg bg-white p-4 text-center">
+                {%- if shelter.partner_logo -%}
+                  <div class="mx-auto mb-[0.65rem] flex h-[60px] w-[60px] items-center justify-center overflow-hidden rounded-full bg-white">
+                    <img
+                      src="{{ shelter.partner_logo | image_url: width: 120 }}"
+                      alt="{{ shelter.name }}"
+                      class="h-full w-full object-contain"
+                      loading="lazy"
+                    >
+                  </div>
+                {%- else -%}
+                  <div class="mx-auto mb-[0.65rem] flex h-[40px] w-[40px] items-center justify-center rounded-full bg-[#173c6a]">
+                    <svg viewBox="0 0 24 24" fill="none" class="h-5 w-5">
+                      <path d="M12 21C12 21 3 15 3 9a5 5 0 0110 0 5 5 0 0110 0c0 6-9 12-9 12z" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                {%- endif -%}
+                <p class="mb-[0.15rem] text-[0.82rem] font-bold text-[#173c6a]">{{ shelter.name }}</p>
+                <p class="mb-3 text-[0.8rem] leading-[1.6] text-[#173c6a] opacity-65">{{ shelter.description }}</p>
+                {%- if shelter.partner_s_url -%}
+                  <a
+                    href="{{ shelter.partner_s_url }}"
+                    target="_blank"
+                    rel="noopener"
+                    class="mt-auto inline-block rounded-full bg-[#173c6a] px-4 py-[0.4rem] text-[0.75rem] font-semibold text-white no-underline transition-colors duration-200 hover:bg-[#5bb8f5]"
+                  >
+                    Visit Website →
+                  </a>
+                {%- endif -%}
+              </div>
+            </div>
+          {%- endfor -%}
+        </div>
+        <div class="shelter-sub-pagination swiper-pagination"></div>
+      </div>
+      <a
+        href="{{ all_products['adult-turkey-dry-dog-food'].url }}"
+        class="rounded-full bg-[#173c6a] px-4 py-2 text-[14px] font-bold uppercase text-white md:text-[16px]"
+        >Shop & Give Back</a
+      >
+    </div>
+  </section>
+  <section class="py-7 md:py-10">
+    <div class="container grid grid-cols-1 gap-5 md:grid-cols-2">
+      <div class="flex flex-col items-start justify-between gap-5 rounded-xl bg-white p-5">
+        <h2 class="font-titanOne text-[clamp(1.5rem,3vw,2.5rem)] uppercase text-[#173c6a]">ONLY THE GOOD STUFF</h2>
+        <div class="flex flex-col items-start gap-5">
+          <h3 class="text-[clamp(1.2rem,2.1vw,1.7rem)] font-semibold text-[#173c6a]">Making Sure Our Food is No.1</h3>
+          <p class="text-[14px] leading-[1.5] text-[#173c6a] md:text-[16px]">
+            We partner closely with certified pet nutritionists, as well as Hong Kong based vets to formulate nutritious
+            recipes packed with only the ingredients your pup needs. All our recipes are made in Europe with premium
+            ingredients, and tested beyond AAFCO standards. It's amazing how much of our job involves talking about poo.
+            We include gut-friendly prebiotics in all our recipes to make sure your dogs gut gets looked after.
+            Consistent poos starts with consistent dog food.
+          </p>
+          <a
+            href="{{ all_products['adult-turkey-dry-dog-food'].url }}"
+            class="rounded-full bg-[#173c6a] px-4 py-2 text-[14px] font-bold uppercase text-white md:text-[16px]"
+            >Learn More</a
+          >
+        </div>
+      </div>
+      <img
+        src="{{ 'about-us-only-the-good-stuff.png' | file_url }}"
+        alt="About Us Only The Good Stuff"
+        class="rounded-xl object-cover"
+      >
+    </div>
+  </section>
+  <section class="py-7 md:py-10">
+    <div class="container grid grid-cols-1 gap-5 md:grid-cols-2">
+      <img src="{{ 'about-us-sustainability.png' | file_url }}" alt="About Us Sustainability" class="rounded-xl object-cover" />
+      <div class="flex flex-col items-start justify-between gap-5 rounded-xl bg-white p-5">
+        <div class="flex flex-col items-start gap-1">
+          <h2 class="font-titanOne text-[clamp(1.5rem,3vw,2.5rem)] uppercase text-[#173c6a]">Sustainability</h2>
+          <p class="text-[14px] leading-[1.5] text-[#173c6a] md:text-[16px]">
+            Buddy Bites is committed to sustainability to ensure a bright future for our people, pets, and planet.
+          </p>
+        </div>
+        <div class="font-semibold text-[#173c6a] text-[clamp(1rem,1.5vw,1.2rem)] w-full">
+          <p class="border-b border-[#173c6a] w-full mb-2">Our Packaging is 100% Recyclable</p>
+          <p class="border-b border-[#173c6a] w-full mb-2">Thoughtful Sourcing of Ingredients</p>
+          <p class="border-b border-[#173c6a] w-full mb-2">Energy & Waste Efficient</p>
+          <p class="border-b border-[#173c6a] w-full mb-2">We Practice Sustainable Work Practices</p>
+        </div>
+    </div>
+  </section>
+  <section class="relative flex flex-col items-center justify-center gap-5 py-10">
+    <h2 class="text-center font-titanOne text-[clamp(2rem,3.5vw,3rem)] uppercase text-[#173c6a]">
+      Our Team
+    </h2>
+    <div class="container grid grid-cols-[1fr_85%_1fr]">
+      <div class="button-prev"></div>
+      <div class="swiper-team">
+        <div class="swiper-wrapper">
+          {% for block in shop.metaobjects.team_members.values %}
+            <div class="swiper-slide">
+              <div class="flex flex-col items-center justify-center gap-4">
+                <img
+                  src="{{ block.image | image_url: width: 500 }}"
+                  alt="{{ block.name }}"
+                  class="h-[250px] w-[200px] rounded-3xl object-cover"
+                >
+                <p class="text-balance text-center text-[18px] font-light uppercase text-[#193C6B] en:font-museo lg:text-[20px]">
+                  {{ block.name }}
+                </p>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="button-next"></div>
+    </div>
+    <a
+      href="https://form.typeform.com/to/tSSrkKwL"
+      class="rounded-full border-2 border-[#193C6B] bg-[#193C6B] px-10 py-2 text-center text-[18px] font-light uppercase text-white hover:bg-white hover:text-[#193C6B] en:font-museo lg:text-[20px]"
+    >
+      {{ 'about_us.section_our_team.join_the_team' | t }}
+    </a>
+  </section>
 </main>
+
+<style>
+  .els-cup-box {
+    height: auto !important;
+    margin: 0 !important;
+  }
+  .els-cup-w {
+    width: 100% !important;
+  }
+
+  .els-cup-w-val {
+    font-size: 90px !important;
+    line-height: 90px !important ;
+    justify-content: center !important;
+    color: #fff !important;
+  }
+
+  .els-cup-w-icon,
+  .els-cup-w-descr {
+    display: none !important;
+  }
+
+  @media (min-width: 1024px) {
+    .els-cup-box {
+      height: auto !important;
+      width: 20vw !important;
+    }
+
+    .els-cup-wrap {
+      width: 10vw !important;
+    }
+
+    .els-cup-w {
+      width: 30vw !important;
+    }
+
+    .els-cup-w-val {
+      font-size: 150px !important;
+      line-height: 150px !important;
+      width: 30vw !important;
+    }
+  }
+</style>
+
+<script type="module">
+  new Swiper('#shelter-sub-swiper', {
+    loop: true,
+    autoplay: { delay: 2500, disableOnInteraction: false },
+    slidesPerView: 1,
+    spaceBetween: 16,
+    pagination: { el: '.shelter-sub-pagination', clickable: true },
+    breakpoints: {
+      1024: { slidesPerView: 4, spaceBetween: 16 },
+    },
+  });
+</script>
+
+<script>
+  const swiper = new Swiper('.swiper-team', {
+    // Optional parameters
+    direction: 'horizontal',
+    spaceBetween: 10,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    loop: true,
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 4,
+      },
+      1024: {
+        slidesPerView: 6,
+      },
+    },
+    navigation: {
+      nextEl: '.button-next',
+      prevEl: '.button-prev',
+    },
+  });
+</script>
+
+{% style %}
+  .swiper-team {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .button-next,
+  .button-prev {
+    position: relative;
+  }
+
+  .button-next,
+  .button-prev {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .button-next:after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 35px;
+    transform: rotate(180deg);
+    background-image: url('{{ 'swiper-arrow.svg' | asset_url }}');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .button-prev:after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 35px;
+    background-image: url('{{ 'swiper-arrow.svg' | asset_url }}');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+{% endstyle %}
+
 {% schema %}
 {
   "name": "Shelter Pawtners",
   "settings": []
 }
 {% endschema %}
+
+
+
