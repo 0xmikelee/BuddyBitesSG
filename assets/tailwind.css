@@ -7205,6 +7205,11 @@ video {
     padding-right: 0px;
   }
 
+  .md\:py-4{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
   .md\:pt-0{
     padding-top: 0px;
   }
