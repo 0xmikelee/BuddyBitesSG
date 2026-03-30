@@ -7195,6 +7195,16 @@ video {
     padding-bottom: 10px;
   }
 
+  .md\:py-6{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .md\:px-0{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
   .md\:pt-0{
     padding-top: 0px;
   }
@@ -7364,6 +7374,10 @@ video {
 
   .md\:text-\[clamp\(1rem\2c 2vw\2c 1\.5rem\)\]{
     font-size: clamp(1rem,2vw,1.5rem);
+  }
+
+  .md\:text-\[clamp\(1\.5rem\2c 3vw\2c 2rem\)\]{
+    font-size: clamp(1.5rem,3vw,2rem);
   }
 
   .md\:leading-\[25\.7px\]{
