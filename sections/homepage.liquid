@@ -170,6 +170,142 @@
       <div id="tab-fav-cat"></div>
     </div>
   </section>
+  <section>
+    <div class="container py-5 font-foundersGrotesk text-[#173C6A] md:py-10">
+      <div class="grid grid-cols-1 gap-4 md:grid-cols-[1.2fr_1fr]">
+        <div class="order-2 flex flex-col items-center justify-between gap-4 rounded-[20px] bg-white p-6 md:order-1">
+          <div class="flex flex-col items-start justify-center gap-4">
+            <h2 class="text-balance text-left font-titanOne text-[clamp(30px,2.5vw,35px)] uppercase leading-[clamp(30px,2.5vw,35px)]">
+              ONLY THE GOOD STUFF
+            </h2>
+            <p class="text-balance text-left text-[clamp(16px,1.9vw,20px)] font-normal leading-[clamp(24px,1.9vw,28px)]">
+              Buddy Bites started with the goal of feeding all sheltered dogs in Asia. We are the first subscription
+              based food brand that gives back - we donate 1kg for every 2kg bought. Our dog food formula is backed by
+              vets, plus with a subscription you never need to worry about buying dog food again.
+            </p>
+            <a href="{{ pages['about-us'].url }}" class="btn-cta"> About Us </a>
+          </div>
+          <div class="flex w-full flex-col gap-2">
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item border-b border-[#193C6A]">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button text-[clamp(20px,2vw,24px) flex w-full cursor-pointer items-center justify-between px-2 py-3 text-left font-semibold transition-all duration-300 md:text-[clamp(25px,2.2vw,30px)]"
+                    type="button"
+                    data-accordion-target="#collapseOne"
+                    aria-expanded="false"
+                  >
+                    Vet-backed formula
+                    <svg
+                      class="accordion-icon h-6 w-6 transition-transform duration-200"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle cx="12" cy="12" r="12" fill="#173C6A"/>
+                      <rect x="11" y="6" width="2" height="12" rx="1" fill="#fff"/>
+                      <rect x="6" y="11" width="12" height="2" rx="1" fill="#fff"/>
+                    </svg>
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse hidden">
+                  <div class="accordion-body px-2 py-2 text-[15px]">
+                    Our expertly crafted formulas are backed by veterinarians, ensuring that your beloved furry friend
+                    is receiving only the best.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item border-b border-[#193C6A]">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button text-[clamp(20px,2vw,24px) flex w-full cursor-pointer items-center justify-between px-2 py-3 text-left font-semibold transition-all duration-300 md:text-[clamp(25px,2.2vw,30px)]"
+                    type="button"
+                    data-accordion-target="#collapseTwo"
+                    aria-expanded="false"
+                  >
+                    Gut-friendly Prebiotics
+                    <svg
+                      class="accordion-icon h-6 w-6 transition-transform duration-200"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle cx="12" cy="12" r="12" fill="#173C6A"/>
+                      <rect x="11" y="6" width="2" height="12" rx="1" fill="#fff"/>
+                      <rect x="6" y="11" width="12" height="2" rx="1" fill="#fff"/>
+                    </svg>
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse hidden">
+                  <div class="accordion-body px-2 py-2 text-[15px]">
+                    We take gut health seriously, which is why our dog food is packed with prebiotics that will keep
+                    your pup's digestion running smoothly.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item border-b border-[#193C6A]">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button text-[clamp(20px,2vw,24px) flex w-full cursor-pointer items-center justify-between px-2 py-3 text-left font-semibold transition-all duration-300 md:text-[clamp(25px,2.2vw,30px)]"
+                    type="button"
+                    data-accordion-target="#collapseThree"
+                    aria-expanded="false"
+                  >
+                    Made in Europe
+                    <svg
+                      class="accordion-icon h-6 w-6 transition-transform duration-200"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle cx="12" cy="12" r="12" fill="#173C6A"/>
+                      <rect x="11" y="6" width="2" height="12" rx="1" fill="#fff"/>
+                      <rect x="6" y="11" width="12" height="2" rx="1" fill="#fff"/>
+                    </svg>
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse hidden">
+                  <div class="accordion-body px-2 py-2 text-[15px]">
+                    All our dog food is made in Europe, using the highest quality ingredients. We're proud to support
+                    local businesses and ensure that our products are made with care.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item border-b border-[#193C6A]">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button text-[clamp(20px,2vw,24px) flex w-full cursor-pointer items-center justify-between px-2 py-3 text-left font-semibold transition-all duration-300 md:text-[clamp(25px,2.2vw,30px)]"
+                    type="button"
+                    data-accordion-target="#collapseFour"
+                    aria-expanded="false"
+                  >
+                    Premium, Traceable Ingredients
+                    <svg
+                      class="accordion-icon h-6 w-6 transition-transform duration-200"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle cx="12" cy="12" r="12" fill="#173C6A"/>
+                      <rect x="11" y="6" width="2" height="12" rx="1" fill="#fff"/>
+                      <rect x="6" y="11" width="12" height="2" rx="1" fill="#fff"/>
+                    </svg>
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse hidden">
+                  <div class="accordion-body px-2 py-2 text-[15px]">
+                    AWe source our ingredients from trusted suppliers, ensuring that every ingredient is of the highest
+                    quality. We're proud to support local businesses and ensure that our products are made with care.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          src="{{ 'only_the_good_stuff.png' | file_img_url: 'master' }}"
+          alt="About Us Only The Good Stuff"
+          class="order-1 w-full object-cover md:order-2"
+        >
+      </div>
+    </div>
+  </section>
 </main>
 
 {% style %}
@@ -178,6 +314,12 @@
     height: 100%;
     margin: 0 auto;
     overflow: hidden;
+  }
+  .accordion-button[aria-expanded='true'] .accordion-icon {
+    transform: rotate(180deg);
+  }
+  .accordion-icon {
+    transition: transform 0.2s;
   }
 {% endstyle %}
 
@@ -233,6 +375,40 @@
     btnFavCat.addEventListener('click', function () {
       tabFavDog.classList.add('hidden');
       tabFavCat.classList.remove('hidden');
+    });
+
+    const accordionButtons = document.querySelectorAll('.accordion-button');
+    accordionButtons.forEach((btn) => {
+      btn.addEventListener('click', function () {
+        // Fix: Get target by CSS id selector, not querySelector("#collapseX")
+        const targetSelector = btn.getAttribute('data-accordion-target');
+        const content = document.querySelector(targetSelector);
+
+        if (!content) return;
+
+        // Check if this panel is open
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+
+        // Hide all panels and reset buttons
+        document.querySelectorAll('.accordion-collapse').forEach((panel) => {
+          panel.classList.add('hidden');
+        });
+        document.querySelectorAll('.accordion-button').forEach((otherBtn) => {
+          otherBtn.setAttribute('aria-expanded', 'false');
+          if (otherBtn.querySelector('.accordion-icon')) {
+            otherBtn.querySelector('.accordion-icon').classList.remove('rotate-180');
+          }
+        });
+
+        // Show this panel if it wasn't expanded
+        if (!expanded) {
+          content.classList.remove('hidden');
+          btn.setAttribute('aria-expanded', 'true');
+          if (btn.querySelector('.accordion-icon')) {
+            btn.querySelector('.accordion-icon').classList.add('rotate-180');
+          }
+        }
+      });
     });
   });
 {% endjavascript %}
