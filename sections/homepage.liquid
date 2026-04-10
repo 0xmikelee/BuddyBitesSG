@@ -330,6 +330,63 @@
       <div id="klaviyo-featured-reviews-carousel"></div>
     </div>
   </section>
+  <section class="py-5 md:py-10">
+    <div class="container grid grid-cols-1 overflow-hidden rounded-[20px] md:grid-cols-[0.5fr_1fr]">
+      <img
+        src="{{ 'subscribe_n_save.png' | file_img_url: 'master' }}"
+        alt="Placeholder Image"
+        class="order-2 w-full object-cover md:order-1"
+      >
+      <div class="order-1 flex flex-col items-center justify-start gap-10 bg-[#B9E3FF] p-6 md:order-2 md:p-10">
+        <h2 class="text-balance text-left font-titanOne text-[clamp(30px,2.5vw,35px)] uppercase leading-[clamp(30px,2.5vw,35px)]">
+          Subscribe & Save 20%
+        </h2>
+        <div class="grid grid-cols-2 gap-5 md:grid-cols-4 md:gap-0">
+          <div class="flex max-w-[150px] flex-col items-center justify-between gap-4">
+            <img
+              src="{{ 'icon_discount.png' | file_img_url: 'master'}}"
+              alt="discount"
+              class="w-[50px] object-cover"
+            >
+            <p class="text-balance text-center text-[clamp(16px,1.9vw,20px)] leading-[clamp(16px,1.9vw,20px)]">
+              20% off every order
+            </p>
+          </div>
+          <div class="flex max-w-[150px] flex-col items-center justify-between gap-4">
+            <img
+              src="{{ 'icon_delivery.png' | file_img_url: 'master'}}"
+              alt="delivery"
+              class="w-[50px] object-cover"
+            >
+            <p class="text-balance text-center text-[clamp(16px,1.9vw,20px)] leading-[clamp(16px,1.9vw,20px)]">
+              Automated Deliveries
+            </p>
+          </div>
+          <div class="flex max-w-[150px] flex-col items-center justify-between gap-4">
+            <img
+              src="{{ 'icon_swap.png' | file_img_url: 'master'}}"
+              alt="swap, skip or cancel"
+              class="w-[50px] object-cover"
+            >
+            <p class="text-balance text-center text-[clamp(16px,1.9vw,20px)] leading-[clamp(16px,1.9vw,20px)]">
+              Swap, Skip or Cancel anytime
+            </p>
+          </div>
+          <div class="flex max-w-[150px] flex-col items-center justify-between gap-4">
+            <img
+              src="{{ 'icon_surprise.png' | file_img_url: 'master'}}"
+              alt="surprise"
+              class="w-[50px] object-cover"
+            >
+            <p class="text-balance text-center text-[clamp(16px,1.9vw,20px)] leading-[clamp(16px,1.9vw,20px)]">
+              Exclusive Surprises
+            </p>
+          </div>
+        </div>
+        <a href="{{ pages['subscription'].url }}" class="btn-cta">SUBSCRIBE & SAVE</a>
+      </div>
+    </div>
+  </section>
 </main>
 
 {% style %}
