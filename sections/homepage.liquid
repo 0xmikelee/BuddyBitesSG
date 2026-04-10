@@ -32,11 +32,11 @@
         Start with our favourites
       </h2>
       <div class="flex gap-4 text-[clamp(28px,1.9vw,32px)]">
-        <button class="btn-fav-tab flex flex-col items-center justify-center">
+        <button id="btn-fav-dog" class="btn-fav-tab flex flex-col items-center justify-center">
           Dog
           <span class="span-fav-tab span-fav-tab-active h-[1px] w-full" />
         </button>
-        <button class="btn-fav-tab flex flex-col items-center justify-center">
+        <button id="btn-fav-cat" class="btn-fav-tab flex flex-col items-center justify-center">
           Cat
           <span class="span-fav-tab h-[1px] w-full" />
         </button>
@@ -48,7 +48,7 @@
               <div class="flex w-full flex-col items-center justify-center gap-4 rounded-[20px] bg-white p-4">
                 <img
                   src="{{ 'salmon_kibble.png' | file_img_url: 'master' }}"
-                  alt="Dog"
+                  alt="Dog Salmon Kibbles"
                   class="w-full rounded-[20px] object-cover"
                 >
                 <div class="flex w-full flex-col items-start justify-center gap-2">
@@ -67,7 +67,7 @@
               <div class="flex w-full flex-col items-center justify-center gap-4 rounded-[20px] bg-white p-4">
                 <img
                   src="{{ 'beef_treat.png' | file_img_url: 'master' }}"
-                  alt="Dog"
+                  alt="Dog Beef Treats"
                   class="w-full rounded-[20px] object-cover"
                 >
                 <div class="flex w-full flex-col items-start justify-center gap-2">
@@ -86,7 +86,7 @@
               <div class="flex w-full flex-col items-center justify-center gap-4 rounded-[20px] bg-white p-4">
                 <img
                   src="{{ 'beef_topper.png' | file_img_url: 'master' }}"
-                  alt="Dog"
+                  alt="Dog Beef Toppers"
                   class="w-full rounded-[20px] object-cover"
                 >
                 <div class="flex w-full flex-col items-start justify-center gap-2">
@@ -97,6 +97,69 @@
                   <p class="text-[14px] font-normal">Beef & Vegetables Recipe</p>
                 </div>
                 <a href="{{ all_products['dog-fresh-toppers-beef-vegetables'].url }}" class="btn-buy-now w-full">
+                  Add to Cart - $7.20
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="tab-fav-cat" class="hidden w-full">
+        <div class="swiper swiper-fav-cat">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="flex w-full flex-col items-center justify-center gap-4 rounded-[20px] bg-white p-4">
+                <img
+                  src="{{ 'cat_kibbles_salmon_front.png' | file_img_url: 'master' }}"
+                  alt="Cat Salmon Kibbles"
+                  class="w-full rounded-[20px] object-cover"
+                >
+                <div class="flex w-full flex-col items-start justify-center gap-2">
+                  <div class="flex w-full justify-between gap-2 text-[14px] font-semibold">
+                    <p>Cat Kibbles</p>
+                    <p>$32.80</p>
+                  </div>
+                  <p class="text-[14px] font-normal">Salmon Recipe</p>
+                </div>
+                <a href="{{ all_products['adult-salmon-dry-cat-food'].url }}" class="btn-buy-now w-full">
+                  Add to Cart - $32.80
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="flex w-full flex-col items-center justify-center gap-4 rounded-[20px] bg-white p-4">
+                <img
+                  src="{{ 'cat_kibbles_chicken_front.png' | file_img_url: 'master' }}"
+                  alt="Cat Chicken Kibbles"
+                  class="w-full rounded-[20px] object-cover"
+                >
+                <div class="flex w-full flex-col items-start justify-center gap-2">
+                  <div class="flex w-full justify-between gap-2 text-[14px] font-semibold">
+                    <p>Cat Kibbles</p>
+                    <p>$13.50</p>
+                  </div>
+                  <p class="text-[14px] font-normal">Chicken Recipe</p>
+                </div>
+                <a href="{{ all_products['adult-chicken-dry-cat-food'].url }}" class="btn-buy-now w-full">
+                  Add to Cart - $13.50
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="flex w-full flex-col items-center justify-center gap-4 rounded-[20px] bg-white p-4">
+                <img
+                  src="{{ 'kitten_kibbles_chicken_front.png' | file_img_url: 'master' }}"
+                  alt="Kitten Chicken Kibbles"
+                  class="w-full rounded-[20px] object-cover"
+                >
+                <div class="flex w-full flex-col items-start justify-center gap-2">
+                  <div class="flex w-full justify-between gap-2 text-[14px] font-semibold">
+                    <p>Kitten Kibbles</p>
+                    <p>$7.20</p>
+                  </div>
+                  <p class="text-[14px] font-normal">Kitten Chicken Recipe</p>
+                </div>
+                <a href="{{ all_products['kitten-chicken-dry-cat-food'].url }}" class="btn-buy-now w-full">
                   Add to Cart - $7.20
                 </a>
               </div>
@@ -144,6 +207,32 @@
         320: { slidesPerView: 1, spaceBetween: 16 },
         1024: { slidesPerView: 3, spaceBetween: 16 },
       },
+    });
+
+    const swiperFavCat = new Swiper('.swiper-fav-cat', {
+      loop: true,
+      autoplay: { delay: 2500, disableOnInteraction: false },
+      slidesPerView: 1,
+      spaceBetween: 16,
+      breakpoints: {
+        320: { slidesPerView: 1, spaceBetween: 16 },
+        1024: { slidesPerView: 3, spaceBetween: 16 },
+      },
+    });
+
+    const btnFavDog = document.getElementById('btn-fav-dog');
+    const btnFavCat = document.getElementById('btn-fav-cat');
+    const tabFavDog = document.getElementById('tab-fav-dog');
+    const tabFavCat = document.getElementById('tab-fav-cat');
+
+    btnFavDog.addEventListener('click', function () {
+      tabFavDog.classList.remove('hidden');
+      tabFavCat.classList.add('hidden');
+    });
+
+    btnFavCat.addEventListener('click', function () {
+      tabFavDog.classList.add('hidden');
+      tabFavCat.classList.remove('hidden');
     });
   });
 {% endjavascript %}
