@@ -387,6 +387,142 @@
       </div>
     </div>
   </section>
+  <section class="py-5 md:py-10">
+    <div class="container">
+      <div class="grid grid-cols-1 gap-5 md:grid-cols-[1fr_0.6fr]">
+        <div class="flex w-full flex-col items-center justify-between gap-5 rounded-[20px] bg-white p-6">
+          <div class="flex w-full flex-col items-center justify-center gap-5 md:items-start">
+            <h2 class="text-balance text-center font-titanOne text-[clamp(30px,2.5vw,35px)] uppercase leading-[clamp(30px,2.5vw,35px)]">
+              GIVING BACK TO THE COMMUNITY
+            </h2>
+            <p class="text-balance text-center text-[clamp(16px,1.9vw,20px)] font-normal leading-[clamp(24px,1.9vw,28px)]">
+              For every 2kg of dog food purchased, we donate 1kg to local shelters!
+            </p>
+            <a href="{{ all_products['adult-turkey-dry-dog-food'].url }}" class="btn-cta"> SHOP TO DONATE </a>
+          </div>
+          <div class="flex w-full flex-wrap items-center justify-center gap-1 md:items-end md:justify-start">
+            <div class="els-cup-box !m-0" data-id="7086"></div>
+            <p class="text-[clamp(16px,1.9vw,20px)] font-semibold">Meals Donated</p>
+          </div>
+        </div>
+        <div class="flex w-full justify-end">
+          <img
+            src="{{ 'give_back_to_community.jpg' | file_img_url: 'master' }}"
+            alt="Give Back To The Community"
+            class="aspect-square h-[450px] rounded-[20px] object-cover object-center"
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-5 md:py-10">
+    <div class="container">
+      <div class="flex flex-col items-center justify-center gap-5">
+        <h2 class="text-balance text-center font-titanOne text-[clamp(30px,2.5vw,35px)] uppercase leading-[clamp(30px,2.5vw,35px)]">
+          OUR PARTNERING SHELTERS
+        </h2>
+        <div class="w-full">
+          <div class="swiper swiper-partnering-shelters">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="flex h-[150px] flex-col items-center justify-center">
+                  <img
+                    src="{{ 'icon_shelter_hkdr.png' | file_img_url: 'master' }}"
+                    alt="HKDR"
+                    class="w-full object-cover"
+                  >
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="flex h-[150px] flex-col items-center justify-center">
+                  <img
+                    src="{{ 'icon_shelter_catherines_puppies.png' | file_img_url: 'master' }}"
+                    alt="Catherine's Puppies"
+                    class="w-full object-cover"
+                  >
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="flex h-[150px] flex-col items-center justify-center">
+                  <img
+                    src="{{ 'icon_shelter_saikung_stray_friends.png' | file_img_url: 'master' }}"
+                    alt="Sai Kung Stray Friends"
+                    class="w-full object-cover"
+                  >
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="flex h-[150px] flex-col items-center justify-center">
+                  <img
+                    src="{{ 'icon_shelter_sosd.png' | file_img_url: 'master' }}"
+                    alt="SoSD"
+                    class="w-full object-cover"
+                  >
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="flex h-[150px] flex-col items-center justify-center">
+                  <img
+                    src="{{ 'icon_shelter_pgrs.png' | file_img_url: 'master' }}"
+                    alt="PGRS"
+                    class="w-full object-cover"
+                  >
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="flex h-[150px] flex-col items-center justify-center">
+                  <img
+                    src="{{ 'icon_shelter_tails_lantau.png' | file_img_url: 'master' }}"
+                    alt="Tails Lantau"
+                    class="w-full object-cover"
+                  >
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="flex h-[150px] flex-col items-center justify-center">
+                  <img
+                    src="{{ 'icon_shelter_hkscda.png' | file_img_url: 'master' }}"
+                    alt="HKSCDA"
+                    class="w-full object-cover"
+                  >
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="flex h-[150px] flex-col items-center justify-center">
+                  <img
+                    src="{{ 'icon_shelter_madam_wong.png' | file_img_url: 'master' }}"
+                    alt="Madam Wong"
+                    class="w-full object-cover"
+                  >
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="flex h-[150px] flex-col items-center justify-center">
+                  <img
+                    src="{{ 'icon_shelter_love_fluffy_home.png' | file_img_url: 'master' }}"
+                    alt="Love Fluffy Home"
+                    class="w-full object-cover"
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="{{ pages['about-us'].url }}" class="btn-cta"> LEARN MORE </a>
+      </div>
+    </div>
+  </section>
+  <section class="py-5 md:py-10">
+    <div class="container relative">
+      <img src="{{ 'try_sample.png' | file_img_url: 'master' }}" alt="Try Sample Packs" class="w-full object-cover">
+      <div class="absolute left-0 top-0 flex h-full w-full flex-col items-center justify-start gap-5 py-5 md:py-10">
+        <h2 class="text-balance text-left font-titanOne text-[clamp(30px,2.5vw,35px)] uppercase leading-[clamp(30px,2.5vw,35px)]">
+          TRY SAMPLE PACKS
+        </h2>
+        <a href="{{ all_products['adult-turkey-dog-sample-starter-pack'].url }}" class="btn-cta"> shop sample packs </a>
+      </div>
+    </div>
+  </section>
 </main>
 
 {% style %}
@@ -401,6 +537,38 @@
   }
   .accordion-icon {
     transition: transform 0.2s;
+  }
+
+  .els-cup-box {
+    height: auto !important;
+    margin: 0 !important;
+  }
+  .els-cup-w {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .els-cup-w-val {
+    font-size: 60px !important;
+    line-height: 60px !important;
+  }
+
+  .els-cup-w-icon,
+  .els-cup-w-descr {
+    display: none !important;
+  }
+
+  @media (min-width: 1024px) {
+    .els-cup-box {
+      height: auto !important;
+      margin-top: 30px !important;
+    }
+
+    .els-cup-w-val {
+      font-size: 100px !important;
+      line-height: 100px !important;
+    }
   }
 {% endstyle %}
 
@@ -440,6 +608,17 @@
       breakpoints: {
         320: { slidesPerView: 1, spaceBetween: 16 },
         1024: { slidesPerView: 3, spaceBetween: 16 },
+      },
+    });
+
+    const swiperPartneringShelters = new Swiper('.swiper-partnering-shelters', {
+      loop: true,
+      autoplay: { delay: 2500, disableOnInteraction: false },
+      slidesPerView: 1,
+      spaceBetween: 16,
+      breakpoints: {
+        320: { slidesPerView: 3, spaceBetween: 24 },
+        1024: { slidesPerView: 9, spaceBetween: 40 },
       },
     });
 
