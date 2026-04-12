@@ -2191,6 +2191,10 @@ video {
   top: 100%;
 }
 
+.left-\[clamp\(10px\2c 2vw\2c 30px\)\]{
+  left: clamp(10px,2vw,30px);
+}
+
 .z-0{
   z-index: 0;
 }
@@ -2639,6 +2643,10 @@ video {
   height: 150px;
 }
 
+.h-\[230px\]{
+  height: 230px;
+}
+
 .max-h-0{
   max-height: 0px;
 }
@@ -2945,6 +2953,18 @@ video {
   width: 1.5rem;
 }
 
+.w-\[10px\]{
+  width: 10px;
+}
+
+.w-\[405px\]{
+  width: 405px;
+}
+
+.w-\[350px\]{
+  width: 350px;
+}
+
 .min-w-\[300px\]{
   min-width: 300px;
 }
@@ -3129,6 +3149,16 @@ video {
 
 .translate-y-\[40px\]{
   --tw-translate-y: 40px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-y-1\/2{
+  --tw-translate-y: 50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-y-1\/4{
+  --tw-translate-y: 25%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -4172,6 +4202,11 @@ video {
   background-color: rgb(250 247 242 / var(--tw-bg-opacity, 1));
 }
 
+.bg-\[\#193C6A\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(25 60 106 / var(--tw-bg-opacity, 1));
+}
+
 .bg-\[linear-gradient\(135deg\2c rgba\(91\2c 184\2c 245\2c 0\.05\)_0\%\2c transparent_60\%\)\]{
   background-image: linear-gradient(135deg,rgba(91,184,245,0.05) 0%,transparent 60%);
 }
@@ -5173,6 +5208,10 @@ video {
   line-height: 1.625;
 }
 
+.leading-\[14px\]{
+  line-height: 14px;
+}
+
 .tracking-\[0\.06em\]{
   letter-spacing: 0.06em;
 }
@@ -5397,6 +5436,11 @@ video {
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#A3A3A3\]{
+  --tw-text-opacity: 1;
+  color: rgb(163 163 163 / var(--tw-text-opacity, 1));
 }
 
 .underline{
@@ -6596,6 +6640,10 @@ video {
   font-family: Museo, sans-serif;
 }
 
+[lang="en"] .en\:font-titanOne{
+  font-family: Titan One, cursive;
+}
+
 [lang="en"] .en\:text-\[10vw\]{
   font-size: 10vw;
 }
@@ -6789,6 +6837,10 @@ video {
     font-size: 80px;
   }
 
+  .sm\:text-\[40px\]{
+    font-size: 40px;
+  }
+
   .sm\:leading-\[70px\]{
     line-height: 70px;
   }
@@ -6877,6 +6929,66 @@ video {
 
   .md\:top-\[7vw\]{
     top: 7vw;
+  }
+
+  .md\:left-\[clamp\(10px\2c 2vw\2c 30px\)\]{
+    left: clamp(10px,2vw,30px);
+  }
+
+  .md\:top-\[clamp\(70px\2c 6vw\2c 75px\)\]{
+    top: clamp(70px,6vw,75px);
+  }
+
+  .md\:top-\[clamp\(130px\2c 10vw\2c 140px\)\]{
+    top: clamp(130px,10vw,140px);
+  }
+
+  .md\:top-\[clamp\(130px\2c 9vw\2c 140px\)\]{
+    top: clamp(130px,9vw,140px);
+  }
+
+  .md\:left-\[clamp\(40px\2c 4vw\2c 50px\)\]{
+    left: clamp(40px,4vw,50px);
+  }
+
+  .md\:left-\[clamp\(85px\2c 5vw\2c 90px\)\]{
+    left: clamp(85px,5vw,90px);
+  }
+
+  .md\:top-\[clamp\(190px\2c 12vw\2c 200px\)\]{
+    top: clamp(190px,12vw,200px);
+  }
+
+  .md\:top-\[clamp\(290px\2c 20vw\2c 300px\)\]{
+    top: clamp(290px,20vw,300px);
+  }
+
+  .md\:top-\[clamp\(490px\2c 30vw\2c 500px\)\]{
+    top: clamp(490px,30vw,500px);
+  }
+
+  .md\:right-\[clamp\(85px\2c 5vw\2c 90px\)\]{
+    right: clamp(85px,5vw,90px);
+  }
+
+  .md\:top-\[clamp\(140px\2c 10vw\2c 150px\)\]{
+    top: clamp(140px,10vw,150px);
+  }
+
+  .md\:top-\[clamp\(400px\2c 23vw\2c 410px\)\]{
+    top: clamp(400px,23vw,410px);
+  }
+
+  .md\:top-\[clamp\(500px\2c 31vw\2c 510px\)\]{
+    top: clamp(500px,31vw,510px);
+  }
+
+  .md\:top-\[clamp\(300px\2c 19vw\2c 310px\)\]{
+    top: clamp(300px,19vw,310px);
+  }
+
+  .md\:top-\[clamp\(320px\2c 20vw\2c 330px\)\]{
+    top: clamp(320px,20vw,330px);
   }
 
   .md\:order-1{
@@ -7580,6 +7692,10 @@ video {
     font-size: clamp(25px,2.2vw,30px);
   }
 
+  .md\:text-\[clamp\(40px\2c 4\.1vw\2c 45px\)\]{
+    font-size: clamp(40px,4.1vw,45px);
+  }
+
   .md\:leading-\[25\.7px\]{
     line-height: 25.7px;
   }
@@ -8108,6 +8224,10 @@ video {
 
   .lg\:text-\[clamp\(50px\2c 5vw\2c 95px\)\]{
     font-size: clamp(50px,5vw,95px);
+  }
+
+  .lg\:text-\[clamp\(50px\2c 5\.5vw\2c 60px\)\]{
+    font-size: clamp(50px,5.5vw,60px);
   }
 
   .lg\:leading-\[20px\]{
