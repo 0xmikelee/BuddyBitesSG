@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "section-nutrition": {
+      "type": "section-nutrition",
+      "settings": {}
+    }
+  },
+  "order": [
+    "section-nutrition"
+  ]
+}
