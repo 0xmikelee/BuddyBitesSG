@@ -2,16 +2,16 @@
   <!-- Hero Section -->
   <section class="relative">
     <img
-      src="{{ 'homepage_banner_2.png' | file_img_url: 'master' }}"
+      src="{{ 'hero_image.jpg' | file_img_url: 'master' }}"
       alt="Hero Image"
-      class="hidden h-full w-full object-cover md:block"
+      class="hidden h-[90dvh] w-full object-cover md:block"
     >
     <img
-      src="{{ 'homepage_banner_mobile_2.png' | file_img_url: 'master' }}"
+      src="{{ 'hero_image_mobile.png' | file_img_url: 'master' }}"
       alt="Hero Image"
       class="block h-full w-full object-cover md:hidden"
     >
-    <div class="absolute left-0 top-0 flex h-1/2 w-full flex-col items-start justify-center gap-8 px-4 text-left md:h-full md:w-[40%] md:gap-6 md:px-10">
+    <div class="absolute left-0 top-0 flex h-1/2 w-full flex-col items-center justify-center gap-8 px-4 pt-10 text-center md:h-full md:w-[40%] md:items-start md:gap-6 md:px-10 md:pt-0 md:text-left">
       <h1 class="text-balance font-titanOne text-[clamp(40px,5vw,55px)] leading-[clamp(40px,5vw,55px)]">
         Premium European Kibble
       </h1>
@@ -27,7 +27,7 @@
     </div>
   </section>
   <section>
-    <div class="container flex flex-col items-center justify-center gap-4 py-5 md:py-10">
+    <div class="container flex flex-col items-center justify-center gap-4 py-5 md:py-20">
       <h2 class="text-balance text-center font-titanOne text-[clamp(40px,5vw,55px)] uppercase leading-[clamp(40px,5vw,55px)]">
         Start with our favourites
       </h2>
@@ -51,12 +51,12 @@
                   alt="Dog Salmon Kibbles"
                   class="w-full rounded-[20px] object-cover"
                 >
-                <div class="flex w-full flex-col items-start justify-center gap-2">
-                  <div class="flex w-full justify-between gap-2 text-[14px] font-semibold">
+                <div class="flex w-full flex-col items-start justify-center gap-2 text-[18px]">
+                  <div class="flex w-full justify-between gap-2 font-semibold">
                     <p>Adult Kibbles</p>
                     <p>$32.80</p>
                   </div>
-                  <p class="text-[14px] font-normal">Sweet Potato and Salmon Recipe</p>
+                  <p class="font-normal">Sweet Potato and Salmon Recipe</p>
                 </div>
                 <a href="{{ all_products['adult-salmon-dry-dog-food'].url }}" class="btn-buy-now w-full">
                   Add to Cart - $32.80
@@ -70,12 +70,12 @@
                   alt="Dog Beef Treats"
                   class="w-full rounded-[20px] object-cover"
                 >
-                <div class="flex w-full flex-col items-start justify-center gap-2">
-                  <div class="flex w-full justify-between gap-2 text-[14px] font-semibold">
+                <div class="flex w-full flex-col items-start justify-center gap-2 text-[18px]">
+                  <div class="flex w-full justify-between gap-2 font-semibold">
                     <p>Air-Dried Dog Treats</p>
                     <p>$13.50</p>
                   </div>
-                  <p class="text-[14px] font-normal">Beef & Blueberry Recipe</p>
+                  <p class="font-normal">Beef & Blueberry Recipe</p>
                 </div>
                 <a href="{{ all_products['beef-blueberry-air-dried-dog-treats'].url }}" class="btn-buy-now w-full">
                   Add to Cart - $13.50
@@ -89,12 +89,12 @@
                   alt="Dog Beef Toppers"
                   class="w-full rounded-[20px] object-cover"
                 >
-                <div class="flex w-full flex-col items-start justify-center gap-2">
-                  <div class="flex w-full justify-between gap-2 text-[14px] font-semibold">
+                <div class="flex w-full flex-col items-start justify-center gap-2 text-[18px]">
+                  <div class="flex w-full justify-between gap-2 font-semibold">
                     <p>Fresh Toppers</p>
                     <p>$7.20</p>
                   </div>
-                  <p class="text-[14px] font-normal">Beef & Vegetables Recipe</p>
+                  <p class="font-normal">Beef & Vegetables Recipe</p>
                 </div>
                 <a href="{{ all_products['dog-fresh-toppers-beef-vegetables'].url }}" class="btn-buy-now w-full">
                   Add to Cart - $7.20
@@ -114,12 +114,12 @@
                   alt="Cat Salmon Kibbles"
                   class="w-full rounded-[20px] object-cover"
                 >
-                <div class="flex w-full flex-col items-start justify-center gap-2">
-                  <div class="flex w-full justify-between gap-2 text-[14px] font-semibold">
+                <div class="flex w-full flex-col items-start justify-center gap-2 text-[18px]">
+                  <div class="flex w-full justify-between gap-2 font-semibold">
                     <p>Cat Kibbles</p>
                     <p>$32.80</p>
                   </div>
-                  <p class="text-[14px] font-normal">Salmon Recipe</p>
+                  <p class="font-normal">Salmon Recipe</p>
                 </div>
                 <a href="{{ all_products['adult-salmon-dry-cat-food'].url }}" class="btn-buy-now w-full">
                   Add to Cart - $32.80
@@ -133,12 +133,12 @@
                   alt="Cat Chicken Kibbles"
                   class="w-full rounded-[20px] object-cover"
                 >
-                <div class="flex w-full flex-col items-start justify-center gap-2">
-                  <div class="flex w-full justify-between gap-2 text-[14px] font-semibold">
+                <div class="flex w-full flex-col items-start justify-center gap-2 text-[18px]">
+                  <div class="flex w-full justify-between gap-2 font-semibold">
                     <p>Cat Kibbles</p>
                     <p>$13.50</p>
                   </div>
-                  <p class="text-[14px] font-normal">Chicken Recipe</p>
+                  <p class="font-normal">Chicken Recipe</p>
                 </div>
                 <a href="{{ all_products['adult-chicken-dry-cat-food'].url }}" class="btn-buy-now w-full">
                   Add to Cart - $13.50
@@ -152,12 +152,12 @@
                   alt="Kitten Chicken Kibbles"
                   class="w-full rounded-[20px] object-cover"
                 >
-                <div class="flex w-full flex-col items-start justify-center gap-2">
-                  <div class="flex w-full justify-between gap-2 text-[14px] font-semibold">
+                <div class="flex w-full flex-col items-start justify-center gap-2 text-[18px]">
+                  <div class="flex w-full justify-between gap-2 font-semibold">
                     <p>Kitten Kibbles</p>
                     <p>$7.20</p>
                   </div>
-                  <p class="text-[14px] font-normal">Kitten Chicken Recipe</p>
+                  <p class="font-normal">Kitten Chicken Recipe</p>
                 </div>
                 <a href="{{ all_products['kitten-chicken-dry-cat-food'].url }}" class="btn-buy-now w-full">
                   Add to Cart - $7.20
@@ -308,9 +308,18 @@
   </section>
   <section class="py-5 md:py-10">
     <div class="container relative">
-      <img src="{{ 'placeholder_1.png' | file_img_url: 'master' }}" alt="Placeholder Image" class="w-full object-cover">
-      <div class="absolute left-0 top-0 flex h-full w-full flex-col items-center justify-start gap-5 py-5 md:py-10">
-        <h2 class="text-balance text-left font-titanOne text-[clamp(30px,2.5vw,35px)] uppercase leading-[clamp(30px,2.5vw,35px)]">
+      <img
+        src="{{ 'all_new_cat_line.png' | file_img_url: 'master' }}"
+        alt="All New Cat Line Image"
+        class="hidden w-full rounded-[20px] object-cover md:block"
+      >
+      <img
+        src="{{ 'all_new_cat_line_mobile.png' | file_img_url: 'master' }}"
+        alt="All New Cat Line Image"
+        class="block w-full rounded-[20px] object-cover md:hidden"
+      >
+      <div class="absolute left-0 top-0 flex h-1/2 w-full flex-col items-center justify-center gap-5 py-5 md:h-full md:justify-start md:py-10">
+        <h2 class="w-[70%] text-balance text-center font-titanOne text-[clamp(30px,2.5vw,35px)] uppercase leading-[clamp(30px,2.5vw,35px)] md:w-full">
           ALL NEW CAT LINE
         </h2>
         <a href="{{ pages['about-us'].url }}" class="btn-cta"> About Us </a>
@@ -331,59 +340,61 @@
     </div>
   </section>
   <section class="py-5 md:py-10">
-    <div class="container grid grid-cols-1 overflow-hidden rounded-[20px] md:grid-cols-[0.5fr_1fr]">
-      <img
-        src="{{ 'subscribe_n_save.png' | file_img_url: 'master' }}"
-        alt="Placeholder Image"
-        class="order-2 w-full object-cover md:order-1"
-      >
-      <div class="order-1 flex flex-col items-center justify-start gap-10 bg-[#B9E3FF] p-6 md:order-2 md:p-10">
-        <h2 class="text-balance text-left font-titanOne text-[clamp(30px,2.5vw,35px)] uppercase leading-[clamp(30px,2.5vw,35px)]">
-          Subscribe & Save 20%
-        </h2>
-        <div class="grid grid-cols-2 gap-5 md:grid-cols-4 md:gap-0">
-          <div class="flex max-w-[150px] flex-col items-center justify-between gap-4">
-            <img
-              src="{{ 'icon_discount.png' | file_img_url: 'master'}}"
-              alt="discount"
-              class="w-[50px] object-cover"
-            >
-            <p class="text-balance text-center text-[clamp(16px,1.9vw,20px)] leading-[clamp(16px,1.9vw,20px)]">
-              20% off every order
-            </p>
+    <div class="container">
+      <div class="grid grid-cols-1 overflow-hidden rounded-[20px] md:grid-cols-[0.5fr_1fr]">
+        <img
+          src="{{ 'subscribe_n_save.png' | file_img_url: 'master' }}"
+          alt="Placeholder Image"
+          class="w-full object-cover"
+        >
+        <div class="flex flex-col items-center justify-start gap-10 bg-[#B9E3FF] p-6 md:p-10">
+          <h2 class="text-balance text-center font-titanOne text-[clamp(30px,2.5vw,35px)] uppercase leading-[clamp(30px,2.5vw,35px)]">
+            Subscribe & Save 20%
+          </h2>
+          <div class="grid grid-cols-2 gap-5 md:grid-cols-4 md:gap-0">
+            <div class="flex max-w-[150px] flex-col items-center justify-between gap-4">
+              <img
+                src="{{ 'icon_discount.png' | file_img_url: 'master'}}"
+                alt="discount"
+                class="w-[50px] object-cover"
+              >
+              <p class="text-balance text-center text-[clamp(16px,1.9vw,20px)] leading-[clamp(16px,1.9vw,20px)]">
+                20% off every order
+              </p>
+            </div>
+            <div class="flex max-w-[150px] flex-col items-center justify-between gap-4">
+              <img
+                src="{{ 'icon_delivery.png' | file_img_url: 'master'}}"
+                alt="delivery"
+                class="w-[60px] object-cover"
+              >
+              <p class="text-balance text-center text-[clamp(16px,1.9vw,20px)] leading-[clamp(16px,1.9vw,20px)]">
+                Automated Deliveries
+              </p>
+            </div>
+            <div class="flex max-w-[150px] flex-col items-center justify-between gap-4">
+              <img
+                src="{{ 'icon_swap.png' | file_img_url: 'master'}}"
+                alt="swap, skip or cancel"
+                class="w-[50px] object-cover"
+              >
+              <p class="text-balance text-center text-[clamp(16px,1.9vw,20px)] leading-[clamp(16px,1.9vw,20px)]">
+                Swap, Skip or Cancel anytime
+              </p>
+            </div>
+            <div class="flex max-w-[150px] flex-col items-center justify-between gap-4">
+              <img
+                src="{{ 'icon_surprise.png' | file_img_url: 'master'}}"
+                alt="surprise"
+                class="w-[50px] object-cover"
+              >
+              <p class="text-balance text-center text-[clamp(16px,1.9vw,20px)] leading-[clamp(16px,1.9vw,20px)]">
+                Exclusive Surprises
+              </p>
+            </div>
           </div>
-          <div class="flex max-w-[150px] flex-col items-center justify-between gap-4">
-            <img
-              src="{{ 'icon_delivery.png' | file_img_url: 'master'}}"
-              alt="delivery"
-              class="w-[50px] object-cover"
-            >
-            <p class="text-balance text-center text-[clamp(16px,1.9vw,20px)] leading-[clamp(16px,1.9vw,20px)]">
-              Automated Deliveries
-            </p>
-          </div>
-          <div class="flex max-w-[150px] flex-col items-center justify-between gap-4">
-            <img
-              src="{{ 'icon_swap.png' | file_img_url: 'master'}}"
-              alt="swap, skip or cancel"
-              class="w-[50px] object-cover"
-            >
-            <p class="text-balance text-center text-[clamp(16px,1.9vw,20px)] leading-[clamp(16px,1.9vw,20px)]">
-              Swap, Skip or Cancel anytime
-            </p>
-          </div>
-          <div class="flex max-w-[150px] flex-col items-center justify-between gap-4">
-            <img
-              src="{{ 'icon_surprise.png' | file_img_url: 'master'}}"
-              alt="surprise"
-              class="w-[50px] object-cover"
-            >
-            <p class="text-balance text-center text-[clamp(16px,1.9vw,20px)] leading-[clamp(16px,1.9vw,20px)]">
-              Exclusive Surprises
-            </p>
-          </div>
+          <a href="{{ pages['subscription'].url }}" class="btn-cta">SUBSCRIBE & SAVE</a>
         </div>
-        <a href="{{ pages['subscription'].url }}" class="btn-cta">SUBSCRIBE & SAVE</a>
       </div>
     </div>
   </section>
@@ -402,14 +413,14 @@
           </div>
           <div class="flex w-full flex-wrap items-center justify-center gap-1 md:items-end md:justify-start">
             <div class="els-cup-box !m-0" data-id="7086"></div>
-            <p class="text-[clamp(16px,1.9vw,20px)] font-semibold">Meals Donated</p>
+            <p class="text-[clamp(16px,1.9vw,20px)] font-semibold md:pb-[30px]">Meals Donated</p>
           </div>
         </div>
         <div class="flex w-full justify-end">
           <img
             src="{{ 'give_back_to_community.jpg' | file_img_url: 'master' }}"
             alt="Give Back To The Community"
-            class="aspect-square h-[450px] rounded-[20px] object-cover object-center"
+            class="aspect-square rounded-[20px] object-cover object-center md:h-[450px]"
           >
         </div>
       </div>
@@ -513,13 +524,26 @@
     </div>
   </section>
   <section class="py-5 md:py-10">
-    <div class="container relative">
-      <img src="{{ 'try_sample.png' | file_img_url: 'master' }}" alt="Try Sample Packs" class="w-full object-cover">
-      <div class="absolute left-0 top-0 flex h-full w-full flex-col items-center justify-start gap-5 py-5 md:py-10">
-        <h2 class="text-balance text-left font-titanOne text-[clamp(30px,2.5vw,35px)] uppercase leading-[clamp(30px,2.5vw,35px)]">
-          TRY SAMPLE PACKS
-        </h2>
-        <a href="{{ all_products['adult-turkey-dog-sample-starter-pack'].url }}" class="btn-cta"> shop sample packs </a>
+    <div class="container">
+      <div class="relative overflow-hidden rounded-[20px]">
+        <img
+          src="{{ 'try_sample.png' | file_img_url: 'master' }}"
+          alt="Try Sample Packs"
+          class="hidden w-full object-cover md:block"
+        >
+        <img
+          src="{{ 'try_sample_mobile.png' | file_img_url: 'master' }}"
+          alt="Try Sample Packs"
+          class="block w-full object-cover md:hidden"
+        >
+        <div class="absolute left-0 top-0 flex h-1/2 w-full flex-col items-center justify-center gap-5 py-5 md:h-full md:justify-start md:py-10">
+          <h2 class="w-[70%] text-balance text-center font-titanOne text-[clamp(30px,2.5vw,35px)] uppercase leading-[clamp(30px,2.5vw,35px)] md:w-full md:text-left">
+            TRY SAMPLE PACKS
+          </h2>
+          <a href="{{ all_products['adult-turkey-dog-sample-starter-pack'].url }}" class="btn-cta">
+            shop sample packs
+          </a>
+        </div>
       </div>
     </div>
   </section>
