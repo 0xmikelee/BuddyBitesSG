@@ -2200,6 +2200,10 @@ video {
   top: 100%;
 }
 
+.top-\[calc\(100\%\+16px\)\]{
+  top: calc(100% + 16px);
+}
+
 .z-0{
   z-index: 0;
 }
@@ -3752,6 +3756,10 @@ video {
 
 .rounded-xl{
   border-radius: 0.75rem;
+}
+
+.rounded-\[5px\]{
+  border-radius: 5px;
 }
 
 .rounded-bl-\[40px\]{

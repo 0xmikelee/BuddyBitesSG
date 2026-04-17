@@ -44,7 +44,7 @@
       "title": "Rewards"
     },
     "shop_cat": {
-      "title": "Cat",
+      "title": "Shop Cat",
       "kibbles": {
         "title": "Kibbles",
         "options": {
@@ -55,7 +55,7 @@
       }
     },
     "shop_dog": {
-      "title": "Dog",
+      "title": "Shop Dog",
       "kibbles": {
         "title": "Kibbles",
         "options": {

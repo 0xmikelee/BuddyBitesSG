@@ -104,12 +104,12 @@
         <div class="group relative">
           {% comment %} Shop Link {% endcomment %}
           <a href="{{ all_products['adult-turkey-dry-dog-food'].url }}" id="shopLink">
-            <div class="rounded-full bg-[#98c9eb] px-5 py-2">
+            <div class="rounded-[5px] bg-[#98c9eb] px-5 py-2">
               <p class="text-[16px] font-light uppercase text-white">{{ 'navbar.shop_dog.title' | t }}</p>
             </div>
           </a>
           {% comment %} Shop MegaMenu {% endcomment %}
-          <div class="absolute left-0 top-[calc(100%+20px)] hidden before:absolute before:left-0 before:top-[-25px] before:block before:h-[25px] before:w-full before:bg-transparent before:content-[''] md:group-hover:block">
+          <div class="absolute left-0 top-[calc(100%+16px)] hidden before:absolute before:left-0 before:top-[-25px] before:block before:h-[25px] before:w-full before:bg-transparent before:content-[''] md:group-hover:block">
             <div
               id="shopMegaMenu"
               class="grid h-[350px] w-[clamp(1100px,80vw,1200px)] grid-cols-[20%_1fr] overflow-hidden rounded-bl-[40px] rounded-br-[40px]"
@@ -455,12 +455,12 @@
         {% comment %}
           <div class="group relative">
             <a href="{{ all_products['adult-salmon-dry-cat-food'].url }}" id="shopCatLink">
-              <div class="rounded-full bg-[#98c9eb] px-5 py-2">
+              <div class="rounded-[5px] bg-[#98c9eb] px-5 py-2">
                 <p class="text-[16px] font-light uppercase text-white">{{ 'navbar.shop_cat.title' | t }}</p>
               </div>
             </a>
             {% comment %} Shop Cat MegaMenu {% endcomment %}
-            <div class="absolute left-0 top-[calc(100%+20px)] hidden h-full w-[clamp(900px,80vw,1200px)] before:absolute before:left-0 before:top-[-25px] before:block before:h-[25px] before:w-full before:bg-transparent before:content-[''] md:-translate-x-[10%] md:group-hover:block">
+            <div class="absolute left-0 top-[calc(100%+16px)] hidden h-full w-[clamp(900px,80vw,1200px)] before:absolute before:left-0 before:top-[-25px] before:block before:h-[25px] before:w-full before:bg-transparent before:content-[''] md:-translate-x-[10%] md:group-hover:block">
               <div
                 id="shopCatMegaMenu"
                 class="grid grid-cols-3 gap-3 overflow-hidden rounded-bl-[40px] rounded-br-[40px] bg-[#98c9eb] px-6 py-4"
@@ -511,12 +511,12 @@
         {% comment %} Learn Link {% endcomment %}
         <div class="group relative">
           <button href="" id="learnLink">
-            <p class="rounded-full px-5 py-2 text-[16px] font-light uppercase text-white hover:bg-[#98c9eb]">
+            <p class="rounded-[5px] px-5 py-2 text-[16px] font-light uppercase text-white hover:bg-[#98c9eb]">
               {{ 'navbar.learn_more.title' | t }}
             </p>
           </button>
           {% comment %} Learn MegaMenu {% endcomment %}
-          <div class="absolute left-0 top-[calc(100%+20px)] hidden h-full w-[clamp(900px,80vw,1200px)] before:absolute before:left-0 before:top-[-25px] before:block before:h-[25px] before:w-full before:bg-transparent before:content-[''] md:-translate-x-[10%] md:group-hover:block">
+          <div class="absolute left-0 top-[calc(100%+16px)] hidden h-full w-[clamp(900px,80vw,1200px)] before:absolute before:left-0 before:top-[-25px] before:block before:h-[25px] before:w-full before:bg-transparent before:content-[''] md:-translate-x-[10%] md:group-hover:block">
             <div
               id="learnMegaMenu"
               class="grid grid-cols-5 gap-3 overflow-hidden rounded-bl-[40px] rounded-br-[40px] bg-[#98c9eb] px-6 py-4"
@@ -606,7 +606,7 @@
         </div>
         {% comment %} Subscribe Link {% endcomment %}
         <a href="{{ pages['subscription'].url }}">
-          <p class="rounded-full px-5 py-2 text-[16px] font-light uppercase text-white hover:bg-[#98c9eb]">
+          <p class="rounded-[5px] px-5 py-2 text-[16px] font-light uppercase text-white hover:bg-[#98c9eb]">
             {{ 'navbar.subscribe' | t }}
           </p>
         </a>
@@ -615,25 +615,25 @@
         <div class="flex items-center justify-center gap-5">
           {% comment %}
             <a href="{{ pages.store-locator.url }}">
-              <p class="rounded-full px-5 py-2 text-[16px] font-light uppercase text-white hover:bg-[#98c9eb]">
+              <p class="rounded-[5px] px-5 py-2 text-[16px] font-light uppercase text-white hover:bg-[#98c9eb]">
                 {{ 'navbar.stores' | t }}
               </p>
             </a>
           {% endcomment %}
           <a href="{{ pages.quiz.url }}">
-            <p class="rounded-full px-5 py-2 text-[16px] font-light uppercase text-white hover:bg-[#98c9eb]">
+            <p class="rounded-[5px] px-5 py-2 text-[16px] font-light uppercase text-white hover:bg-[#98c9eb]">
               {{ 'navbar.quiz' | t }}
             </p>
           </a>
           {% comment %}
             <a href="{{ all_products['adult-turkey-dog-sample-starter-pack'].url }}">
-              <p class="rounded-full px-5 py-2 text-[16px] font-light uppercase text-white hover:bg-[#98c9eb]">
+              <p class="rounded-[5px] px-5 py-2 text-[16px] font-light uppercase text-white hover:bg-[#98c9eb]">
                 {{ 'navbar.samples' | t }}
               </p>
             </a>
           {% endcomment %}
           <a href="{{ pages.loyalty-program.url }}">
-            <p class="rounded-full px-5 py-2 text-[16px] font-light uppercase text-white hover:bg-[#98c9eb]">
+            <p class="rounded-[5px] px-5 py-2 text-[16px] font-light uppercase text-white hover:bg-[#98c9eb]">
               {{ 'navbar.loyalty_program.title' | t }}
             </p>
           </a>
