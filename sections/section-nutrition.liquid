@@ -1,20 +1,25 @@
-<main class="bg-[#fbf3df] font-foundersGrotesk text-[#173C6A]">
+<main class="bg-[#FCF9F1] font-foundersGrotesk text-[#173C6A]">
   <section class="relative">
     <img
       src="{{ 'nutrition_hero.png' | file_img_url: 'master' }}"
       alt="Nutrition Hero Image"
-      class="w-full object-cover"
+      class="hidden w-full object-cover md:block"
     >
-    <div class="container absolute left-1/2 top-1/2 z-10 flex h-[40%] w-auto -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center lg:h-full">
-      <h1 class="text-center text-[20px] text-white en:font-titanOne lg:text-[clamp(50px,5.5vw,60px)]">
+    <img
+      src="{{ 'nutrition_hero_mobile.png' | file_img_url: 'master' }}"
+      alt="Nutrition Hero Image"
+      class="block w-full object-cover md:hidden"
+    >
+    <div class="container absolute left-1/2 top-0 z-10 flex w-[60%] -translate-x-1/2 translate-y-[70px] flex-col items-center justify-center md:top-1/2 md:h-[40%] md:w-auto md:-translate-y-1/2 lg:h-full">
+      <h1 class="text-center text-[40px] uppercase leading-[44px] text-white en:font-titanOne md:text-[clamp(50px,5.5vw,60px)] md:leading-[clamp(50px,5.5vw,60px)]">
         Only the good stuff
       </h1>
     </div>
   </section>
-  <section class="py-5 md:py-10">
-    <div class="container flex flex-col items-center justify-center gap-5">
+  <section class="px-5 py-5 md:px-0 md:py-10">
+    <div class="container flex flex-col items-center justify-center gap-10">
       <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
-        <p class="text-centermd:text-left text-balance text-[16px] font-light">
+        <p class="text-balance text-center text-[16px] font-light md:text-left">
           At Buddy Bites, great nutrition starts with great ingredients. We use fresh proteins and vegetables, and
           naturally functional superfoods sourced from trusted regions around the world. Each recipe is thoughtfully
           made with prebiotics and Omega‑rich ingredients to support healthy digestion, shiny coats, strong teeth, and
@@ -25,76 +30,183 @@
         <div class="swiper-wrapper">
           {% for ingredient in shop.metaobjects.premium_ingredients.values %}
             <div class="swiper-slide">
-              <div class="flex h-[230px] flex-col items-start justify-between gap-2">
+              <div class="flex h-[230px] flex-col items-start justify-start gap-2">
                 <img
                   src="{{ ingredient.image | image_url: width: 150 }}"
                   alt="{{ ingredient.name }}"
                   class="rounded-[20px] object-cover"
                 >
-                <div class="flex h-[230px] flex-col items-start justify-end gap-2">
+                <div class="flex h-full flex-col items-start justify-end gap-2">
                   <p class="text-[14px] font-normal text-[#A3A3A3]">{{ ingredient.key_benefit }}</p>
                   <p class=" text-[14px] font-semibold">{{ ingredient.name }}</p>
-                  <p class=" text-[14px] font-normal">{{ ingredient.content }}</p>
+                  <p class=" text-balance text-[14px] font-normal">{{ ingredient.content }}</p>
                 </div>
               </div>
             </div>
           {% endfor %}
         </div>
+        <div class="swiper-pagination"></div>
       </div>
     </div>
   </section>
-  <section class="py-5 md:py-10">
-    <div class="container relative">
+  <section class="px-5 py-5 md:px-0 md:py-10">
+    <div class="container relative hidden md:block">
       <img
-        src="{{ 'benefits_of_buddy_bites.png' | file_img_url: 'master' }}"
-        alt="Nutrition Benefits"
-        class="w-full object-cover"
+        src="{{ 'benefits_of_buddy_bites_bg.png' | file_img_url: 'master' }}"
+        alt="Benefits of Buddy Bites Background"
+        class="w-full overflow-hidden rounded-[20px] object-cover"
       >
-      <div class="absolute left-1/2 top-0 z-10 flex w-full -translate-x-1/2 translate-y-1/4 flex-col items-center justify-center">
+      <div class="absolute left-1/2 top-0 z-10 flex h-full w-full -translate-x-1/2 flex-col items-center justify-center gap-[70px]">
         <h2 class="w-full text-center text-[30px] uppercase text-[#193C6B] en:font-titanOne md:text-[clamp(40px,4.1vw,45px)]">
           Benefits of Buddy Bites
         </h2>
-        <div class="absolute h-full w-full">
-          <div class="absolute flex w-[300px] flex-col items-start justify-start gap-2 rounded-[10px] bg-white p-4 md:left-[clamp(85px,5vw,90px)] md:top-[clamp(190px,12vw,200px)]">
-            <div class="flex items-start justify-start gap-2">
-              <div class="aspect-square w-[10px] rounded-full bg-[#193C6A]"></div>
-              <p class="inline text-[14px] font-semibold leading-[14px]">Combination of Prebiotics</p>
+        <div class="grid w-[70%] grid-cols-[0.7fr_1fr_0.7fr] gap-7">
+          <div class="flex flex-col justify-between gap-2">
+            <div class="flex translate-x-[40px] flex-col items-start justify-start gap-2 rounded-[10px] bg-white p-4">
+              <div class="flex items-start justify-start gap-2">
+                <div class="aspect-square w-[10px] rounded-full bg-[#193C6A]"></div>
+                <p class="inline text-[14px] font-semibold leading-[14px]">Combination of Prebiotics</p>
+              </div>
+              <p class="w-full text-[14px] font-normal">Taking gut health seriously</p>
             </div>
-            <p class="w-full text-[14px] font-normal">Taking gut health seriously</p>
+            <div class="flex flex-col items-start justify-start gap-2 rounded-[10px] bg-white p-4">
+              <div class="flex items-start justify-start gap-2">
+                <div class="aspect-square w-[10px] rounded-full bg-[#193C6A]"></div>
+                <p class="inline text-[14px] font-semibold leading-[14px]">Weight Control</p>
+              </div>
+              <p class="w-full text-[14px] font-normal">Curated feeding for your pet's health</p>
+            </div>
+            <div class="flex translate-x-[40px] flex-col items-start justify-start gap-2 rounded-[10px] bg-white p-4">
+              <div class="flex items-start justify-start gap-2">
+                <div class="aspect-square w-[10px] rounded-full bg-[#193C6A]"></div>
+                <p class="inline text-[14px] font-semibold leading-[14px]">All Kibble Size</p>
+              </div>
+              <p class="w-full text-[14px] font-normal">There’s a recipe for every pup</p>
+            </div>
+            <div></div>
           </div>
-          <div class="absolute flex w-[300px] flex-col items-start justify-start gap-2 rounded-[10px] bg-white p-4 md:left-[clamp(85px,5vw,90px)] md:top-[clamp(490px,30vw,500px)]">
-            <div class="flex items-start justify-start gap-2">
-              <div class="aspect-square w-[10px] rounded-full bg-[#193C6A]"></div>
-              <p class="inline text-[14px] font-semibold leading-[14px]">All Kibble Size</p>
+          <div class="flex flex-col items-center justify-start gap-2">
+            <img
+              src="{{ 'benefits_of_buddy_bites_bowl.png' | file_img_url: 'master' }}"
+              alt="Benefits of Buddy Bites Bowl"
+              class="w-full object-cover"
+            >
+            <div class="flex w-[230px] flex-col items-start justify-start gap-2 rounded-[10px] bg-white p-4">
+              <div class="flex items-start justify-start gap-2">
+                <div class="aspect-square w-[10px] rounded-full bg-[#193C6A]"></div>
+                <p class="inline text-[14px] font-semibold leading-[14px]">Added Omega 3 & 6</p>
+              </div>
+              <p class="w-full text-[14px] font-normal">Supporting healthy skin & coat</p>
             </div>
-            <p class="w-full text-[14px] font-normal">There’s a recipe for every pup</p>
           </div>
-          <div class="absolute flex w-[300px] flex-col items-start justify-start gap-2 rounded-[10px] bg-white p-4 md:right-[clamp(85px,5vw,90px)] md:top-[clamp(140px,10vw,150px)]">
-            <div class="flex items-start justify-start gap-2">
-              <div class="aspect-square w-[10px] rounded-full bg-[#193C6A]"></div>
-              <p class="inline text-[14px] font-semibold leading-[14px]">Real, Premium Quality</p>
+          <div class="flex flex-col justify-between gap-2">
+            <div class="flex -translate-x-[40px] flex-col items-start justify-start gap-2 rounded-[10px] bg-white p-4">
+              <div class="flex items-start justify-start gap-2">
+                <div class="aspect-square w-[10px] rounded-full bg-[#193C6A]"></div>
+                <p class="inline text-[14px] font-semibold leading-[14px]">Real, Premium Quality</p>
+              </div>
+              <p class="w-full text-[14px] font-normal">Made with 100% human-grade ingredients</p>
             </div>
-            <p class="w-full text-[14px] font-normal">Made with 100% human-grade ingredients</p>
+            <div class="flex flex-col items-start justify-start gap-2 rounded-[10px] bg-white p-4">
+              <div class="flex items-start justify-start gap-2">
+                <div class="aspect-square w-[10px] rounded-full bg-[#193C6A]"></div>
+                <p class="inline text-[14px] font-semibold leading-[14px]">Dental Care</p>
+              </div>
+              <p class="w-full text-[14px] font-normal">Promote health teeth and gums</p>
+            </div>
+            <div class="flex -translate-x-[40px] flex-col items-start justify-start gap-2 rounded-[10px] bg-white p-4">
+              <div class="flex items-start justify-start gap-2">
+                <div class="aspect-square w-[10px] rounded-full bg-[#193C6A]"></div>
+                <p class="inline text-[14px] font-semibold leading-[14px]">Fresh Novel Proteins</p>
+              </div>
+              <p class="w-full text-[14px] font-normal">Protein-rich, learn and clean</p>
+            </div>
+            <div></div>
           </div>
-          <div class="absolute flex w-[300px] flex-col items-start justify-start gap-2 rounded-[10px] bg-white p-4 md:right-[clamp(85px,5vw,90px)] md:top-[clamp(320px,20vw,330px)]">
-            <div class="flex items-start justify-start gap-2">
-              <div class="aspect-square w-[10px] rounded-full bg-[#193C6A]"></div>
-              <p class="inline text-[14px] font-semibold leading-[14px]">Trusted by Veterinarians</p>
+        </div>
+      </div>
+    </div>
+    <div class="container relative block md:hidden">
+      <img
+        src="{{ 'benefits_of_buddy_bites_mobile.png' | file_img_url: 'master' }}"
+        alt="Nutrition Benefits"
+        class="w-full object-cover"
+      >
+      <div class="absolute left-1/2 top-0 z-10 flex w-full -translate-x-1/2 flex-col items-center justify-center gap-7 py-7">
+        <h2 class="w-3/5 text-center text-[24px] uppercase leading-[24px] text-[#193C6B] en:font-titanOne">
+          Benefits of Buddy Bites
+        </h2>
+        <div class="swiper swiper-benefits-mobile">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="mx-auto flex w-[70%] flex-col items-start justify-start gap-2 rounded-[10px] bg-white p-4">
+                <div class="flex items-start justify-start gap-2">
+                  <div class="aspect-square w-[10px] rounded-full bg-[#193C6A]"></div>
+                  <p class="inline text-[14px] font-semibold leading-[14px]">Combination of Prebiotics</p>
+                </div>
+                <p class="w-full text-[14px] font-normal">Taking gut health seriously</p>
+              </div>
             </div>
-            <p class="w-full text-[14px] font-normal">Lorem ipsum,lorem ipsum lorem ipsum</p>
-          </div>
-          <div class="absolute flex w-[300px] flex-col items-start justify-start gap-2 rounded-[10px] bg-white p-4 md:right-[clamp(85px,5vw,90px)] md:top-[clamp(500px,31vw,510px)]">
-            <div class="flex items-start justify-start gap-2">
-              <div class="aspect-square w-[10px] rounded-full bg-[#193C6A]"></div>
-              <p class="inline text-[14px] font-semibold leading-[14px]">Added Omega 3 & 6</p>
+            <div class="swiper-slide">
+              <div class="mx-auto flex w-[70%] flex-col items-start justify-start gap-2 rounded-[10px] bg-white p-4">
+                <div class="flex items-start justify-start gap-2">
+                  <div class="aspect-square w-[10px] rounded-full bg-[#193C6A]"></div>
+                  <p class="inline text-[14px] font-semibold leading-[14px]">Weight Control</p>
+                </div>
+                <p class="w-full text-[14px] font-normal">Curated feeding for your pet's health</p>
+              </div>
             </div>
-            <p class="w-full text-[14px] font-normal">Supporting healthy skin & coat</p>
+            <div class="swiper-slide">
+              <div class="mx-auto flex w-[70%] flex-col items-start justify-start gap-2 rounded-[10px] bg-white p-4">
+                <div class="flex items-start justify-start gap-2">
+                  <div class="aspect-square w-[10px] rounded-full bg-[#193C6A]"></div>
+                  <p class="inline text-[14px] font-semibold leading-[14px]">All Kibble Size</p>
+                </div>
+                <p class="w-full text-[14px] font-normal">There’s a recipe for every pup</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="mx-auto flex w-[70%] flex-col items-start justify-start gap-2 rounded-[10px] bg-white p-4">
+                <div class="flex items-start justify-start gap-2">
+                  <div class="aspect-square w-[10px] rounded-full bg-[#193C6A]"></div>
+                  <p class="inline text-[14px] font-semibold leading-[14px]">Real, Premium Quality</p>
+                </div>
+                <p class="w-full text-[14px] font-normal">Made with 100% human-grade ingredients</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="mx-auto flex w-[70%] flex-col items-start justify-start gap-2 rounded-[10px] bg-white p-4">
+                <div class="flex items-start justify-start gap-2">
+                  <div class="aspect-square w-[10px] rounded-full bg-[#193C6A]"></div>
+                  <p class="inline text-[14px] font-semibold leading-[14px]">Dental Care</p>
+                </div>
+                <p class="w-full text-[14px] font-normal">Promote health teeth and gums</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="mx-auto flex w-[70%] flex-col items-start justify-start gap-2 rounded-[10px] bg-white p-4">
+                <div class="flex items-start justify-start gap-2">
+                  <div class="aspect-square w-[10px] rounded-full bg-[#193C6A]"></div>
+                  <p class="inline text-[14px] font-semibold leading-[14px]">Fresh Novel Proteins</p>
+                </div>
+                <p class="w-full text-[14px] font-normal">Protein-rich, learn and clean</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="mx-auto flex w-[70%] flex-col items-start justify-start gap-2 rounded-[10px] bg-white p-4">
+                <div class="flex items-start justify-start gap-2">
+                  <div class="aspect-square w-[10px] rounded-full bg-[#193C6A]"></div>
+                  <p class="inline text-[14px] font-semibold leading-[14px]">Added Omega 3 & 6</p>
+                </div>
+                <p class="w-full text-[14px] font-normal">Supporting healthy skin & coat</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <section class="py-5 md:py-10">
+  <section class="px-5 py-5 md:px-0 md:py-10">
     <div class="container flex w-full flex-col items-center justify-center gap-7">
       <div class="flex w-full flex-col items-center justify-center gap-2">
         <h2 class="text-center text-[30px] uppercase text-[#193C6B] en:font-titanOne md:text-[clamp(40px,4.1vw,45px)]">
@@ -120,10 +232,10 @@
                 <img
                   src="{{ 'lamb-full-image.png' | file_img_url: 'master' }}"
                   alt="Lamb Recipe"
-                  class="max-h-[230px] w-full object-cover"
+                  class="max-h-[262.39px] w-full object-cover"
                 >
               </div>
-              <div class="flex min-h-[128px] flex-col items-center justify-start p-4">
+              <div class="flex min-h-[128px] w-full flex-col items-center justify-start p-4">
                 <p class="text-[16px] font-bold">Lamb Recipe</p>
                 <p class="text-balance text-center text-[16px] font-normal">
                   Supports muscle growth and overall Health
@@ -140,10 +252,10 @@
                 <img
                   src="{{ 'duck-full-image.png' | file_img_url: 'master' }}"
                   alt="Duck Recipe"
-                  class="max-h-[230px] w-full object-cover"
+                  class="max-h-[262.39px] w-full object-cover"
                 >
               </div>
-              <div class="flex min-h-[128px] flex-col items-center justify-start p-4">
+              <div class="flex min-h-[128px] w-full flex-col items-center justify-start p-4">
                 <p class="text-[16px] font-bold">Duck Recipe</p>
                 <p class="text-balance text-center text-[16px] font-normal">
                   High Quality Hypoallergenic Protein that is Gentle on Sensitive Stomachs
@@ -164,10 +276,10 @@
                 <img
                   src="{{ 'salmon-full-image.png' | file_img_url: 'master' }}"
                   alt="Salmon Recipe"
-                  class="max-h-[230px] w-full object-cover"
+                  class="max-h-[262.39px] w-full object-cover"
                 >
               </div>
-              <div class="flex min-h-[128px] flex-col items-center justify-start p-4">
+              <div class="flex min-h-[128px] w-full flex-col items-center justify-start p-4">
                 <p class="text-[16px] font-bold">Salmon Recipe</p>
                 <p class="text-balance text-center text-[16px] font-normal">
                   High in Omega-3s that supports skin, coat & joint health
@@ -188,10 +300,10 @@
                 <img
                   src="{{ 'turkey-full-image.png' | file_img_url: 'master' }}"
                   alt="Turkey Recipe"
-                  class="max-h-[230px] w-full object-cover"
+                  class="max-h-[262.39px] w-full object-cover"
                 >
               </div>
-              <div class="flex min-h-[128px] flex-col items-center justify-start p-4">
+              <div class="flex min-h-[128px] w-full flex-col items-center justify-start p-4">
                 <p class="text-[16px] font-bold">Turkey Recipe</p>
                 <p class="text-balance text-center text-[16px] font-normal">
                   Lean turkey protein for strong, healthy muscles.
@@ -212,10 +324,10 @@
                 <img
                   src="{{ 'puppy-full-image.png' | file_img_url: 'master' }}"
                   alt="Puppy Recipe"
-                  class="max-h-[230px] w-full object-cover"
+                  class="max-h-[262.39px] w-full object-cover"
                 >
               </div>
-              <div class="flex min-h-[128px] flex-col items-center justify-start p-4">
+              <div class="flex min-h-[128px] w-full flex-col items-center justify-start p-4">
                 <p class="text-[16px] font-bold">Puppy Recipe</p>
                 <p class="text-balance text-center text-[16px] font-normal">
                   Chicken builds Strong Bodies with its Lean, Digestible Protein
@@ -224,11 +336,12 @@
             </div>
           </div>
         </div>
+        <div class="swiper-pagination"></div>
       </div>
       <a href="{{ all_products['adult-turkey-dry-dog-food'].url }}" class="btn-cta">Explore Kibbles</a>
     </div>
   </section>
-  <section class="py-5 md:py-10">
+  <section class="px-5 py-5 md:px-0 md:py-10">
     <div class="container grid grid-cols-1 gap-4 rounded-[20px] bg-[#B9E3FF] p-4 md:grid-cols-2 md:p-8">
       <img src="{{ 'tell-us.png' | file_img_url: 'master' }}" alt="Tell us about your pet" class="w-full object-cover">
       <div class="flex w-full flex-col items-start justify-center gap-5">
@@ -254,8 +367,8 @@
                 <div class="flex h-full flex-col items-center justify-center">1</div>
               </div>
               <div class="flex w-[90%] flex-col items-start justify-start gap-2">
-                <p class="text-[16px] font-bold">Tell us about your pet</p>
-                <p class="text-[16px] font-normal">
+                <p class="text-[16px] font-medium">Tell us about your pet</p>
+                <p class="text-[16px] font-normal leading-[20px]">
                   Answer a few questions to determine what is the best meal for your pet!
                 </p>
               </div>
@@ -265,8 +378,8 @@
                 <div class="flex h-full flex-col items-center justify-center">2</div>
               </div>
               <div class="flex w-[90%] flex-col items-start justify-start gap-2">
-                <p class="text-[16px] font-bold">Customize your delivery timing</p>
-                <p class="text-[16px] font-normal">
+                <p class="text-[16px] font-medium">Customize your delivery timing</p>
+                <p class="text-[16px] font-normal leading-[20px]">
                   Enjoy the flexibility to skip or cancel your subscription at any time.
                 </p>
               </div>
@@ -276,8 +389,8 @@
                 <div class="flex h-full flex-col items-center justify-center">3</div>
               </div>
               <div class="flex w-[90%] flex-col items-start justify-start gap-2">
-                <p class="text-[16px] font-bold">Enjoy!</p>
-                <p class="text-[16px] font-normal">
+                <p class="text-[16px] font-medium">Enjoy!</p>
+                <p class="text-[16px] font-normal leading-[20px]">
                   From tasty kibbles to scrumptious toppers and treats, your pet’s taste buds will be thrilled!
                 </p>
               </div>
@@ -294,7 +407,7 @@
       </div>
     </div>
   </section>
-  <section class="py-5 md:py-10">
+  <section class="px-5 py-5 md:px-0 md:py-10">
     <div class="container flex w-full flex-col items-center justify-center gap-5">
       <h2 class="text-center text-[30px] uppercase text-[#193C6B] en:font-titanOne md:text-[clamp(40px,4.1vw,45px)]">
         OUR TOP NUTRIENT - DENSE PICKS
@@ -308,8 +421,8 @@
                 alt="Dog Salmon Kibbles"
                 class="w-full rounded-[20px] object-cover"
               >
-              <div class="flex w-full flex-col items-start justify-center gap-2">
-                <div class="flex w-full justify-between gap-2 text-[14px] font-semibold">
+              <div class="flex w-full flex-col items-start justify-center gap-2 text-[18px]">
+                <div class="flex w-full justify-between gap-2 font-semibold">
                   <p>Adult Kibbles</p>
                   <p>$32.80</p>
                 </div>
@@ -327,8 +440,8 @@
                 alt="Dog Beef Treats"
                 class="w-full rounded-[20px] object-cover"
               >
-              <div class="flex w-full flex-col items-start justify-center gap-2">
-                <div class="flex w-full justify-between gap-2 text-[14px] font-semibold">
+              <div class="flex w-full flex-col items-start justify-center gap-2 text-[18px]">
+                <div class="flex w-full justify-between gap-2 font-semibold">
                   <p>Air-Dried Dog Treats</p>
                   <p>$13.50</p>
                 </div>
@@ -346,8 +459,8 @@
                 alt="Dog Beef Toppers"
                 class="w-full rounded-[20px] object-cover"
               >
-              <div class="flex w-full flex-col items-start justify-center gap-2">
-                <div class="flex w-full justify-between gap-2 text-[14px] font-semibold">
+              <div class="flex w-full flex-col items-start justify-center gap-2 text-[18px]">
+                <div class="flex w-full justify-between gap-2 font-semibold">
                   <p>Fresh Toppers</p>
                   <p>$7.20</p>
                 </div>
@@ -359,15 +472,26 @@
             </div>
           </div>
         </div>
+        <div class="swiper-pagination"></div>
       </div>
     </div>
   </section>
 </main>
 
 {% style %}
+  .swiper {
+    padding-bottom: 2rem;
+  }
+
+  .swiper-pagination {
+    position: relative !important;
+    margin-top: 1rem;
+  }
+
   .swiper-raw-ingredients,
   .swiper-kibbles,
-  .swiper-fav-dog {
+  .swiper-fav-dog,
+  .swiper-benefits-mobile {
     width: 100%;
     height: 100%;
     margin: 0 auto;
@@ -381,38 +505,56 @@
       slidesPerView: 1,
       spaceBetween: 16,
       loop: true,
-      autoplay: {
-        delay: 2500,
-      },
       breakpoints: {
-        320: { slidesPerView: 1, spaceBetween: 16 },
+        320: { slidesPerView: 2, spaceBetween: 16 },
         768: { slidesPerView: 3, spaceBetween: 16 },
         1024: { slidesPerView: 5, spaceBetween: 16 },
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        dynamicBullets: true,
+        clickable: true,
       },
     });
     const swiperKibbles = new Swiper('.swiper-kibbles', {
       slidesPerView: 1,
       spaceBetween: 16,
       loop: true,
-      autoplay: {
-        delay: 2500,
-      },
       breakpoints: {
         320: { slidesPerView: 1, spaceBetween: 16 },
         768: { slidesPerView: 3, spaceBetween: 16 },
         1024: { slidesPerView: 5, spaceBetween: 16 },
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        dynamicBullets: true,
+        clickable: true,
       },
     });
     const swiperFavDog = new Swiper('.swiper-fav-dog', {
       slidesPerView: 1,
       spaceBetween: 16,
       loop: true,
-      autoplay: {
-        delay: 2500,
-      },
       breakpoints: {
         320: { slidesPerView: 1, spaceBetween: 16 },
         1024: { slidesPerView: 3, spaceBetween: 16 },
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        dynamicBullets: true,
+        clickable: true,
+      },
+    });
+    const swiperBenefitsMobile = new Swiper('.swiper-benefits-mobile', {
+      slidesPerView: 1,
+      spaceBetween: 16,
+      loop: true,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        320: { slidesPerView: 1, spaceBetween: 16 },
       },
     });
   });
