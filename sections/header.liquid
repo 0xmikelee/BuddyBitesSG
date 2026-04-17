@@ -97,15 +97,15 @@
 {% endjavascript %}
 
 {% comment %} Desktop Nav {% endcomment %}
-<div class="sticky hidden h-full w-full bg-[#193C6B] text-white lg:top-0 lg:z-20 lg:block">
-  <div class="container relative mx-auto px-10 py-5">
+<div class="sticky hidden h-full w-full bg-[#193C6B] font-foundersGrotesk text-white lg:top-0 lg:z-20 lg:block">
+  <div class="container relative mx-auto px-10 py-4">
     <div class="flex items-center justify-between">
       <div class="flex h-full items-center justify-start gap-5">
         <div class="group relative">
           {% comment %} Shop Link {% endcomment %}
           <a href="{{ all_products['adult-turkey-dry-dog-food'].url }}" id="shopLink">
             <div class="rounded-full bg-[#98c9eb] px-5 py-2">
-              <p class="text-[20px] font-light uppercase text-white en:font-museo">{{ 'navbar.shop_dog.title' | t }}</p>
+              <p class="text-[16px] font-light uppercase text-white">{{ 'navbar.shop_dog.title' | t }}</p>
             </div>
           </a>
           {% comment %} Shop MegaMenu {% endcomment %}
@@ -116,22 +116,22 @@
             >
               <div class="flex flex-col justify-between divide-y-[4px] divide-[#98c9eb]">
                 <a id="kibblesCategory" href="{{ all_products['adult-lamb-dry-dog-food'].url }}">
-                  <p class="bg-[#193C6B] py-7 text-center text-[20px] font-light uppercase text-white hover:bg-[#98c9eb] en:font-museo">
+                  <p class="bg-[#193C6B] py-7 text-center text-[20px] font-light uppercase text-white hover:bg-[#98c9eb]">
                     {{ 'navbar.shop_dog.kibbles.title' | t }}
                   </p>
                 </a>
                 <a id="treatsCategory" href="{{ all_products['beef-blueberry-air-dried-dog-treats'].url }}">
-                  <p class="bg-[#193C6B] py-7 text-center text-[20px] font-light uppercase text-white hover:bg-[#98c9eb] en:font-museo">
+                  <p class="bg-[#193C6B] py-7 text-center text-[20px] font-light uppercase text-white hover:bg-[#98c9eb]">
                     {{ 'navbar.shop_dog.treats.title' | t }}
                   </p>
                 </a>
                 <a id="toppersCategory" href="{{ all_products['dog-dog-fresh-toppers-chicken-vegetables'].url }}">
-                  <p class="bg-[#193C6B] py-7 text-center text-[20px] font-light uppercase text-white hover:bg-[#98c9eb] en:font-museo">
+                  <p class="bg-[#193C6B] py-7 text-center text-[20px] font-light uppercase text-white hover:bg-[#98c9eb]">
                     {{ 'navbar.shop_dog.toppers.title' | t }}
                   </p>
                 </a>
                 <a id="merchandiseCategory" href="{{ collections.merchandise.url }}">
-                  <p class="bg-[#193C6B] py-7 text-center text-[20px] font-light uppercase text-white hover:bg-[#98c9eb] en:font-museo">
+                  <p class="bg-[#193C6B] py-7 text-center text-[20px] font-light uppercase text-white hover:bg-[#98c9eb]">
                     {{ 'navbar.shop_dog.merchandise.title' | t }}
                   </p>
                 </a>
@@ -456,7 +456,7 @@
           <div class="group relative">
             <a href="{{ all_products['adult-salmon-dry-cat-food'].url }}" id="shopCatLink">
               <div class="rounded-full bg-[#98c9eb] px-5 py-2">
-                <p class="text-[20px] font-light uppercase text-white en:font-museo">{{ 'navbar.shop_cat.title' | t }}</p>
+                <p class="text-[16px] font-light uppercase text-white">{{ 'navbar.shop_cat.title' | t }}</p>
               </div>
             </a>
             {% comment %} Shop Cat MegaMenu {% endcomment %}
@@ -511,7 +511,7 @@
         {% comment %} Learn Link {% endcomment %}
         <div class="group relative">
           <button href="" id="learnLink">
-            <p class="rounded-full px-5 py-2 text-[20px] font-light uppercase text-white hover:bg-[#98c9eb] en:font-museo">
+            <p class="rounded-full px-5 py-2 text-[16px] font-light uppercase text-white hover:bg-[#98c9eb]">
               {{ 'navbar.learn_more.title' | t }}
             </p>
           </button>
@@ -606,7 +606,7 @@
         </div>
         {% comment %} Subscribe Link {% endcomment %}
         <a href="{{ pages['subscription'].url }}">
-          <p class="rounded-full px-5 py-2 text-[20px] font-light uppercase text-white hover:bg-[#98c9eb] en:font-museo">
+          <p class="rounded-full px-5 py-2 text-[16px] font-light uppercase text-white hover:bg-[#98c9eb]">
             {{ 'navbar.subscribe' | t }}
           </p>
         </a>
@@ -615,25 +615,25 @@
         <div class="flex items-center justify-center gap-5">
           {% comment %}
             <a href="{{ pages.store-locator.url }}">
-              <p class="rounded-full px-5 py-2 text-[20px] font-light uppercase text-white hover:bg-[#98c9eb] en:font-museo">
+              <p class="rounded-full px-5 py-2 text-[16px] font-light uppercase text-white hover:bg-[#98c9eb]">
                 {{ 'navbar.stores' | t }}
               </p>
             </a>
           {% endcomment %}
           <a href="{{ pages.quiz.url }}">
-            <p class="rounded-full px-5 py-2 text-[20px] font-light uppercase text-white hover:bg-[#98c9eb] en:font-museo">
+            <p class="rounded-full px-5 py-2 text-[16px] font-light uppercase text-white hover:bg-[#98c9eb]">
               {{ 'navbar.quiz' | t }}
             </p>
           </a>
           {% comment %}
             <a href="{{ all_products['adult-turkey-dog-sample-starter-pack'].url }}">
-              <p class="rounded-full px-5 py-2 text-[20px] font-light uppercase text-white hover:bg-[#98c9eb] en:font-museo">
+              <p class="rounded-full px-5 py-2 text-[16px] font-light uppercase text-white hover:bg-[#98c9eb]">
                 {{ 'navbar.samples' | t }}
               </p>
             </a>
           {% endcomment %}
           <a href="{{ pages.loyalty-program.url }}">
-            <p class="rounded-full px-5 py-2 text-[20px] font-light uppercase text-white hover:bg-[#98c9eb] en:font-museo">
+            <p class="rounded-full px-5 py-2 text-[16px] font-light uppercase text-white hover:bg-[#98c9eb]">
               {{ 'navbar.loyalty_program.title' | t }}
             </p>
           </a>
@@ -661,13 +661,9 @@
     </div>
     <a href="{{ shop.url }}">
       <img
-        class="absolute left-1/2 top-1/2 w-[30px] -translate-x-1/2 -translate-y-1/2 lg:w-[50px]"
-        src="//buddybites.dog/cdn/shop/files/icon-dog_150x.png?v=1712659302"
+        class="absolute left-1/2 top-1/2 w-[40px] -translate-x-1/2 -translate-y-1/2 md:w-[60px]"
+        src="{{ 'buddy_bites_logo.png' | file_img_url: 'master' }}"
         alt="Buddy Bites HK"
-        style="width: 50px"
-        data-srcset="//buddybites.dog/cdn/shop/files/icon-dog_150x.png?v=1712659302 150w, //buddybites.dog/cdn/shop/files/icon-dog_300x.png?v=1712659302 300w, //buddybites.dog/cdn/shop/files/icon-dog_600x.png?v=1712659302 600w, //buddybites.dog/cdn/shop/files/icon-dog_900x.png?v=1712659302 900w, //buddybites.dog/cdn/shop/files/icon-dog_1200x.png?v=1712659302 1200w, //buddybites.dog/cdn/shop/files/icon-dog_1500x.png?v=1712659302 1500w, //buddybites.dog/cdn/shop/files/icon-dog_1800x.png?v=1712659302 1800w, //buddybites.dog/cdn/shop/files/icon-dog_2100x.png?v=1712659302 2100w"
-        sizes="50px"
-        srcset="//buddybites.dog/cdn/shop/files/icon-dog_150x.png?v=1712659302 150w, //buddybites.dog/cdn/shop/files/icon-dog_300x.png?v=1712659302 300w, //buddybites.dog/cdn/shop/files/icon-dog_600x.png?v=1712659302 600w, //buddybites.dog/cdn/shop/files/icon-dog_900x.png?v=1712659302 900w, //buddybites.dog/cdn/shop/files/icon-dog_1200x.png?v=1712659302 1200w, //buddybites.dog/cdn/shop/files/icon-dog_1500x.png?v=1712659302 1500w, //buddybites.dog/cdn/shop/files/icon-dog_1800x.png?v=1712659302 1800w, //buddybites.dog/cdn/shop/files/icon-dog_2100x.png?v=1712659302 2100w"
       >
     </a>
   </div>
@@ -675,7 +671,7 @@
 
 {% comment %} Mobile Nav {% endcomment %}
 <div class="relative block w-full bg-[#193C6B] text-white lg:hidden">
-  <div class="container mx-auto px-10 py-7">
+  <div class="container mx-auto px-10 py-5">
     <div class="flex items-center justify-between">
       <button id="mobileMenuButton" class="flex flex-col gap-1">
         <div class="h-[2px] w-5 rounded-full bg-white"></div>
@@ -699,13 +695,9 @@
     </div>
     <a href="{{ shop.url }}">
       <img
-        class="absolute left-1/2 top-1/2 w-[30px] -translate-x-1/2 -translate-y-1/2 lg:w-[50px]"
-        src="//buddybites.dog/cdn/shop/files/icon-dog_150x.png?v=1712659302"
+        class="absolute left-1/2 top-1/2 w-[50px] -translate-x-1/2 -translate-y-1/2"
+        src="{{ 'buddy_bites_logo.png' | file_img_url: 'master' }}"
         alt="Buddy Bites HK"
-        style="width: 50px"
-        data-srcset="//buddybites.dog/cdn/shop/files/icon-dog_150x.png?v=1712659302 150w, //buddybites.dog/cdn/shop/files/icon-dog_300x.png?v=1712659302 300w, //buddybites.dog/cdn/shop/files/icon-dog_600x.png?v=1712659302 600w, //buddybites.dog/cdn/shop/files/icon-dog_900x.png?v=1712659302 900w, //buddybites.dog/cdn/shop/files/icon-dog_1200x.png?v=1712659302 1200w, //buddybites.dog/cdn/shop/files/icon-dog_1500x.png?v=1712659302 1500w, //buddybites.dog/cdn/shop/files/icon-dog_1800x.png?v=1712659302 1800w, //buddybites.dog/cdn/shop/files/icon-dog_2100x.png?v=1712659302 2100w"
-        sizes="50px"
-        srcset="//buddybites.dog/cdn/shop/files/icon-dog_150x.png?v=1712659302 150w, //buddybites.dog/cdn/shop/files/icon-dog_300x.png?v=1712659302 300w, //buddybites.dog/cdn/shop/files/icon-dog_600x.png?v=1712659302 600w, //buddybites.dog/cdn/shop/files/icon-dog_900x.png?v=1712659302 900w, //buddybites.dog/cdn/shop/files/icon-dog_1200x.png?v=1712659302 1200w, //buddybites.dog/cdn/shop/files/icon-dog_1500x.png?v=1712659302 1500w, //buddybites.dog/cdn/shop/files/icon-dog_1800x.png?v=1712659302 1800w, //buddybites.dog/cdn/shop/files/icon-dog_2100x.png?v=1712659302 2100w"
       >
     </a>
   </div>
@@ -713,7 +705,7 @@
     <div class="relative z-10 flex flex-col divide-y-[1px] divide-[#98c9eb] rounded-bl-[40px] rounded-br-[40px] bg-[#193C6B]">
       <div class="flex flex-col">
         <div class="flex justify-between px-10 py-6" id="shopDogMobileDropdownBtn">
-          <p class="text-[18px] uppercase text-white en:font-museo">{{ 'navbar.shop_dog.title' | t }}</p>
+          <p class="text-[18px] uppercase text-white">{{ 'navbar.shop_dog.title' | t }}</p>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="35"
@@ -739,7 +731,7 @@
               alt="Kibbles"
               class="w-[100px]"
             >
-            <p class="text-[18px] text-white en:font-museo">{{ 'navbar.shop_dog.kibbles.title' | t }}</p>
+            <p class="text-[18px] text-white">{{ 'navbar.shop_dog.kibbles.title' | t }}</p>
           </a>
           <a
             href="{{ all_products['beef-blueberry-air-dried-dog-treats'].url }}"
@@ -750,7 +742,7 @@
               alt="Treats"
               class="w-[100px]"
             >
-            <p class="text-[18px] text-white en:font-museo">{{ 'navbar.shop_dog.treats.title' | t }}</p>
+            <p class="text-[18px] text-white">{{ 'navbar.shop_dog.treats.title' | t }}</p>
           </a>
           <a
             href="{{ all_products['dog-dog-fresh-toppers-chicken-vegetables'].url }}"
@@ -761,7 +753,7 @@
               alt="Toppers"
               class="w-[100px]"
             >
-            <p class="text-[18px] text-white en:font-museo">{{ 'navbar.shop_dog.toppers.title' | t }}</p>
+            <p class="text-[18px] text-white">{{ 'navbar.shop_dog.toppers.title' | t }}</p>
           </a>
           {% comment %}
             <a
@@ -773,7 +765,7 @@
                 alt="Merchadise"
                 class="w-[150px]"
               >
-              <p class="text-[18px] text-white en:font-museo">{{ 'navbar.shop_dog.samples.title' | t }}</p>
+              <p class="text-[18px] text-white">{{ 'navbar.shop_dog.samples.title' | t }}</p>
 
               <p class="absolute left-1/2 top-0 w-full -translate-x-1/2 rounded-3xl bg-red-500 px-3 text-center text-[12px] text-white">
                 {{ 'navbar.shop_dog.samples.discount' | t }}
@@ -789,14 +781,14 @@
               alt="Merchadise"
               class="w-[100px]"
             >
-            <p class="text-[18px] text-white en:font-museo">{{ 'navbar.shop_dog.merchandise.title' | t }}</p>
+            <p class="text-[18px] text-white">{{ 'navbar.shop_dog.merchandise.title' | t }}</p>
           </a>
         </div>
       </div>
       <div class="flex flex-col">
         {% comment %}
           <div class="flex justify-between px-10 py-6" id="shopCatMobileDropdownBtn">
-            <p class="text-[18px] uppercase text-white en:font-museo">{{ 'navbar.shop_cat.title' | t }}</p>
+            <p class="text-[18px] uppercase text-white">{{ 'navbar.shop_cat.title' | t }}</p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="35"
@@ -824,7 +816,7 @@
                 alt="Kibbles"
                 class="w-[100px]"
               >
-              <p class="text-[18px] text-white en:font-museo">{{ 'navbar.shop_cat.kibbles.options.salmon' | t }}</p>
+              <p class="text-[18px] text-white">{{ 'navbar.shop_cat.kibbles.options.salmon' | t }}</p>
             </a>
             <a
               href="{{ all_products['adult-chicken-dry-cat-food'].url }}"
@@ -835,7 +827,7 @@
                 alt="Kibbles"
                 class="w-[100px]"
               >
-              <p class="text-[18px] text-white en:font-museo">{{ 'navbar.shop_cat.kibbles.options.chicken' | t }}</p>
+              <p class="text-[18px] text-white">{{ 'navbar.shop_cat.kibbles.options.chicken' | t }}</p>
             </a>
             <a
               href="{{ all_products['kitten-chicken-dry-cat-food'].url }}"
@@ -846,14 +838,14 @@
                 alt="Kibbles"
                 class="w-[100px]"
               >
-              <p class="text-[18px] text-white en:font-museo">{{ 'navbar.shop_cat.kibbles.options.kitten' | t }}</p>
+              <p class="text-[18px] text-white">{{ 'navbar.shop_cat.kibbles.options.kitten' | t }}</p>
             </a>
           </div>
         {% endcomment %}
       </div>
       <div class="flex flex-col">
         <div class="flex justify-between px-10 py-6" id="learnMobileDropdownBtn">
-          <p class="text-[18px] uppercase text-white en:font-museo">{{ 'navbar.learn_more.title' | t }}</p>
+          <p class="text-[18px] uppercase text-white">{{ 'navbar.learn_more.title' | t }}</p>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="35"
@@ -868,43 +860,43 @@
         </div>
         <div class="hidden w-full flex-col divide-y-[1px] divide-[#98c9eb] bg-[#193C6B] pb-4" id="learnMobileDropdown">
           <a href="{{ pages.about-us.url }}" class="px-16 py-6">
-            <p class="text-[18px] text-white en:font-museo">{{ 'navbar.learn_more.options.about_us' | t }}</p>
+            <p class="text-[18px] text-white">{{ 'navbar.learn_more.options.about_us' | t }}</p>
           </a>
           <a href="{{ pages.nutrition.url }}" class="px-16 py-6">
-            <p class="text-[18px] text-white en:font-museo">{{ 'navbar.learn_more.options.nutrition' | t }}</p>
+            <p class="text-[18px] text-white">{{ 'navbar.learn_more.options.nutrition' | t }}</p>
           </a>
           <a href="{{ pages.faqs.url }}" class="px-16 py-6">
-            <p class="text-[18px] text-white en:font-museo">{{ 'navbar.learn_more.options.faqs' | t }}</p>
+            <p class="text-[18px] text-white">{{ 'navbar.learn_more.options.faqs' | t }}</p>
           </a>
           <a href="{{ pages.store-locator.url }}" class="px-16 py-6">
-            <p class="text-[18px] text-white en:font-museo">{{ 'navbar.learn_more.options.stores' | t }}</p>
+            <p class="text-[18px] text-white">{{ 'navbar.learn_more.options.stores' | t }}</p>
           </a>
           <a href="{{ blogs.lifestyle.url }}" class="px-16 py-6">
-            <p class="text-[18px] text-white en:font-museo">{{ 'navbar.learn_more.options.blog' | t }}</p>
+            <p class="text-[18px] text-white">{{ 'navbar.learn_more.options.blog' | t }}</p>
           </a>
           <a href="{{ pages.quiz.url }}" class="px-16 py-6">
-            <p class="text-[18px] text-white en:font-museo">{{ 'navbar.quiz' | t }}</p>
+            <p class="text-[18px] text-white">{{ 'navbar.quiz' | t }}</p>
           </a>
         </div>
       </div>
       <a href="{{ pages['subscription'].url }}" class="px-10 py-6">
-        <p class="text-[18px] uppercase text-white en:font-museo">{{ 'navbar.subscribe' | t }}</p>
+        <p class="text-[18px] uppercase text-white">{{ 'navbar.subscribe' | t }}</p>
       </a>
       {% comment %}
         <a href="{{ pages['buddy-bites-ambassador-min-chen'].url }}" class="px-10 py-6">
-          <p class="text-[18px] uppercase text-white en:font-museo">{{ 'navbar.learn_more.options.ambassador' | t }}</p>
+          <p class="text-[18px] uppercase text-white">{{ 'navbar.learn_more.options.ambassador' | t }}</p>
         </a>
       {% endcomment %}
       {% comment %}
         <a href="{{ pages['referral-candy'].url }}" class="px-10 py-6">
-          <p class="text-[18px] uppercase text-white en:font-museo">{{ 'navbar.refer' | t }}</p>
+          <p class="text-[18px] uppercase text-white">{{ 'navbar.refer' | t }}</p>
         </a>
       {% endcomment %}
       <a href="{{ pages['loyalty-program'].url }}" class="px-10 py-6">
-        <p class="text-[18px] uppercase text-white en:font-museo">{{ 'navbar.loyalty_program.title' | t }}</p>
+        <p class="text-[18px] uppercase text-white">{{ 'navbar.loyalty_program.title' | t }}</p>
       </a>
       <a href="{{ pages['store-locator'].url }}" class="px-10 py-6">
-        <p class="text-[18px] uppercase text-white en:font-museo">{{ 'navbar.stores' | t }}</p>
+        <p class="text-[18px] uppercase text-white">{{ 'navbar.stores' | t }}</p>
       </a>
     </div>
     <div class="absolute top-0 z-0 h-[100dvh] w-full bg-white/50" id="mobileDropdownOverlay"></div>
