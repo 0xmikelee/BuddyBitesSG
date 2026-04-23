@@ -2,11 +2,11 @@
   <!-- Hero -->
   <section>
     <div class="relative w-full">
-      <img src="{{ 'about-us-hero.png' | file_url }}" alt="About Us Hero" class="w-full object-cover">
-      <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 md:w-1/2 w-[70%]">
-        <h1 class="text-balance text-center text-[16px] leading-[18px] text-white md:text-[40px] md:leading-[42px]">
-          Buddy Bites redefines pet nutrition in through uncompromising quality, balanced science, and nourishment dogs
-          truly deserve.
+      <img src="{{ 'about-us-hero.png' | file_url }}" alt="About Us Hero" class="w-full object-cover hidden md:block">
+      <img src="{{ 'about-us-hero-mobile.png' | file_url }}" alt="About Us Hero" class="w-full object-cover block md:hidden">
+      <div class="absolute left-1/2 md:top-1/2 top-[30%] -translate-x-1/2 md:-translate-y-1/2 md:w-1/2 w-[70%]">
+        <h1 class="text-balance text-center font-titanOne uppercase text-[32px] leading-[34px] text-white md:text-[60px] md:leading-[62px]">
+          Our Story
         </h1>
       </div>
     </div>
@@ -33,7 +33,7 @@
             </p>
             <a
               href="{{ all_products['adult-turkey-dry-dog-food'].url }}"
-              class="rounded-full bg-[#173c6a] px-4 py-2 text-[14px] font-bold text-white md:text-[16px]"
+              class="rounded-full bg-[#173c6a] px-4 py-2 text-[14px] uppercase font-bold text-white md:text-[16px]"
               >Join the Pack</a
             >
           </div>
@@ -88,14 +88,14 @@
   </section>
   <section>
     <div class="container flex flex-col items-center gap-5 rounded-xl bg-[#173c6a] py-7 md:py-10">
-      <h2 class="text-center text-balance font-titanOne text-[18px] px-2 md:px-0 md:text-[clamp(1.5rem,3vw,2rem)] text-white">
+      <h2 class="text-center text-balance uppercase font-titanOne text-[18px] px-2 md:px-0 md:text-[clamp(1.5rem,3vw,2rem)] text-white">
         For every 2KG delivered, 1KG is donated
       </h2>
       <div class="els-cup-box" data-id="7086"></div>
       <p class="text-white md:text-[clamp(1rem,2vw,1.5rem)]">Meals Donated</p>
     </div>
   </section>
-  <section class="py-7 md:py-10">
+  <section class="py-7 md:py-10 md:px-4">
     <div class="container flex flex-col items-center gap-5 rounded-xl bg-[#B9E3FF] px-4 py-7 md:px-5 md:py-10">
       <h2 class="text-center font-titanOne text-[clamp(2rem,3.5vw,3rem)] uppercase text-[#173c6a]">
         Our Shelter Pawtners
@@ -138,7 +138,7 @@
       >
     </div>
   </section>
-  <section class="py-7 md:py-10">
+  <section class="py-7 md:py-10 md:px-4">
     <div class="container grid grid-cols-1 gap-5 md:grid-cols-2 md:px-0 px-4">
       <div class="flex flex-col md:order-1 order-2 items-start justify-between gap-5 rounded-xl bg-white p-5">
         <h2 class="font-titanOne text-[clamp(1.5rem,3vw,2.5rem)] uppercase text-[#173c6a]">ONLY THE GOOD STUFF</h2>
@@ -165,7 +165,7 @@
       >
     </div>
   </section>
-  <section class="py-7 md:py-10">
+  <section class="py-7 md:py-10 md:px-4">
     <div class="container grid grid-cols-1 gap-5 md:grid-cols-2 px-4 md:px-0">
       <img src="{{ 'about-us-sustainability.png' | file_url }}" alt="About Us Sustainability" class="rounded-xl object-cover" />
       <div class="flex flex-col items-start justify-between gap-5 rounded-xl bg-white p-5">
