@@ -1,0 +1,181 @@
+<main class="bg-[#FCF9F1] font-foundersGrotesk text-[#193C6A]">
+  <section class="py-5 md:py-10">
+    <div class="container px-4">
+      <div class="grid grid-cols-1 gap-2 md:grid-cols-[55%_45%]">
+        {% comment %} Product Image {% endcomment %}
+        <div class="relative h-full">
+          <div class="sticky top-0 flex h-fit w-full flex-col overflow-hidden rounded-[20px] md:block">
+            <div class="h-full w-full">
+              {% for image in product.images %}
+                {% assign index = forloop.index0 %}
+                <img
+                  src="{{ image | img_url: 'master' }}"
+                  alt="{{ image.alt }}"
+                  class="h-full w-full object-cover {% if index != 0 %} hidden {% endif %}"
+                  id="product-image-{{ index }}"
+                >
+              {% endfor %}
+            </div>
+            <div class="relative z-0 flex flex-row gap-1 md:absolute md:left-[50px] md:top-1/2 md:z-10 md:w-[80px] md:-translate-y-1/2 md:flex-col">
+              {% for image in product.images %}
+                {% assign index = forloop.index0 %}
+                <img
+                  src="{{ image | img_url: 'master' }}"
+                  alt="{{ image.alt }}"
+                  class="h-full w-full rounded-lg border-2 border-gray-200/50 object-cover"
+                  data-target-index="#product-image-{{ index }}"
+                >
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+
+        {% comment %} Product Details {% endcomment %}
+        <div class="flex flex-col gap-2 rounded-[20px] bg-white p-5">
+          <div class="flex flex-col">
+            <h2 class="m-0 text-[34px] font-normal">Buddy Bites {{ 'products.product.adult_kibbles' | t }}</h2>
+            <p class="text-[16px] font-light">
+              {{ product.title }}
+              {{ 'products.product.flavour' | t }}
+            </p>
+            <div
+              class="klaviyo-star-rating-widget"
+              data-id="{{ product.id }}"
+              data-product-title="{{ product.title }}"
+              data-product-type="{{ product.type }}"
+            ></div>
+          </div>
+
+          {% comment %} Choose Flavour {% endcomment %}
+          <div class="flex flex-col justify-center gap-2">
+            <p class="text-[16px] font-bold en:font-museo">{{ 'products.product.choose_flavour' | t }}:</p>
+            <div class="flex gap-2">
+              {% for prd in collections['adult-kibbles'].products %}
+                {% assign metaobj_list = prd.metafields.custom.flavor.value %}
+
+                {% for m_obj in metaobj_list %}
+                  {% if prd.id != 9038841282776 %}
+                    <a href="{{ prd.url }}">
+                      <img
+                        src="{{ m_obj.featured_image.value | image_url: width: 100, height: 100  }}"
+                        width="100"
+                        height="100"
+                        class="rounded-xl border-2 border-solid {% if product.title == prd.title %} border-[#193C6A] opacity-100 {% else %} border-[#C3C3C3] opacity-50{% endif %}"
+                      >
+                      <p class="text-center font-semibold en:text-[16px] zh-TW:text-[14px]">
+                        <b>{{ m_obj.name }}</b>
+                      </p>
+                    </a>
+                  {% endif %}
+                {% endfor %}
+              {% endfor %}
+            </div>
+            <div class="flex items-center justify-center gap-1 rounded-lg border-2 border-gray-200 px-2 py-[5px] font-montserrat text-[14px] font-light">
+              <p>{{ 'products.product.have_puppy' | t }}</p>
+              <a href="{{ all_products['puppy-dry-dog-food'].url }}" class="font-bold underline">
+                {{- 'products.product.have_puppy_link_text' | t -}}
+              </a>
+            </div>
+
+            {% if product.id == 7699913244888 or product.id == 9038841282776 %}
+              <div class="flex w-fit flex-col items-start justify-start gap-2 text-center">
+                <p class="inline w-full text-center text-[16px] font-bold">
+                  {{ 'products.product.choose_kibble_size' | t }}
+                </p>
+                <div class="grid grid-cols-2 items-center gap-2 md:min-w-[330px]">
+                  <a
+                    href="{{ all_products['adult-mini-salmon-dry-dog-food'].url }}"
+                    class="flex h-full cursor-pointer flex-col items-center justify-between gap-2 rounded-xl {% if product.id == 9038841282776 %} border-2  border-[#193C9B]{% endif %} bg-[#F4F4F4] px-2 py-3"
+                  >
+                    <p class="text-[16px] font-bold">6-8{{ 'products.product.millimetres' | t }}</p>
+                    <div class="flex aspect-square w-[80px] flex-col items-center justify-center object-contain">
+                      <img
+                        src="{{ 'Kibble.png' | file_img_url: 'master' }}"
+                        alt="4-6mm"
+                        class="aspect-square w-[40px] object-contain"
+                      >
+                    </div>
+                    <div class="flex flex-col items-center justify-center gap-1">
+                      <p class="font-normal md:text-[18px]">
+                        {{ 'products.product.small_kibbles' | t }}
+                      </p>
+                      {% if product.id == 9038841282776 %}
+                        <p class="text-center font-semibold text-[#4E4E4E] en:text-[16px] zh-TW:text-[14px]">
+                          {{ 'products.product.selected' | t }}
+                        </p>
+                      {% else %}
+                        <p class="font-bold text-[#193C6B] underline md:text-[18px]">
+                          {{ 'products.product.shop_small' | t }}
+                        </p>
+                      {% endif %}
+                      <p class="text-center font-normal en:text-[16px] zh-TW:text-[14px]">
+                        {{ 'products.product.great_for_puppies' | t }}
+                      </p>
+                    </div>
+                  </a>
+                  <a
+                    href="{{ all_products['adult-salmon-dry-dog-food'].url }}"
+                    class="flex h-full cursor-pointer flex-col items-center justify-between gap-2 rounded-xl {% if product.id == 7699913244888 %} border-2  border-[#193C9A]{% endif %} bg-[#F4F4F4] px-2 py-3"
+                  >
+                    <p class="text-[16px] font-bold en:font-museo">12-14{{ 'products.product.millimetres' | t }}</p>
+                    <img
+                      src="{{ 'Kibble.png' | file_img_url: 'master' }}"
+                      alt="12-14mm"
+                      class="aspect-square w-[50px] object-contain"
+                    >
+                    <div class="flex flex-col items-center justify-center gap-1">
+                      <p class="font-bold md:text-[18px]">
+                        {{ 'products.product.large_kibbles' | t }}
+                      </p>
+                      {% if product.id == 7699913244888 %}
+                        <p class="text-center font-semibold text-[#4E4E4E] en:text-[16px] zh-TW:text-[14px]">
+                          {{ 'products.product.selected' | t }}
+                        </p>
+                      {% else %}
+                        <p class="font-bold text-[#193C6B] underline md:text-[18px]">
+                          {{ 'products.product.shop_large' | t }}
+                        </p>
+                      {% endif %}
+                      <p class="text-center font-normal en:text-[16px] zh-TW:text-[14px]">
+                        {{ 'products.product.adults_and_10lb' | t }}
+                      </p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            {% endif %}
+          </div>
+
+          {% comment %} Product Description {% endcomment %}
+          <div class="prose prose-base marker:text-black prose-ul:list-disc">
+            {{ product.description }}
+          </div>
+
+          {% render 'snippet-add-to-cart-new' %}
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% javascript %}
+  const productImages = document.querySelectorAll('[data-target-index]');
+  let currentImage = document.getElementById('product-image-0');
+
+  productImages.forEach((image) => {
+    image.addEventListener('click', () => {
+      const targetIndex = image.getAttribute('data-target-index');
+      const targetImage = document.querySelector(targetIndex);
+      currentImage.classList.add('hidden');
+      targetImage.classList.remove('hidden');
+      currentImage = targetImage;
+    });
+  });
+{% endjavascript %}
+
+{% schema %}
+{
+  "name": "Kibbles Product Section",
+  "settings": []
+}
+{% endschema %}

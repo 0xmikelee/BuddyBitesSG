@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "section-product-kibbles-new": {
+      "type": "section-product-kibbles-new",
+      "settings": {}
+    }
+  },
+  "order": [
+    "section-product-kibbles-new"
+  ]
+}
