@@ -177,39 +177,41 @@
       and product.metafields.custom.main_collection.value.id != 456695218392
       and product.metafields.custom.main_collection.value.id != 388909465816
     %}
-      <div class="relative flex flex-col justify-center overflow-hidden rounded-[30px] border-2 border-solid border-[#193C6A]/50">
+      <div class="relative flex flex-col justify-center overflow-hidden rounded-[15px] border-[1px] border-solid border-[#193C6A]/50">
         <label class="relative">
           <input
             type="radio"
             name="purchase_option"
             value="subscription"
             id="subscription_option"
-            class="peer absolute left-[15px] top-[12px]"
+            class="peer absolute left-[15px] top-[15px]"
           >
           <div class="flex h-full w-full cursor-pointer flex-col items-center justify-center gap-3 px-4 py-2 transition peer-checked:bg-[#B9E3FF]">
             <div class="flex w-full flex-col gap-1 pl-2">
-              <div class="flex flex-row items-center justify-start gap-1">
-                <p class="pl-2 text-left text-sm font-semibold">
-                  {{ 'products.product.subscription_and_save.title' | t }}
-                </p>
-                <span class="font-smeibold rounded-[5px] bg-[#193C6A] px-2 py-1 text-[16px] text-white">
-                  {{- discount_percentage | floor }}%{{ 'products.product.subscription_and_save.off' | t -}}
-                </span>
-              </div>
-              <div class="flex w-full gap-2 pl-2">
-                <p class="text-md discounted-price text-left font-semibold">
-                  {{ product.price_min | times: discount_factor | money }}
-                </p>
-                <p class="undiscounted-price text-md text-left font-semibold text-gray-500 line-through">
-                  {{ product.price_min | money }}
-                </p>
+              <div class="flex flex-row items-center justify-between gap-1">
+                <div class="flex flex-row items-center justify-start gap-1">
+                  <p class="px-2 py-1 text-left text-sm font-semibold">
+                    {{ 'products.product.subscription_and_save.title' | t }}
+                  </p>
+                  <span class="font-smeibold rounded-[5px] bg-[#193C6A] px-2 py-1 text-[16px] text-white">
+                    {{- discount_percentage | floor }}%{{ 'products.product.subscription_and_save.off' | t -}}
+                  </span>
+                </div>
+                <div class="flex gap-2">
+                  <p class="undiscounted-price text-md text-left font-light line-through">
+                    {{ product.price_min | money }}
+                  </p>
+                  <p class="text-md discounted-price text-left font-semibold">
+                    {{ product.price_min | times: discount_factor | money }}
+                  </p>
+                </div>
               </div>
             </div>
             {% comment %} Two columns {% endcomment %}
             <div class="flex w-full flex-wrap items-stretch justify-center gap-1">
               {% comment %} Only show Subscriber Gifts for Kibbles Collections {% endcomment %}
               {% if product.metafields.custom.main_collection.value.id == 449592754392 %}
-                <div class="flex flex-shrink-0 flex-grow flex-col overflow-hidden rounded-[30px] md:flex-1">
+                <div class="flex flex-shrink-0 flex-grow flex-col overflow-hidden rounded-[15px] md:flex-1">
                   <p class="text-md w-full bg-[#98C9EB] px-2 py-2 text-center font-semibold text-white md:text-sm">
                     {{ 'products.product.subscription_and_save.free_subscriber_gifts' | t }}
                   </p>
@@ -241,11 +243,11 @@
                   </div>
                 </div>
               {% endif %}
-              <div class="flex flex-shrink-0 flex-grow flex-col overflow-hidden rounded-[30px] md:flex-1">
+              <div class="flex flex-shrink-0 flex-grow flex-col overflow-hidden rounded-[15px] md:flex-1">
                 <p class="text-md w-full bg-[#98C9EB] px-2 py-2 text-center font-semibold text-white md:text-sm">
                   {{ 'products.product.subscription_and_save.subscriber_perks' | t }}
                 </p>
-                <ul class="flex h-full w-full list-none flex-col items-start justify-center bg-[#D3EAF9] px-2 py-2 pl-6 font-museo text-[#5b88a7]">
+                <ul class="flex h-full w-full list-none flex-col items-start justify-center bg-[#FCF9F1] px-2 py-2 pl-6 font-museo text-[#5b88a7]">
                   <li class="text-md max-w-[200px] text-left before:mr-2 before:text-black before:content-['✓'] md:max-w-none md:text-xs">
                     {{ 'products.product.subscription_and_save.subscriber_perks_subtext_1_part_1' | t }}
                     {{ discount_percentage | floor }}%
@@ -272,7 +274,7 @@
           <select
             name="selling_plan"
             id="delivery_option_select"
-            class="w-full rounded-full border-2 border-solid border-[#98c9eb] px-4 py-1 text-center"
+            class="w-full rounded-[10px] border-2 border-solid border-[#98c9eb] px-4 py-1 text-center"
             disabled
           >
             {% for plan_group in product.selling_plan_groups %}
@@ -293,7 +295,7 @@
         </label>
       </div>
     {% endif %}
-    <label class="relative overflow-hidden rounded-[30px] border-2 border-solid border-[#98c9eb] font-montserrat">
+    <label class="relative overflow-hidden rounded-[15px] border-[1px] border-solid border-[#173C6A]/50 font-montserrat">
       <input
         type="radio"
         name="purchase_option"
@@ -310,9 +312,9 @@
           {% endif %}
         {% endcomment %}
       >
-      <div class="flex h-full w-full cursor-pointer flex-col items-start justify-center gap-1 rounded px-4 py-2 pl-6 transition peer-checked:bg-[#B9E3FF]">
-        <p class="w-full pl-2 text-left text-sm font-semibold">{{ 'products.product.one_time' | t }}</p>
-        <p class="text-md undiscounted-price pl-2 text-left font-semibold text-black">
+      <div class="flex h-full w-full cursor-pointer flex-row items-start justify-between gap-1 rounded-[15px] px-4 py-2 pl-6 transition peer-checked:bg-[#B9E3FF]">
+        <p class="pl-2 text-left text-sm font-semibold">{{ 'products.product.one_time' | t }}</p>
+        <p class="text-md undiscounted-price pl-2 text-left font-semibold ">
           {{ product.price_min | money }}
         </p>
       </div>
@@ -324,7 +326,7 @@
     {% if product.variants.size > 1 %}
       <select
         id="product-variant"
-        class="basis-3/4 rounded-[30px] border-2 border-solid border-[#98c9eb] px-4 py-1"
+        class="basis-3/4 rounded-[15px] border-[1px] border-solid border-[#173C6A]/50 px-4 py-1"
         name="id"
       >
         {% for variant in product.variants %}
@@ -359,7 +361,7 @@
         type="number"
         name="quantity"
         id="quantity"
-        class="w-full rounded-[30px] border-2 border-solid border-[#98c9eb] px-4 py-1 text-center"
+        class="w-full rounded-[15px] border-[1px] border-solid border-[#173C6A]/50 px-4 py-1 text-center"
         value="1"
         min="1"
         max="99"
@@ -388,7 +390,7 @@
   {% if product.selected_or_first_available_variant.available %}
     <button
       type="submit"
-      class="mt-2 w-full rounded-[30px] bg-[#98c9eb] px-4 py-2 font-montserrat text-xl font-semibold text-white"
+      class="mt-2 w-full rounded-[15px] bg-[#193C6A] px-4 py-2 font-montserrat text-xl font-semibold text-white"
       id="add-to-cart-button"
     >
       {{ 'products.product.add_to_cart' | t }}
@@ -396,7 +398,7 @@
   {% else %}
     <button
       type="submit"
-      class="mt-2 w-full rounded-[30px] bg-[#98c9eb] px-4 py-2 font-montserrat text-xl font-semibold text-white"
+      class="mt-2 w-full rounded-[15px] bg-[#193C6A] px-4 py-2 font-montserrat text-xl font-semibold text-white"
       id="add-to-cart-button"
       disabled
     >
