@@ -35,7 +35,9 @@
         <div class="flex flex-col gap-2">
           <div class="flex flex-col gap-2 rounded-[20px] bg-white p-5">
             <div class="flex flex-col">
-              <h2 class="m-0 text-[34px] font-normal">Buddy Bites {{ 'products.product.adult_kibbles' | t }}</h2>
+              <h2 class="m-0 text-[28px] font-normal md:text-[34px]">
+                Buddy Bites {{ 'products.product.adult_kibbles' | t }}
+              </h2>
               <p class="text-[16px] font-light">
                 {{ product.title }}
                 {{ 'products.product.flavour' | t }}
@@ -333,7 +335,7 @@
   </section>
 
   <section class="py-5 md:py-7">
-    <div class="container grid grid-cols-2 gap-4 rounded-[20px] bg-[#193C6A] px-4 py-5 md:grid-cols-4 md:px-2 md:py-10">
+    <div class="container grid grid-cols-2 gap-4 rounded-[20px] bg-[#193C6A] px-4 py-5 md:grid-cols-4 md:px-32 md:py-10">
       <div class="flex flex-col items-center justify-start gap-2 md:justify-between">
         <img
           src="{{ product.metafields.custom.product_details.value.benefit_icon_1 | img_url: 'master' }}"

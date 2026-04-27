@@ -170,7 +170,7 @@
 {% comment %} <p>{{ product.variants | json }}</p> {% endcomment %}
 {% form 'product', product %}
   {% comment %} Subscription/One-time toggle {% endcomment %}
-  <fieldset class="flex flex-col gap-1 font-montserrat">
+  <fieldset class="flex flex-col gap-1">
     <legend class="text-md mb-2 font-semibold">{{ 'products.product.purchase_options' | t }}</legend>
     {% if product.metafields.custom.main_collection.value.id != 399097102552
       and product.metafields.custom.main_collection.value.id != 399307669720
@@ -190,18 +190,18 @@
             <div class="flex w-full flex-col gap-1 pl-2">
               <div class="flex flex-col items-center justify-between gap-1 md:flex-row">
                 <div class="flex flex-row items-center justify-start gap-1">
-                  <p class="px-2 py-1 text-left text-sm font-semibold">
+                  <p class="px-2 py-1 text-left text-[14px] font-semibold md:text-[16px]">
                     {{ 'products.product.subscription_and_save.title' | t }}
                   </p>
-                  <span class="rounded-[5px] bg-[#193C6A] px-2 py-1 text-center text-sm font-semibold text-white">
+                  <span class="rounded-[5px] bg-[#193C6A] px-2 py-1 text-center text-[14px] font-semibold text-white md:text-[16px]">
                     {{- discount_percentage | floor }}%{{ 'products.product.subscription_and_save.off' | t -}}
                   </span>
                 </div>
                 <div class="flex w-full items-center justify-start gap-2 md:w-auto">
-                  <p class="undiscounted-price text-left text-sm font-light line-through">
+                  <p class="undiscounted-price text-left text-[14px] font-light line-through md:text-[16px]">
                     {{ product.price_min | money }}
                   </p>
-                  <p class="discounted-price text-left text-sm font-semibold">
+                  <p class="discounted-price text-left text-[14px] font-semibold md:text-[16px]">
                     {{ product.price_min | times: discount_factor | money }}
                   </p>
                 </div>
@@ -313,8 +313,8 @@
         {% endcomment %}
       >
       <div class="flex h-full w-full cursor-pointer flex-row items-start justify-between gap-1 rounded-[15px] px-4 py-2 pl-6 transition peer-checked:bg-[#B9E3FF]">
-        <p class="pl-2 text-left text-sm font-semibold">{{ 'products.product.one_time' | t }}</p>
-        <p class="text-md undiscounted-price pl-2 text-left font-semibold ">
+        <p class="pl-2 text-left text-[14px] font-semibold md:text-[16px]">{{ 'products.product.one_time' | t }}</p>
+        <p class="undiscounted-price pl-2 text-left text-[14px] font-semibold md:text-[16px] ">
           {{ product.price_min | money }}
         </p>
       </div>
@@ -390,7 +390,7 @@
   {% if product.selected_or_first_available_variant.available %}
     <button
       type="submit"
-      class="mt-2 w-full rounded-[15px] bg-[#193C6A] px-4 py-2 font-montserrat text-xl font-semibold text-white"
+      class="mt-2 w-full rounded-[15px] bg-[#193C6A] px-4 py-2 text-xl font-semibold text-white"
       id="add-to-cart-button"
     >
       {{ 'products.product.add_to_cart' | t }}
@@ -398,7 +398,7 @@
   {% else %}
     <button
       type="submit"
-      class="mt-2 w-full rounded-[15px] bg-[#193C6A] px-4 py-2 font-montserrat text-xl font-semibold text-white"
+      class="mt-2 w-full rounded-[15px] bg-[#193C6A] px-4 py-2 text-xl font-semibold text-white"
       id="add-to-cart-button"
       disabled
     >
