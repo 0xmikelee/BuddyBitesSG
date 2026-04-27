@@ -193,15 +193,15 @@
                   <p class="px-2 py-1 text-left text-sm font-semibold">
                     {{ 'products.product.subscription_and_save.title' | t }}
                   </p>
-                  <span class="font-smeibold md:text-md rounded-[5px] bg-[#193C6A] px-2 py-1 text-center text-sm text-white">
+                  <span class="rounded-[5px] bg-[#193C6A] px-2 py-1 text-center text-sm font-semibold text-white">
                     {{- discount_percentage | floor }}%{{ 'products.product.subscription_and_save.off' | t -}}
                   </span>
                 </div>
                 <div class="flex w-full items-center justify-start gap-2 md:w-auto">
-                  <p class="undiscounted-price md:text-md text-left text-sm font-light line-through">
+                  <p class="undiscounted-price text-left text-sm font-light line-through">
                     {{ product.price_min | money }}
                   </p>
-                  <p class="md:text-md discounted-price text-left text-sm font-semibold">
+                  <p class="discounted-price text-left text-sm font-semibold">
                     {{ product.price_min | times: discount_factor | money }}
                   </p>
                 </div>
@@ -212,7 +212,7 @@
               {% comment %} Only show Subscriber Gifts for Kibbles Collections {% endcomment %}
               {% if product.metafields.custom.main_collection.value.id == 449592754392 %}
                 <div class="flex flex-grow flex-col overflow-hidden rounded-[15px] md:flex-1 md:flex-shrink-0">
-                  <p class="text-md w-full bg-[#98C9EB] px-2 py-2 text-center font-semibold text-white md:text-sm">
+                  <p class="w-full bg-[#98C9EB] px-2 py-2 text-center text-sm font-semibold text-white">
                     {{ 'products.product.subscription_and_save.free_subscriber_gifts' | t }}
                   </p>
                   <div class="flex flex-wrap items-center justify-center gap-1 bg-[#D3EAF9] px-2 py-2">
@@ -224,18 +224,18 @@
                     >
 
                     <div class="flex flex-col items-start justify-center gap-1 text-[#5b88a7]">
-                      <p class="text-md text-left font-semibold md:text-sm">
+                      <p class="text-left text-sm font-semibold">
                         {{ 'products.product.subscription_and_save.free' | t }}
                         <span class="line-through">$24</span>
                       </p>
-                      <ul class="flex list-disc flex-col items-start justify-center gap-1 font-museo">
-                        <li class="text-md text-left md:text-xs">
+                      <ul class="flex list-disc flex-col items-start justify-center gap-1">
+                        <li class="text-left text-xs">
                           {{ 'products.product.subscription_and_save.free_subscriber_gifts_subtext_1' | t }}
                         </li>
-                        <li class="text-md text-left md:text-xs">
+                        <li class="text-left text-xs">
                           {{ 'products.product.subscription_and_save.free_subscriber_gifts_subtext_2' | t }}
                         </li>
-                        <li class="text-md text-left md:text-xs">
+                        <li class="text-left text-xs">
                           {{ 'products.product.subscription_and_save.free_subscriber_gifts_subtext_3' | t }}
                         </li>
                       </ul>
@@ -244,22 +244,22 @@
                 </div>
               {% endif %}
               <div class="flex flex-grow flex-col overflow-hidden rounded-[15px] md:flex-1 md:flex-shrink-0">
-                <p class="text-md w-full bg-[#98C9EB] px-2 py-2 text-center font-semibold text-white md:text-sm">
+                <p class="w-full bg-[#98C9EB] px-2 py-2 text-center text-sm font-semibold text-white">
                   {{ 'products.product.subscription_and_save.subscriber_perks' | t }}
                 </p>
-                <ul class="flex h-full w-full list-none flex-col items-start justify-center bg-[#FCF9F1] px-2 py-2 pl-6 font-museo text-[#5b88a7]">
-                  <li class="text-md max-w-[200px] text-left before:mr-2 before:text-black before:content-['✓'] md:max-w-none md:text-xs">
+                <ul class="flex h-full w-full list-none flex-col items-start justify-center bg-[#FCF9F1] px-2 py-2 pl-6 text-[#5b88a7]">
+                  <li class="max-w-[200px] text-left text-xs before:mr-2 before:text-black before:content-['✓'] md:max-w-none">
                     {{ 'products.product.subscription_and_save.subscriber_perks_subtext_1_part_1' | t }}
                     {{ discount_percentage | floor }}%
                     {{- 'products.product.subscription_and_save.subscriber_perks_subtext_1_part_2' | t }}
                   </li>
-                  <li class="text-md max-w-[200px] text-left before:mr-2 before:text-black before:content-['✓'] md:max-w-none md:text-xs">
+                  <li class="max-w-[200px] text-left text-xs before:mr-2 before:text-black before:content-['✓'] md:max-w-none">
                     {{ 'products.product.subscription_and_save.subscriber_perks_subtext_2' | t }}
                   </li>
-                  <li class="text-md max-w-[200px] text-left before:mr-2 before:text-black before:content-['✓'] md:max-w-none md:text-xs">
+                  <li class="max-w-[200px] text-left text-xs before:mr-2 before:text-black before:content-['✓'] md:max-w-none">
                     {{ 'products.product.subscription_and_save.subscriber_perks_subtext_3' | t }}
                   </li>
-                  <li class="text-md max-w-[200px] text-left before:mr-2 before:text-black before:content-['✓'] md:max-w-none md:text-xs">
+                  <li class="max-w-[200px] text-left text-xs before:mr-2 before:text-black before:content-['✓'] md:max-w-none">
                     {{ 'products.product.subscription_and_save.subscriber_perks_subtext_4' | t }}
                   </li>
                 </ul>
@@ -295,7 +295,7 @@
         </label>
       </div>
     {% endif %}
-    <label class="relative overflow-hidden rounded-[15px] border-[1px] border-solid border-[#173C6A]/50 font-montserrat">
+    <label class="relative overflow-hidden rounded-[15px] border-[1px] border-solid border-[#173C6A]/50">
       <input
         type="radio"
         name="purchase_option"

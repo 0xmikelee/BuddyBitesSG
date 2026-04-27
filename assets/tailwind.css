@@ -2990,6 +2990,10 @@ video {
   width: max-content;
 }
 
+.w-\[45px\]{
+  width: 45px;
+}
+
 .min-w-\[155px\]{
   min-width: 155px;
 }
@@ -5173,6 +5177,15 @@ video {
 .text-xl{
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-xs{
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.text-\[clamp\(25px\2c 2\.5vw\2c 35px\)\]{
+  font-size: clamp(25px,2.5vw,35px);
 }
 
 .font-bold{
@@ -7437,6 +7450,10 @@ video {
     justify-content: center;
   }
 
+  .md\:justify-between{
+    justify-content: space-between;
+  }
+
   .md\:gap-0{
     gap: 0px;
   }
@@ -7792,6 +7809,14 @@ video {
   .md\:text-xs{
     font-size: 0.75rem;
     line-height: 1rem;
+  }
+
+  .md\:text-\[40px\]{
+    font-size: 40px;
+  }
+
+  .md\:text-\[24px\]{
+    font-size: 24px;
   }
 
   .md\:leading-\[25\.7px\]{

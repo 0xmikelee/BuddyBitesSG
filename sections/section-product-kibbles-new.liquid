@@ -4,19 +4,19 @@
       <div class="grid grid-cols-1 gap-2 md:grid-cols-[55%_45%]">
         {% comment %} Product Image {% endcomment %}
         <div class="relative h-full">
-          <div class="sticky top-0 flex h-fit w-full flex-col overflow-hidden rounded-[20px] md:block">
+          <div class="sticky top-0 flex h-fit w-full flex-col overflow-hidden md:block">
             <div class="h-full w-full">
               {% for image in product.images %}
                 {% assign index = forloop.index0 %}
                 <img
                   src="{{ image | img_url: 'master' }}"
                   alt="{{ image.alt }}"
-                  class="h-full w-full object-cover {% if index != 0 %} hidden {% endif %}"
+                  class="h-full w-full rounded-[20px] object-cover {% if index != 0 %} hidden {% endif %}"
                   id="product-image-{{ index }}"
                 >
               {% endfor %}
             </div>
-            <div class="relative z-0 flex flex-row gap-1 md:absolute md:left-[50px] md:top-1/2 md:z-10 md:w-[50px] md:-translate-y-1/2 md:flex-col">
+            <div class="relative z-0 flex flex-row flex-wrap gap-1 md:absolute md:left-[50px] md:top-1/2 md:z-10 md:w-[50px] md:-translate-y-1/2 md:flex-col">
               {% for image in product.images %}
                 {% assign index = forloop.index0 %}
                 <img
@@ -334,62 +334,62 @@
 
   <section class="py-5 md:py-7">
     <div class="container grid grid-cols-2 gap-4 rounded-[20px] bg-[#193C6A] px-4 py-5 md:grid-cols-4 md:px-2 md:py-10">
-      <div class="flex min-w-[155px] flex-col items-center justify-between gap-2">
+      <div class="flex flex-col items-center justify-start gap-2 md:justify-between">
         <img
           src="{{ product.metafields.custom.product_details.value.benefit_icon_1 | img_url: 'master' }}"
           alt="Icon Prebiotics"
-          class="w-[70px] py-2"
+          class="w-[45px] py-2 md:w-[70px]"
         >
         <div class="flex flex-col items-center justify-center gap-1">
-          <p class="text-center text-[16px] font-normal text-white">
+          <p class="text-center text-[14px] font-medium text-white md:text-[16px]">
             {{ product.metafields.custom.product_details.value.benefit_1 }}
           </p>
-          <p class="text-center text-[16px] font-normal text-white">
+          <p class="text-center text-[14px] font-normal text-white md:text-[16px]">
             {{ product.metafields.custom.product_details.value.detail_benefit_1 }}
           </p>
         </div>
       </div>
-      <div class="flex min-w-[155px] flex-col items-center justify-between gap-2">
+      <div class="flex flex-col items-center justify-start gap-2 md:justify-between">
         <img
           src="{{ product.metafields.custom.product_details.value.benefit_icon_2 | img_url: 'master' }}"
           alt="Icon Prebiotics"
-          class="w-[70px] py-2"
+          class="w-[45px] py-2 md:w-[70px]"
         >
         <div class="flex flex-col items-center justify-center gap-1">
-          <p class="text-center text-[16px] font-normal text-white">
+          <p class="text-center text-[14px] font-medium text-white md:text-[16px]">
             {{ product.metafields.custom.product_details.value.benefit_2 }}
           </p>
-          <p class="text-center text-[16px] font-normal text-white">
+          <p class="text-center text-[14px] font-normal text-white md:text-[16px]">
             {{ product.metafields.custom.product_details.value.detail_benefit_2 }}
           </p>
         </div>
       </div>
-      <div class="flex min-w-[155px] flex-col items-center justify-between gap-2">
+      <div class="flex flex-col items-center justify-start gap-2 md:justify-between">
         <img
           src="{{ product.metafields.custom.product_details.value.benefit_icon_3 | img_url: 'master' }}"
           alt="Icon Prebiotics"
-          class="w-[70px] py-2"
+          class="w-[45px] py-2 md:w-[70px]"
         >
         <div class="flex flex-col items-center justify-center gap-1">
-          <p class="text-center text-[16px] font-normal text-white">
+          <p class="text-center text-[14px] font-medium text-white md:text-[16px]">
             {{ product.metafields.custom.product_details.value.benefit_3 }}
           </p>
-          <p class="text-center text-[16px] font-normal text-white">
+          <p class="text-center text-[14px] font-normal text-white md:text-[16px]">
             {{ product.metafields.custom.product_details.value.detail_benefit_3 }}
           </p>
         </div>
       </div>
-      <div class="flex min-w-[155px] flex-col items-center justify-between gap-2">
+      <div class="flex flex-col items-center justify-start gap-2 md:justify-between">
         <img
           src="{{ product.metafields.custom.product_details.value.benefit_icon_4 | img_url: 'master' }}"
           alt="Icon Prebiotics"
-          class="w-[70px] py-2"
+          class="w-[45px] py-2 md:w-[70px]"
         >
         <div class="flex flex-col items-center justify-center gap-1">
-          <p class="text-center text-[16px] font-normal text-white">
+          <p class="text-center text-[14px] font-medium text-white md:text-[16px]">
             {{ product.metafields.custom.product_details.value.benefit_4 }}
           </p>
-          <p class="text-center text-[16px] font-normal text-white">
+          <p class="text-center text-[14px] font-normal text-white md:text-[16px]">
             {{ product.metafields.custom.product_details.value.detail_benefit_4 }}
           </p>
         </div>
@@ -405,7 +405,7 @@
       >
       <div class="flex flex-col items-center justify-between gap-10 rounded-[20px] bg-white p-5">
         <div class="flex w-full flex-col items-start justify-start gap-2">
-          <h2 class="font-titanOne text-[40px] font-normal uppercase">
+          <h2 class="font-titanOne text-[clamp(25px,2.5vw,35px)] font-normal uppercase">
             Fresh {{ product.metafields.custom.product_details.value.main_ingredient }} Nutrition
           </h2>
           <p class="text-[16px] font-light">
@@ -416,34 +416,34 @@
         </div>
         <div class="flex w-full flex-col items-start justify-start gap-2">
           <div class="flex w-full flex-col items-start justify-start border-b border-solid border-[#193C6A]/50">
-            <p class="w-full text-[24px] font-medium">
+            <p class="w-full text-[20px] font-medium md:text-[24px]">
               {{ product.metafields.custom.product_details.value.ingredient_1 }}
             </p>
-            <p class="w-full text-[18px] font-light">
+            <p class="w-full text-[16px] font-light md:text-[18px]">
               {{ product.metafields.custom.product_details.value.ingredient_benefit_1 }}
             </p>
           </div>
           <div class="flex w-full flex-col items-start justify-start border-b border-solid border-[#193C6A]/50">
-            <p class="w-full text-[24px] font-medium">
+            <p class="w-full text-[20px] font-medium md:text-[24px]">
               {{ product.metafields.custom.product_details.value.ingredient_2 }}
             </p>
-            <p class="w-full text-[18px] font-light">
+            <p class="w-full text-[16px] font-light md:text-[18px]">
               {{ product.metafields.custom.product_details.value.ingredient_benefit_2 }}
             </p>
           </div>
           <div class="flex w-full flex-col items-start justify-start border-b border-solid border-[#193C6A]/50">
-            <p class="w-full text-[24px] font-medium">
+            <p class="w-full text-[20px] font-medium md:text-[24px]">
               {{ product.metafields.custom.product_details.value.ingredient_3 }}
             </p>
-            <p class="w-full text-[18px] font-light">
+            <p class="w-full text-[16px] font-light md:text-[18px]">
               {{ product.metafields.custom.product_details.value.ingredient_benefit_3 }}
             </p>
           </div>
           <div class="flex w-full flex-col items-start justify-start border-b border-solid border-[#193C6A]/50">
-            <p class="w-full text-[24px] font-medium">
+            <p class="w-full text-[20px] font-medium md:text-[24px]">
               {{ product.metafields.custom.product_details.value.ingredient_4 }}
             </p>
-            <p class="w-full text-[18px] font-light">
+            <p class="w-full text-[16px] font-light md:text-[18px]">
               {{ product.metafields.custom.product_details.value.ingredient_benefit_4 }}
             </p>
           </div>
@@ -454,7 +454,9 @@
   <section class="py-5 md:py-7">
     <div class="container grid grid-cols-1 gap-4 md:grid-cols-2">
       <div class="order-2 flex flex-col items-center justify-between gap-2 rounded-[20px] bg-white p-5 md:order-1">
-        <h2 class="w-full text-left font-titanOne text-[40px] font-normal uppercase">Vet Recommended</h2>
+        <h2 class="w-full text-left font-titanOne text-[clamp(25px,2.5vw,35px)] font-normal uppercase md:text-[40px]">
+          Vet Recommended
+        </h2>
         <div class="flex flex-col items-center justify-center gap-2">
           <p class="text-[16px] font-light">
             I’m Dr. Tiffany Harries, a Veterinary Surgeon with over 10 years of experience dedicated to advancing animal
@@ -513,7 +515,7 @@
       </div>
       <div class="overflow-hidden rounded-[20px] bg-[#B9E3FF]">
         <h2 class="w-full bg-[#193C6A] p-2 text-center text-[18px] font-medium uppercase text-white md:p-5 md:text-[35px]">
-          Buddy Bites Kibbles
+          Buddy Bites
         </h2>
         <div class="flex w-full flex-col items-center justify-between gap-2 px-3 py-4">
           <div class="flex w-full items-center gap-4 border-b border-solid border-[#193C6A]/50 px-3 py-2">
@@ -546,13 +548,15 @@
   </section>
   <section class="py-5 md:py-7">
     <div class="container flex w-full flex-col items-center justify-center">
-      <h2 class="w-full text-center font-titanOne text-[35px] font-medium uppercase">Bark About it</h2>
+      <h2 class="w-full text-center font-titanOne text-[clamp(25px,2.5vw,35px)] font-medium uppercase">
+        Bark About it
+      </h2>
       <div id="klaviyo-featured-reviews-carousel"></div>
     </div>
   </section>
   <section class="py-5 md:py-7">
     <div class="container flex flex-col items-center justify-center gap-4">
-      <h2 class="w-full text-balance text-center font-titanOne text-[35px] font-medium uppercase">
+      <h2 class="w-full text-balance text-center font-titanOne text-[clamp(25px,2.5vw,35px)] font-medium uppercase">
         YOUR PUP MIGHT ALSO ENJOY...
       </h2>
       <div id="tab-fav-dog" class="w-full">
@@ -633,7 +637,7 @@
         class="block w-full rounded-[20px] object-cover md:hidden"
       >
       <div class="absolute left-1/2 top-0 flex -translate-x-1/2 flex-col items-center justify-center gap-4 py-[25vw] md:translate-y-1/2 md:justify-center md:py-0">
-        <h2 class="text-balance text-center font-titanOne text-[clamp(30px,2.5vw,35px)] uppercase leading-[clamp(30px,2.5vw,35px)] md:w-full">
+        <h2 class="text-balance text-center font-titanOne text-[clamp(25px,2.5vw,35px)] uppercase leading-[clamp(30px,2.5vw,35px)] md:w-full">
           Sniff Out Our Latest Products
         </h2>
         <a href="https://www.instagram.com/buddbites.sg/" class="btn-cta"> @buddbites.sg </a>
