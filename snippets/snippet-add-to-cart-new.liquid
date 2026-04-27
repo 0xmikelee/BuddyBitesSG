@@ -188,20 +188,20 @@
           >
           <div class="flex h-full w-full cursor-pointer flex-col items-center justify-center gap-3 px-4 py-2 transition peer-checked:bg-[#B9E3FF]">
             <div class="flex w-full flex-col gap-1 pl-2">
-              <div class="flex flex-row items-center justify-between gap-1">
+              <div class="flex flex-col items-center justify-between gap-1 md:flex-row">
                 <div class="flex flex-row items-center justify-start gap-1">
                   <p class="px-2 py-1 text-left text-sm font-semibold">
                     {{ 'products.product.subscription_and_save.title' | t }}
                   </p>
-                  <span class="font-smeibold rounded-[5px] bg-[#193C6A] px-2 py-1 text-[16px] text-white">
+                  <span class="font-smeibold md:text-md rounded-[5px] bg-[#193C6A] px-2 py-1 text-center text-sm text-white">
                     {{- discount_percentage | floor }}%{{ 'products.product.subscription_and_save.off' | t -}}
                   </span>
                 </div>
-                <div class="flex gap-2">
-                  <p class="undiscounted-price text-md text-left font-light line-through">
+                <div class="flex w-full items-center justify-start gap-2 md:w-auto">
+                  <p class="undiscounted-price md:text-md text-left text-sm font-light line-through">
                     {{ product.price_min | money }}
                   </p>
-                  <p class="text-md discounted-price text-left font-semibold">
+                  <p class="md:text-md discounted-price text-left text-sm font-semibold">
                     {{ product.price_min | times: discount_factor | money }}
                   </p>
                 </div>
@@ -211,7 +211,7 @@
             <div class="flex w-full flex-wrap items-stretch justify-center gap-1">
               {% comment %} Only show Subscriber Gifts for Kibbles Collections {% endcomment %}
               {% if product.metafields.custom.main_collection.value.id == 449592754392 %}
-                <div class="flex flex-shrink-0 flex-grow flex-col overflow-hidden rounded-[15px] md:flex-1">
+                <div class="flex flex-grow flex-col overflow-hidden rounded-[15px] md:flex-1 md:flex-shrink-0">
                   <p class="text-md w-full bg-[#98C9EB] px-2 py-2 text-center font-semibold text-white md:text-sm">
                     {{ 'products.product.subscription_and_save.free_subscriber_gifts' | t }}
                   </p>
@@ -243,7 +243,7 @@
                   </div>
                 </div>
               {% endif %}
-              <div class="flex flex-shrink-0 flex-grow flex-col overflow-hidden rounded-[15px] md:flex-1">
+              <div class="flex flex-grow flex-col overflow-hidden rounded-[15px] md:flex-1 md:flex-shrink-0">
                 <p class="text-md w-full bg-[#98C9EB] px-2 py-2 text-center font-semibold text-white md:text-sm">
                   {{ 'products.product.subscription_and_save.subscriber_perks' | t }}
                 </p>
