@@ -15,14 +15,6 @@
             </div>
             <div class="swiper-button-next"></div>
           </div>
-          <script>
-            const swiper = new Swiper('.swiper-product', {
-              direction: 'horizontal',
-              spaceBetween: 10,
-              autoplay: false,
-              loop: true,
-            });
-          </script>
         </div>
       </div>
       {% comment %} Product Details {% endcomment %}
@@ -37,6 +29,43 @@
   </section>
 </main>
 
+{% style %}
+  .swiper-product {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    z-index: 10;
+  }
+  .swiper-button-next {
+    right: 10px;
+  }
+  .swiper-button-prev {
+    left: 10px;
+  }
+{% endstyle %}
+
+<script>
+  const swiper = new Swiper('.swiper-product', {
+    direction: 'horizontal',
+    spaceBetween: 10,
+    autoplay: false,
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>
 {% schema %}
 {
   "name": "Default Product Section",
