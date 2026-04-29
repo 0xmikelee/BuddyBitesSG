@@ -170,155 +170,157 @@
 {% comment %} <p>{{ product.variants | json }}</p> {% endcomment %}
 {% form 'product', product %}
   {% comment %} Subscription/One-time toggle {% endcomment %}
-  <fieldset class="flex flex-col gap-1 font-montserrat">
-    <legend class="text-md mb-2 font-semibold">{{ 'products.product.purchase_options' | t }}</legend>
-    {% if product.metafields.custom.main_collection.value.id != 399097102552
-      and product.metafields.custom.main_collection.value.id != 399307669720
-      and product.metafields.custom.main_collection.value.id != 456695218392
-      and product.metafields.custom.main_collection.value.id != 388909465816
-    %}
-      <div class="relative flex flex-col justify-center overflow-hidden rounded-[30px] border-2 border-solid border-[#98c9eb]">
-        <p
-          class="md:text-md absolute right-0 top-0 z-10 w-[80px] animate-big-pulse rounded-bl-lg bg-[#F9B233] px-4 py-2 text-center text-sm font-semibold text-white md:w-[120px]"
-        >
-          {{ 'products.product.subscription_and_save.enjoy_discount' | t -}}
-          {{- discount_percentage | floor }}%{{ 'products.product.subscription_and_save.off' | t }}
-        </p>
-        <label class="relative">
-          <input
-            type="radio"
-            name="purchase_option"
-            value="subscription"
-            id="subscription_option"
-            class="peer absolute left-[15px] top-[12px]"
+  {% if template != 'product' %}
+    <fieldset class="flex flex-col gap-1 font-montserrat">
+      <legend class="text-md mb-2 font-semibold">{{ 'products.product.purchase_options' | t }}</legend>
+      {% if product.metafields.custom.main_collection.value.id != 399097102552
+        and product.metafields.custom.main_collection.value.id != 399307669720
+        and product.metafields.custom.main_collection.value.id != 456695218392
+        and product.metafields.custom.main_collection.value.id != 388909465816
+      %}
+        <div class="relative flex flex-col justify-center overflow-hidden rounded-[30px] border-2 border-solid border-[#98c9eb]">
+          <p
+            class="md:text-md absolute right-0 top-0 z-10 w-[80px] animate-big-pulse rounded-bl-lg bg-[#F9B233] px-4 py-2 text-center text-sm font-semibold text-white md:w-[120px]"
           >
-          <div class="flex h-full w-full cursor-pointer flex-col items-center justify-center gap-3 px-4 py-2 transition peer-checked:bg-[#B9E3FF]">
-            <div class="flex w-full flex-col gap-1 pl-2">
-              <p class="w-full pl-2 text-left text-sm font-semibold">
-                {{ 'products.product.subscription_and_save.title' | t }}
-              </p>
-              <div class="flex w-full gap-2 pl-2">
-                <p class="text-md discounted-price text-left font-semibold">
-                  {{ product.price_min | times: discount_factor | money }}
+            {{ 'products.product.subscription_and_save.enjoy_discount' | t -}}
+            {{- discount_percentage | floor }}%{{ 'products.product.subscription_and_save.off' | t }}
+          </p>
+          <label class="relative">
+            <input
+              type="radio"
+              name="purchase_option"
+              value="subscription"
+              id="subscription_option"
+              class="peer absolute left-[15px] top-[12px]"
+            >
+            <div class="flex h-full w-full cursor-pointer flex-col items-center justify-center gap-3 px-4 py-2 transition peer-checked:bg-[#B9E3FF]">
+              <div class="flex w-full flex-col gap-1 pl-2">
+                <p class="w-full pl-2 text-left text-sm font-semibold">
+                  {{ 'products.product.subscription_and_save.title' | t }}
                 </p>
-                <p class="undiscounted-price text-md text-left font-semibold text-gray-500 line-through">
-                  {{ product.price_min | money }}
-                </p>
-              </div>
-            </div>
-            {% comment %} Two columns {% endcomment %}
-            <div class="flex w-full flex-wrap items-stretch justify-center gap-1">
-              {% comment %} Only show Subscriber Gifts for Kibbles Collections {% endcomment %}
-              {% if product.metafields.custom.main_collection.value.id == 449592754392 %}
-                <div class="flex flex-shrink-0 flex-grow flex-col overflow-hidden rounded-[30px] md:flex-1">
-                  <p class="text-md w-full bg-[#98C9EB] px-2 py-2 text-center font-semibold text-white md:text-sm">
-                    {{ 'products.product.subscription_and_save.free_subscriber_gifts' | t }}
+                <div class="flex w-full gap-2 pl-2">
+                  <p class="text-md discounted-price text-left font-semibold">
+                    {{ product.price_min | times: discount_factor | money }}
                   </p>
-                  <div class="flex flex-wrap items-center justify-center gap-1 bg-[#D3EAF9] px-2 py-2">
-                    <img
-                      src="{{ 'Welcome_Box.png' | file_img_url: 'master' }}"
-                      class="basis-1/2 object-contain md:w-[120px]"
-                      width="100"
-                      height="77.5"
-                    >
+                  <p class="undiscounted-price text-md text-left font-semibold text-gray-500 line-through">
+                    {{ product.price_min | money }}
+                  </p>
+                </div>
+              </div>
+              {% comment %} Two columns {% endcomment %}
+              <div class="flex w-full flex-wrap items-stretch justify-center gap-1">
+                {% comment %} Only show Subscriber Gifts for Kibbles Collections {% endcomment %}
+                {% if product.metafields.custom.main_collection.value.id == 449592754392 %}
+                  <div class="flex flex-shrink-0 flex-grow flex-col overflow-hidden rounded-[30px] md:flex-1">
+                    <p class="text-md w-full bg-[#98C9EB] px-2 py-2 text-center font-semibold text-white md:text-sm">
+                      {{ 'products.product.subscription_and_save.free_subscriber_gifts' | t }}
+                    </p>
+                    <div class="flex flex-wrap items-center justify-center gap-1 bg-[#D3EAF9] px-2 py-2">
+                      <img
+                        src="{{ 'Welcome_Box.png' | file_img_url: 'master' }}"
+                        class="basis-1/2 object-contain md:w-[120px]"
+                        width="100"
+                        height="77.5"
+                      >
 
-                    <div class="flex flex-col items-start justify-center gap-1 text-[#5b88a7]">
-                      <p class="text-md text-left font-semibold md:text-sm">
-                        {{ 'products.product.subscription_and_save.free' | t }}
-                        <span class="line-through">$24</span>
-                      </p>
-                      <ul class="flex list-disc flex-col items-start justify-center gap-1 font-museo">
-                        <li class="text-md text-left md:text-xs">
-                          {{ 'products.product.subscription_and_save.free_subscriber_gifts_subtext_1' | t }}
-                        </li>
-                        <li class="text-md text-left md:text-xs">
-                          {{ 'products.product.subscription_and_save.free_subscriber_gifts_subtext_2' | t }}
-                        </li>
-                        <li class="text-md text-left md:text-xs">
-                          {{ 'products.product.subscription_and_save.free_subscriber_gifts_subtext_3' | t }}
-                        </li>
-                      </ul>
+                      <div class="flex flex-col items-start justify-center gap-1 text-[#5b88a7]">
+                        <p class="text-md text-left font-semibold md:text-sm">
+                          {{ 'products.product.subscription_and_save.free' | t }}
+                          <span class="line-through">$24</span>
+                        </p>
+                        <ul class="flex list-disc flex-col items-start justify-center gap-1 font-museo">
+                          <li class="text-md text-left md:text-xs">
+                            {{ 'products.product.subscription_and_save.free_subscriber_gifts_subtext_1' | t }}
+                          </li>
+                          <li class="text-md text-left md:text-xs">
+                            {{ 'products.product.subscription_and_save.free_subscriber_gifts_subtext_2' | t }}
+                          </li>
+                          <li class="text-md text-left md:text-xs">
+                            {{ 'products.product.subscription_and_save.free_subscriber_gifts_subtext_3' | t }}
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
+                {% endif %}
+                <div class="flex flex-shrink-0 flex-grow flex-col overflow-hidden rounded-[30px] md:flex-1">
+                  <p class="text-md w-full bg-[#98C9EB] px-2 py-2 text-center font-semibold text-white md:text-sm">
+                    {{ 'products.product.subscription_and_save.subscriber_perks' | t }}
+                  </p>
+                  <ul class="flex h-full w-full list-none flex-col items-start justify-center bg-[#D3EAF9] px-2 py-2 pl-6 font-museo text-[#5b88a7]">
+                    <li class="text-md max-w-[200px] text-left before:mr-2 before:text-black before:content-['✓'] md:max-w-none md:text-xs">
+                      {{ 'products.product.subscription_and_save.subscriber_perks_subtext_1_part_1' | t }}
+                      {{ discount_percentage | floor }}%
+                      {{- 'products.product.subscription_and_save.subscriber_perks_subtext_1_part_2' | t }}
+                    </li>
+                    <li class="text-md max-w-[200px] text-left before:mr-2 before:text-black before:content-['✓'] md:max-w-none md:text-xs">
+                      {{ 'products.product.subscription_and_save.subscriber_perks_subtext_2' | t }}
+                    </li>
+                    <li class="text-md max-w-[200px] text-left before:mr-2 before:text-black before:content-['✓'] md:max-w-none md:text-xs">
+                      {{ 'products.product.subscription_and_save.subscriber_perks_subtext_3' | t }}
+                    </li>
+                    <li class="text-md max-w-[200px] text-left before:mr-2 before:text-black before:content-['✓'] md:max-w-none md:text-xs">
+                      {{ 'products.product.subscription_and_save.subscriber_perks_subtext_4' | t }}
+                    </li>
+                  </ul>
                 </div>
-              {% endif %}
-              <div class="flex flex-shrink-0 flex-grow flex-col overflow-hidden rounded-[30px] md:flex-1">
-                <p class="text-md w-full bg-[#98C9EB] px-2 py-2 text-center font-semibold text-white md:text-sm">
-                  {{ 'products.product.subscription_and_save.subscriber_perks' | t }}
-                </p>
-                <ul class="flex h-full w-full list-none flex-col items-start justify-center bg-[#D3EAF9] px-2 py-2 pl-6 font-museo text-[#5b88a7]">
-                  <li class="text-md max-w-[200px] text-left before:mr-2 before:text-black before:content-['✓'] md:max-w-none md:text-xs">
-                    {{ 'products.product.subscription_and_save.subscriber_perks_subtext_1_part_1' | t }}
-                    {{ discount_percentage | floor }}%
-                    {{- 'products.product.subscription_and_save.subscriber_perks_subtext_1_part_2' | t }}
-                  </li>
-                  <li class="text-md max-w-[200px] text-left before:mr-2 before:text-black before:content-['✓'] md:max-w-none md:text-xs">
-                    {{ 'products.product.subscription_and_save.subscriber_perks_subtext_2' | t }}
-                  </li>
-                  <li class="text-md max-w-[200px] text-left before:mr-2 before:text-black before:content-['✓'] md:max-w-none md:text-xs">
-                    {{ 'products.product.subscription_and_save.subscriber_perks_subtext_3' | t }}
-                  </li>
-                  <li class="text-md max-w-[200px] text-left before:mr-2 before:text-black before:content-['✓'] md:max-w-none md:text-xs">
-                    {{ 'products.product.subscription_and_save.subscriber_perks_subtext_4' | t }}
-                  </li>
-                </ul>
               </div>
             </div>
-          </div>
-        </label>
-        <label
-          id="delivery_option_label"
-          class="hidden w-full items-center justify-start gap-2 bg-[#B9E3FF] px-4 py-2"
-        >
-          <select
-            name="selling_plan"
-            id="delivery_option_select"
-            class="w-full rounded-full border-2 border-solid border-[#98c9eb] px-4 py-1 text-center"
-            disabled
+          </label>
+          <label
+            id="delivery_option_label"
+            class="hidden w-full items-center justify-start gap-2 bg-[#B9E3FF] px-4 py-2"
           >
-            {% for plan_group in product.selling_plan_groups %}
-              {% if plan_group.app_id == 'SKIO' %}
-                {% for plan in plan_group.selling_plans %}
-                  <option
-                    value="{{ plan.id }}"
-                    {% if forloop.first %}
-                      selected
-                    {% endif %}
-                  >
-                    {{ plan.options[0].value }}
-                  </option>
-                {% endfor %}
-              {% endif %}
-            {% endfor %}
-          </select>
-        </label>
-      </div>
-    {% endif %}
-    <label class="relative overflow-hidden rounded-[30px] border-2 border-solid border-[#98c9eb] font-montserrat">
-      <input
-        type="radio"
-        name="purchase_option"
-        value="one_time"
-        class="peer absolute left-[15px] top-[12px]"
-        checked
-        id="one_time_option"
-        {% comment %}
-          {% if product.metafields.custom.main_collection.value.id == 440255250747
-            or product.metafields.custom.main_collection.value.id == 399307669720
-            or product.metafields.custom.main_collection.value.id == 456695218392
-          %}
-            checked
-          {% endif %}
-        {% endcomment %}
-      >
-      <div class="flex h-full w-full cursor-pointer flex-col items-start justify-center gap-1 rounded px-4 py-2 pl-6 transition peer-checked:bg-[#B9E3FF]">
-        <p class="w-full pl-2 text-left text-sm font-semibold">{{ 'products.product.one_time' | t }}</p>
-        <p class="text-md undiscounted-price pl-2 text-left font-semibold text-black">
-          {{ product.price_min | money }}
-        </p>
-      </div>
-    </label>
-  </fieldset>
+            <select
+              name="selling_plan"
+              id="delivery_option_select"
+              class="w-full rounded-full border-2 border-solid border-[#98c9eb] px-4 py-1 text-center"
+              disabled
+            >
+              {% for plan_group in product.selling_plan_groups %}
+                {% if plan_group.app_id == 'SKIO' %}
+                  {% for plan in plan_group.selling_plans %}
+                    <option
+                      value="{{ plan.id }}"
+                      {% if forloop.first %}
+                        selected
+                      {% endif %}
+                    >
+                      {{ plan.options[0].value }}
+                    </option>
+                  {% endfor %}
+                {% endif %}
+              {% endfor %}
+            </select>
+          </label>
+        </div>
+      {% endif %}
+      <label class="relative overflow-hidden rounded-[30px] border-2 border-solid border-[#98c9eb] font-montserrat">
+        <input
+          type="radio"
+          name="purchase_option"
+          value="one_time"
+          class="peer absolute left-[15px] top-[12px]"
+          checked
+          id="one_time_option"
+          {% comment %}
+            {% if product.metafields.custom.main_collection.value.id == 440255250747
+              or product.metafields.custom.main_collection.value.id == 399307669720
+              or product.metafields.custom.main_collection.value.id == 456695218392
+            %}
+              checked
+            {% endif %}
+          {% endcomment %}
+        >
+        <div class="flex h-full w-full cursor-pointer flex-col items-start justify-center gap-1 rounded px-4 py-2 pl-6 transition peer-checked:bg-[#B9E3FF]">
+          <p class="w-full pl-2 text-left text-sm font-semibold">{{ 'products.product.one_time' | t }}</p>
+          <p class="text-md undiscounted-price pl-2 text-left font-semibold text-black">
+            {{ product.price_min | money }}
+          </p>
+        </div>
+      </label>
+    </fieldset>
+  {% endif %}
 
   <div class="mt-2 flex justify-between gap-2">
     {% comment %} Variant selection (greyed out if sold out) {% endcomment %}

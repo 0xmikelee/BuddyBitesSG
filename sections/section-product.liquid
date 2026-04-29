@@ -1,0 +1,57 @@
+<main>
+  <section class="py-5 md:py-10">
+    <div class="container grid grid-cols-1 gap-4 md:grid-cols-2">
+      {% comment %} Product Image {% endcomment %}
+      <div class="relative h-full">
+        <div class="sticky top-0 h-fit w-full">
+          <div class="swiper-product">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-wrapper">
+              {% for image in product.media %}
+                <div class="swiper-slide">
+                  <img src="{{ image | img_url: 'master' }}" alt="{{ image.alt }}" class="h-full w-full object-cover">
+                </div>
+              {% endfor %}
+            </div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </div>
+      {% comment %} Product Details {% endcomment %}
+      <div class="relative flex h-full flex-col gap-2">
+        <h2 class="m-0 text-[24px] font-bold text-[#193C6B] en:font-museo">{{ product.title }}</h2>
+        <h3 class="font-montserrat text-[16px] font-light text-gray-500">
+          {{ product.description }}
+        </h3>
+        {% render 'snippet-add-to-cart' %}
+      </div>
+    </div>
+  </section>
+</main>
+
+{% style %}
+  .swiper-product {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+  }
+{% endstyle %}
+
+{% javascript %}
+  const swiper = new Swiper('.swiper-product', {
+    direction: 'horizontal',
+    spaceBetween: 10,
+    autoplay: false,
+    loop: true,
+    slidesPerView: 1,
+  });
+{% endjavascript %}
+
+{% schema %}
+{
+  "name": "Product Section",
+  "settings": []
+}
+{% endschema %}
