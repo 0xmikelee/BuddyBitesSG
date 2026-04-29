@@ -2852,6 +2852,10 @@ video {
   width: 45%;
 }
 
+.w-\[45px\]{
+  width: 45px;
+}
+
 .w-\[46px\]{
   width: 46px;
 }
@@ -2988,14 +2992,6 @@ video {
 .w-max{
   width: -moz-max-content;
   width: max-content;
-}
-
-.w-\[45px\]{
-  width: 45px;
-}
-
-.min-w-\[155px\]{
-  min-width: 155px;
 }
 
 .min-w-\[300px\]{
@@ -5027,6 +5023,10 @@ video {
   font-size: 26px;
 }
 
+.text-\[28px\]{
+  font-size: 28px;
+}
+
 .text-\[2rem\]{
   font-size: 2rem;
 }
@@ -5045,10 +5045,6 @@ video {
 
 .text-\[32px\]{
   font-size: 32px;
-}
-
-.text-\[34px\]{
-  font-size: 34px;
 }
 
 .text-\[35px\]{
@@ -5131,6 +5127,10 @@ video {
   font-size: clamp(20px,2.5vw,25px);
 }
 
+.text-\[clamp\(25px\2c 2\.5vw\2c 35px\)\]{
+  font-size: clamp(25px,2.5vw,35px);
+}
+
 .text-\[clamp\(28px\2c 1\.9vw\2c 32px\)\]{
   font-size: clamp(28px,1.9vw,32px);
 }
@@ -5182,14 +5182,6 @@ video {
 .text-xs{
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-\[clamp\(25px\2c 2\.5vw\2c 35px\)\]{
-  font-size: clamp(25px,2.5vw,35px);
-}
-
-.text-\[28px\]{
-  font-size: 28px;
 }
 
 .font-bold{
@@ -7531,9 +7523,9 @@ video {
     padding-right: 2.5rem;
   }
 
-  .md\:px-2{
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+  .md\:px-32{
+    padding-left: 8rem;
+    padding-right: 8rem;
   }
 
   .md\:px-4{
@@ -7614,11 +7606,6 @@ video {
   .md\:py-\[10px\]{
     padding-top: 10px;
     padding-bottom: 10px;
-  }
-
-  .md\:px-32{
-    padding-left: 8rem;
-    padding-right: 8rem;
   }
 
   .md\:pb-\[30px\]{
@@ -7710,6 +7697,10 @@ video {
     font-size: 20px;
   }
 
+  .md\:text-\[24px\]{
+    font-size: 24px;
+  }
+
   .md\:text-\[2vw\]{
     font-size: 2vw;
   }
@@ -7722,12 +7713,20 @@ video {
     font-size: 30px;
   }
 
+  .md\:text-\[34px\]{
+    font-size: 34px;
+  }
+
   .md\:text-\[35px\]{
     font-size: 35px;
   }
 
   .md\:text-\[4\.5vw\]{
     font-size: 4.5vw;
+  }
+
+  .md\:text-\[40px\]{
+    font-size: 40px;
   }
 
   .md\:text-\[42px\]{
@@ -7818,18 +7817,6 @@ video {
   .md\:text-xs{
     font-size: 0.75rem;
     line-height: 1rem;
-  }
-
-  .md\:text-\[40px\]{
-    font-size: 40px;
-  }
-
-  .md\:text-\[24px\]{
-    font-size: 24px;
-  }
-
-  .md\:text-\[34px\]{
-    font-size: 34px;
   }
 
   .md\:leading-\[25\.7px\]{
