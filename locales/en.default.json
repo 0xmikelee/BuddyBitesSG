@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "account": {
     "old_recharge_users": "Subscribed before 21/11/2025? Click here to manage your subscription"
@@ -44,7 +53,7 @@
       "title": "Rewards"
     },
     "shop_cat": {
-      "title": "Cat",
+      "title": "Shop Cat",
       "kibbles": {
         "title": "Kibbles",
         "options": {
@@ -55,7 +64,7 @@
       }
     },
     "shop_dog": {
-      "title": "Dog",
+      "title": "Shop Dog",
       "kibbles": {
         "title": "Kibbles",
         "options": {

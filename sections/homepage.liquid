@@ -1,0 +1,917 @@
+<main class="bg-[#FCF9F1] font-foundersGrotesk text-[#173C6A]">
+  <!-- Hero Section -->
+  <section class="relative">
+    <img
+      src="{{ 'hero_image.jpg' | file_img_url: 'master' }}"
+      alt="Hero Image"
+      class="hidden h-[90dvh] w-full object-cover md:block"
+    >
+    <img
+      src="{{ 'hero_image_mobile.png' | file_img_url: 'master' }}"
+      alt="Hero Image"
+      class="block h-full w-full object-cover md:hidden"
+    >
+    <div class="absolute left-0 top-0 flex h-1/2 w-full flex-col items-center justify-center gap-8 px-4 pt-10 text-center md:h-full md:w-[40%] md:items-start md:gap-6 md:px-10 md:pt-0 md:text-left">
+      <h1 class="text-balance font-titanOne text-[clamp(40px,5vw,55px)] leading-[clamp(40px,5vw,55px)]">
+        Premium European Kibble
+      </h1>
+      <p class="text-balance text-[clamp(20px,2.5vw,25px)] font-medium leading-[clamp(30px,2.5vw,35px)]">
+        Vet-backed formula, Gut-Friendly prebiotics. Nearly 10 million meals donated.
+      </p>
+      <a
+        href="{{ pages['quiz'].url }}"
+        class="btn-cta"
+      >
+        Take Our Quiz
+      </a>
+    </div>
+  </section>
+  <section>
+    <div class="container flex flex-col items-center justify-center gap-4 py-5 md:py-20">
+      <h2 class="text-balance text-center font-titanOne text-[clamp(40px,5vw,55px)] uppercase leading-[clamp(40px,5vw,55px)]">
+        Start with our favourites
+      </h2>
+      <div class="flex gap-4 text-[clamp(28px,1.9vw,32px)]">
+        <button id="btn-fav-dog" class="btn-fav-tab flex flex-col items-center justify-center">
+          Dog
+          <span class="span-fav-tab span-fav-tab-active h-[1px] w-full" />
+        </button>
+        <button id="btn-fav-cat" class="btn-fav-tab flex flex-col items-center justify-center">
+          Cat
+          <span class="span-fav-tab h-[1px] w-full" />
+        </button>
+      </div>
+      <div id="tab-fav-dog" class="w-full">
+        <div class="swiper swiper-fav-dog">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="flex w-full flex-col items-center justify-center gap-4 rounded-[20px] bg-white p-4">
+                <img
+                  src="{{ 'salmon_kibble.png' | file_img_url: 'master' }}"
+                  alt="Dog Salmon Kibbles"
+                  class="w-full rounded-[20px] object-cover"
+                >
+                <div class="flex w-full flex-col items-start justify-center gap-2 text-[18px]">
+                  <div class="flex w-full justify-between gap-2 font-semibold">
+                    <p>Adult Kibbles</p>
+                    <p>$32.80</p>
+                  </div>
+                  <p class="font-normal">Sweet Potato and Salmon Recipe</p>
+                </div>
+                <a href="{{ all_products['adult-salmon-dry-dog-food'].url }}" class="btn-buy-now w-full">
+                  Add to Cart - $32.80
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="flex w-full flex-col items-center justify-center gap-4 rounded-[20px] bg-white p-4">
+                <img
+                  src="{{ 'beef_treat.png' | file_img_url: 'master' }}"
+                  alt="Dog Beef Treats"
+                  class="w-full rounded-[20px] object-cover"
+                >
+                <div class="flex w-full flex-col items-start justify-center gap-2 text-[18px]">
+                  <div class="flex w-full justify-between gap-2 font-semibold">
+                    <p>Air-Dried Dog Treats</p>
+                    <p>$13.50</p>
+                  </div>
+                  <p class="font-normal">Beef & Blueberry Recipe</p>
+                </div>
+                <a href="{{ all_products['beef-blueberry-air-dried-dog-treats'].url }}" class="btn-buy-now w-full">
+                  Add to Cart - $13.50
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="flex w-full flex-col items-center justify-center gap-4 rounded-[20px] bg-white p-4">
+                <img
+                  src="{{ 'beef_topper.png' | file_img_url: 'master' }}"
+                  alt="Dog Beef Toppers"
+                  class="w-full rounded-[20px] object-cover"
+                >
+                <div class="flex w-full flex-col items-start justify-center gap-2 text-[18px]">
+                  <div class="flex w-full justify-between gap-2 font-semibold">
+                    <p>Fresh Toppers</p>
+                    <p>$7.20</p>
+                  </div>
+                  <p class="font-normal">Beef & Vegetables Recipe</p>
+                </div>
+                <a href="{{ all_products['dog-fresh-toppers-beef-vegetables'].url }}" class="btn-buy-now w-full">
+                  Add to Cart - $7.20
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="tab-fav-cat" class="hidden w-full">
+        <div class="swiper swiper-fav-cat">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="flex w-full flex-col items-center justify-center gap-4 rounded-[20px] bg-white p-4">
+                <img
+                  src="{{ 'cat_kibbles_salmon_front.png' | file_img_url: 'master' }}"
+                  alt="Cat Salmon Kibbles"
+                  class="w-full rounded-[20px] object-cover"
+                >
+                <div class="flex w-full flex-col items-start justify-center gap-2 text-[18px]">
+                  <div class="flex w-full justify-between gap-2 font-semibold">
+                    <p>Cat Kibbles</p>
+                    <p>$32.80</p>
+                  </div>
+                  <p class="font-normal">Salmon Recipe</p>
+                </div>
+                <a href="{{ all_products['adult-salmon-dry-cat-food'].url }}" class="btn-buy-now w-full">
+                  Add to Cart - $32.80
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="flex w-full flex-col items-center justify-center gap-4 rounded-[20px] bg-white p-4">
+                <img
+                  src="{{ 'cat_kibbles_chicken_front.png' | file_img_url: 'master' }}"
+                  alt="Cat Chicken Kibbles"
+                  class="w-full rounded-[20px] object-cover"
+                >
+                <div class="flex w-full flex-col items-start justify-center gap-2 text-[18px]">
+                  <div class="flex w-full justify-between gap-2 font-semibold">
+                    <p>Cat Kibbles</p>
+                    <p>$13.50</p>
+                  </div>
+                  <p class="font-normal">Chicken Recipe</p>
+                </div>
+                <a href="{{ all_products['adult-chicken-dry-cat-food'].url }}" class="btn-buy-now w-full">
+                  Add to Cart - $13.50
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="flex w-full flex-col items-center justify-center gap-4 rounded-[20px] bg-white p-4">
+                <img
+                  src="{{ 'kitten_kibbles_chicken_front.png' | file_img_url: 'master' }}"
+                  alt="Kitten Chicken Kibbles"
+                  class="w-full rounded-[20px] object-cover"
+                >
+                <div class="flex w-full flex-col items-start justify-center gap-2 text-[18px]">
+                  <div class="flex w-full justify-between gap-2 font-semibold">
+                    <p>Kitten Kibbles</p>
+                    <p>$7.20</p>
+                  </div>
+                  <p class="font-normal">Kitten Chicken Recipe</p>
+                </div>
+                <a href="{{ all_products['kitten-chicken-dry-cat-food'].url }}" class="btn-buy-now w-full">
+                  Add to Cart - $7.20
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="tab-fav-cat"></div>
+    </div>
+  </section>
+  <section>
+    <div class="container py-5 font-foundersGrotesk text-[#173C6A] md:py-10">
+      <div class="grid grid-cols-1 gap-4 md:grid-cols-[1.2fr_1fr]">
+        <div class="order-2 flex flex-col items-center justify-between gap-4 rounded-[20px] bg-white p-6 md:order-1">
+          <div class="flex flex-col items-start justify-center gap-4">
+            <h2 class="text-balance text-left font-titanOne text-[clamp(30px,2.5vw,35px)] uppercase leading-[clamp(30px,2.5vw,35px)]">
+              ONLY THE GOOD STUFF
+            </h2>
+            <p class="text-balance text-left text-[clamp(16px,1.9vw,20px)] font-normal leading-[clamp(24px,1.9vw,28px)]">
+              Buddy Bites started with the goal of feeding all sheltered dogs in Asia. We are the first subscription
+              based food brand that gives back - we donate 1kg for every 2kg bought. Our dog food formula is backed by
+              vets, plus with a subscription you never need to worry about buying dog food again.
+            </p>
+            <a href="{{ pages['about-us'].url }}" class="btn-cta"> About Us </a>
+          </div>
+          <div class="flex w-full flex-col gap-2">
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item border-b border-[#193C6A]">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button text-[clamp(20px,2vw,24px) flex w-full cursor-pointer items-center justify-between px-2 py-3 text-left font-semibold transition-all duration-300 md:text-[clamp(25px,2.2vw,30px)]"
+                    type="button"
+                    data-accordion-target="#collapseOne"
+                    aria-expanded="false"
+                  >
+                    Vet-backed formula
+                    <svg
+                      class="accordion-icon h-6 w-6 transition-transform duration-200"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle cx="12" cy="12" r="12" fill="#173C6A"/>
+                      <rect x="11" y="6" width="2" height="12" rx="1" fill="#fff"/>
+                      <rect x="6" y="11" width="12" height="2" rx="1" fill="#fff"/>
+                    </svg>
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse hidden">
+                  <div class="accordion-body px-2 py-2 text-[15px]">
+                    Our expertly crafted formulas are backed by veterinarians, ensuring that your beloved furry friend
+                    is receiving only the best.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item border-b border-[#193C6A]">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button text-[clamp(20px,2vw,24px) flex w-full cursor-pointer items-center justify-between px-2 py-3 text-left font-semibold transition-all duration-300 md:text-[clamp(25px,2.2vw,30px)]"
+                    type="button"
+                    data-accordion-target="#collapseTwo"
+                    aria-expanded="false"
+                  >
+                    Gut-friendly Prebiotics
+                    <svg
+                      class="accordion-icon h-6 w-6 transition-transform duration-200"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle cx="12" cy="12" r="12" fill="#173C6A"/>
+                      <rect x="11" y="6" width="2" height="12" rx="1" fill="#fff"/>
+                      <rect x="6" y="11" width="12" height="2" rx="1" fill="#fff"/>
+                    </svg>
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse hidden">
+                  <div class="accordion-body px-2 py-2 text-[15px]">
+                    We take gut health seriously, which is why our dog food is packed with prebiotics that will keep
+                    your pup's digestion running smoothly.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item border-b border-[#193C6A]">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button text-[clamp(20px,2vw,24px) flex w-full cursor-pointer items-center justify-between px-2 py-3 text-left font-semibold transition-all duration-300 md:text-[clamp(25px,2.2vw,30px)]"
+                    type="button"
+                    data-accordion-target="#collapseThree"
+                    aria-expanded="false"
+                  >
+                    Made in Europe
+                    <svg
+                      class="accordion-icon h-6 w-6 transition-transform duration-200"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle cx="12" cy="12" r="12" fill="#173C6A"/>
+                      <rect x="11" y="6" width="2" height="12" rx="1" fill="#fff"/>
+                      <rect x="6" y="11" width="12" height="2" rx="1" fill="#fff"/>
+                    </svg>
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse hidden">
+                  <div class="accordion-body px-2 py-2 text-[15px]">
+                    All our dog food is made in Europe, using the highest quality ingredients. We're proud to support
+                    local businesses and ensure that our products are made with care.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item border-b border-[#193C6A]">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button text-[clamp(20px,2vw,24px) flex w-full cursor-pointer items-center justify-between px-2 py-3 text-left font-semibold transition-all duration-300 md:text-[clamp(25px,2.2vw,30px)]"
+                    type="button"
+                    data-accordion-target="#collapseFour"
+                    aria-expanded="false"
+                  >
+                    Premium, Traceable Ingredients
+                    <svg
+                      class="accordion-icon h-6 w-6 transition-transform duration-200"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle cx="12" cy="12" r="12" fill="#173C6A"/>
+                      <rect x="11" y="6" width="2" height="12" rx="1" fill="#fff"/>
+                      <rect x="6" y="11" width="12" height="2" rx="1" fill="#fff"/>
+                    </svg>
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse hidden">
+                  <div class="accordion-body px-2 py-2 text-[15px]">
+                    We source our ingredients from trusted suppliers, ensuring that every ingredient is of the highest
+                    quality. We're proud to support local businesses and ensure that our products are made with care.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          src="{{ 'only_the_good_stuff.png' | file_img_url: 'master' }}"
+          alt="About Us Only The Good Stuff"
+          class="order-1 w-full object-cover md:order-2"
+        >
+      </div>
+    </div>
+  </section>
+  <section class="py-5 md:py-10">
+    <div class="container relative">
+      <img
+        src="{{ 'all_new_cat_line.png' | file_img_url: 'master' }}"
+        alt="All New Cat Line Image"
+        class="hidden w-full rounded-[20px] object-cover md:block"
+      >
+      <img
+        src="{{ 'all_new_cat_line_mobile.png' | file_img_url: 'master' }}"
+        alt="All New Cat Line Image"
+        class="block w-full rounded-[20px] object-cover md:hidden"
+      >
+      <div class="absolute left-0 top-0 flex h-1/2 w-full flex-col items-center justify-center gap-5 py-5 md:h-full md:justify-start md:py-10">
+        <h2 class="w-[70%] text-balance text-center font-titanOne text-[clamp(30px,2.5vw,35px)] uppercase leading-[clamp(30px,2.5vw,35px)] md:w-full">
+          ALL NEW CAT LINE
+        </h2>
+        <a href="{{ pages['about-us'].url }}" class="btn-cta"> About Us </a>
+      </div>
+    </div>
+  </section>
+  <section class="py-5 md:py-10">
+    <div class="container">
+      <div class="flex flex-col items-center justify-center gap-5">
+        <h2 class="text-balance text-center font-titanOne text-[clamp(30px,2.5vw,35px)] uppercase leading-[clamp(30px,2.5vw,35px)]">
+          OUR BUDDIES LOVE A BITE
+        </h2>
+        <p class="text-balance text-center text-[clamp(16px,1.9vw,20px)] font-normal leading-[clamp(24px,1.9vw,28px)]">
+          From dedicated subscribers to first time buyers - hear what people have to say about Buddy Bites.
+        </p>
+      </div>
+      <div id="klaviyo-featured-reviews-carousel"></div>
+    </div>
+  </section>
+  <section class="py-5 md:py-10">
+    <div class="container">
+      <div class="grid grid-cols-1 overflow-hidden rounded-[20px] md:grid-cols-[0.5fr_1fr]">
+        <img
+          src="{{ 'subscribe_n_save.png' | file_img_url: 'master' }}"
+          alt="Placeholder Image"
+          class="w-full object-cover"
+        >
+        <div class="flex flex-col items-center justify-start gap-10 bg-[#B9E3FF] p-6 md:p-10">
+          <h2 class="text-balance text-center font-titanOne text-[clamp(30px,2.5vw,35px)] uppercase leading-[clamp(30px,2.5vw,35px)]">
+            Subscribe & Save 20%
+          </h2>
+          <div class="grid grid-cols-2 gap-5 md:grid-cols-4 md:gap-0">
+            <div class="flex max-w-[150px] flex-col items-center justify-between gap-4">
+              <img
+                src="{{ 'icon_discount.png' | file_img_url: 'master'}}"
+                alt="discount"
+                class="w-[50px] object-cover"
+              >
+              <p class="text-balance text-center text-[clamp(16px,1.9vw,20px)] leading-[clamp(16px,1.9vw,20px)]">
+                20% off every order
+              </p>
+            </div>
+            <div class="flex max-w-[150px] flex-col items-center justify-between gap-4">
+              <img
+                src="{{ 'icon_delivery.png' | file_img_url: 'master'}}"
+                alt="delivery"
+                class="w-[60px] object-cover"
+              >
+              <p class="text-balance text-center text-[clamp(16px,1.9vw,20px)] leading-[clamp(16px,1.9vw,20px)]">
+                Automated Deliveries
+              </p>
+            </div>
+            <div class="flex max-w-[150px] flex-col items-center justify-between gap-4">
+              <img
+                src="{{ 'icon_swap.png' | file_img_url: 'master'}}"
+                alt="swap, skip or cancel"
+                class="w-[50px] object-cover"
+              >
+              <p class="text-balance text-center text-[clamp(16px,1.9vw,20px)] leading-[clamp(16px,1.9vw,20px)]">
+                Swap, Skip or Cancel anytime
+              </p>
+            </div>
+            <div class="flex max-w-[150px] flex-col items-center justify-between gap-4">
+              <img
+                src="{{ 'icon_surprise.png' | file_img_url: 'master'}}"
+                alt="surprise"
+                class="w-[50px] object-cover"
+              >
+              <p class="text-balance text-center text-[clamp(16px,1.9vw,20px)] leading-[clamp(16px,1.9vw,20px)]">
+                Exclusive Surprises
+              </p>
+            </div>
+          </div>
+          <a href="{{ pages['subscription'].url }}" class="btn-cta">SUBSCRIBE & SAVE</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-5 md:py-10">
+    <div class="container">
+      <div class="grid grid-cols-1 gap-5 md:grid-cols-[1fr_0.6fr]">
+        <div class="flex w-full flex-col items-center justify-between gap-5 rounded-[20px] bg-white p-6">
+          <div class="flex w-full flex-col items-center justify-center gap-5 md:items-start">
+            <h2 class="text-balance text-center font-titanOne text-[clamp(30px,2.5vw,35px)] uppercase leading-[clamp(30px,2.5vw,35px)]">
+              GIVING BACK TO THE COMMUNITY
+            </h2>
+            <p class="text-balance text-center text-[clamp(16px,1.9vw,20px)] font-normal leading-[clamp(24px,1.9vw,28px)]">
+              For every 2kg of dog food purchased, we donate 1kg to local shelters!
+            </p>
+            <a href="{{ all_products['adult-turkey-dry-dog-food'].url }}" class="btn-cta"> SHOP TO DONATE </a>
+          </div>
+          <div class="flex w-full flex-wrap items-center justify-center gap-1 md:items-end md:justify-start">
+            <div class="els-cup-box !m-0" data-id="7086"></div>
+            <p class="text-[clamp(16px,1.9vw,20px)] font-semibold md:pb-[30px]">Meals Donated</p>
+          </div>
+        </div>
+        <div class="flex w-full justify-end">
+          <img
+            src="{{ 'give_back_to_community.jpg' | file_img_url: 'master' }}"
+            alt="Give Back To The Community"
+            class="aspect-square rounded-[20px] object-cover object-center md:h-[450px]"
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-5 md:py-10">
+    <div class="container">
+      <div class="flex flex-col items-center justify-center gap-5">
+        <h2 class="text-balance text-center font-titanOne text-[clamp(30px,2.5vw,35px)] uppercase leading-[clamp(30px,2.5vw,35px)]">
+          OUR PARTNERING SHELTERS
+        </h2>
+        <div class="w-full">
+          <div class="swiper swiper-partnering-shelters">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="flex h-[150px] flex-col items-center justify-center">
+                  <img
+                    src="{{ 'icon_shelter_hkdr.png' | file_img_url: 'master' }}"
+                    alt="HKDR"
+                    class="w-full object-cover"
+                  >
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="flex h-[150px] flex-col items-center justify-center">
+                  <img
+                    src="{{ 'icon_shelter_catherines_puppies.png' | file_img_url: 'master' }}"
+                    alt="Catherine's Puppies"
+                    class="w-full object-cover"
+                  >
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="flex h-[150px] flex-col items-center justify-center">
+                  <img
+                    src="{{ 'icon_shelter_saikung_stray_friends.png' | file_img_url: 'master' }}"
+                    alt="Sai Kung Stray Friends"
+                    class="w-full object-cover"
+                  >
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="flex h-[150px] flex-col items-center justify-center">
+                  <img
+                    src="{{ 'icon_shelter_sosd.png' | file_img_url: 'master' }}"
+                    alt="SoSD"
+                    class="w-full object-cover"
+                  >
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="flex h-[150px] flex-col items-center justify-center">
+                  <img
+                    src="{{ 'icon_shelter_pgrs.png' | file_img_url: 'master' }}"
+                    alt="PGRS"
+                    class="w-full object-cover"
+                  >
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="flex h-[150px] flex-col items-center justify-center">
+                  <img
+                    src="{{ 'icon_shelter_tails_lantau.png' | file_img_url: 'master' }}"
+                    alt="Tails Lantau"
+                    class="w-full object-cover"
+                  >
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="flex h-[150px] flex-col items-center justify-center">
+                  <img
+                    src="{{ 'icon_shelter_hkscda.png' | file_img_url: 'master' }}"
+                    alt="HKSCDA"
+                    class="w-full object-cover"
+                  >
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="flex h-[150px] flex-col items-center justify-center">
+                  <img
+                    src="{{ 'icon_shelter_madam_wong.png' | file_img_url: 'master' }}"
+                    alt="Madam Wong"
+                    class="w-full object-cover"
+                  >
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="flex h-[150px] flex-col items-center justify-center">
+                  <img
+                    src="{{ 'icon_shelter_love_fluffy_home.png' | file_img_url: 'master' }}"
+                    alt="Love Fluffy Home"
+                    class="w-full object-cover"
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="{{ pages['about-us'].url }}" class="btn-cta"> LEARN MORE </a>
+      </div>
+    </div>
+  </section>
+  <section class="py-5 md:py-10">
+    <div class="container">
+      <div class="relative overflow-hidden rounded-[20px]">
+        <img
+          src="{{ 'try_sample.png' | file_img_url: 'master' }}"
+          alt="Try Sample Packs"
+          class="hidden w-full object-cover md:block"
+        >
+        <img
+          src="{{ 'try_sample_mobile.png' | file_img_url: 'master' }}"
+          alt="Try Sample Packs"
+          class="block w-full object-cover md:hidden"
+        >
+        <div class="absolute left-0 top-0 flex h-1/2 w-full flex-col items-center justify-center gap-5 py-5 md:h-full md:justify-start md:py-10">
+          <h2 class="w-[70%] text-balance text-center font-titanOne text-[clamp(30px,2.5vw,35px)] uppercase leading-[clamp(30px,2.5vw,35px)] md:w-full">
+            TRY SAMPLE PACKS
+          </h2>
+          <a href="{{ all_products['adult-turkey-dog-sample-starter-pack'].url }}" class="btn-cta">
+            shop sample packs
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-[#FAF7F2] py-5 md:py-10">
+    <div class="container">
+      <div class="flex flex-col items-center justify-center gap-5">
+        <h2 class="text-balance text-center font-titanOne text-[clamp(30px,2.5vw,35px)] uppercase leading-[clamp(30px,2.5vw,35px)]">
+          FAQS
+        </h2>
+        <div
+          class="accordion homepage-faq-accordion grid w-full max-w-6xl grid-cols-1 items-start gap-4 md:grid-cols-2"
+          id="homepage-faq-accordion"
+        >
+          <div class="rounded-[12px] border border-[#C8D4E0] bg-white">
+            <h3 class="m-0">
+              <button
+                type="button"
+                class="accordion-button flex w-full cursor-pointer items-center gap-3 px-4 py-4 text-left text-[15px] font-medium text-[#173C6A] md:text-[16px]"
+                data-accordion-target="#faq-collapse-1"
+                aria-expanded="false"
+              >
+                <span
+                  class="accordion-icon faq-accordion-symbol inline-flex h-6 w-6 shrink-0 items-center justify-center text-xl font-semibold leading-none text-[#173C6A]"
+                  aria-hidden="true"
+                  >+</span
+                >
+                <span>Where is your food made?</span>
+              </button>
+            </h3>
+            <div id="faq-collapse-1" class="accordion-collapse hidden border-t border-[#E8EDF2]">
+              <div class="px-4 pb-4 pl-11 pt-3 text-[15px] leading-relaxed text-[#173C6A] md:pl-12">
+                All Buddy Bites Kibble is made in Europe and regulated to AAFCO standards. You might have even seen the
+                video of Ryan eating our food. We didn't ask him to do it, but it's safe to do so and he's a bit weird.
+              </div>
+            </div>
+          </div>
+          <div class="rounded-[12px] border border-[#C8D4E0] bg-white">
+            <h3 class="m-0">
+              <button
+                type="button"
+                class="accordion-button flex w-full cursor-pointer items-center gap-3 px-4 py-4 text-left text-[15px] font-medium text-[#173C6A] md:text-[16px]"
+                data-accordion-target="#faq-collapse-2"
+                aria-expanded="false"
+              >
+                <span
+                  class="accordion-icon faq-accordion-symbol inline-flex h-6 w-6 shrink-0 items-center justify-center text-xl font-semibold leading-none text-[#173C6A]"
+                  aria-hidden="true"
+                  >+</span
+                >
+                <span>What are the benefits of subscribing?</span>
+              </button>
+            </h3>
+            <div id="faq-collapse-2" class="accordion-collapse hidden border-t border-[#E8EDF2]">
+              <div class="px-4 pb-4 pl-11 pt-3 text-[15px] leading-relaxed text-[#173C6A] md:pl-12">
+                Convenience and cash!! By subscribing you receive a 15% discount to standard pricing, and the
+                convenience of not having to go back into the website to order every month. It just arrives at your door
+                as if by magic. On top of that we throw some extra goodies in your orders, first one guaranteed!
+              </div>
+            </div>
+          </div>
+          <div class="rounded-[12px] border border-[#C8D4E0] bg-white">
+            <h3 class="m-0">
+              <button
+                type="button"
+                class="accordion-button flex w-full cursor-pointer items-center gap-3 px-4 py-4 text-left text-[15px] font-medium text-[#173C6A] md:text-[16px]"
+                data-accordion-target="#faq-collapse-3"
+                aria-expanded="false"
+              >
+                <span
+                  class="accordion-icon faq-accordion-symbol inline-flex h-6 w-6 shrink-0 items-center justify-center text-xl font-semibold leading-none text-[#173C6A]"
+                  aria-hidden="true"
+                  >+</span
+                >
+                <span>How do I know how much to order for my dog?</span>
+              </button>
+            </h3>
+            <div id="faq-collapse-3" class="accordion-collapse hidden border-t border-[#E8EDF2]">
+              <div class="px-4 pb-4 pl-11 pt-3 text-[15px] leading-relaxed text-[#173C6A] md:pl-12">
+                Take a look at our feeding guidelines per recipe and check our daily recommended feeding guideline
+                (grams per day) corresponding to your dog's weight. Adjust as needed if your dog is on the skinnier or
+                chunkier side.
+              </div>
+            </div>
+          </div>
+          <div class="rounded-[12px] border border-[#C8D4E0] bg-white">
+            <h3 class="m-0">
+              <button
+                type="button"
+                class="accordion-button flex w-full cursor-pointer items-center gap-3 px-4 py-4 text-left text-[15px] font-medium text-[#173C6A] md:text-[16px]"
+                data-accordion-target="#faq-collapse-4"
+                aria-expanded="false"
+              >
+                <span
+                  class="accordion-icon faq-accordion-symbol inline-flex h-6 w-6 shrink-0 items-center justify-center text-xl font-semibold leading-none text-[#173C6A]"
+                  aria-hidden="true"
+                  >+</span
+                >
+                <span>Is the subscription flexible?</span>
+              </button>
+            </h3>
+            <div id="faq-collapse-4" class="accordion-collapse hidden border-t border-[#E8EDF2]">
+              <div class="px-4 pb-4 pl-11 pt-3 text-[15px] leading-relaxed text-[#173C6A] md:pl-12">
+                Absolutely! Our subscriptions are purely for convenience, they are completely flexible. You can pause,
+                edit or cancel any time. You can change flavour, delivery date, frequency all in just a few clicks via
+                your customer portal. Plus you will have dedicated support via Whatsapp if you have any questions or
+                need anything changed. There is no charge for subscribing, just order your food, and let us deliver to
+                your door on repeat at no extra cost.
+              </div>
+            </div>
+          </div>
+          <div class="rounded-[12px] border border-[#C8D4E0] bg-white">
+            <h3 class="m-0">
+              <button
+                type="button"
+                class="accordion-button flex w-full cursor-pointer items-center gap-3 px-4 py-4 text-left text-[15px] font-medium text-[#173C6A] md:text-[16px]"
+                data-accordion-target="#faq-collapse-5"
+                aria-expanded="false"
+              >
+                <span
+                  class="accordion-icon faq-accordion-symbol inline-flex h-6 w-6 shrink-0 items-center justify-center text-xl font-semibold leading-none text-[#173C6A]"
+                  aria-hidden="true"
+                  >+</span
+                >
+                <span>What is the kibble size?</span>
+              </button>
+            </h3>
+            <div id="faq-collapse-5" class="accordion-collapse hidden border-t border-[#E8EDF2]">
+              <div class="px-4 pb-4 pl-11 pt-3 text-[15px] leading-relaxed text-[#173C6A] md:pl-12">
+                Our kibble sizes range from 10-14mm to suit dogs of all breeds, ages and sizes. Our smaller kibble is
+                suitable for smaller breeds and older dogs with less teeth who still enjoy eating kibble. Our larger
+                kibble is suitable for large dog breeds and dogs who need more encouragement to chew to aid digestion.
+                The kibble size of each recipe can be found on each product page on our website.
+              </div>
+            </div>
+          </div>
+          <div class="rounded-[12px] border border-[#C8D4E0] bg-white">
+            <h3 class="m-0">
+              <button
+                type="button"
+                class="accordion-button flex w-full cursor-pointer items-center gap-3 px-4 py-4 text-left text-[15px] font-medium text-[#173C6A] md:text-[16px]"
+                data-accordion-target="#faq-collapse-6"
+                aria-expanded="false"
+              >
+                <span
+                  class="accordion-icon faq-accordion-symbol inline-flex h-6 w-6 shrink-0 items-center justify-center text-xl font-semibold leading-none text-[#173C6A]"
+                  aria-hidden="true"
+                  >+</span
+                >
+                <span>Can I try a sample first?</span>
+              </button>
+            </h3>
+            <div id="faq-collapse-6" class="accordion-collapse hidden border-t border-[#E8EDF2]">
+              <div class="px-4 pb-4 pl-11 pt-3 text-[15px] leading-relaxed text-[#173C6A] md:pl-12">
+                Absolutely—order a sample pack to let your dog taste the recipe before committing to a full bag or
+                subscription.
+              </div>
+            </div>
+          </div>
+          <div class="rounded-[12px] border border-[#C8D4E0] bg-white">
+            <h3 class="m-0">
+              <button
+                type="button"
+                class="accordion-button flex w-full cursor-pointer items-center gap-3 px-4 py-4 text-left text-[15px] font-medium text-[#173C6A] md:text-[16px]"
+                data-accordion-target="#faq-collapse-7"
+                aria-expanded="false"
+              >
+                <span
+                  class="accordion-icon faq-accordion-symbol inline-flex h-6 w-6 shrink-0 items-center justify-center text-xl font-semibold leading-none text-[#173C6A]"
+                  aria-hidden="true"
+                  >+</span
+                >
+                <span>Is Buddy Bites good for sensitive tummys?</span>
+              </button>
+            </h3>
+            <div id="faq-collapse-7" class="accordion-collapse hidden border-t border-[#E8EDF2]">
+              <div class="px-4 pb-4 pl-11 pt-3 text-[15px] leading-relaxed text-[#173C6A] md:pl-12">
+                Our Adult recipes are formulated with novel and premium proteins to suit allergy-prone dogs with
+                probiotics, helping digestion and ensuring good poop.
+              </div>
+            </div>
+          </div>
+          {% comment %}
+            <div class="rounded-[12px] border border-[#C8D4E0] bg-white">
+              <h3 class="m-0">
+                <button
+                  type="button"
+                  class="accordion-button flex w-full cursor-pointer items-center gap-3 px-4 py-4 text-left text-[15px] font-medium text-[#173C6A] md:text-[16px]"
+                  data-accordion-target="#faq-collapse-6"
+                  aria-expanded="false"
+                >
+                  <span
+                    class="accordion-icon faq-accordion-symbol inline-flex h-6 w-6 shrink-0 items-center justify-center text-xl font-semibold leading-none text-[#173C6A]"
+                    aria-hidden="true"
+                  >+</span>
+                  <span>Can I try a sample first?</span>
+                </button>
+              </h3>
+              <div id="faq-collapse-6" class="accordion-collapse hidden border-t border-[#E8EDF2]">
+                <div class="px-4 pb-4 pl-11 pt-3 text-[15px] leading-relaxed text-[#173C6A] md:pl-12">
+                  Absolutely—order a sample pack to let your dog taste the recipe before committing to a full bag or
+                  subscription.
+                </div>
+              </div>
+            </div>
+          {% endcomment %}
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% style %}
+  .swiper-fav-dog {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .accordion-button[aria-expanded='true'] .accordion-icon:not(.faq-accordion-symbol) {
+    transform: rotate(180deg);
+  }
+  .accordion-icon {
+    transition: transform 0.2s;
+  }
+  .faq-accordion-symbol {
+    transition: none;
+  }
+
+  .els-cup-box {
+    height: auto !important;
+    margin: 0 !important;
+  }
+  .els-cup-w {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .els-cup-w-val {
+    font-size: 60px !important;
+    line-height: 60px !important;
+  }
+
+  .els-cup-w-icon,
+  .els-cup-w-descr {
+    display: none !important;
+  }
+
+  @media (min-width: 1024px) {
+    .els-cup-box {
+      height: auto !important;
+      margin-top: 30px !important;
+    }
+
+    .els-cup-w-val {
+      font-size: 100px !important;
+      line-height: 100px !important;
+    }
+  }
+{% endstyle %}
+
+{% javascript %}
+  document.addEventListener('DOMContentLoaded', function () {
+    const favTabs = document.querySelectorAll('.btn-fav-tab');
+    favTabs.forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        // Remove active class from all tabs
+        const spanClicked = tab.querySelector('.span-fav-tab');
+
+        favTabs.forEach(function (t) {
+          const span = t.querySelector('.span-fav-tab');
+          span.classList.remove('span-fav-tab-active');
+        });
+        // Add active class to the clicked tab
+        spanClicked.classList.add('span-fav-tab-active');
+      });
+    });
+
+    const swiperFavDog = new Swiper('.swiper-fav-dog', {
+      loop: true,
+      autoplay: { delay: 2500, disableOnInteraction: false },
+      slidesPerView: 1,
+      spaceBetween: 16,
+      breakpoints: {
+        320: { slidesPerView: 1, spaceBetween: 16 },
+        1024: { slidesPerView: 3, spaceBetween: 16 },
+      },
+    });
+
+    const swiperFavCat = new Swiper('.swiper-fav-cat', {
+      loop: true,
+      autoplay: { delay: 2500, disableOnInteraction: false },
+      slidesPerView: 1,
+      spaceBetween: 16,
+      breakpoints: {
+        320: { slidesPerView: 1, spaceBetween: 16 },
+        1024: { slidesPerView: 3, spaceBetween: 16 },
+      },
+    });
+
+    const swiperPartneringShelters = new Swiper('.swiper-partnering-shelters', {
+      loop: true,
+      autoplay: { delay: 2500, disableOnInteraction: false },
+      slidesPerView: 1,
+      spaceBetween: 16,
+      breakpoints: {
+        320: { slidesPerView: 3, spaceBetween: 24 },
+        1024: { slidesPerView: 9, spaceBetween: 40 },
+      },
+    });
+
+    const btnFavDog = document.getElementById('btn-fav-dog');
+    const btnFavCat = document.getElementById('btn-fav-cat');
+    const tabFavDog = document.getElementById('tab-fav-dog');
+    const tabFavCat = document.getElementById('tab-fav-cat');
+
+    btnFavDog.addEventListener('click', function () {
+      tabFavDog.classList.remove('hidden');
+      tabFavCat.classList.add('hidden');
+    });
+
+    btnFavCat.addEventListener('click', function () {
+      tabFavDog.classList.add('hidden');
+      tabFavCat.classList.remove('hidden');
+    });
+
+    function setAccordionIconState(icon, isExpanded) {
+      if (!icon) return;
+      if (icon.classList.contains('faq-accordion-symbol')) {
+        icon.textContent = isExpanded ? '\u2212' : '+';
+        return;
+      }
+      icon.classList.toggle('rotate-180', isExpanded);
+    }
+
+    const accordionButtons = document.querySelectorAll('.accordion-button');
+    accordionButtons.forEach((btn) => {
+      btn.addEventListener('click', function () {
+        const targetSelector = btn.getAttribute('data-accordion-target');
+        const content = targetSelector ? document.querySelector(targetSelector) : null;
+        if (!content) return;
+
+        const root = btn.closest('.accordion');
+        if (!root) return;
+
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+
+        root.querySelectorAll('.accordion-collapse').forEach((panel) => {
+          panel.classList.add('hidden');
+        });
+        root.querySelectorAll('.accordion-button').forEach((otherBtn) => {
+          otherBtn.setAttribute('aria-expanded', 'false');
+          setAccordionIconState(otherBtn.querySelector('.accordion-icon'), false);
+        });
+
+        if (!expanded) {
+          content.classList.remove('hidden');
+          btn.setAttribute('aria-expanded', 'true');
+          setAccordionIconState(btn.querySelector('.accordion-icon'), true);
+        }
+      });
+    });
+  });
+{% endjavascript %}
+
+{% schema %}
+{
+  "name": "Homepage",
+  "settings": []
+}
+{% endschema %}

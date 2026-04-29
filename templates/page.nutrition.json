@@ -9,12 +9,12 @@
  */
 {
   "sections": {
-    "homepage": {
-      "type": "homepage",
+    "section-nutrition": {
+      "type": "section-nutrition",
       "settings": {}
     }
   },
   "order": [
-    "homepage"
+    "section-nutrition"
   ]
 }

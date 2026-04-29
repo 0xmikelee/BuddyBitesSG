@@ -9,12 +9,12 @@
  */
 {
   "sections": {
-    "homepage": {
-      "type": "homepage",
+    "section-product-kibbles-new": {
+      "type": "section-product-kibbles-new",
       "settings": {}
     }
   },
   "order": [
-    "homepage"
+    "section-product-kibbles-new"
   ]
 }

@@ -1,15 +1,15 @@
 <main>
-  <section class="py-5 md:py-10">
-    <div class="container grid grid-cols-1 gap-4 md:grid-cols-2">
+  <section class="container py-5 md:py-10">
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
       {% comment %} Product Image {% endcomment %}
-      <div class="relative">
-        <div class="sticky top-0 w-full">
+      <div class="relative h-full">
+        <div class="sticky top-0 h-fit w-full overflow-hidden rounded-3xl">
           <div class="swiper-product">
             <div class="swiper-button-prev"></div>
             <div class="swiper-wrapper">
               {% for image in product.media %}
                 <div class="swiper-slide">
-                  <img src="{{ image | img_url: 'master' }}" alt="{{ image.alt }}" class="w-full object-cover">
+                  <img src="{{ image | img_url: 'master' }}" alt="{{ image.alt }}" class="h-full w-full object-cover">
                 </div>
               {% endfor %}
             </div>
@@ -54,23 +54,21 @@
   }
 {% endstyle %}
 
-{% javascript %}
+<script>
   const swiper = new Swiper('.swiper-product', {
     direction: 'horizontal',
     spaceBetween: 10,
     autoplay: false,
     loop: true,
-    slidesPerView: 1,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
   });
-{% endjavascript %}
-
+</script>
 {% schema %}
 {
-  "name": "Product Section",
+  "name": "Default Product Section",
   "settings": []
 }
 {% endschema %}
