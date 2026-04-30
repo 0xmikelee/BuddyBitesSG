@@ -564,26 +564,46 @@
             <svg width="25px" height="19px" viewBox="0 0 25 19" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M2 11L9.14286 17L23 2" stroke="#193C6A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            <p class="text-[12px] font-medium md:text-[16px]">Human-grade Ingredients</p>
+            <p class="text-[12px] font-medium md:text-[16px]">
+              {{ product.metafields.custom.product_comparison_points.value.bb_product_1 }}
+            </p>
           </div>
           <div class="flex w-full items-center gap-4 border-b border-solid border-[#193C6A]/50 px-3 py-2">
             <svg width="25px" height="19px" viewBox="0 0 25 19" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M2 11L9.14286 17L23 2" stroke="#193C6A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            <p class="text-[12px] font-medium md:text-[16px]">Digestive Support</p>
+            <p class="text-[12px] font-medium md:text-[16px]">
+              {{ product.metafields.custom.product_comparison_points.value.bb_product_2 }}
+            </p>
           </div>
           <div class="flex w-full items-center gap-4 border-b border-solid border-[#193C6A]/50 px-3 py-2">
             <svg width="25px" height="19px" viewBox="0 0 25 19" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M2 11L9.14286 17L23 2" stroke="#193C6A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            <p class="text-[12px] font-medium md:text-[16px]">No Preservatives</p>
+            <p class="text-[12px] font-medium md:text-[16px]">
+              {{ product.metafields.custom.product_comparison_points.value.bb_product_3 }}
+            </p>
           </div>
-          <div class="flex w-full items-center gap-4 border-b border-solid border-[#193C6A]/50 px-3 py-2">
-            <svg width="25px" height="19px" viewBox="0 0 25 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M2 11L9.14286 17L23 2" stroke="#193C6A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <p class="text-[12px] font-medium md:text-[16px]">Easy to Digest</p>
-          </div>
+          {% if product.metafields.custom.product_comparison_points.value.bb_product_4 != blank %}
+            <div class="flex w-full items-center gap-4 border-b border-solid border-[#193C6A]/50 px-3 py-2">
+              <svg width="25px" height="19px" viewBox="0 0 25 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 11L9.14286 17L23 2" stroke="#193C6A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <p class="text-[12px] font-medium md:text-[16px]">
+                {{ product.metafields.custom.product_comparison_points.value.bb_product_4 }}
+              </p>
+            </div>
+          {% endif %}
+          {% if product.metafields.custom.product_comparison_points.value.bb_product_5 != blank %}
+            <div class="flex w-full items-center gap-4 border-b border-solid border-[#193C6A]/50 px-3 py-2">
+              <svg width="25px" height="19px" viewBox="0 0 25 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 11L9.14286 17L23 2" stroke="#193C6A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <p class="text-[12px] font-medium md:text-[16px]">
+                {{ product.metafields.custom.product_comparison_points.value.bb_product_5 }}
+              </p>
+            </div>
+          {% endif %}
         </div>
       </div>
     </div>
