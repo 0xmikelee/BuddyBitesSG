@@ -467,27 +467,27 @@
   </section>
   <section class="py-5 md:py-7">
     <div class="container grid grid-cols-1 gap-4 md:grid-cols-2">
-      <div class="order-2 flex flex-col items-start justify-between gap-2 rounded-[20px] bg-white p-5 md:order-1">
+      <div class="order-2 flex flex-col items-start justify-between gap-5 rounded-[20px] bg-white p-5 md:order-1">
         <div class="flex w-full flex-col items-center justify-center gap-10">
           <h2 class="w-full text-left font-titanOne text-[clamp(25px,2.5vw,35px)] font-normal uppercase md:text-[40px]">
             Vet Recommended
           </h2>
           <div class="flex w-full flex-col items-start justify-center gap-5">
-            <h3 class="text-[30px] font-medium">Dr. Tiffany Harries</h3>
+            <h3 class="font-medium text-[24] md:text-[30px]">Dr. Tiffany Harries</h3>
             <div class="flex flex-col items-start justify-center gap-2">
-              <p class="text-[18px] font-normal">Bachelor of Veterinary Biology</p>
-              <p class="text-[18px] font-normal">Bachelor of Veterinary Science</p>
-              <p class="text-[18px] font-normal">Master of Veterinary Medicine</p>
+              <p class="text-[16px] font-normal md:text-[18px]">Bachelor of Veterinary Biology</p>
+              <p class="text-[16px] font-normal md:text-[18px]">Bachelor of Veterinary Science</p>
+              <p class="text-[16px] font-normal md:text-[18px]">Master of Veterinary Medicine</p>
             </div>
           </div>
         </div>
         <div class="flex flex-col items-center justify-center gap-2">
-          <p class="text-[16px] font-light">
+          <p class="text-[14px] font-light md:text-[16px]">
             Dr. Tiffany Harries has been a core member of the Buddy Bites team since the beginning. She works closely
             with our U.S.-based nutritionist to formulate diets that are optimal for your pets, ensuring they receive
             the essential nutrients and high-quality protein they need to thrive.
           </p>
-          <p class="text-[16px] font-light">
+          <p class="text-[14px] font-light md:text-[16px]">
             Dr. Tiffany is a Hong Kong-registered veterinarian with over15 years of extensive clinical experience,
             including the last 12 years practicing right here in Hong Kong. This long-standing commitment to the local
             community has given her a unique understanding of the specific lifestyle needs and health priorities of Hong
@@ -513,26 +513,46 @@
             <svg width="25px" height="19px" viewBox="0 0 25 19" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M2 11L9.14286 17L23 2" stroke="#B4B4B4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            <p class="text-[12px] font-medium md:text-[16px]">By-product-based ingredient</p>
+            <p class="text-[12px] font-medium md:text-[16px]">
+              {{ product.metafields.custom.product_comparison_points.value.other_product_1 }}
+            </p>
           </div>
           <div class="flex w-full items-center gap-4 border-b border-solid border-[#193C6A]/50 px-3 py-2">
             <svg width="25px" height="19px" viewBox="0 0 25 19" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M2 11L9.14286 17L23 2" stroke="#B4B4B4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            <p class="text-[12px] font-medium md:text-[16px]">No targeted digestive support</p>
+            <p class="text-[12px] font-medium md:text-[16px]">
+              {{ product.metafields.custom.product_comparison_points.value.other_product_2 }}
+            </p>
           </div>
           <div class="flex w-full items-center gap-4 border-b border-solid border-[#193C6A]/50 px-3 py-2">
             <svg width="25px" height="19px" viewBox="0 0 25 19" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M2 11L9.14286 17L23 2" stroke="#B4B4B4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            <p class="text-[12px] font-medium md:text-[16px]">Contains artificial preservatives</p>
+            <p class="text-[12px] font-medium md:text-[16px]">
+              {{ product.metafields.custom.product_comparison_points.value.other_product_3 }}
+            </p>
           </div>
-          <div class="flex w-full items-center gap-4 border-b border-solid border-[#193C6A]/50 px-3 py-2">
-            <svg width="25px" height="19px" viewBox="0 0 25 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M2 11L9.14286 17L23 2" stroke="#B4B4B4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <p class="text-[12px] font-medium md:text-[16px]">Heavy on fillers</p>
-          </div>
+          {% if product.metafields.custom.product_comparison_points.value.other_product_4 != blank %}
+            <div class="flex w-full items-center gap-4 border-b border-solid border-[#193C6A]/50 px-3 py-2">
+              <svg width="25px" height="19px" viewBox="0 0 25 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 11L9.14286 17L23 2" stroke="#B4B4B4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <p class="text-[12px] font-medium md:text-[16px]">
+                {{ product.metafields.custom.product_comparison_points.value.other_product_4 }}
+              </p>
+            </div>
+          {% endif %}
+          {% if product.metafields.custom.product_comparison_points.value.other_product_5 != blank %}
+            <div class="flex w-full items-center gap-4 border-b border-solid border-[#193C6A]/50 px-3 py-2">
+              <svg width="25px" height="19px" viewBox="0 0 25 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 11L9.14286 17L23 2" stroke="#B4B4B4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <p class="text-[12px] font-medium md:text-[16px]">
+                {{ product.metafields.custom.product_comparison_points.value.other_product_5 }}
+              </p>
+            </div>
+          {% endif %}
         </div>
       </div>
       <div class="overflow-hidden rounded-[20px] bg-[#B9E3FF]">
@@ -544,26 +564,46 @@
             <svg width="25px" height="19px" viewBox="0 0 25 19" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M2 11L9.14286 17L23 2" stroke="#193C6A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            <p class="text-[12px] font-medium md:text-[16px]">Human-grade Ingredients</p>
+            <p class="text-[12px] font-medium md:text-[16px]">
+              {{ product.metafields.custom.product_comparison_points.value.bb_product_1 }}
+            </p>
           </div>
           <div class="flex w-full items-center gap-4 border-b border-solid border-[#193C6A]/50 px-3 py-2">
             <svg width="25px" height="19px" viewBox="0 0 25 19" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M2 11L9.14286 17L23 2" stroke="#193C6A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            <p class="text-[12px] font-medium md:text-[16px]">Digestive Support</p>
+            <p class="text-[12px] font-medium md:text-[16px]">
+              {{ product.metafields.custom.product_comparison_points.value.bb_product_2 }}
+            </p>
           </div>
           <div class="flex w-full items-center gap-4 border-b border-solid border-[#193C6A]/50 px-3 py-2">
             <svg width="25px" height="19px" viewBox="0 0 25 19" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M2 11L9.14286 17L23 2" stroke="#193C6A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            <p class="text-[12px] font-medium md:text-[16px]">No Preservatives</p>
+            <p class="text-[12px] font-medium md:text-[16px]">
+              {{ product.metafields.custom.product_comparison_points.value.bb_product_3 }}
+            </p>
           </div>
-          <div class="flex w-full items-center gap-4 border-b border-solid border-[#193C6A]/50 px-3 py-2">
-            <svg width="25px" height="19px" viewBox="0 0 25 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M2 11L9.14286 17L23 2" stroke="#193C6A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <p class="text-[12px] font-medium md:text-[16px]">Easy to Digest</p>
-          </div>
+          {% if product.metafields.custom.product_comparison_points.value.bb_product_4 != blank %}
+            <div class="flex w-full items-center gap-4 border-b border-solid border-[#193C6A]/50 px-3 py-2">
+              <svg width="25px" height="19px" viewBox="0 0 25 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 11L9.14286 17L23 2" stroke="#193C6A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <p class="text-[12px] font-medium md:text-[16px]">
+                {{ product.metafields.custom.product_comparison_points.value.bb_product_4 }}
+              </p>
+            </div>
+          {% endif %}
+          {% if product.metafields.custom.product_comparison_points.value.bb_product_5 != blank %}
+            <div class="flex w-full items-center gap-4 border-b border-solid border-[#193C6A]/50 px-3 py-2">
+              <svg width="25px" height="19px" viewBox="0 0 25 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 11L9.14286 17L23 2" stroke="#193C6A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <p class="text-[12px] font-medium md:text-[16px]">
+                {{ product.metafields.custom.product_comparison_points.value.bb_product_5 }}
+              </p>
+            </div>
+          {% endif %}
         </div>
       </div>
     </div>

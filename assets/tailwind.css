@@ -5560,6 +5560,10 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
+.text-\[24\]{
+  color: 24;
+}
+
 .underline{
   text-decoration-line: underline;
 }
