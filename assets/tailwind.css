@@ -5790,6 +5790,12 @@ video {
   font-style: normal;
 
   font-display: swap;
+
+  line-gap-override: 0%;
+
+  ascent-override: 90%;
+
+  descent-override: 20%;
 }
 
 @font-face {
@@ -5802,6 +5808,12 @@ video {
   font-style: italic;
 
   font-display: swap;
+
+  line-gap-override: 0%;
+
+  ascent-override: 90%;
+
+  descent-override: 20%;
 }
 
 @font-face {
@@ -5814,6 +5826,12 @@ video {
   font-style: normal;
 
   font-display: swap;
+
+  line-gap-override: 0%;
+
+  ascent-override: 90%;
+
+  descent-override: 20%;
 }
 
 @font-face {
@@ -5826,6 +5844,12 @@ video {
   font-style: italic;
 
   font-display: swap;
+
+  line-gap-override: 0%;
+
+  ascent-override: 90%;
+
+  descent-override: 20%;
 }
 
 @font-face {
@@ -5838,18 +5862,12 @@ video {
   font-style: normal;
 
   font-display: swap;
-}
 
-@font-face {
-  font-family: "FoundersGrotesk";
+  line-gap-override: 0%;
 
-  src: url("./FoundersGrotesk-MediumItalic.otf") format("opentype");
+  ascent-override: 90%;
 
-  font-weight: 500;
-
-  font-style: italic;
-
-  font-display: swap;
+  descent-override: 20%;
 }
 
 @font-face {
@@ -5862,6 +5880,12 @@ video {
   font-style: normal;
 
   font-display: swap;
+
+  line-gap-override: 0%;
+
+  ascent-override: 90%;
+
+  descent-override: 20%;
 }
 
 @font-face {
@@ -5874,6 +5898,12 @@ video {
   font-style: italic;
 
   font-display: swap;
+
+  line-gap-override: 0%;
+
+  ascent-override: 90%;
+
+  descent-override: 20%;
 }
 
 @font-face {
@@ -5886,6 +5916,12 @@ video {
   font-style: normal;
 
   font-display: swap;
+
+  line-gap-override: 0%;
+
+  ascent-override: 90%;
+
+  descent-override: 20%;
 }
 
 @font-face {
@@ -5898,6 +5934,12 @@ video {
   font-style: italic;
 
   font-display: swap;
+
+  line-gap-override: 0%;
+
+  ascent-override: 90%;
+
+  descent-override: 20%;
 }
 
 @font-face {
