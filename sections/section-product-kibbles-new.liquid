@@ -73,7 +73,7 @@
             {% comment %} Choose Flavour {% endcomment %}
             {% if product.type == 'Dog Kibble' %}
               <div class="flex flex-col justify-center gap-2">
-                <p class="text-[16px] font-bold en:font-museo">{{ 'products.product.choose_flavour' | t }}:</p>
+                <p class="text-[16px] font-bold">{{ 'products.product.choose_flavour' | t }}:</p>
                 <div class="flex gap-2">
                   {% for prd in collections['adult-kibbles'].products %}
                     {% assign metaobj_list = prd.metafields.custom.flavor.value %}
