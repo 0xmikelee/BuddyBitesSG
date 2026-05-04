@@ -36,8 +36,29 @@
           <div class="flex flex-col gap-2 rounded-[20px] bg-white p-5">
             <div class="flex flex-col">
               <h2 class="m-0 text-[28px] font-normal md:text-[34px]">
-                Buddy Bites {{ 'products.product.adult_kibbles' | t }}
+                {% if product.type == 'Dog Kibble' and product.title contains 'Puppy' %}
+                  Buddy Bites {{ 'products.product.puppy_kibbles' | t }}
+                {% elsif product.type == 'Dog Kibble' and product.title contains 'Adult' %}
+                  Buddy Bites {{ 'products.product.adult_kibbles' | t }}
+                {% elsif product.type == 'Dog Toppers' %}
+                  Buddy Bites {{ 'products.product.dog_toppers' | t }}
+                {% elsif product.type == 'Dog Treat' %}
+                  Buddy Bites {{ 'products.product.treats' | t }}
+                {% elsif product.type == 'Cat Kibble' and product.title contains 'Adult' %}
+                  Buddy Bites {{ 'products.product.adult_cat_kibbles' | t }}
+                {% elsif product.type == 'Cat Kibble' and product.title contains 'Kitten' %}
+                  Buddy Bites {{ 'products.product.kitten_kibbles' | t }}
+                {% elsif product.type == 'Cat Toppers' %}
+                  Buddy Bites {{ 'products.product.cat_toppers' | t }}
+                {% elsif product.type == 'Cat Treats' %}
+                  Buddy Bites {{ 'products.product.cat_treats' | t }}
+                {% elsif product.type == 'Cat Cans' %}
+                  Buddy Bites {{ 'products.product.cat_cans' | t }}
+                {% else %}
+                  Buddy Bites {{ 'products.product.product' | t }}
+                {% endif %}
               </h2>
+
               <p class="text-[16px] font-light">
                 {{ product.title }}
                 {{ 'products.product.flavour' | t }}
