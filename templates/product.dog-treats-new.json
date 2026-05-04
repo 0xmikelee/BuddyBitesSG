@@ -12,9 +12,23 @@
     "section-product-dog-treats-new": {
       "type": "section-product-dog-treats-new",
       "settings": {}
+    },
+    "1777910453dc460384": {
+      "type": "apps",
+      "blocks": {
+        "rokt_aftersell_pdp_upsells_3Pwr4b": {
+          "type": "shopify://apps/rokt-aftersell/blocks/pdp-upsells/509ec35d-0632-4dfc-a105-fa799cd9d149",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "rokt_aftersell_pdp_upsells_3Pwr4b"
+      ],
+      "settings": {}
     }
   },
   "order": [
-    "section-product-dog-treats-new"
+    "section-product-dog-treats-new",
+    "1777910453dc460384"
   ]
 }
