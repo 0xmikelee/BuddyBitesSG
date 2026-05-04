@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "section-product-dog-kibbles-new": {
+      "type": "section-product-dog-kibbles-new",
+      "settings": {}
+    }
+  },
+  "order": [
+    "section-product-dog-kibbles-new"
+  ]
+}

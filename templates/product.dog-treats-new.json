@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "section-product-dog-treats-new": {
+      "type": "section-product-dog-treats-new",
+      "settings": {}
+    }
+  },
+  "order": [
+    "section-product-dog-treats-new"
+  ]
+}

@@ -36,27 +36,7 @@
           <div class="flex flex-col gap-2 rounded-[20px] bg-white p-5">
             <div class="flex flex-col">
               <h2 class="m-0 text-[28px] font-normal md:text-[34px]">
-                {% if product.type == 'Dog Kibble' and product.title contains 'Puppy' %}
-                  Buddy Bites {{ 'products.product.puppy_kibbles' | t }}
-                {% elsif product.type == 'Dog Kibble' and product.title contains 'Adult' %}
-                  Buddy Bites {{ 'products.product.adult_kibbles' | t }}
-                {% elsif product.type == 'Dog Toppers' %}
-                  Buddy Bites {{ 'products.product.dog_toppers' | t }}
-                {% elsif product.type == 'Dog Treat' %}
-                  Buddy Bites {{ 'products.product.treats' | t }}
-                {% elsif product.type == 'Cat Kibble' and product.title contains 'Adult' %}
-                  Buddy Bites {{ 'products.product.adult_cat_kibbles' | t }}
-                {% elsif product.type == 'Cat Kibble' and product.title contains 'Kitten' %}
-                  Buddy Bites {{ 'products.product.kitten_kibbles' | t }}
-                {% elsif product.type == 'Cat Toppers' %}
-                  Buddy Bites {{ 'products.product.cat_toppers' | t }}
-                {% elsif product.type == 'Cat Treats' %}
-                  Buddy Bites {{ 'products.product.cat_treats' | t }}
-                {% elsif product.type == 'Cat Cans' %}
-                  Buddy Bites {{ 'products.product.cat_cans' | t }}
-                {% else %}
-                  Buddy Bites {{ 'products.product.product' | t }}
-                {% endif %}
+                Buddy Bites {{ 'products.product.treats' | t }}
               </h2>
 
               <p class="text-[18px] font-light">
@@ -71,180 +51,30 @@
               ></div>
             </div>
             {% comment %} Choose Flavour {% endcomment %}
-            {% if product.type == 'Dog Kibble' %}
-              <div class="flex flex-col justify-center gap-2">
-                <p class="text-[16px] font-bold en:font-museo">{{ 'products.product.choose_flavour' | t }}:</p>
-                <div class="flex gap-2">
-                  {% for prd in collections['adult-kibbles'].products %}
-                    {% assign metaobj_list = prd.metafields.custom.flavor.value %}
-                    {% for m_obj in metaobj_list %}
-                      {% if prd.id != 9038841282776 %}
-                        <a href="{{ prd.url }}">
-                          <img
-                            src="{{ m_obj.featured_image.value | image_url: width: 100, height: 100  }}"
-                            width="100"
-                            height="100"
-                            class="rounded-xl border-2 border-solid {% if product.title == prd.title %} border-[#193C6A] opacity-100 {% else %} border-[#C3C3C3] opacity-50{% endif %}"
-                          >
-                          <p class="text-center font-semibold en:text-[16px] zh-TW:text-[14px]">
-                            <b>{{ m_obj.name }}</b>
-                          </p>
-                        </a>
-                      {% endif %}
-                    {% endfor %}
-                  {% endfor %}
-                </div>
-                <div class="flex items-center justify-center gap-1 rounded-lg border-2 border-gray-200 px-2 py-[5px] font-montserrat text-[14px] font-light">
-                  <p>{{ 'products.product.have_puppy' | t }}</p>
-                  <a href="{{ all_products['puppy-dry-dog-food'].url }}" class="font-bold underline">
-                    {{- 'products.product.have_puppy_link_text' | t -}}
-                  </a>
-                </div>
-                {% if product.id == 7699913244888 or product.id == 9038841282776 %}
-                  <div class="flex w-fit flex-col items-start justify-start gap-2 text-center">
-                    <p class="inline w-full text-center text-[16px] font-bold">
-                      {{ 'products.product.choose_kibble_size' | t }}
-                    </p>
-                    <div class="grid grid-cols-2 items-center gap-2 md:min-w-[330px]">
-                      <a
-                        href="{{ all_products['adult-mini-salmon-dry-dog-food'].url }}"
-                        class="flex h-full cursor-pointer flex-col items-center justify-between gap-2 rounded-xl {% if product.id == 9038841282776 %} border-2  border-[#193C9B]{% endif %} bg-[#F4F4F4] px-2 py-3"
-                      >
-                        <p class="text-[16px] font-bold">6-8{{ 'products.product.millimetres' | t }}</p>
-                        <div class="flex aspect-square w-[80px] flex-col items-center justify-center object-contain">
-                          <img
-                            src="{{ 'Kibble.png' | file_img_url: 'master' }}"
-                            alt="4-6mm"
-                            class="aspect-square w-[40px] object-contain"
-                          >
-                        </div>
-                        <div class="flex flex-col items-center justify-center gap-1">
-                          <p class="font-normal md:text-[18px]">
-                            {{ 'products.product.small_kibbles' | t }}
-                          </p>
-                          {% if product.id == 9038841282776 %}
-                            <p class="text-center font-semibold text-[#4E4E4E] en:text-[16px] zh-TW:text-[14px]">
-                              {{ 'products.product.selected' | t }}
-                            </p>
-                          {% else %}
-                            <p class="font-bold text-[#193C6B] underline md:text-[18px]">
-                              {{ 'products.product.shop_small' | t }}
-                            </p>
-                          {% endif %}
-                          <p class="text-center font-normal en:text-[16px] zh-TW:text-[14px]">
-                            {{ 'products.product.great_for_puppies' | t }}
-                          </p>
-                        </div>
-                      </a>
-                      <a
-                        href="{{ all_products['adult-salmon-dry-dog-food'].url }}"
-                        class="flex h-full cursor-pointer flex-col items-center justify-between gap-2 rounded-xl {% if product.id == 7699913244888 %} border-2  border-[#193C9A]{% endif %} bg-[#F4F4F4] px-2 py-3"
-                      >
-                        <p class="text-[16px] font-bold en:font-museo">12-14{{ 'products.product.millimetres' | t }}</p>
-                        <img
-                          src="{{ 'Kibble.png' | file_img_url: 'master' }}"
-                          alt="12-14mm"
-                          class="aspect-square w-[50px] object-contain"
-                        >
-                        <div class="flex flex-col items-center justify-center gap-1">
-                          <p class="font-bold md:text-[18px]">
-                            {{ 'products.product.large_kibbles' | t }}
-                          </p>
-                          {% if product.id == 7699913244888 %}
-                            <p class="text-center font-semibold text-[#4E4E4E] en:text-[16px] zh-TW:text-[14px]">
-                              {{ 'products.product.selected' | t }}
-                            </p>
-                          {% else %}
-                            <p class="font-bold text-[#193C6B] underline md:text-[18px]">
-                              {{ 'products.product.shop_large' | t }}
-                            </p>
-                          {% endif %}
-                          <p class="text-center font-normal en:text-[16px] zh-TW:text-[14px]">
-                            {{ 'products.product.adults_and_10lb' | t }}
-                          </p>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                {% endif %}
-              </div>
-            {% elsif product.type == 'Dog Treat' %}
-              <div class="flex flex-col justify-center gap-2">
-                <p class="text-[16px] font-bold text-black en:font-museo">{{ 'products.product.choose_treat' | t }}:</p>
-                <div class="flex gap-2">
-                  {% for prd in collections['treats-chews'].products %}
-                    {% if prd.id != 9683185238331 %}
-                      {% assign metaobj_list = prd.metafields.custom.flavor.value %}
-
-                      {% for m_obj in metaobj_list %}
-                        <a href="{{ prd.url }}" class="flex w-[100px] flex-col items-center justify-start gap-2">
-                          <img
-                            src="{{ m_obj.featured_image.value | image_url: width: 100, height: 100  }}"
-                            width="100"
-                            height="100"
-                            class="rounded-xl border-2 border-solid {% if product.title == prd.title %} border-black opacity-100 {% else %} border-[#C3C3C3] opacity-50{% endif %}"
-                          >
-                          <p class="text-center font-normal en:font-museo en:text-[14px] zh-TW:text-[14px]">
-                            <b>{{ m_obj.name }}</b>
-                          </p>
-                        </a>
-                      {% endfor %}
-                    {% endif %}
-                  {% endfor %}
-                </div>
-              </div>
-            {% elsif product.type == 'Dog Toppers' %}
-              <div class="flex flex-col justify-center gap-2">
-                <p class="text-[16px] font-bold text-black en:font-museo">
-                  {{ 'products.product.choose_flavour' | t }}:
-                </p>
-                <div class="flex gap-2">
-                  {% for prd in collections.toppers.products %}
+            <div class="flex flex-col justify-center gap-2">
+              <p class="text-[16px] font-bold text-black en:font-museo">{{ 'products.product.choose_treat' | t }}:</p>
+              <div class="flex gap-2">
+                {% for prd in collections['treats-chews'].products %}
+                  {% if prd.id != 9683185238331 %}
                     {% assign metaobj_list = prd.metafields.custom.flavor.value %}
 
                     {% for m_obj in metaobj_list %}
-                      <a href="{{ prd.url }}">
+                      <a href="{{ prd.url }}" class="flex w-[100px] flex-col items-center justify-start gap-2">
                         <img
                           src="{{ m_obj.featured_image.value | image_url: width: 100, height: 100  }}"
                           width="100"
                           height="100"
                           class="rounded-xl border-2 border-solid {% if product.title == prd.title %} border-black opacity-100 {% else %} border-[#C3C3C3] opacity-50{% endif %}"
                         >
-                        <p class="text-center font-semibold en:font-museo en:text-[16px] zh-TW:text-[14px]">
+                        <p class="text-center font-normal en:font-museo en:text-[14px] zh-TW:text-[14px]">
                           <b>{{ m_obj.name }}</b>
                         </p>
                       </a>
                     {% endfor %}
-                  {% endfor %}
-                </div>
+                  {% endif %}
+                {% endfor %}
               </div>
-            {% elsif product.type == 'Cat Kibble' %}
-              <div class="flex flex-col justify-center gap-2">
-                <p class="text-[16px] font-bold text-black en:font-museo">
-                  {{ 'products.product.choose_flavour' | t }}:
-                </p>
-                <div class="flex gap-2">
-                  {% for prd in collections['cat-kibbles'].products %}
-                    {% assign metaobj_list = prd.metafields.custom.flavor.value %}
-
-                    {% for m_obj in metaobj_list %}
-                      {% if m_obj.product.value.metafields.custom.main_collection.value.id == 495764373819 %}
-                        <a href="{{ prd.url }}">
-                          <img
-                            src="{{ m_obj.featured_image.value | image_url: width: 100, height: 100  }}"
-                            width="100"
-                            height="100"
-                            class="rounded-xl border-2 border-solid {% if product.title == prd.title %} border-black opacity-100 {% else %} border-[#C3C3C3] opacity-50{% endif %}"
-                          >
-                          <p class="text-center font-semibold en:font-museo en:text-[16px] zh-TW:text-[14px]">
-                            <b>{{ m_obj.name }}</b>
-                          </p>
-                        </a>
-                      {% endif %}
-                    {% endfor %}
-                  {% endfor %}
-                </div>
-            {% endif %}
+            </div>
 
             {% comment %} Product Description {% endcomment %}
             <div class="prose prose-base marker:text-black prose-ul:list-disc">
@@ -643,16 +473,7 @@
     <div class="container grid grid-cols-1 gap-4 md:grid-cols-2">
       <div class="overflow-hidden rounded-[20px] bg-[#E9E9E9]/50">
         <h2 class="w-full bg-[#193C6A] p-2 text-center text-[18px] font-medium uppercase text-white md:p-5 md:text-[35px]">
-          Other
-          {% if product.title contains 'Dry Dog Food' or product.title contains 'Dry Cat Food' %}
-            Kibbles
-          {% elsif product.title contains 'Toppers' %}
-            Toppers
-          {% elsif product.title contains 'Treats' %}
-            Treats
-          {% elsif product.title contains 'Cans' %}
-            Cans
-          {% endif %}
+          Other Treats
         </h2>
         <div class="flex w-full flex-col items-center justify-between gap-2 px-3 py-4">
           <div class="flex w-full items-center gap-4 border-b border-solid border-[#193C6A]/50 px-3 py-2">
@@ -834,31 +655,16 @@
   </section>
   <section class="py-5 md:py-7">
     <div class="container relative">
-      {% if product.type contains 'Dog' %}
-        <img
-          src="{{ 'sniff_out_our_latest.png' | file_img_url: 'master' }}"
-          alt="Sniff Out Our Latest Dog Products"
-          class="hidden w-full rounded-[20px] object-cover md:block"
-        >
-        <img
-          src="{{ 'sniff_out_our_latest_mobile.png' | file_img_url: 'master' }}"
-          alt="Sniff Out Our Latest Dog Products"
-          class="block w-full rounded-[20px] object-cover md:hidden"
-        >
-      {% elsif product.type contains 'Cat' %}
-        <img
-          src="{{ 'sniff_out_our_latest_cat.png' | file_img_url: 'master' }}"
-          alt="Sniff Out Our Latest Cat Products"
-          class="hidden w-full rounded-[20px] object-cover md:block"
-        >
-        {% comment %}
-          <img
-            src="{{ 'sniff_out_our_latest_cat_mobile.png' | file_img_url: 'master' }}"
-            alt="Sniff Out Our Latest Cat Products"
-            class="block w-full rounded-[20px] object-cover md:hidden"
-          >
-        {% endcomment %}
-      {% endif %}
+      <img
+        src="{{ 'sniff_out_our_latest.png' | file_img_url: 'master' }}"
+        alt="Sniff Out Our Latest Dog Products"
+        class="hidden w-full rounded-[20px] object-cover md:block"
+      >
+      <img
+        src="{{ 'sniff_out_our_latest_mobile.png' | file_img_url: 'master' }}"
+        alt="Sniff Out Our Latest Dog Products"
+        class="block w-full rounded-[20px] object-cover md:hidden"
+      >
       <div class="absolute left-1/2 top-0 flex -translate-x-1/2 flex-col items-center justify-center gap-4 py-[25vw] md:translate-y-1/2 md:justify-center md:py-0">
         <h2 class="text-balance text-center font-titanOne text-[clamp(25px,2.5vw,35px)] uppercase leading-[clamp(30px,2.5vw,35px)] md:w-full">
           Sniff Out Our Latest Products

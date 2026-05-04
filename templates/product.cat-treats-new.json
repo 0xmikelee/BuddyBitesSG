@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "section-product-cat-treats-new": {
+      "type": "section-product-cat-treats-new",
+      "settings": {}
+    }
+  },
+  "order": [
+    "section-product-cat-treats-new"
+  ]
+}
