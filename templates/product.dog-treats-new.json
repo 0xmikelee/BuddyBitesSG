@@ -16,10 +16,15 @@
         "rokt_aftersell_pdp_upsells_3Pwr4b"
       ],
       "settings": {}
+    },
+    "section-sniff-out-latest-products-dog": {
+      "type": "section-sniff-out-latest-products-dog",
+      "settings": {}
     }
   },
   "order": [
     "section-product-dog-treats-new",
-    "1777910453dc460384"
+    "1777910453dc460384",
+    "section-sniff-out-latest-products-dog"
   ]
 }

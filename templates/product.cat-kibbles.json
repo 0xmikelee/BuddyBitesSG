@@ -16,10 +16,15 @@
         "klaviyo_reviews_product_reviews_WPppNU"
       ],
       "settings": {}
+    },
+    "section-sniff-out-latest-products-cat": {
+      "type": "section-sniff-out-latest-products-cat",
+      "settings": {}
     }
   },
   "order": [
     "section-product-cat-kibbles",
-    "section-reviews"
+    "section-reviews",
+    "section-sniff-out-latest-products-cat"
   ]
 }
