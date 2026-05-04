@@ -2656,6 +2656,10 @@ video {
   height: 100%;
 }
 
+.h-\[70\%\]{
+  height: 70%;
+}
+
 .max-h-0{
   max-height: 0px;
 }
@@ -3561,6 +3565,10 @@ video {
 
 .gap-\[70px\]{
   gap: 70px;
+}
+
+.gap-0{
+  gap: 0px;
 }
 
 .space-x-1 > :not([hidden]) ~ :not([hidden]){
@@ -5519,6 +5527,10 @@ video {
   color: 14;
 }
 
+.text-\[24\]{
+  color: 24;
+}
+
 .text-\[var\(--heading-color\)\]{
   color: var(--heading-color);
 }
@@ -5558,10 +5570,6 @@ video {
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
-
-.text-\[24\]{
-  color: 24;
 }
 
 .underline{
@@ -7179,6 +7187,14 @@ video {
     max-height: 615px;
   }
 
+  .md\:max-h-none{
+    max-height: none;
+  }
+
+  .md\:max-h-\[700px\]{
+    max-height: 700px;
+  }
+
   .md\:w-1\/2{
     width: 50%;
   }
@@ -7514,6 +7530,10 @@ video {
 
   .md\:gap-\[50px\]{
     gap: 50px;
+  }
+
+  .md\:gap-10{
+    gap: 2.5rem;
   }
 
   .md\:space-x-3 > :not([hidden]) ~ :not([hidden]){
@@ -7865,6 +7885,10 @@ video {
     line-height: 1rem;
   }
 
+  .md\:text-\[22px\]{
+    font-size: 22px;
+  }
+
   .md\:leading-\[25\.7px\]{
     line-height: 25.7px;
   }
@@ -7907,6 +7931,22 @@ video {
 
   .md\:leading-none{
     line-height: 1;
+  }
+
+  .md\:leading-\[20px\]{
+    line-height: 20px;
+  }
+
+  .md\:leading-\[21px\]{
+    line-height: 21px;
+  }
+
+  .md\:leading-\[22px\]{
+    line-height: 22px;
+  }
+
+  .md\:leading-\[24px\]{
+    line-height: 24px;
   }
 
   .group:hover .md\:group-hover\:block{
