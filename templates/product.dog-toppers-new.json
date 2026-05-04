@@ -9,12 +9,12 @@
  */
 {
   "sections": {
-    "section-product-dog-treats-new": {
-      "type": "section-product-dog-treats-new",
+    "section-product-dog-toppers-new": {
+      "type": "section-product-dog-toppers-new",
       "settings": {}
     }
   },
   "order": [
-    "section-product-dog-treats-new"
+    "section-product-dog-toppers-new"
   ]
 }
