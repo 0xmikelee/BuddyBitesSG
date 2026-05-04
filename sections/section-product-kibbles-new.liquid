@@ -643,7 +643,16 @@
     <div class="container grid grid-cols-1 gap-4 md:grid-cols-2">
       <div class="overflow-hidden rounded-[20px] bg-[#E9E9E9]/50">
         <h2 class="w-full bg-[#193C6A] p-2 text-center text-[18px] font-medium uppercase text-white md:p-5 md:text-[35px]">
-          Other Kibbles
+          Other
+          {% if product.title contains 'Dry Food' %}
+            Kibbles
+          {% elsif product.title contains 'Toppers' %}
+            Toppers
+          {% elsif product.title contains 'Treats' %}
+            Treats
+          {% elsif product.title contains 'Cans' %}
+            Cans
+          {% endif %}
         </h2>
         <div class="flex w-full flex-col items-center justify-between gap-2 px-3 py-4">
           <div class="flex w-full items-center gap-4 border-b border-solid border-[#193C6A]/50 px-3 py-2">
