@@ -57,7 +57,7 @@
             </div>
             {% comment %} Choose Flavour {% endcomment %}
             <div class="flex flex-col justify-center gap-2">
-              <p class="text-[16px] font-bold en:font-museo">{{ 'products.product.choose_flavour' | t }}:</p>
+              <p class="text-[16px] font-bold">{{ 'products.product.choose_flavour' | t }}:</p>
               <div class="flex gap-2">
                 {% for prd in collections['adult-kibbles'].products %}
                   {% assign metaobj_list = prd.metafields.custom.flavor.value %}
@@ -124,14 +124,14 @@
                       href="{{ all_products['adult-salmon-dry-dog-food'].url }}"
                       class="flex h-full cursor-pointer flex-col items-center justify-between gap-2 rounded-xl {% if product.id == 7699913244888 %} border-2  border-[#193C9A]{% endif %} bg-[#F4F4F4] px-2 py-3"
                     >
-                      <p class="text-[16px] font-bold en:font-museo">12-14{{ 'products.product.millimetres' | t }}</p>
+                      <p class="text-[16px] font-bold">12-14{{ 'products.product.millimetres' | t }}</p>
                       <img
                         src="{{ 'Kibble.png' | file_img_url: 'master' }}"
                         alt="12-14mm"
                         class="aspect-square w-[50px] object-contain"
                       >
                       <div class="flex flex-col items-center justify-center gap-1">
-                        <p class="font-bold md:text-[18px]">
+                        <p class="font-normal md:text-[18px]">
                           {{ 'products.product.large_kibbles' | t }}
                         </p>
                         {% if product.id == 7699913244888 %}
@@ -418,8 +418,7 @@
             Fresh {{ product.metafields.custom.product_details.value.main_ingredient }} Nutrition
           </h2>
           <p class="text-[16px] font-light">
-            Our nutritionists and vets worked hard to come up with picky-eater-proof recipes, packed with highly
-            digestible nutrients.
+            {{ product.metafields.custom.product_details.value.nutrition_description }}
           </p>
           <a href="{{ pages['nutrition'].url }}" class="btn-cta">Learn More</a>
         </div>
