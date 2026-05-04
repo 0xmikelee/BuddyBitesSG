@@ -9,12 +9,12 @@
  */
 {
   "sections": {
-    "section-product-cat-toppers-new": {
-      "type": "section-product-cat-toppers-new",
+    "section-product-dog-treats-new": {
+      "type": "section-product-dog-treats-new",
       "settings": {}
     }
   },
   "order": [
-    "section-product-cat-toppers-new"
+    "section-product-dog-treats-new"
   ]
 }
