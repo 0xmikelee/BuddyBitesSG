@@ -36,7 +36,12 @@
           <div class="flex flex-col gap-2 rounded-[20px] bg-white p-5">
             <div class="flex flex-col">
               <h2 class="m-0 text-[28px] font-normal md:text-[34px]">
-                Buddy Bites {{ 'products.product.adult_kibbles' | t }}
+                Buddy Bites
+                {% if product.title contains 'Puppy' %}
+                  {{ 'products.product.puppy_kibbles' | t }}
+                {% elsif product.title contains 'Adult' %}
+                  {{ 'products.product.adult_kibbles' | t }}
+                {% endif %}
               </h2>
 
               <p class="text-[18px] font-light">
