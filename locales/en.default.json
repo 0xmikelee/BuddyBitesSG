@@ -53,7 +53,7 @@
       "title": "Rewards"
     },
     "shop_cat": {
-      "title": "Shop Cat",
+      "title": "Cat",
       "kibbles": {
         "title": "Kibbles",
         "options": {
@@ -64,7 +64,7 @@
       }
     },
     "shop_dog": {
-      "title": "Shop Dog",
+      "title": "Dog",
       "kibbles": {
         "title": "Kibbles",
         "options": {
@@ -1013,19 +1013,13 @@
       "tags": "Tags",
       "category": "Category",
       "type": "Type",
-      "product": "Product",
-      "adult_kibbles": "Adult Dog Kibbles",
+      "adult_kibbles": "Adult Kibbles",
       "puppy_kibbles": "Puppy Kibbles",
-      "kitten_kibbles": "Kitten Kibbles",
-      "adult_cat_kibbles": "Adult Cat Kibbles",
+      "kitten_kibbles": "Cat Kibbles",
+      "adult_cat_kibbles": "Cat Kibbles",
       "starter_packs": "Starter Packs",
       "toppers": "Toppers",
-      "dog_toppers": "Dog Toppers",
-      "cat_toppers": "Cat Toppers",
       "treats": "Treats",
-      "dog_treats": "Dog Treats",
-      "cat_treats": "Cat Treats",
-      "cat_cans": "Cat Cans",
       "treats_full_title": "Buddy Bites Treats",
       "flavour": "Flavour",
       "recipe": "Recipe",
