@@ -136,10 +136,10 @@
                 </div>
                 <div id="ingredients-nutrition-content" class="hidden flex-col gap-2 px-2 py-3">
                   <p class="text-[14px] font-light">
-                    {{ product.metafields.custom.nutrition.value.ingredients }}
+                    {{ product.metafields.custom.product_details.value.full_ingredients_list }}
                   </p>
                   <p class="text-[14px] font-light">
-                    {{ product.metafields.custom.nutrition.value.nutritional_content }}
+                    {{ product.metafields.custom.product_details.value.nutrition_content }}
                   </p>
                 </div>
               </div>
@@ -188,12 +188,11 @@
                   </svg>
                 </div>
                 <div id="feeding-guidelines-content" class="hidden flex-col gap-2 px-2 py-3">
-                  <p class="text-[14px] font-light">
-                    {{ product.metafields.custom.nutrition.value.ingredients }}
-                  </p>
-                  <p class="text-[14px] font-light">
-                    {{ product.metafields.custom.nutrition.value.nutritional_content }}
-                  </p>
+                  <img
+                    src="{{ product.metafields.custom.product_details.value.feeding_guide | img_url: 'master' }}"
+                    class="w-full"
+                    alt="Feeding Guidelines Image"
+                  >
                 </div>
               </div>
             </div>
