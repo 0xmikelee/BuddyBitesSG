@@ -129,13 +129,19 @@
                   </svg>
                 </div>
                 <div id="ingredients-nutrition-content" class="hidden flex-col gap-2 px-2 py-3">
-                  <p class="text-[14px] font-light">
-                    {{ product.metafields.custom.product_details.value.full_ingredients_list }}
-                  </p>
-                  <p class="text-[14px] font-light">
-                    {{ product.metafields.custom.product_details.value.nutrition_content }}
-                  </p>
-                </div>
+                  <div id="ingredients-nutrition-content" class="hidden flex-col gap-2 px-2 py-3">
+                  <div class="flex flex-col gap-1">
+                    <p class="text-[14px] font-medium">Composition</p>
+                    <p class="text-[14px] font-light">
+                      {{ product.metafields.custom.product_details.value.full_ingredients_list }}
+                    </p>
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <p class="text-[14px] font-medium">Analytical Constituents</p>
+                    <p class="text-[14px] font-light">
+                      {{ product.metafields.custom.product_details.value.analytical_constituents }}
+                    </p>
+                  </div>
               </div>
             </div>
             {% comment %} Feeding Guildine {% endcomment %}
@@ -182,11 +188,7 @@
                   </svg>
                 </div>
                 <div id="feeding-guidelines-content" class="hidden flex-col gap-2 px-2 py-3">
-                  <img
-                    src="{{ product.metafields.custom.product_details.value.feeding_guide | img_url: 'master' }}"
-                    class="w-full"
-                    alt="Feeding Guidelines Image"
-                  >
+                  <p class="text-[14px] font-light">Intended for intermittent or supplemental feeding only. Feed as part of a balanced diet. Calories from complementary food should not exceed 10% of the total daily caloric intake. That is about half a pouch per day for a 4kg cat. Allow free access to fresh, clean water at all times.</p>
                 </div>
               </div>
             </div>
