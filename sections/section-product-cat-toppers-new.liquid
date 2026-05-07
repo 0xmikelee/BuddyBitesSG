@@ -59,7 +59,7 @@
                   {% assign metaobj_list = prd.metafields.custom.flavor.value %}
 
                   {% for m_obj in metaobj_list %}
-                    {% if m_obj.product.value.metafields.custom.main_collection.value.id == 495764373819 %}
+                    {% if m_obj.product.type == 'Cat Toppers' %}
                       <a href="{{ prd.url }}">
                         <img
                           src="{{ m_obj.featured_image.value | image_url: width: 100, height: 100  }}"
