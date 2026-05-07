@@ -702,6 +702,36 @@
       spaceBetween: 16,
       pagination: { el: '.swiper-pagination-vet-recommendations', clickable: true },
     });
+
+    const refreshKlaviyoCarouselSwiper = () => {
+      const klaviyoRoot = document.querySelector('#klaviyo-featured-reviews-carousel');
+      if (!klaviyoRoot) return;
+
+      const klaviyoSwipers = klaviyoRoot.querySelectorAll('.swiper');
+      klaviyoSwipers.forEach((swiperElement) => {
+        if (swiperElement.swiper) {
+          swiperElement.swiper.update();
+          swiperElement.swiper.updateSize();
+          swiperElement.swiper.updateSlides();
+        }
+      });
+    };
+
+    const klaviyoCarouselRoot = document.querySelector('#klaviyo-featured-reviews-carousel');
+    if (klaviyoCarouselRoot) {
+      const klaviyoCarouselObserver = new MutationObserver(() => {
+        refreshKlaviyoCarouselSwiper();
+      });
+
+      klaviyoCarouselObserver.observe(klaviyoCarouselRoot, {
+        childList: true,
+        subtree: true,
+      });
+
+      window.addEventListener('resize', refreshKlaviyoCarouselSwiper);
+      window.addEventListener('orientationchange', refreshKlaviyoCarouselSwiper);
+      setTimeout(refreshKlaviyoCarouselSwiper, 300);
+    }
   });
 {% endjavascript %}
 
@@ -717,6 +747,20 @@
   .swiper-pagination-vet-recommendations {
     /* background-color: #193c6a; */
     position: relative !important;
+  }
+
+  @media (max-width: 767px) {
+    #klaviyo-featured-reviews-carousel,
+    #klaviyo-featured-reviews-carousel .swiper,
+    #klaviyo-featured-reviews-carousel .swiper-wrapper {
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+
+    #klaviyo-featured-reviews-carousel .swiper-slide {
+      width: 100% !important;
+      max-width: 100% !important;
+    }
   }
 {% endstyle %}
 
