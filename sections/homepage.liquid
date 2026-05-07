@@ -857,19 +857,19 @@
     });
 
     const btnFavDog = document.getElementById('btn-fav-dog');
-    const btnFavCat = document.getElementById('btn-fav-cat');
+    // const btnFavCat = document.getElementById('btn-fav-cat');
     const tabFavDog = document.getElementById('tab-fav-dog');
-    const tabFavCat = document.getElementById('tab-fav-cat');
+    // const tabFavCat = document.getElementById('tab-fav-cat');
 
     btnFavDog.addEventListener('click', function () {
       tabFavDog.classList.remove('hidden');
       tabFavCat.classList.add('hidden');
     });
 
-    btnFavCat.addEventListener('click', function () {
-      tabFavDog.classList.add('hidden');
-      tabFavCat.classList.remove('hidden');
-    });
+    // btnFavCat.addEventListener('click', function () {
+    //   tabFavDog.classList.add('hidden');
+    //   tabFavCat.classList.remove('hidden');
+    // });
 
     function setAccordionIconState(icon, isExpanded) {
       if (!icon) return;
@@ -883,6 +883,7 @@
     const accordionButtons = document.querySelectorAll('.accordion-button');
     accordionButtons.forEach((btn) => {
       btn.addEventListener('click', function () {
+        console.log('btn clicked');
         const targetSelector = btn.getAttribute('data-accordion-target');
         const content = targetSelector ? document.querySelector(targetSelector) : null;
         if (!content) return;
