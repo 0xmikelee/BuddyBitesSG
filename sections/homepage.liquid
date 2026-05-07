@@ -36,10 +36,12 @@
           Dog
           <span class="span-fav-tab span-fav-tab-active h-[1px] w-full" />
         </button>
-        <button id="btn-fav-cat" class="btn-fav-tab flex flex-col items-center justify-center">
-          Cat
-          <span class="span-fav-tab h-[1px] w-full" />
-        </button>
+        {% comment %}
+          <button id="btn-fav-cat" class="btn-fav-tab flex flex-col items-center justify-center">
+            Cat
+            <span class="span-fav-tab h-[1px] w-full" />
+          </button>
+        {% endcomment %}
       </div>
       <div id="tab-fav-dog" class="w-full">
         <div class="swiper swiper-fav-dog">
@@ -104,70 +106,71 @@
           </div>
         </div>
       </div>
-      <div id="tab-fav-cat" class="hidden w-full">
-        <div class="swiper swiper-fav-cat">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="flex w-full flex-col items-center justify-center gap-4 rounded-[20px] bg-white p-4">
-                <img
-                  src="{{ 'cat_kibbles_salmon_front.png' | file_img_url: 'master' }}"
-                  alt="Cat Salmon Kibbles"
-                  class="w-full rounded-[20px] object-cover"
-                >
-                <div class="flex w-full flex-col items-start justify-center gap-2 text-[18px]">
-                  <div class="flex w-full justify-between gap-2 font-semibold">
-                    <p>Cat Kibbles</p>
-                    <p>$32.80</p>
+      {% comment %}
+        <div id="tab-fav-cat" class="hidden w-full">
+          <div class="swiper swiper-fav-cat">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="flex w-full flex-col items-center justify-center gap-4 rounded-[20px] bg-white p-4">
+                  <img
+                    src="{{ 'cat_kibbles_salmon_front.png' | file_img_url: 'master' }}"
+                    alt="Cat Salmon Kibbles"
+                    class="w-full rounded-[20px] object-cover"
+                  >
+                  <div class="flex w-full flex-col items-start justify-center gap-2 text-[18px]">
+                    <div class="flex w-full justify-between gap-2 font-semibold">
+                      <p>Cat Kibbles</p>
+                      <p>$32.80</p>
+                    </div>
+                    <p class="font-normal">Salmon Recipe</p>
                   </div>
-                  <p class="font-normal">Salmon Recipe</p>
+                  <a href="{{ all_products['adult-salmon-dry-cat-food'].url }}" class="btn-buy-now w-full">
+                    Add to Cart - $32.80
+                  </a>
                 </div>
-                <a href="{{ all_products['adult-salmon-dry-cat-food'].url }}" class="btn-buy-now w-full">
-                  Add to Cart - $32.80
-                </a>
               </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="flex w-full flex-col items-center justify-center gap-4 rounded-[20px] bg-white p-4">
-                <img
-                  src="{{ 'cat_kibbles_chicken_front.png' | file_img_url: 'master' }}"
-                  alt="Cat Chicken Kibbles"
-                  class="w-full rounded-[20px] object-cover"
-                >
-                <div class="flex w-full flex-col items-start justify-center gap-2 text-[18px]">
-                  <div class="flex w-full justify-between gap-2 font-semibold">
-                    <p>Cat Kibbles</p>
-                    <p>$13.50</p>
+              <div class="swiper-slide">
+                <div class="flex w-full flex-col items-center justify-center gap-4 rounded-[20px] bg-white p-4">
+                  <img
+                    src="{{ 'cat_kibbles_chicken_front.png' | file_img_url: 'master' }}"
+                    alt="Cat Chicken Kibbles"
+                    class="w-full rounded-[20px] object-cover"
+                  >
+                  <div class="flex w-full flex-col items-start justify-center gap-2 text-[18px]">
+                    <div class="flex w-full justify-between gap-2 font-semibold">
+                      <p>Cat Kibbles</p>
+                      <p>$13.50</p>
+                    </div>
+                    <p class="font-normal">Chicken Recipe</p>
                   </div>
-                  <p class="font-normal">Chicken Recipe</p>
+                  <a href="{{ all_products['adult-chicken-dry-cat-food'].url }}" class="btn-buy-now w-full">
+                    Add to Cart - $13.50
+                  </a>
                 </div>
-                <a href="{{ all_products['adult-chicken-dry-cat-food'].url }}" class="btn-buy-now w-full">
-                  Add to Cart - $13.50
-                </a>
               </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="flex w-full flex-col items-center justify-center gap-4 rounded-[20px] bg-white p-4">
-                <img
-                  src="{{ 'kitten_kibbles_chicken_front.png' | file_img_url: 'master' }}"
-                  alt="Kitten Chicken Kibbles"
-                  class="w-full rounded-[20px] object-cover"
-                >
-                <div class="flex w-full flex-col items-start justify-center gap-2 text-[18px]">
-                  <div class="flex w-full justify-between gap-2 font-semibold">
-                    <p>Kitten Kibbles</p>
-                    <p>$7.20</p>
+              <div class="swiper-slide">
+                <div class="flex w-full flex-col items-center justify-center gap-4 rounded-[20px] bg-white p-4">
+                  <img
+                    src="{{ 'kitten_kibbles_chicken_front.png' | file_img_url: 'master' }}"
+                    alt="Kitten Chicken Kibbles"
+                    class="w-full rounded-[20px] object-cover"
+                  >
+                  <div class="flex w-full flex-col items-start justify-center gap-2 text-[18px]">
+                    <div class="flex w-full justify-between gap-2 font-semibold">
+                      <p>Kitten Kibbles</p>
+                      <p>$7.20</p>
+                    </div>
+                    <p class="font-normal">Kitten Chicken Recipe</p>
                   </div>
-                  <p class="font-normal">Kitten Chicken Recipe</p>
+                  <a href="{{ all_products['kitten-chicken-dry-cat-food'].url }}" class="btn-buy-now w-full">
+                    Add to Cart - $7.20
+                  </a>
                 </div>
-                <a href="{{ all_products['kitten-chicken-dry-cat-food'].url }}" class="btn-buy-now w-full">
-                  Add to Cart - $7.20
-                </a>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div id="tab-fav-cat"></div>
+      {% endcomment %}
     </div>
   </section>
   <section>
