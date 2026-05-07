@@ -206,12 +206,18 @@
                   </svg>
                 </div>
                 <div id="ingredients-nutrition-content" class="hidden flex-col gap-2 px-2 py-3">
-                  <p class="text-[14px] font-light">
-                    {{ product.metafields.custom.product_details.value.full_ingredients_list }}
-                  </p>
-                  <p class="text-[14px] font-light">
-                    {{ product.metafields.custom.product_details.value.nutrition_content }}
-                  </p>
+                  <div class="flex flex-col gap-1">
+                    <p class="text-[14px] font-medium">Ingredients</p>
+                    <p class="text-[14px] font-light">
+                      {{ product.metafields.custom.product_details.value.full_ingredients_list }}
+                    </p>
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <p class="text-[14px] font-medium">Nutrition</p>
+                    <div class="text-[14px] font-light">
+                      {{ product.metafields.custom.product_details.value.nutrition_content }}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>

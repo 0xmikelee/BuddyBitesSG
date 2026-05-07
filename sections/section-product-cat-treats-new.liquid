@@ -130,12 +130,26 @@
                   </svg>
                 </div>
                 <div id="ingredients-nutrition-content" class="hidden flex-col gap-2 px-2 py-3">
-                  <p class="text-[14px] font-light">
-                    {{ product.metafields.custom.product_details.value.full_ingredients_list }}
-                  </p>
-                  <p class="text-[14px] font-light">
-                    {{ product.metafields.custom.product_details.value.nutrition_content }}
-                  </p>
+                  <div class="flex flex-col gap-1">
+                    <p class="text-[14px] font-medium">Composition</p>
+                    <p class="text-[14px] font-light">
+                      {{ product.metafields.custom.product_details.value.full_ingredients_list }}
+                    </p>
+                  </div>
+                  {% if product.title contains 'Pumpkin' %}
+                    <div class="flex flex-col gap-1">
+                      <p class="text-[14px] font-medium">Analytical Constituents</p>
+                      <p class="text-[14px] font-light">
+                        {{ product.metafields.custom.product_details.value.analytical_constituents }}
+                      </p>
+                    </div>
+                  {% endif %}
+                  <div class="flex flex-col gap-1">
+                    <p class="text-[14px] font-medium">Nutritional Additives (per kg)</p>
+                    <div class="text-[14px] font-light">
+                      {{ product.metafields.custom.product_details.value.nutrition_content }}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -183,11 +197,12 @@
                   </svg>
                 </div>
                 <div id="feeding-guidelines-content" class="hidden flex-col gap-2 px-2 py-3">
-                  <img
-                    src="{{ product.metafields.custom.product_details.value.feeding_guide | img_url: 'master' }}"
-                    class="w-full"
-                    alt="Feeding Guidelines Image"
-                  >
+                  <p class="text-[14px] font-light">
+                    Buddy Bites Lickable Treats are a complementary food for adult cats and can be enjoyed as a treat. Always supervise your cat while feeding treats and always provide clean, fresh water.
+                  </p>
+                  <p class="text-[14px] font-light">
+                    Calories from complementary food should not exceed 10% of the total daily caloric intake. That is about 2-3 sachets for a 4kg cat per day. Once opened, serve as soon as possible
+                  </p>
                 </div>
               </div>
             </div>
@@ -338,7 +353,7 @@
       <div class="flex flex-col items-center justify-between gap-10 rounded-[20px] bg-white p-5">
         <div class="flex w-full flex-col items-start justify-start gap-2">
           <h2 class="font-titanOne text-[clamp(25px,2.5vw,35px)] font-normal uppercase">
-            Fresh {{ product.metafields.custom.product_details.value.main_ingredient }} Nutrition
+            {{ product.metafields.custom.product_details.value.main_ingredient }} Benefits
           </h2>
           <p class="text-[16px] font-light">
             {{ product.metafields.custom.product_details.value.nutrition_description }}
