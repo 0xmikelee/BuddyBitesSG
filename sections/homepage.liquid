@@ -12,8 +12,9 @@
       class="block h-full w-full object-cover md:hidden"
     >
     <div class="absolute left-0 top-0 flex h-1/2 w-full flex-col items-center justify-center gap-8 px-4 pt-10 text-center md:h-full md:w-[40%] md:items-start md:gap-6 md:px-10 md:pt-0 md:text-left">
-      <h1 class="text-balance font-titanOne text-[clamp(40px,5vw,55px)] leading-[clamp(40px,5vw,55px)]">
-        Premium European Kibble
+      <h1 class="text-balance font-titanOne text-[clamp(40px,5vw,55px)] uppercase leading-[clamp(40px,5vw,55px)]">
+        Dog Food,<br>
+        upgraded
       </h1>
       <p class="text-balance text-[clamp(20px,2.5vw,25px)] font-medium leading-[clamp(30px,2.5vw,35px)]">
         Vet-backed formula, Gut-Friendly prebiotics. Nearly 10 million meals donated.
@@ -441,27 +442,27 @@
               <div class="swiper-slide">
                 <div class="flex h-[150px] flex-col items-center justify-center">
                   <img
-                    src="{{ 'icon_shelter_hkdr.png' | file_img_url: 'master' }}"
-                    alt="HKDR"
-                    class="w-full object-cover"
+                    src="{{ 'icon_asd.png' | file_img_url: 'master' }}"
+                    alt="Action for Singapore Dogs"
+                    class="h-full object-cover"
                   >
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="flex h-[150px] flex-col items-center justify-center">
                   <img
-                    src="{{ 'icon_shelter_catherines_puppies.png' | file_img_url: 'master' }}"
-                    alt="Catherine's Puppies"
-                    class="w-full object-cover"
+                    src="{{ 'icon_spca_sg.png' | file_img_url: 'master' }}"
+                    alt="SPCA Singapore"
+                    class="h-full object-cover"
                   >
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="flex h-[150px] flex-col items-center justify-center">
                   <img
-                    src="{{ 'icon_shelter_saikung_stray_friends.png' | file_img_url: 'master' }}"
-                    alt="Sai Kung Stray Friends"
-                    class="w-full object-cover"
+                    src="{{ 'icon_exclusively_mongrels.png' | file_img_url: 'master' }}"
+                    alt="Exclusively Mongrels"
+                    class="h-full object-cover"
                   >
                 </div>
               </div>
@@ -470,34 +471,7 @@
                   <img
                     src="{{ 'icon_shelter_sosd.png' | file_img_url: 'master' }}"
                     alt="SoSD"
-                    class="w-full object-cover"
-                  >
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="flex h-[150px] flex-col items-center justify-center">
-                  <img
-                    src="{{ 'icon_shelter_pgrs.png' | file_img_url: 'master' }}"
-                    alt="PGRS"
-                    class="w-full object-cover"
-                  >
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="flex h-[150px] flex-col items-center justify-center">
-                  <img
-                    src="{{ 'icon_shelter_tails_lantau.png' | file_img_url: 'master' }}"
-                    alt="Tails Lantau"
-                    class="w-full object-cover"
-                  >
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="flex h-[150px] flex-col items-center justify-center">
-                  <img
-                    src="{{ 'icon_shelter_hkscda.png' | file_img_url: 'master' }}"
-                    alt="HKSCDA"
-                    class="w-full object-cover"
+                    class="h-full object-cover"
                   >
                 </div>
               </div>
@@ -506,16 +480,7 @@
                   <img
                     src="{{ 'icon_shelter_madam_wong.png' | file_img_url: 'master' }}"
                     alt="Madam Wong"
-                    class="w-full object-cover"
-                  >
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="flex h-[150px] flex-col items-center justify-center">
-                  <img
-                    src="{{ 'icon_shelter_love_fluffy_home.png' | file_img_url: 'master' }}"
-                    alt="Love Fluffy Home"
-                    class="w-full object-cover"
+                    class="h-full object-cover"
                   >
                 </div>
               </div>
@@ -680,29 +645,31 @@
               </div>
             </div>
           </div>
-          <div class="rounded-[12px] border border-[#C8D4E0] bg-white">
-            <h3 class="m-0">
-              <button
-                type="button"
-                class="accordion-button flex w-full cursor-pointer items-center gap-3 px-4 py-4 text-left text-[15px] font-medium text-[#173C6A] md:text-[16px]"
-                data-accordion-target="#faq-collapse-6"
-                aria-expanded="false"
-              >
-                <span
-                  class="accordion-icon faq-accordion-symbol inline-flex h-6 w-6 shrink-0 items-center justify-center text-xl font-semibold leading-none text-[#173C6A]"
-                  aria-hidden="true"
-                  >+</span
+          {% comment %}
+            <div class="rounded-[12px] border border-[#C8D4E0] bg-white">
+              <h3 class="m-0">
+                <button
+                  type="button"
+                  class="accordion-button flex w-full cursor-pointer items-center gap-3 px-4 py-4 text-left text-[15px] font-medium text-[#173C6A] md:text-[16px]"
+                  data-accordion-target="#faq-collapse-6"
+                  aria-expanded="false"
                 >
-                <span>Can I try a sample first?</span>
-              </button>
-            </h3>
-            <div id="faq-collapse-6" class="accordion-collapse hidden border-t border-[#E8EDF2]">
-              <div class="px-4 pb-4 pl-11 pt-3 text-[15px] leading-relaxed text-[#173C6A] md:pl-12">
-                Absolutely—order a sample pack to let your dog taste the recipe before committing to a full bag or
-                subscription.
+                  <span
+                    class="accordion-icon faq-accordion-symbol inline-flex h-6 w-6 shrink-0 items-center justify-center text-xl font-semibold leading-none text-[#173C6A]"
+                    aria-hidden="true"
+                    >+</span
+                  >
+                  <span>Can I try a sample first?</span>
+                </button>
+              </h3>
+              <div id="faq-collapse-6" class="accordion-collapse hidden border-t border-[#E8EDF2]">
+                <div class="px-4 pb-4 pl-11 pt-3 text-[15px] leading-relaxed text-[#173C6A] md:pl-12">
+                  Absolutely—order a sample pack to let your dog taste the recipe before committing to a full bag or
+                  subscription.
+                </div>
               </div>
             </div>
-          </div>
+          {% endcomment %}
           <div class="rounded-[12px] border border-[#C8D4E0] bg-white">
             <h3 class="m-0">
               <button
@@ -852,7 +819,7 @@
       spaceBetween: 16,
       breakpoints: {
         320: { slidesPerView: 3, spaceBetween: 24 },
-        1024: { slidesPerView: 9, spaceBetween: 40 },
+        1024: { slidesPerView: 5, spaceBetween: 40 },
       },
     });
 
