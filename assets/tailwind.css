@@ -1901,6 +1901,12 @@ video {
   color: rgb(25 60 107 / var(--tw-text-opacity, 1));
 }
 
+@media (min-width: 768px){
+  .btn-cta{
+    max-width: none;
+  }
+}
+
 .btn-buy-now{
   border-radius: 0.375rem;
   border-width: 2px;
