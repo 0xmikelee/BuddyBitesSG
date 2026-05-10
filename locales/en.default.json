@@ -97,7 +97,7 @@
         "title": "Toppers",
         "options": {
           "beef": "Beef & Vegetables",
-          "chicken": "Chicken & Vegetables",
+          "chicken": "Chicken & Vegetables"
         }
       }
     },
@@ -758,8 +758,85 @@
   },
   "homepage": {
     "hero_section": {
+      "title_line1": "Dog Food,",
+      "title_line2": "upgraded",
       "subtext": "Vet-backed formula, Gut-Friendly prebiotics. Nearly 10 million meals donated.",
-      "shop_now": "Shop Now"
+      "shop_now": "Shop Now",
+      "image_alt": "Hero Image"
+    },
+    "section_favourites": {
+      "title": "Start with our favourites",
+      "tab_dog": "Dog",
+      "tab_cat": "Cat",
+      "dog_salmon_kibble": {
+        "image_alt": "Dog Salmon Kibbles",
+        "product_name": "Adult Kibbles",
+        "recipe": "Sweet Potato and Salmon Recipe",
+        "add_to_cart_html": "Add to Cart - {{ price }}"
+      },
+      "dog_beef_treat": {
+        "image_alt": "Dog Beef Treats",
+        "product_name": "Air-Dried Dog Treats",
+        "recipe": "Beef & Blueberry Recipe",
+        "add_to_cart_html": "Add to Cart - {{ price }}"
+      },
+      "dog_beef_topper": {
+        "image_alt": "Dog Beef Toppers",
+        "product_name": "Fresh Toppers",
+        "recipe": "Beef & Vegetables Recipe",
+        "add_to_cart_html": "Add to Cart - {{ price }}"
+      },
+      "cat_salmon_kibble": {
+        "image_alt": "Cat Salmon Kibbles",
+        "product_name": "Cat Kibbles",
+        "recipe": "Salmon Recipe",
+        "add_to_cart_html": "Add to Cart - {{ price }}"
+      },
+      "cat_chicken_kibble": {
+        "image_alt": "Cat Chicken Kibbles",
+        "product_name": "Cat Kibbles",
+        "recipe": "Chicken Recipe",
+        "add_to_cart_html": "Add to Cart - {{ price }}"
+      },
+      "kitten_chicken_kibble": {
+        "image_alt": "Kitten Chicken Kibbles",
+        "product_name": "Kitten Kibbles",
+        "recipe": "Kitten Chicken Recipe",
+        "add_to_cart_html": "Add to Cart - {{ price }}"
+      }
+    },
+    "all_new_cat_line": {
+      "title": "All New Cat Line",
+      "image_alt": "All New Cat Line Image"
+    },
+    "need_advice": {
+      "title": "Need Some Advice?",
+      "try_sample_image_alt": "Try Sample Packs"
+    },
+    "section_partnering_shelters": {
+      "title": "Our Partnering Shelters",
+      "asd_alt": "Action for Singapore Dogs",
+      "spca_alt": "SPCA Singapore",
+      "exclusively_mongrels_alt": "Exclusively Mongrels",
+      "sosd_alt": "SoSD",
+      "madam_wong_alt": "Madam Wong"
+    },
+    "faq_homepage": {
+      "title": "FAQs",
+      "q1_title": "Where is your food made?",
+      "q1_answer": "All Buddy Bites Kibble is made in Europe and regulated to AAFCO standards. You might have even seen the video of Ryan eating our food. We didn't ask him to do it, but it's safe to do so and he's a bit weird.",
+      "q2_title": "What are the benefits of subscribing?",
+      "q2_answer": "Convenience and cash!! By subscribing you receive a 20% discount on kibbles and 10% discount on treats to standard pricing, and the convenience of not having to go back into the website to order every month. It just arrives at your door as if by magic. On top of that we throw some extra goodies in your orders, first one guaranteed!",
+      "q3_title": "How do I know how much to order for my dog?",
+      "q3_answer": "Take a look at our feeding guidelines per recipe and check our daily recommended feeding guideline (grams per day) corresponding to your dog's weight. Adjust as needed if your dog is on the skinnier or chunkier side.",
+      "q4_title": "Is the subscription flexible?",
+      "q4_answer": "Absolutely! Our subscriptions are purely for convenience, they are completely flexible. You can pause, edit or cancel any time. You can change flavour, delivery date, frequency all in just a few clicks via your customer portal. Plus you will have dedicated support via Whatsapp if you have any questions or need anything changed. There is no charge for subscribing, just order your food, and let us deliver to your door on repeat at no extra cost.",
+      "q5_title": "What is the kibble size?",
+      "q5_answer": "Our kibble sizes range from 10-14mm to suit dogs of all breeds, ages and sizes. Our smaller kibble is suitable for smaller breeds and older dogs with less teeth who still enjoy eating kibble. Our larger kibble is suitable for large dog breeds and dogs who need more encouragement to chew to aid digestion. The kibble size of each recipe can be found on each product page on our website.",
+      "q6_title": "Is Buddy Bites good for sensitive tummys?",
+      "q6_answer": "Our Adult recipes are formulated with novel and premium proteins to suit allergy-prone dogs with probiotics, helping digestion and ensuring good poop.",
+      "q_sample_title": "Can I try a sample first?",
+      "q_sample_answer": "Absolutely—order a sample pack to let your dog taste the recipe before committing to a full bag or subscription."
     },
     "featured_products": {
       "title": "Fussy pup? we’ve got you covered",
@@ -768,6 +845,8 @@
     "section_good_stuff": {
       "title": "Only The Good Stuff",
       "subtext": "Buddy Bites started with the goal of feeding all sheltered dogs in Asia. We are the first subscription based food brand that gives back - we donate 1kg for every 2kg bought. Our dog food formula is backed by vets, plus with a subscription you never need to worry about buying dog food again.",
+      "about_us": "About Us",
+      "image_alt": "About Us Only The Good Stuff",
       "point1": {
         "title": "Vet-backed formula",
         "subtext": "Our expertly crafted formulas are backed by veterinarians, ensuring that your beloved furry friend is receiving only the best."
@@ -825,18 +904,25 @@
     "section_subscribe_and_save": {
       "title": "Subscribe & Save 20%",
       "point1": "20% off every order",
-      "point2": "Automated deliveries",
-      "point3": "Swap, skip or cancel anytime",
+      "point2": "Automated Deliveries",
+      "point3": "Swap, Skip or Cancel anytime",
       "point4": "Exclusive Surprises",
-      "subscribe_now": "Subscribe & Save"
+      "subscribe_now": "Subscribe & Save",
+      "promo_image_alt": "Placeholder Image",
+      "icon_discount_alt": "discount",
+      "icon_delivery_alt": "delivery",
+      "icon_swap_alt": "swap, skip or cancel",
+      "icon_surprise_alt": "surprise"
     },
     "section_giving_back": {
       "title": "Giving back to the community",
       "subtext": "For every 2kg of dog food purchased, we donate 1kg to local shelters!",
       "donation_amount": "8,158,880",
       "donation_amount_unit": "meals already donated",
+      "meals_donated_counter_label": "Meals Donated",
       "shop_now": "Shop to donate",
-      "shelter_partners": "Our Parntering shelters"
+      "give_back_image_alt": "Give Back To The Community",
+      "shelter_partners": "Our Partnering Shelters"
     },
     "section_want_to_try_a_sample": {
       "title": "Want to try a sample?",
