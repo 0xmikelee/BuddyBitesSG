@@ -321,7 +321,9 @@
         <h2 class="w-[70%] text-balance text-center font-titanOne text-[clamp(30px,2.5vw,35px)] uppercase leading-[clamp(30px,2.5vw,35px)] md:w-full">
           {{ 'homepage.all_new_cat_line.title' | t }}
         </h2>
-        <a href="{{ all_products['adult-salmon-dry-cat-food'].url }}" class="btn-cta">{{ 'homepage.hero_section.shop_now' | t }}</a>
+        <a href="{{ all_products['adult-salmon-dry-cat-food'].url }}" class="btn-cta">
+          {{- 'homepage.hero_section.shop_now' | t -}}
+        </a>
       </div>
     </div>
   </section>
@@ -392,7 +394,9 @@
               </p>
             </div>
           </div>
-          <a href="{{ pages['subscription'].url }}" class="btn-cta">{{ 'homepage.section_subscribe_and_save.subscribe_now' | t }}</a>
+          <a href="{{ pages['subscription'].url }}" class="btn-cta">
+            {{- 'homepage.section_subscribe_and_save.subscribe_now' | t -}}
+          </a>
         </div>
       </div>
     </div>
@@ -408,7 +412,9 @@
             <p class="text-balance text-center text-[clamp(16px,1.9vw,20px)] font-normal leading-[clamp(24px,1.9vw,28px)]">
               {{ 'homepage.section_giving_back.subtext' | t }}
             </p>
-            <a href="{{ all_products['adult-turkey-dry-dog-food'].url }}" class="btn-cta">{{ 'homepage.section_giving_back.shop_now' | t }}</a>
+            <a href="{{ all_products['adult-turkey-dry-dog-food'].url }}" class="btn-cta">
+              {{- 'homepage.section_giving_back.shop_now' | t -}}
+            </a>
           </div>
           <div class="flex w-full flex-wrap items-center justify-center gap-1 md:items-end md:justify-start">
             <div class="els-cup-box !m-0" data-id="7086"></div>
@@ -520,123 +526,15 @@
           class="accordion homepage-faq-accordion grid w-full max-w-6xl grid-cols-1 items-start gap-4 md:grid-cols-2"
           id="homepage-faq-accordion"
         >
-          <div class="rounded-[12px] border border-[#C8D4E0] bg-white">
-            <h3 class="m-0">
-              <button
-                type="button"
-                class="accordion-button flex w-full cursor-pointer items-center gap-3 px-4 py-4 text-left text-[15px] font-medium text-[#173C6A] md:text-[16px]"
-                data-accordion-target="#faq-collapse-1"
-                aria-expanded="false"
-              >
-                <span
-                  class="accordion-icon faq-accordion-symbol inline-flex h-6 w-6 shrink-0 items-center justify-center text-xl font-semibold leading-none text-[#173C6A]"
-                  aria-hidden="true"
-                  >+</span
-                >
-                <span>{{ 'homepage.faq_homepage.q1_title' | t }}</span>
-              </button>
-            </h3>
-            <div id="faq-collapse-1" class="accordion-collapse hidden border-t border-[#E8EDF2]">
-              <div class="px-4 pb-4 pl-11 pt-3 text-[15px] leading-relaxed text-[#173C6A] md:pl-12">
-                {{ 'homepage.faq_homepage.q1_answer' | t }}
-              </div>
-            </div>
-          </div>
-          <div class="rounded-[12px] border border-[#C8D4E0] bg-white">
-            <h3 class="m-0">
-              <button
-                type="button"
-                class="accordion-button flex w-full cursor-pointer items-center gap-3 px-4 py-4 text-left text-[15px] font-medium text-[#173C6A] md:text-[16px]"
-                data-accordion-target="#faq-collapse-2"
-                aria-expanded="false"
-              >
-                <span
-                  class="accordion-icon faq-accordion-symbol inline-flex h-6 w-6 shrink-0 items-center justify-center text-xl font-semibold leading-none text-[#173C6A]"
-                  aria-hidden="true"
-                  >+</span
-                >
-                <span>{{ 'homepage.faq_homepage.q2_title' | t }}</span>
-              </button>
-            </h3>
-            <div id="faq-collapse-2" class="accordion-collapse hidden border-t border-[#E8EDF2]">
-              <div class="px-4 pb-4 pl-11 pt-3 text-[15px] leading-relaxed text-[#173C6A] md:pl-12">
-                {{ 'homepage.faq_homepage.q2_answer' | t }}
-              </div>
-            </div>
-          </div>
-          <div class="rounded-[12px] border border-[#C8D4E0] bg-white">
-            <h3 class="m-0">
-              <button
-                type="button"
-                class="accordion-button flex w-full cursor-pointer items-center gap-3 px-4 py-4 text-left text-[15px] font-medium text-[#173C6A] md:text-[16px]"
-                data-accordion-target="#faq-collapse-3"
-                aria-expanded="false"
-              >
-                <span
-                  class="accordion-icon faq-accordion-symbol inline-flex h-6 w-6 shrink-0 items-center justify-center text-xl font-semibold leading-none text-[#173C6A]"
-                  aria-hidden="true"
-                  >+</span
-                >
-                <span>{{ 'homepage.faq_homepage.q3_title' | t }}</span>
-              </button>
-            </h3>
-            <div id="faq-collapse-3" class="accordion-collapse hidden border-t border-[#E8EDF2]">
-              <div class="px-4 pb-4 pl-11 pt-3 text-[15px] leading-relaxed text-[#173C6A] md:pl-12">
-                {{ 'homepage.faq_homepage.q3_answer' | t }}
-              </div>
-            </div>
-          </div>
-          <div class="rounded-[12px] border border-[#C8D4E0] bg-white">
-            <h3 class="m-0">
-              <button
-                type="button"
-                class="accordion-button flex w-full cursor-pointer items-center gap-3 px-4 py-4 text-left text-[15px] font-medium text-[#173C6A] md:text-[16px]"
-                data-accordion-target="#faq-collapse-4"
-                aria-expanded="false"
-              >
-                <span
-                  class="accordion-icon faq-accordion-symbol inline-flex h-6 w-6 shrink-0 items-center justify-center text-xl font-semibold leading-none text-[#173C6A]"
-                  aria-hidden="true"
-                  >+</span
-                >
-                <span>{{ 'homepage.faq_homepage.q4_title' | t }}</span>
-              </button>
-            </h3>
-            <div id="faq-collapse-4" class="accordion-collapse hidden border-t border-[#E8EDF2]">
-              <div class="px-4 pb-4 pl-11 pt-3 text-[15px] leading-relaxed text-[#173C6A] md:pl-12">
-                {{ 'homepage.faq_homepage.q4_answer' | t }}
-              </div>
-            </div>
-          </div>
-          <div class="rounded-[12px] border border-[#C8D4E0] bg-white">
-            <h3 class="m-0">
-              <button
-                type="button"
-                class="accordion-button flex w-full cursor-pointer items-center gap-3 px-4 py-4 text-left text-[15px] font-medium text-[#173C6A] md:text-[16px]"
-                data-accordion-target="#faq-collapse-5"
-                aria-expanded="false"
-              >
-                <span
-                  class="accordion-icon faq-accordion-symbol inline-flex h-6 w-6 shrink-0 items-center justify-center text-xl font-semibold leading-none text-[#173C6A]"
-                  aria-hidden="true"
-                  >+</span
-                >
-                <span>{{ 'homepage.faq_homepage.q5_title' | t }}</span>
-              </button>
-            </h3>
-            <div id="faq-collapse-5" class="accordion-collapse hidden border-t border-[#E8EDF2]">
-              <div class="px-4 pb-4 pl-11 pt-3 text-[15px] leading-relaxed text-[#173C6A] md:pl-12">
-                {{ 'homepage.faq_homepage.q5_answer' | t }}
-              </div>
-            </div>
-          </div>
-          {% comment %}
+          {% assign all_faqs = shop.metaobjects.faqs.values %}
+          {% assign sorted_faqs = all_faqs | sort: 'featured_order' %}
+          {% for faq in sorted_faqs %}
             <div class="rounded-[12px] border border-[#C8D4E0] bg-white">
               <h3 class="m-0">
                 <button
                   type="button"
                   class="accordion-button flex w-full cursor-pointer items-center gap-3 px-4 py-4 text-left text-[15px] font-medium text-[#173C6A] md:text-[16px]"
-                  data-accordion-target="#faq-collapse-6"
+                  data-accordion-target="#faq-collapse-{{ forloop.index }}"
                   aria-expanded="false"
                 >
                   <span
@@ -644,60 +542,196 @@
                     aria-hidden="true"
                     >+</span
                   >
-                  <span>{{ 'homepage.faq_homepage.q_sample_title' | t }}</span>
+                  <span>{{ faq.question.value }}</span>
                 </button>
               </h3>
-              <div id="faq-collapse-6" class="accordion-collapse hidden border-t border-[#E8EDF2]">
+              <div id="faq-collapse-{{ forloop.index }}" class="accordion-collapse hidden border-t border-[#E8EDF2]">
                 <div class="px-4 pb-4 pl-11 pt-3 text-[15px] leading-relaxed text-[#173C6A] md:pl-12">
-                  {{ 'homepage.faq_homepage.q_sample_answer' | t }}
+                  {{ faq.answer | metafield_tag }}
                 </div>
               </div>
             </div>
-          {% endcomment %}
-          <div class="rounded-[12px] border border-[#C8D4E0] bg-white">
-            <h3 class="m-0">
-              <button
-                type="button"
-                class="accordion-button flex w-full cursor-pointer items-center gap-3 px-4 py-4 text-left text-[15px] font-medium text-[#173C6A] md:text-[16px]"
-                data-accordion-target="#faq-collapse-7"
-                aria-expanded="false"
-              >
-                <span
-                  class="accordion-icon faq-accordion-symbol inline-flex h-6 w-6 shrink-0 items-center justify-center text-xl font-semibold leading-none text-[#173C6A]"
-                  aria-hidden="true"
-                  >+</span
-                >
-                <span>{{ 'homepage.faq_homepage.q6_title' | t }}</span>
-              </button>
-            </h3>
-            <div id="faq-collapse-7" class="accordion-collapse hidden border-t border-[#E8EDF2]">
-              <div class="px-4 pb-4 pl-11 pt-3 text-[15px] leading-relaxed text-[#173C6A] md:pl-12">
-                {{ 'homepage.faq_homepage.q6_answer' | t }}
-              </div>
-            </div>
-          </div>
+          {% endfor %}
           {% comment %}
             <div class="rounded-[12px] border border-[#C8D4E0] bg-white">
               <h3 class="m-0">
                 <button
                   type="button"
                   class="accordion-button flex w-full cursor-pointer items-center gap-3 px-4 py-4 text-left text-[15px] font-medium text-[#173C6A] md:text-[16px]"
-                  data-accordion-target="#faq-collapse-6"
+                  data-accordion-target="#faq-collapse-1"
                   aria-expanded="false"
                 >
                   <span
                     class="accordion-icon faq-accordion-symbol inline-flex h-6 w-6 shrink-0 items-center justify-center text-xl font-semibold leading-none text-[#173C6A]"
                     aria-hidden="true"
-                  >+</span>
-                  <span>{{ 'homepage.faq_homepage.q_sample_title' | t }}</span>
+                    >+</span
+                  >
+                  <span>{{ 'homepage.faq_homepage.q1_title' | t }}</span>
                 </button>
               </h3>
-              <div id="faq-collapse-6" class="accordion-collapse hidden border-t border-[#E8EDF2]">
+              <div id="faq-collapse-1" class="accordion-collapse hidden border-t border-[#E8EDF2]">
                 <div class="px-4 pb-4 pl-11 pt-3 text-[15px] leading-relaxed text-[#173C6A] md:pl-12">
-                  {{ 'homepage.faq_homepage.q_sample_answer' | t }}
+                  {{ 'homepage.faq_homepage.q1_answer' | t }}
                 </div>
               </div>
             </div>
+            <div class="rounded-[12px] border border-[#C8D4E0] bg-white">
+              <h3 class="m-0">
+                <button
+                  type="button"
+                  class="accordion-button flex w-full cursor-pointer items-center gap-3 px-4 py-4 text-left text-[15px] font-medium text-[#173C6A] md:text-[16px]"
+                  data-accordion-target="#faq-collapse-2"
+                  aria-expanded="false"
+                >
+                  <span
+                    class="accordion-icon faq-accordion-symbol inline-flex h-6 w-6 shrink-0 items-center justify-center text-xl font-semibold leading-none text-[#173C6A]"
+                    aria-hidden="true"
+                    >+</span
+                  >
+                  <span>{{ 'homepage.faq_homepage.q2_title' | t }}</span>
+                </button>
+              </h3>
+              <div id="faq-collapse-2" class="accordion-collapse hidden border-t border-[#E8EDF2]">
+                <div class="px-4 pb-4 pl-11 pt-3 text-[15px] leading-relaxed text-[#173C6A] md:pl-12">
+                  {{ 'homepage.faq_homepage.q2_answer' | t }}
+                </div>
+              </div>
+            </div>
+            <div class="rounded-[12px] border border-[#C8D4E0] bg-white">
+              <h3 class="m-0">
+                <button
+                  type="button"
+                  class="accordion-button flex w-full cursor-pointer items-center gap-3 px-4 py-4 text-left text-[15px] font-medium text-[#173C6A] md:text-[16px]"
+                  data-accordion-target="#faq-collapse-3"
+                  aria-expanded="false"
+                >
+                  <span
+                    class="accordion-icon faq-accordion-symbol inline-flex h-6 w-6 shrink-0 items-center justify-center text-xl font-semibold leading-none text-[#173C6A]"
+                    aria-hidden="true"
+                    >+</span
+                  >
+                  <span>{{ 'homepage.faq_homepage.q3_title' | t }}</span>
+                </button>
+              </h3>
+              <div id="faq-collapse-3" class="accordion-collapse hidden border-t border-[#E8EDF2]">
+                <div class="px-4 pb-4 pl-11 pt-3 text-[15px] leading-relaxed text-[#173C6A] md:pl-12">
+                  {{ 'homepage.faq_homepage.q3_answer' | t }}
+                </div>
+              </div>
+            </div>
+            <div class="rounded-[12px] border border-[#C8D4E0] bg-white">
+              <h3 class="m-0">
+                <button
+                  type="button"
+                  class="accordion-button flex w-full cursor-pointer items-center gap-3 px-4 py-4 text-left text-[15px] font-medium text-[#173C6A] md:text-[16px]"
+                  data-accordion-target="#faq-collapse-4"
+                  aria-expanded="false"
+                >
+                  <span
+                    class="accordion-icon faq-accordion-symbol inline-flex h-6 w-6 shrink-0 items-center justify-center text-xl font-semibold leading-none text-[#173C6A]"
+                    aria-hidden="true"
+                    >+</span
+                  >
+                  <span>{{ 'homepage.faq_homepage.q4_title' | t }}</span>
+                </button>
+              </h3>
+              <div id="faq-collapse-4" class="accordion-collapse hidden border-t border-[#E8EDF2]">
+                <div class="px-4 pb-4 pl-11 pt-3 text-[15px] leading-relaxed text-[#173C6A] md:pl-12">
+                  {{ 'homepage.faq_homepage.q4_answer' | t }}
+                </div>
+              </div>
+            </div>
+            <div class="rounded-[12px] border border-[#C8D4E0] bg-white">
+              <h3 class="m-0">
+                <button
+                  type="button"
+                  class="accordion-button flex w-full cursor-pointer items-center gap-3 px-4 py-4 text-left text-[15px] font-medium text-[#173C6A] md:text-[16px]"
+                  data-accordion-target="#faq-collapse-5"
+                  aria-expanded="false"
+                >
+                  <span
+                    class="accordion-icon faq-accordion-symbol inline-flex h-6 w-6 shrink-0 items-center justify-center text-xl font-semibold leading-none text-[#173C6A]"
+                    aria-hidden="true"
+                    >+</span
+                  >
+                  <span>{{ 'homepage.faq_homepage.q5_title' | t }}</span>
+                </button>
+              </h3>
+              <div id="faq-collapse-5" class="accordion-collapse hidden border-t border-[#E8EDF2]">
+                <div class="px-4 pb-4 pl-11 pt-3 text-[15px] leading-relaxed text-[#173C6A] md:pl-12">
+                  {{ 'homepage.faq_homepage.q5_answer' | t }}
+                </div>
+              </div>
+            </div>
+            {% comment %}
+              <div class="rounded-[12px] border border-[#C8D4E0] bg-white">
+                <h3 class="m-0">
+                  <button
+                    type="button"
+                    class="accordion-button flex w-full cursor-pointer items-center gap-3 px-4 py-4 text-left text-[15px] font-medium text-[#173C6A] md:text-[16px]"
+                    data-accordion-target="#faq-collapse-6"
+                    aria-expanded="false"
+                  >
+                    <span
+                      class="accordion-icon faq-accordion-symbol inline-flex h-6 w-6 shrink-0 items-center justify-center text-xl font-semibold leading-none text-[#173C6A]"
+                      aria-hidden="true"
+                      >+</span
+                    >
+                    <span>{{ 'homepage.faq_homepage.q_sample_title' | t }}</span>
+                  </button>
+                </h3>
+                <div id="faq-collapse-6" class="accordion-collapse hidden border-t border-[#E8EDF2]">
+                  <div class="px-4 pb-4 pl-11 pt-3 text-[15px] leading-relaxed text-[#173C6A] md:pl-12">
+                    {{ 'homepage.faq_homepage.q_sample_answer' | t }}
+                  </div>
+                </div>
+              </div>
+            {% endcomment %}
+            <div class="rounded-[12px] border border-[#C8D4E0] bg-white">
+              <h3 class="m-0">
+                <button
+                  type="button"
+                  class="accordion-button flex w-full cursor-pointer items-center gap-3 px-4 py-4 text-left text-[15px] font-medium text-[#173C6A] md:text-[16px]"
+                  data-accordion-target="#faq-collapse-7"
+                  aria-expanded="false"
+                >
+                  <span
+                    class="accordion-icon faq-accordion-symbol inline-flex h-6 w-6 shrink-0 items-center justify-center text-xl font-semibold leading-none text-[#173C6A]"
+                    aria-hidden="true"
+                    >+</span
+                  >
+                  <span>{{ 'homepage.faq_homepage.q6_title' | t }}</span>
+                </button>
+              </h3>
+              <div id="faq-collapse-7" class="accordion-collapse hidden border-t border-[#E8EDF2]">
+                <div class="px-4 pb-4 pl-11 pt-3 text-[15px] leading-relaxed text-[#173C6A] md:pl-12">
+                  {{ 'homepage.faq_homepage.q6_answer' | t }}
+                </div>
+              </div>
+            </div>
+            {% comment %}
+              <div class="rounded-[12px] border border-[#C8D4E0] bg-white">
+                <h3 class="m-0">
+                  <button
+                    type="button"
+                    class="accordion-button flex w-full cursor-pointer items-center gap-3 px-4 py-4 text-left text-[15px] font-medium text-[#173C6A] md:text-[16px]"
+                    data-accordion-target="#faq-collapse-6"
+                    aria-expanded="false"
+                  >
+                    <span
+                      class="accordion-icon faq-accordion-symbol inline-flex h-6 w-6 shrink-0 items-center justify-center text-xl font-semibold leading-none text-[#173C6A]"
+                      aria-hidden="true"
+                    >+</span>
+                    <span>{{ 'homepage.faq_homepage.q_sample_title' | t }}</span>
+                  </button>
+                </h3>
+                <div id="faq-collapse-6" class="accordion-collapse hidden border-t border-[#E8EDF2]">
+                  <div class="px-4 pb-4 pl-11 pt-3 text-[15px] leading-relaxed text-[#173C6A] md:pl-12">
+                    {{ 'homepage.faq_homepage.q_sample_answer' | t }}
+                  </div>
+                </div>
+              </div>
+            {% endcomment %}
           {% endcomment %}
         </div>
       </div>
