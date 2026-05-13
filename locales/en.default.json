@@ -772,37 +772,37 @@
         "image_alt": "Dog Salmon Kibbles",
         "product_name": "Adult Kibbles",
         "recipe": "Sweet Potato and Salmon Recipe",
-        "add_to_cart_html": "Add to Cart - {{ price }}"
+        "add_to_cart_html": "Add to Cart"
       },
       "dog_beef_treat": {
         "image_alt": "Dog Beef Treats",
         "product_name": "Air-Dried Dog Treats",
         "recipe": "Beef & Blueberry Recipe",
-        "add_to_cart_html": "Add to Cart - {{ price }}"
+        "add_to_cart_html": "Add to Cart"
       },
       "dog_beef_topper": {
         "image_alt": "Dog Beef Toppers",
         "product_name": "Fresh Toppers",
         "recipe": "Beef & Vegetables Recipe",
-        "add_to_cart_html": "Add to Cart - {{ price }}"
+        "add_to_cart_html": "Add to Cart"
       },
       "cat_salmon_kibble": {
         "image_alt": "Cat Salmon Kibbles",
         "product_name": "Cat Kibbles",
         "recipe": "Salmon Recipe",
-        "add_to_cart_html": "Add to Cart - {{ price }}"
+        "add_to_cart_html": "Add to Cart"
       },
       "cat_chicken_kibble": {
         "image_alt": "Cat Chicken Kibbles",
         "product_name": "Cat Kibbles",
         "recipe": "Chicken Recipe",
-        "add_to_cart_html": "Add to Cart - {{ price }}"
+        "add_to_cart_html": "Add to Cart"
       },
       "kitten_chicken_kibble": {
         "image_alt": "Kitten Chicken Kibbles",
         "product_name": "Kitten Kibbles",
         "recipe": "Kitten Chicken Recipe",
-        "add_to_cart_html": "Add to Cart - {{ price }}"
+        "add_to_cart_html": "Add to Cart"
       }
     },
     "all_new_cat_line": {

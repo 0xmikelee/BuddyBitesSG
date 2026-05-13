@@ -45,66 +45,39 @@
           </button>
         {% endcomment %}
       </div>
+      {% assign dog_featured_products = shop.metaobjects.featured_products.values %}
+      {% assign sorted_dog_featured_products = dog_featured_products
+        | where: 'category', 'dog'
+        | sort: 'display_order'
+      %}
       <div id="tab-fav-dog" class="w-full">
         <div class="swiper swiper-fav-dog">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="flex w-full flex-col items-center justify-center gap-4 rounded-[20px] bg-white p-4">
-                <img
-                  src="{{ 'salmon_kibble.png' | file_img_url: 'master' }}"
-                  alt="{{ 'homepage.section_favourites.dog_salmon_kibble.image_alt' | t }}"
-                  class="w-full rounded-[20px] object-cover"
-                >
-                <div class="flex w-full flex-col items-start justify-center gap-2 text-[18px]">
-                  <div class="flex w-full justify-between gap-2 font-semibold">
-                    <p>{{ 'homepage.section_favourites.dog_salmon_kibble.product_name' | t }}</p>
-                    <p>$32.80</p>
+            {% for item in sorted_dog_featured_products %}
+              <div class="swiper-slide">
+                <div class="flex w-full flex-col items-center justify-center gap-4 rounded-[20px] bg-white p-4">
+                  <img
+                    src="{{ item.product.value.media.first.preview_image | img_url: 'master' }}"
+                    alt="{{ item.product.value.title }}"
+                    class="w-full rounded-[20px] object-cover"
+                  >
+                  <div class="flex w-full flex-col items-start justify-center gap-2 text-[18px]">
+                    <div class="flex w-full justify-between gap-2 font-semibold">
+                      <p>{{ item.product_category }}</p>
+                      <p>{{ item.product.value.price | money }}</p>
+                    </div>
+                    <p class="font-normal">{{ item.display_name }}</p>
                   </div>
-                  <p class="font-normal">{{ 'homepage.section_favourites.dog_salmon_kibble.recipe' | t }}</p>
+                  <a href="{{ all_products['adult-salmon-dry-dog-food'].url }}" class="btn-buy-now w-full">
+                    <p>
+                      {{ 'homepage.section_favourites.dog_salmon_kibble.add_to_cart_html' | t }}
+                      -
+                      <span>{{ item.product.value.price | money }}</span>
+                    </p>
+                  </a>
                 </div>
-                <a href="{{ all_products['adult-salmon-dry-dog-food'].url }}" class="btn-buy-now w-full">
-                  {{ 'homepage.section_favourites.dog_salmon_kibble.add_to_cart_html' | t: price: '$32.80' }}
-                </a>
               </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="flex w-full flex-col items-center justify-center gap-4 rounded-[20px] bg-white p-4">
-                <img
-                  src="{{ 'beef_treat.png' | file_img_url: 'master' }}"
-                  alt="{{ 'homepage.section_favourites.dog_beef_treat.image_alt' | t }}"
-                  class="w-full rounded-[20px] object-cover"
-                >
-                <div class="flex w-full flex-col items-start justify-center gap-2 text-[18px]">
-                  <div class="flex w-full justify-between gap-2 font-semibold">
-                    <p>{{ 'homepage.section_favourites.dog_beef_treat.product_name' | t }}</p>
-                    <p>$13.50</p>
-                  </div>
-                  <p class="font-normal">{{ 'homepage.section_favourites.dog_beef_treat.recipe' | t }}</p>
-                </div>
-                <a href="{{ all_products['beef-blueberry-air-dried-dog-treats'].url }}" class="btn-buy-now w-full">
-                  {{ 'homepage.section_favourites.dog_beef_treat.add_to_cart_html' | t: price: '$13.50' }}
-                </a>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="flex w-full flex-col items-center justify-center gap-4 rounded-[20px] bg-white p-4">
-                <img
-                  src="{{ 'beef_topper.png' | file_img_url: 'master' }}"
-                  alt="{{ 'homepage.section_favourites.dog_beef_topper.image_alt' | t }}"
-                  class="w-full rounded-[20px] object-cover"
-                >
-                <div class="flex w-full flex-col items-start justify-center gap-2 text-[18px]">
-                  <div class="flex w-full justify-between gap-2 font-semibold">
-                    <p>{{ 'homepage.section_favourites.dog_beef_topper.product_name' | t }}</p>
-                    <p>$7.20</p>
-                  </div>
-                  <p class="font-normal">{{ 'homepage.section_favourites.dog_beef_topper.recipe' | t }}</p>
-                </div>
-                <a href="{{ all_products['dog-fresh-toppers-beef-vegetables'].url }}" class="btn-buy-now w-full">
-                  {{ 'homepage.section_favourites.dog_beef_topper.add_to_cart_html' | t: price: '$7.20' }}
-                </a>
-              </div>
-            </div>
+            {% endfor %}
           </div>
         </div>
       </div>
