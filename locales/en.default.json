@@ -803,7 +803,8 @@
         "product_name": "Kitten Kibbles",
         "recipe": "Kitten Chicken Recipe",
         "add_to_cart_html": "Add to Cart"
-      }
+      },
+      "add_to_cart_html": "Add to Cart"
     },
     "all_new_cat_line": {
       "title": "All New Cat Line",
