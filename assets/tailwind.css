@@ -1949,6 +1949,11 @@ video {
   background-color: rgb(25 60 107 / var(--tw-bg-opacity, 1));
 }
 
+.span-kibbles-tab-active{
+  --tw-bg-opacity: 1;
+  background-color: rgb(25 60 107 / var(--tw-bg-opacity, 1));
+}
+
 .pointer-events-none{
   pointer-events: none;
 }

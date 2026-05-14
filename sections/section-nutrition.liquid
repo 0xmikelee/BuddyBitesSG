@@ -213,138 +213,242 @@
           digestible nutrients.
         </p>
       </div>
-      <div class="swiper swiper-kibbles">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <a
-              href="{{ all_products['adult-lamb-dry-dog-food'].url }}"
-              class="group flex min-h-[363px] flex-col items-start justify-start gap-2 overflow-hidden rounded-[20px] bg-white"
-            >
-              <div class="min-h-[230px] p-6 group-hover:hidden">
-                <img
-                  src="{{ 'lamb-bowl.png' | file_img_url: 'master' }}"
-                  alt="Lamb Recipe"
-                  class="w-full object-cover"
-                >
-              </div>
-              <div class="hidden w-full object-cover group-hover:block">
-                <img
-                  src="{{ 'ingredients_full_lamb.png' | file_img_url: 'master' }}"
-                  alt="Lamb Recipe"
-                  class="max-h-[262.39px] w-full object-cover"
-                >
-              </div>
-              <div class="flex min-h-[128px] w-full flex-col items-center justify-start p-4">
-                <p class="text-[16px] font-bold">Lamb Recipe</p>
-                <p class="text-balance text-center text-[16px] font-normal">
-                  Supports muscle growth and overall Health
-                </p>
-              </div>
-            </a>
+      <div class="flex gap-4 text-[clamp(28px,1.9vw,32px)]">
+        <button id="btn-dog-kibble-bowls" class="btn-kibbles-tab flex flex-col items-center justify-center">
+          {{ 'homepage.section_favourites.tab_dog' | t }}
+          <span class="span-kibbles-tab span-kibbles-tab-active h-[1px] w-full" />
+        </button>
+        <button id="btn-cat-kibble-bowls" class="btn-kibbles-tab flex flex-col items-center justify-center">
+          {{ 'homepage.section_favourites.tab_cat' | t }}
+          <span class="span-kibbles-tab h-[1px] w-full" />
+        </button>
+      </div>
+      <div id="dog-kibble-bowls" class="w-full">
+        <div class="swiper swiper-dog-kibble-bowls">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a
+                href="{{ all_products['adult-lamb-dry-dog-food'].url }}"
+                class="group flex min-h-[363px] flex-col items-start justify-start gap-2 overflow-hidden rounded-[20px] bg-white"
+              >
+                <div class="min-h-[230px] p-6 group-hover:hidden">
+                  <img
+                    src="{{ 'lamb-bowl.png' | file_img_url: 'master' }}"
+                    alt="Lamb Recipe"
+                    class="w-full object-cover"
+                  >
+                </div>
+                <div class="hidden w-full object-cover group-hover:block">
+                  <img
+                    src="{{ 'ingredients_full_lamb.png' | file_img_url: 'master' }}"
+                    alt="Lamb Recipe"
+                    class="max-h-[262.39px] w-full object-cover"
+                  >
+                </div>
+                <div class="flex min-h-[128px] w-full flex-col items-center justify-start p-4">
+                  <p class="text-[16px] font-bold">Lamb Recipe</p>
+                  <p class="text-balance text-center text-[16px] font-normal">
+                    Supports muscle growth and overall Health
+                  </p>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a
+                href="{{ all_products['adult-duck-dry-dog-food'].url }}"
+                class="group flex min-h-[363px] flex-col items-start justify-start gap-2 overflow-hidden rounded-[20px] bg-white"
+              >
+                <div class="min-h-[230px] p-6 group-hover:hidden">
+                  <img
+                    src="{{ 'duck-bowl.png' | file_img_url: 'master' }}"
+                    alt="Duck Recipe"
+                    class="w-full object-cover"
+                  >
+                </div>
+                <div class="hidden w-full object-cover group-hover:block">
+                  <img
+                    src="{{ 'ingredients_full_duck.png' | file_img_url: 'master' }}"
+                    alt="Duck Recipe"
+                    class="max-h-[262.39px] w-full object-cover"
+                  >
+                </div>
+                <div class="flex min-h-[128px] w-full flex-col items-center justify-start p-4">
+                  <p class="text-[16px] font-bold">Duck Recipe</p>
+                  <p class="text-balance text-center text-[16px] font-normal">
+                    High Quality Hypoallergenic Protein that is Gentle on Sensitive Stomachs
+                  </p>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a
+                href="{{ all_products['adult-salmon-dry-dog-food'].url }}"
+                class="group flex flex-col items-start justify-start gap-2 overflow-hidden rounded-[20px] bg-white"
+              >
+                <div class="min-h-[230px] p-6 group-hover:hidden">
+                  <img
+                    src="{{ 'salmon-bowl.png' | file_img_url: 'master' }}"
+                    alt="Salmon Recipe"
+                    class="w-full object-cover"
+                  >
+                </div>
+                <div class="hidden w-full object-cover group-hover:block">
+                  <img
+                    src="{{ 'ingredients_full_salmon.png' | file_img_url: 'master' }}"
+                    alt="Salmon Recipe"
+                    class="max-h-[262.39px] w-full object-cover"
+                  >
+                </div>
+                <div class="flex min-h-[128px] w-full flex-col items-center justify-start p-4">
+                  <p class="text-[16px] font-bold">Salmon Recipe</p>
+                  <p class="text-balance text-center text-[16px] font-normal">
+                    High in Omega-3s that supports skin, coat & joint health
+                  </p>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a
+                href="{{ all_products['adult-turkey-dry-dog-food'].url }}"
+                class="group flex min-h-[363px] flex-col items-start justify-start gap-2 overflow-hidden rounded-[20px] bg-white"
+              >
+                <div class="min-h-[230px] p-6 group-hover:hidden">
+                  <img
+                    src="{{ 'turkey-bowl.png' | file_img_url: 'master' }}"
+                    alt="Turkey Recipe"
+                    class="w-full object-cover"
+                  >
+                </div>
+                <div class="hidden w-full object-cover group-hover:block">
+                  <img
+                    src="{{ 'ingredients_full_turkey.png' | file_img_url: 'master' }}"
+                    alt="Turkey Recipe"
+                    class="max-h-[262.39px] w-full object-cover"
+                  >
+                </div>
+                <div class="flex min-h-[128px] w-full flex-col items-center justify-start p-4">
+                  <p class="text-[16px] font-bold">Turkey Recipe</p>
+                  <p class="text-balance text-center text-[16px] font-normal">
+                    Lean turkey protein for strong, healthy muscles.
+                  </p>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a
+                href="{{ all_products['puppy-dry-dog-food'].url }}"
+                class="group flex min-h-[363px] flex-col items-start justify-start gap-2 overflow-hidden rounded-[20px] bg-white"
+              >
+                <div class="min-h-[230px] p-6 group-hover:hidden">
+                  <img
+                    src="{{ 'puppy-bowl.png' | file_img_url: 'master' }}"
+                    alt="Puppy Recipe"
+                    class="w-full object-cover"
+                  >
+                </div>
+                <div class="hidden w-full object-cover group-hover:block">
+                  <img
+                    src="{{ 'ingredients_full_puppy.png' | file_img_url: 'master' }}"
+                    alt="Puppy Recipe"
+                    class="max-h-[262.39px] w-full object-cover"
+                  >
+                </div>
+                <div class="flex min-h-[128px] w-full flex-col items-center justify-start p-4">
+                  <p class="text-[16px] font-bold">Puppy Recipe</p>
+                  <p class="text-balance text-center text-[16px] font-normal">
+                    Chicken builds Strong Bodies with its Lean, Digestible Protein
+                  </p>
+                </div>
+              </a>
+            </div>
           </div>
-          <div class="swiper-slide">
-            <a
-              href="{{ all_products['adult-duck-dry-dog-food'].url }}"
-              class="group flex min-h-[363px] flex-col items-start justify-start gap-2 overflow-hidden rounded-[20px] bg-white"
-            >
-              <div class="min-h-[230px] p-6 group-hover:hidden">
-                <img src="{{ 'duck-bowl.png' | file_img_url: 'master' }}" alt="Duck Recipe" class="w-full object-cover">
-              </div>
-              <div class="hidden w-full object-cover group-hover:block">
-                <img
-                  src="{{ 'ingredients_full_duck.png' | file_img_url: 'master' }}"
-                  alt="Duck Recipe"
-                  class="max-h-[262.39px] w-full object-cover"
-                >
-              </div>
-              <div class="flex min-h-[128px] w-full flex-col items-center justify-start p-4">
-                <p class="text-[16px] font-bold">Duck Recipe</p>
-                <p class="text-balance text-center text-[16px] font-normal">
-                  High Quality Hypoallergenic Protein that is Gentle on Sensitive Stomachs
-                </p>
-              </div>
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a
-              href="{{ all_products['adult-salmon-dry-dog-food'].url }}"
-              class="group flex flex-col items-start justify-start gap-2 overflow-hidden rounded-[20px] bg-white"
-            >
-              <div class="min-h-[230px] p-6 group-hover:hidden">
-                <img
-                  src="{{ 'salmon-bowl.png' | file_img_url: 'master' }}"
-                  alt="Salmon Recipe"
-                  class="w-full object-cover"
-                >
-              </div>
-              <div class="hidden w-full object-cover group-hover:block">
-                <img
-                  src="{{ 'ingredients_full_salmon.png' | file_img_url: 'master' }}"
-                  alt="Salmon Recipe"
-                  class="max-h-[262.39px] w-full object-cover"
-                >
-              </div>
-              <div class="flex min-h-[128px] w-full flex-col items-center justify-start p-4">
-                <p class="text-[16px] font-bold">Salmon Recipe</p>
-                <p class="text-balance text-center text-[16px] font-normal">
-                  High in Omega-3s that supports skin, coat & joint health
-                </p>
-              </div>
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a
-              href="{{ all_products['adult-turkey-dry-dog-food'].url }}"
-              class="group flex min-h-[363px] flex-col items-start justify-start gap-2 overflow-hidden rounded-[20px] bg-white"
-            >
-              <div class="min-h-[230px] p-6 group-hover:hidden">
-                <img
-                  src="{{ 'turkey-bowl.png' | file_img_url: 'master' }}"
-                  alt="Turkey Recipe"
-                  class="w-full object-cover"
-                >
-              </div>
-              <div class="hidden w-full object-cover group-hover:block">
-                <img
-                  src="{{ 'ingredients_full_turkey.png' | file_img_url: 'master' }}"
-                  alt="Turkey Recipe"
-                  class="max-h-[262.39px] w-full object-cover"
-                >
-              </div>
-              <div class="flex min-h-[128px] w-full flex-col items-center justify-start p-4">
-                <p class="text-[16px] font-bold">Turkey Recipe</p>
-                <p class="text-balance text-center text-[16px] font-normal">
-                  Lean turkey protein for strong, healthy muscles.
-                </p>
-              </div>
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a
-              href="{{ all_products['puppy-dry-dog-food'].url }}"
-              class="group flex min-h-[363px] flex-col items-start justify-start gap-2 overflow-hidden rounded-[20px] bg-white"
-            >
-              <div class="min-h-[230px] p-6 group-hover:hidden">
-                <img
-                  src="{{ 'puppy-bowl.png' | file_img_url: 'master' }}"
-                  alt="Puppy Recipe"
-                  class="w-full object-cover"
-                >
-              </div>
-              <div class="hidden w-full object-cover group-hover:block">
-                <img
-                  src="{{ 'ingredients_full_puppy.png' | file_img_url: 'master' }}"
-                  alt="Puppy Recipe"
-                  class="max-h-[262.39px] w-full object-cover"
-                >
-              </div>
-              <div class="flex min-h-[128px] w-full flex-col items-center justify-start p-4">
-                <p class="text-[16px] font-bold">Puppy Recipe</p>
-                <p class="text-balance text-center text-[16px] font-normal">
-                  Chicken builds Strong Bodies with its Lean, Digestible Protein
-                </p>
-              </div>
-            </a>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <div id="cat-kibble-bowls" class="hidden w-full max-w-[800px]">
+        <div class="swiper swiper-cat-kibble-bowls">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a
+                href="{{ all_products['adult-salmon-dry-cat-food'].url }}"
+                class="group flex min-h-[363px] flex-col items-start justify-start gap-2 overflow-hidden rounded-[20px] bg-white"
+              >
+                <div class="min-h-[230px] p-6 group-hover:hidden">
+                  <img
+                    src="{{ 'cat_salmon_kibbles_bowl.png' | file_img_url: 'master' }}"
+                    alt="Cat Salmon Kibbles Recipe"
+                    class="w-full object-cover"
+                  >
+                </div>
+                <div class="hidden w-full object-cover group-hover:block">
+                  <img
+                    src="{{ 'ingredients_full_cat_salmon_kibbles.png' | file_img_url: 'master' }}"
+                    alt="Cat Salmon Kibbles Recipe"
+                    class="max-h-[262.39px] w-full object-cover"
+                  >
+                </div>
+                <div class="flex min-h-[128px] w-full flex-col items-center justify-start p-4">
+                  <p class="text-[16px] font-bold">Salmon Recipe</p>
+                  <p class="text-balance text-center text-[16px] font-normal">
+                    Hypoallergenic salmon kibble with omega-rich coat support
+                  </p>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a
+                href="{{ all_products['adult-chicken-dry-cat-food'].url }}"
+                class="group flex min-h-[363px] flex-col items-start justify-start gap-2 overflow-hidden rounded-[20px] bg-white"
+              >
+                <div class="min-h-[230px] p-6 group-hover:hidden">
+                  <img
+                    src="{{ 'cat_chicken_kibbles_bowl.png' | file_img_url: 'master' }}"
+                    alt="Cat Chicken Kibbles Recipe"
+                    class="w-full object-cover"
+                  >
+                </div>
+                <div class="hidden w-full object-cover group-hover:block">
+                  <img
+                    src="{{ 'ingredients_full_cat_chicken_kibbles.png' | file_img_url: 'master' }}"
+                    alt="Cat Chicken Kibbles Recipe"
+                    class="max-h-[262.39px] w-full object-cover"
+                  >
+                </div>
+                <div class="flex min-h-[128px] w-full flex-col items-center justify-start p-4">
+                  <p class="text-[16px] font-bold">Chicken Recipe</p>
+                  <p class="text-balance text-center text-[16px] font-normal">
+                    High-protein chicken kibble with omega-3 and prebiotics
+                  </p>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a
+                href="{{ all_products['kitten-chicken-dry-cat-food'].url }}"
+                class="group flex min-h-[363px] flex-col items-start justify-start gap-2 overflow-hidden rounded-[20px] bg-white"
+              >
+                <div class="min-h-[230px] p-6 group-hover:hidden">
+                  <img
+                    src="{{ 'kitten_chicken_kibbles_bowl.png' | file_img_url: 'master' }}"
+                    alt="Kitten Chicken Kibbles Recipe"
+                    class="w-full object-cover"
+                  >
+                </div>
+                <div class="hidden w-full object-cover group-hover:block">
+                  <img
+                    src="{{ 'ingredients_full_kitten_chicken_kibbles.png' | file_img_url: 'master' }}"
+                    alt="Kitten Chicken Kibbles Recipe"
+                    class="max-h-[262.39px] w-full object-cover"
+                  >
+                </div>
+                <div class="flex min-h-[128px] w-full flex-col items-center justify-start p-4">
+                  <p class="text-[16px] font-bold">Chicken Recipe</p>
+                  <p class="text-balance text-center text-[16px] font-normal">
+                    High-protein chicken kitten kibble with DHA support
+                  </p>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
         <div class="swiper-pagination"></div>
@@ -500,7 +604,8 @@
   }
 
   .swiper-raw-ingredients,
-  .swiper-kibbles,
+  .swiper-dog-kibble-bowls,
+  .swiper-cat-kibble-bowls,
   .swiper-fav-dog,
   .swiper-benefits-mobile {
     width: 100%;
@@ -527,7 +632,38 @@
         clickable: true,
       },
     });
-    const swiperKibbles = new Swiper('.swiper-kibbles', {
+
+    const favTabs = document.querySelectorAll('.btn-kibbles-tab');
+    favTabs.forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        // Remove active class from all tabs
+        const spanClicked = tab.querySelector('.span-kibbles-tab');
+
+        favTabs.forEach(function (t) {
+          const span = t.querySelector('.span-kibbles-tab');
+          span.classList.remove('span-kibbles-tab-active');
+        });
+        // Add active class to the clicked tab
+        spanClicked.classList.add('span-kibbles-tab-active');
+      });
+    });
+
+    const btnDogKibbleBowls = document.getElementById('btn-dog-kibble-bowls');
+    const btnCatKibbleBowls = document.getElementById('btn-cat-kibble-bowls');
+    const tabDogKibbleBowls = document.getElementById('dog-kibble-bowls');
+    const tabCatKibbleBowls = document.getElementById('cat-kibble-bowls');
+
+    btnDogKibbleBowls.addEventListener('click', function () {
+      tabDogKibbleBowls.classList.remove('hidden');
+      if (tabCatKibbleBowls) tabCatKibbleBowls.classList.add('hidden');
+    });
+
+    btnCatKibbleBowls.addEventListener('click', function () {
+      tabDogKibbleBowls.classList.add('hidden');
+      tabCatKibbleBowls.classList.remove('hidden');
+    });
+
+    const swiperDogKibbleBowls = new Swiper('.swiper-dog-kibble-bowls', {
       slidesPerView: 1,
       spaceBetween: 16,
       loop: true,
@@ -540,6 +676,15 @@
         el: '.swiper-pagination',
         dynamicBullets: true,
         clickable: true,
+      },
+    });
+    const swiperCatKibbleBowls = new Swiper('.swiper-cat-kibble-bowls', {
+      slidesPerView: 1,
+      spaceBetween: 16,
+      loop: true,
+      breakpoints: {
+        320: { slidesPerView: 1, spaceBetween: 16 },
+        768: { slidesPerView: 3, spaceBetween: 16 },
       },
     });
     const swiperFavDog = new Swiper('.swiper-fav-dog', {
