@@ -18,14 +18,10 @@
   </section>
   <section class="px-5 py-5 md:px-0 md:py-10">
     <div class="container flex flex-col items-center justify-center gap-10">
-      <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
-        <p class="text-balance text-center text-[16px] font-light md:text-left">
-          At Buddy Bites, great nutrition starts with great ingredients. We use fresh proteins and vegetables, and
-          naturally functional superfoods sourced from trusted regions around the world. Each recipe is thoughtfully
-          made with prebiotics and Omega‑rich ingredients to support healthy digestion, shiny coats, strong teeth, and
-          overall wellbeing , so even the fussiest pets can enjoy food that’s as nutritious as it is tasty!
-        </p>
-      </div>
+      <p class="w-full text-balance text-center text-[16px] font-light md:w-1/2">
+        Who says good nutrition should be complex? In a world filled with packaging that feels like it is in another
+        language, we wanted to make things simple. Starting with ingredients you can actually understand:
+      </p>
       <div class="swiper swiper-raw-ingredients w-full">
         <div class="swiper-wrapper">
           {% for ingredient in shop.metaobjects.premium_ingredients.values %}
@@ -220,7 +216,10 @@
       <div class="swiper swiper-kibbles">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <div class="group flex min-h-[363px] flex-col items-start justify-start gap-2 overflow-hidden rounded-[20px] bg-white">
+            <a
+              href="{{ all_products['adult-lamb-dry-dog-food'].url }}"
+              class="group flex min-h-[363px] flex-col items-start justify-start gap-2 overflow-hidden rounded-[20px] bg-white"
+            >
               <div class="min-h-[230px] p-6 group-hover:hidden">
                 <img
                   src="{{ 'lamb-bowl.png' | file_img_url: 'master' }}"
@@ -230,7 +229,7 @@
               </div>
               <div class="hidden w-full object-cover group-hover:block">
                 <img
-                  src="{{ 'lamb-full-image.png' | file_img_url: 'master' }}"
+                  src="{{ 'ingredients_full_lamb.png' | file_img_url: 'master' }}"
                   alt="Lamb Recipe"
                   class="max-h-[262.39px] w-full object-cover"
                 >
@@ -241,16 +240,19 @@
                   Supports muscle growth and overall Health
                 </p>
               </div>
-            </div>
+            </a>
           </div>
           <div class="swiper-slide">
-            <div class="group flex min-h-[363px] flex-col items-start justify-start gap-2 overflow-hidden rounded-[20px] bg-white">
+            <a
+              href="{{ all_products['adult-duck-dry-dog-food'].url }}"
+              class="group flex min-h-[363px] flex-col items-start justify-start gap-2 overflow-hidden rounded-[20px] bg-white"
+            >
               <div class="min-h-[230px] p-6 group-hover:hidden">
                 <img src="{{ 'duck-bowl.png' | file_img_url: 'master' }}" alt="Duck Recipe" class="w-full object-cover">
               </div>
               <div class="hidden w-full object-cover group-hover:block">
                 <img
-                  src="{{ 'duck-full-image.png' | file_img_url: 'master' }}"
+                  src="{{ 'ingredients_full_duck.png' | file_img_url: 'master' }}"
                   alt="Duck Recipe"
                   class="max-h-[262.39px] w-full object-cover"
                 >
@@ -261,10 +263,13 @@
                   High Quality Hypoallergenic Protein that is Gentle on Sensitive Stomachs
                 </p>
               </div>
-            </div>
+            </a>
           </div>
           <div class="swiper-slide">
-            <div class="group flex flex-col items-start justify-start gap-2 overflow-hidden rounded-[20px] bg-white">
+            <a
+              href="{{ all_products['adult-salmon-dry-dog-food'].url }}"
+              class="group flex flex-col items-start justify-start gap-2 overflow-hidden rounded-[20px] bg-white"
+            >
               <div class="min-h-[230px] p-6 group-hover:hidden">
                 <img
                   src="{{ 'salmon-bowl.png' | file_img_url: 'master' }}"
@@ -274,7 +279,7 @@
               </div>
               <div class="hidden w-full object-cover group-hover:block">
                 <img
-                  src="{{ 'salmon-full-image.png' | file_img_url: 'master' }}"
+                  src="{{ 'ingredients_full_salmon.png' | file_img_url: 'master' }}"
                   alt="Salmon Recipe"
                   class="max-h-[262.39px] w-full object-cover"
                 >
@@ -285,10 +290,13 @@
                   High in Omega-3s that supports skin, coat & joint health
                 </p>
               </div>
-            </div>
+            </a>
           </div>
           <div class="swiper-slide">
-            <div class="group flex min-h-[363px] flex-col items-start justify-start gap-2 overflow-hidden rounded-[20px] bg-white">
+            <a
+              href="{{ all_products['adult-turkey-dry-dog-food'].url }}"
+              class="group flex min-h-[363px] flex-col items-start justify-start gap-2 overflow-hidden rounded-[20px] bg-white"
+            >
               <div class="min-h-[230px] p-6 group-hover:hidden">
                 <img
                   src="{{ 'turkey-bowl.png' | file_img_url: 'master' }}"
@@ -298,7 +306,7 @@
               </div>
               <div class="hidden w-full object-cover group-hover:block">
                 <img
-                  src="{{ 'turkey-full-image.png' | file_img_url: 'master' }}"
+                  src="{{ 'ingredients_full_turkey.png' | file_img_url: 'master' }}"
                   alt="Turkey Recipe"
                   class="max-h-[262.39px] w-full object-cover"
                 >
@@ -309,10 +317,13 @@
                   Lean turkey protein for strong, healthy muscles.
                 </p>
               </div>
-            </div>
+            </a>
           </div>
           <div class="swiper-slide">
-            <div class="group flex min-h-[363px] flex-col items-start justify-start gap-2 overflow-hidden rounded-[20px] bg-white">
+            <a
+              href="{{ all_products['puppy-dry-dog-food'].url }}"
+              class="group flex min-h-[363px] flex-col items-start justify-start gap-2 overflow-hidden rounded-[20px] bg-white"
+            >
               <div class="min-h-[230px] p-6 group-hover:hidden">
                 <img
                   src="{{ 'puppy-bowl.png' | file_img_url: 'master' }}"
@@ -322,7 +333,7 @@
               </div>
               <div class="hidden w-full object-cover group-hover:block">
                 <img
-                  src="{{ 'puppy-full-image.png' | file_img_url: 'master' }}"
+                  src="{{ 'ingredients_full_puppy.png' | file_img_url: 'master' }}"
                   alt="Puppy Recipe"
                   class="max-h-[262.39px] w-full object-cover"
                 >
@@ -333,7 +344,7 @@
                   Chicken builds Strong Bodies with its Lean, Digestible Protein
                 </p>
               </div>
-            </div>
+            </a>
           </div>
         </div>
         <div class="swiper-pagination"></div>
